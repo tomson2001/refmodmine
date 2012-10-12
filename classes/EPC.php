@@ -207,6 +207,49 @@ class EPC {
 			}
 		}
 	}
+	
+	/**
+	 * Prueft, ob innerhalb der EPK gleichbeschriftet Knoten existieren.
+	 * Also insbesondere ob zwei Ereignisse mit gleichem Label oder 
+	 * zwei Funktion mit gleichem Label existieren
+	 */
+	public function hasEqualLabelledNodes() {	
+		return $this->hasEqualLabelledFunctions() || $this->hasEqualLabelledEvents();
+	}
+	
+	/**
+	 * Prueft, ob die EPK gleich beschriftete Funktionen enthaelt
+	 * 
+	 * @return boolean
+	 */
+	public function hasEqualLabelledFunctions() {
+		$checkedFunctions = array();
+		foreach ( $this->functions as $label ) {
+			if ( in_array($label, $checkedFunctions) ) {
+				return true;
+			} else {
+				array_push($checkedFunctions, $label);
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * Prueft, ob die EPK gleich beschriftete Ereignisse enthaelt
+	 * 
+	 * @return boolean
+	 */
+	public function hasEqualLabelledEvents() {
+		$checkedEvents = array();
+		foreach ( $this->events as $label ) {
+			if ( in_array($label, $checkedEvents) ) {
+				return true;
+			} else {
+				array_push($checkedEvents, $label);
+			}
+		}
+		return false;
+	}
 
 }
 ?>

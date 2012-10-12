@@ -1,8 +1,8 @@
 <?php
 class SimilarityScoreBasedOnCommonActivityNames implements ISimilarityMeasure {
 	
-	private $mapping;
-	private $similarityValue;
+	protected $mapping;
+	protected $similarityValue;
 	
 	public function __construct(IMapping $mapping) {
 		$this->mapping = $mapping;

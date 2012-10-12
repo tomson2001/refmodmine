@@ -16,6 +16,16 @@ abstract class AMapping {
 	}
 	
 	/**
+	 * Generiert das Mapping
+	 *
+	 * @return void
+	 */
+	protected function generateMapping($algorithm) {
+		eval("\$mapper = new ".$algorithm."Mapper(\$this->matrix);");
+		$this->mapping = $mapper->getMapping();
+	}
+	
+	/**
 	 * Gibt das Mapping als Array zurück
 	 * @return Array
 	 */

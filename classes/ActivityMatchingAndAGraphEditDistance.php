@@ -1,5 +1,5 @@
 <?php
-class CombiningActivityMatchingAndAGraphEditDistance implements ISimilarityMeasure {
+class ActivityMatchingAndAGraphEditDistance implements ISimilarityMeasure {
 
 	private $mapping;
 	private $similarityValue;
