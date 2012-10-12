@@ -33,12 +33,12 @@ class LevenshteinWithContextMapping extends AMapping implements IMapping {
 		}
 	}
 
-	public function map() {
+	public function map($algorithm) {
 		$this->calculateMatrixValues();
-		$this->generateMapping();
+		$this->generateMapping($algorithm);
 	}
 
-	private function calculateMatrixValues() {
+	protected function calculateMatrixValues() {
 		$epc1Functions = $this->epc1->functions;
 		$epc2Functions = $this->epc2->functions;
 
@@ -63,27 +63,11 @@ class LevenshteinWithContextMapping extends AMapping implements IMapping {
 	 *
 	 * @return void
 	 */
-	private function generateMapping() {
-		$this->generateFunctionMapping();
+	protected function generateMapping($algorithm) {
+		// Function Mapping
+		parent::generateMapping($algorithm);
+		// Connector Mapping
 		$this->generateConnectorMapping();
-	}
-
-	/**
-	 * Erzeugt das Mapping der Funktionsknoten
-	 */
-	private function generateFunctionMapping() {
-		foreach ( $this->matrix as $id1 => $arr ) {
-			$maxLevenshteinSimilarityHorizontal = Tools::getMaxValueHorizontal($arr);
-			foreach ( $arr as $id2 => $value ) {
-				// Horizontale
-				if ( $value == $maxLevenshteinSimilarityHorizontal
-						&& $maxLevenshteinSimilarityHorizontal != 0
-						&& $value == Tools::getMaxValueVertical($this->matrix, $id2)
-				) {
-					array_push($this->mapping, array($id1 => $id2));
-				}
-			}
-		}
 	}
 
 	/**
@@ -93,7 +77,7 @@ class LevenshteinWithContextMapping extends AMapping implements IMapping {
 	 *       dass muss noch geaendert werden, sodass immer der beste Wert fuer
 	 *       ein Mapping genommen wird!
 	 */
-	private function generateConnectorMapping() {
+	protected function generateConnectorMapping() {
 		$connectorsOfEPC1 = $this->epc1->getAllConnectors();
 		$epc2 = clone $this->epc2;
 		//$epc2->assignFunctionMapping($this);
