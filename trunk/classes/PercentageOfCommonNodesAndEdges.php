@@ -10,6 +10,10 @@ class PercentageOfCommonNodesAndEdges implements ISimilarityMeasure {
 	
 	public function calculate() {
 		
+// 		if ( $this->mapping->epc1->name == "K_08" ) {
+// 			print ($this->mapping->epc2->name);
+// 		}
+		
 		// Transformation der EPKs
 		$transformer = new EPCTransformerNoConnectorsNoEvents();
 		$epc1 = $transformer->transform($this->mapping->epc1);
@@ -43,6 +47,13 @@ class PercentageOfCommonNodesAndEdges implements ISimilarityMeasure {
 		
 		// Endberechnung
 		$this->similarityValue = round((1 - ($numator/$numOfAllFuncsAndEdgesInBothEpcs))*100, 2);
+		
+//  		if ( $this->mapping->epc1->name == "K_08" && $this->mapping->epc2->name == "K_08" ) {
+//  			print("\nNumerator: ".$numator);
+//  			print("\nNumOfAllFuncsAndEdgesInBothEpcs: ".$numOfAllFuncsAndEdgesInBothEpcs);
+//  			print("\nSimilarity: ".$this->similarityValue."\n");
+//  			print_r($this->mapping->getAllUnmappedEdgesOfEPC1());
+//  		}
 		
 		return $this->value();
 	}

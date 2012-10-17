@@ -35,7 +35,7 @@ $content_file_2 = file_get_contents(Config::MODEL_FILE_2);
 $xml2 = new SimpleXMLElement($content_file_2);
 
 $html_analysis = HTMLComponents::AUTOMAPPING_HEADER;
-$analysis_csv = "EPC1;#Functions in EPC1;#Events in EPC1;EPC2;#Functions in EPC2;#Events in EPC2;Eindeutig;".$options[$argv[1]]."\n";
+$analysis_csv = "EPC1;#Functions in EPC1;#Events in EPC1;EPC2;#Functions in EPC2;#Events in EPC2;Eindeutig;".$similarityMeasures[$argv[1]]."\n";
 
 // Aehnlichkeitsmatrix in CSV vorbereiten
 $similarity_matrix_csv = "";

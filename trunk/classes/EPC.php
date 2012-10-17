@@ -148,7 +148,7 @@ class EPC {
 			return $this->events[$nodeID];
 		} elseif ( array_key_exists($nodeID, $this->xor) ) {
 			return "xor";
-		} elseif ( array_key_exists($nodeID, $this->xor) ) {
+		} elseif ( array_key_exists($nodeID, $this->or) ) {
 			return "or";
 		} elseif ( array_key_exists($nodeID, $this->and) ) {
 			return "and";

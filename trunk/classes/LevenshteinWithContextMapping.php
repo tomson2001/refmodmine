@@ -9,6 +9,7 @@
 class LevenshteinWithContextMapping extends AMapping implements IMapping {
 
 	private $threshold_levenshtein = 0;
+	private $connector_matrix;
 
 	public function __construct(EPC $epc1, EPC $epc2) {
 		$transformer = new EPCTransformerNoEvents();
@@ -67,62 +68,82 @@ class LevenshteinWithContextMapping extends AMapping implements IMapping {
 		// Function Mapping
 		parent::generateMapping($algorithm);
 		// Connector Mapping
-		$this->generateConnectorMapping();
+		$this->generateConnectorMapping($algorithm);
+		// Und noch ein zweites Mal, falls mehr als zwei Konnektoren hintereinander geschaltet sind
+		$this->generateConnectorMapping($algorithm);
 	}
 
 	/**
 	 * Erzeugt das Mapping der Konnektorknoten
-	 * 
-	 * @TODO bisher ist ein fester Threshold von 0.3 fuer das Matching eingesetzt
-	 *       dass muss noch geaendert werden, sodass immer der beste Wert fuer
-	 *       ein Mapping genommen wird!
 	 */
-	protected function generateConnectorMapping() {
+	protected function generateConnectorMapping($algorithm) {
 		$connectorsOfEPC1 = $this->epc1->getAllConnectors();
 		$epc2 = clone $this->epc2;
 		//$epc2->assignFunctionMapping($this);
 		$connectorsOfEPC2 = $epc2->getAllConnectors();
 
 		foreach ( $connectorsOfEPC1 as $id1 => $type1 ) {
-			$predecessors1 = $this->epc1->getPredecessor($id1);
-			$successors1 = $this->epc1->getSuccessor($id1);
-			foreach ( $connectorsOfEPC2 as $id2 => $type2 ) {
-				$predecessors2 = $epc2->getPredecessor($id2);
-				$successors2 = $epc2->getSuccessor($id2);
+			if ( !$this->mappingExistsFrom($id1) ) {
+				$predecessors1 = $this->epc1->getPredecessor($id1);
+				$successors1 = $this->epc1->getSuccessor($id1);
+				foreach ( $connectorsOfEPC2 as $id2 => $type2 ) {
+					$predecessors2 = $epc2->getPredecessor($id2);
+					$successors2 = $epc2->getSuccessor($id2);
 
-				$maxPred = max(count($predecessors1), count($predecessors2));
-				$maxSucc = max(count($successors1), count($successors2));
-					
-				$predCount = 0;
-				foreach ( $predecessors1 as $pid1 ) {
-					foreach ( $predecessors2 as $pid2 ) {
-						if ( $pid1 == $this->mappingExistsTo($pid2) ) {
-							$predCount++;
+					$maxPred = max(count($predecessors1), count($predecessors2));
+					$maxSucc = max(count($successors1), count($successors2));
+						
+					$predCount = 0;
+					foreach ( $predecessors1 as $pid1 ) {
+						foreach ( $predecessors2 as $pid2 ) {
+							if ( $pid1 == $this->mappingExistsTo($pid2) ) {
+								$predCount++;
+							}
 						}
 					}
-				}
-				if ( $maxPred == 0 ) break;
-				$predSim = $predCount / $maxPred;
-				
-				$succCount = 0;
-				foreach ( $successors1 as $sid1 ) {
-					foreach ( $successors2 as $sid2 ) {
-						if ( $sid1 == $this->mappingExistsTo($sid2) ) {
-							$succCount++;
+					$predSim = 0;
+					if ( $maxPred > 0 ) {
+						$predSim = $predCount / $maxPred;
+					}
+
+					$succCount = 0;
+					foreach ( $successors1 as $sid1 ) {
+						foreach ( $successors2 as $sid2 ) {
+							if ( $sid1 == $this->mappingExistsTo($sid2) ) {
+								$succCount++;
+							}
 						}
 					}
-				}
-				if ( $maxSucc == 0 ) break;
-				$succSim = $succCount / $maxSucc;
-				$connectorSim = ($predSim+$succSim) / 2;
 
-				// @TODO
-				if ( $connectorSim >= 0.3 ) {
-					array_push($this->mapping, array($id1 => $id2));
-				}
+					$succSim = 0;
+					if ( $maxSucc > 0 ) {
+						$succSim = $succCount / $maxSucc;
+					}
 
+					$connectorSim = ($predSim+$succSim) / 2;
+
+					// @TODO
+					// 				if ( $connectorSim >= 0.3 ) {
+					// 					array_push($this->mapping, array($id1 => $id2));
+					// 					print("test");
+					// 				}
+
+					$this->connector_matrix[$id1][$id2] = $connectorSim;
+
+				}
 			}
 		}
+		//print_r($this->connector_matrix);
+		$this->generateConntectorMapping($algorithm);
+	}
+
+	private function generateConntectorMapping($algorithm) {
+		eval("\$mapper = new ".$algorithm."Mapper(\$this->connector_matrix);");
+		$connector_mapping = $mapper->getMapping();
+		foreach ( $connector_mapping as $index => $pair ) {
+			array_push($this->mapping, $pair);
+		}
+		//print_r($this->connector_matrix);
 	}
 
 
