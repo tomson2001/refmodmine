@@ -1,19 +1,20 @@
 <?php
 class EPCTransformerNoConnectorsNoEvents {
-	
+
 	protected $epc;
-	
+
 	public function __construct() {
 
 	}
-	
+
 	public function transform(EPC $epc) {
 		$this->epc = $epc;
 		$this->removeEvents();
 		$this->removeConnectors();
+		$this->removeDuplicatedEdges();
 		return $this->getTransformedEpc();
 	}
-	
+
 	/**
 	 * Entfernt alle Ereignisse in den Kanten
 	 */
@@ -48,41 +49,26 @@ class EPCTransformerNoConnectorsNoEvents {
 			}
 			unset($this->epc->events[$eventID]);
 		}
-	} 
-	
+	}
+
 	/**
 	 * Entfernt alle Konnektoren
 	 */
 	protected function removeConnectors() {
 		$connectors = $this->epc->getAllConnectors();
 		foreach ( $connectors as $connectorID => $connectorLabel ) {
+			$sources = $this->epc->getPredecessor($connectorID);
+			$targets = $this->epc->getSuccessor($connectorID);
+			foreach ( $sources as $sourceNodeID ) {
+				foreach ( $targets as $targetNodeID ) {
+					$newEdge = array($sourceNodeID => $targetNodeID);
+					array_push($this->epc->edges, $newEdge);
+				}
+			}
 			foreach ( $this->epc->edges as $index => $edge ) {
-				// Konnektor ist Quelle
-				if ( array_key_exists($connectorID, $edge) ) {
-					$target = $edge[$connectorID];
-					$source = $this->epc->getPredecessor($connectorID);
-					if ( !empty($source) ) {
-						foreach ( $source as $sourceNodeID ) {
-							$newEdge = array($sourceNodeID => $target);
-							array_push($this->epc->edges, $newEdge);
-						}
-					}
+				if ( array_key_exists($connectorID, $edge) || array_key_exists($connectorID, array_flip($edge)) ) {
 					unset($this->epc->edges[$index]);
 				}
-				// Event ist Ziel
-				$flipped = array_flip($edge);
-				if ( array_key_exists($connectorID, $flipped) ) {
-					$source = $flipped[$connectorID];
-					$target = $this->epc->getSuccessor($connectorID);
-					if ( !empty($target) ) {
-						foreach ( $target as $targetNodeID ) {
-							$newEdge = array($source => $targetNodeID);
-							array_push($this->epc->edges, $newEdge);
-						}
-					}
-					unset($this->epc->edges[$index]);
-				}
-				
 			}
 			switch ($connectorLabel) {
 				case "xor": unset($this->epc->xor[$connectorID]); break;
@@ -91,15 +77,37 @@ class EPCTransformerNoConnectorsNoEvents {
 			}
 		}
 	}
-	
+
 	/**
 	 * Gibt die transformiete EPK zurueck
-	 * 
+	 *
 	 * @return EPC
 	 */
 	public function getTransformedEpc() {
 		return $this->epc;
 	}
 	
+	public function removeDuplicatedEdges() {
+		foreach ( $this->epc->edges as $index => $edge ) {
+			foreach ( $edge as $sourceNodeID => $targetNodeID ) {
+				if ( $this->countEdge($sourceNodeID, $targetNodeID) > 1 ) {
+					unset($this->epc->edges[$index]);
+				}
+			}
+		}
+	}
+	
+	private function countEdge($sourceNodeID, $targetNodeID) {
+		$countEdge = 0;
+		foreach ( $this->epc->edges as $index => $edge ) {
+			foreach ( $edge as $sourceID => $targetID ) {
+				if ( $sourceID == $sourceNodeID && $targetID == $targetNodeID ) {
+					$countEdge++;
+				}
+			}
+		}
+		return $countEdge;
+	}
+
 }
 ?>

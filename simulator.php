@@ -1,4 +1,5 @@
 <?php
+$start = time();
 require 'autoloader.php';
 include 'simulator_settings.php';
 
@@ -22,7 +23,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 			// Funktionen ueber Levenshtein, Konnektoren ueber Ein- und Ausgehende Kanten
 			case "--fbse":
 				$mapping = new LevenshteinWithStructuralMapping($epc1, $epc2);
-				$mapping->setParams(array('threshold_levenshtein' => 91));
+				//$mapping->setParams(array('threshold_levenshtein' => 91));
 				break;
 
 			// Identity
@@ -30,20 +31,17 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 			case "--pocnae":
 			case "--cf":
 				$mapping = new LevenshteinMapping($epc1, $epc2);
-				//$mapping = new GreedyLevenshteinMapping($epc1, $epc2);
 				$mapping->setParams(array('threshold_levenshtein' => 100));
 				break;
 
 			// Funktionen ueber Levenshtein und Ein- und Ausgehende Kanten
 			case "--amaged":
 				$mapping = new LevenshteinWithContextMapping($epc1, $epc2);
-				//$mapping = new GreedyLevenshteinWithContextMapping($epc1, $epc2);
 				break;
 
 			// Funktionen ueber Levenshtein
 			default:
 				$mapping = new LevenshteinMapping($epc1, $epc2);
-				//$mapping = new GreedyLevenshteinMapping($epc1, $epc2);
 				break;
 		}
 
@@ -57,13 +55,13 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 		$isMappingPrecise = true;
 		$html_analysis .= "<table border='1'>";
 		$html_analysis .= "<tr><th></th>";
-		foreach ($epc2->functions as $label) {
-			$html_analysis .= "<th height=".((int) strlen($label)*8.5)."><div class='verticalText'>".$label."</div></th>";
+		foreach ($epc2->functions as $func_id => $label) {
+			$html_analysis .= "<th height=".((int) strlen($label)*8.5)."><div class='verticalText'>".$label." (".$func_id.")</div></th>";
 		}
 		$html_analysis .= "</tr>";
 		foreach ( $matrix as $id1 => $arr ) {
 			$label1 = $epc1->getNodeLabel($id1);
-			$html_analysis .= "<tr><td>".$label1."</td>";
+			$html_analysis .= "<tr><td>".$label1." (".$id1.")</td>";
 			$maxLevenshteinSimilarity = Tools::getMaxValueHorizontal($matrix[$id1]);
 			foreach ( $arr as $id2 => $value ) {
 				$label2 = $epc2->getNodeLabel($id2);
@@ -135,5 +133,10 @@ print("\n\nAnalysedateien wurden erfolgreich erstellt:\n\n");
 print("HTML mit Mappings: ".$uri_html_analysis."\n");
 print("CSV mit Analyseergebnissen: ".$uri_analysis_csv."\n");
 print("Label Matching Similarity Matrix: ".$uri_similarity_matrix."\n\n");
+
+$duration = time() - $start;
+$seconds = $duration % 60;
+$minutes = floor($duration / 60);
+print("Dauer: ".$minutes." Min. ".$seconds." Sek.\n\n");
 
 ?>
