@@ -250,6 +250,49 @@ class EPC {
 		}
 		return false;
 	}
+	
+	public function deleteEdge($sourceNodeID, $targetNodeID) {
+		$edgeIndex = null;
+		foreach ( $this->edges as $index => $edge ) {
+			foreach ( $edge as $sourceID => $targetID ) {
+				if ( $sourceID == $sourceNodeID && $targetID == $targetNodeID ) {
+					$edgeIndex = $index;
+					break; 
+				}
+			}
+			if ( !is_null($edgeIndex) ) break;			
+		}
+		unset($this->edges[$edgeIndex]);
+	}
+	
+	public function addEdge($sourceNodeID, $targetNodeID) {
+		$edge = array($sourceNodeID => $targetNodeID);
+		array_push($this->edges, $edge);
+	}
+	
+	public function getAllNodes() {
+		return $this->functions + $this->events + $this->or + $this->xor + $this->and;
+	}
+	
+	/**
+	 * Ermittelt die Senke der EPK. Gibt konkret den ersten Knoten zurueck
+	 * der gefunden werden kann, zu dem keine ausgehende Kante existiert.
+	 * 
+	 * @return array(nodeID => type)
+	 */
+	public function getLastNode() {
+		$nodes = $this->getAllNodes();
+		foreach ( $nodes as $id => $label ) {
+			$successors = $this->getSuccessor($id);
+			if ( empty($successors) ) return $id;
+		}
+		return null;
+	}
+	
+	public function getFreeNodeID() {
+		$allNodes = $this->getAllNodes();
+		return max(array_keys($allNodes)) + 1;
+	}
 
 }
 ?>

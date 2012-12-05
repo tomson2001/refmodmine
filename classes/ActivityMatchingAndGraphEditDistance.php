@@ -49,7 +49,7 @@ class ActivityMatchingAndGraphEditDistance implements ISimilarityMeasure {
 			}
 		}
 		$corrComponent = (2*$corrComponent) / ($numOfAllFunctionsAndConnectors - $sn);
-		if ( Config::MODEL_FILE_2 ) $corrComponent = round($corrComponent, Config::FIX_POINT_ARITHMETIC);
+		if ( Config::FIX_POINT_ARITHMETIC ) $corrComponent = round($corrComponent, Config::FIX_POINT_ARITHMETIC);
 			
 		// Endberechnung
 		$this->similarityValue = round((1-(($nodeComponent + $edgeComponent + $corrComponent) / 3))*100, 2);
