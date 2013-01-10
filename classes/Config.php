@@ -20,7 +20,7 @@ final class Config {
 	//const MODEL_FILE_2 = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Klausuren/EPML/WInfo II WS1011.epml";
 	//const MODEL_FILE_1 = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Klausuren/EPML/Winfo II SS11.epml";
 	//const MODEL_FILE_2 = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Klausuren/EPML/Winfo II SS11.epml";
-	const MODEL_FILE_1 = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Klausuren/EPML/Winfo II WS1112.epml";
+	//const MODEL_FILE_1 = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Klausuren/EPML/Winfo II WS1112.epml";
 	//const MODEL_FILE_2 = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Klausuren/EPML/Winfo II WS1112.epml";
 		
 	// Mapping Simulator
@@ -31,16 +31,21 @@ final class Config {
 	//const MODEL_FILE_1 = "P:/Projekte/RefModMiner/HudsonBuilds/data/becker_survey.epml";
 	//const MODEL_FILE_2 = "P:/Projekte/RefModMiner/HudsonBuilds/data/becker_survey.epml";
 	
+	// SAP Referenzmodell
+	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
+	const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
+	
 	// Model Analyzer
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Documents/IWi/Eigene Paper/in Arbeit/Modellähnlichkeit/Modelle/SAP.epml";
 	//const MODEL_ANALYSIS_FILE = "P:/Projekte/RefModMiner/HudsonBuilds/data/refmodmine.epml";
 	//const MODEL_ANALYSIS_FILE = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Kontrollierte Modellierung.epml";
-	const MODEL_ANALYSIS_FILE = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Klausuren/EPML/WInfo II WS1011.epml";
+	//const MODEL_ANALYSIS_FILE = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Klausuren/EPML/WInfo II WS1011.epml";
 	//const MODEL_ANALYSIS_FILE = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Klausuren/EPML/Winfo II SS11.epml";
 	//const MODEL_ANALYSIS_FILE = "P:/Projekte/RefModMiner/Data/Kontrollierte Modellierung/Klausuren/EPML/Winfo II WS1112.epml";
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Dropbox/_arbeitsverzeichnis_nils/data/RMK_erfassung/Handels-H/Handels-H-Model_base.epml";
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Dropbox/_arbeitsverzeichnis_nils/data/RMK_erfassung/Y-CIM/Y-CIM_complete/Y-CIM_complete.epml";
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Dropbox/_arbeitsverzeichnis_nils/data/RMK_erfassung/SAP R3/SAP R3 prozessorientiert anwenden/SAP_R3_prozesorientiert_anwenden_complete/SAP_R3_prozesorientiert_anwenden_complete .epml";
+	const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
 	
 	// Einstellen einer Fixpunktarithmetik: false => Ausgeschaltet, [0-x] => Fixpunkt
 	const FIX_POINT_ARITHMETIC = false;

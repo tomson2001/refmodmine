@@ -8,21 +8,33 @@ $similarityMeasures = array(
 		"--pocnae"	=> "Percentage Of Common Nodes And Edges",
 		"--geds"	=> "Graph Edit Distance Similarity",
 		"--amaged"  => "Activity Matching And Graph Edit Distance",
-		"--cf"		=> "Causal Footprints"
+		"--cf"		=> "Causal Footprints",
+		"--lcsot"	=> "Longest Common Subsequence Of Traces",
+		"--ts"		=> "Terminology Similarity",
+		"--tswf"	=> "Terminology Similarity With Frequencies"
 );
 
 // Hilfeanzeige auf Kommandozeile
 if ( !isset($argv[1]) || !array_key_exists($argv[1], $similarityMeasures) ) {
-	exit("Folgende Aehnlichkeitsmasse stehen Ihenen zur Verfuegung:\n\n
-	[--ssbocan]   ".$similarityMeasures["--ssbocan"]."
-	[--lms]       ".$similarityMeasures["--lms"]."
-	[--fbse]      ".$similarityMeasures["--fbse"]."
-	[--pocnae]    ".$similarityMeasures["--pocnae"]."
-	[--geds]      ".$similarityMeasures["--geds"]."
-	[--amaged]    ".$similarityMeasures["--amaged"]."
-	[--cf]        ".$similarityMeasures["--cf"]."\n
-	[--help]      Hilfe\n\n");
+	exit("   Verfuegbare Aehnlichkeitsmasse:\n
+   [--ssbocan]   ".$similarityMeasures["--ssbocan"]."
+   [--lms]       ".$similarityMeasures["--lms"]."
+   [--fbse]      ".$similarityMeasures["--fbse"]."
+   [--pocnae]    ".$similarityMeasures["--pocnae"]."
+   [--geds]      ".$similarityMeasures["--geds"]."
+   [--amaged]    ".$similarityMeasures["--amaged"]."
+   [--cf]        ".$similarityMeasures["--cf"]."
+   [--lcsot]     ".$similarityMeasures["--lcsot"]."		
+   [--ts]        ".$similarityMeasures["--ts"]."
+   [--tswf]      ".$similarityMeasures["--tswf"]."\n
+   Weitere Optionen:\n
+   [--light]     Keine Mappinganalyse, keine HTML-Generierung
+   [--help]      Hilfe\n\n");
 }
+
+$isLight = in_array("--light", $argv) ? true : false;
+
+$doMapping = $argv[1] == "--ts" || $argv[1] == "--tswf" ? false : true;
 
 /**
  * Einstellungen
@@ -34,7 +46,7 @@ $xml1 = new SimpleXMLElement($content_file_1);
 $content_file_2 = file_get_contents(Config::MODEL_FILE_2);
 $xml2 = new SimpleXMLElement($content_file_2);
 
-$html_analysis = HTMLComponents::AUTOMAPPING_HEADER;
+if (!$isLight) $html_analysis = HTMLComponents::AUTOMAPPING_HEADER;
 $analysis_csv = "EPC1;#Functions in EPC1;#Events in EPC1;EPC2;#Functions in EPC2;#Events in EPC2;Eindeutig;".$similarityMeasures[$argv[1]]."\n";
 
 // Aehnlichkeitsmatrix in CSV vorbereiten

@@ -1,8 +1,16 @@
 <?php
 interface ISimilarityMeasure {
 	
-	public function __construct(IMapping $mapping);
+	/**
+	 * Fuehrt die Berechnung des Aehnlichkeitswertes durch
+	 */
 	public function calculate();
+	
+	/**
+	 * Gibt des berechneten Aehnlichkeitswert zurueck
+	 * 
+	 * @return float
+	 */
 	public function value();
 	
 }

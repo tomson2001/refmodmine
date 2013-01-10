@@ -37,7 +37,8 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	
 	foreach ( $epc1->functions as $label ) {
 		if ( in_array($label, $checkedFunctions) ) {
-			array_push($doubleFunctions, str_replace(";", ",", str_replace("\r", "/r", str_replace("\n", "/n", $label))));
+			//array_push($doubleFunctions, str_replace(";", ",", str_replace("\r", "/r", str_replace("\n", "/n", $label))));
+			array_push($doubleFunctions, str_replace(";", ",", str_replace("\r", " ", str_replace("\n", " ", $label))));
 			$doubledFunctions++;
 		} else {
 			array_push($checkedFunctions, $label);
@@ -52,7 +53,8 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 
 	foreach ( $epc1->events as $label ) {
 		if ( in_array($label, $checkedEvents) ) {
-			array_push($doubleEvents, str_replace(";", ",", str_replace("\r", "/r", str_replace("\n", "/n", $label))));
+			//array_push($doubleEvents, str_replace(";", ",", str_replace("\r", "/r", str_replace("\n", "/n", $label))));
+			array_push($doubleEvents, str_replace(";", ",", str_replace("\r", " ", str_replace("\n", " ", $label))));
 			$doubledEvents++;
 			if ( strtolower($label) == "yes" || strtolower($label) == "no" 
 				|| strtolower($label) == "ja" || strtolower($label) == "nein"
