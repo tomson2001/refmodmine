@@ -48,8 +48,8 @@ class EmpiricCorrelationCalculator {
 		}
 		
 		$denominator = sqrt($denominator1 * $denominator2);
-		if ( $numerator == $denominator ) {
-			return 1;
+		if ( $denominator == 0 ) {
+			return "not defined";
 		} else {		
 			return $numerator / $denominator;
 		}

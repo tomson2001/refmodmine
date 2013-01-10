@@ -182,6 +182,11 @@ class EPC {
 		return false;
 	}
 	
+	/**
+	 * Die IDs der Funktionen in der EPK werden auf die IDs einer gemappten EPK gesetzt
+	 * 
+	 * @param IMapping $mapping
+	 */
 	public function assignFunctionMapping(IMapping $mapping) {
 		foreach ($this->functions as $id => $label) {
 			$mappedFunctionID = $mapping->mappingExistsTo($id);
@@ -285,6 +290,21 @@ class EPC {
 		foreach ( $nodes as $id => $label ) {
 			$successors = $this->getSuccessor($id);
 			if ( empty($successors) ) return $id;
+		}
+		return null;
+	}
+	
+	/**
+	 * Ermittelt die Quelle der EPK. Gibt konkret den ersten Knoten zurueck
+	 * der gefunden werden kann, zu dem keine eingehende Kante existiert.
+	 *
+	 * @return array(nodeID => type)
+	 */
+	public function getFirstNode() {
+		$nodes = $this->getAllNodes();
+		foreach ( $nodes as $id => $label ) {
+			$predecessors = $this->getPredecessor($id);
+			if ( empty($predecessors) ) return $id;
 		}
 		return null;
 	}
