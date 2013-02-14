@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <epc EpcId="1" name="EPC">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="160" y="40"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="13">
+      <graphics>
+        <position height="41" width="81" x="55" y="160"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="14">
+      <graphics>
+        <position height="41" width="81" x="160" y="160"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="15">
+      <graphics>
+        <position height="41" width="81" x="260" y="160"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="16">
+      <graphics>
+        <position height="41" width="81" x="95" y="280"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <function id="17">
+      <graphics>
+        <position height="41" width="81" x="95" y="350"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <function id="18">
+      <graphics>
+        <position height="41" width="81" x="85" y="475"/>
+      </graphics>
+      <name>7</name>
+    </function>
+    <function id="19">
+      <graphics>
+        <position height="41" width="81" x="225" y="475"/>
+      </graphics>
+      <name>8</name>
+    </function>
+    <function id="20">
+      <graphics>
+        <position height="41" width="81" x="160" y="600"/>
+      </graphics>
+      <name>9</name>
+    </function>
+    <xor id="21">
+      <graphics>
+        <position height="31" width="31" x="185" y="110"/>
+      </graphics>
+      <name/>
+    </xor>
+    <xor id="22">
+      <graphics>
+        <position height="31" width="31" x="185" y="220"/>
+      </graphics>
+      <name/>
+    </xor>
+    <arc id="25">
+      <graphics>
+        <position x="200" y="81"/>
+        <position x="200" y="110"/>
+      </graphics>
+      <flow source="1" target="21"/>
+    </arc>
+    <arc id="26">
+      <graphics>
+        <position x="185" y="141"/>
+        <position x="95" y="160"/>
+      </graphics>
+      <flow source="21" target="13"/>
+    </arc>
+    <arc id="27">
+      <graphics>
+        <position x="200" y="141"/>
+        <position x="200" y="160"/>
+      </graphics>
+      <flow source="21" target="14"/>
+    </arc>
+    <arc id="28">
+      <graphics>
+        <position x="216" y="141"/>
+        <position x="300" y="160"/>
+      </graphics>
+      <flow source="21" target="15"/>
+    </arc>
+    <arc id="29">
+      <graphics>
+        <position x="200" y="201"/>
+        <position x="200" y="220"/>
+      </graphics>
+      <flow source="14" target="22"/>
+    </arc>
+    <arc id="30">
+      <graphics>
+        <position x="95" y="201"/>
+        <position x="185" y="220"/>
+      </graphics>
+      <flow source="13" target="22"/>
+    </arc>
+    <arc id="31">
+      <graphics>
+        <position x="300" y="201"/>
+        <position x="216" y="220"/>
+      </graphics>
+      <flow source="15" target="22"/>
+    </arc>
+    <arc id="32">
+      <graphics>
+        <position x="185" y="251"/>
+        <position x="135" y="280"/>
+      </graphics>
+      <flow source="22" target="16"/>
+    </arc>
+    <arc id="33">
+      <graphics>
+        <position x="135" y="321"/>
+        <position x="135" y="350"/>
+      </graphics>
+      <flow source="16" target="17"/>
+    </arc>
+    <and id="41">
+      <graphics>
+        <position height="31" width="31" x="190" y="430"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="42">
+      <graphics>
+        <position height="31" width="31" x="200" y="545"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="43">
+      <graphics>
+        <position x="135" y="391"/>
+        <position x="190" y="430"/>
+      </graphics>
+      <flow source="17" target="41"/>
+    </arc>
+    <arc id="44">
+      <graphics>
+        <position x="190" y="430"/>
+        <position x="216" y="251"/>
+      </graphics>
+      <flow source="41" target="22"/>
+    </arc>
+    <arc id="45">
+      <graphics>
+        <position x="190" y="461"/>
+        <position x="125" y="475"/>
+      </graphics>
+      <flow source="41" target="18"/>
+    </arc>
+    <arc id="46">
+      <graphics>
+        <position x="221" y="461"/>
+        <position x="265" y="475"/>
+      </graphics>
+      <flow source="41" target="19"/>
+    </arc>
+    <arc id="47">
+      <graphics>
+        <position x="125" y="516"/>
+        <position x="200" y="545"/>
+      </graphics>
+      <flow source="18" target="42"/>
+    </arc>
+    <arc id="48">
+      <graphics>
+        <position x="265" y="516"/>
+        <position x="231" y="545"/>
+      </graphics>
+      <flow source="19" target="42"/>
+    </arc>
+    <arc id="49">
+      <graphics>
+        <position x="200" y="576"/>
+        <position x="200" y="600"/>
+      </graphics>
+      <flow source="42" target="20"/>
+    </arc>
+  </epc>
+</epml:epml>
