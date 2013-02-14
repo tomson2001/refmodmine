@@ -3,6 +3,31 @@ $start = time();
 require 'autoloader.php';
 include 'simulator_settings.php';
 
+// Vorberechnung von Traces, falls diese benoetigt werden
+$traces = array();
+if ( $argv[1] == "--lcsot") {
+	print("Berechnung aller moeglichen Traces...\n");
+	$readme .= "Traces...\r\n";
+	foreach ($xml1->xpath("//epc") as $xml_epc1) {
+		$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
+		$epc1 = new EPC($xml1, $xml_epc1["name"]);
+
+		$traceExtractor = new TraceExtractor($epc1);
+		$epcTraces = $traceExtractor->execute();
+
+		if (is_string($epcTraces)) {
+			exit($epcTraces);
+		}
+		
+		$traces[$nameOfEPC1] = $epcTraces;
+		$readme .= "   ".$nameOfEPC1." (".count($epcTraces)." Traces)\r\n";
+		print("   ".$nameOfEPC1.": ".count($epcTraces)." Traces\n");
+
+	}
+	print("... done\n\n");
+}
+
+print("Berechnung der Modellaehnlichkeiten...\n");
 foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
 	$epc1 = new EPC($xml1, $xml_epc1["name"]);
@@ -13,6 +38,12 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 		$epc2 = new EPC($xml2, $xml_epc2["name"]);
 
 		if (!$isLight) $html_analysis .= "<h3>".$nameOfEPC1." <=> ".$nameOfEPC2."</h3>";
+		
+		// Traces falls notwendig an die EPKs dranhaengen
+		if ( $argv[1] == "--lcsot") {
+			$epc1->traces = $traces[$nameOfEPC1];
+			$epc2->traces = $traces[$nameOfEPC2];
+		}
 
 		// Matrix berechnen
 		$analysis_csv .= $nameOfEPC1.";".count($epc1->functions).";".count($epc1->events).";".$nameOfEPC2.";".count($epc2->functions).";".count($epc2->events).";";
@@ -134,6 +165,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	}
 	$similarity_matrix_csv .= "\n";
 }
+print(" done");
 if (!$isLight) $html_analysis .= "</body></html>";
 
 // ERSTELLEN DER AUSGABEDATEIEN
@@ -149,20 +181,29 @@ if (!$isLight) {
 	$fileGenerator->setContent($html_analysis);
 	$uri_html_analysis = $fileGenerator->execute();
 }
+
+// Berechnungdauer
+$duration = time() - $start;
+$seconds = $duration % 60;
+$minutes = floor($duration / 60);
+
+$readme .= "\nEndzeit: ".date("d.m.Y H:i:s")."\r\n";
+$readme .= "Dauer: ".$minutes." Min. ".$seconds." Sek.";
+$fileGenerator->setFilename("ReadMe.txt");
+$fileGenerator->setContent($readme);
+$uri_readme_txt = $fileGenerator->execute();
 // AUSGABEDATEIEN ERSTELLT
 
 // Ausgabe der Dateiinformationen auf der Kommandozeile
 print("\n\nAnalysedateien wurden erfolgreich erstellt:\n\n");
-print("Aehnlichkeits-Matrix: ".$uri_similarity_matrix."\n\n");
+print("Aehnlichkeits-Matrix: ".$uri_similarity_matrix."\n");
+print("ReadMe: ".$uri_similarity_matrix."\n\n");
 
 if (!$isLight) {
 	print("HTML mit Mappings: ".$uri_html_analysis."\n");
 	print("CSV mit Analyseergebnissen: ".$uri_analysis_csv."\n");
 }
 
-$duration = time() - $start;
-$seconds = $duration % 60;
-$minutes = floor($duration / 60);
 print("Dauer: ".$minutes." Min. ".$seconds." Sek.\n\n");
 
 ?>

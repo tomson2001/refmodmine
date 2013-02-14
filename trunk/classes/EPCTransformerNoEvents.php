@@ -5,6 +5,9 @@ class EPCTransformerNoEvents extends EPCTransformerNoConnectorsNoEvents {
 		$this->epc = $epc;
 		$this->removeEvents();
 		$this->removeDuplicatedEdges();
+		$this->removeSESEConnectors();
+		$this->removeSenselessConnectors();
+		$this->removeSESEConnectors();
 		return $this->getTransformedEpc();
 	}
 	

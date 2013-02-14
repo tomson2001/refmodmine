@@ -17,7 +17,7 @@ print("Anzahl Modelle: ".$modelsInFile1."\n");
 
 $analysis_csv = "Modelldatei:;".Config::MODEL_ANALYSIS_FILE."\n";
 $analysis_csv .= "#Modelle;".$modelsInFile1."\n";
-$dataPart = "EPK;#Funktionen;#Gleichbeschriftete Funktionen;Gleichbeschriftete Funktionen;#Events;#Gleichbeschriftete Ereignisse;Gleichbeschriftete Ereignisse;Mehrfachbeschriftungen vorhanden;Ja-Nein-Problem vorhanden\n";
+$dataPart = "EPK;#Funktionen;#Gleichbeschriftete Funktionen;Gleichbeschriftete Funktionen;#Events;#Gleichbeschriftete Ereignisse;Gleichbeschriftete Ereignisse;Mehrfachbeschriftungen vorhanden;Ja-Nein-Problem vorhanden;isSESE\n";
 
 $countCompletedCombinations = 0;
 $progress = 0.1;
@@ -28,6 +28,7 @@ $modelsWithMultipleYesNo = 0;
 foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
 	$epc1 = new EPC($xml1, $xml_epc1["name"]);
+	
 	$dataPart .= $nameOfEPC1.";";
 	
 	// Pruefung auf doppelte Labels bei Functions und Events
@@ -82,11 +83,24 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	}
 	
 	if ( $hasMultipleYesNo ) {
-		$dataPart .= "ja";
+		$dataPart .= "ja;";
 		$modelsWithMultipleYesNo++;
+	} else {
+		$dataPart .= "nein;";
+	}
+	
+	if ( $epc1->isSESE() ) {
+		$dataPart .= "ja";
 	} else {
 		$dataPart .= "nein";
 	}
+	
+// 	if ( $epc1->checkANDSoundness() ) {
+// 		$dataPart .= "ja";
+// 	} else {
+// 		$dataPart .= "nein | ".implode($epc1->warnings, " | ");
+// 		//print_r($epc1->warnings);
+// 	}
 	
 	$dataPart .= "\n";
 	

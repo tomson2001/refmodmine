@@ -70,4 +70,18 @@ print("  1. ".Config::MODEL_FILE_1." (".count($xml1->xpath("//epc"))." Modelle)\
 print("  2. ".Config::MODEL_FILE_2." (".count($xml2->xpath("//epc"))." Modelle)\n\n");
 print("Anzahl Modellkombinationen: ".$countCombinations."\n");
 print("Gewaehltes Aehnlichkeitsmass: ".$similarityMeasures[$argv[1]]."\n\n");
+
+// ReadMe.txt erzeugen
+$readme = "-----------------------------------------------\r\n";
+$readme .= "RefModMining - Mapping and Similarity Simulator\r\n";
+$readme .= "-----------------------------------------------\r\n\r\n";
+$readme .= "Ausfuehrungsinformationen:\r\n";
+$readme .= " - Aehnlichkeitsmass: ".$similarityMeasures[$argv[1]]."\r\n";
+$lightPrint = $isLight ? "Ja" : "Nein";
+$readme .= " - Mapping-Analyse und Mappings (HTML) erstellt: ".$lightPrint."\r\n";
+$readme .= " - Erste Modelldatei:  ".Config::MODEL_FILE_1." (".$modelsInFile1." Modelle)\r\n";
+$readme .= " - Zweite Modelldatei: ".Config::MODEL_FILE_2." (".$modelsInFile2." Modelle)\r\n";
+$readme .= " - Anzahl Modellkombinationen: ".$countCombinations."\r\n";
+$readme .= " - Startzeit: ".date("d.m.Y H:i:s")."\r\n\r\n";
+
 ?>
