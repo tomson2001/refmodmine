@@ -37,14 +37,14 @@ class EPCTransformerNoConnectorsNoEvents {
 				if ( array_key_exists($eventID, $startNodes) ) continue;
 			}
 				
-			// IGNORE_START_EVENTS
+			// IGNORE_TRACE_IMPORTANT_START_EVENTS
 			if ( in_array("IGNORE_TRACE_IMPORTANT_START_EVENTS", $options) ) {
 				if ( array_key_exists($eventID, $startNodes) ) {
 					$succ = $this->epc->getSuccessor($eventID);
 					if ( count($succ) == 1 ) {
 						$succ = $succ[0];
-						if ( $this->epc->isConnector($succ) ) {
-							// Nachfolger ist ein Konnektor
+						if ( $this->epc->isOr($succ) || $this->epc->isXor($succ) ) {
+							// Nachfolger ist ein XOR- oder OR-Konnektor
 							if ( !isset($reduceStartEventsFollowedByConnector[$succ]) ) $reduceStartEventsFollowedByConnector[$succ] = array();
 							array_push($reduceStartEventsFollowedByConnector[$succ], $eventID);
 							continue;
@@ -58,7 +58,7 @@ class EPCTransformerNoConnectorsNoEvents {
 				if ( array_key_exists($eventID, $endNodes) ) continue;
 			}
 
-			// IGNORE_END_EVENTS
+			// IGNORE_TRACE_IMPORTANT_END_EVENTS
 			if ( in_array("IGNORE_TRACE_IMPORTANT_END_EVENTS", $options) ) {
 				if ( array_key_exists($eventID, $endNodes) ) {
 					$pred = $this->epc->getPredecessor($eventID);

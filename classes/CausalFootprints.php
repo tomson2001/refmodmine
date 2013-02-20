@@ -54,7 +54,7 @@ class CausalFootprints implements ISimilarityMeasure {
 					$footprintVector1[$index] = 0;
 					foreach ( $linkSet1 as $link ) {
 						foreach ( $link as $node2 => $arr2 ) {
-							if ( $node1 == $node2 && count(array_diff($arr1, $arr2)) == 0 && count(array_diff($arr2, $arr1)) == 0 ) {
+							if ( (string) $node1 == (string) $node2 && count(array_diff($arr1, $arr2)) == 0 && count(array_diff($arr2, $arr1)) == 0 ) {
 								//$footprintVector1[$index] = 1 / pow(2, count($arr1));
 								$footprintVector1[$index] =1;
 								break;
@@ -65,7 +65,7 @@ class CausalFootprints implements ISimilarityMeasure {
 					$footprintVector2[$index] = 0;
 					foreach ( $linkSet2 as $link ) {
 						foreach ( $link as $node2 => $arr2 ) {
-							if ( $node1 == $node2 && count(array_diff($arr1, $arr2)) == 0 && count(array_diff($arr2, $arr1)) == 0 ) {
+							if ( (string) $node1 == (string) $node2 && count(array_diff($arr1, $arr2)) == 0 && count(array_diff($arr2, $arr1)) == 0 ) {
 								//$footprintVector2[$index] = 1 / pow(2, count($arr1));
 								$footprintVector2[$index] = 1;
 								break;

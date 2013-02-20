@@ -86,7 +86,7 @@ Example 7: 8 Traces
 
 Example 8: Deadlock
 
-Example 9: 
+Example 9: 3 Traces
 
 Example 10: 64 Traces
    12
@@ -262,3 +262,9 @@ Example 15: 2220 Traces
 
 Example 16: 312 Traces
    Trace_Extraction_Example_15_Becker_V2_Easy.csv
+
+Example 17: 5 Traces
+
+Example 18: 2 Traces
+
+Example 19: 4 Traces
