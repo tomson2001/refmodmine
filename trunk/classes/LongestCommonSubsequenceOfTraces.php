@@ -24,7 +24,7 @@ class LongestCommonSubsequenceOfTraces implements ISimilarityMeasure {
 	public function calculate() {
 		$nameOfEPC1 = $this->mapping->epc1->name;
 		$nameOfEPC2 = $this->mapping->epc2->name;
-		print("---".$nameOfEPC1.":".$nameOfEPC2."---");
+		//print("---".$nameOfEPC1.":".$nameOfEPC2."---");
 		if ( strcmp($nameOfEPC1, $nameOfEPC2) == 0 ) {
 			$this->similarityValue = 1;
 			//print("break");
@@ -81,8 +81,8 @@ class LongestCommonSubsequenceOfTraces implements ISimilarityMeasure {
 			}
 
 			// Berechnung von Compliance und Maturity
-			$cd = $cd_numerator / $numTracesOfEPC2;
-			$md = $md_numerator / $numTracesOfEPC1;
+			$cd = $numTracesOfEPC2 == 0 ? 0 : $cd_numerator / $numTracesOfEPC2;
+			$md = $numTracesOfEPC1 == 0 ? 0 : $md_numerator / $numTracesOfEPC1;
 
 			// Ergebnis ist Mittelwert aus Compliance und Maturity
 			$this->similarityValue = round((($cd + $md) / 2)*100 ,2);

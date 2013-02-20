@@ -17,19 +17,24 @@ $similarityMeasures = array(
 // Hilfeanzeige auf Kommandozeile
 if ( !isset($argv[1]) || !array_key_exists($argv[1], $similarityMeasures) ) {
 	exit("   Verfuegbare Aehnlichkeitsmasse:\n
-   [--ssbocan]   ".$similarityMeasures["--ssbocan"]."
-   [--lms]       ".$similarityMeasures["--lms"]."
-   [--fbse]      ".$similarityMeasures["--fbse"]."
-   [--pocnae]    ".$similarityMeasures["--pocnae"]."
-   [--geds]      ".$similarityMeasures["--geds"]."
-   [--amaged]    ".$similarityMeasures["--amaged"]."
-   [--cf]        ".$similarityMeasures["--cf"]."
-   [--lcsot]     ".$similarityMeasures["--lcsot"]."		
-   [--ts]        ".$similarityMeasures["--ts"]."
-   [--tswf]      ".$similarityMeasures["--tswf"]."\n
+   [--ssbocan]       ".$similarityMeasures["--ssbocan"]."
+   [--lms]           ".$similarityMeasures["--lms"]."
+   [--fbse]          ".$similarityMeasures["--fbse"]."
+   [--pocnae]        ".$similarityMeasures["--pocnae"]."
+   [--geds]          ".$similarityMeasures["--geds"]."
+   [--amaged]        ".$similarityMeasures["--amaged"]."
+   [--cf]            ".$similarityMeasures["--cf"]."
+   [--lcsot]         ".$similarityMeasures["--lcsot"]."
+   [--ts]            ".$similarityMeasures["--ts"]."
+   [--tswf]          ".$similarityMeasures["--tswf"]."\n
+
+   Zusatzoptionen fuer ".$similarityMeasures["--lcsot"].":\n
+   [--exportEPML]    Export der reduzierten EPML-Dateien
+   [--exportTraces]  CSV-Export der Traces\n
+
    Weitere Optionen:\n
-   [--light]     Keine Mappinganalyse, keine HTML-Generierung
-   [--help]      Hilfe\n\n");
+   [--light]         Keine Mappinganalyse, keine HTML-Generierung
+   [--help]          Hilfe\n\n");
 }
 
 $isLight = in_array("--light", $argv) ? true : false;
@@ -47,15 +52,11 @@ $content_file_2 = file_get_contents(Config::MODEL_FILE_2);
 $xml2 = new SimpleXMLElement($content_file_2);
 
 if (!$isLight) $html_analysis = HTMLComponents::AUTOMAPPING_HEADER;
-$analysis_csv = "EPC1;#Functions in EPC1;#Events in EPC1;EPC2;#Functions in EPC2;#Events in EPC2;Eindeutig;".$similarityMeasures[$argv[1]]."\n";
-
-// Aehnlichkeitsmatrix in CSV vorbereiten
-$similarity_matrix_csv = "";
-foreach ($xml2->xpath("//epc") as $xml_epc2) {
-	$nameOfEPC2 = utf8_decode((string) $xml_epc2["name"]);
-	$similarity_matrix_csv .= ";".$nameOfEPC2;
+if ( $argv[1] == "--lcsot" ) {
+	$analysis_csv = "EPC1;#Functions in EPC1;#Events in EPC1;EPC2;#Functions in EPC2;#Events in EPC2;Eindeutig;#Gemappte Funktionen;#Traces EPC1;#Traces EPC2;".$similarityMeasures[$argv[1]]."\n";
+} else {
+	$analysis_csv = "EPC1;#Functions in EPC1;#Events in EPC1;EPC2;#Functions in EPC2;#Events in EPC2;Eindeutig;#Gemappte Funktionen;".$similarityMeasures[$argv[1]]."\n";
 }
-$similarity_matrix_csv .= "\n";
 
 // Vorbereitung der Forschrittsanzeige
 $modelsInFile1 = count($xml1->xpath("//epc"));
@@ -84,4 +85,19 @@ $readme .= " - Zweite Modelldatei: ".Config::MODEL_FILE_2." (".$modelsInFile2." 
 $readme .= " - Anzahl Modellkombinationen: ".$countCombinations."\r\n";
 $readme .= " - Startzeit: ".date("d.m.Y H:i:s")."\r\n\r\n";
 
+
+/**
+ * SAP-Ignore: Folgende Modelle sollen beim SAP Referenzmodell aufgrund der zu hohen Laufzeit ignoriert werden (77 Modelle) => 88% laufen durch!
+ */
+$ignore_models = array(
+		// SAP Modelle
+		"1An_kc5k", "1An_knwl", "1An_ks6c", "1An_kv7b", "1An_kzoq", "1An_l2cf", "1Ar_ma2i", "1Be_2ork", "1Be_38qs", "1Er_h4fo", "1Pr_smx-",
+		"1Er_hhi9", "1Er_hsc3", "1Er_hsto", "1Er_ixgh", "1Er_ixgh", "1Er_ixso", "1Ex_dxa3", "1Ex_dyea", "1Ex_dzq9", "1Ex_e1oz", "1Ex_e43l",
+		"1Ex_e76a", "1Ex_e8vj", "1Ex_esd0", "1Ex_evsj", "1Im_ljm4", "1Im_lmu3", "1In_agyu", "1In_ahnr", "1In_aklk", "1In_apbf", "1In_aslk", 
+		"1In_at4y", "1In_awpb", "1In_b19m", "1In_b3z3", "1In_b8et", "1In_bb6y", "1In_be6n", "1In_bip2", "1Ku_903f", "1Ku_97uj", "1Ku_9mgu",
+		"1Ku_9soy", "1Ku_a6af", "1Pe_lrja", "1Pe_lsz3", "1Pe_lx1m", "1Pe_max4", "1Pe_mbsh", "1Pe_mgei", "1Pe_mie0", "1Pr_10om", "1Pr_afh",
+		"1Pr_d1ur", "1Pr_dkfa", "1Pr_smx", "1Qu_btq3", "1Qu_bxuo", "1Qu_bywg", "1Qu_c5we", "1Qu_c8yd", "1Qu_cb8m", "1Qu_ce0j", "1Qu_cjnw",
+		"1Tr_g68b", "1Tr_gjiw", "1Un_j73d", "1Un_jh6h", "1Un_jqw9", "1Un_k30q", "1Ve_7c1w", "1Ve_7uuo", "1Ve_musj", "1Ve_mxed", "1Pr_afh-");
+
+//$ignore_models = array();
 ?>

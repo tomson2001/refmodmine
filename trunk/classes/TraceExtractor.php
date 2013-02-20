@@ -26,11 +26,23 @@ class TraceExtractor {
 	public $traceExtraction = array();
 	public $traces;
 
+	// true: loops werden nicht durchlaufen; false: loops werden genau einmal durchlaufen
+	public $runLoops = true;
+
 	// Subtraces zwischen zwei ORs
 	public $orSubTraces = array();
 
 	// Subtraces zwischen zwei XORs
 	public $xorSubTraces = array();
+
+	// Traces von JOIN-Konnektoren, ausgehend von jedem Startknoten
+	public $joinStreams;
+
+	private $startTime;
+	private $max_execution_time;
+
+	// Schaltet Ausgaben auf der Konsole ein - DEBUG Modus
+	private $debug = false;
 
 	/**
 	 * Konstruktur
@@ -39,18 +51,25 @@ class TraceExtractor {
 	 * da diese nicht fuer die Ausfuehrung relevant sind.
 	 *
 	 * @param EPC $epc
-	*/
-	public function __construct(EPC $epc) {
+	 * @param bool $doEPCExport Soll die reduzierte EPK exportiert werden?
+	 * @param bool $max_execution_time Zeit, die die Trace-Extraktion maximal dauern darf, bevor abgebrochen wird... in Sekunden!
+	 */
+	public function __construct(EPC $epc, $doEPCExport = false, $max_execution_time = 0) {
 		$transformer = new EPCTransformerNoEventsButEnds();
 		$epc = $transformer->transform($epc);
-		$epc->exportEPML();
+		if ( $doEPCExport )	$epc->exportEPML();
 		$this->epc = $epc;
 		$this->getORSubtraces();
 		$this->getXORSubtraces();
 
-		//print("OsSubTraces");
-		//print_r($this->orSubTraces);
-		//print_r($this->xorSubTraces);
+		$this->max_execution_time = $max_execution_time;
+
+		if ( $this->debug ) {
+			print("OrSubTraces\n");
+			print_r($this->orSubTraces);
+			print("XorSubTraces\n");
+			print_r($this->xorSubTraces);
+		}
 	}
 
 	/**
@@ -60,9 +79,18 @@ class TraceExtractor {
 	 * @return $traces / Error-Meldung
 	 */
 	public function execute() {
+		$this->startTime = time();
 		// Startknoten suchen
 		$startNodes = $this->epc->getAllStartNodes();
-		if ( empty($startNodes) ) return false;
+		$startNodes = $this->skipEvents($startNodes);
+		$this->computeJoinStreams($startNodes);
+		if ( $this->debug ) {
+			print("JoinStreams\n");
+			print_r($this->joinStreams);
+		}
+		if ( is_string($startNodes) ) return $startNodes;
+
+		if ( empty($startNodes) ) return array();
 
 		$traces = array();
 
@@ -97,31 +125,41 @@ class TraceExtractor {
 
 		}
 
+		//print("TEST");
 		// Falls mehrere Startknoten, dann betrachte das
 		if ( count($startNodes) > 1 ) {
+
+
 			/**
 			 * Annahme: Pfade fuehren ueber ein AND-Join zusammen
 			 */
-			$traceExtraction = array( // detection
-					array(
-							'trace' => array(),
-							'currentNode' => null,
-							'backEdges' => array(),
-							'connectorMemory' => array(),
-							'todoMemory' => array("start" => array_keys($startNodes)),
-							'todoMemorySubTraces' => array("start" => array())
-					)
-			);
+			$firstCommonJoin = $this->getFirstCommonJoin($startNodes);
+			//print("---".$firstCommonJoin."---");
+			if ( $firstCommonJoin == "and" || $firstCommonJoin == "or" ) {
+				//print("Do (And): ".implode(", ", array_flip($startNodes)));
+				$traceExtraction = array( // detection
+						array(
+								'trace' => array(),
+								'currentNode' => null,
+								'backEdges' => array(),
+								'connectorMemory' => array(),
+								'todoMemory' => array("start" => array_keys($startNodes)),
+								'todoMemorySubTraces' => array("start" => array())
+						)
+				);
 
-			// Rekursive Trace-Extraktion
-			$traceExtrationResult = $this->continueTraceExtraction($traceExtraction);
-			if ( is_string($traceExtrationResult) ) return $traceExtrationResult;
+				// Rekursive Trace-Extraktion
+				$traceExtrationResult = $this->continueTraceExtraction($traceExtraction);
+				if ( is_string($traceExtrationResult) ) return $traceExtrationResult;
 
-			//print_r($this->traceExtraction);
+				//print_r($this->traceExtraction);
 
-			// Gefundene Traces herauslesen
-			foreach ( $traceExtrationResult as $traceExtractionIndex => $detection ) {
-				if ( !in_array($detection['trace'], $traces) ) array_push($traces, $detection['trace']);
+				// Gefundene Traces herauslesen
+				foreach ( $traceExtrationResult as $traceExtractionIndex => $detection ) {
+					if ( !in_array($detection['trace'], $traces) ) array_push($traces, $detection['trace']);
+				}
+			} else {
+				//print("Skip (And): ".implode(", ", array_flip($startNodes)));
 			}
 
 
@@ -135,28 +173,36 @@ class TraceExtractor {
 				for ( $i=2; $i<$countStartNodes; $i++ ) {
 					$possibleTodoMemories = $this->getSplitORPermutations(array_keys($startNodes), $i);
 					foreach ( $possibleTodoMemories as $todoMemory ) {
-						$traceExtraction = array( // detection
-								array(
-										'trace' => array(),
-										'currentNode' => null,
-										'backEdges' => array(),
-										'connectorMemory' => array(),
-										'todoMemory' => array("start" => $todoMemory),
-										'todoMemorySubTraces' => array("start" => array()),
-										'startTraceXORSplitAvailable' => array()
-								)
-						);
+						$firstCommonJoin = $this->getFirstCommonJoin(array_flip($todoMemory));
 							
-						// Rekursive Trace-Extraktion
-						$traceExtrationResult = $this->continueTraceExtraction($traceExtraction);
-						if ( is_string($traceExtrationResult) ) return $traceExtrationResult;
-							
-						//print_r($this->traceExtraction);
-							
-						// Gefundene Traces herauslesen
-						foreach ( $traceExtrationResult as $traceExtractionIndex => $detection ) {
-							if ( !in_array($detection['trace'], $traces) ) array_push($traces, $detection['trace']);
+						if ( $firstCommonJoin == "and" || $firstCommonJoin == "or" ) {
+							//print("Do (or): ".implode(", ", $todoMemory));
+							$traceExtraction = array( // detection
+									array(
+											'trace' => array(),
+											'currentNode' => null,
+											'backEdges' => array(),
+											'connectorMemory' => array(),
+											'todoMemory' => array("start" => $todoMemory),
+											'todoMemorySubTraces' => array("start" => array()),
+											'startTraceXORSplitAvailable' => array()
+									)
+							);
+
+							// Rekursive Trace-Extraktion
+							$traceExtrationResult = $this->continueTraceExtraction($traceExtraction);
+							if ( is_string($traceExtrationResult) ) return $traceExtrationResult;
+
+							//print_r($this->traceExtraction);
+
+							// Gefundene Traces herauslesen
+							foreach ( $traceExtrationResult as $traceExtractionIndex => $detection ) {
+								if ( !in_array($detection['trace'], $traces) ) array_push($traces, $detection['trace']);
+							}
+						} else {
+							//print("Skip (or): ".implode(", ", $todoMemory));
 						}
+
 					}
 				}
 			}
@@ -189,8 +235,10 @@ class TraceExtractor {
 	 */
 	private function continueTraceExtraction($traceExtration) {
 
-		//print("\ncontinueTraceExtraction");
-		//print_r($traceExtration);
+		if ( $this->debug ) {
+			print("\ncontinueTraceExtraction");
+			print_r($traceExtration);
+		}
 
 		$somethingDone = false;
 		$newTraceExtraction = array();
@@ -199,6 +247,7 @@ class TraceExtractor {
 
 		// Iteration ueber bisher extrahierte Trace-Segemente
 		foreach ( $traceExtration as $traceExtractionIndex => $detection ) {
+			if ( $this->timeExceeded() ) return "Time exceeded";
 
 			/**
 			 * 0. Fall: Prozess durchlaeuft einen parallelen Ablauf (AND-Phase)
@@ -213,6 +262,9 @@ class TraceExtractor {
 					//print($newDetections);
 					return $newDetections;
 				}
+
+				//print("AFTER\n\n");
+				//print_r($newDetections);
 
 				foreach ( $newDetections as $newDetection ) {
 					if ( !in_array($newDetection, $newTraceExtraction) ) {
@@ -230,7 +282,7 @@ class TraceExtractor {
 			 *
 			 * ==> Nichts tun
 			 */
-			if ( is_null($detection['currentNode']) ) {
+			if ( (is_null($detection['currentNode']) || empty($detection['currentNode'])) && (string) $detection['currentNode'] !== "0") {
 				array_push($this->traceExtraction, $detection);
 				continue;
 			}
@@ -262,6 +314,7 @@ class TraceExtractor {
 
 					// Pruefen, ob Nachfolgefunktion bereits im Trace vorhanden ist
 					if ( in_array($successor, $detection['trace']) ) {
+						if ( !$this->runLoops ) continue;
 						// Pruefen ob es sich um einen bereits durchlaufenen Rueckschritt handelt
 						if ( in_array($currentNode."_".$successor, $detection['backEdges']) ) {
 							continue;
@@ -289,7 +342,7 @@ class TraceExtractor {
 					}
 					continue;
 				} else {
-					return "Syntax Error (1) in EPC \"".$this->epc->name."\" near \"".$this->epc->getNodeLabel($lastTraceNode)."\" (Node-ID: ".$lastTraceNode.")";
+					return "Syntax Error (1) in EPC \"".$this->epc->name."\"  \"".$this->epc->getNodeLabel($lastTraceNode)."\" (Node-ID: ".$lastTraceNode.")";
 				}
 			}
 
@@ -315,6 +368,7 @@ class TraceExtractor {
 					 */
 					// Pruefen, ob Nachfolgefunktion bereits im Trace vorhanden ist
 					if ( in_array($successor, $detection['trace']) ) {
+						if ( !$this->runLoops ) continue;
 						// Pruefen ob es sich um einen bereits durchlaufenen Rueckschritt handelt
 						if ( in_array($currentNode."_".$successor, $detection['backEdges']) ) {
 							continue;
@@ -354,6 +408,10 @@ class TraceExtractor {
 
 					// Pruefen, ob Nachfolgefunktion bereits im Trace vorhanden ist
 					if ( in_array($successor, $detection['trace']) ) {
+						if ( !$this->runLoops ) {
+							$abortOperation = true;
+							break;
+						}
 						// Pruefen ob es sich um einen bereits durchlaufenen Rueckschritt handelt
 						if ( in_array($currentNode."_".$successor, $detection['backEdges']) ) {
 							$abortOperation = true;
@@ -397,6 +455,10 @@ class TraceExtractor {
 
 								// Pruefen, ob Nachfolgefunktion bereits im Trace vorhanden ist
 								if ( in_array($node, $detection['trace']) ) {
+									if ( !$this->runLoops ) {
+										$abortOperation = true;
+										break;
+									}
 									// Pruefen ob es sich um einen bereits durchlaufenen Rueckschritt handelt
 									if ( in_array($currentNode."_".$node, $detection['backEdges']) ) {
 										$abortOperation = true;
@@ -429,7 +491,7 @@ class TraceExtractor {
 		// Wenn etwas getan wurde mache weiter, ansonsten hoere auf
 		if ( $somethingDone ) {
 			//print_r($newTraceExtraction);
-			print(".".count($newTraceExtraction).".");
+			if ( count($newTraceExtraction) > 2000 ) print(".".count($newTraceExtraction).".");
 			return $this->continueTraceExtraction($newTraceExtraction);
 		} else {
 			//print_r($newTraceExtraction);
@@ -486,39 +548,55 @@ class TraceExtractor {
 						if ( $countInputPathes == $foundPathes ) {
 							$newDetection = $detection;
 							$successors = $this->epc->getSuccessor($andJoinID);
+							array_push($newDetection['trace'], $andJoinID);
 							// AND-Join duerfen nur einen Nachfolger haben
 							if ( count($successors) == 1 ) {
 								$successor = $successors[0];
-								$newDetection['todoMemory'][$splitNodeID][$index] = $successor;
-
+								//$newDetection['todoMemory'][$splitNodeID][$index] = $successor;
+								array_push($newDetection['trace'], $successor);
+								$newDetection['currentNode'] = $successor;
+								unset($newDetection['todoMemory'][$splitNodeID]);
+								unset($newDetection['todoMemorySubTraces'][$splitNodeID]);
 								array_push($newDetections, $newDetection);
+								return $newDetections;
 							} elseif ( count($successors) == 0 ) {
 								unset($newDetection['todoMemory'][$splitNodeID][$index]);
+								$newDetection['currentNode'] = null;
+								unset($newDetection['todoMemory'][$splitNodeID]);
+								unset($newDetection['todoMemorySubTraces'][$splitNodeID]);
 								array_push($newDetections, $newDetection);
+								return $newDetections;
 							} else {
-								return "Syntax Error (4) in EPC \"".$this->epc->name."\" near \"".$this->epc->getNodeLabel($lastTraceNode)."\" (Node-ID: ".$lastTraceNode.")";
+								return "Syntax Error (4) in EPC \"".$this->epc->name."\" at \"".$this->epc->getNodeLabel($andJoinID)."\" (Node-ID: ".$andJoinID.")";
 							}
 							//print_r($newDetection);
 						}
 
-					}
+					} else {
 
-					if ( substr($node, 0, 8) == 'andsplit' ) return "Deadlock (1) in EPC \"".$this->epc->name."\" near \"".$this->epc->getNodeLabel($lastTraceNode)."\" (Node-ID: ".$lastTraceNode.")";
-					if ( substr($node, 0, 7) == 'stop_or' ) {
-						$node = $this->extractNodeID($node);
+						if ( substr($node, 0, 8) == 'andsplit' ) {
+							$node = $this->extractNodeID($node);
+							//return "Deadlock (1) in EPC \"".$this->epc->name."\" at \"".$this->epc->getNodeLabel($node)."\" (Node-ID: ".$node.")";
+						}
+
+						if ( substr($node, 0, 7) == 'stop_or' ) {
+							$node = $this->extractNodeID($node);
+						}
+
+						array_push($newDetection['trace'], $node);
+						$newDetection['currentNode'] = $node;
+							
+						unset($newDetection['todoMemory'][$splitNodeID]);
+						unset($newDetection['todoMemorySubTraces'][$splitNodeID]);
+							
+						//print_r($newDetection);
+							
+						array_push($newDetections, $newDetection);
+						return $newDetections;
+							
 					}
-					array_push($newDetection['trace'], $node);
-					$newDetection['currentNode'] = $node;
 
 				}
-					
-				unset($newDetection['todoMemory'][$splitNodeID]);
-				unset($newDetection['todoMemorySubTraces'][$splitNodeID]);
-
-				//print_r($newDetection);
-
-				array_push($newDetections, $newDetection);
-				return $newDetections;
 					
 			}
 		}
@@ -576,12 +654,16 @@ class TraceExtractor {
 			// Iteration ueber die moeglichen Nachfolgeknoten
 			foreach ( $possibleNodes as $index => $nodeID ) {
 
+				if ( $this->timeExceeded() ) return "Time exceeded";
+
 				/**
 				 * 1.1.1 Fall: Synchronisationspunkt erreicht (AND-Join)
 				 *
 				 * ==> Erst weitermachen, wenn alle in den AND-Join eingehenden Pfade den AND-Join auch erreicht haben
 				 */
 				if ( substr($nodeID, 0, 8) == 'stop_and' ) {
+					
+					$newDetection = $detection;
 
 					$andJoinID = $this->extractNodeID($nodeID);
 					if ( in_array($andJoinID, $handledStops) ) continue;
@@ -590,15 +672,49 @@ class TraceExtractor {
 					$predecessors = $this->epc->getPredecessor($andJoinID);
 					$countInputPathes = count($predecessors);
 					$foundPathes = 0;
+					$nestedPathes = 0;
+					$nestedSplitsWithIndex = array();
+					$nestedUnsetIndex = array();
 					foreach ( $predecessors as $predecessor ) {
-						if ( in_array($predecessor, $detection['todoMemorySubTraces'][$splitNode]) ) $foundPathes++;
+						if ( $this->epc->isANDSplit($predecessor) && $predecessor != $splitNodeID ) {
+							// Behandlung planarer EPKs
+							$tmpMemory = $detection['todoMemory'][$splitNode];
+							foreach ( $tmpMemory as $tmpIndex => $tmpNode ) {
+								if ( substr($tmpNode, 0, 8) == 'andsplit' ) {
+									$tmpSplit = substr($tmpNode, 11);
+									if ( $tmpSplit == $predecessor ) {
+										$tmpSplitWithIndex = substr($tmpNode, 9);
+										$tmpSplitTodo = $detection['todoMemory'][$tmpSplitWithIndex];
+										if ( in_array($nodeID, $tmpSplitTodo) ) {
+											
+											$nestedPathes++;
+											$tmpSplitTodoFlipped = array_flip($tmpSplitTodo);
+											$unsetIndex = $tmpSplitTodoFlipped[$nodeID];
+											array_push($nestedSplitsWithIndex, $tmpSplitWithIndex);
+											array_push($nestedUnsetIndex, $unsetIndex);
+										}
+									} 
+								}
+							}
+						} else {
+						  	if ( in_array($predecessor, $detection['todoMemorySubTraces'][$splitNode]) || $predecessor == $splitNodeID ) $foundPathes++;
+						}
 					}
+					
+					if ( $nestedPathes + $foundPathes == $countInputPathes ) {
+						foreach ( $nestedSplitsWithIndex as $tmpIndex => $tmpSplitWithIndex ) {
+							$unsetIndex = $nestedUnsetIndex[$tmpIndex];
+							unset($newDetection['todoMemory'][$tmpSplitWithIndex][$unsetIndex]);
+						}
+						$foundPathes += $nestedPathes;
+					}
+						
 					//print("---JA---");
 
 					// Wenn alle Pfade eingegangen sind, dann ersetze das stop durch den Nachfolger (vorausgesetzt er ist noch nicht im Memory enthalten
 					if ( $countInputPathes == $foundPathes ) {
 						//print("---JAAA---");
-						$newDetection = $detection;
+						
 						$successors = $this->epc->getSuccessor($andJoinID);
 						// AND-Join duerfen nur max. einen Nachfolger haben
 						if ( count($successors) == 0 ) {
@@ -651,7 +767,7 @@ class TraceExtractor {
 							array_push($newDetections, $newDetection);
 							array_push($handledStops, $andJoinID);
 						} else {
-							return "Syntax Error (4) in EPC \"".$this->epc->name."\" near \"".$this->epc->getNodeLabel($lastTraceNode)."\" (Node-ID: ".$lastTraceNode.")";
+							return "Syntax Error (4) in EPC \"".$this->epc->name."\" at \"".$this->epc->getNodeLabel($nodeID)."\" (Node-ID: ".$nodeID.")";
 						}
 					} else {
 						$tmpTodoMemory = $detection['todoMemory'][$splitNode];
@@ -660,7 +776,7 @@ class TraceExtractor {
 							if ( $tmpNodeID != $nodeID ) $allNodesOfTodoMemorySplitAreEqual = false;
 						}
 						if ( $allNodesOfTodoMemorySplitAreEqual ) {
-							//return "Deadlock (2) in EPC \"".$this->epc->name."\" near \"".$this->epc->getNodeLabel($lastTraceNode)."\" (Node-ID: ".$lastTraceNode.")";
+							//return "Deadlock (2) in EPC \"".$this->epc->name."\"  \"".$this->epc->getNodeLabel($lastTraceNode)."\" (Node-ID: ".$lastTraceNode.")";
 						}
 					}
 					continue;
@@ -745,13 +861,14 @@ class TraceExtractor {
 								}
 							}
 						} else {
-							return "Syntax Error (7) in EPC \"".$this->epc->name."\" near \"".$this->epc->getNodeLabel($lastTraceNode)."\" (Node-ID: ".$lastTraceNode.")";
+							return "Syntax Error (7) in EPC \"".$this->epc->name."\" at \"".$this->epc->getNodeLabel($nodeID)."\" (Node-ID: ".$nodeID.")";
 						}
-							
+						array_push($newDetection['todoMemorySubTraces'][$splitNode], $orJoinID);
+						array_push($newDetection['trace'], $orJoinID);
 						array_push($newDetections, $newDetection);
 					} elseif ( $onlyStops && !$activatedPathes ) {
 						//print_r($detection);
-						return "Syntax Error (8) in EPC \"".$this->epc->name."\" near \"".$this->epc->getNodeLabel($lastTraceNode)."\" (Node-ID: ".$lastTraceNode."). OR-Join-ID ".$orJoinID.".";
+						return "Syntax Error (8) in EPC \"".$this->epc->name."\" at \"".$this->epc->getNodeLabel($nodeID)."\" (Node-ID: ".$nodeID."). OR-Join-ID ".$orJoinID.".";
 					}
 
 					continue;
@@ -800,22 +917,30 @@ class TraceExtractor {
 						$activatedPathes = false;
 						if ( $splitNode == "start" && $this->epc->isXORJoin($nodeID) ) {
 							foreach ( $tmpDetection['todoMemory'][$splitNode] as $tmpIndex => $tmpNodeID ) {
-								if ( $this->reachesXor($this->extractNodeID($tmpNodeID), $nodeID) && $tmpIndex != $index ) {
+								if ( ($this->reachesXor($this->extractNodeID($tmpNodeID), $nodeID) && $tmpIndex != $index)
+										|| ($tmpNodeID == $nodeID && $tmpIndex != $index) ) {
 									$activatedPathes = true;
-									//print($tmpNodeID.": JA");
+									//print($splitNode." ".$tmpNodeID." => ".$nodeID.": JA\n");
 								} else {
-									//print($tmpNodeID.": Nein");
+									//print($splitNode." ".$tmpNodeID." => ".$nodeID.": NEIn\n");
 								}
 							}
 						}
 
-						if ( !($splitNode == "start" && $this->epc->isXORJoin($nodeID)) && !$activatedPathes ) {
+						if ( !($splitNode == "start" && $this->epc->isXORJoin($nodeID))
+								|| ($splitNode == "start" && $this->epc->isXORJoin($nodeID) && !$activatedPathes) ) {
 
+							if ( $splitNode == "start" && $this->epc->isXORJoin($nodeID) ) {
+								//print("ok\n");
+							} else {
+								//print("\n");
+							}
 							$successor = $successors[0];
 							$successorType = $this->epc->getType($successor);
 
 							// Pruefen, ob Nachfolgefunktion bereits im Trace vorhanden ist
 							if ( in_array($successor, $detection['trace']) ) {
+								if ( !$this->runLoops ) continue;
 								// Pruefen ob es sich um einen bereits durchlaufenen Rueckschritt handelt
 								if ( in_array($nodeID."_".$successor, $detection['backEdges']) ) {
 									continue;
@@ -850,10 +975,13 @@ class TraceExtractor {
 							array_push($newDetections, $newDetection);
 
 
+						} else {
+							//print("drop\n");
 						}
+
 						continue;
 					} else {
-						return "Syntax Error (5) in EPC \"".$this->epc->name."\" near \"".$this->epc->getNodeLabel($lastTraceNode)."\" (Node-ID: ".$lastTraceNode.")";
+						return "Syntax Error (5) in EPC \"".$this->epc->name."\" at \"".$this->epc->getNodeLabel($nodeID)."\" (Node-ID: ".$nodeID.")";
 					}
 				}
 
@@ -879,6 +1007,7 @@ class TraceExtractor {
 
 						// Pruefen, ob Kante bereits im Trace vorhanden ist
 						if ( in_array($successor, $detection['trace']) ) {
+							if ( !$this->runLoops ) continue;
 							// Pruefen ob es sich um einen bereits durchlaufenen Rueckschritt handelt
 							if ( in_array($nodeID."_".$successor, $detection['backEdges']) ) {
 								continue;
@@ -920,6 +1049,10 @@ class TraceExtractor {
 
 						// Pruefen, ob Nachfolgefunktion bereits im Trace vorhanden ist
 						if ( in_array($successor, $detection['trace']) ) {
+							if ( !$this->runLoops ) {
+								$abortOperation = true;
+								break;
+							}
 							// Pruefen ob es sich um einen bereits durchlaufenen Rueckschritt handelt
 							if ( in_array($nodeID."_".$successor, $detection['backEdges']) ) {
 								$abortOperation = true;
@@ -975,6 +1108,10 @@ class TraceExtractor {
 
 									// Pruefen, ob Nachfolgefunktion bereits im Trace vorhanden ist
 									if ( in_array($successor, $detection['trace']) ) {
+										if ( !$this->runLoops ) {
+											$abortOperation = true;
+											break;
+										}
 										// Pruefen ob es sich um einen bereits durchlaufenen Rueckschritt handelt
 										if ( in_array($nodeID."_".$successor, $detection['backEdges']) ) {
 											$abortOperation = true;
@@ -1064,6 +1201,7 @@ class TraceExtractor {
 	 * @return bool
 	 */
 	private function reachesOr($nodeID, $orId) {
+		//print("|");
 		if ( $this->epc->isORJoin($nodeID) ) {
 			if ( $this->continueReachOr($orId, $nodeID) ) return true;
 		} else {
@@ -1090,12 +1228,18 @@ class TraceExtractor {
 	 *
 	 * @return boolean
 	 */
-	private function continueReachOr($searchOr, $currentOr) {
+	private function continueReachOr($searchOr, $currentOr, $walkedThrough = array()) {
+		//print(".(".$searchOr.", ".$currentOr.")");
 		foreach ( $this->orSubTraces[$currentOr] as $index => $subtrace ) {
 			$endNodeID = end($subtrace);
 			if ( $endNodeID == $searchOr ) return true;
-			if ( $this->epc->isOr($endNodeID) ) {
-				if ( $this->continueReachOr($searchOr, $endNodeID) ) return true;
+			if ( $this->epc->isOr($endNodeID) && $endNodeID != $currentOr ) {
+				if ( in_array($endNodeID, $walkedThrough) ) {
+					continue;
+				} else {
+					array_push($walkedThrough, $endNodeID);
+				}
+				if ( $this->continueReachOr($searchOr, $endNodeID, $walkedThrough) ) return true;
 			}
 		}
 		return false;
@@ -1137,13 +1281,18 @@ class TraceExtractor {
 	 *
 	 * @return boolean
 	 */
-	private function continueReachXor($searchXor, $currentXor) {
+	private function continueReachXor($searchXor, $currentXor, $walkedThrough = array()) {
 		//print("|");
 		foreach ( $this->xorSubTraces[$currentXor] as $index => $subtrace ) {
 			$endNodeID = end($subtrace);
 			if ( $endNodeID == $searchXor ) return true;
-			if ( $this->epc->isXor($endNodeID) ) {
-				if ( $this->continueReachXor($searchXor, $endNodeID) ) return true;
+			if ( $this->epc->isXor($endNodeID) && $endNodeID != $currentXor ) {
+				if ( in_array($endNodeID, $walkedThrough) ) {
+					continue;
+				} else {
+					array_push($walkedThrough, $endNodeID);
+				}
+				if ( $this->continueReachXor($searchXor, $endNodeID, $walkedThrough) ) return true;
 			}
 		}
 		return false;
@@ -1168,12 +1317,17 @@ class TraceExtractor {
 		return false;
 	}
 
-	private function continueReachOrWithoutRunningThrough($searchOr, $currentOr, $notRunningNodeId) {
+	private function continueReachOrWithoutRunningThrough($searchOr, $currentOr, $notRunningNodeId, $walkedThrough = array()) {
 		foreach ( $this->orSubTraces[$currentOr] as $index => $subtrace ) {
 			$endNodeID = end($subtrace);
 			if ( $endNodeID == $searchOr ) return true;
-			if ( $this->epc->isOr($endNodeID) && $endNodeID != $notRunningNodeId ) {
-				if ( $this->continueReachOr($searchOr, $endNodeID) ) return true;
+			if ( $this->epc->isOr($endNodeID) && $endNodeID != $notRunningNodeId && $endNodeID != $currentOr ) {
+				if ( in_array($endNodeID, $walkedThrough) ) {
+					continue;
+				} else {
+					array_push($walkedThrough, $endNodeID);
+				}
+				if ( $this->continueReachOrWithoutRunningThrough($searchOr, $endNodeID, $notRunningNodeId, $walkedThrough) ) return true;
 			}
 		}
 		return false;
@@ -1244,7 +1398,11 @@ class TraceExtractor {
 
 		// 4. Fall: Knoten hat Nachfolger => mach fuer jeden Nachfolger einen eigenen subtrace
 		foreach ( $successors as $successor ) {
-			$this->calculateORSubtraces($orNodeID, $successor, $subtrace);
+			if ( !in_array($successor, $subtrace) ) {
+				$this->calculateORSubtraces($orNodeID, $successor, $subtrace);
+			} else {
+				$this->addOrSubtrace($orNodeID, $subtrace);
+			}
 		}
 	}
 
@@ -1326,7 +1484,11 @@ class TraceExtractor {
 
 		// 4. Fall: Knoten hat Nachfolger => mach fuer jeden Nachfolger einen eigenen subtrace
 		foreach ( $successors as $successor ) {
-			$this->calculateXORSubtraces($xorNodeID, $successor, $subtrace);
+			if ( !in_array($successor, $subtrace) ) {
+				$this->calculateXORSubtraces($xorNodeID, $successor, $subtrace);
+			} else {
+				$this->addXorSubtrace($xorNodeID, $subtrace);
+			}
 		}
 	}
 
@@ -1389,6 +1551,178 @@ class TraceExtractor {
 			}
 		}
 		return $traces;
+	}
+
+	/**
+	 * Wenn in $nodes Ereignisse enthalten sind, dann werden diese durch die darauf folgenden Knoten ersetzt
+	 *
+	 * @param array $nodes
+	 *
+	 * @return array
+	 */
+	private function skipEvents($nodes) {
+		//print_r($nodes);
+		$tmpNodes = $nodes;
+		foreach ( $tmpNodes as $nodeID => $label ) {
+			// Falls Knoten ein Ereignis, dann nimm den naechsten Knoten
+			if ( $this->epc->getType($nodeID) == "event" ) {
+				$succ = $this->epc->getSuccessor($nodeID);
+				if ( count($succ) == 0 ) {
+					unset($nodes[$nodeID]);
+				} elseif ( count($succ) == 1 ) {
+					unset($nodes[$nodeID]);
+					$succ = $succ[0];
+					$nodes[$succ] = $this->epc->getNodeLabel($succ);
+				} else {
+					return "Syntax Error in EPC \"".$this->epc->name."\": More than one outgoing edges from event  \"".$label."\"";
+				}
+
+			}
+		}
+		//print_r($nodes);
+		return $nodes;
+	}
+
+	/**
+	 * Berechnet ausgehend von den Startknoten einer EPK die moeglichen JOIN-Konnektor Pfade
+	 * Dadurch wird geprueft, ob Pfade ineinanderlaufen, und falls ja, wie
+	 *
+	 * @param array $startNodes
+	 * @return array
+	 */
+	private function computeJoinStreams($startNodes) {
+		$joinStreams = array();
+		foreach ( $startNodes as $nodeID => $label ) {
+			$detection = array(
+					"currentNode" => $nodeID,
+					"joinStream"  => array(),
+					"nodeMemory"  => array()
+			);
+			$joinStreamDetection = array();
+			array_push($joinStreamDetection, $detection);
+			$result = $this->getJoinStream($joinStreamDetection);
+			//print_r($result);
+			$joinStreams[$nodeID] = array();
+			foreach ( $result as $index => $detection ) {
+				if ( !in_array($detection["joinStream"], $joinStreams[$nodeID]) ) array_push($joinStreams[$nodeID], $detection["joinStream"]);
+			}
+		}
+		$this->joinStreams = $joinStreams;
+		return $joinStreams;
+	}
+
+	/**
+	 * Rekursive Detection von Join-Konnektor Traces
+	 *
+	 * @param array $joinStreamDetection
+	 * @return array
+	 */
+	private function getJoinStream($joinStreamDetection) {
+		//print_r($joinStreamDetection);
+		$newJoinStreamDetection = array();
+		$somethingDone = false;
+		foreach ( $joinStreamDetection as $index => $detection ) {
+			$nodeID = $detection["currentNode"];
+			if ( !is_null($nodeID) ) {
+				$joinStream = $detection["joinStream"];
+				$memory = $detection["nodeMemory"];
+				if ( $this->epc->isJoin($nodeID) ) {
+					array_push($joinStream, $nodeID);
+				}
+				array_push($memory, $nodeID);
+				$succ = $this->epc->getSuccessor($nodeID);
+				if ( count($succ) == 0 || in_array($nodeID, $detection["nodeMemory"]) ) {
+					$newDetection = array(
+							"currentNode" => null,
+							"joinStream"  => $joinStream,
+							"nodeMemory"  => $memory
+					);
+					array_push($newJoinStreamDetection, $newDetection);
+					$somethingDone = true;
+				} else {
+					foreach ( $succ as $succID ) {
+						$newDetection = array(
+								"currentNode" => $succID,
+								"joinStream"  => $joinStream,
+								"nodeMemory"  => $memory
+						);
+						array_push($newJoinStreamDetection, $newDetection);
+						$somethingDone = true;
+					}
+				}
+			} else {
+				array_push($newJoinStreamDetection, $detection);
+			}
+		}
+		if ( $somethingDone ) {
+			return $this->getJoinStream($newJoinStreamDetection);
+		} else {
+			return $newJoinStreamDetection;
+		}
+	}
+
+	/**
+	 * Ermittelt den Typ des JOIN-Konnektor, in welchen die Pfade zusammenlaufen (falls dieser existiert)
+	 *
+	 * @param array $startNodes
+	 * @return or, xor, and, null
+	 */
+	private function getFirstCommonJoin($startNodes) {
+		$startNodeIDs = array_keys($startNodes);
+		$nodeID = end($startNodeIDs);
+		//print("---".$nodeID."---");
+		unset($startNodes[$nodeID]);
+		//print_r($startNodes);
+		foreach ( $this->joinStreams[$nodeID] as $index => $joinStream ) {
+			foreach ( $joinStream as $joinNodeID ) {
+				$allPathesReach = true;
+				foreach ( $startNodes as $startNodeID => $label ) {
+					if ( !$this->startNodeReachesJoin($startNodeID, $joinNodeID) ) {
+						//print("Not Reaches: ".$startNodeID." ".$joinNodeID."\n");
+						$allPathesReach = false;
+					} else {
+						//print("Reaches: ".$startNodeID." ".$joinNodeID."\n");
+					}
+				}
+				if ( $allPathesReach ) return $this->epc->getType($joinNodeID);
+			}
+		}
+		return null;
+	}
+
+	private function startNodeReachesJoin($nodeID, $searchJoinNodeID) {
+		foreach ( $this->joinStreams[$nodeID] as $index => $joinStream ) {
+			//print("Searchjoin: ".$searchJoinNodeID."\n");
+			//print_r($joinStream);
+			if ( in_array($searchJoinNodeID, $joinStream) ) {
+				//print("found");
+				return true;
+			} else {
+				//print("not found");
+			}
+		}
+		return false;
+	}
+
+	public function exportCSV() {
+		$content = "";
+		foreach ($this->traces as $trace) {
+			foreach ($trace as $funcID) {
+				$content .= str_replace("\n", " ", str_replace(";", ",", $this->epc->getNodeLabel($funcID))).";";
+			}
+			$content .= "\n ";
+		}
+
+		$fileGenerator = new FileGenerator(trim($this->epc->convertIllegalChars($this->epc->name))."_Traces.csv", $content);
+		$file = $fileGenerator->execute();
+		return $file;
+	}
+
+	private function timeExceeded() {
+		if ( $this->max_execution_time > 0 ) {
+			return time() - $this->startTime >= $this->max_execution_time;
+		}
+		return false;
 	}
 
 }

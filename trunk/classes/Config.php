@@ -28,12 +28,26 @@ final class Config {
 	//const MODEL_FILE_2 = "P:/Projekte/RefModMiner/HudsonBuilds/data/refmodmine.epml";
 	
 	// Modelle aus Becker-Papier
-	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/becker_survey.epml";
-	const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/becker_survey.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/becker_survey.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/becker_survey.epml";
 	
 	// SAP Referenzmodell
-	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
-	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
+	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
+	const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
+	
+	// eGov - Gewerbeanmeldung
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/Gewerbeanmeldung.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/Gewerbeanmeldung.epml";
+	
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part1.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part2.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part3.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part4.epml";
+	
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part1.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part2.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part3.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part4.epml";
 	
 	// Model Analyzer
 	//const MODEL_ANALYSIS_FILE = "P:/Projekte/RefModMiner/HudsonBuilds/data/becker_survey.epml";
@@ -46,9 +60,14 @@ final class Config {
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Dropbox/_arbeitsverzeichnis_nils/data/RMK_erfassung/Handels-H/Handels-H-Model_base.epml";
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Dropbox/_arbeitsverzeichnis_nils/data/RMK_erfassung/Y-CIM/Y-CIM_complete/Y-CIM_complete.epml";
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Dropbox/_arbeitsverzeichnis_nils/data/RMK_erfassung/SAP R3/SAP R3 prozessorientiert anwenden/SAP_R3_prozesorientiert_anwenden_complete/SAP_R3_prozesorientiert_anwenden_complete .epml";
-	const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
+	
+	// in Sekunden, 0=keine Beschraenkung
+	const MAX_TIME_PER_TRACE_EXTRAKTION = 60;
 	
 	// Trace Extractor
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/Gewerbeanmeldung.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/eGov_VK.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/becker_survey.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/example01_simpleAND.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/example02_simpleAND_with_events.epml";
@@ -69,8 +88,18 @@ final class Config {
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/example17_multiple_starts_with_OR.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/example18_multiple_starts_with_XOR.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/example19_multiple_start_nested_xor.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/all_examples.epml";
 	const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
-	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_1An_kazo.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part1.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part2.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part3.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part4.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1Ar_m7re.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1An_kazo.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1In_aklk.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1Ar_m8hl.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1An_kmmdl.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1An_kmy0.epml";
 	
 	// Einstellen einer Fixpunktarithmetik: false => Ausgeschaltet, [0-x] => Fixpunkt
 	const FIX_POINT_ARITHMETIC = false;

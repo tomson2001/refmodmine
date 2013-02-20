@@ -11,7 +11,7 @@ class EPC {
 	public $or = array();
 	public $and = array();
 	
-	public $traces;
+	public $traces = array();
 
 	public $warnings = array();
 
@@ -22,7 +22,7 @@ class EPC {
 	*/
 	public function __construct($xml, $modelID, $format="epml") {
 		$this->xml = $xml;
-		$this->name = $modelID;
+		$this->name = $this->convertIllegalChars($modelID);
 		if ( $format == "epml" ) {
 			$this->loadEPML($xml, $modelID);
 		}
@@ -39,12 +39,12 @@ class EPC {
 	private function loadEPML($xml, $modelID) {
 		// Funktionen laden
 		foreach ($xml->xpath("//epc[@name='".$modelID."']/function") as $function) {
-			$this->functions[utf8_decode((string) $function["id"])] = rtrim(ltrim(utf8_decode($function->name)));
+			$this->functions[utf8_decode((string) $function["id"])] = rtrim(ltrim(utf8_decode($this->convertIllegalChars($function->name))));
 		}
 
 		// Ereignisse laden
 		foreach ($xml->xpath("//epc[@name='".$modelID."']/event") as $event) {
-			$this->events[utf8_decode((string) $event["id"])] = rtrim(ltrim(utf8_decode($event->name)));
+			$this->events[utf8_decode((string) $event["id"])] = rtrim(ltrim(utf8_decode($this->convertIllegalChars($event->name))));
 		}
 
 		// XOR laden
@@ -88,6 +88,7 @@ class EPC {
 	 * @return string|boolean
 	 */
 	public function getType($nodeID) {
+		$nodeID = (string) $nodeID;
 		if ( array_key_exists($nodeID, $this->functions) ) {
 			return "function";
 		} elseif ( array_key_exists($nodeID, $this->events) ) {
@@ -104,6 +105,7 @@ class EPC {
 	}
 	
 	public function isFunction($nodeID) {
+		$nodeID = (string) $nodeID;
 		return array_key_exists($nodeID, $this->functions);
 	}
 
@@ -114,6 +116,7 @@ class EPC {
 	 * @return array of NodeIDs:
 	 */
 	public function getSuccessor($nodeID) {
+		$nodeID = (string) $nodeID;
 		$successors = array();
 		foreach ( $this->edges as $edge ) {
 			if ( array_key_exists($nodeID, $edge) ) {
@@ -130,6 +133,7 @@ class EPC {
 	 * @return array of NodeIDs:
 	 */
 	public function getPredecessor($nodeID) {
+		$nodeID = (string) $nodeID;
 		$predecessor = array();
 		foreach ( $this->edges as $edge ) {
 			$flipped = array_flip($edge);
@@ -147,6 +151,7 @@ class EPC {
 	 * @return boolean
 	 */
 	public function isConnector($nodeID) {
+		$nodeID = (string) $nodeID;
 		$connectors = array("xor", "or", "and");
 		if ( in_array($this->getType($nodeID), $connectors) ) {
 			return true;
@@ -162,6 +167,7 @@ class EPC {
 	 * @return multitype:|boolean
 	 */
 	public function getNodeLabel($nodeID) {
+		$nodeID = (string) $nodeID;
 		if ( array_key_exists($nodeID, $this->functions) ) {
 			return $this->functions[$nodeID];
 		} elseif ( array_key_exists($nodeID, $this->events) ) {
@@ -293,6 +299,8 @@ class EPC {
 	}
 
 	public function deleteEdge($sourceNodeID, $targetNodeID) {
+		$sourceNodeID = (string) $sourceNodeID;
+		$targetNodeID = (string) $targetNodeID;
 		$edgeIndex = null;
 		foreach ( $this->edges as $index => $edge ) {
 			foreach ( $edge as $sourceID => $targetID ) {
@@ -307,6 +315,7 @@ class EPC {
 	}
 	
 	public function deleteEvent($eventID) {
+		$eventID = (string) $eventID;
 		foreach ( $this->edges as $index => $edge ) {
 			// Event ist Quelle
 			if ( array_key_exists($eventID, $edge) ) {
@@ -338,6 +347,8 @@ class EPC {
 	}
 
 	public function addEdge($sourceNodeID, $targetNodeID) {
+		$sourceNodeID = (string) $sourceNodeID;
+		$targetNodeID = (string) $targetNodeID;
 		$edge = array($sourceNodeID => $targetNodeID);
 		array_push($this->edges, $edge);
 	}
@@ -465,9 +476,15 @@ class EPC {
 	}
 	
 	public function isJoin($nodeID) {
-		$successors = $this->getSuccessor($nodeID);
+		$nodeID = (string) $nodeID;
 		$predecessors = $this->getPredecessor($nodeID);
-		return count($successors) == 1 && $predecessors >= 1;
+		return count($predecessors) > 1;
+	}
+	
+	public function isSplit($nodeID) {
+		$nodeID = (string) $nodeID;
+		$successors = $this->getSuccessor($nodeID);
+		return count($successors) > 1;
 	}
 
 	/**
@@ -476,6 +493,7 @@ class EPC {
 	 * @return boolean
 	 */
 	public function isANDJoin($nodeID) {
+		$nodeID = (string) $nodeID;
 		$joinConnectors = $this->getAllJoinConnectors($this->and);
 		return array_key_exists($nodeID, $joinConnectors);
 	}
@@ -486,6 +504,7 @@ class EPC {
 	 * @return boolean
 	 */
 	public function isXORJoin($nodeID) {
+		$nodeID = (string) $nodeID;
 		$joinConnectors = $this->getAllJoinConnectors($this->xor);
 		return array_key_exists($nodeID, $joinConnectors);
 	}
@@ -496,6 +515,7 @@ class EPC {
 	 * @return boolean
 	 */
 	public function isORJoin($nodeID) {
+		$nodeID = (string) $nodeID;
 		$joinConnectors = $this->getAllJoinConnectors($this->or);
 		return array_key_exists($nodeID, $joinConnectors);
 	}
@@ -515,10 +535,12 @@ class EPC {
 	}
 	
 	public function isOr($nodeID) {
+		$nodeID = (string) $nodeID;
 		return array_key_exists($nodeID, $this->or);
 	}
 	
 	public function isXor($nodeID) {
+		$nodeID = (string) $nodeID;
 		return array_key_exists($nodeID, $this->xor);
 	}
 
@@ -528,6 +550,7 @@ class EPC {
 	 * @return boolean
 	 */
 	public function isANDSplit($nodeID) {
+		$nodeID = (string) $nodeID;
 		$splitConnectors = $this->getAllSplitConnectors($this->and);
 		return array_key_exists($nodeID, $splitConnectors);
 	}
@@ -538,6 +561,7 @@ class EPC {
 	 * @return boolean
 	 */
 	public function isORSplit($nodeID) {
+		$nodeID = (string) $nodeID;
 		$splitConnectors = $this->getAllSplitConnectors($this->or);
 		return array_key_exists($nodeID, $splitConnectors);
 	}
@@ -548,6 +572,7 @@ class EPC {
 	 * @return boolean
 	 */
 	public function isXORSplit($nodeID) {
+		$nodeID = (string) $nodeID;
 		$splitConnectors = $this->getAllSplitConnectors($this->xor);
 		return array_key_exists($nodeID, $splitConnectors);
 	}
@@ -660,20 +685,20 @@ class EPC {
 		$content =  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 		$content .= "<epml:epml xmlns:epml=\"http://www.epml.de\"\n";
 		$content .= "  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"epml_1_draft.xsd\">\n";
-		$content .= "  <epc EpcId=\"1\" name=\"".$this->name."\">\n";
+		$content .= "  <epc EpcId=\"1\" name=\"".$this->convertIllegalChars($this->name)."\">\n";
 		
 		$maxID = 0;
 		
 		foreach ( $this->functions as $id => $label ) {
 			$content .= "    <function id=\"".$id."\">\n";
-			$content .= "      <name>".$label." (".$id.")</name>\n";
+			$content .= "      <name>".$this->convertIllegalChars($label)." (".$id.")</name>\n";
 			$content .= "    </function>\n";
 			if ( $id > $maxID ) $maxID = $id+1;
 		}
 		
 		foreach ( $this->events as $id => $label ) {
 			$content .= "    <event id=\"".$id."\">\n";
-			$content .= "      <name>".$label." (".$id.")</name>\n";
+			$content .= "      <name>".$this->convertIllegalChars($label)." (".$id.")</name>\n";
 			$content .= "    </event>\n";
 			if ( $id > $maxID ) $maxID = $id+1;
 		}
@@ -703,6 +728,18 @@ class EPC {
 		$fileGenerator = new FileGenerator(trim($this->name).".epml", $content);
 		$file = $fileGenerator->execute();
 		return $file;
+	}
+	
+	public function convertIllegalChars($string) {
+		$string = str_replace("Ä", "Ae", $string);
+		$string = str_replace("ä", "ae", $string);
+		$string = str_replace("Ö", "Oe", $string);
+		$string = str_replace("ö", "oe", $string);
+		$string = str_replace("Ü", "Ue", $string);
+		$string = str_replace("ü", "ue", $string);
+		$string = str_replace("ß", "ss", $string);
+		$string = str_replace("\n", " ", $string);
+		return $string;
 	}
 
 }
