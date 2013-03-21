@@ -27,7 +27,7 @@ class PercentageOfCommonNodesAndEdges implements ISimilarityMeasure {
 		
 		// Dieser Fall fuehrt zur Division durch 0
 		if ( $numOfAllFuncsAndEdgesInBothEpcs == 0 ) {
-			return "NaN";
+			return 0;
 		}
 		
 		// Berechnung der Anzahl der Funktionen in EPK1 - der Funktionen, die auch in EPK2 vorkommen 

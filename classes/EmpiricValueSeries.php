@@ -54,5 +54,9 @@ class EmpiricValueSeries {
 		}
 	}
 	
+	public function reset() {
+		$this->nextIndex = 0;
+	}
+	
 }
 ?>

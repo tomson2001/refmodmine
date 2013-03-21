@@ -33,11 +33,7 @@ final class Config {
 	
 	// SAP Referenzmodell
 	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
-	const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
-	
-	// eGov - Gewerbeanmeldung
-	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/Gewerbeanmeldung.epml";
-	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/Gewerbeanmeldung.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
 	
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part1.epml";
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part2.epml";
@@ -48,6 +44,10 @@ final class Config {
 	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part2.epml";
 	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part3.epml";
 	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part4.epml";
+	
+	// eGov - Gewerbeanmeldung
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/Gewerbeanmeldung.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/Gewerbeanmeldung.epml";
 	
 	// Model Analyzer
 	//const MODEL_ANALYSIS_FILE = "P:/Projekte/RefModMiner/HudsonBuilds/data/becker_survey.epml";
@@ -61,9 +61,10 @@ final class Config {
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Dropbox/_arbeitsverzeichnis_nils/data/RMK_erfassung/Y-CIM/Y-CIM_complete/Y-CIM_complete.epml";
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Dropbox/_arbeitsverzeichnis_nils/data/RMK_erfassung/SAP R3/SAP R3 prozessorientiert anwenden/SAP_R3_prozesorientiert_anwenden_complete/SAP_R3_prozesorientiert_anwenden_complete .epml";
 	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
+	const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/eGov.epml";
 	
 	// in Sekunden, 0=keine Beschraenkung
-	const MAX_TIME_PER_TRACE_EXTRAKTION = 60;
+	const MAX_TIME_PER_TRACE_EXTRAKTION = 1;
 	
 	// Trace Extractor
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/Gewerbeanmeldung.epml";
@@ -89,7 +90,7 @@ final class Config {
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/example18_multiple_starts_with_XOR.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/example19_multiple_start_nested_xor.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/all_examples.epml";
-	const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part1.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part2.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part3.epml";
@@ -100,6 +101,8 @@ final class Config {
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1Ar_m8hl.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1An_kmmdl.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1An_kmy0.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1An_l8wo.epml";
+	const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/eGov.epml";
 	
 	// Einstellen einer Fixpunktarithmetik: false => Ausgeschaltet, [0-x] => Fixpunkt
 	const FIX_POINT_ARITHMETIC = false;
@@ -107,12 +110,21 @@ final class Config {
 	// Input-Datei für die Berechnung der Empirischen Korreklation zwischen den Ähnlichkeitsmaßen
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/corr_kontrollierte_mod.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/korrelation_input_varianten.csv";
-	const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/korrelation_input_varianten_var1.csv";
+	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/korrelation_input_varianten_var1.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/korrelation_input_varianten_var2.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/korrelation_input_varianten_var3.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/korrelation_input_varianten_var4.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/korrelation_input_varianten_var5.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/korrelation_input_becker_replizierung.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/korrelation_input_test.csv";
+	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM.csv";
+	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_1.csv";
+	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_2.csv";
+	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_3.csv";
+	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_4.csv";
+	const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_5.csv";
+	
+	// Input-Datei für die Berechnung der Stichprobenvarianz
+	const VARIANCE_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM.csv";
 }
 ?>

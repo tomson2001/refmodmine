@@ -42,7 +42,7 @@ class TraceExtractor {
 	private $max_execution_time;
 
 	// Schaltet Ausgaben auf der Konsole ein - DEBUG Modus
-	private $debug = false;
+	private $debug = true;
 
 	/**
 	 * Konstruktur
@@ -122,7 +122,6 @@ class TraceExtractor {
 			foreach ( $traceExtrationResult as $traceExtractionIndex => $detection ) {
 				if ( !in_array($detection['trace'], $traces) ) array_push($traces, $detection['trace']);
 			}
-
 		}
 
 		//print("TEST");
@@ -136,7 +135,7 @@ class TraceExtractor {
 			$firstCommonJoin = $this->getFirstCommonJoin($startNodes);
 			//print("---".$firstCommonJoin."---");
 			if ( $firstCommonJoin == "and" || $firstCommonJoin == "or" ) {
-				//print("Do (And): ".implode(", ", array_flip($startNodes)));
+				//print("\nDo (And): ".implode(", ", array_flip($startNodes)));
 				$traceExtraction = array( // detection
 						array(
 								'trace' => array(),
@@ -158,8 +157,9 @@ class TraceExtractor {
 				foreach ( $traceExtrationResult as $traceExtractionIndex => $detection ) {
 					if ( !in_array($detection['trace'], $traces) ) array_push($traces, $detection['trace']);
 				}
+
 			} else {
-				//print("Skip (And): ".implode(", ", array_flip($startNodes)));
+				//print("\nSkip (And): ".implode(", ", array_flip($startNodes)));
 			}
 
 
@@ -176,7 +176,7 @@ class TraceExtractor {
 						$firstCommonJoin = $this->getFirstCommonJoin(array_flip($todoMemory));
 							
 						if ( $firstCommonJoin == "and" || $firstCommonJoin == "or" ) {
-							//print("Do (or): ".implode(", ", $todoMemory));
+							//print("\nDo (or): ".implode(", ", $todoMemory));
 							$traceExtraction = array( // detection
 									array(
 											'trace' => array(),
@@ -194,13 +194,16 @@ class TraceExtractor {
 							if ( is_string($traceExtrationResult) ) return $traceExtrationResult;
 
 							//print_r($this->traceExtraction);
+							if ( $this->debug ) print("\nExtrahiert: ".count($traceExtrationResult)."\n");
 
 							// Gefundene Traces herauslesen
 							foreach ( $traceExtrationResult as $traceExtractionIndex => $detection ) {
 								if ( !in_array($detection['trace'], $traces) ) array_push($traces, $detection['trace']);
 							}
+								
+
 						} else {
-							//print("Skip (or): ".implode(", ", $todoMemory));
+							//print("\nSkip (or): ".implode(", ", $todoMemory));
 						}
 
 					}
@@ -288,8 +291,8 @@ class TraceExtractor {
 			}
 
 			// Letzten Knoten auslesen
-			$currentNode = $detection['currentNode'];
-			$lastTraceNode = end($detection['trace']);
+			$currentNode = (string) $detection['currentNode'];
+			$lastTraceNode = (string) end($detection['trace']);
 			$successors = $this->epc->getSuccessor($currentNode);
 
 			// Knotentyp ermitteln
@@ -337,7 +340,8 @@ class TraceExtractor {
 				} elseif (count($successors) == 0) {
 					$newDetection = $detection;
 					$newDetection['currentNode'] = null;
-					if ( !in_array($newDetection, $newTraceExtraction) ) {
+					//if ( !in_array($newDetection, $newTraceExtraction) ) {
+					if ( !in_array($newDetection, $this->traceExtraction) ) {
 						array_push($this->traceExtraction, $newDetection);
 					}
 					continue;
@@ -491,7 +495,7 @@ class TraceExtractor {
 		// Wenn etwas getan wurde mache weiter, ansonsten hoere auf
 		if ( $somethingDone ) {
 			//print_r($newTraceExtraction);
-			if ( count($newTraceExtraction) > 2000 ) (".".count($newTraceExtraction).".");
+			if ( count($newTraceExtraction) > 2000 ) print(".".count($newTraceExtraction).".");
 			return $this->continueTraceExtraction($newTraceExtraction);
 		} else {
 			//print_r($newTraceExtraction);
@@ -662,7 +666,7 @@ class TraceExtractor {
 				 * ==> Erst weitermachen, wenn alle in den AND-Join eingehenden Pfade den AND-Join auch erreicht haben
 				 */
 				if ( substr($nodeID, 0, 8) == 'stop_and' ) {
-					
+
 					$newDetection = $detection;
 
 					$andJoinID = $this->extractNodeID($nodeID);
@@ -686,21 +690,21 @@ class TraceExtractor {
 										$tmpSplitWithIndex = substr($tmpNode, 9);
 										$tmpSplitTodo = $detection['todoMemory'][$tmpSplitWithIndex];
 										if ( in_array($nodeID, $tmpSplitTodo) ) {
-											
+
 											$nestedPathes++;
 											$tmpSplitTodoFlipped = array_flip($tmpSplitTodo);
 											$unsetIndex = $tmpSplitTodoFlipped[$nodeID];
 											array_push($nestedSplitsWithIndex, $tmpSplitWithIndex);
 											array_push($nestedUnsetIndex, $unsetIndex);
 										}
-									} 
+									}
 								}
 							}
 						} else {
-						  	if ( in_array($predecessor, $detection['todoMemorySubTraces'][$splitNode]) || $predecessor == $splitNodeID ) $foundPathes++;
+							if ( in_array($predecessor, $detection['todoMemorySubTraces'][$splitNode]) || $predecessor == $splitNodeID ) $foundPathes++;
 						}
 					}
-					
+
 					if ( $nestedPathes + $foundPathes == $countInputPathes ) {
 						foreach ( $nestedSplitsWithIndex as $tmpIndex => $tmpSplitWithIndex ) {
 							$unsetIndex = $nestedUnsetIndex[$tmpIndex];
@@ -708,13 +712,13 @@ class TraceExtractor {
 						}
 						$foundPathes += $nestedPathes;
 					}
-						
+
 					//print("---JA---");
 
 					// Wenn alle Pfade eingegangen sind, dann ersetze das stop durch den Nachfolger (vorausgesetzt er ist noch nicht im Memory enthalten
 					if ( $countInputPathes == $foundPathes ) {
 						//print("---JAAA---");
-						
+
 						$successors = $this->epc->getSuccessor($andJoinID);
 						// AND-Join duerfen nur max. einen Nachfolger haben
 						if ( count($successors) == 0 ) {
@@ -730,17 +734,18 @@ class TraceExtractor {
 									$newDetection['todoMemory'][$splitNode][$index] = "stop_and_".$successor;
 								}
 							} elseif ( $this->epc->isANDSplit($successor) ) {
-								if ( in_array("andsplit_".$successor, $detection['todoMemory'][$splitNode]) ) {
-									unset($newDetection['todoMemory'][$splitNode][$index]);
-								} else {
-									// Berechnung eines neuen AND-Split Index
-									// TODO Aktuell auf 10 Indizes beschraenkt. Mal drueber nachdenken, ob das problematisch ist, wenn nur Schleifen nur einmal durchlaufen werden
-									$newAndSplitIndex = 0;
-									while ( array_key_exists("andsplit_".$newAndSplitIndex."_".$successor, $newDetection['todoMemory']) ) {
-										$newAndSplitIndex++;
-									}
-									$newDetection['todoMemory'][$splitNode][$index] = "andsplit_".$newAndSplitIndex."_".$successor;
-								}
+								//if ( in_array("andsplit_".$successor, $detection['todoMemory'][$splitNode]) ) {
+								//	unset($newDetection['todoMemory'][$splitNode][$index]);
+								//} else {
+								// Berechnung eines neuen AND-Split Index
+								// TODO Aktuell auf 10 Indizes beschraenkt. Mal drueber nachdenken, ob das problematisch ist, wenn nur Schleifen nur einmal durchlaufen werden
+								//$newAndSplitIndex = 0;
+								//while ( array_key_exists("andsplit_".$newAndSplitIndex."_".$successor, $newDetection['todoMemory']) ) {
+								//	$newAndSplitIndex++;
+								//}
+								//$newDetection['todoMemory'][$splitNode][$index] = "andsplit_".$newAndSplitIndex."_".$successor;
+								$newDetection['todoMemory'][$splitNode][$index] = $successor;
+								//}
 							} elseif ( $this->epc->isORJoin($successor) ) {
 								if ( in_array("stop_or_".$successor, $detection['todoMemory'][$splitNode]) ) {
 									unset($newDetection['todoMemory'][$splitNode][$index]);
@@ -789,6 +794,7 @@ class TraceExtractor {
 				 * ==> Erst weitermachen, wenn im todoMemory keine weitere Knoten mehr durchlaufen werden koennen.
 				 */
 				if ( substr($nodeID, 0, 7) == 'stop_or' ) {
+					//print("before\n");
 					//print_r($detection);
 
 					$orJoinID = $this->extractNodeID($nodeID);
@@ -801,7 +807,7 @@ class TraceExtractor {
 					foreach ( $predecessors as $predecessor ) {
 						if ( in_array($predecessor, $detection['todoMemorySubTraces'][$splitNode]) ) $foundPathes++;
 					}
-
+					
 					$allPathesReached = ($countInputPathes == $foundPathes);
 
 					// Pruefen, ob nur noch stops im Memory enthalten sind
@@ -821,10 +827,73 @@ class TraceExtractor {
 							//print($tmpNodeID.": Nein");
 						}
 					}
+						
+					// Pruefen, ob dieser OR-Join, noch in einem anderen Todo-Memory in Zuge eines AND-Splits erwartet wird
+					// andere Todo Memories nach or als ID bzw. stop_or durchsuchen
+					$found = false;
+					$tmpDetection = $newDetection;
+					foreach ( $tmpDetection['todoMemory'] as $tmpSplitNode => $tmpTodoMemory ) {
+						if ( $tmpSplitNode != $splitNode && (in_array($orJoinID, $tmpTodoMemory) || in_array($nodeID, $tmpTodoMemory)) ) {
+							$tmpOrJoinID = in_array($orJoinID, $tmpTodoMemory) ? $orJoinID : $nodeID;
+							$tmpOrJoinID = $this->extractNodeID($tmpOrJoinID);
+								
+							// schauen ob dort ein andsplit existiert, auf welchen das dortige or wartet
+							$andSplits = $this->getAndSplitsFromTodoMemory($tmpTodoMemory);
+							foreach ( $andSplits as $tmpAndSplit ) {
+
+								$tmpAndSplitIDWithIndex = substr($tmpAndSplit, 9);
+								$tmpAndSplitID = $this->extractSplitNodeID($tmpAndSplitIDWithIndex);
+								//print("-$tmpAndSplit-$tmpAndSplitIDWithIndex-$tmpAndSplitID|");
+								if ( $this->reachesOrWithoutRunningThrough($tmpAndSplitID, $tmpOrJoinID, $this->extractSplitNodeID($tmpSplitNode)) ) {
+									print("gefunden:".$tmpAndSplitID."-".$tmpSplitNode."\nvorher:");
+									print_r($newDetection);
+										
+									// falls ja, dann nimm den urspruenglichen or-join aus dem andsplit raus und haenge das todoMemorySubtraces an
+									unset($newDetection['todoMemory'][$splitNode][$index]);
+									foreach ( $newDetection['todoMemorySubTraces'][$splitNode] as $subTraceEntry ) {
+										array_push($newDetection['todoMemorySubTraces'][$tmpSplitNode], $subTraceEntry);
+									}
+										
+									$tmpDetection2 = $newDetection;
+									$higherLevelSplit = $this->getHigherLevelAndSplit($tmpDetection2['todoMemory'], $splitNode);
+									while ( !is_null($higherLevelSplit) ) {
+										foreach ( $newDetection['todoMemorySubTraces'][$higherLevelSplit] as $subTraceEntry ) {
+											array_push($newDetection['todoMemorySubTraces'][$tmpSplitNode], $subTraceEntry);
+										}
+										$higherLevelSplit = $this->getHigherLevelAndSplit($tmpDetection2['todoMemory'], $higherLevelSplit);
+									}
+																			
+									// falls das aktuelle todosplit leer ist, dann entferne es
+									if ( empty($newDetection['todoMemory'][$splitNode]) ) {
+										unset($newDetection['todoMemory'][$splitNode]);
+										unset($newDetection['todoMemorySubTraces'][$splitNode]);
+									}
+									array_push($newDetections, $newDetection);
+									$found = true;
+										
+									print("\nnachher");
+									print_r($newDetection);
+									break;
+								}
+							}
+							if ( $found ) break;
+						}
+					}
+					if ( $found ) continue;
+					
+					if ( in_array($orJoinID, $newDetection['todoMemorySubTraces'][$splitNode])) {
+						//print_r($newDetection);
+						//print("unset $orJoinID");
+						unset($newDetection['todoMemory'][$splitNode][$index]);
+						//print_r($newDetection);
+						array_push($newDetections, $newDetection);
+						continue;
+					} 
 
 					// Stop aufloesten, wenn nur noch stops im todoMemory enhalten sind oder alle Pfade zum OR erreicht wurden
 					//if ( $onlyStops || $allPathesReached || !$activatedPathes ) {
 					if ( $allPathesReached || !$activatedPathes ) {
+						
 						//if ( $allPathesReached ) print("pathesReached");
 						//if ( !$activatedPathes ) print(" not activatedPathes");
 						$successors = $this->epc->getSuccessor($orJoinID);
@@ -866,6 +935,8 @@ class TraceExtractor {
 						array_push($newDetection['todoMemorySubTraces'][$splitNode], $orJoinID);
 						array_push($newDetection['trace'], $orJoinID);
 						array_push($newDetections, $newDetection);
+						//print("after\n");
+						//print_r($newDetection);
 					} elseif ( $onlyStops && !$activatedPathes ) {
 						//print_r($detection);
 						return "Syntax Error (8) in EPC \"".$this->epc->name."\" at \"".$this->epc->getNodeLabel($nodeID)."\" (Node-ID: ".$nodeID."). OR-Join-ID ".$orJoinID.".";
@@ -908,6 +979,24 @@ class TraceExtractor {
 				 * ==> Wenn Nachfolgeknoten eine Funktion, dann auf Loop pruefen, die Funktion dem Trace anhaengen und weiter machen
 				 */
 				if ( $nextNodeType == "event" || $nextNodeType == "function" ||	array_key_exists($nodeID, $joinConnectors) ) {
+
+					if ( $this->epc->isANDJoin($nodeID) ) {
+						$newDetection['todoMemory'][$splitNode][$index] = "stop_and_".$nodeID;
+						array_push($newDetections, $newDetection);
+						continue;
+					}
+						
+					if ( $this->epc->isORJoin($nodeID) ) {
+						//print("TEST");
+						if ( in_array("stop_or_".$nodeID, $newDetection['todoMemory'][$splitNode]) ) {
+							unset($newDetection['todoMemory'][$splitNode][$index]);
+						} else {
+							$newDetection['todoMemory'][$splitNode][$index] = "stop_or_".$nodeID;
+						}
+						array_push($newDetections, $newDetection);
+						continue;
+					}
+
 					// Ereignisse, Funktionen und Join-Konnektoren koennen nur max. einen Nachfolgeknoten haben
 					if ( count($successors) == 1 ) {
 
@@ -961,7 +1050,7 @@ class TraceExtractor {
 							if ( $this->epc->isANDJoin($successor) ) {
 								$newDetection['todoMemory'][$splitNode][$index] = "stop_and_".$successor;
 							} elseif ( $this->epc->isORJoin($successor) ) {
-								// Wenn dieser ot stop schon im todoMemory enthalten ist, dann werf den Index raus, ansonsten schreib ihn rein
+								// Wenn dieser or stop schon im todoMemory enthalten ist, dann werf den Index raus, ansonsten schreib ihn rein
 								if ( in_array("stop_or_".$successor, $newDetection['todoMemory'][$splitNode]) ) {
 									unset($newDetection['todoMemory'][$splitNode][$index]);
 								} else {
@@ -978,11 +1067,15 @@ class TraceExtractor {
 						} else {
 							//print("drop\n");
 						}
-
+						// 						if ( $nodeID == 37 ) {
+						// 							print_r("after\n");
+						// 							print_r($newDetections);
+						// 						}
 						continue;
 					} else {
 						return "Syntax Error (5) in EPC \"".$this->epc->name."\" at \"".$this->epc->getNodeLabel($nodeID)."\" (Node-ID: ".$nodeID.")";
 					}
+
 				}
 
 				/**
@@ -1044,6 +1137,7 @@ class TraceExtractor {
 
 					// Neues AND-Memory
 					$newDetection['todoMemory'][$newAndSplitIndex."_".$nodeID] = array();
+					print("\ninsert ".$newAndSplitIndex."_".$nodeID."\n");
 					$abortOperation = false;
 					foreach ($successors as $successor) {
 
@@ -1702,6 +1796,23 @@ class TraceExtractor {
 			}
 		}
 		return false;
+	}
+
+	private function getAndSplitsFromTodoMemory($todoMemory) {
+		$andSplits = array();
+		foreach ( $todoMemory as $todoNode ) {
+			if ( substr($todoNode, 0, 8) == 'andsplit' ) array_push($andSplits, $todoNode);
+		}
+		return $andSplits;
+	}
+
+	private function getHigherLevelAndSplit($todoMemoryCollection, $searchSplitNodeWithIndex) {
+		foreach ( $todoMemoryCollection as $splitNodeWithIndex => $todoMemory ) {
+			if ( in_array("andsplit_".$searchSplitNodeWithIndex, $todoMemory) && $splitNodeWithIndex != "start" ) {
+				return $splitNodeWithIndex;
+			}
+		}
+		return null;
 	}
 
 	public function exportCSV() {

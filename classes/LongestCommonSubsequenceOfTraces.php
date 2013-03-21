@@ -26,7 +26,7 @@ class LongestCommonSubsequenceOfTraces implements ISimilarityMeasure {
 		$nameOfEPC2 = $this->mapping->epc2->name;
 		//print("---".$nameOfEPC1.":".$nameOfEPC2."---");
 		if ( strcmp($nameOfEPC1, $nameOfEPC2) == 0 ) {
-			$this->similarityValue = 1;
+			$this->similarityValue = round(100, 2);
 			//print("break");
 			return 1;
 		} else {
