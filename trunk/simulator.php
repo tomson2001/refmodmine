@@ -86,27 +86,28 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
 	$epc1 = new EPC($xml1, $xml_epc1["name"]);
 
-	if ( $argv[1] == "--lcsot" ) {
-		if ( array_key_exists($nameOfEPC1, $traces) 
-			&& !is_string($traces[$nameOfEPC1]) 
-			&& !empty($traces[$nameOfEPC1]) 
-			&& !in_array($nameOfEPC1, $ignore_models) 
-		) $similarity_matrix_csv .= $nameOfEPC1;
-	} else {
+// 	if ( $argv[1] == "--lcsot" ) {
+// 		if ( array_key_exists($nameOfEPC1, $traces) 
+// 			&& !is_string($traces[$nameOfEPC1]) 
+// 			&& !empty($traces[$nameOfEPC1]) 
+// 			&& !in_array($nameOfEPC1, $ignore_models) 
+// 		) $similarity_matrix_csv .= $nameOfEPC1;
+// 	} else {
 		if ( !in_array($nameOfEPC1, $ignore_models) ) $similarity_matrix_csv .= $nameOfEPC1;
-	}
+// 	}
 
 
 	foreach ($xml2->xpath("//epc") as $xml_epc2) {
 		$nameOfEPC2 = utf8_decode((string) $xml_epc2["name"]);
 		$epc2 = new EPC($xml2, $xml_epc2["name"]);
 
-		if ( ($argv[1] == "--lcsot" 
-			&& array_key_exists($nameOfEPC1, $traces) && !is_string($traces[$nameOfEPC1]) && !empty($traces[$nameOfEPC1]) 
-			&& array_key_exists($nameOfEPC2, $traces) && !is_string($traces[$nameOfEPC2]) && !empty($traces[$nameOfEPC2])
-			&& !in_array($nameOfEPC2, $ignore_models) && !in_array($nameOfEPC2, $ignore_models)) 
-			|| ($argv[1] != "--lcsot" && !in_array($nameOfEPC1, $ignore_models) && !in_array($nameOfEPC2, $ignore_models)) ) 
-		{
+// 		if ( ($argv[1] == "--lcsot" 
+// 			&& array_key_exists($nameOfEPC1, $traces) && !is_string($traces[$nameOfEPC1]) && !empty($traces[$nameOfEPC1]) 
+// 			&& array_key_exists($nameOfEPC2, $traces) && !is_string($traces[$nameOfEPC2]) && !empty($traces[$nameOfEPC2])
+// 			&& !in_array($nameOfEPC2, $ignore_models) && !in_array($nameOfEPC2, $ignore_models)) 
+// 			|| ($argv[1] != "--lcsot" && !in_array($nameOfEPC1, $ignore_models) && !in_array($nameOfEPC2, $ignore_models)) ) 
+// 		{
+		if ( !in_array($nameOfEPC1, $ignore_models) && !in_array($nameOfEPC2, $ignore_models) ) {
 
 			if (!$isLight) $html_analysis .= "<h3>".$nameOfEPC1." <=> ".$nameOfEPC2."</h3>";
 
@@ -152,7 +153,8 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 					case "--pocnae":
 					case "--cf":
 						$mapping = new LevenshteinMapping($epc1, $epc2);
-						$mapping->setParams(array('threshold_levenshtein' => 100));
+						$mapping->setParams(array('threshold_levenshtein' => 50));
+						//$mapping->setParams(array('threshold_levenshtein' => 100));
 						break;
 
 						// Funktionen ueber Levenshtein und Ein- und Ausgehende Kanten
@@ -254,12 +256,13 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 
 		}
 	}
-	if ( ($argv[1] == "--lcsot" 
-		&& array_key_exists($nameOfEPC1, $traces) && !is_string($traces[$nameOfEPC1]) && !empty($traces[$nameOfEPC1]) 
-		&& array_key_exists($nameOfEPC2, $traces) && !is_string($traces[$nameOfEPC2]) && !empty($traces[$nameOfEPC2])) 
-		|| ($argv[1] != "--lcsot" && !in_array($nameOfEPC1, $ignore_models) && !in_array($nameOfEPC2, $ignore_models)) ) {
-		$similarity_matrix_csv .= "\n";
-	}
+// 	if ( ($argv[1] == "--lcsot" 
+// 		&& array_key_exists($nameOfEPC1, $traces) && !is_string($traces[$nameOfEPC1]) && !empty($traces[$nameOfEPC1]) 
+// 		&& array_key_exists($nameOfEPC2, $traces) && !is_string($traces[$nameOfEPC2]) && !empty($traces[$nameOfEPC2])) 
+// 		|| ($argv[1] != "--lcsot" && !in_array($nameOfEPC1, $ignore_models) && !in_array($nameOfEPC2, $ignore_models)) ) {
+// 		$similarity_matrix_csv .= "\n";
+// 	}
+	if ( !in_array($nameOfEPC1, $ignore_models) && !in_array($nameOfEPC2, $ignore_models) ) $similarity_matrix_csv .= "\n";
 }
 print(" done");
 if (!$isLight) $html_analysis .= "</body></html>";
