@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <epc EpcId="1" name="Admission Wuerzburg">
+    <function id="1">
+      <name>receive rejection</name>
+    </function>
+    <function id="2">
+      <name>fill in online form of application</name>
+    </function>
+    <function id="3">
+      <name>choose uni</name>
+    </function>
+    <function id="4">
+      <name>t25</name>
+    </function>
+    <function id="5">
+      <name>match accepted</name>
+    </function>
+    <function id="6">
+      <name>no</name>
+    </function>
+    <function id="7">
+      <name>International</name>
+    </function>
+    <function id="8">
+      <name>wait for response</name>
+    </function>
+    <function id="9">
+      <name>check if has direct university entrance qualification</name>
+    </function>
+    <function id="10">
+      <name>checking for completeness</name>
+    </function>
+    <function id="11">
+      <name>t24</name>
+    </function>
+    <function id="12">
+      <name>send rejection</name>
+    </function>
+    <function id="13">
+      <name>fill in printed form of application for international students</name>
+    </function>
+    <function id="14">
+      <name>complete</name>
+    </function>
+    <function id="15">
+      <name>send german application</name>
+    </function>
+    <function id="16">
+      <name>matriculate</name>
+    </function>
+    <function id="17">
+      <name>incomplete</name>
+    </function>
+    <function id="18">
+      <name>check for DSH</name>
+    </function>
+    <function id="19">
+      <name>checking for contentual match</name>
+    </function>
+    <function id="20">
+      <name>receive commitment</name>
+    </function>
+    <function id="21">
+      <name>send commitment</name>
+    </function>
+    <function id="22">
+      <name>German</name>
+    </function>
+    <function id="23">
+      <name>send international application</name>
+    </function>
+    <function id="24">
+      <name>precheck of documents</name>
+    </function>
+    <function id="25">
+      <name>match refused</name>
+    </function>
+    <xor id="52">
+      <name/>
+    </xor>
+    <xor id="53">
+      <name/>
+    </xor>
+    <xor id="54">
+      <name/>
+    </xor>
+    <xor id="55">
+      <name/>
+    </xor>
+    <xor id="56">
+      <name/>
+    </xor>
+    <xor id="57">
+      <name/>
+    </xor>
+    <xor id="58">
+      <name/>
+    </xor>
+    <xor id="59">
+      <name/>
+    </xor>
+    <xor id="61">
+      <name/>
+    </xor>
+    <xor id="62">
+      <name/>
+    </xor>
+    <xor id="64">
+      <name/>
+    </xor>
+    <and id="51">
+      <name/>
+    </and>
+    <and id="60">
+      <name/>
+    </and>
+    <and id="63">
+      <name/>
+    </and>
+    <and id="65">
+      <name/>
+    </and>
+    <arc id="65">
+      <flow source="2" target="24" />
+    </arc>
+    <arc id="66">
+      <flow source="3" target="52" />
+    </arc>
+    <arc id="67">
+      <flow source="4" target="64" />
+    </arc>
+    <arc id="68">
+      <flow source="5" target="64" />
+    </arc>
+    <arc id="69">
+      <flow source="6" target="58" />
+    </arc>
+    <arc id="70">
+      <flow source="7" target="13" />
+    </arc>
+    <arc id="71">
+      <flow source="8" target="54" />
+    </arc>
+    <arc id="72">
+      <flow source="9" target="55" />
+    </arc>
+    <arc id="73">
+      <flow source="10" target="57" />
+    </arc>
+    <arc id="74">
+      <flow source="11" target="58" />
+    </arc>
+    <arc id="75">
+      <flow source="12" target="51" />
+    </arc>
+    <arc id="76">
+      <flow source="13" target="23" />
+    </arc>
+    <arc id="77">
+      <flow source="14" target="59" />
+    </arc>
+    <arc id="78">
+      <flow source="15" target="60" />
+    </arc>
+    <arc id="79">
+      <flow source="17" target="58" />
+    </arc>
+    <arc id="80">
+      <flow source="18" target="61" />
+    </arc>
+    <arc id="81">
+      <flow source="19" target="62" />
+    </arc>
+    <arc id="82">
+      <flow source="20" target="16" />
+    </arc>
+    <arc id="83">
+      <flow source="21" target="63" />
+    </arc>
+    <arc id="84">
+      <flow source="22" target="2" />
+    </arc>
+    <arc id="85">
+      <flow source="23" target="65" />
+    </arc>
+    <arc id="86">
+      <flow source="24" target="15" />
+    </arc>
+    <arc id="87">
+      <flow source="25" target="58" />
+    </arc>
+    <arc id="88">
+      <flow source="51" target="1" />
+    </arc>
+    <arc id="89">
+      <flow source="61" target="4" />
+    </arc>
+    <arc id="90">
+      <flow source="62" target="5" />
+    </arc>
+    <arc id="91">
+      <flow source="55" target="6" />
+    </arc>
+    <arc id="92">
+      <flow source="52" target="7" />
+    </arc>
+    <arc id="93">
+      <flow source="53" target="8" />
+    </arc>
+    <arc id="94">
+      <flow source="59" target="9" />
+    </arc>
+    <arc id="95">
+      <flow source="56" target="10" />
+    </arc>
+    <arc id="96">
+      <flow source="61" target="11" />
+    </arc>
+    <arc id="97">
+      <flow source="58" target="12" />
+    </arc>
+    <arc id="98">
+      <flow source="57" target="14" />
+    </arc>
+    <arc id="99">
+      <flow source="57" target="17" />
+    </arc>
+    <arc id="100">
+      <flow source="55" target="18" />
+    </arc>
+    <arc id="101">
+      <flow source="59" target="19" />
+    </arc>
+    <arc id="102">
+      <flow source="63" target="20" />
+    </arc>
+    <arc id="103">
+      <flow source="64" target="21" />
+    </arc>
+    <arc id="104">
+      <flow source="52" target="22" />
+    </arc>
+    <arc id="105">
+      <flow source="62" target="25" />
+    </arc>
+    <arc id="106">
+      <flow source="54" target="63" />
+    </arc>
+    <arc id="107">
+      <flow source="54" target="51" />
+    </arc>
+    <arc id="108">
+      <flow source="60" target="53" />
+    </arc>
+    <arc id="109">
+      <flow source="60" target="56" />
+    </arc>
+    <arc id="110">
+      <flow source="65" target="53" />
+    </arc>
+    <arc id="111">
+      <flow source="65" target="56" />
+    </arc>
+  </epc>
+</epml:epml>

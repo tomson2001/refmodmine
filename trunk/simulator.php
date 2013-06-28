@@ -1,4 +1,5 @@
 <?php
+
 $start = time();
 require 'autoloader.php';
 include 'simulator_settings.php';

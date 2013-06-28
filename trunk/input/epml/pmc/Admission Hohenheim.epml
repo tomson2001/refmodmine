@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <epc EpcId="1" name="Admission Hohenheim">
+    <function id="1">
+      <name>t28</name>
+    </function>
+    <function id="2">
+      <name>proof of uni degree provided</name>
+    </function>
+    <function id="3">
+      <name>Mark as not complete</name>
+    </function>
+    <function id="4">
+      <name>receive application</name>
+    </function>
+    <function id="5">
+      <name>Complete and send application form online</name>
+    </function>
+    <function id="6">
+      <name>t33</name>
+    </function>
+    <function id="7">
+      <name>checking if complete</name>
+    </function>
+    <function id="8">
+      <name>Final confirmation by head of university</name>
+    </function>
+    <function id="9">
+      <name>publishing the letters</name>
+    </function>
+    <function id="10">
+      <name>t20</name>
+    </function>
+    <function id="11">
+      <name>Mark as complete</name>
+    </function>
+    <function id="12">
+      <name>t32</name>
+    </function>
+    <function id="13">
+      <name>Rejection</name>
+    </function>
+    <function id="14">
+      <name>Send documents to selection committee</name>
+    </function>
+    <function id="15">
+      <name>German applicant</name>
+    </function>
+    <function id="16">
+      <name>requirements are not met of low ranking</name>
+    </function>
+    <function id="17">
+      <name>Providing the missing documents</name>
+    </function>
+    <function id="18">
+      <name>proposed as rejected</name>
+    </function>
+    <function id="19">
+      <name>Print out the online application form (INT)</name>
+    </function>
+    <function id="20">
+      <name>Choose Master Program</name>
+    </function>
+    <function id="21">
+      <name>update the applicant status</name>
+    </function>
+    <function id="22">
+      <name>proposed as reserved</name>
+    </function>
+    <function id="23">
+      <name>rank application on scale of 1 to 10</name>
+    </function>
+    <function id="24">
+      <name>proposed as accepted</name>
+    </function>
+    <function id="25">
+      <name>Receive application number and a password</name>
+    </function>
+    <function id="26">
+      <name>Receiving the written applications</name>
+    </function>
+    <function id="27">
+      <name>Document Online Applications</name>
+    </function>
+    <function id="28">
+      <name>assessment of application</name>
+    </function>
+    <function id="29">
+      <name>Waiting for response</name>
+    </function>
+    <function id="30">
+      <name>Print out the online application form (GER)</name>
+    </function>
+    <function id="31">
+      <name>Receiving acceptance letter</name>
+    </function>
+    <function id="32">
+      <name>Allocate an application number and password to each applicant</name>
+    </function>
+    <function id="33">
+      <name>high ranking requirements are met</name>
+    </function>
+    <function id="34">
+      <name>Enrollment</name>
+    </function>
+    <function id="35">
+      <name>Reservation place</name>
+    </function>
+    <function id="36">
+      <name>Send all the requirements to the secretarial office for students</name>
+    </function>
+    <function id="37">
+      <name>International applicant</name>
+    </function>
+    <event id="38">
+      <name>End Event</name>
+    </event>
+    <xor id="76">
+      <name/>
+    </xor>
+    <xor id="77">
+      <name/>
+    </xor>
+    <xor id="81">
+      <name/>
+    </xor>
+    <xor id="82">
+      <name/>
+    </xor>
+    <xor id="83">
+      <name/>
+    </xor>
+    <xor id="85">
+      <name/>
+    </xor>
+    <xor id="87">
+      <name/>
+    </xor>
+    <xor id="88">
+      <name/>
+    </xor>
+    <xor id="89">
+      <name/>
+    </xor>
+    <and id="78">
+      <name/>
+    </and>
+    <and id="79">
+      <name/>
+    </and>
+    <and id="80">
+      <name/>
+    </and>
+    <and id="84">
+      <name/>
+    </and>
+    <and id="86">
+      <name/>
+    </and>
+    <and id="90">
+      <name/>
+    </and>
+    <arc id="90">
+      <flow source="1" target="78" />
+    </arc>
+    <arc id="91">
+      <flow source="2" target="22" />
+    </arc>
+    <arc id="92">
+      <flow source="3" target="77" />
+    </arc>
+    <arc id="93">
+      <flow source="4" target="79" />
+    </arc>
+    <arc id="94">
+      <flow source="5" target="27" />
+    </arc>
+    <arc id="95">
+      <flow source="6" target="81" />
+    </arc>
+    <arc id="96">
+      <flow source="7" target="82" />
+    </arc>
+    <arc id="97">
+      <flow source="8" target="77" />
+    </arc>
+    <arc id="98">
+      <flow source="9" target="86" />
+    </arc>
+    <arc id="99">
+      <flow source="10" target="85" />
+    </arc>
+    <arc id="100">
+      <flow source="11" target="14" />
+    </arc>
+    <arc id="101">
+      <flow source="12" target="80" />
+    </arc>
+    <arc id="102">
+      <flow source="13" target="76" />
+    </arc>
+    <arc id="103">
+      <flow source="14" target="4" />
+    </arc>
+    <arc id="104">
+      <flow source="15" target="30" />
+    </arc>
+    <arc id="105">
+      <flow source="16" target="18" />
+    </arc>
+    <arc id="106">
+      <flow source="17" target="88" />
+    </arc>
+    <arc id="107">
+      <flow source="18" target="83" />
+    </arc>
+    <arc id="108">
+      <flow source="19" target="89" />
+    </arc>
+    <arc id="109">
+      <flow source="20" target="5" />
+    </arc>
+    <arc id="110">
+      <flow source="21" target="86" />
+    </arc>
+    <arc id="111">
+      <flow source="22" target="83" />
+    </arc>
+    <arc id="112">
+      <flow source="23" target="84" />
+    </arc>
+    <arc id="113">
+      <flow source="24" target="83" />
+    </arc>
+    <arc id="114">
+      <flow source="25" target="87" />
+    </arc>
+    <arc id="115">
+      <flow source="26" target="7" />
+    </arc>
+    <arc id="116">
+      <flow source="27" target="32" />
+    </arc>
+    <arc id="117">
+      <flow source="28" target="84" />
+    </arc>
+    <arc id="118">
+      <flow source="29" target="80" />
+    </arc>
+    <arc id="119">
+      <flow source="30" target="89" />
+    </arc>
+    <arc id="120">
+      <flow source="31" target="88" />
+    </arc>
+    <arc id="121">
+      <flow source="32" target="25" />
+    </arc>
+    <arc id="122">
+      <flow source="33" target="24" />
+    </arc>
+    <arc id="123">
+      <flow source="34" target="76" />
+    </arc>
+    <arc id="124">
+      <flow source="35" target="17" />
+    </arc>
+    <arc id="125">
+      <flow source="36" target="90" />
+    </arc>
+    <arc id="126">
+      <flow source="37" target="19" />
+    </arc>
+    <arc id="127">
+      <flow source="77" target="1" />
+    </arc>
+    <arc id="128">
+      <flow source="85" target="2" />
+    </arc>
+    <arc id="129">
+      <flow source="82" target="3" />
+    </arc>
+    <arc id="130">
+      <flow source="80" target="6" />
+    </arc>
+    <arc id="131">
+      <flow source="83" target="8" />
+    </arc>
+    <arc id="132">
+      <flow source="78" target="9" />
+    </arc>
+    <arc id="133">
+      <flow source="84" target="10" />
+    </arc>
+    <arc id="134">
+      <flow source="82" target="11" />
+    </arc>
+    <arc id="135">
+      <flow source="86" target="12" />
+    </arc>
+    <arc id="136">
+      <flow source="81" target="13" />
+    </arc>
+    <arc id="137">
+      <flow source="87" target="15" />
+    </arc>
+    <arc id="138">
+      <flow source="85" target="16" />
+    </arc>
+    <arc id="139">
+      <flow source="78" target="21" />
+    </arc>
+    <arc id="140">
+      <flow source="79" target="23" />
+    </arc>
+    <arc id="141">
+      <flow source="90" target="26" />
+    </arc>
+    <arc id="142">
+      <flow source="79" target="28" />
+    </arc>
+    <arc id="143">
+      <flow source="90" target="29" />
+    </arc>
+    <arc id="144">
+      <flow source="81" target="31" />
+    </arc>
+    <arc id="145">
+      <flow source="85" target="33" />
+    </arc>
+    <arc id="146">
+      <flow source="88" target="34" />
+    </arc>
+    <arc id="147">
+      <flow source="81" target="35" />
+    </arc>
+    <arc id="148">
+      <flow source="89" target="36" />
+    </arc>
+    <arc id="149">
+      <flow source="87" target="37" />
+    </arc>
+    <arc id="150">
+      <flow source="76" target="38" />
+    </arc>
+  </epc>
+</epml:epml>

@@ -17,16 +17,19 @@ class VariantGenerator {
 	private $add; // Anzahl der Funktionsknoten, die hinzugefuegt werden sollen
 	private $edit; // Anzahl der Funktionslabels, die veraendert werden sollen
 	private $editLetters; // Anzahl der Character, die veraendert werden sollen
+	private $editLettersQuote; // Prozentsatz (z.B. 0.5 fuer 50%) der Character eines Labels, die veraendert werden sollen
 
 	private $touchedFunctions = array(); // Enthaelt die IDs der Funktionsknoten, die bereits an einer Variation beteiligt waren
 	private $epc = null; // Die variierte EPK
 
-	public function __construct(EPC $epc, $switch, $delete, $add, $edit, $editLetters = 1) {
+	//public function __construct(EPC $epc, $switch, $delete, $add, $edit, $editLetters = 1) {
+	public function __construct(EPC $epc, $switch, $delete, $add, $editLettersQuote) {
 		$this->switch = $switch;
 		$this->delete = $delete;
 		$this->add = $add;
-		$this->edit = $edit;
-		$this->editLetters = $editLetters;
+		//$this->edit = $edit;
+		//$this->editLetters = $editLetters;
+		$this->editLettersQuote = $editLettersQuote;
 
 		$this->epc = clone $epc;
 		$this->generateVariant();
@@ -39,7 +42,8 @@ class VariantGenerator {
 		$this->switchFunctions();
 		$this->deleteFunctions();
 		$this->addFunctions();
-		$this->editLabels();
+		//$this->editLabels();
+		$this->editLabelsByQuote();
 	}
 
 	/**
@@ -129,6 +133,26 @@ class VariantGenerator {
 			foreach ( $this->epc->functions as $id => $label ) {
 				if ( !in_array($id, $this->touchedFunctions) ) {
 					$editChars = strlen($label) > $this->editLetters ? $this->editLetters : strlen($label);
+					$newLabel = $this->getRandomString($editChars);
+					$newLabel .= substr($label, $editChars);
+					$this->epc->functions[$id] = $newLabel;
+					array_push($this->touchedFunctions, $id);
+					break;
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Veraendert einen gegebenen Prozentsatz der Character eines Labels ($this->editLettersQuote)
+	 * Es wird darauf geachtet, dass die Operation nicht auf Knoten angewendet wird,
+	 * die bereits anderweitig bearbeitet wurden (z.B. neue oder getauschte Funktionen)
+	 */
+	private function editLabelsByQuote() {
+		for ( $i=0; $i<$this->edit; $i++ ) {
+			foreach ( $this->epc->functions as $id => $label ) {
+				if ( !in_array($id, $this->touchedFunctions) ) {
+					$editChars = strlen($label) * $this->editLettersQuote;
 					$newLabel = $this->getRandomString($editChars);
 					$newLabel .= substr($label, $editChars);
 					$this->epc->functions[$id] = $newLabel;

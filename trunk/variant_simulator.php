@@ -39,12 +39,12 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 		$epc_variant->name .= " (Variante 3)";
 		array_push($variants, $epc_variant);
 
-		$variantGenerator = new VariantGenerator($epc1, 0, 0, 0, 1);
+		$variantGenerator = new VariantGenerator($epc1, 0, 0, 0, 0.5);
 		$epc_variant = $variantGenerator->getVariant();
 		$epc_variant->name .= " (Variante 4)";
 		array_push($variants, $epc_variant);
 
-		$variantGenerator = new VariantGenerator($epc1, 1, 1, 1, 1, 3);
+		$variantGenerator = new VariantGenerator($epc1, 1, 1, 1, 0.5);
 		$epc_variant = $variantGenerator->getVariant();
 		$epc_variant->name .= " (Variante 5)";
 		array_push($variants, $epc_variant);

@@ -209,5 +209,40 @@ abstract class AMapping {
 		return $unmappedConnectors;
 	}
 	
+	/** 
+	 * Entfernt Dummy-Funktionen, die bei der Konvertierung aus 
+	 * Petri-Netzen nach EPK resultieren koennen. Hintergrund
+	 * der Implementierung ist der Process Matching Contest
+	 * im Rahmen der BPM2013.
+	 */
+	public function deleteDummyTransitions() {
+		foreach ( $this->mapping as $index => $pair ) {
+			$id1_arr = array_keys($pair);
+			$id1 = $id1_arr[0];
+			$id2 = $pair[$id1];
+			$label1 = $this->epc1->getNodeLabel($id1);
+			$label2 = $this->epc2->getNodeLabel($id2);
+			if ( preg_match("/^t[0-9]*$/", $label1) || preg_match("/^t[0-9]*$/", $label2) ) unset($this->mapping[$index]);
+		}
+	}
+	
+	public function export() {
+		$content = $this->epc1->name."\r\n";
+		$content .= $this->epc2->name;
+		
+		foreach ( $this->mapping as $pair ) {			
+			$id1_arr = array_keys($pair);
+			$id1 = $id1_arr[0];
+			$id2 = $pair[$id1];
+			$label1 = $this->epc1->getNodeLabel($id1);
+			$label2 = $this->epc2->getNodeLabel($id2);
+			$content .= "\r\n".$label1.",".$label2;
+		}
+		
+		$fileGenerator = new FileGenerator(trim($this->epc1->name)."_".trim($this->epc2->name).".txt", $content);
+		$file = $fileGenerator->execute();
+		return $file;
+	}
+	
 }
 ?>
