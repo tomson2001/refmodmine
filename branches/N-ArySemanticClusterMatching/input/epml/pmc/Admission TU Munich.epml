@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <epc EpcId="1" name="Admission TU Munich">
+    <function id="1">
+      <name>Apply Online</name>
+    </function>
+    <function id="2">
+      <name>Check Documents</name>
+    </function>
+    <function id="3">
+      <name>Documents received</name>
+    </function>
+    <function id="4">
+      <name>Send letter of Acceptance</name>
+    </function>
+    <function id="5">
+      <name>Send Interview Invitation</name>
+    </function>
+    <function id="6">
+      <name>Go to Interview</name>
+    </function>
+    <function id="7">
+      <name>Rejected</name>
+    </function>
+    <function id="8">
+      <name>Forward Documents</name>
+    </function>
+    <function id="9">
+      <name>Rejected</name>
+    </function>
+    <function id="10">
+      <name>Send Documents by Post</name>
+    </function>
+    <function id="11">
+      <name>Bridging Courses &lt; 30 CP</name>
+    </function>
+    <function id="12">
+      <name>Send letter of Rejection</name>
+    </function>
+    <function id="13">
+      <name>Check Bachelor's degree</name>
+    </function>
+    <function id="14">
+      <name>Evaluate</name>
+    </function>
+    <function id="15">
+      <name>Conduct Interview</name>
+    </function>
+    <function id="16">
+      <name>t16</name>
+    </function>
+    <function id="17">
+      <name>t17</name>
+    </function>
+    <function id="18">
+      <name>Documents received</name>
+    </function>
+    <function id="19">
+      <name>Bridging Courses > 30 CP</name>
+    </function>
+    <event id="20">
+      <name>End Event</name>
+    </event>
+    <xor id="40">
+      <name/>
+    </xor>
+    <xor id="41">
+      <name/>
+    </xor>
+    <xor id="42">
+      <name/>
+    </xor>
+    <xor id="43">
+      <name/>
+    </xor>
+    <and id="44">
+      <name/>
+    </and>
+    <and id="45">
+      <name/>
+    </and>
+    <arc id="45">
+      <flow source="1" target="10" />
+    </arc>
+    <arc id="46">
+      <flow source="2" target="8" />
+    </arc>
+    <arc id="47">
+      <flow source="3" target="14" />
+    </arc>
+    <arc id="48">
+      <flow source="4" target="7" />
+    </arc>
+    <arc id="49">
+      <flow source="5" target="6" />
+    </arc>
+    <arc id="50">
+      <flow source="6" target="15" />
+    </arc>
+    <arc id="51">
+      <flow source="7" target="40" />
+    </arc>
+    <arc id="52">
+      <flow source="8" target="3" />
+    </arc>
+    <arc id="53">
+      <flow source="9" target="40" />
+    </arc>
+    <arc id="54">
+      <flow source="10" target="18" />
+    </arc>
+    <arc id="55">
+      <flow source="11" target="2" />
+    </arc>
+    <arc id="56">
+      <flow source="12" target="9" />
+    </arc>
+    <arc id="57">
+      <flow source="13" target="41" />
+    </arc>
+    <arc id="58">
+      <flow source="14" target="42" />
+    </arc>
+    <arc id="59">
+      <flow source="15" target="43" />
+    </arc>
+    <arc id="60">
+      <flow source="16" target="12" />
+    </arc>
+    <arc id="61">
+      <flow source="17" target="4" />
+    </arc>
+    <arc id="62">
+      <flow source="18" target="13" />
+    </arc>
+    <arc id="63">
+      <flow source="42" target="5" />
+    </arc>
+    <arc id="64">
+      <flow source="41" target="11" />
+    </arc>
+    <arc id="65">
+      <flow source="44" target="16" />
+    </arc>
+    <arc id="66">
+      <flow source="45" target="17" />
+    </arc>
+    <arc id="67">
+      <flow source="41" target="19" />
+    </arc>
+    <arc id="68">
+      <flow source="40" target="20" />
+    </arc>
+    <arc id="69">
+      <flow source="42" target="44" />
+    </arc>
+    <arc id="70">
+      <flow source="42" target="45" />
+    </arc>
+    <arc id="71">
+      <flow source="43" target="44" />
+    </arc>
+    <arc id="72">
+      <flow source="43" target="45" />
+    </arc>
+  </epc>
+</epml:epml>

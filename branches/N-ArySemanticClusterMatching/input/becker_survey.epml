@@ -1,0 +1,3599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.epml.de EPML_111_draft.XSD">
+   <coordinates xOrigin="leftToRight" yOrigin="topToBottom"/>
+   <definitions>
+      <definition defId="1"/>
+      <definition defId="2"/>
+      <definition defId="3"/>
+      <definition defId="4"/>
+      <definition defId="5"/>
+      <definition defId="6"/>
+      <definition defId="7"/>
+      <definition defId="8"/>
+      <definition defId="9"/>
+      <definition defId="10"/>
+      <definition defId="11"/>
+      <definition defId="12"/>
+      <definition defId="13"/>
+      <definition defId="14"/>
+      <definition defId="15"/>
+      <definition defId="16"/>
+      <definition defId="17"/>
+      <definition defId="18"/>
+      <definition defId="19"/>
+      <definition defId="20"/>
+      <definition defId="21"/>
+      <definition defId="22"/>
+      <definition defId="23"/>
+      <definition defId="24"/>
+      <definition defId="25"/>
+      <definition defId="26"/>
+      <definition defId="27"/>
+      <definition defId="28"/>
+      <definition defId="29"/>
+      <definition defId="30"/>
+      <definition defId="31"/>
+      <definition defId="32"/>
+      <definition defId="33"/>
+      <definition defId="34"/>
+      <definition defId="35"/>
+      <definition defId="36"/>
+      <definition defId="37"/>
+      <definition defId="38"/>
+      <definition defId="39"/>
+      <definition defId="40"/>
+      <definition defId="41"/>
+      <definition defId="42"/>
+      <definition defId="43"/>
+      <definition defId="44"/>
+      <definition defId="45"/>
+      <definition defId="46"/>
+      <definition defId="47"/>
+      <definition defId="48"/>
+      <definition defId="49"/>
+      <definition defId="50"/>
+      <definition defId="51"/>
+      <definition defId="52"/>
+      <definition defId="53"/>
+      <definition defId="54"/>
+      <definition defId="55"/>
+      <definition defId="56"/>
+      <definition defId="57"/>
+      <definition defId="58"/>
+      <definition defId="59"/>
+      <definition defId="60"/>
+      <definition defId="61"/>
+      <definition defId="62"/>
+      <definition defId="63"/>
+      <definition defId="64"/>
+      <definition defId="65"/>
+      <definition defId="66"/>
+      <definition defId="67"/>
+      <definition defId="68"/>
+      <definition defId="69"/>
+      <definition defId="70"/>
+      <definition defId="71"/>
+      <definition defId="72"/>
+      <definition defId="73"/>
+      <definition defId="74"/>
+      <definition defId="75"/>
+      <definition defId="76"/>
+      <definition defId="77"/>
+      <definition defId="78"/>
+      <definition defId="79"/>
+      <definition defId="80"/>
+      <definition defId="81"/>
+      <definition defId="82"/>
+      <definition defId="83"/>
+      <definition defId="84"/>
+      <definition defId="85"/>
+      <definition defId="86"/>
+      <definition defId="87"/>
+      <definition defId="88"/>
+      <definition defId="89"/>
+      <definition defId="90"/>
+      <definition defId="91"/>
+      <definition defId="92"/>
+      <definition defId="93"/>
+      <definition defId="94"/>
+      <definition defId="95"/>
+      <definition defId="96"/>
+      <definition defId="97"/>
+      <definition defId="98"/>
+      <definition defId="99"/>
+      <definition defId="100"/>
+      <definition defId="101"/>
+      <definition defId="102"/>
+      <definition defId="103"/>
+      <definition defId="104"/>
+      <definition defId="105"/>
+      <definition defId="106"/>
+      <definition defId="107"/>
+      <definition defId="108"/>
+      <definition defId="109"/>
+      <definition defId="110"/>
+      <definition defId="111"/>
+      <definition defId="112"/>
+      <definition defId="113"/>
+      <definition defId="114"/>
+      <definition defId="115"/>
+      <definition defId="116"/>
+      <definition defId="117"/>
+      <definition defId="118"/>
+      <definition defId="119"/>
+      <definition defId="120"/>
+      <definition defId="121"/>
+      <definition defId="122"/>
+      <definition defId="123"/>
+      <definition defId="124"/>
+      <definition defId="125"/>
+      <definition defId="126"/>
+      <definition defId="127"/>
+      <definition defId="128"/>
+      <definition defId="129"/>
+      <definition defId="130"/>
+      <definition defId="131"/>
+      <definition defId="132"/>
+      <definition defId="133"/>
+      <definition defId="134"/>
+      <definition defId="135"/>
+      <definition defId="136"/>
+      <definition defId="137"/>
+      <definition defId="138"/>
+      <definition defId="139"/>
+      <definition defId="140"/>
+      <definition defId="141"/>
+      <definition defId="142"/>
+      <definition defId="143"/>
+      <definition defId="144"/>
+      <definition defId="145"/>
+      <definition defId="146"/>
+      <definition defId="147"/>
+      <definition defId="148"/>
+      <definition defId="149"/>
+      <definition defId="150"/>
+      <definition defId="151"/>
+      <definition defId="152"/>
+      <definition defId="153"/>
+      <definition defId="154"/>
+      <definition defId="155"/>
+      <definition defId="156"/>
+      <definition defId="157"/>
+      <definition defId="158"/>
+      <definition defId="159"/>
+      <definition defId="160"/>
+      <definition defId="161"/>
+      <definition defId="162"/>
+      <definition defId="163"/>
+      <definition defId="164"/>
+      <definition defId="165"/>
+      <definition defId="166"/>
+      <definition defId="167"/>
+      <definition defId="168"/>
+      <definition defId="169"/>
+      <definition defId="170"/>
+      <definition defId="171"/>
+      <definition defId="172"/>
+      <definition defId="173"/>
+      <definition defId="174"/>
+      <definition defId="175"/>
+      <definition defId="176"/>
+      <definition defId="177"/>
+      <definition defId="178"/>
+      <definition defId="179"/>
+      <definition defId="180"/>
+      <definition defId="181"/>
+      <definition defId="182"/>
+      <definition defId="183"/>
+      <definition defId="184"/>
+      <definition defId="185"/>
+      <definition defId="186"/>
+      <definition defId="187"/>
+      <definition defId="188"/>
+      <definition defId="189"/>
+      <definition defId="190"/>
+      <definition defId="191"/>
+      <definition defId="192"/>
+      <definition defId="193"/>
+      <definition defId="194"/>
+      <definition defId="195"/>
+      <definition defId="196"/>
+      <definition defId="197"/>
+      <definition defId="198"/>
+      <definition defId="199"/>
+      <definition defId="200"/>
+      <definition defId="201"/>
+      <definition defId="202"/>
+      <definition defId="203"/>
+      <definition defId="204"/>
+      <definition defId="205"/>
+      <definition defId="206"/>
+      <definition defId="207"/>
+      <definition defId="208"/>
+      <definition defId="209"/>
+      <definition defId="210"/>
+      <definition defId="211"/>
+      <definition defId="212"/>
+      <definition defId="213"/>
+      <definition defId="214"/>
+      <definition defId="215"/>
+      <definition defId="216"/>
+      <definition defId="217"/>
+      <definition defId="218"/>
+      <definition defId="219"/>
+      <definition defId="220"/>
+      <definition defId="221"/>
+      <definition defId="222"/>
+      <definition defId="223"/>
+      <definition defId="224"/>
+      <definition defId="225"/>
+      <definition defId="226"/>
+      <definition defId="227"/>
+      <definition defId="228"/>
+      <definition defId="229"/>
+      <definition defId="230"/>
+      <definition defId="231"/>
+      <definition defId="232"/>
+      <definition defId="233"/>
+      <definition defId="234"/>
+      <definition defId="235"/>
+      <definition defId="236"/>
+      <definition defId="237"/>
+      <definition defId="238"/>
+      <definition defId="239"/>
+      <definition defId="240"/>
+      <definition defId="241"/>
+      <definition defId="242"/>
+      <definition defId="243"/>
+      <definition defId="244"/>
+      <definition defId="245"/>
+      <definition defId="246"/>
+      <definition defId="247"/>
+      <definition defId="248"/>
+      <definition defId="249"/>
+      <definition defId="250"/>
+      <definition defId="251"/>
+      <definition defId="252"/>
+      <definition defId="253"/>
+      <definition defId="254"/>
+      <definition defId="255"/>
+      <definition defId="256"/>
+      <definition defId="257"/>
+      <definition defId="258"/>
+      <definition defId="259"/>
+      <definition defId="260"/>
+      <definition defId="261"/>
+      <definition defId="262"/>
+      <definition defId="263"/>
+      <definition defId="264"/>
+      <definition defId="265"/>
+      <definition defId="266"/>
+      <definition defId="267"/>
+      <definition defId="268"/>
+      <definition defId="269"/>
+      <definition defId="270"/>
+      <definition defId="271"/>
+      <definition defId="272"/>
+      <definition defId="273"/>
+      <definition defId="274"/>
+      <definition defId="275"/>
+      <definition defId="276"/>
+      <definition defId="277"/>
+      <definition defId="278"/>
+      <definition defId="279"/>
+      <definition defId="280"/>
+      <definition defId="281"/>
+      <definition defId="282"/>
+      <definition defId="283"/>
+      <definition defId="284"/>
+      <definition defId="285"/>
+      <definition defId="286"/>
+      <definition defId="287"/>
+      <definition defId="288"/>
+      <definition defId="289"/>
+      <definition defId="290"/>
+      <definition defId="291"/>
+      <definition defId="292"/>
+      <definition defId="293"/>
+      <definition defId="294"/>
+      <definition defId="295"/>
+      <definition defId="296"/>
+      <definition defId="297"/>
+      <definition defId="298"/>
+      <definition defId="299"/>
+      <definition defId="300"/>
+      <definition defId="301"/>
+      <definition defId="302"/>
+      <definition defId="303"/>
+      <definition defId="304"/>
+      <definition defId="305"/>
+      <definition defId="306"/>
+      <definition defId="307"/>
+      <definition defId="308"/>
+      <definition defId="309"/>
+      <definition defId="310"/>
+      <definition defId="311"/>
+      <definition defId="312"/>
+      <definition defId="313"/>
+      <definition defId="314"/>
+      <definition defId="315"/>
+      <definition defId="316"/>
+      <definition defId="317"/>
+      <definition defId="318"/>
+      <definition defId="319"/>
+      <definition defId="320"/>
+      <definition defId="321"/>
+      <definition defId="322"/>
+      <definition defId="323"/>
+      <definition defId="324"/>
+      <definition defId="325"/>
+      <definition defId="326"/>
+      <definition defId="327"/>
+      <definition defId="328"/>
+      <definition defId="329"/>
+      <definition defId="330"/>
+      <definition defId="331"/>
+      <definition defId="332"/>
+      <definition defId="333"/>
+      <definition defId="334"/>
+      <definition defId="335"/>
+      <definition defId="336"/>
+      <definition defId="337"/>
+      <definition defId="338"/>
+      <definition defId="339"/>
+      <definition defId="340"/>
+      <definition defId="341"/>
+      <definition defId="342"/>
+      <definition defId="343"/>
+      <definition defId="344"/>
+      <definition defId="345"/>
+      <definition defId="346"/>
+      <definition defId="347"/>
+      <definition defId="348"/>
+      <definition defId="349"/>
+      <definition defId="350"/>
+      <definition defId="351"/>
+      <definition defId="352"/>
+      <definition defId="353"/>
+      <definition defId="354"/>
+      <definition defId="355"/>
+      <definition defId="356"/>
+      <definition defId="357"/>
+      <definition defId="358"/>
+      <definition defId="359"/>
+      <definition defId="360"/>
+      <definition defId="361"/>
+      <definition defId="362"/>
+      <definition defId="363"/>
+      <definition defId="364"/>
+      <definition defId="365"/>
+      <definition defId="366"/>
+      <definition defId="367"/>
+      <definition defId="368"/>
+      <definition defId="369"/>
+      <definition defId="370"/>
+      <definition defId="371"/>
+      <definition defId="372"/>
+      <definition defId="373"/>
+      <definition defId="374"/>
+      <definition defId="375"/>
+      <definition defId="376"/>
+      <definition defId="377"/>
+      <definition defId="378"/>
+      <definition defId="379"/>
+      <definition defId="380"/>
+      <definition defId="381"/>
+      <definition defId="382"/>
+      <definition defId="383"/>
+      <definition defId="384"/>
+      <definition defId="385"/>
+      <definition defId="386"/>
+      <definition defId="387"/>
+      <definition defId="388"/>
+      <definition defId="389"/>
+      <definition defId="390"/>
+      <definition defId="391"/>
+      <definition defId="392"/>
+      <definition defId="393"/>
+      <definition defId="394"/>
+      <definition defId="395"/>
+      <definition defId="396"/>
+      <definition defId="397"/>
+      <definition defId="398"/>
+      <definition defId="399"/>
+      <definition defId="400"/>
+      <definition defId="401"/>
+      <definition defId="402"/>
+      <definition defId="403"/>
+      <definition defId="404"/>
+      <definition defId="405"/>
+      <definition defId="406"/>
+      <definition defId="407"/>
+      <definition defId="408"/>
+      <definition defId="409"/>
+   </definitions>
+   <attributeTypes>
+      <attributeType typeId="GUID"/>
+      <attributeType typeId="OT"/>
+      <attributeType typeId="ST"/>
+      <attributeType typeId="AT_CREATOR"/>
+      <attributeType typeId="AT_CREAT_TIME_STMP"/>
+      <attributeType typeId="AT_NAME_LGINDEP"/>
+      <attributeType typeId="AT_LAST_CHNG_2"/>
+      <attributeType typeId="AT_LUSER"/>
+      <attributeType typeId="AT_TEMPLATE"/>
+   </attributeTypes>
+   <directory name="Root">
+         <directory name="SIM_Test_2_Becker_survey">
+            <epc epcId="8" name="Variante a: v0">
+               <attribute typeRef="AT_LUSER" value="system"/>
+               <attribute typeRef="AT_CREAT_TIME_STMP" value="09:27:49.000;08/06/2012"/>
+               <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+               <attribute typeRef="AT_TEMPLATE" value="2ed57d10-68c8-11d7-5d85-000bcd25c95f;0"/>
+               <attribute typeRef="AT_CREATOR" value="system"/>
+               <attribute typeRef="GUID" value="fd50db60-dfa8-11e1-691c-d48564bed6ec"/>
+               <function id="87" defRef="177">
+                  <name>1</name>
+                  <description>1</description>
+                  <graphics>
+                     <position x="595" y="404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="00032a21-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="542">
+                  <flow source="87" target="94"/>
+                  <graphics>
+                     <position x="750" y="597"/>
+                     <position x="750" y="700"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a28-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="88" defRef="186">
+                  <name>4</name>
+                  <description>4</description>
+                  <graphics>
+                     <position x="1495" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="00032a26-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="543">
+                  <flow source="88" target="92"/>
+                  <graphics>
+                     <position x="1650" y="1097"/>
+                     <position x="1650" y="1250"/>
+                     <position x="800" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a2f-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="89" defRef="212">
+                  <name>7</name>
+                  <description>7</description>
+                  <graphics>
+                     <position x="145" y="2204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="00032a35-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="544">
+                  <flow source="89" target="96"/>
+                  <graphics>
+                     <position x="300" y="2397"/>
+                     <position x="300" y="2550"/>
+                     <position x="700" y="2550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a41-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <event id="90" defRef="126">
+                  <name>Ende</name>
+                  <description>Ende</description>
+                  <graphics>
+                     <position x="594" y="3003" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="00032a3d-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <function id="91" defRef="204">
+                  <name>2</name>
+                  <description>2</description>
+                  <graphics>
+                     <position x="595" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="00032a23-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="545">
+                  <flow source="91" target="92"/>
+                  <graphics>
+                     <position x="750" y="1097"/>
+                     <position x="750" y="1200"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a2d-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="92" defRef="144">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="1200" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="00032a2c-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="546">
+                  <flow source="92" target="101"/>
+                  <graphics>
+                     <position x="750" y="1300"/>
+                     <position x="750" y="1404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a3f-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <event id="93" defRef="157">
+                  <name>Start</name>
+                  <description>Start</description>
+                  <graphics>
+                     <position x="594" y="103" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="00032a20-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <arc id="547">
+                  <flow source="93" target="87"/>
+                  <graphics>
+                     <position x="750" y="298"/>
+                     <position x="750" y="404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a27-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <xor id="94" defRef="172">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="700" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="00032a22-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="548">
+                  <flow source="94" target="91"/>
+                  <graphics>
+                     <position x="750" y="800"/>
+                     <position x="750" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a29-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="549">
+                  <flow source="94" target="99"/>
+                  <graphics>
+                     <position x="796" y="766"/>
+                     <position x="1200" y="766"/>
+                     <position x="1200" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a2b-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="550">
+                  <flow source="94" target="88"/>
+                  <graphics>
+                     <position x="796" y="733"/>
+                     <position x="1650" y="733"/>
+                     <position x="1650" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a2a-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <xor id="95" defRef="139">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="2000" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="00032a33-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="551">
+                  <flow source="95" target="100"/>
+                  <graphics>
+                     <position x="750" y="2100"/>
+                     <position x="750" y="2204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a40-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="552">
+                  <flow source="95" target="89"/>
+                  <graphics>
+                     <position x="700" y="2050"/>
+                     <position x="300" y="2050"/>
+                     <position x="300" y="2204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a36-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="553">
+                  <flow source="95" target="92"/>
+                  <graphics>
+                     <position x="800" y="2050"/>
+                     <position x="950" y="2050"/>
+                     <position x="950" y="1275"/>
+                     <position x="792" y="1275"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a42-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LNK_2"/>
+               </arc>
+               <xor id="96" defRef="198">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="2500" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="00032a39-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="554">
+                  <flow source="96" target="98"/>
+                  <graphics>
+                     <position x="750" y="2600"/>
+                     <position x="750" y="2704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a3c-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="97" defRef="214">
+                  <name>6</name>
+                  <description>6</description>
+                  <graphics>
+                     <position x="595" y="1704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="00032a31-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="555">
+                  <flow source="97" target="95"/>
+                  <graphics>
+                     <position x="750" y="1897"/>
+                     <position x="750" y="2000"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a34-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="98" defRef="191">
+                  <name>9</name>
+                  <description>9</description>
+                  <graphics>
+                     <position x="595" y="2704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="00032a3b-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="556">
+                  <flow source="98" target="90"/>
+                  <graphics>
+                     <position x="750" y="2897"/>
+                     <position x="750" y="3003"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a3e-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_CRT_1"/>
+               </arc>
+               <function id="99" defRef="182">
+                  <name>3</name>
+                  <description>3</description>
+                  <graphics>
+                     <position x="1045" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="00032a24-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="557">
+                  <flow source="99" target="92"/>
+                  <graphics>
+                     <position x="1200" y="1097"/>
+                     <position x="1200" y="1225"/>
+                     <position x="793" y="1225"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a2e-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="100" defRef="103">
+                  <name>8</name>
+                  <description>8</description>
+                  <graphics>
+                     <position x="595" y="2204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="00032a37-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="558">
+                  <flow source="100" target="96"/>
+                  <graphics>
+                     <position x="750" y="2397"/>
+                     <position x="750" y="2500"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a3a-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="101" defRef="101">
+                  <name>5</name>
+                  <description>5</description>
+                  <graphics>
+                     <position x="595" y="1404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:24.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="00032a30-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="559">
+                  <flow source="101" target="97"/>
+                  <graphics>
+                     <position x="750" y="1597"/>
+                     <position x="750" y="1704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a32-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+            </epc>
+            <epc epcId="9" name="Variante e: v4">
+               <attribute typeRef="AT_LAST_CHNG_2" value="08:03:09.000;09/07/2012"/>
+               <attribute typeRef="AT_LUSER" value="system"/>
+               <attribute typeRef="AT_CREATOR" value="system"/>
+               <attribute typeRef="AT_TEMPLATE" value="2ed57d10-68c8-11d7-5d85-000bcd25c95f;0"/>
+               <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+               <attribute typeRef="GUID" value="49e58cf1-f8c2-11e1-691c-d48564bed6ec"/>
+               <event id="102" defRef="199">
+                  <name>Start</name>
+                  <description>Start</description>
+                  <graphics>
+                     <position x="594" y="103" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="49de610d-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <arc id="560">
+                  <flow source="102" target="115"/>
+                  <graphics>
+                     <position x="750" y="298"/>
+                     <position x="750" y="404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31bf1-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="103" defRef="110">
+                  <name>4</name>
+                  <description>4</description>
+                  <graphics>
+                     <position x="1045" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="49de6117-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="561">
+                  <flow source="103" target="107"/>
+                  <graphics>
+                     <position x="1200" y="1097"/>
+                     <position x="1200" y="1250"/>
+                     <position x="800" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31bff-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="104" defRef="163">
+                  <name>9</name>
+                  <description>9</description>
+                  <graphics>
+                     <position x="595" y="2704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="49de6113-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="562">
+                  <flow source="104" target="109"/>
+                  <graphics>
+                     <position x="750" y="2897"/>
+                     <position x="750" y="3003"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31c0f-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_CRT_1"/>
+               </arc>
+               <function id="105" defRef="116">
+                  <name>5</name>
+                  <description>5</description>
+                  <graphics>
+                     <position x="595" y="1404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="49de6105-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="563">
+                  <flow source="105" target="108"/>
+                  <graphics>
+                     <position x="750" y="1597"/>
+                     <position x="750" y="1704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31c09-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="106" defRef="140">
+                  <name>7</name>
+                  <description>7</description>
+                  <graphics>
+                     <position x="145" y="2204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="49de6119-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="564">
+                  <flow source="106" target="110"/>
+                  <graphics>
+                     <position x="300" y="2397"/>
+                     <position x="300" y="2550"/>
+                     <position x="700" y="2550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31bf5-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="107" defRef="192">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="1200" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="49de6103-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="565">
+                  <flow source="107" target="105"/>
+                  <graphics>
+                     <position x="750" y="1299"/>
+                     <position x="750" y="1404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31c07-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="108" defRef="106">
+                  <name>6</name>
+                  <description>6</description>
+                  <graphics>
+                     <position x="595" y="1704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="49de611d-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="566">
+                  <flow source="108" target="113"/>
+                  <graphics>
+                     <position x="750" y="1897"/>
+                     <position x="750" y="2000"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31c0d-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <event id="109" defRef="158">
+                  <name>Ende</name>
+                  <description>Ende</description>
+                  <graphics>
+                     <position x="594" y="3003" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="49de6101-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <xor id="110" defRef="152">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="2500" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="49de610b-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="567">
+                  <flow source="110" target="104"/>
+                  <graphics>
+                     <position x="750" y="2599"/>
+                     <position x="750" y="2704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31bfb-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="111" defRef="188">
+                  <name>2</name>
+                  <description>2</description>
+                  <graphics>
+                     <position x="145" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="49de6109-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="568">
+                  <flow source="111" target="107"/>
+                  <graphics>
+                     <position x="300" y="1097"/>
+                     <position x="300" y="1250"/>
+                     <position x="700" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31c0b-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="112" defRef="109">
+                  <name>3</name>
+                  <description>3</description>
+                  <graphics>
+                     <position x="595" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="49de610f-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="569">
+                  <flow source="112" target="107"/>
+                  <graphics>
+                     <position x="750" y="1097"/>
+                     <position x="750" y="1200"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31c01-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="113" defRef="113">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="2000" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="49de6111-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="570">
+                  <flow source="113" target="116"/>
+                  <graphics>
+                     <position x="800" y="2050"/>
+                     <position x="1200" y="2050"/>
+                     <position x="1200" y="2204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31bf9-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="571">
+                  <flow source="113" target="106"/>
+                  <graphics>
+                     <position x="700" y="2050"/>
+                     <position x="300" y="2050"/>
+                     <position x="300" y="2204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31bf3-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <xor id="114" defRef="122">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="700" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="49de611b-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="572">
+                  <flow source="114" target="110"/>
+                  <graphics>
+                     <position x="800" y="750"/>
+                     <position x="1600" y="750"/>
+                     <position x="1600" y="2550"/>
+                     <position x="800" y="2550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2c8-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LNK_2"/>
+               </arc>
+               <arc id="573">
+                  <flow source="114" target="112"/>
+                  <graphics>
+                     <position x="750" y="799"/>
+                     <position x="750" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31bfd-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="574">
+                  <flow source="114" target="103"/>
+                  <graphics>
+                     <position x="800" y="750"/>
+                     <position x="1200" y="750"/>
+                     <position x="1200" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31c11-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="575">
+                  <flow source="114" target="111"/>
+                  <graphics>
+                     <position x="700" y="750"/>
+                     <position x="300" y="750"/>
+                     <position x="300" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31c03-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="115" defRef="96">
+                  <name>1</name>
+                  <description>1</description>
+                  <graphics>
+                     <position x="595" y="404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="49de6107-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="576">
+                  <flow source="115" target="114"/>
+                  <graphics>
+                     <position x="750" y="597"/>
+                     <position x="750" y="700"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31bf7-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="116" defRef="149">
+                  <name>8</name>
+                  <description>8</description>
+                  <graphics>
+                     <position x="1045" y="2204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:01:54.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="49de6115-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="577">
+                  <flow source="116" target="110"/>
+                  <graphics>
+                     <position x="1200" y="2397"/>
+                     <position x="1200" y="2550"/>
+                     <position x="800" y="2550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="49e31c05-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+            </epc>
+            <epc epcId="10" name="Variante b: v1">
+               <attribute typeRef="AT_LUSER" value="system"/>
+               <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+               <attribute typeRef="AT_LAST_CHNG_2" value="09:38:44.000;08/06/2012"/>
+               <attribute typeRef="AT_TEMPLATE" value="2ed57d10-68c8-11d7-5d85-000bcd25c95f;0"/>
+               <attribute typeRef="AT_CREATOR" value="system"/>
+               <attribute typeRef="GUID" value="a6c71ec1-dfa9-11e1-691c-d48564bed6ec"/>
+               <event id="117" defRef="180">
+                  <name>Ende</name>
+                  <description>Ende</description>
+                  <graphics>
+                     <position x="594" y="3903" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="a6af5101-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <xor id="118" defRef="142">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="3400" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="a6af510b-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="578">
+                  <flow source="118" target="128"/>
+                  <graphics>
+                     <position x="750" y="3499"/>
+                     <position x="750" y="3604"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263db-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="119" defRef="98">
+                  <name>8</name>
+                  <description>8</description>
+                  <graphics>
+                     <position x="595" y="3104" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="a6af5115-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="579">
+                  <flow source="119" target="118"/>
+                  <graphics>
+                     <position x="750" y="3297"/>
+                     <position x="750" y="3400"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263e5-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="120" defRef="134">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="2700" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:44.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:44.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="00032a50-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="580">
+                  <flow source="120" target="122"/>
+                  <graphics>
+                     <position x="800" y="2750"/>
+                     <position x="950" y="2750"/>
+                     <position x="950" y="1950"/>
+                     <position x="800" y="1950"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a51-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LNK_2"/>
+               </arc>
+               <arc id="581">
+                  <flow source="120" target="121"/>
+                  <graphics>
+                     <position x="750" y="2799"/>
+                     <position x="750" y="2900"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab92-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LNK_2"/>
+               </arc>
+               <xor id="121" defRef="95">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="2900" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="a6af5111-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="582">
+                  <flow source="121" target="135"/>
+                  <graphics>
+                     <position x="700" y="2950"/>
+                     <position x="300" y="2950"/>
+                     <position x="300" y="3104"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263d3-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="583">
+                  <flow source="121" target="119"/>
+                  <graphics>
+                     <position x="750" y="2999"/>
+                     <position x="750" y="3104"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263d9-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <xor id="122" defRef="184">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="1900" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:34:12.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:34:12.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="00032a46-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="584">
+                  <flow source="122" target="134"/>
+                  <graphics>
+                     <position x="750" y="1999"/>
+                     <position x="750" y="2104"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a4d-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="123" defRef="102">
+                  <name>2</name>
+                  <description>2</description>
+                  <graphics>
+                     <position x="595" y="1204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="a6af5109-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="585">
+                  <flow source="123" target="127"/>
+                  <graphics>
+                     <position x="750" y="1397"/>
+                     <position x="750" y="1500"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263eb-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="124" defRef="203">
+                  <name>1</name>
+                  <description>1</description>
+                  <graphics>
+                     <position x="595" y="404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="a6af5107-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="586">
+                  <flow source="124" target="133"/>
+                  <graphics>
+                     <position x="750" y="597"/>
+                     <position x="750" y="700"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a49-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="125" defRef="155">
+                  <name>3</name>
+                  <description>3</description>
+                  <graphics>
+                     <position x="1045" y="1204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="a6af510f-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="587">
+                  <flow source="125" target="127"/>
+                  <graphics>
+                     <position x="1200" y="1397"/>
+                     <position x="1200" y="1550"/>
+                     <position x="800" y="1550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263e1-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="126" defRef="138">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="950" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="a6af511b-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="588">
+                  <flow source="126" target="125"/>
+                  <graphics>
+                     <position x="800" y="1000"/>
+                     <position x="1200" y="1000"/>
+                     <position x="1200" y="1204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263dd-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="589">
+                  <flow source="126" target="123"/>
+                  <graphics>
+                     <position x="750" y="1049"/>
+                     <position x="750" y="1204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263e3-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <xor id="127" defRef="91">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="1500" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="a6af5103-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="590">
+                  <flow source="127" target="131"/>
+                  <graphics>
+                     <position x="750" y="1599"/>
+                     <position x="750" y="1700"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a4b-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LNK_2"/>
+               </arc>
+               <function id="128" defRef="207">
+                  <name>9</name>
+                  <description>9</description>
+                  <graphics>
+                     <position x="595" y="3604" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="a6af5113-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="591">
+                  <flow source="128" target="117"/>
+                  <graphics>
+                     <position x="750" y="3797"/>
+                     <position x="750" y="3903"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263ef-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_CRT_1"/>
+               </arc>
+               <function id="129" defRef="170">
+                  <name>4</name>
+                  <description>4</description>
+                  <graphics>
+                     <position x="1495" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="a6af5117-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="592">
+                  <flow source="129" target="131"/>
+                  <graphics>
+                     <position x="1650" y="1097"/>
+                     <position x="1650" y="1750"/>
+                     <position x="800" y="1750"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a4e-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <event id="130" defRef="99">
+                  <name>Start</name>
+                  <description>Start</description>
+                  <graphics>
+                     <position x="594" y="103" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="a6af510d-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <arc id="593">
+                  <flow source="130" target="124"/>
+                  <graphics>
+                     <position x="750" y="298"/>
+                     <position x="750" y="404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263d1-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <xor id="131" defRef="211">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="1700" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:34:12.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:34:12.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="00032a44-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="594">
+                  <flow source="131" target="122"/>
+                  <graphics>
+                     <position x="750" y="1799"/>
+                     <position x="750" y="1900"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a47-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LNK_2"/>
+               </arc>
+               <function id="132" defRef="185">
+                  <name>6</name>
+                  <description>6</description>
+                  <graphics>
+                     <position x="595" y="2404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="a6af511d-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="595">
+                  <flow source="132" target="120"/>
+                  <graphics>
+                     <position x="750" y="2597"/>
+                     <position x="750" y="2700"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab91-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="133" defRef="193">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="700" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:34:12.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:34:12.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="00032a43-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="596">
+                  <flow source="133" target="126"/>
+                  <graphics>
+                     <position x="750" y="799"/>
+                     <position x="750" y="950"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a4a-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LNK_2"/>
+               </arc>
+               <arc id="597">
+                  <flow source="133" target="129"/>
+                  <graphics>
+                     <position x="800" y="750"/>
+                     <position x="1650" y="750"/>
+                     <position x="1650" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="00032a4f-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="134" defRef="189">
+                  <name>5</name>
+                  <description>5</description>
+                  <graphics>
+                     <position x="595" y="2104" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="a6af5105-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="598">
+                  <flow source="134" target="132"/>
+                  <graphics>
+                     <position x="750" y="2297"/>
+                     <position x="750" y="2404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263e9-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="135" defRef="150">
+                  <name>7</name>
+                  <description>7</description>
+                  <graphics>
+                     <position x="145" y="3104" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:32:33.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="a6af5119-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="599">
+                  <flow source="135" target="118"/>
+                  <graphics>
+                     <position x="300" y="3297"/>
+                     <position x="300" y="3450"/>
+                     <position x="700" y="3450"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="a6c263d5-dfa9-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+            </epc>
+            <epc epcId="11"
+                 name="Variante c: v2">
+               <attribute typeRef="AT_LAST_CHNG_2" value="08:04:03.000;09/07/2012"/>
+               <attribute typeRef="AT_LUSER" value="system"/>
+               <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+               <attribute typeRef="AT_TEMPLATE" value="2ed57d10-68c8-11d7-5d85-000bcd25c95f;0"/>
+               <attribute typeRef="AT_CREATOR" value="system"/>
+               <attribute typeRef="GUID" value="8bd1c381-dfaa-11e1-691c-d48564bed6ec"/>
+               <function id="136" defRef="137">
+                  <name>7</name>
+                  <description>7</description>
+                  <graphics>
+                     <position x="145" y="2204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="8bca97a9-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="600">
+                  <flow source="136" target="150"/>
+                  <graphics>
+                     <position x="300" y="2397"/>
+                     <position x="300" y="2550"/>
+                     <position x="700" y="2550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995aba5-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="137" defRef="187">
+                  <name>3</name>
+                  <description>3</description>
+                  <graphics>
+                     <position x="595" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="8bca979f-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="601">
+                  <flow source="137" target="138"/>
+                  <graphics>
+                     <position x="750" y="1097"/>
+                     <position x="750" y="1200"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab9d-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <or id="138" defRef="206">
+                  <name>ODER-Regel</name>
+                  <description>ODER-Regel</description>
+                  <graphics>
+                     <position x="700" y="1200" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:43:52.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:43:52.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="3995ab94-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_OR_1"/>
+               </or>
+               <arc id="602">
+                  <flow source="138" target="143"/>
+                  <graphics>
+                     <position x="750" y="1299"/>
+                     <position x="750" y="1404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab9c-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <event id="139" defRef="104">
+                  <name>Start</name>
+                  <description>Start</description>
+                  <graphics>
+                     <position x="594" y="103" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="8bca979d-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <arc id="603">
+                  <flow source="139" target="144"/>
+                  <graphics>
+                     <position x="750" y="298"/>
+                     <position x="750" y="404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="8bcf5281-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="140" defRef="219">
+                  <name>8</name>
+                  <description>8</description>
+                  <graphics>
+                     <position x="1045" y="2204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="8bca97a5-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="604">
+                  <flow source="140" target="150"/>
+                  <graphics>
+                     <position x="1200" y="2397"/>
+                     <position x="1200" y="2550"/>
+                     <position x="800" y="2550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995aba3-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <or id="141" defRef="201">
+                  <name>ODER-Regel</name>
+                  <description>ODER-Regel</description>
+                  <graphics>
+                     <position x="700" y="700" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:43:52.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:43:52.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="3995ab93-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_OR_1"/>
+               </or>
+               <arc id="605">
+                  <flow source="141" target="142"/>
+                  <graphics>
+                     <position x="800" y="750"/>
+                     <position x="1200" y="750"/>
+                     <position x="1200" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab99-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="606">
+                  <flow source="141" target="146"/>
+                  <graphics>
+                     <position x="700" y="750"/>
+                     <position x="300" y="750"/>
+                     <position x="300" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab98-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="607">
+                  <flow source="141" target="137"/>
+                  <graphics>
+                     <position x="750" y="799"/>
+                     <position x="750" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab9a-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="142" defRef="93">
+                  <name>4</name>
+                  <description>4</description>
+                  <graphics>
+                     <position x="1045" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="8bca97a7-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="608">
+                  <flow source="142" target="138"/>
+                  <graphics>
+                     <position x="1200" y="1097"/>
+                     <position x="1200" y="1250"/>
+                     <position x="800" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab9e-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="143" defRef="181">
+                  <name>5</name>
+                  <description>5</description>
+                  <graphics>
+                     <position x="595" y="1404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="8bca9795-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="609">
+                  <flow source="143" target="145"/>
+                  <graphics>
+                     <position x="750" y="1597"/>
+                     <position x="750" y="1704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="8bcf5299-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="144" defRef="162">
+                  <name>1</name>
+                  <description>1</description>
+                  <graphics>
+                     <position x="595" y="404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="8bca9797-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="610">
+                  <flow source="144" target="141"/>
+                  <graphics>
+                     <position x="750" y="597"/>
+                     <position x="750" y="700"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab97-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="145" defRef="153">
+                  <name>6</name>
+                  <description>6</description>
+                  <graphics>
+                     <position x="595" y="1704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="8bca97ad-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+			   <arc id="904">
+                  <flow source="148" target="138"/>
+                  <graphics>
+                     <position x="750" y="597"/>
+                     <position x="750" y="700"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab97-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <arc id="611">
+                  <flow source="145" target="148"/>
+                  <graphics>
+                     <position x="750" y="1897"/>
+                     <position x="750" y="2000"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995aba2-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="146" defRef="216">
+                  <name>2</name>
+                  <description>2</description>
+                  <graphics>
+                     <position x="145" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="8bca9799-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="612">
+                  <flow source="146" target="138"/>
+                  <graphics>
+                     <position x="300" y="1097"/>
+                     <position x="300" y="1250"/>
+                     <position x="700" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995ab9b-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <event id="147" defRef="100">
+                  <name>Ende</name>
+                  <description>Ende</description>
+                  <graphics>
+                     <position x="594" y="3003" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="8bca9791-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <or id="148" defRef="151">
+                  <name>ODER-Regel</name>
+                  <description>ODER-Regel</description>
+                  <graphics>
+                     <position x="700" y="2000" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:43:52.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:43:52.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="3995ab95-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_OR_1"/>
+               </or>
+               <arc id="613">
+                  <flow source="148" target="140"/>
+                  <graphics>
+                     <position x="800" y="2050"/>
+                     <position x="1200" y="2050"/>
+                     <position x="1200" y="2204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995aba1-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="614">
+                  <flow source="148" target="136"/>
+                  <graphics>
+                     <position x="700" y="2050"/>
+                     <position x="300" y="2050"/>
+                     <position x="300" y="2204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995aba0-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="149" defRef="208">
+                  <name>9</name>
+                  <description>9</description>
+                  <graphics>
+                     <position x="595" y="2704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:38:58.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="8bca97a3-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="615">
+                  <flow source="149" target="147"/>
+                  <graphics>
+                     <position x="750" y="2897"/>
+                     <position x="750" y="3003"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="8bcf529f-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_CRT_1"/>
+               </arc>
+               <or id="150" defRef="88">
+                  <name>ODER-Regel</name>
+                  <description>ODER-Regel</description>
+                  <graphics>
+                     <position x="700" y="2500" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="09:43:52.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="09:43:52.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="3995ab96-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_OR_1"/>
+               </or>
+               <arc id="616">
+                  <flow source="150" target="149"/>
+                  <graphics>
+                     <position x="750" y="2599"/>
+                     <position x="750" y="2704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="3995aba4-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+            </epc>
+            <epc epcId="12" name="Variante d: v3">
+               <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+               <attribute typeRef="AT_CREATOR" value="system"/>
+               <attribute typeRef="AT_TEMPLATE" value="2ed57d10-68c8-11d7-5d85-000bcd25c95f;0"/>
+               <attribute typeRef="AT_LAST_CHNG_2" value="08:00:38.000;09/07/2012"/>
+               <attribute typeRef="AT_LUSER" value="system"/>
+               <attribute typeRef="GUID" value="b25bc9a1-dfb5-11e1-691c-d48564bed6ec"/>
+               <function id="151" defRef="125">
+                  <name>1</name>
+                  <description>1</description>
+                  <graphics>
+                     <position x="1045" y="404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="b254c4c7-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="617">
+                  <flow source="151" target="153"/>
+                  <graphics>
+                     <position x="1200" y="597"/>
+                     <position x="1200" y="704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2c0-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="152" defRef="209">
+                  <name>3</name>
+                  <description>3</description>
+                  <graphics>
+                     <position x="1045" y="1204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="b2570eb5-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="618">
+                  <flow source="152" target="160"/>
+                  <graphics>
+                     <position x="1200" y="1397"/>
+                     <position x="1200" y="1550"/>
+                     <position x="800" y="1550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fc1-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="153" defRef="165">
+                  <name>A</name>
+                  <description>A</description>
+                  <graphics>
+                     <position x="1045" y="704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:59:39.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:59:39.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="3995aba9-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="619">
+                  <flow source="153" target="169"/>
+                  <graphics>
+                     <position x="1200" y="897"/>
+                     <position x="1200" y="1000"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2c1-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="154" defRef="178">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="2900" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="b2570eb7-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="620">
+                  <flow source="154" target="160"/>
+                  <graphics>
+                     <position x="800" y="2950"/>
+                     <position x="950" y="2950"/>
+                     <position x="950" y="1550"/>
+                     <position x="800" y="1550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fd3-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LNK_2"/>
+               </arc>
+               <arc id="621">
+                  <flow source="154" target="165"/>
+                  <graphics>
+                     <position x="700" y="2950"/>
+                     <position x="300" y="2950"/>
+                     <position x="300" y="3104"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fb3-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="622">
+                  <flow source="154" target="164"/>
+                  <graphics>
+                     <position x="800" y="2950"/>
+                     <position x="1200" y="2950"/>
+                     <position x="1200" y="3104"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fb9-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <xor id="155" defRef="121">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="250" y="3400" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="b2570eb1-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="623">
+                  <flow source="155" target="158"/>
+                  <graphics>
+                     <position x="300" y="3499"/>
+                     <position x="300" y="3604"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2c6-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="156" defRef="215">
+                  <name>2</name>
+                  <description>2</description>
+                  <graphics>
+                     <position x="595" y="1204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="b254c4c9-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="624">
+                  <flow source="156" target="160"/>
+                  <graphics>
+                     <position x="750" y="1397"/>
+                     <position x="750" y="1500"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fcb-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="157" defRef="174">
+                  <name>5</name>
+                  <description>5</description>
+                  <graphics>
+                     <position x="595" y="2004" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="b254c4c5-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="625">
+                  <flow source="157" target="163"/>
+                  <graphics>
+                     <position x="750" y="2197"/>
+                     <position x="750" y="2304"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fc9-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="158" defRef="167">
+                  <name>D</name>
+                  <description>D</description>
+                  <graphics>
+                     <position x="145" y="3604" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:59:39.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:59:39.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="3995abad-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="626">
+                  <flow source="158" target="167"/>
+                  <graphics>
+                     <position x="300" y="3797"/>
+                     <position x="300" y="3904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2c7-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="159" defRef="166">
+                  <name>B</name>
+                  <description>B</description>
+                  <graphics>
+                     <position x="595" y="1704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:59:39.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:59:39.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="3995abaa-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="627">
+                  <flow source="159" target="157"/>
+                  <graphics>
+                     <position x="750" y="1897"/>
+                     <position x="750" y="2004"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2c3-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <xor id="160" defRef="115">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="1500" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="b254c4c3-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="628">
+                  <flow source="160" target="159"/>
+                  <graphics>
+                     <position x="750" y="1599"/>
+                     <position x="750" y="1704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2c2-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="161" defRef="202">
+                  <name>C</name>
+                  <description>C</description>
+                  <graphics>
+                     <position x="595" y="2604" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:59:39.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:59:39.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="3995abac-dfaa-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="629">
+                  <flow source="161" target="154"/>
+                  <graphics>
+                     <position x="750" y="2797"/>
+                     <position x="750" y="2900"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2c5-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <event id="162" defRef="129">
+                  <name>Ende</name>
+                  <description>Ende</description>
+                  <graphics>
+                     <position x="144" y="4203" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="b254c4c1-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <function id="163" defRef="105">
+                  <name>6</name>
+                  <description>6</description>
+                  <graphics>
+                     <position x="595" y="2304" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="b2570ec3-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="630">
+                  <flow source="163" target="161"/>
+                  <graphics>
+                     <position x="750" y="2497"/>
+                     <position x="750" y="2604"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2c4-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="164" defRef="107">
+                  <name>8</name>
+                  <description>8</description>
+                  <graphics>
+                     <position x="1045" y="3104" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="b2570ebb-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="631">
+                  <flow source="164" target="155"/>
+                  <graphics>
+                     <position x="1200" y="3297"/>
+                     <position x="1200" y="3450"/>
+                     <position x="350" y="3450"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fc5-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="165" defRef="92">
+                  <name>7</name>
+                  <description>7</description>
+                  <graphics>
+                     <position x="145" y="3104" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="b2570ebf-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="632">
+                  <flow source="165" target="155"/>
+                  <graphics>
+                     <position x="300" y="3297"/>
+                     <position x="300" y="3400"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fb5-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <event id="166" defRef="89">
+                  <name>Start</name>
+                  <description>Start</description>
+                  <graphics>
+                     <position x="1044" y="103" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="b2570eb3-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <arc id="633">
+                  <flow source="166" target="151"/>
+                  <graphics>
+                     <position x="1200" y="298"/>
+                     <position x="1200" y="404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fb1-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="167" defRef="159">
+                  <name>9</name>
+                  <description>9</description>
+                  <graphics>
+                     <position x="145" y="3904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="b2570eb9-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="634">
+                  <flow source="167" target="162"/>
+                  <graphics>
+                     <position x="300" y="4097"/>
+                     <position x="300" y="4203"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fcf-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_CRT_1"/>
+               </arc>
+               <function id="168" defRef="135">
+                  <name>4</name>
+                  <description>4</description>
+                  <graphics>
+                     <position x="1495" y="1204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="GUID" value="b2570ebd-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="635">
+                  <flow source="168" target="160"/>
+                  <graphics>
+                     <position x="1650" y="1397"/>
+                     <position x="1650" y="1550"/>
+                     <position x="800" y="1550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fbf-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="169" defRef="183">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="1150" y="1000" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="10:58:47.000;08/06/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="b2570ec1-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="636">
+                  <flow source="169" target="156"/>
+                  <graphics>
+                     <position x="1150" y="1050"/>
+                     <position x="750" y="1050"/>
+                     <position x="750" y="1204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fc3-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="637">
+                  <flow source="169" target="152"/>
+                  <graphics>
+                     <position x="1200" y="1099"/>
+                     <position x="1200" y="1204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fbd-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="638">
+                  <flow source="169" target="168"/>
+                  <graphics>
+                     <position x="1250" y="1050"/>
+                     <position x="1650" y="1050"/>
+                     <position x="1650" y="1204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="b2597fd1-dfb5-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+            </epc>
+            <epc epcId="13" name="Variante f: v5">
+               <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+               <attribute typeRef="AT_TEMPLATE" value="2ed57d10-68c8-11d7-5d85-000bcd25c95f;0"/>
+               <attribute typeRef="AT_LUSER" value="system"/>
+               <attribute typeRef="AT_CREATOR" value="system"/>
+               <attribute typeRef="AT_LAST_CHNG_2" value="08:05:30.000;09/07/2012"/>
+               <attribute typeRef="GUID" value="869178d1-f8c2-11e1-691c-d48564bed6ec"/>
+               <event id="170" defRef="218">
+                  <name>Start</name>
+                  <description>Start</description>
+                  <graphics>
+                     <position x="144" y="103" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="8674f02d-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <arc id="639">
+                  <flow source="170" target="178"/>
+                  <graphics>
+                     <position x="300" y="298"/>
+                     <position x="300" y="404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2d0-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="171" defRef="176">
+                  <name>2</name>
+                  <description>2</description>
+                  <graphics>
+                     <position x="145" y="1304" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="8674f029-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="640">
+                  <flow source="171" target="172"/>
+                  <graphics>
+                     <position x="300" y="1497"/>
+                     <position x="300" y="1604"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2cd-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="172" defRef="195">
+                  <name>6</name>
+                  <description>6</description>
+                  <graphics>
+                     <position x="145" y="1604" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="8674f03d-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="641">
+                  <flow source="172" target="174"/>
+                  <graphics>
+                     <position x="300" y="1797"/>
+                     <position x="300" y="1904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2ce-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="173" defRef="123">
+                  <name>1</name>
+                  <description>1</description>
+                  <graphics>
+                     <position x="145" y="2204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="8674f027-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="642">
+                  <flow source="173" target="180"/>
+                  <graphics>
+                     <position x="300" y="2397"/>
+                     <position x="300" y="2504"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2d1-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="174" defRef="132">
+                  <name>5</name>
+                  <description>5</description>
+                  <graphics>
+                     <position x="145" y="1904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="8674f025-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="643">
+                  <flow source="174" target="173"/>
+                  <graphics>
+                     <position x="300" y="2097"/>
+                     <position x="300" y="2204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2cf-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="175" defRef="94">
+                  <name>3</name>
+                  <description>3</description>
+                  <graphics>
+                     <position x="145" y="1004" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="8674f02f-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="644">
+                  <flow source="175" target="171"/>
+                  <graphics>
+                     <position x="300" y="1197"/>
+                     <position x="300" y="1304"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2cc-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="176" defRef="196">
+                  <name>7</name>
+                  <description>7</description>
+                  <graphics>
+                     <position x="145" y="704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="8674f039-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="645">
+                  <flow source="176" target="175"/>
+                  <graphics>
+                     <position x="300" y="897"/>
+                     <position x="300" y="1004"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2cb-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <event id="177" defRef="111">
+                  <name>Ende</name>
+                  <description>Ende</description>
+                  <graphics>
+                     <position x="144" y="3103" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="8674f021-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <function id="178" defRef="90">
+                  <name>9</name>
+                  <description>9</description>
+                  <graphics>
+                     <position x="145" y="404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="8674f033-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="646">
+                  <flow source="178" target="176"/>
+                  <graphics>
+                     <position x="300" y="597"/>
+                     <position x="300" y="704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2ca-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="179" defRef="160">
+                  <name>8</name>
+                  <description>8</description>
+                  <graphics>
+                     <position x="145" y="2804" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="8674f035-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="647">
+                  <flow source="179" target="177"/>
+                  <graphics>
+                     <position x="300" y="2997"/>
+                     <position x="300" y="3103"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2d3-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_CRT_1"/>
+               </arc>
+               <function id="180" defRef="120">
+                  <name>4</name>
+                  <description>4</description>
+                  <graphics>
+                     <position x="145" y="2504" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:03:36.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="8674f037-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="648">
+                  <flow source="180" target="179"/>
+                  <graphics>
+                     <position x="300" y="2697"/>
+                     <position x="300" y="2804"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2d2-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+            </epc>
+            <epc epcId="14" name="Variante g: v6">
+               <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+               <attribute typeRef="AT_LUSER" value="system"/>
+               <attribute typeRef="AT_TEMPLATE" value="2ed57d10-68c8-11d7-5d85-000bcd25c95f;0"/>
+               <attribute typeRef="AT_CREATOR" value="system"/>
+               <attribute typeRef="AT_LAST_CHNG_2" value="08:07:38.000;09/07/2012"/>
+               <attribute typeRef="GUID" value="e56bb2f5-f8c2-11e1-691c-d48564bed6ec"/>
+               <function id="181" defRef="136">
+                  <name>8</name>
+                  <description>8</description>
+                  <graphics>
+                     <position x="145" y="2204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="e56486f5-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="649">
+                  <flow source="181" target="184"/>
+                  <graphics>
+                     <position x="300" y="2397"/>
+                     <position x="300" y="2550"/>
+                     <position x="700" y="2550"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2e5-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="182" defRef="210">
+                  <name>4</name>
+                  <description>4</description>
+                  <graphics>
+                     <position x="1495" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="e56486f7-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="650">
+                  <flow source="182" target="183"/>
+                  <graphics>
+                     <position x="1650" y="1097"/>
+                     <position x="1650" y="1250"/>
+                     <position x="800" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2df-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="183" defRef="146">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="1200" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="e56486e3-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="651">
+                  <flow source="183" target="187"/>
+                  <graphics>
+                     <position x="750" y="1299"/>
+                     <position x="750" y="1404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2d4-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <xor id="184" defRef="205">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="2500" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="e56486eb-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="652">
+                  <flow source="184" target="190"/>
+                  <graphics>
+                     <position x="750" y="2599"/>
+                     <position x="750" y="2704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2db-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="185" defRef="130">
+                  <name>1</name>
+                  <description>1</description>
+                  <graphics>
+                     <position x="595" y="404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="e56486e7-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="653">
+                  <flow source="185" target="191"/>
+                  <graphics>
+                     <position x="750" y="597"/>
+                     <position x="750" y="700"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2d7-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="186" defRef="118">
+                  <name>5</name>
+                  <description>5</description>
+                  <graphics>
+                     <position x="595" y="1704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="e56486e5-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="654">
+                  <flow source="186" target="195"/>
+                  <graphics>
+                     <position x="750" y="1897"/>
+                     <position x="750" y="2000"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2d6-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="187" defRef="119">
+                  <name>6</name>
+                  <description>6</description>
+                  <graphics>
+                     <position x="595" y="1404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="e56486fd-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="655">
+                  <flow source="187" target="186"/>
+                  <graphics>
+                     <position x="750" y="1597"/>
+                     <position x="750" y="1704"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2d7-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_IS_PREDEC_OF_1"/>
+               </arc>
+               <function id="188" defRef="133">
+                  <name>2</name>
+                  <description>2</description>
+                  <graphics>
+                     <position x="595" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="e56486e9-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="656">
+                  <flow source="188" target="183"/>
+                  <graphics>
+                     <position x="750" y="1097"/>
+                     <position x="750" y="1200"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2eb-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <event id="189" defRef="141">
+                  <name>Ende</name>
+                  <description>Ende</description>
+                  <graphics>
+                     <position x="594" y="3003" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="e56486e1-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <function id="190" defRef="169">
+                  <name>9</name>
+                  <description>9</description>
+                  <graphics>
+                     <position x="595" y="2704" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="e56486f3-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="657">
+                  <flow source="190" target="189"/>
+                  <graphics>
+                     <position x="750" y="2897"/>
+                     <position x="750" y="3003"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2ef-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_CRT_1"/>
+               </arc>
+               <xor id="191" defRef="168">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="700" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="e56486fb-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="658">
+                  <flow source="191" target="188"/>
+                  <graphics>
+                     <position x="750" y="799"/>
+                     <position x="750" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2e3-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="659">
+                  <flow source="191" target="182"/>
+                  <graphics>
+                     <position x="800" y="750"/>
+                     <position x="1650" y="750"/>
+                     <position x="1650" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2f1-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="660">
+                  <flow source="191" target="193"/>
+                  <graphics>
+                     <position x="800" y="750"/>
+                     <position x="1200" y="750"/>
+                     <position x="1200" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2dd-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="192" defRef="200">
+                  <name>7</name>
+                  <description>7</description>
+                  <graphics>
+                     <position x="595" y="2204" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="e56486f9-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="661">
+                  <flow source="192" target="184"/>
+                  <graphics>
+                     <position x="750" y="2397"/>
+                     <position x="750" y="2500"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2d5-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="193" defRef="128">
+                  <name>3</name>
+                  <description>3</description>
+                  <graphics>
+                     <position x="1045" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="e56486ef-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="662">
+                  <flow source="193" target="183"/>
+                  <graphics>
+                     <position x="1200" y="1097"/>
+                     <position x="1200" y="1250"/>
+                     <position x="800" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2e1-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <event id="194" defRef="154">
+                  <name>Start</name>
+                  <description>Start</description>
+                  <graphics>
+                     <position x="594" y="103" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="e56486ed-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <arc id="663">
+                  <flow source="194" target="185"/>
+                  <graphics>
+                     <position x="750" y="298"/>
+                     <position x="750" y="404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2d1-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <xor id="195" defRef="175">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="2000" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:06:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="e56486f1-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="664">
+                  <flow source="195" target="181"/>
+                  <graphics>
+                     <position x="700" y="2050"/>
+                     <position x="300" y="2050"/>
+                     <position x="300" y="2204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2d9-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="665">
+                  <flow source="195" target="192"/>
+                  <graphics>
+                     <position x="750" y="2099"/>
+                     <position x="750" y="2204"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2d3-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="666">
+                  <flow source="195" target="183"/>
+                  <graphics>
+                     <position x="800" y="2050"/>
+                     <position x="950" y="2050"/>
+                     <position x="950" y="1250"/>
+                     <position x="800" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="e56bb2f3-f8c2-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LNK_2"/>
+               </arc>
+            </epc>
+            <epc epcId="15" name="Variante h: v7">
+               <attribute typeRef="AT_LAST_CHNG_2" value="08:09:32.000;09/07/2012"/>
+               <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+               <attribute typeRef="AT_TEMPLATE" value="2ed57d10-68c8-11d7-5d85-000bcd25c95f;0"/>
+               <attribute typeRef="AT_LUSER" value="system"/>
+               <attribute typeRef="AT_CREATOR" value="system"/>
+               <attribute typeRef="GUID" value="2d4010b1-f8c3-11e1-691c-d48564bed6ec"/>
+               <function id="196" defRef="114">
+                  <name>7</name>
+                  <description>7</description>
+                  <graphics>
+                     <position x="145" y="1904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="2d390be9-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="667">
+                  <flow source="196" target="208"/>
+                  <graphics>
+                     <position x="300" y="2097"/>
+                     <position x="300" y="2200"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6c5-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="197" defRef="124">
+                  <name>6</name>
+                  <description>6</description>
+                  <graphics>
+                     <position x="595" y="1404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="2d390bed-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="668">
+                  <flow source="197" target="206"/>
+                  <graphics>
+                     <position x="750" y="1597"/>
+                     <position x="750" y="1700"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6dd-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="198" defRef="131">
+                  <name>5</name>
+                  <description>5</description>
+                  <graphics>
+                     <position x="1045" y="1904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="2d390bd5-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="669">
+                  <flow source="198" target="208"/>
+                  <graphics>
+                     <position x="1200" y="2097"/>
+                     <position x="1200" y="2250"/>
+                     <position x="350" y="2250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2d9-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <function id="199" defRef="127">
+                  <name>4</name>
+                  <description>4</description>
+                  <graphics>
+                     <position x="1495" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="2d390be7-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="670">
+                  <flow source="199" target="204"/>
+                  <graphics>
+                     <position x="1650" y="1097"/>
+                     <position x="1650" y="1250"/>
+                     <position x="800" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6cf-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <event id="200" defRef="97">
+                  <name>Start</name>
+                  <description>Start</description>
+                  <graphics>
+                     <position x="1044" y="103" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="2d390bdd-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+               <arc id="671">
+                  <flow source="200" target="205"/>
+                  <graphics>
+                     <position x="1200" y="298"/>
+                     <position x="1200" y="404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6c1-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="201" defRef="164">
+                  <name>9</name>
+                  <description>9</description>
+                  <graphics>
+                     <position x="145" y="2404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="2d390be3-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="672">
+                  <flow source="201" target="210"/>
+                  <graphics>
+                     <position x="300" y="2597"/>
+                     <position x="300" y="2703"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6df-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_CRT_1"/>
+               </arc>
+               <xor id="202" defRef="173">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="1150" y="700" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="GUID" value="2d390beb-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="673">
+                  <flow source="202" target="207"/>
+                  <graphics>
+                     <position x="1150" y="750"/>
+                     <position x="750" y="750"/>
+                     <position x="750" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6d3-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="674">
+                  <flow source="202" target="199"/>
+                  <graphics>
+                     <position x="1250" y="750"/>
+                     <position x="1650" y="750"/>
+                     <position x="1650" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6e1-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="675">
+                  <flow source="202" target="203"/>
+                  <graphics>
+                     <position x="1200" y="799"/>
+                     <position x="1200" y="904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6cd-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="203" defRef="108">
+                  <name>3</name>
+                  <description>3</description>
+                  <graphics>
+                     <position x="1045" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="2d390bdf-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="676">
+                  <flow source="203" target="204"/>
+                  <graphics>
+                     <position x="1200" y="1097"/>
+                     <position x="1200" y="1250"/>
+                     <position x="800" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6d1-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="204" defRef="145">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="1200" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="2d390bd3-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="677">
+                  <flow source="204" target="197"/>
+                  <graphics>
+                     <position x="750" y="1299"/>
+                     <position x="750" y="1404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2d8-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="205" defRef="213">
+                  <name>1</name>
+                  <description>1</description>
+                  <graphics>
+                     <position x="1045" y="404" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="2d390bd7-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="678">
+                  <flow source="205" target="202"/>
+                  <graphics>
+                     <position x="1200" y="597"/>
+                     <position x="1200" y="700"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6c7-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="206" defRef="156">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="700" y="1700" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="2d390be1-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="679">
+                  <flow source="206" target="196"/>
+                  <graphics>
+                     <position x="700" y="1750"/>
+                     <position x="300" y="1750"/>
+                     <position x="300" y="1904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6c3-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="680">
+                  <flow source="206" target="204"/>
+                  <graphics>
+                     <position x="800" y="1750"/>
+                     <position x="950" y="1750"/>
+                     <position x="950" y="1250"/>
+                     <position x="800" y="1250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6e3-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LNK_2"/>
+               </arc>
+               <arc id="681">
+                  <flow source="206" target="198"/>
+                  <graphics>
+                     <position x="800" y="1750"/>
+                     <position x="1200" y="1750"/>
+                     <position x="1200" y="1904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="ec9db2da-f8c1-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <arc id="682">
+                  <flow source="206" target="209"/>
+                  <graphics>
+                     <position x="750" y="1799"/>
+                     <position x="750" y="1904"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6c9-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="207" defRef="147">
+                  <name>2</name>
+                  <description>2</description>
+                  <graphics>
+                     <position x="595" y="904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="2d390bd9-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="683">
+                  <flow source="207" target="204"/>
+                  <graphics>
+                     <position x="750" y="1097"/>
+                     <position x="750" y="1200"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6db-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <xor id="208" defRef="190">
+                  <name>XOR-Regel</name>
+                  <description>XOR-Regel</description>
+                  <graphics>
+                     <position x="250" y="2200" width="100" height="100"/>
+                  </graphics>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="2d390bdb-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_RULE"/>
+                  <attribute typeRef="ST" value="ST_OPR_XOR_1"/>
+               </xor>
+               <arc id="684">
+                  <flow source="208" target="201"/>
+                  <graphics>
+                     <position x="300" y="2299"/>
+                     <position x="300" y="2404"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6cb-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_ACTIV_1"/>
+               </arc>
+               <function id="209" defRef="194">
+                  <name>8</name>
+                  <description>8</description>
+                  <graphics>
+                     <position x="595" y="1904" width="311" height="193"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="GUID" value="2d390be5-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_FUNC"/>
+                  <attribute typeRef="ST" value="ST_FUNC"/>
+               </function>
+               <arc id="685">
+                  <flow source="209" target="208"/>
+                  <graphics>
+                     <position x="750" y="2097"/>
+                     <position x="750" y="2250"/>
+                     <position x="350" y="2250"/>
+                  </graphics>
+                  <attribute typeRef="GUID" value="2d3dc6d5-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="CT_LEADS_TO_1"/>
+               </arc>
+               <event id="210" defRef="217">
+                  <name>Ende</name>
+                  <description>Ende</description>
+                  <graphics>
+                     <position x="144" y="2703" width="312" height="195"/>
+                  </graphics>
+                  <attribute typeRef="AT_CREAT_TIME_STMP" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_LAST_CHNG_2" value="08:08:15.000;09/07/2012"/>
+                  <attribute typeRef="AT_CREATOR" value="system"/>
+                  <attribute typeRef="AT_LUSER" value="system"/>
+                  <attribute typeRef="GUID" value="2d390bd1-f8c3-11e1-691c-d48564bed6ec"/>
+                  <attribute typeRef="OT" value="OT_EVT"/>
+                  <attribute typeRef="ST" value="ST_EV"/>
+               </event>
+            </epc>
+         </directory>
+   </directory>
+</epml:epml>
