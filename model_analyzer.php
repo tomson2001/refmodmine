@@ -16,6 +16,7 @@ $ignore_models = array(
 		"1Pr_d1ur", "1Pr_dkfa", "1Pr_smx", "1Qu_btq3", "1Qu_bxuo", "1Qu_bywg", "1Qu_c5we", "1Qu_c8yd", "1Qu_cb8m", "1Qu_ce0j", "1Qu_cjnw",
 		"1Tr_g68b", "1Tr_gjiw", "1Un_j73d", "1Un_jh6h", "1Un_jqw9", "1Un_k30q", "1Ve_7c1w", "1Ve_7uuo", "1Ve_musj", "1Ve_mxed", "1Pr_afh-");
 
+$ignore_models = array();
 
 /**
  * Einstellungen

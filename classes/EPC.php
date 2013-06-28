@@ -681,7 +681,7 @@ class EPC {
 		return count($startNodes) == 1 && count($endNodes) == 1;
 	}
 	
-	public function exportEPML() {
+	public function exportEPML($print_ids = false) {
 		$content =  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 		$content .= "<epml:epml xmlns:epml=\"http://www.epml.de\"\n";
 		$content .= "  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"epml_1_draft.xsd\">\n";
@@ -691,14 +691,18 @@ class EPC {
 		
 		foreach ( $this->functions as $id => $label ) {
 			$content .= "    <function id=\"".$id."\">\n";
-			$content .= "      <name>".$this->convertIllegalChars($label)." (".$id.")</name>\n";
+			$content .= "      <name>".$this->convertIllegalChars($label);
+			if ( $print_ids ) $content .= " (".$id.")";
+			$content .= "</name>\n";
 			$content .= "    </function>\n";
 			if ( $id > $maxID ) $maxID = $id+1;
 		}
 		
 		foreach ( $this->events as $id => $label ) {
 			$content .= "    <event id=\"".$id."\">\n";
-			$content .= "      <name>".$this->convertIllegalChars($label)." (".$id.")</name>\n";
+			$content .= "      <name>".$this->convertIllegalChars($label);
+			if ( $print_ids ) $content .= " (".$id.")";
+			$content .= "</name>\n";
 			$content .= "    </event>\n";
 			if ( $id > $maxID ) $maxID = $id+1;
 		}

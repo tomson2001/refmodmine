@@ -7,6 +7,9 @@
  */
 final class Config {
 	
+	const WORDNET_EXE = "\"c:\\Program Files (x86)\\WordNet\\2.1\\bin\\wn.exe\"";
+	const WORDNET_SYNONYM_LIMIT = 7; // Anzahl der zu beruecksichtigen Bedeutungen. Ersten Tests zufolge mindestens 7, MUSS < 10 sein!!!!
+	
 	// MOBIS SS11
 	//const MODEL_FILE_1 = "P:/Projekte/RefModMiner/Data_old/data_kontrollierte_modellierung/Klausuren_MobIS_SS11/loesungen.epml";
 	//const MODEL_FILE_2 = "P:/Projekte/RefModMiner/Data_old/data_kontrollierte_modellierung/Klausuren_MobIS_SS11/loesungen.epml";
@@ -31,8 +34,25 @@ final class Config {
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/becker_survey.epml";
 	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/becker_survey.epml";
 	
+	// Modelle des Process Matching Contest
+	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p31.epml";
+	const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Cologne.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission.epml";
+	
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Frankfurt.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission FU Berlin.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Hohenheim.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission IIS Erlangen.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Muenster.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Potsdam.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission TU Munich.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Wuerzburg.epml";
+	
 	// SAP Referenzmodell
-	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
 	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
 	
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part1.epml";
@@ -61,7 +81,20 @@ final class Config {
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Dropbox/_arbeitsverzeichnis_nils/data/RMK_erfassung/Y-CIM/Y-CIM_complete/Y-CIM_complete.epml";
 	//const MODEL_ANALYSIS_FILE = "C:/Users/t.thaler/Dropbox/_arbeitsverzeichnis_nils/data/RMK_erfassung/SAP R3/SAP R3 prozessorientiert anwenden/SAP_R3_prozesorientiert_anwenden_complete/SAP_R3_prozesorientiert_anwenden_complete .epml";
 	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
-	const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/eGov.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/eGov.epml";
+	
+	// All Models
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/ECO-Integral_export.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/E-Payment_20.06.12.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Handels-H-Model_noSEQ__export.epml";
+	const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/SAP_R3_all.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/SAP_R3_prozeßorientiert_anwenden_export.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Winfo_II_SS11.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/WInfo_II_WS1011.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Winfo_II_WS1112.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Y-CIM_3.0.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Y-CIM_eng_export.epml";
+	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Y-CIM_export.epml";
 	
 	// in Sekunden, 0=keine Beschraenkung
 	const MAX_TIME_PER_TRACE_EXTRAKTION = 1;
@@ -102,7 +135,42 @@ final class Config {
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1An_kmmdl.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1An_kmy0.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/sap_1An_l8wo.epml";
-	const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/eGov.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/eGov.epml";
+	
+	// All Models
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/ECO-Integral_export.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/E-Payment_20.06.12.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Handels-H-Model_noSEQ__export.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/SAP_R3_all.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/SAP_R3_prozeßorientiert_anwenden_export.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Winfo_II_SS11.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/WInfo_II_WS1011.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Winfo_II_WS1112.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Y-CIM_3.0.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Y-CIM_eng_export.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/Y-CIM_export.epml";
+	
+	// Process Matching Contest
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Cologne.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Frankfurt.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission FU Berlin.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Hohenheim.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission IIS Erlangen.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Muenster.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Potsdam.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission TU Munich.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Wuerzburg.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p31.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p32.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p33.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p34.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p246.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p247.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p248.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p249.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p250.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate.epml";
+	const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission.epml";
 	
 	// Einstellen einer Fixpunktarithmetik: false => Ausgeschaltet, [0-x] => Fixpunkt
 	const FIX_POINT_ARITHMETIC = false;
@@ -120,9 +188,9 @@ final class Config {
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_1.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_2.csv";
-	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_3.csv";
+	const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_3.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_4.csv";
-	const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_5.csv";
+	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_5.csv";
 	
 	// Input-Datei für die Berechnung der Stichprobenvarianz
 	const VARIANCE_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM.csv";

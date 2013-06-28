@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <epc EpcId="1" name="Admission Cologne">
+    <function id="1">
+      <name>Check Documents</name>
+    </function>
+    <function id="2">
+      <name>Send letter of rejection</name>
+    </function>
+    <function id="3">
+      <name>Keep in the Applicant pool</name>
+    </function>
+    <function id="4">
+      <name>Take Aptitude test</name>
+    </function>
+    <function id="5">
+      <name>Apply Online</name>
+    </function>
+    <function id="6">
+      <name>Acceptance</name>
+    </function>
+    <function id="7">
+      <name>Documents received</name>
+    </function>
+    <function id="8">
+      <name>t8</name>
+    </function>
+    <function id="9">
+      <name>Rank Students according to GPA and the test results</name>
+    </function>
+    <function id="10">
+      <name>Invite to an aptitude test</name>
+    </function>
+    <function id="11">
+      <name>Send Documents by Post</name>
+    </function>
+    <function id="12">
+      <name>Pay for Aptitude test</name>
+    </function>
+    <function id="13">
+      <name>Evaluate</name>
+    </function>
+    <function id="14">
+      <name>Send Online Protocol</name>
+    </function>
+    <event id="15">
+      <name>End Event</name>
+    </event>
+    <xor id="30">
+      <name/>
+    </xor>
+    <xor id="32">
+      <name/>
+    </xor>
+    <xor id="33">
+      <name/>
+    </xor>
+    <xor id="35">
+      <name/>
+    </xor>
+    <and id="31">
+      <name/>
+    </and>
+    <and id="34">
+      <name/>
+    </and>
+    <arc id="36">
+      <flow source="1" target="13" />
+    </arc>
+    <arc id="37">
+      <flow source="2" target="30" />
+    </arc>
+    <arc id="38">
+      <flow source="3" target="32" />
+    </arc>
+    <arc id="39">
+      <flow source="4" target="31" />
+    </arc>
+    <arc id="40">
+      <flow source="5" target="14" />
+    </arc>
+    <arc id="41">
+      <flow source="6" target="30" />
+    </arc>
+    <arc id="42">
+      <flow source="7" target="1" />
+    </arc>
+    <arc id="43">
+      <flow source="8" target="32" />
+    </arc>
+    <arc id="44">
+      <flow source="9" target="33" />
+    </arc>
+    <arc id="45">
+      <flow source="10" target="34" />
+    </arc>
+    <arc id="46">
+      <flow source="11" target="7" />
+    </arc>
+    <arc id="47">
+      <flow source="12" target="31" />
+    </arc>
+    <arc id="48">
+      <flow source="13" target="35" />
+    </arc>
+    <arc id="49">
+      <flow source="14" target="11" />
+    </arc>
+    <arc id="50">
+      <flow source="33" target="2" />
+    </arc>
+    <arc id="51">
+      <flow source="35" target="3" />
+    </arc>
+    <arc id="52">
+      <flow source="34" target="4" />
+    </arc>
+    <arc id="53">
+      <flow source="33" target="6" />
+    </arc>
+    <arc id="54">
+      <flow source="31" target="8" />
+    </arc>
+    <arc id="55">
+      <flow source="32" target="9" />
+    </arc>
+    <arc id="56">
+      <flow source="35" target="10" />
+    </arc>
+    <arc id="57">
+      <flow source="34" target="12" />
+    </arc>
+    <arc id="58">
+      <flow source="30" target="15" />
+    </arc>
+  </epc>
+</epml:epml>

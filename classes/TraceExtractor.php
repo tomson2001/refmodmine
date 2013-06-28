@@ -1318,6 +1318,7 @@ class TraceExtractor {
 	}
 
 	private function continueReachOrWithoutRunningThrough($searchOr, $currentOr, $notRunningNodeId, $walkedThrough = array()) {
+		if (!isset($this->orSubTraces[$currentOr]) ) return false;
 		foreach ( $this->orSubTraces[$currentOr] as $index => $subtrace ) {
 			$endNodeID = end($subtrace);
 			if ( $endNodeID == $searchOr ) return true;
