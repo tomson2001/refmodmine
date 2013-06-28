@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <epc EpcId="1" name="Admission Frankfurt">
+    <function id="1">
+      <name>Average Grade is Good or better</name>
+    </function>
+    <function id="2">
+      <name>Evaluate</name>
+    </function>
+    <function id="3">
+      <name>Certificate received</name>
+    </function>
+    <function id="4">
+      <name>Send Documents by Post</name>
+    </function>
+    <function id="5">
+      <name>Accepted provisionally</name>
+    </function>
+    <function id="6">
+      <name>Send Bachelor's Certificate</name>
+    </function>
+    <function id="7">
+      <name>Apply Online</name>
+    </function>
+    <function id="8">
+      <name>Documents received</name>
+    </function>
+    <function id="9">
+      <name>Take Oral Exam</name>
+    </function>
+    <function id="10">
+      <name>Check Documents</name>
+    </function>
+    <function id="11">
+      <name>Sufficient CP in Mathematics</name>
+    </function>
+    <function id="12">
+      <name>Average Grade is less than good</name>
+    </function>
+    <function id="13">
+      <name>Less than 16 CP in Mathematics</name>
+    </function>
+    <function id="14">
+      <name>Certificate received</name>
+    </function>
+    <function id="15">
+      <name>Rejected</name>
+    </function>
+    <function id="16">
+      <name>Send Letter of Rejection</name>
+    </function>
+    <function id="17">
+      <name>Provisional Acceptance cancelled</name>
+    </function>
+    <function id="18">
+      <name>Provisional Acceptance confirmed</name>
+    </function>
+    <function id="19">
+      <name>Wait for Bachelor's Certificate</name>
+    </function>
+    <function id="20">
+      <name>Accepted</name>
+    </function>
+    <function id="21">
+      <name>Send Letter of Acceptance</name>
+    </function>
+    <function id="22">
+      <name>Check Certificate</name>
+    </function>
+    <function id="23">
+      <name>Send Letter of Provisional Acceptance</name>
+    </function>
+    <event id="24">
+      <name>End Event</name>
+    </event>
+    <xor id="48">
+      <name/>
+    </xor>
+    <xor id="49">
+      <name/>
+    </xor>
+    <xor id="50">
+      <name/>
+    </xor>
+    <xor id="51">
+      <name/>
+    </xor>
+    <xor id="52">
+      <name/>
+    </xor>
+    <arc id="53">
+      <flow source="1" target="18" />
+    </arc>
+    <arc id="54">
+      <flow source="2" target="50" />
+    </arc>
+    <arc id="55">
+      <flow source="3" target="22" />
+    </arc>
+    <arc id="56">
+      <flow source="4" target="8" />
+    </arc>
+    <arc id="57">
+      <flow source="5" target="19" />
+    </arc>
+    <arc id="58">
+      <flow source="6" target="3" />
+    </arc>
+    <arc id="59">
+      <flow source="7" target="4" />
+    </arc>
+    <arc id="60">
+      <flow source="8" target="10" />
+    </arc>
+    <arc id="61">
+      <flow source="9" target="49" />
+    </arc>
+    <arc id="62">
+      <flow source="10" target="51" />
+    </arc>
+    <arc id="63">
+      <flow source="11" target="49" />
+    </arc>
+    <arc id="64">
+      <flow source="12" target="17" />
+    </arc>
+    <arc id="65">
+      <flow source="13" target="9" />
+    </arc>
+    <arc id="66">
+      <flow source="14" target="6" />
+    </arc>
+    <arc id="67">
+      <flow source="15" target="48" />
+    </arc>
+    <arc id="68">
+      <flow source="16" target="15" />
+    </arc>
+    <arc id="69">
+      <flow source="17" target="48" />
+    </arc>
+    <arc id="70">
+      <flow source="18" target="48" />
+    </arc>
+    <arc id="71">
+      <flow source="19" target="14" />
+    </arc>
+    <arc id="72">
+      <flow source="20" target="48" />
+    </arc>
+    <arc id="73">
+      <flow source="21" target="5" />
+    </arc>
+    <arc id="74">
+      <flow source="22" target="52" />
+    </arc>
+    <arc id="75">
+      <flow source="23" target="20" />
+    </arc>
+    <arc id="76">
+      <flow source="52" target="1" />
+    </arc>
+    <arc id="77">
+      <flow source="49" target="2" />
+    </arc>
+    <arc id="78">
+      <flow source="51" target="11" />
+    </arc>
+    <arc id="79">
+      <flow source="52" target="12" />
+    </arc>
+    <arc id="80">
+      <flow source="51" target="13" />
+    </arc>
+    <arc id="81">
+      <flow source="50" target="16" />
+    </arc>
+    <arc id="82">
+      <flow source="50" target="21" />
+    </arc>
+    <arc id="83">
+      <flow source="50" target="23" />
+    </arc>
+    <arc id="84">
+      <flow source="48" target="24" />
+    </arc>
+  </epc>
+</epml:epml>

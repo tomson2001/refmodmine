@@ -1,0 +1,2475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <epc EpcId="1" name="example01_simpleAND (2 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="150" y="50"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="90" y="175"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="215" y="175"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="155" y="290"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <and id="5">
+      <graphics>
+        <position height="31" width="31" x="175" y="125"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="6">
+      <graphics>
+        <position height="31" width="31" x="180" y="230"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="7">
+      <graphics>
+        <position x="190" y="91"/>
+        <position x="190" y="125"/>
+      </graphics>
+      <flow source="1" target="5"/>
+    </arc>
+    <arc id="8">
+      <graphics>
+        <position x="175" y="156"/>
+        <position x="130" y="175"/>
+      </graphics>
+      <flow source="5" target="2"/>
+    </arc>
+    <arc id="9">
+      <graphics>
+        <position x="206" y="156"/>
+        <position x="255" y="175"/>
+      </graphics>
+      <flow source="5" target="3"/>
+    </arc>
+    <arc id="10">
+      <graphics>
+        <position x="255" y="216"/>
+        <position x="211" y="230"/>
+      </graphics>
+      <flow source="3" target="6"/>
+    </arc>
+    <arc id="11">
+      <graphics>
+        <position x="130" y="216"/>
+        <position x="180" y="230"/>
+      </graphics>
+      <flow source="2" target="6"/>
+    </arc>
+    <arc id="12">
+      <graphics>
+        <position x="195" y="261"/>
+        <position x="195" y="290"/>
+      </graphics>
+      <flow source="6" target="4"/>
+    </arc>
+  </epc>
+  <epc EpcId="2" name="example02_simpleAND_with_events (2 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="150" y="105"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="85" y="295"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="210" y="295"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="150" y="500"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <and id="5">
+      <graphics>
+        <position height="31" width="31" x="175" y="180"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="6">
+      <graphics>
+        <position height="31" width="31" x="175" y="440"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="7">
+      <graphics>
+        <position x="190" y="146"/>
+        <position x="190" y="180"/>
+      </graphics>
+      <flow source="1" target="5"/>
+    </arc>
+    <arc id="12">
+      <graphics>
+        <position x="190" y="471"/>
+        <position x="190" y="500"/>
+      </graphics>
+      <flow source="6" target="4"/>
+    </arc>
+    <event id="13">
+      <graphics>
+        <position height="41" width="81" x="175" y="45"/>
+      </graphics>
+      <name>start</name>
+    </event>
+    <event id="14">
+      <graphics>
+        <position height="41" width="81" x="180" y="590"/>
+      </graphics>
+      <name>end</name>
+    </event>
+    <arc id="15">
+      <graphics>
+        <position x="215" y="86"/>
+        <position x="190" y="105"/>
+      </graphics>
+      <flow source="13" target="1"/>
+    </arc>
+    <arc id="16">
+      <graphics>
+        <position x="190" y="541"/>
+        <position x="220" y="590"/>
+      </graphics>
+      <flow source="4" target="14"/>
+    </arc>
+    <event id="17">
+      <graphics>
+        <position height="41" width="81" x="85" y="235"/>
+      </graphics>
+      <name>do 2</name>
+    </event>
+    <event id="18">
+      <graphics>
+        <position height="41" width="81" x="210" y="235"/>
+      </graphics>
+      <name>do 3</name>
+    </event>
+    <event id="19">
+      <graphics>
+        <position height="41" width="81" x="85" y="355"/>
+      </graphics>
+      <name>2 done</name>
+    </event>
+    <event id="20">
+      <graphics>
+        <position height="41" width="81" x="205" y="350"/>
+      </graphics>
+      <name>3 done&#xd;
+</name>
+    </event>
+    <arc id="21">
+      <graphics>
+        <position x="175" y="211"/>
+        <position x="125" y="235"/>
+      </graphics>
+      <flow source="5" target="17"/>
+    </arc>
+    <arc id="22">
+      <graphics>
+        <position x="206" y="211"/>
+        <position x="250" y="235"/>
+      </graphics>
+      <flow source="5" target="18"/>
+    </arc>
+    <arc id="23">
+      <graphics>
+        <position x="250" y="276"/>
+        <position x="250" y="295"/>
+      </graphics>
+      <flow source="18" target="3"/>
+    </arc>
+    <arc id="24">
+      <graphics>
+        <position x="250" y="336"/>
+        <position x="245" y="350"/>
+      </graphics>
+      <flow source="3" target="20"/>
+    </arc>
+    <arc id="25">
+      <graphics>
+        <position x="245" y="391"/>
+        <position x="206" y="440"/>
+      </graphics>
+      <flow source="20" target="6"/>
+    </arc>
+    <arc id="26">
+      <graphics>
+        <position x="125" y="396"/>
+        <position x="175" y="440"/>
+      </graphics>
+      <flow source="19" target="6"/>
+    </arc>
+    <arc id="27">
+      <graphics>
+        <position x="125" y="336"/>
+        <position x="125" y="355"/>
+      </graphics>
+      <flow source="2" target="19"/>
+    </arc>
+    <arc id="28">
+      <graphics>
+        <position x="125" y="276"/>
+        <position x="125" y="295"/>
+      </graphics>
+      <flow source="17" target="2"/>
+    </arc>
+  </epc>
+  <epc EpcId="3" name="example03_nestedAND (8 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="150" y="50"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="90" y="175"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="215" y="175"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="150" y="505"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <and id="5">
+      <graphics>
+        <position height="31" width="31" x="175" y="125"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="6">
+      <graphics>
+        <position height="31" width="31" x="175" y="445"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="7">
+      <graphics>
+        <position x="190" y="91"/>
+        <position x="190" y="125"/>
+      </graphics>
+      <flow source="1" target="5"/>
+    </arc>
+    <arc id="8">
+      <graphics>
+        <position x="175" y="156"/>
+        <position x="130" y="175"/>
+      </graphics>
+      <flow source="5" target="2"/>
+    </arc>
+    <arc id="9">
+      <graphics>
+        <position x="206" y="156"/>
+        <position x="255" y="175"/>
+      </graphics>
+      <flow source="5" target="3"/>
+    </arc>
+    <arc id="12">
+      <graphics>
+        <position x="190" y="476"/>
+        <position x="190" y="505"/>
+      </graphics>
+      <flow source="6" target="4"/>
+    </arc>
+    <function id="13">
+      <graphics>
+        <position height="41" width="81" x="275" y="300"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="16">
+      <graphics>
+        <position height="41" width="81" x="175" y="300"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <and id="19">
+      <graphics>
+        <position height="31" width="31" x="255" y="245"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="20">
+      <graphics>
+        <position height="31" width="31" x="260" y="390"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="21">
+      <graphics>
+        <position x="130" y="216"/>
+        <position x="175" y="445"/>
+      </graphics>
+      <flow source="2" target="6"/>
+    </arc>
+    <arc id="22">
+      <graphics>
+        <position x="255" y="216"/>
+        <position x="255" y="245"/>
+      </graphics>
+      <flow source="3" target="19"/>
+    </arc>
+    <arc id="23">
+      <graphics>
+        <position x="255" y="276"/>
+        <position x="215" y="300"/>
+      </graphics>
+      <flow source="19" target="16"/>
+    </arc>
+    <arc id="24">
+      <graphics>
+        <position x="286" y="276"/>
+        <position x="315" y="300"/>
+      </graphics>
+      <flow source="19" target="13"/>
+    </arc>
+    <arc id="25">
+      <graphics>
+        <position x="215" y="341"/>
+        <position x="260" y="390"/>
+      </graphics>
+      <flow source="16" target="20"/>
+    </arc>
+    <arc id="26">
+      <graphics>
+        <position x="315" y="341"/>
+        <position x="291" y="390"/>
+      </graphics>
+      <flow source="13" target="20"/>
+    </arc>
+    <arc id="27">
+      <graphics>
+        <position x="260" y="421"/>
+        <position x="206" y="445"/>
+      </graphics>
+      <flow source="20" target="6"/>
+    </arc>
+  </epc>
+  <epc EpcId="4" name="example04_nestedAND_XOR (40 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="150" y="50"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="215" y="175"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="150" y="505"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <and id="5">
+      <graphics>
+        <position height="31" width="31" x="175" y="125"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="6">
+      <graphics>
+        <position height="31" width="31" x="175" y="445"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="7">
+      <graphics>
+        <position x="190" y="91"/>
+        <position x="190" y="125"/>
+      </graphics>
+      <flow source="1" target="5"/>
+    </arc>
+    <arc id="9">
+      <graphics>
+        <position x="206" y="156"/>
+        <position x="255" y="175"/>
+      </graphics>
+      <flow source="5" target="3"/>
+    </arc>
+    <arc id="12">
+      <graphics>
+        <position x="190" y="476"/>
+        <position x="190" y="505"/>
+      </graphics>
+      <flow source="6" target="4"/>
+    </arc>
+    <function id="13">
+      <graphics>
+        <position height="41" width="81" x="275" y="300"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="16">
+      <graphics>
+        <position height="41" width="81" x="175" y="300"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <and id="19">
+      <graphics>
+        <position height="31" width="31" x="255" y="245"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="20">
+      <graphics>
+        <position height="31" width="31" x="260" y="390"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="22">
+      <graphics>
+        <position x="255" y="216"/>
+        <position x="255" y="245"/>
+      </graphics>
+      <flow source="3" target="19"/>
+    </arc>
+    <arc id="23">
+      <graphics>
+        <position x="255" y="276"/>
+        <position x="215" y="300"/>
+      </graphics>
+      <flow source="19" target="16"/>
+    </arc>
+    <arc id="24">
+      <graphics>
+        <position x="286" y="276"/>
+        <position x="315" y="300"/>
+      </graphics>
+      <flow source="19" target="13"/>
+    </arc>
+    <arc id="25">
+      <graphics>
+        <position x="215" y="341"/>
+        <position x="260" y="390"/>
+      </graphics>
+      <flow source="16" target="20"/>
+    </arc>
+    <arc id="26">
+      <graphics>
+        <position x="315" y="341"/>
+        <position x="291" y="390"/>
+      </graphics>
+      <flow source="13" target="20"/>
+    </arc>
+    <arc id="27">
+      <graphics>
+        <position x="260" y="421"/>
+        <position x="206" y="445"/>
+      </graphics>
+      <flow source="20" target="6"/>
+    </arc>
+    <xor id="32">
+      <graphics>
+        <position height="31" width="31" x="95" y="170"/>
+      </graphics>
+      <name/>
+    </xor>
+    <function id="33">
+      <graphics>
+        <position height="41" width="81" x="15" y="230"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="34">
+      <graphics>
+        <position height="41" width="81" x="115" y="230"/>
+      </graphics>
+      <name>7</name>
+    </function>
+    <xor id="35">
+      <graphics>
+        <position height="31" width="31" x="90" y="290"/>
+      </graphics>
+      <name/>
+    </xor>
+    <function id="36">
+      <graphics>
+        <position height="41" width="81" x="70" y="355"/>
+      </graphics>
+      <name>8</name>
+    </function>
+    <arc id="37">
+      <graphics>
+        <position x="175" y="156"/>
+        <position x="126" y="170"/>
+      </graphics>
+      <flow source="5" target="32"/>
+    </arc>
+    <arc id="38">
+      <graphics>
+        <position x="95" y="201"/>
+        <position x="55" y="230"/>
+      </graphics>
+      <flow source="32" target="33"/>
+    </arc>
+    <arc id="39">
+      <graphics>
+        <position x="126" y="201"/>
+        <position x="155" y="230"/>
+      </graphics>
+      <flow source="32" target="34"/>
+    </arc>
+    <arc id="40">
+      <graphics>
+        <position x="55" y="271"/>
+        <position x="90" y="290"/>
+      </graphics>
+      <flow source="33" target="35"/>
+    </arc>
+    <arc id="41">
+      <graphics>
+        <position x="155" y="271"/>
+        <position x="121" y="290"/>
+      </graphics>
+      <flow source="34" target="35"/>
+    </arc>
+    <arc id="42">
+      <graphics>
+        <position x="121" y="321"/>
+        <position x="110" y="355"/>
+      </graphics>
+      <flow source="35" target="36"/>
+    </arc>
+    <arc id="43">
+      <graphics>
+        <position x="110" y="396"/>
+        <position x="175" y="445"/>
+      </graphics>
+      <flow source="36" target="6"/>
+    </arc>
+  </epc>
+  <epc EpcId="5" name="example05_loop (12 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="160" y="40"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="13">
+      <graphics>
+        <position height="41" width="81" x="55" y="160"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="14">
+      <graphics>
+        <position height="41" width="81" x="160" y="160"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="15">
+      <graphics>
+        <position height="41" width="81" x="260" y="160"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="16">
+      <graphics>
+        <position height="41" width="81" x="95" y="280"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <function id="17">
+      <graphics>
+        <position height="41" width="81" x="95" y="350"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <function id="18">
+      <graphics>
+        <position height="41" width="81" x="85" y="475"/>
+      </graphics>
+      <name>7</name>
+    </function>
+    <function id="19">
+      <graphics>
+        <position height="41" width="81" x="225" y="475"/>
+      </graphics>
+      <name>8</name>
+    </function>
+    <function id="20">
+      <graphics>
+        <position height="41" width="81" x="160" y="600"/>
+      </graphics>
+      <name>9</name>
+    </function>
+    <xor id="21">
+      <graphics>
+        <position height="31" width="31" x="185" y="110"/>
+      </graphics>
+      <name/>
+    </xor>
+    <xor id="22">
+      <graphics>
+        <position height="31" width="31" x="185" y="220"/>
+      </graphics>
+      <name/>
+    </xor>
+    <xor id="23">
+      <graphics>
+        <position height="31" width="31" x="185" y="415"/>
+      </graphics>
+      <name/>
+    </xor>
+    <xor id="24">
+      <graphics>
+        <position height="31" width="31" x="185" y="545"/>
+      </graphics>
+      <name/>
+    </xor>
+    <arc id="25">
+      <graphics>
+        <position x="200" y="81"/>
+        <position x="200" y="110"/>
+      </graphics>
+      <flow source="1" target="21"/>
+    </arc>
+    <arc id="26">
+      <graphics>
+        <position x="185" y="141"/>
+        <position x="95" y="160"/>
+      </graphics>
+      <flow source="21" target="13"/>
+    </arc>
+    <arc id="27">
+      <graphics>
+        <position x="200" y="141"/>
+        <position x="200" y="160"/>
+      </graphics>
+      <flow source="21" target="14"/>
+    </arc>
+    <arc id="28">
+      <graphics>
+        <position x="216" y="141"/>
+        <position x="300" y="160"/>
+      </graphics>
+      <flow source="21" target="15"/>
+    </arc>
+    <arc id="29">
+      <graphics>
+        <position x="200" y="201"/>
+        <position x="200" y="220"/>
+      </graphics>
+      <flow source="14" target="22"/>
+    </arc>
+    <arc id="30">
+      <graphics>
+        <position x="95" y="201"/>
+        <position x="185" y="220"/>
+      </graphics>
+      <flow source="13" target="22"/>
+    </arc>
+    <arc id="31">
+      <graphics>
+        <position x="300" y="201"/>
+        <position x="216" y="220"/>
+      </graphics>
+      <flow source="15" target="22"/>
+    </arc>
+    <arc id="32">
+      <graphics>
+        <position x="185" y="251"/>
+        <position x="135" y="280"/>
+      </graphics>
+      <flow source="22" target="16"/>
+    </arc>
+    <arc id="33">
+      <graphics>
+        <position x="135" y="321"/>
+        <position x="135" y="350"/>
+      </graphics>
+      <flow source="16" target="17"/>
+    </arc>
+    <arc id="34">
+      <graphics>
+        <position x="135" y="391"/>
+        <position x="185" y="415"/>
+      </graphics>
+      <flow source="17" target="23"/>
+    </arc>
+    <arc id="35">
+      <graphics>
+        <position x="185" y="446"/>
+        <position x="125" y="475"/>
+      </graphics>
+      <flow source="23" target="18"/>
+    </arc>
+    <arc id="36">
+      <graphics>
+        <position x="216" y="446"/>
+        <position x="265" y="475"/>
+      </graphics>
+      <flow source="23" target="19"/>
+    </arc>
+    <arc id="37">
+      <graphics>
+        <position x="265" y="516"/>
+        <position x="216" y="545"/>
+      </graphics>
+      <flow source="19" target="24"/>
+    </arc>
+    <arc id="38">
+      <graphics>
+        <position x="125" y="516"/>
+        <position x="185" y="545"/>
+      </graphics>
+      <flow source="18" target="24"/>
+    </arc>
+    <arc id="39">
+      <graphics>
+        <position x="200" y="415"/>
+        <position x="200" y="251"/>
+      </graphics>
+      <flow source="23" target="22"/>
+    </arc>
+    <arc id="40">
+      <graphics>
+        <position x="200" y="576"/>
+        <position x="200" y="600"/>
+      </graphics>
+      <flow source="24" target="20"/>
+    </arc>
+  </epc>
+  <epc EpcId="6" name="example06_loop_with_and (0 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="160" y="40"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="13">
+      <graphics>
+        <position height="41" width="81" x="55" y="160"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="14">
+      <graphics>
+        <position height="41" width="81" x="160" y="160"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="15">
+      <graphics>
+        <position height="41" width="81" x="260" y="160"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="16">
+      <graphics>
+        <position height="41" width="81" x="95" y="280"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <function id="17">
+      <graphics>
+        <position height="41" width="81" x="95" y="350"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <function id="18">
+      <graphics>
+        <position height="41" width="81" x="85" y="475"/>
+      </graphics>
+      <name>7</name>
+    </function>
+    <function id="19">
+      <graphics>
+        <position height="41" width="81" x="225" y="475"/>
+      </graphics>
+      <name>8</name>
+    </function>
+    <function id="20">
+      <graphics>
+        <position height="41" width="81" x="160" y="600"/>
+      </graphics>
+      <name>9</name>
+    </function>
+    <xor id="21">
+      <graphics>
+        <position height="31" width="31" x="185" y="110"/>
+      </graphics>
+      <name/>
+    </xor>
+    <xor id="22">
+      <graphics>
+        <position height="31" width="31" x="185" y="220"/>
+      </graphics>
+      <name/>
+    </xor>
+    <arc id="25">
+      <graphics>
+        <position x="200" y="81"/>
+        <position x="200" y="110"/>
+      </graphics>
+      <flow source="1" target="21"/>
+    </arc>
+    <arc id="26">
+      <graphics>
+        <position x="185" y="141"/>
+        <position x="95" y="160"/>
+      </graphics>
+      <flow source="21" target="13"/>
+    </arc>
+    <arc id="27">
+      <graphics>
+        <position x="200" y="141"/>
+        <position x="200" y="160"/>
+      </graphics>
+      <flow source="21" target="14"/>
+    </arc>
+    <arc id="28">
+      <graphics>
+        <position x="216" y="141"/>
+        <position x="300" y="160"/>
+      </graphics>
+      <flow source="21" target="15"/>
+    </arc>
+    <arc id="29">
+      <graphics>
+        <position x="200" y="201"/>
+        <position x="200" y="220"/>
+      </graphics>
+      <flow source="14" target="22"/>
+    </arc>
+    <arc id="30">
+      <graphics>
+        <position x="95" y="201"/>
+        <position x="185" y="220"/>
+      </graphics>
+      <flow source="13" target="22"/>
+    </arc>
+    <arc id="31">
+      <graphics>
+        <position x="300" y="201"/>
+        <position x="216" y="220"/>
+      </graphics>
+      <flow source="15" target="22"/>
+    </arc>
+    <arc id="32">
+      <graphics>
+        <position x="185" y="251"/>
+        <position x="135" y="280"/>
+      </graphics>
+      <flow source="22" target="16"/>
+    </arc>
+    <arc id="33">
+      <graphics>
+        <position x="135" y="321"/>
+        <position x="135" y="350"/>
+      </graphics>
+      <flow source="16" target="17"/>
+    </arc>
+    <and id="41">
+      <graphics>
+        <position height="31" width="31" x="190" y="430"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="42">
+      <graphics>
+        <position height="31" width="31" x="200" y="545"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="43">
+      <graphics>
+        <position x="135" y="391"/>
+        <position x="190" y="430"/>
+      </graphics>
+      <flow source="17" target="41"/>
+    </arc>
+    <arc id="44">
+      <graphics>
+        <position x="190" y="430"/>
+        <position x="216" y="251"/>
+      </graphics>
+      <flow source="41" target="22"/>
+    </arc>
+    <arc id="45">
+      <graphics>
+        <position x="190" y="461"/>
+        <position x="125" y="475"/>
+      </graphics>
+      <flow source="41" target="18"/>
+    </arc>
+    <arc id="46">
+      <graphics>
+        <position x="221" y="461"/>
+        <position x="265" y="475"/>
+      </graphics>
+      <flow source="41" target="19"/>
+    </arc>
+    <arc id="47">
+      <graphics>
+        <position x="125" y="516"/>
+        <position x="200" y="545"/>
+      </graphics>
+      <flow source="18" target="42"/>
+    </arc>
+    <arc id="48">
+      <graphics>
+        <position x="265" y="516"/>
+        <position x="231" y="545"/>
+      </graphics>
+      <flow source="19" target="42"/>
+    </arc>
+    <arc id="49">
+      <graphics>
+        <position x="200" y="576"/>
+        <position x="200" y="600"/>
+      </graphics>
+      <flow source="42" target="20"/>
+    </arc>
+  </epc>
+  <epc EpcId="7" name="example07_and_with_multiple_exits (8 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="150" y="50"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="90" y="175"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="215" y="175"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="155" y="290"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <and id="5">
+      <graphics>
+        <position height="31" width="31" x="175" y="125"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="6">
+      <graphics>
+        <position height="31" width="31" x="180" y="230"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="7">
+      <graphics>
+        <position x="190" y="91"/>
+        <position x="190" y="125"/>
+      </graphics>
+      <flow source="1" target="5"/>
+    </arc>
+    <arc id="8">
+      <graphics>
+        <position x="175" y="156"/>
+        <position x="130" y="175"/>
+      </graphics>
+      <flow source="5" target="2"/>
+    </arc>
+    <arc id="9">
+      <graphics>
+        <position x="206" y="156"/>
+        <position x="255" y="175"/>
+      </graphics>
+      <flow source="5" target="3"/>
+    </arc>
+    <arc id="10">
+      <graphics>
+        <position x="255" y="216"/>
+        <position x="211" y="230"/>
+      </graphics>
+      <flow source="3" target="6"/>
+    </arc>
+    <arc id="11">
+      <graphics>
+        <position x="130" y="216"/>
+        <position x="180" y="230"/>
+      </graphics>
+      <flow source="2" target="6"/>
+    </arc>
+    <arc id="12">
+      <graphics>
+        <position x="195" y="261"/>
+        <position x="195" y="290"/>
+      </graphics>
+      <flow source="6" target="4"/>
+    </arc>
+    <function id="13">
+      <graphics>
+        <position height="41" width="81" x="335" y="175"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <arc id="14">
+      <graphics>
+        <position x="206" y="156"/>
+        <position x="375" y="175"/>
+      </graphics>
+      <flow source="5" target="13"/>
+    </arc>
+  </epc>
+  <epc EpcId="8" name="example08_deadlock (0 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="160" y="40"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="13">
+      <graphics>
+        <position height="41" width="81" x="55" y="160"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="14">
+      <graphics>
+        <position height="41" width="81" x="160" y="160"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="15">
+      <graphics>
+        <position height="41" width="81" x="260" y="160"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="16">
+      <graphics>
+        <position height="41" width="81" x="95" y="280"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <function id="17">
+      <graphics>
+        <position height="41" width="81" x="95" y="350"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <function id="18">
+      <graphics>
+        <position height="41" width="81" x="85" y="475"/>
+      </graphics>
+      <name>7</name>
+    </function>
+    <function id="19">
+      <graphics>
+        <position height="41" width="81" x="225" y="475"/>
+      </graphics>
+      <name>8</name>
+    </function>
+    <function id="20">
+      <graphics>
+        <position height="41" width="81" x="160" y="600"/>
+      </graphics>
+      <name>9</name>
+    </function>
+    <arc id="33">
+      <graphics>
+        <position x="135" y="321"/>
+        <position x="135" y="350"/>
+      </graphics>
+      <flow source="16" target="17"/>
+    </arc>
+    <and id="41">
+      <graphics>
+        <position height="31" width="31" x="190" y="430"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="42">
+      <graphics>
+        <position height="31" width="31" x="200" y="545"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="43">
+      <graphics>
+        <position x="135" y="391"/>
+        <position x="190" y="430"/>
+      </graphics>
+      <flow source="17" target="41"/>
+    </arc>
+    <arc id="45">
+      <graphics>
+        <position x="190" y="461"/>
+        <position x="125" y="475"/>
+      </graphics>
+      <flow source="41" target="18"/>
+    </arc>
+    <arc id="46">
+      <graphics>
+        <position x="221" y="461"/>
+        <position x="265" y="475"/>
+      </graphics>
+      <flow source="41" target="19"/>
+    </arc>
+    <arc id="47">
+      <graphics>
+        <position x="125" y="516"/>
+        <position x="200" y="545"/>
+      </graphics>
+      <flow source="18" target="42"/>
+    </arc>
+    <arc id="48">
+      <graphics>
+        <position x="265" y="516"/>
+        <position x="231" y="545"/>
+      </graphics>
+      <flow source="19" target="42"/>
+    </arc>
+    <arc id="49">
+      <graphics>
+        <position x="200" y="576"/>
+        <position x="200" y="600"/>
+      </graphics>
+      <flow source="42" target="20"/>
+    </arc>
+    <and id="61">
+      <graphics>
+        <position height="31" width="31" x="200" y="110"/>
+      </graphics>
+      <name/>
+    </and>
+    <and id="62">
+      <graphics>
+        <position height="31" width="31" x="195" y="225"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="63">
+      <graphics>
+        <position x="200" y="81"/>
+        <position x="200" y="110"/>
+      </graphics>
+      <flow source="1" target="61"/>
+    </arc>
+    <arc id="64">
+      <graphics>
+        <position x="200" y="141"/>
+        <position x="95" y="160"/>
+      </graphics>
+      <flow source="61" target="13"/>
+    </arc>
+    <arc id="65">
+      <graphics>
+        <position x="200" y="141"/>
+        <position x="200" y="160"/>
+      </graphics>
+      <flow source="61" target="14"/>
+    </arc>
+    <arc id="66">
+      <graphics>
+        <position x="231" y="141"/>
+        <position x="300" y="160"/>
+      </graphics>
+      <flow source="61" target="15"/>
+    </arc>
+    <arc id="67">
+      <graphics>
+        <position x="95" y="201"/>
+        <position x="195" y="225"/>
+      </graphics>
+      <flow source="13" target="62"/>
+    </arc>
+    <arc id="68">
+      <graphics>
+        <position x="200" y="201"/>
+        <position x="195" y="225"/>
+      </graphics>
+      <flow source="14" target="62"/>
+    </arc>
+    <arc id="69">
+      <graphics>
+        <position x="300" y="201"/>
+        <position x="226" y="225"/>
+      </graphics>
+      <flow source="15" target="62"/>
+    </arc>
+    <arc id="70">
+      <graphics>
+        <position x="195" y="256"/>
+        <position x="135" y="280"/>
+      </graphics>
+      <flow source="62" target="16"/>
+    </arc>
+    <arc id="71">
+      <graphics>
+        <position x="221" y="430"/>
+        <position x="195" y="256"/>
+      </graphics>
+      <flow source="41" target="62"/>
+    </arc>
+  </epc>
+  <epc EpcId="9" name="example09_multiple_starts_with_AND (3 Traces)">
+    <function id="13">
+      <graphics>
+        <position height="41" width="81" x="70" y="45"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="14">
+      <graphics>
+        <position height="41" width="81" x="215" y="125"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="15">
+      <graphics>
+        <position height="41" width="81" x="70" y="125"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="16">
+      <graphics>
+        <position height="41" width="81" x="145" y="260"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <arc id="18">
+      <graphics>
+        <position x="110" y="86"/>
+        <position x="110" y="125"/>
+      </graphics>
+      <flow source="13" target="15"/>
+    </arc>
+    <and id="17">
+      <graphics>
+        <position height="31" width="31" x="170" y="190"/>
+      </graphics>
+      <name/>
+    </and>
+    <arc id="21">
+      <graphics>
+        <position x="185" y="221"/>
+        <position x="185" y="260"/>
+      </graphics>
+      <flow source="17" target="16"/>
+    </arc>
+    <arc id="19">
+      <graphics>
+        <position x="110" y="166"/>
+        <position x="170" y="190"/>
+      </graphics>
+      <flow source="15" target="17"/>
+    </arc>
+    <arc id="20">
+      <graphics>
+        <position x="255" y="166"/>
+        <position x="201" y="190"/>
+      </graphics>
+      <flow source="14" target="17"/>
+    </arc>
+  </epc>
+  <epc EpcId="10" name="example10_or_split (64 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="185" y="30"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="20" y="175"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="120" y="175"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="225" y="175"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="5">
+      <graphics>
+        <position height="41" width="81" x="325" y="175"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <or id="7">
+      <graphics>
+        <position height="31" width="31" x="210" y="100"/>
+      </graphics>
+      <name/>
+    </or>
+    <arc id="8">
+      <graphics>
+        <position x="225" y="71"/>
+        <position x="225" y="100"/>
+      </graphics>
+      <flow source="1" target="7"/>
+    </arc>
+    <arc id="9">
+      <graphics>
+        <position x="210" y="131"/>
+        <position x="60" y="175"/>
+      </graphics>
+      <flow source="7" target="2"/>
+    </arc>
+    <arc id="10">
+      <graphics>
+        <position x="210" y="131"/>
+        <position x="160" y="175"/>
+      </graphics>
+      <flow source="7" target="3"/>
+    </arc>
+    <arc id="11">
+      <graphics>
+        <position x="241" y="131"/>
+        <position x="265" y="175"/>
+      </graphics>
+      <flow source="7" target="4"/>
+    </arc>
+    <arc id="12">
+      <graphics>
+        <position x="241" y="131"/>
+        <position x="365" y="175"/>
+      </graphics>
+      <flow source="7" target="5"/>
+    </arc>
+  </epc>
+  <epc EpcId="11" name="example11_simple_or (15 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="120" y="20"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="20" y="175"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="120" y="175"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="225" y="175"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <or id="7">
+      <graphics>
+        <position height="31" width="31" x="145" y="95"/>
+      </graphics>
+      <name/>
+    </or>
+    <arc id="8">
+      <graphics>
+        <position x="160" y="61"/>
+        <position x="160" y="95"/>
+      </graphics>
+      <flow source="1" target="7"/>
+    </arc>
+    <arc id="9">
+      <graphics>
+        <position x="145" y="126"/>
+        <position x="60" y="175"/>
+      </graphics>
+      <flow source="7" target="2"/>
+    </arc>
+    <arc id="10">
+      <graphics>
+        <position x="160" y="126"/>
+        <position x="160" y="175"/>
+      </graphics>
+      <flow source="7" target="3"/>
+    </arc>
+    <arc id="11">
+      <graphics>
+        <position x="176" y="126"/>
+        <position x="265" y="175"/>
+      </graphics>
+      <flow source="7" target="4"/>
+    </arc>
+    <or id="13">
+      <graphics>
+        <position height="31" width="31" x="145" y="260"/>
+      </graphics>
+      <name/>
+    </or>
+    <function id="14">
+      <graphics>
+        <position height="41" width="81" x="120" y="325"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <arc id="15">
+      <graphics>
+        <position x="60" y="216"/>
+        <position x="145" y="260"/>
+      </graphics>
+      <flow source="2" target="13"/>
+    </arc>
+    <arc id="16">
+      <graphics>
+        <position x="160" y="216"/>
+        <position x="160" y="260"/>
+      </graphics>
+      <flow source="3" target="13"/>
+    </arc>
+    <arc id="17">
+      <graphics>
+        <position x="265" y="216"/>
+        <position x="176" y="260"/>
+      </graphics>
+      <flow source="4" target="13"/>
+    </arc>
+    <arc id="18">
+      <graphics>
+        <position x="160" y="291"/>
+        <position x="160" y="325"/>
+      </graphics>
+      <flow source="13" target="14"/>
+    </arc>
+  </epc>
+  <epc EpcId="12" name="example12_or_with_multiple_exits (19 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="150" y="50"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="90" y="175"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="215" y="175"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="155" y="290"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="13">
+      <graphics>
+        <position height="41" width="81" x="335" y="175"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <or id="23">
+      <graphics>
+        <position height="31" width="31" x="175" y="115"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="24">
+      <graphics>
+        <position height="31" width="31" x="180" y="235"/>
+      </graphics>
+      <name/>
+    </or>
+    <arc id="25">
+      <graphics>
+        <position x="190" y="91"/>
+        <position x="190" y="115"/>
+      </graphics>
+      <flow source="1" target="23"/>
+    </arc>
+    <arc id="26">
+      <graphics>
+        <position x="175" y="146"/>
+        <position x="130" y="175"/>
+      </graphics>
+      <flow source="23" target="2"/>
+    </arc>
+    <arc id="27">
+      <graphics>
+        <position x="206" y="146"/>
+        <position x="255" y="175"/>
+      </graphics>
+      <flow source="23" target="3"/>
+    </arc>
+    <arc id="28">
+      <graphics>
+        <position x="206" y="146"/>
+        <position x="375" y="175"/>
+      </graphics>
+      <flow source="23" target="13"/>
+    </arc>
+    <arc id="29">
+      <graphics>
+        <position x="255" y="216"/>
+        <position x="211" y="235"/>
+      </graphics>
+      <flow source="3" target="24"/>
+    </arc>
+    <arc id="30">
+      <graphics>
+        <position x="130" y="216"/>
+        <position x="180" y="235"/>
+      </graphics>
+      <flow source="2" target="24"/>
+    </arc>
+    <arc id="31">
+      <graphics>
+        <position x="195" y="266"/>
+        <position x="195" y="290"/>
+      </graphics>
+      <flow source="24" target="4"/>
+    </arc>
+  </epc>
+  <epc EpcId="13" name="example13_complex_or (141 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="210" y="35"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="285" y="175"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="285" y="295"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="285" y="360"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="5">
+      <graphics>
+        <position height="41" width="81" x="155" y="175"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <function id="6">
+      <graphics>
+        <position height="41" width="81" x="30" y="295"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <function id="7">
+      <graphics>
+        <position height="41" width="81" x="155" y="295"/>
+      </graphics>
+      <name>7</name>
+    </function>
+    <function id="8">
+      <graphics>
+        <position height="41" width="81" x="155" y="355"/>
+      </graphics>
+      <name>8</name>
+    </function>
+    <function id="9">
+      <graphics>
+        <position height="41" width="81" x="210" y="550"/>
+      </graphics>
+      <name>9</name>
+    </function>
+    <or id="10">
+      <graphics>
+        <position height="31" width="31" x="235" y="110"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="11">
+      <graphics>
+        <position height="31" width="31" x="120" y="240"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="12">
+      <graphics>
+        <position height="31" width="31" x="120" y="420"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="13">
+      <graphics>
+        <position height="31" width="31" x="235" y="480"/>
+      </graphics>
+      <name/>
+    </or>
+    <arc id="14">
+      <graphics>
+        <position x="250" y="76"/>
+        <position x="250" y="110"/>
+      </graphics>
+      <flow source="1" target="10"/>
+    </arc>
+    <arc id="15">
+      <graphics>
+        <position x="235" y="141"/>
+        <position x="195" y="175"/>
+      </graphics>
+      <flow source="10" target="5"/>
+    </arc>
+    <arc id="16">
+      <graphics>
+        <position x="195" y="216"/>
+        <position x="151" y="240"/>
+      </graphics>
+      <flow source="5" target="11"/>
+    </arc>
+    <arc id="17">
+      <graphics>
+        <position x="120" y="271"/>
+        <position x="70" y="295"/>
+      </graphics>
+      <flow source="11" target="6"/>
+    </arc>
+    <arc id="18">
+      <graphics>
+        <position x="151" y="271"/>
+        <position x="195" y="295"/>
+      </graphics>
+      <flow source="11" target="7"/>
+    </arc>
+    <arc id="19">
+      <graphics>
+        <position x="70" y="336"/>
+        <position x="120" y="420"/>
+      </graphics>
+      <flow source="6" target="12"/>
+    </arc>
+    <arc id="20">
+      <graphics>
+        <position x="195" y="336"/>
+        <position x="195" y="355"/>
+      </graphics>
+      <flow source="7" target="8"/>
+    </arc>
+    <arc id="21">
+      <graphics>
+        <position x="195" y="396"/>
+        <position x="151" y="420"/>
+      </graphics>
+      <flow source="8" target="12"/>
+    </arc>
+    <arc id="22">
+      <graphics>
+        <position x="151" y="451"/>
+        <position x="235" y="480"/>
+      </graphics>
+      <flow source="12" target="13"/>
+    </arc>
+    <arc id="23">
+      <graphics>
+        <position x="250" y="511"/>
+        <position x="250" y="550"/>
+      </graphics>
+      <flow source="13" target="9"/>
+    </arc>
+    <arc id="24">
+      <graphics>
+        <position x="266" y="141"/>
+        <position x="325" y="175"/>
+      </graphics>
+      <flow source="10" target="2"/>
+    </arc>
+    <arc id="25">
+      <graphics>
+        <position x="325" y="216"/>
+        <position x="325" y="295"/>
+      </graphics>
+      <flow source="2" target="3"/>
+    </arc>
+    <arc id="26">
+      <graphics>
+        <position x="325" y="336"/>
+        <position x="325" y="360"/>
+      </graphics>
+      <flow source="3" target="4"/>
+    </arc>
+    <arc id="27">
+      <graphics>
+        <position x="325" y="401"/>
+        <position x="266" y="480"/>
+      </graphics>
+      <flow source="4" target="13"/>
+    </arc>
+  </epc>
+  <epc EpcId="14" name="example14_or_wait_for_decision (11 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="100" y="30"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="25" y="150"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="170" y="150"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="170" y="250"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="5">
+      <graphics>
+        <position height="41" width="81" x="285" y="250"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <function id="6">
+      <graphics>
+        <position height="41" width="81" x="105" y="385"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <xor id="7">
+      <graphics>
+        <position height="31" width="31" x="250" y="205"/>
+      </graphics>
+      <name/>
+    </xor>
+    <or id="8">
+      <graphics>
+        <position height="31" width="31" x="125" y="100"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="9">
+      <graphics>
+        <position height="31" width="31" x="130" y="315"/>
+      </graphics>
+      <name/>
+    </or>
+    <arc id="10">
+      <graphics>
+        <position x="140" y="71"/>
+        <position x="140" y="100"/>
+      </graphics>
+      <flow source="1" target="8"/>
+    </arc>
+    <arc id="11">
+      <graphics>
+        <position x="125" y="131"/>
+        <position x="65" y="150"/>
+      </graphics>
+      <flow source="8" target="2"/>
+    </arc>
+    <arc id="12">
+      <graphics>
+        <position x="156" y="131"/>
+        <position x="210" y="150"/>
+      </graphics>
+      <flow source="8" target="3"/>
+    </arc>
+    <arc id="13">
+      <graphics>
+        <position x="65" y="191"/>
+        <position x="130" y="315"/>
+      </graphics>
+      <flow source="2" target="9"/>
+    </arc>
+    <arc id="14">
+      <graphics>
+        <position x="210" y="191"/>
+        <position x="250" y="205"/>
+      </graphics>
+      <flow source="3" target="7"/>
+    </arc>
+    <arc id="15">
+      <graphics>
+        <position x="250" y="236"/>
+        <position x="210" y="250"/>
+      </graphics>
+      <flow source="7" target="4"/>
+    </arc>
+    <arc id="16">
+      <graphics>
+        <position x="281" y="236"/>
+        <position x="325" y="250"/>
+      </graphics>
+      <flow source="7" target="5"/>
+    </arc>
+    <arc id="17">
+      <graphics>
+        <position x="210" y="291"/>
+        <position x="161" y="315"/>
+      </graphics>
+      <flow source="4" target="9"/>
+    </arc>
+    <arc id="18">
+      <graphics>
+        <position x="145" y="346"/>
+        <position x="145" y="385"/>
+      </graphics>
+      <flow source="9" target="6"/>
+    </arc>
+  </epc>
+  <epc EpcId="15" name="example15_becker_c_v2 (2220 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="125" y="30"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="25" y="145"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="125" y="145"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="225" y="145"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="5">
+      <graphics>
+        <position height="41" width="81" x="55" y="255"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <function id="6">
+      <graphics>
+        <position height="41" width="81" x="55" y="315"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <function id="7">
+      <graphics>
+        <position height="41" width="81" x="55" y="435"/>
+      </graphics>
+      <name>7</name>
+    </function>
+    <function id="8">
+      <graphics>
+        <position height="41" width="81" x="200" y="435"/>
+      </graphics>
+      <name>8</name>
+    </function>
+    <function id="9">
+      <graphics>
+        <position height="41" width="81" x="125" y="550"/>
+      </graphics>
+      <name>9</name>
+    </function>
+    <or id="10">
+      <graphics>
+        <position height="31" width="31" x="150" y="100"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="11">
+      <graphics>
+        <position height="31" width="31" x="150" y="200"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="12">
+      <graphics>
+        <position height="31" width="31" x="150" y="385"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="13">
+      <graphics>
+        <position height="31" width="31" x="150" y="490"/>
+      </graphics>
+      <name/>
+    </or>
+    <arc id="14">
+      <graphics>
+        <position x="165" y="71"/>
+        <position x="165" y="100"/>
+      </graphics>
+      <flow source="1" target="10"/>
+    </arc>
+    <arc id="15">
+      <graphics>
+        <position x="150" y="131"/>
+        <position x="65" y="145"/>
+      </graphics>
+      <flow source="10" target="2"/>
+    </arc>
+    <arc id="16">
+      <graphics>
+        <position x="165" y="131"/>
+        <position x="165" y="145"/>
+      </graphics>
+      <flow source="10" target="3"/>
+    </arc>
+    <arc id="17">
+      <graphics>
+        <position x="181" y="131"/>
+        <position x="265" y="145"/>
+      </graphics>
+      <flow source="10" target="4"/>
+    </arc>
+    <arc id="18">
+      <graphics>
+        <position x="65" y="186"/>
+        <position x="150" y="200"/>
+      </graphics>
+      <flow source="2" target="11"/>
+    </arc>
+    <arc id="19">
+      <graphics>
+        <position x="165" y="186"/>
+        <position x="165" y="200"/>
+      </graphics>
+      <flow source="3" target="11"/>
+    </arc>
+    <arc id="20">
+      <graphics>
+        <position x="265" y="186"/>
+        <position x="181" y="200"/>
+      </graphics>
+      <flow source="4" target="11"/>
+    </arc>
+    <arc id="21">
+      <graphics>
+        <position x="150" y="231"/>
+        <position x="95" y="255"/>
+      </graphics>
+      <flow source="11" target="5"/>
+    </arc>
+    <arc id="22">
+      <graphics>
+        <position x="95" y="296"/>
+        <position x="95" y="315"/>
+      </graphics>
+      <flow source="5" target="6"/>
+    </arc>
+    <arc id="23">
+      <graphics>
+        <position x="95" y="356"/>
+        <position x="150" y="385"/>
+      </graphics>
+      <flow source="6" target="12"/>
+    </arc>
+    <arc id="24">
+      <graphics>
+        <position x="150" y="416"/>
+        <position x="95" y="435"/>
+      </graphics>
+      <flow source="12" target="7"/>
+    </arc>
+    <arc id="25">
+      <graphics>
+        <position x="181" y="416"/>
+        <position x="240" y="435"/>
+      </graphics>
+      <flow source="12" target="8"/>
+    </arc>
+    <arc id="26">
+      <graphics>
+        <position x="95" y="476"/>
+        <position x="150" y="490"/>
+      </graphics>
+      <flow source="7" target="13"/>
+    </arc>
+    <arc id="27">
+      <graphics>
+        <position x="240" y="476"/>
+        <position x="181" y="490"/>
+      </graphics>
+      <flow source="8" target="13"/>
+    </arc>
+    <arc id="28">
+      <graphics>
+        <position x="165" y="521"/>
+        <position x="165" y="550"/>
+      </graphics>
+      <flow source="13" target="9"/>
+    </arc>
+    <arc id="29">
+      <graphics>
+        <position x="165" y="385"/>
+        <position x="165" y="231"/>
+      </graphics>
+      <flow source="12" target="11"/>
+    </arc>
+  </epc>
+  <epc EpcId="16" name="example16_becker_c_v2_easy (312 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="90" y="15"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="25" y="130"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="155" y="130"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="25" y="230"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="5">
+      <graphics>
+        <position height="41" width="81" x="25" y="350"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <function id="6">
+      <graphics>
+        <position height="41" width="81" x="160" y="350"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <function id="7">
+      <graphics>
+        <position height="41" width="81" x="90" y="475"/>
+      </graphics>
+      <name>7</name>
+    </function>
+    <or id="26">
+      <graphics>
+        <position height="31" width="31" x="115" y="80"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="27">
+      <graphics>
+        <position height="31" width="31" x="115" y="185"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="28">
+      <graphics>
+        <position height="31" width="31" x="115" y="300"/>
+      </graphics>
+      <name/>
+    </or>
+    <or id="29">
+      <graphics>
+        <position height="31" width="31" x="115" y="410"/>
+      </graphics>
+      <name/>
+    </or>
+    <arc id="30">
+      <graphics>
+        <position x="130" y="56"/>
+        <position x="130" y="80"/>
+      </graphics>
+      <flow source="1" target="26"/>
+    </arc>
+    <arc id="31">
+      <graphics>
+        <position x="115" y="111"/>
+        <position x="65" y="130"/>
+      </graphics>
+      <flow source="26" target="2"/>
+    </arc>
+    <arc id="32">
+      <graphics>
+        <position x="146" y="111"/>
+        <position x="195" y="130"/>
+      </graphics>
+      <flow source="26" target="3"/>
+    </arc>
+    <arc id="33">
+      <graphics>
+        <position x="195" y="171"/>
+        <position x="146" y="185"/>
+      </graphics>
+      <flow source="3" target="27"/>
+    </arc>
+    <arc id="34">
+      <graphics>
+        <position x="65" y="171"/>
+        <position x="115" y="185"/>
+      </graphics>
+      <flow source="2" target="27"/>
+    </arc>
+    <arc id="35">
+      <graphics>
+        <position x="115" y="216"/>
+        <position x="65" y="230"/>
+      </graphics>
+      <flow source="27" target="4"/>
+    </arc>
+    <arc id="36">
+      <graphics>
+        <position x="65" y="271"/>
+        <position x="115" y="300"/>
+      </graphics>
+      <flow source="4" target="28"/>
+    </arc>
+    <arc id="37">
+      <graphics>
+        <position x="115" y="331"/>
+        <position x="65" y="350"/>
+      </graphics>
+      <flow source="28" target="5"/>
+    </arc>
+    <arc id="38">
+      <graphics>
+        <position x="146" y="331"/>
+        <position x="200" y="350"/>
+      </graphics>
+      <flow source="28" target="6"/>
+    </arc>
+    <arc id="39">
+      <graphics>
+        <position x="200" y="391"/>
+        <position x="146" y="410"/>
+      </graphics>
+      <flow source="6" target="29"/>
+    </arc>
+    <arc id="40">
+      <graphics>
+        <position x="65" y="391"/>
+        <position x="115" y="410"/>
+      </graphics>
+      <flow source="5" target="29"/>
+    </arc>
+    <arc id="41">
+      <graphics>
+        <position x="130" y="441"/>
+        <position x="130" y="475"/>
+      </graphics>
+      <flow source="29" target="7"/>
+    </arc>
+    <arc id="42">
+      <graphics>
+        <position x="130" y="300"/>
+        <position x="130" y="216"/>
+      </graphics>
+      <flow source="28" target="27"/>
+    </arc>
+  </epc>
+  <epc EpcId="17" name="example17_multiple_starts_with_OR (5 Traces)">
+    <function id="13">
+      <graphics>
+        <position height="41" width="81" x="70" y="45"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="14">
+      <graphics>
+        <position height="41" width="81" x="215" y="125"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="15">
+      <graphics>
+        <position height="41" width="81" x="70" y="125"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="16">
+      <graphics>
+        <position height="41" width="81" x="145" y="260"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <arc id="18">
+      <graphics>
+        <position x="110" y="86"/>
+        <position x="110" y="125"/>
+      </graphics>
+      <flow source="13" target="15"/>
+    </arc>
+    <or id="22">
+      <graphics>
+        <position height="31" width="31" x="170" y="200"/>
+      </graphics>
+      <name/>
+    </or>
+    <arc id="23">
+      <graphics>
+        <position x="110" y="166"/>
+        <position x="170" y="200"/>
+      </graphics>
+      <flow source="15" target="22"/>
+    </arc>
+    <arc id="24">
+      <graphics>
+        <position x="255" y="166"/>
+        <position x="201" y="200"/>
+      </graphics>
+      <flow source="14" target="22"/>
+    </arc>
+    <arc id="25">
+      <graphics>
+        <position x="185" y="231"/>
+        <position x="185" y="260"/>
+      </graphics>
+      <flow source="22" target="16"/>
+    </arc>
+  </epc>
+  <epc EpcId="18" name="example18_multiple_starts_with_XOR (2 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="35" y="25"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="35" y="105"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="165" y="105"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="100" y="230"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <xor id="5">
+      <graphics>
+        <position height="31" width="31" x="125" y="165"/>
+      </graphics>
+      <name/>
+    </xor>
+    <arc id="6">
+      <graphics>
+        <position x="75" y="66"/>
+        <position x="75" y="105"/>
+      </graphics>
+      <flow source="1" target="2"/>
+    </arc>
+    <arc id="7">
+      <graphics>
+        <position x="75" y="146"/>
+        <position x="125" y="165"/>
+      </graphics>
+      <flow source="2" target="5"/>
+    </arc>
+    <arc id="8">
+      <graphics>
+        <position x="205" y="146"/>
+        <position x="156" y="165"/>
+      </graphics>
+      <flow source="3" target="5"/>
+    </arc>
+    <arc id="9">
+      <graphics>
+        <position x="140" y="196"/>
+        <position x="140" y="230"/>
+      </graphics>
+      <flow source="5" target="4"/>
+    </arc>
+  </epc>
+  <epc EpcId="19" name="example19_multiple_start_nested_xor (4 Traces)">
+    <function id="1">
+      <graphics>
+        <position height="41" width="81" x="110" y="20"/>
+      </graphics>
+      <name>1</name>
+    </function>
+    <function id="2">
+      <graphics>
+        <position height="41" width="81" x="45" y="140"/>
+      </graphics>
+      <name>2</name>
+    </function>
+    <function id="3">
+      <graphics>
+        <position height="41" width="81" x="175" y="140"/>
+      </graphics>
+      <name>3</name>
+    </function>
+    <function id="4">
+      <graphics>
+        <position height="41" width="81" x="10" y="295"/>
+      </graphics>
+      <name>4</name>
+    </function>
+    <function id="5">
+      <graphics>
+        <position height="41" width="81" x="170" y="380"/>
+      </graphics>
+      <name>5</name>
+    </function>
+    <function id="6">
+      <graphics>
+        <position height="41" width="81" x="245" y="245"/>
+      </graphics>
+      <name>6</name>
+    </function>
+    <xor id="7">
+      <graphics>
+        <position height="31" width="31" x="135" y="90"/>
+      </graphics>
+      <name/>
+    </xor>
+    <xor id="8">
+      <graphics>
+        <position height="31" width="31" x="70" y="220"/>
+      </graphics>
+      <name/>
+    </xor>
+    <xor id="9">
+      <graphics>
+        <position height="31" width="31" x="130" y="260"/>
+      </graphics>
+      <name/>
+    </xor>
+    <xor id="10">
+      <graphics>
+        <position height="31" width="31" x="195" y="305"/>
+      </graphics>
+      <name/>
+    </xor>
+    <arc id="11">
+      <graphics>
+        <position x="150" y="61"/>
+        <position x="150" y="90"/>
+      </graphics>
+      <flow source="1" target="7"/>
+    </arc>
+    <arc id="12">
+      <graphics>
+        <position x="135" y="121"/>
+        <position x="85" y="140"/>
+      </graphics>
+      <flow source="7" target="2"/>
+    </arc>
+    <arc id="13">
+      <graphics>
+        <position x="166" y="121"/>
+        <position x="215" y="140"/>
+      </graphics>
+      <flow source="7" target="3"/>
+    </arc>
+    <arc id="14">
+      <graphics>
+        <position x="85" y="181"/>
+        <position x="85" y="220"/>
+      </graphics>
+      <flow source="2" target="8"/>
+    </arc>
+    <arc id="15">
+      <graphics>
+        <position x="70" y="251"/>
+        <position x="50" y="295"/>
+      </graphics>
+      <flow source="8" target="4"/>
+    </arc>
+    <arc id="16">
+      <graphics>
+        <position x="101" y="251"/>
+        <position x="130" y="260"/>
+      </graphics>
+      <flow source="8" target="9"/>
+    </arc>
+    <arc id="17">
+      <graphics>
+        <position x="215" y="181"/>
+        <position x="161" y="260"/>
+      </graphics>
+      <flow source="3" target="9"/>
+    </arc>
+    <arc id="18">
+      <graphics>
+        <position x="161" y="291"/>
+        <position x="195" y="305"/>
+      </graphics>
+      <flow source="9" target="10"/>
+    </arc>
+    <arc id="19">
+      <graphics>
+        <position x="285" y="286"/>
+        <position x="226" y="305"/>
+      </graphics>
+      <flow source="6" target="10"/>
+    </arc>
+    <arc id="20">
+      <graphics>
+        <position x="210" y="336"/>
+        <position x="210" y="380"/>
+      </graphics>
+      <flow source="10" target="5"/>
+    </arc>
+  </epc>
+</epml:epml>
