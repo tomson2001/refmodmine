@@ -46,7 +46,7 @@ class BinaryMapping extends AMapping implements IMapping {
 		}
 
 		// Cluster durchpruefen und entsprechende Matrixwerte auf 1 setzen
-		foreach ( $this->clusters as $cluster ) {
+		foreach ( $this->clusters as $index => $cluster ) {
 			$toMap = $cluster->checkForNodesOfBothEPCs($this->epc1, $this->epc2);
 			if ( !empty($toMap) ) {
 				foreach ( $toMap[0] as $id1 ) {

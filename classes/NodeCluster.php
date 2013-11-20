@@ -13,7 +13,7 @@ class NodeCluster {
 
 	public function contains(FunctionOntologyWithSynonyms $node) {
 		foreach ( $this->nodes as $clusterNode ) {
-			if ( $node->id == $clusterNode->id && $node->epc->name == $clusterNode->epc->name ) return true;
+			if ( $node->id == $clusterNode->id && $node->epc->internalID == $clusterNode->epc->internalID ) return true;
 		}
 		return false;
 	}
@@ -31,13 +31,25 @@ class NodeCluster {
 	 * @return array
 	 */
 	public function checkForNodesOfBothEPCs(&$epc1, &$epc2) {
-		$nameOfEPC1 = $epc1->name;
-		$nameOfEPC2 = $epc2->name;
+		$internalIDOfEPC1 = $epc1->internalID;
+		$internalIDOfEPC2 = $epc2->internalID;
+		//print("\n\n".$internalIDOfEPC1."\n".$internalIDOfEPC2);
 		$nodesOfEPC1InCluster = array();
 		$nodesOfEPC2InCluster = array();
 		foreach ( $this->nodes as $node ) {
-			if ( $node->epc->name == $nameOfEPC1 ) array_push($nodesOfEPC1InCluster, $node->id);
-			if ( $node->epc->name == $nameOfEPC2 ) array_push($nodesOfEPC2InCluster, $node->id);
+			//print($epc1->internalID." --- ".$node->epc->internalID."\n");
+			if ( $node->epc->internalID === $internalIDOfEPC1 ) { 
+				//print("YES 1: ".$node->epc->internalID."\n");
+				array_push($nodesOfEPC1InCluster, $node->id); 
+			} else {
+				//print("\n  No 1: ".$node->epc->internalID);
+			} 
+			if ( $node->epc->internalID === $internalIDOfEPC2 ) { 
+				//print("YES 2: ".$node->epc->internalID."\n");
+				array_push($nodesOfEPC2InCluster, $node->id);
+			} else {
+				//print("\n  No 2: ".$node->epc->internalID);
+			}
 		}
 		if ( count($nodesOfEPC1InCluster) > 0 && count($nodesOfEPC2InCluster) > 0 ) {
 			return array(0 => $nodesOfEPC1InCluster, 1 => $nodesOfEPC2InCluster);
@@ -50,12 +62,14 @@ class NodeCluster {
 	 * Entfernt alle Funktionsknoten aus dem Cluster, welche wahrscheinlich Ereignisse repraesentieren
 	 */
 	public function removePossibleEvents() {
+		$possibleEvents = array();
 		foreach ( $this->nodes as $index => $node ) {
 			if ( $node->couldBeEvent() ) {
-				//print("\n  ".$node->label);
+				array_push($possibleEvents, $node);
 				unset($this->nodes[$index]);
 			}
 		}
+		return $possibleEvents;
 	}
 
 }

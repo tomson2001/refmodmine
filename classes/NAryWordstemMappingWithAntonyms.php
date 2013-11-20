@@ -9,6 +9,8 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 	
 	// Best Value
 	private $threshold_ontology_quote = 60;
+	
+	public $removedPossibleEvents = array();
 
 
 	/**
@@ -28,18 +30,34 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 	}
 
 	public function map() {
-		// Funktionsontologien bauen und alles in ein Array schreiben
+		
+		/**
+		 * Funktionsontologien bauen und alles in ein Array schreiben
+		 */ 
+		$numOfAllFuncs = 0;
+		foreach ( $this->epcs as $epc ) {
+			$numOfAllFuncs += count($epc->functions);
+		}
+		print("\n\nAufbau der Funktionsongologien... \n");
+		$progressBar = new CLIProgressbar($numOfAllFuncs, 0.1);
+		$i=0;
+		
 		$allFunctions = array();
 		foreach ( $this->epcs as $epc ) {
 			foreach ( $epc->functions as $id => $label ) {
 				array_push($allFunctions, new FunctionOntologyWithSynonyms($epc, $id, $label));
+				$i++;
+				$progressBar->run($i);
 			}
 		}
-		print("Synonymextraktion abgeschlossen");
-		// Clusterbildung durch Vergleich aller Funktionspaare
+		print("\ndone");
+		
+		/**
+		 * Clusterbildung durch Vergleich aller Funktionspaare
+		 */
 		$i = 0;
 		$j = 1;
-		$numOfAllFuncs = count($allFunctions);
+		//$numOfAllFuncs = count($allFunctions);
 		while ( $i < $numOfAllFuncs ) {
 			$node1 = $allFunctions[$i];
 			while ( $j < $numOfAllFuncs ) {
@@ -62,9 +80,109 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 		$this->cleanClusters();
 		$this->exportDebug("_reduced");
 	}
+	
+	public function mapMultiCore($reportingFolder = "") {
+	
+		/**
+		 * Funktionsontologien bauen und alles in ein Array schreiben
+		 */
+		$numOfAllFuncs = 0;
+		foreach ( $this->epcs as $epc ) {
+			$numOfAllFuncs += count($epc->functions);
+		}
+		
+		//print("\nVerteilung der Ontologieberechnung...\n");
+		//$progressBar = new CLIProgressbar($numOfAllFuncs, 0.1);
+		// Splitten der Aufgaben auf die Anzahl der Kerne
+		$splitCount = round(count($this->epcs)/Config::NUM_CORES_TO_WORK_ON);
+		$nextSplit = $splitCount;
+		$epcsParts = array();
+		$epcsParts[0] = array();
+		$part = 0;
+		$i = 0;
+		foreach ($this->epcs as $epc) {
+			$i++;
+			if ( $i == $nextSplit && $part < Config::NUM_CORES_TO_WORK_ON-1 ) {
+				$part++;
+				$epcsParts[$part] = array();
+				$nextSplit += $splitCount;
+			}
+			array_push($epcsParts[$part], $epc);
+			//$progressBar->run($i);
+		}
+		//print("\ndone");
+		
+		print("Berechnung der Funktionsontologien... \n");
+		// Fuer jede EPK-Menge einen Thread erzeugen und starten
+		$thread = array();
+		$maxThreadID = 0;
+		foreach ( $epcsParts as $threadID => $epcsPart ) {
+			$thread[$threadID+1] = new MultiThreadFunctionOntologyOperation($epcsPart);
+			$thread[$threadID+1]->start();
+			$maxThreadID = $threadID+1;
+		}
+		
+		// Threads Synchronisieren
+		$allFunctions = array();
+		$progressBar = new CLIProgressbar($numOfAllFuncs, 0.1);
+		$currentThread = 1;
+		while ( $currentThread <= $maxThreadID ) {
+			if ( $thread[$currentThread]->isRunning() ) {
+				sleep(1);
+				$finishedOperations = 0;
+				for ( $i=1; $i<=$maxThreadID; $i++ ) {
+					$finishedOperations += $thread[$i]->finishedOperations;
+				}
+				$progressBar->run($finishedOperations);
+			} else {
+				foreach ( $thread[$currentThread]->functions as $functionOntology ) {
+					array_push($allFunctions, unserialize($functionOntology));
+				}
+				$currentThread++;
+			}
+		}
+		print("\ndone\n\n");
+	
+		/**
+		 * Clusterbildung durch Vergleich aller Funktionspaare
+		*/
+		print("Berechnung der Cluster...\n");
+		
+		$progressBar = new CLIProgressbar(($numOfAllFuncs*$numOfAllFuncs)/2, 0.1);
+		$i = 0;
+		$j = 1;
+		$finishedOperations = 0;
+		//$numOfAllFuncs = count($allFunctions);
+		while ( $i < $numOfAllFuncs ) {
+			$node1 = $allFunctions[$i];
+			while ( $j < $numOfAllFuncs ) {
+				//print(".".$i."-".$j.".");
+				$node2 = $allFunctions[$j];
+				// Similarity nur dann berechnen, wenn es sich um Knoten aus verschiedenen EPKs handelt
+				if ( $node1->epc->internalID != $node2->epc->internalID ) {
+					$nodeSimilarity = $this->compare($node1, $node2);
+					//print("\n ".$node1->label." <=> ".$node2->label." | ".$nodeSimilarity);
+					if ( $nodeSimilarity >= $this->threshold_ontology_quote ) {
+						$this->cluster($node1, $node2);
+					}
+				}
+				$j++;
+				$finishedOperations++;
+				$progressBar->run($finishedOperations);
+			}
+			$i++;
+			$j = $i + 1;
+		}
+		$this->exportDebug($reportingFolder, "_complete");
+		$this->cleanClusters();
+		$this->exportDebug($reportingFolder, "_reduced");
+		print("\ndone\n\n");
+	}
 
 	private function compare(FunctionOntologyWithSynonyms $node1, FunctionOntologyWithSynonyms $node2) {
 
+		if ( $node1->label == $node2->label ) return 100;
+		
 		// Dummy-Transitionen nicht matchen
 		if ( preg_match("/^t[0-9]*$/", $node1->label) || preg_match("/^t[0-9]*$/", $node2->label) ) return 0;
 
@@ -216,10 +334,12 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 		print($output);
 	}
 
-	public function exportDebug($filename_suffix="") {
+	public function exportDebug($folderName="", $filename_suffix="") {
 		$output = $this->generateDebug();
 		$fileGenerator = new FileGenerator("clusters".$filename_suffix.".txt", $output);
-		$file = $fileGenerator->execute();
+		if ( !empty($folderName) ) $fileGenerator->setPath($folderName);
+		$fileGenerator->setFilename("clusters".$filename_suffix.".txt");
+		$file = $fileGenerator->execute(false);
 		return $file;
 	}
 
@@ -228,7 +348,7 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 		foreach ( $this->clusters as $index => $cluster ) {
 			$text .= "\r\n\r\n Cluster ".$index." enhaelt ".count($cluster->nodes)." Knoten." ;
 			foreach ( $cluster->nodes as $node ) {
-				$text .= "\r\n          ".$node->label." (".$node->epc->name.")";
+				$text .= "\r\n          ".$node->label." [".$node->id."] (".$node->epc->internalID.")";
 			}
 		}
 		return $text;
@@ -238,9 +358,11 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 	 * Bereinigt die Cluster. Es werden dabei Funktionen entfernt, deren Labels fuer Ereignisse sprechen
 	 */
 	private function cleanClusters() {
-		foreach ( $this->clusters as $index => $cluster ) {
-			//print("\n Cluster ".$index."\n");
-			$cluster->removePossibleEvents();
+		foreach ( $this->clusters as $index => &$cluster ) {
+			$removedEvents = $cluster->removePossibleEvents();
+			foreach ($removedEvents as $node) {
+				array_push($this->removedPossibleEvents, $node);
+			}
 		}
 	}
 

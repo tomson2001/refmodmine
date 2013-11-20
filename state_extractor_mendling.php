@@ -3,16 +3,17 @@ $start = time();
 require 'autoloader.php';
 
 $log = "";
-$output = "\n-------------------------------------------------\n RefModMining - Trace Extractor \n-------------------------------------------------\n\n";
+$output = "\n-----------------------------------------------------------\n RefModMining - State Extractor (Reachability Graph)\n-----------------------------------------------------------\n\n";
 print($output);
 $log .= $output;
 
 if ( in_array("--help", $argv) || in_array("-help", $argv) || in_array("-?", $argv) ) {
 	exit("   Optionen:\n
-   [--export]   Export der reduzierten EPKs
+   [--export]   Exportiert die Zustandsgraphen als .fsm-File
    [--help]     Hilfe\n\n");
 }
 
+/**
 $doExtract = array(
 	"Admission FU Berlin", "Admission IIS Erlangen", "Admission Muenster", "Admission Potsdam",
 	"birhtCertificate_p33",
@@ -38,6 +39,7 @@ $doExtract = array(
 		"B.I.222_Ereignisgesteuerte Cam Prozeßkette", "C.I.007_Ereignissteuerung der Produktionsentwicklung", "D.II.009_ARIS-Vorgehensmodell als ereignisgesteuerte Prozeßkette", 
 		"D.II.019_Grobes ARIS-Unternhmungsmodell (UM) der Fachkonzeptebene (Ausschnitt)"
 );
+ */
 
 /**
  * Einstellungen
@@ -56,21 +58,25 @@ $log .= $output;
 
 $analysis_csv = "Modelldatei:;".Config::TRACE_EXTRACTOR_FILE."\n";
 $analysis_csv .= "#Modelle;".$modelsInFile1."\n";
-
 $summary_csv = $analysis_csv;
 $summary_csv .= "MAX_TIME_PER_TRACE_EXTRAKTION: ".Config::MAX_TIME_PER_TRACE_EXTRAKTION." Sec.\n\n";
-$summary_csv .= "EPK;#Traces;Duration of extraction (Microtime);Duration of extraction (Seconds);Duration of extraction (String);Abort\n";
+$summary_csv .= "EPC;#Nodes;#Functions;#Events;#XORs;#ANDs;#ORs;#States;Duration of extraction (Microtime);Duration of extraction (Seconds);Duration of extraction (String);Abort;Syntax-Error;Time-Exceeded;Curious-State-Count;AutoCorrected;CorrectedSplitJoinConnectors;CorrectedSenselessConnectors;CorrectedStartAndEndFunctions\n";
 
 $countCompletedModels = 0;
 $progress = 0.1;
 
 $timeExceeded = 0;
+$syntaxError = 	0;
+$correctedModels = 0;
 $i = 1;
 $lastTime = time();
 $lastMicroTime = microtime(true);
 foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
 	
+	/**
+	 * Nur bestimmte Modelle berechnen
+	 
 	if ( !in_array($nameOfEPC1, $doExtract)) {
 		if ( ($i/$modelsInFile1) >= $progress ) {
 			print(" ".($progress*100)."% ");
@@ -81,17 +87,22 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 		$i++;
 		continue;
 	}
+	*/
 	
 	$epc1 = new EPC($xml1, $xml_epc1["name"]);
-
-	$traceExtractor = null;
-	if ( in_array("--export", $argv) ) {
-		$traceExtractor = new TraceExtractor($epc1, true, Config::MAX_TIME_PER_TRACE_EXTRAKTION);
-	} else {
-		$traceExtractor = new TraceExtractor($epc1, false, Config::MAX_TIME_PER_TRACE_EXTRAKTION);
-	}
+	$stateExtractor = new ReachabilityGraphGeneratorMendling($epc1, Config::MAX_TIME_PER_TRACE_EXTRAKTION);
 	
-	$traces = $traceExtractor->execute();
+	$reachabilityGraph = $stateExtractor->execute();
+	if ( in_array("--export", $argv) ) {
+		if ( !is_string($reachabilityGraph) ) $reachabilityGraph->exportFSM();
+	}
+	$autoCorrected = $epc1->autoCorrected ? "Ja" : "Nein";
+	if ( $epc1->autoCorrected ) $correctedModels++;
+	$correctSplitJoin = $epc1->correctSplitJoinConnectors ? "Ja" : "Nein";
+	$correctSenselessConnectors = $epc1->correctSenselessConnectors ? "Ja" : "Nein";
+	$correctStartAndEndFunctions = $epc1->correctStandAndEndFunctions ? "Ja" : "Nein";
+	$numOfNodes = $epc1->getNumOfNodes();
+	$epc_analysis = $numOfNodes.";".count($epc1->functions).";".count($epc1->events).";".count($epc1->xor).";".count($epc1->and).";".count($epc1->or);
 	
 	// Berechnungdauer
 	$duration = time() - $lastTime;
@@ -101,33 +112,30 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$lastTime = time();
 	$lastMicroTime = microtime(true);
 
-	if (is_string($traces)) {
+	if ( is_string($reachabilityGraph) ) {
 		
-		if ( $traces == "Time exceeded" ) $timeExceeded++;
-		$analysis_csv .= "\n\n".$i.": ".$nameOfEPC1." (".$traces.") - Dauer: ".$minutes." Min. ".$seconds." Sek.\n\n";
-		$output = "\n   ".$i.": ".$nameOfEPC1.": ".$traces." - Dauer: ".$minutes." Min. ".$seconds." Sek.";
+		$syntaxError++;
+		$output = "\n   ".$i.": ".$nameOfEPC1.": ".$reachabilityGraph."";
 		print($output);
 		$log .= $output;
-		$summary_csv .= $nameOfEPC1.";".$traces.";".$detailedDuration.";".$duration.";".$minutes." Min. ".$seconds." Sek.;Ja\n";
+		$summary_csv .= $nameOfEPC1.";".$epc_analysis.";0;".str_replace(".", ",", $detailedDuration).";".$duration.";".$minutes." Min. ".$seconds." Sek.;Ja;Ja;Nein;Nein;".$autoCorrected.";".$correctSplitJoin.";".$correctSenselessConnectors.";".$correctStartAndEndFunctions."\n";
+		
+	} elseif (!$reachabilityGraph->complete) {
+		
+		$output = "\n   ".$i.": ".$nameOfEPC1.": Time exceeded (".$reachabilityGraph->getNumOfStates()." States)";
+		print($output);	
+		$log .= $output;
+		$summary_csv .= $nameOfEPC1.";".$epc_analysis.";".$reachabilityGraph->getNumOfStates().";".str_replace(".", ",", $detailedDuration).";".$duration.";".$minutes." Min. ".$seconds." Sek.;Ja;Nein;Ja;Nein;".$autoCorrected.";".$correctSplitJoin.";".$correctSenselessConnectors.";".$correctStartAndEndFunctions."\n";
+		$timeExceeded++;
 		
 	} else {
 		
-		$analysis_csv .= "\n\n".$i.": ".$nameOfEPC1." (".count($traces)." Traces) - Dauer: ".$minutes." Min. ".$seconds." Sek.\n\n";
-		$output = "\n   ".$i.": ".$nameOfEPC1.": ".count($traces)." Traces - Dauer: ".$minutes." Min. ".$seconds." Sek.";
+		$output = "\n   ".$i.": ".$nameOfEPC1.": ".$reachabilityGraph->getNumOfStates()." States - Dauer: ".$minutes." Min. ".$seconds." Sek.";
 		print($output);	
 		$log .= $output;
-		$summary_csv .= $nameOfEPC1.";".count($traces).";".$detailedDuration.";".$duration.";".$minutes." Min. ".$seconds." Sek.;Nein\n";
+		$curiousStateCount = $reachabilityGraph->getNumOfStates() < $epc1->getNumOfNodes()+1 ? "Ja" : "Nein";
+		$summary_csv .= $nameOfEPC1.";".$epc_analysis.";".$reachabilityGraph->getNumOfStates().";".str_replace(".", ",", $detailedDuration).";".$duration.";".$minutes." Min. ".$seconds." Sek.;Nein;Nein;Nein;".$curiousStateCount.";".$autoCorrected.";".$correctSplitJoin.";".$correctSenselessConnectors.";".$correctStartAndEndFunctions."\n";
 
-		// Traces in CSV schreiben
-		$tracePart = "";
-		foreach ($traces as $trace) {
-			foreach ($trace as $funcID) {
-				$funcName = $epc1->getNodeLabel($funcID) ? $epc1->getNodeLabel($funcID) : "unknown";
-				$tracePart .= str_replace("\n", " ", $funcName).";";
-			}
-			$tracePart .= "\n ";
-		}
-		$analysis_csv .= $tracePart;
 	}
 	if ( ($i/$modelsInFile1) >= $progress ) {
 		print(" ".($progress*100)."% ");
@@ -136,12 +144,13 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$i++;
 }
 
-$fileGenerator = new FileGenerator("Trace_Extraction.csv", $analysis_csv);
+$fileGenerator = new FileGenerator("State_Extraction.csv", $analysis_csv);
 $uri_analysis_csv = $fileGenerator->execute();
 
-$output = "\n\nTime Exceeded (".Config::MAX_TIME_PER_TRACE_EXTRAKTION." Sek.): ".$timeExceeded."\n\n";
-$output .= "\n\nTraces wurden erfolgreich extrahiert!\n\n";
-$output .= "CSV mit Traces: ".$uri_analysis_csv."\n\n";
+$output = "\n\nTime Exceeded (".Config::MAX_TIME_PER_TRACE_EXTRAKTION." Sek.): ".$timeExceeded."/".$modelsInFile1."\n";
+$output .= "Models with Syntax Error: ".$syntaxError."/".$modelsInFile1."\n";
+$output .= "Auto-Corrected Models: ".$correctedModels."/".$modelsInFile1."\n";
+$output .= ($modelsInFile1-$timeExceeded-$syntaxError)." von ".$modelsInFile1." Erreichbarkeitsgraphen wurden erfolgreich berechnet!\n\n";
 print($output);
 $log .= $output;
 

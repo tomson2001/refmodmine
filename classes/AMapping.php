@@ -5,6 +5,9 @@ abstract class AMapping {
 	public $epc2 = null;
 	public $matrix = array();
 	public $mapping = array();
+	public $matches = array();
+	public $mappedNodesOfEPC1 = array();
+	public $mappedNodesOfEPC2 = array();
 	
 	/**
 	 * Gibt die Funktions-Mapping-Matrix zurueck
@@ -23,6 +26,8 @@ abstract class AMapping {
 	protected function generateMapping($algorithm) {
 		eval("\$mapper = new ".$algorithm."Mapper(\$this->matrix);");
 		$this->mapping = $mapper->getMapping();
+		$this->matches = $this->getMatches();
+		$this->getMappedNodes();
 	}
 	
 	/**
@@ -48,6 +53,80 @@ abstract class AMapping {
 			}
 		}
 		return false;
+	}
+	
+	protected function getMatches() {
+		$matches = array();
+		foreach ( $this->mapping as $pair ) {
+			// Knotenpaar auslesen
+			$keys = array_keys($pair);
+			$id1 = $keys[0];
+			$id2 = $pair[$id1];
+			
+			// Zugehoerige Matches suchen
+			$foundMatches = array();
+			foreach ( $matches as $matchID => $match ) {
+				if ( $match->contains(1, $id1) || $match->contains(2, $id2) ) {
+					array_push($foundMatches, $matchID);
+				}
+			}
+			
+			if ( !empty($foundMatches) ) {
+				// Knoten zum Match hinzufuegen und ggf. Matches zusammenfuehren falls notwendig
+				$matches[$foundMatches[0]]->add(1, $id1);
+				$matches[$foundMatches[0]]->add(2, $id2);
+				foreach ( $foundMatches as $matchID ) {
+					$matches[$foundMatches[0]]->merge($matches[$matchID]);
+					if ( $matchID != $foundMatches[0] ) unset($matches[$matchID]);
+				}
+			} else {
+				// Neues Match erstellen
+				$match = new Match();
+				$match->add(1, $id1);
+				$match->add(2, $id2);
+				array_push($matches, $match);
+			}
+		}
+		return $matches;
+	}
+	
+	public function getMappedNodes() {
+		$mappedNodesOfEPC1 = array();
+		$mappedNodesOfEPC2 = array();
+		foreach ( $this->mapping as $pair ) {
+			// Knotenpaar auslesen
+			$keys = array_keys($pair);
+			$id1 = $keys[0];
+			$id2 = $pair[$id1];
+			//print("Pair: ".$id1." (EPC1) => ".$id2." (EPC2)\n");
+			
+			if ( !in_array($id1, $mappedNodesOfEPC1) && $this->epc1->isFunction($id1) ) array_push($mappedNodesOfEPC1, $id1);
+			if ( !in_array($id2, $mappedNodesOfEPC2) && $this->epc2->isFunction($id2) ) array_push($mappedNodesOfEPC2, $id2);
+		}
+		$this->mappedNodesOfEPC1 = $mappedNodesOfEPC1;
+		$this->mappedNodesOfEPC2 = $mappedNodesOfEPC2;
+		
+		//print_r(array("mappedNodesOfEPC1" => $mappedNodesOfEPC1, "mappedNodesOfEPC2" => $mappedNodesOfEPC2));
+		
+		return array("mappedNodesOfEPC1" => $mappedNodesOfEPC1, "mappedNodesOfEPC2" => $mappedNodesOfEPC2);
+	}
+	
+	public function getNumOfMatches() {
+		return count($this->matches);
+	}
+	
+	public function getNumOfComplexMatches() {
+		$numOfComplexMatches = 0;
+		foreach ( $this->matches as $match ) {
+			if ( $match->isComplex() ) $numOfComplexMatches++;
+		}
+		return $numOfComplexMatches;
+	}
+	
+	public function getNumOfSimpleMatches() {
+		$numOfComplexMatches = $this->getNumOfComplexMatches();
+		$numOfAllMatches = $this->getNumOfMatches();
+		return $numOfAllMatches - $numOfComplexMatches;
 	}
 	
 	/**
@@ -241,6 +320,30 @@ abstract class AMapping {
 		
 		$fileGenerator = new FileGenerator(trim($this->epc1->name)."_".trim($this->epc2->name).".txt", $content);
 		$file = $fileGenerator->execute();
+		return $file;
+	}
+	
+	/**
+	 * Exportiert in eine andere Darstellung als beim Contest und ist damit robuster gegen Fehler und besser lesbar
+	 * @return string
+	 */
+	public function export2($path = "", $prefix = true) {
+		$content = $this->epc1->name."\r\n";
+		$content .= $this->epc2->name;
+	
+		foreach ( $this->mapping as $pair ) {
+			$id1_arr = array_keys($pair);
+			$id1 = $id1_arr[0];
+			$id2 = $pair[$id1];
+			$label1 = $this->epc1->getNodeLabel($id1);
+			$label2 = $this->epc2->getNodeLabel($id2);
+			$content .= "\r\n".$label1." (".$id1.") | ".$label2." (".$id2.")";
+		}
+	
+		$fileGenerator = new FileGenerator($path.trim($this->epc1->name)."_".trim($this->epc2->name).".txt", $content);
+		$fileGenerator->setFilename(trim($this->epc1->name)."_".trim($this->epc2->name).".txt");
+		$fileGenerator->setPath($path);
+		$file = $fileGenerator->execute($prefix);
 		return $file;
 	}
 	

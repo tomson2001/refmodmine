@@ -48,5 +48,28 @@ class Tools {
 		return $unionArr;
 	}
 	
+	public static function array_unique_complex($array) {
+		$newArray = array();
+		foreach ( $array as $entry ) {
+			array_push($newArray, serialize($entry));
+		}
+		$newArray = array_unique($newArray);
+		
+		$resultArray = array();
+		foreach ( $newArray as $entry ) {
+			array_push($resultArray, unserialize($entry));
+		}
+		return $resultArray;
+	}
+	
+	public static function removeInvalidFunctions($allFuncs, $invalidFuncs) {
+		foreach ( $allFuncs as $index => $funcDef ) {
+			foreach ( $invalidFuncs as $node ) {
+				if ( $funcDef["id"] == $node->id && $funcDef["EPC_InternalID"] == $node->epc->internalID ) unset($allFuncs[$index]);
+			}
+		}
+		return $allFuncs;
+	}
+	
 }
 ?>
