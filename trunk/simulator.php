@@ -83,9 +83,19 @@ foreach ($xml2->xpath("//epc") as $xml_epc2) {
 }
 $similarity_matrix_csv .= "\n";
 
+$allFuncNodesOfModelFile1 = array();
+$allFuncNodesOfModelFile2 = array();
+
+$allMatchedFuncNodesOfModelFile1 = array();
+$allMatchedFuncNodesOfModelFile2 = array();
+
 foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
 	$epc1 = new EPC($xml1, $xml_epc1["name"]);
+	
+	foreach ( $epc1->functions as $funcLabel ) {
+		$allFuncNodesOfModelFile1[$funcLabel] = true;
+	}
 
 // 	if ( $argv[1] == "--lcsot" ) {
 // 		if ( array_key_exists($nameOfEPC1, $traces) 
@@ -101,6 +111,10 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	foreach ($xml2->xpath("//epc") as $xml_epc2) {
 		$nameOfEPC2 = utf8_decode((string) $xml_epc2["name"]);
 		$epc2 = new EPC($xml2, $xml_epc2["name"]);
+		
+		foreach ( $epc2->functions as $funcLabel ) {
+			$allFuncNodesOfModelFile2[$funcLabel] = true;
+		}
 
 // 		if ( ($argv[1] == "--lcsot" 
 // 			&& array_key_exists($nameOfEPC1, $traces) && !is_string($traces[$nameOfEPC1]) && !empty($traces[$nameOfEPC1]) 
@@ -172,7 +186,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 					default:
 						$mapping = new LevenshteinMapping($epc1, $epc2);
 						// Grenze auf 50% Aehnlichkeit setzen
-						$mapping->setParams(array('threshold_levenshtein' => 50));
+						$mapping->setParams(array('threshold_levenshtein' => 90));
 						break;
 				}
 
@@ -180,7 +194,17 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 				 * Angabe des Algorithmus, der fuer das Mapping verwendet werden soll: "Greedy", "Simple"
 				 */
 				$mapping->map("Greedy");
+				$mapping->export();
 				$matrix = $mapping->getMatrix();
+				
+				// Schreiben der insgesamt gematchten Funktionen
+				foreach ( $epc1->functions as $id => $label ) {
+					if ( $mapping->mappingExistsFrom($id) ) $allMatchedFuncNodesOfModelFile1[$label] = true;
+				}
+				
+				foreach ( $epc2->functions as $id => $label ) {
+					if ( $mapping->mappingExistsTo($id) ) $allMatchedFuncNodesOfModelFile2[$label] = true;
+				}
 
 				// Matrix in HTML
 				if (!$isLight) {
@@ -286,6 +310,11 @@ if (!$isLight) {
 $duration = time() - $start;
 $seconds = $duration % 60;
 $minutes = floor($duration / 60);
+
+$readme .= "\nFunktionen in Modellfile 1: ".count($allFuncNodesOfModelFile1)."\r\n";
+$readme .= "\nGematchte Funktionen in Modellfile 1: ".count($allMatchedFuncNodesOfModelFile1)."\r\n";
+$readme .= "\nFunktionen in Modellfile 2: ".count($allFuncNodesOfModelFile2)."\r\n";
+$readme .= "\nGematchte Funktionen in Modellfile 2: ".count($allMatchedFuncNodesOfModelFile2)."\r\n";
 
 $readme .= "\nEndzeit: ".date("d.m.Y H:i:s")."\r\n";
 $readme .= "Dauer: ".$minutes." Min. ".$seconds." Sek.";

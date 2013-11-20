@@ -2,7 +2,7 @@
 <epml:epml xmlns:epml="http://www.epml.de"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
   <directory name='birhtCertificate'>
-  <epc EpcId="1" name="birhtCertificate_p31">
+  <epc epcId="1" name="birhtCertificate_p31">
     <function id="1">
       <name>t12</name>
     </function>
@@ -349,7 +349,7 @@
       <flow source="75" target="35" />
     </arc>
   </epc>
-  <epc EpcId="2" name="birhtCertificate_p32">
+  <epc epcId="2" name="birhtCertificate_p32">
     <function id="1">
       <name>t55</name>
     </function>
@@ -546,7 +546,7 @@
       <flow source="42" target="43" />
     </arc>
   </epc>
-  <epc EpcId="3" name="birhtCertificate_p33">
+  <epc epcId="3" name="birhtCertificate_p33">
     <function id="1">
       <name>Trial in court of International Affairs</name>
     </function>
@@ -881,7 +881,7 @@
       <flow source="72" target="35" />
     </arc>
   </epc>
-  <epc EpcId="4" name="birhtCertificate_p34">
+  <epc epcId="4" name="birhtCertificate_p34">
     <function id="1">
       <name>Decide on first name 1</name>
     </function>
@@ -991,7 +991,7 @@
       <flow source="26" target="27" />
     </arc>
   </epc>
-  <epc EpcId="5" name="birhtCertificate_p246">
+  <epc epcId="5" name="birhtCertificate_p246">
     <function id="1">
       <name>Sign birth certificate</name>
     </function>
@@ -1206,7 +1206,7 @@
       <flow source="47" target="48" />
     </arc>
   </epc>
-  <epc EpcId="6" name="birhtCertificate_p247">
+  <epc epcId="6" name="birhtCertificate_p247">
     <function id="1">
       <name>t8</name>
     </function>
@@ -1520,7 +1520,7 @@
       <flow source="64" target="32" />
     </arc>
   </epc>
-  <epc EpcId="7" name="birhtCertificate_p248">
+  <epc epcId="7" name="birhtCertificate_p248">
     <function id="1">
       <name>Update GBA</name>
     </function>
@@ -1780,7 +1780,7 @@
       <flow source="54" target="27" />
     </arc>
   </epc>
-  <epc EpcId="8" name="birhtCertificate_p249">
+  <epc epcId="8" name="birhtCertificate_p249">
     <function id="1">
       <name>Update GBA</name>
     </function>
@@ -1983,7 +1983,7 @@
       <flow source="44" target="22" />
     </arc>
   </epc>
-  <epc EpcId="9" name="birhtCertificate_p250">
+  <epc epcId="9" name="birhtCertificate_p250">
     <function id="1">
       <name>t29</name>
     </function>

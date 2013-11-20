@@ -2,7 +2,14 @@
 /**
  * Entwickelt und getestet fuer die Windows-Version 2.1 von WordNet
  * Beschreibung des CLI von WordNet: http://wordnet.princeton.edu/wordnet/man/wn.1WN.html
- *
+ * 
+ * Installation unter Linux: 
+ * apt-get install libc6 \
+ *   libx11-6 \
+ *   tcl8.4 \
+ *   tk8.4 \
+ *   wordnet-base
+ * 
  * @author t.thaler
  *
  */

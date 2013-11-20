@@ -14,8 +14,11 @@ $similarityMeasures = array(
 		"cf"		=> "causal footprints",
 		"lcsot"		=> "longest common subsequence of traces",
 		"ts"		=> "terminology similarity",
-		"tswf"		=> "terminology similarity with frequencies"
-		
+		"tswf"		=> "terminology similarity with frequencies",
+		"reihe1"    => "reihe1",
+		"reihe2"    => "reihe2",
+		"time"		=> "time",
+		"traces"    => "traces"
 );
 
 $flippedSimilarityMeasures = array_flip($similarityMeasures);

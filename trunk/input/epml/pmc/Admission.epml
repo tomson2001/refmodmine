@@ -2,7 +2,7 @@
 <epml:epml xmlns:epml="http://www.epml.de"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
   <directory name='Admission'>
-  <epc EpcId="1" name="Admission Cologne">
+  <epc epcId="1" name="Admission Cologne">
     <function id="1">
       <name>Check Documents</name>
     </function>
@@ -136,7 +136,7 @@
       <flow source="30" target="15" />
     </arc>
   </epc>
-  <epc EpcId="2" name="Admission Frankfurt">
+  <epc epcId="2" name="Admission Frankfurt">
     <function id="1">
       <name>Average Grade is Good or better</name>
     </function>
@@ -321,7 +321,7 @@
       <flow source="48" target="24" />
     </arc>
   </epc>
-  <epc EpcId="3" name="Admission FU Berlin">
+  <epc epcId="3" name="Admission FU Berlin">
     <function id="1">
       <name>receive rejection</name>
     </function>
@@ -599,7 +599,7 @@
       <flow source="69" target="60" />
     </arc>
   </epc>
-  <epc EpcId="4" name="Admission Hohenheim">
+  <epc epcId="4" name="Admission Hohenheim">
     <function id="1">
       <name>t28</name>
     </function>
@@ -943,7 +943,7 @@
       <flow source="76" target="38" />
     </arc>
   </epc>
-  <epc EpcId="5" name="Admission IIS Erlangen">
+  <epc epcId="5" name="Admission IIS Erlangen">
     <function id="1">
       <name>german?</name>
     </function>
@@ -1377,7 +1377,7 @@
       <flow source="100" target="44" />
     </arc>
   </epc>
-  <epc EpcId="6" name="Admission Muenster">
+  <epc epcId="6" name="Admission Muenster">
     <function id="1">
       <name>not take interview</name>
     </function>
@@ -1880,7 +1880,7 @@
       <flow source="122" target="114" />
     </arc>
   </epc>
-  <epc EpcId="7" name="Admission Potsdam">
+  <epc epcId="7" name="Admission Potsdam">
     <function id="1">
       <name>receive rejection</name>
     </function>
@@ -2338,7 +2338,7 @@
       <flow source="104" target="109" />
     </arc>
   </epc>
-  <epc EpcId="8" name="Admission TU Munich">
+  <epc epcId="8" name="Admission TU Munich">
     <function id="1">
       <name>Apply Online</name>
     </function>
@@ -2502,7 +2502,7 @@
       <flow source="43" target="45" />
     </arc>
   </epc>
-  <epc EpcId="9" name="Admission Wuerzburg">
+  <epc epcId="9" name="Admission Wuerzburg">
     <function id="1">
       <name>receive rejection</name>
     </function>

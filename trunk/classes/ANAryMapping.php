@@ -14,7 +14,7 @@ abstract class ANAryMapping {
 	
 	public function contains(EPC $epc) {
 		foreach ( $this->epcs as $currentEPC ) {
-			if ( $currentEPC->name == $epc->name ) return true;
+			if ( $currentEPC->internalID == $epc->internalID ) return true;
 		}
 		return false;
 	}

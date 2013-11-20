@@ -1,7 +1,6 @@
 <?php
 class EPC {
 
-	public $id;
 	public $name;
 	private $xml;
 
@@ -11,35 +10,25 @@ class EPC {
 	public $xor = array();
 	public $or = array();
 	public $and = array();
-
+	
 	public $traces = array();
-
+	
 	public $idConversion = array();
 
-	public $autoCorrected = false;
-	public $correctSplitJoinConnectors = false;
-	public $correctSenselessConnectors = false;
-	public $correctStandAndEndFunctions = false;
-
 	public $warnings = array();
-
-	public $internalID;
 
 	/**
 	 * SimpleXMLElement aus einer EPML-File
 	 *
 	 * @param SimpleXMLElement $epc
-	 */
-	public function __construct($xml, $modelID, $modelName, $format="epml") {
+	*/
+	public function __construct($xml, $modelID, $format="epml") {
 		$this->xml = $xml;
-		$this->id = utf8_decode($this->convertIllegalChars($modelID));
-		$this->name = utf8_decode($this->convertIllegalChars($modelName));
+		$this->name = $this->convertIllegalChars($modelID);
 		if ( $format == "epml" ) {
 			$this->loadEPML($xml, $modelID);
 		}
 		$this->cleanLabels();
-		unset($this->xml);
-		$this->internalID = $this->name."_".$this->id."_".rand();
 		//print_r($this);
 	}
 
@@ -51,42 +40,42 @@ class EPC {
 	 */
 	private function loadEPML($xml, $modelID) {
 		// Funktionen laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/function") as $function) {
+		foreach ($xml->xpath("//epc[@name='".$modelID."']/function") as $function) {
 			$index = $this->getNextID();
 			$this->functions[$index] = rtrim(ltrim(utf8_decode($this->convertIllegalChars($function->name))));
 			$this->idConversion[utf8_decode((string) $function["id"])] = $index;
 		}
 
 		// Ereignisse laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/event") as $event) {
+		foreach ($xml->xpath("//epc[@name='".$modelID."']/event") as $event) {
 			$index = $this->getNextID();
 			$this->events[$index] = rtrim(ltrim(utf8_decode($this->convertIllegalChars($event->name))));
 			$this->idConversion[utf8_decode((string) $event["id"])] = $index;
 		}
 
 		// XOR laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/xor") as $xor) {
+		foreach ($xml->xpath("//epc[@name='".$modelID."']/xor") as $xor) {
 			$index = $this->getNextID();
 			$this->xor[$index] = "xor";
 			$this->idConversion[utf8_decode((string) $xor["id"])] = $index;
 		}
 
 		// OR laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/or") as $or) {
+		foreach ($xml->xpath("//epc[@name='".$modelID."']/or") as $or) {
 			$index = $this->getNextID();
 			$this->or[$index] = "or";
 			$this->idConversion[utf8_decode((string) $or["id"])] = $index;
 		}
 
 		// AND laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/and") as $and) {
+		foreach ($xml->xpath("//epc[@name='".$modelID."']/and") as $and) {
 			$index = $this->getNextID();
 			$this->and[$index] = "and";
 			$this->idConversion[utf8_decode((string) $and["id"])] = $index;
 		}
 
 		// Kanten laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/arc") as $edge) {
+		foreach ($xml->xpath("//epc[@name='".$modelID."']/arc") as $edge) {
 			$flow = $edge->flow;
 			$sourceIndex = $this->idConversion[(string) $flow['source']];
 			$targetIndex = $this->idConversion[(string) $flow['target']];
@@ -94,12 +83,12 @@ class EPC {
 			array_push($this->edges, $edge);
 		}
 	}
-
+	
 	public function cleanLabels() {
 		foreach ($this->functions as $id => $label) {
 			$this->functions[$id] = trim(str_replace("\\n", " ", $label));
 		}
-
+		
 		foreach ($this->events as $id => $label) {
 			$this->events[$id] = trim(str_replace("\\n", " ", $label));
 		}
@@ -128,12 +117,12 @@ class EPC {
 			return false;
 		}
 	}
-
+	
 	public function isFunction($nodeID) {
 		$nodeID = (string) $nodeID;
 		return array_key_exists($nodeID, $this->functions);
 	}
-
+	
 	public function isEvent($nodeID) {
 		$nodeID = (string) $nodeID;
 		return array_key_exists($nodeID, $this->events);
@@ -268,17 +257,17 @@ class EPC {
 				}
 			}
 		}
-
+		
 		// Func-IDs in den Traces aendern
 		if ( is_array($this->traces) ) {
 			foreach ( $this->traces as $traceIndex => $trace ) {
 				foreach ( $trace as $funcIndex => $funcID ) {
 					$mappedFunctionID = $mapping->mappingExistsTo($funcID);
 					if ( $mappedFunctionID && $mappedFunctionID != $funcID ) {
-							
+					
 						// FunctionID in trace aendern
 						$this->traces[$traceIndex][$funcIndex] = $mappedFunctionID;
-							
+					
 					}
 				}
 			}
@@ -343,7 +332,7 @@ class EPC {
 		}
 		unset($this->edges[$edgeIndex]);
 	}
-
+	
 	public function deleteEvent($eventID) {
 		$eventID = (string) $eventID;
 		foreach ( $this->edges as $index => $edge ) {
@@ -376,38 +365,6 @@ class EPC {
 		unset($this->events[$eventID]);
 	}
 
-	public function deleteFunction($funcID) {
-		$funcID = (string) $funcID;
-		foreach ( $this->edges as $index => $edge ) {
-			// Function ist Quelle
-			if ( array_key_exists($funcID, $edge) ) {
-				$target = $edge[$funcID];
-				$source = $this->getPredecessor($funcID);
-				if ( !empty($source) ) {
-					$source = $source[0];
-					$newEdge = array($source => $target);
-					$this->edges[$index] = $newEdge;
-				} else {
-					unset($this->edges[$index]);
-				}
-			}
-			// Function ist Ziel
-			$flipped = array_flip($edge);
-			if ( array_key_exists($funcID, $flipped) ) {
-				$source = $flipped[$funcID];
-				$target = $this->getSuccessor($funcID);
-				if ( !empty($target) ) {
-					$target = $target[0];
-					$newEdge = array($source => $target);
-					$this->edges[$index] = $newEdge;
-				} else {
-					unset($this->edges[$index]);
-				}
-			}
-		}
-		unset($this->functions[$funcID]);
-	}
-
 	public function addEdge($sourceNodeID, $targetNodeID) {
 		$sourceNodeID = (string) $sourceNodeID;
 		$targetNodeID = (string) $targetNodeID;
@@ -433,13 +390,13 @@ class EPC {
 		}
 		return null;
 	}
-
+	
 	public function isEndNode($nodeID) {
 		$endNodes = $this->getAllEndNodes();
 		if ( array_key_exists($nodeID, $endNodes) ) return true;
 		return false;
 	}
-
+	
 	/**
 	 * Gibt alle Endknoten zurueck
 	 * @return array
@@ -468,7 +425,7 @@ class EPC {
 		}
 		return null;
 	}
-
+	
 	/**
 	 * Gibt alle Startknoten zurueck
 	 * @return array
@@ -496,20 +453,20 @@ class EPC {
 	 * Prueft die EPK hinsichtlich der AND-soundness.
 	 *
 	 * @return boolean - true = soundness ok
-
-	 public function checkANDSoundness() {
+	 
+	public function checkANDSoundness() {
 		$andSplits = $this->getAllSplitConnectors($this->and);
 		$andJoins = $this->getAllJoinConnectors($this->and);
 
 		foreach ( $andSplits as $id => $type ) {
-		if ( $this->isValidANDSplit($id) === false ) {
-		array_push($this->warnings, "EPC is not AND-sound.");
-		return false;
-		}
+			if ( $this->isValidANDSplit($id) === false ) {
+				array_push($this->warnings, "EPC is not AND-sound.");
+				return false;
+			}
 		}
 		return true;
-		}
-		*/
+	}
+	*/
 
 	/**
 	 * Ermittelt alle Split-Konnektoren
@@ -542,13 +499,13 @@ class EPC {
 		}
 		return $joinConnectors;
 	}
-
+	
 	public function isJoin($nodeID) {
 		$nodeID = (string) $nodeID;
 		$predecessors = $this->getPredecessor($nodeID);
 		return count($predecessors) > 1;
 	}
-
+	
 	public function isSplit($nodeID) {
 		$nodeID = (string) $nodeID;
 		$successors = $this->getSuccessor($nodeID);
@@ -565,7 +522,7 @@ class EPC {
 		$joinConnectors = $this->getAllJoinConnectors($this->and);
 		return array_key_exists($nodeID, $joinConnectors);
 	}
-
+	
 	/**
 	 * Prueft, ob es sich bei einem Knoten um einen XOR-Join handelt
 	 * @param mixed $nodeID
@@ -576,7 +533,7 @@ class EPC {
 		$joinConnectors = $this->getAllJoinConnectors($this->xor);
 		return array_key_exists($nodeID, $joinConnectors);
 	}
-
+	
 	/**
 	 * Prueft, ob es sich bei einem Knoten um einen OR-Join handelt
 	 * @param mixed $nodeID
@@ -587,26 +544,26 @@ class EPC {
 		$joinConnectors = $this->getAllJoinConnectors($this->or);
 		return array_key_exists($nodeID, $joinConnectors);
 	}
-
+	
 	public function hasORJoin() {
 		foreach ( $this->or as $orID => $label ) {
 			if ( $this->isORJoin($orID) ) return true;
 		}
 		return false;
 	}
-
+	
 	public function hasXORJoin() {
 		foreach ( $this->xor as $xorID => $label ) {
 			if ( $this->isXORJoin($xorID) ) return true;
 		}
 		return false;
 	}
-
+	
 	public function isOr($nodeID) {
 		$nodeID = (string) $nodeID;
 		return array_key_exists($nodeID, $this->or);
 	}
-
+	
 	public function isXor($nodeID) {
 		$nodeID = (string) $nodeID;
 		return array_key_exists($nodeID, $this->xor);
@@ -622,7 +579,7 @@ class EPC {
 		$splitConnectors = $this->getAllSplitConnectors($this->and);
 		return array_key_exists($nodeID, $splitConnectors);
 	}
-
+	
 	/**
 	 * Prueft, ob es sich bei einem Knoten um einen AND-Split handelt
 	 * @param mixed $nodeID
@@ -633,7 +590,7 @@ class EPC {
 		$splitConnectors = $this->getAllSplitConnectors($this->or);
 		return array_key_exists($nodeID, $splitConnectors);
 	}
-
+	
 	/**
 	 * Prueft, ob es sich bei einem Knoten um einen XOR-Split handelt
 	 * @param mixed $nodeID
@@ -650,44 +607,44 @@ class EPC {
 	 * D.h. Alle AND-Splits muessen den gleichen oder keinen AND-Join haben
 	 *
 	 * @param mixed $andSplitID
-
-	 public function isValidANDSplit($andSplitID) {
+	 
+	public function isValidANDSplit($andSplitID) {
 		$successors = $this->getSuccessor($andSplitID);
 		$nextValidANDJoin = null;
 		$count = 0;
 		foreach ( $successors as $successor ) {
+				
+			// Ist der Nachfolgeknoten ein AND-Join?
+			if ( $this->isANDJoin($successor) ) {
+				// Untersuchen des ersten Pfades: Falls ein AND-Join gefunden wurde, dann setzen
+				if ( $count == 0 ) {
+					$nextValidANDJoin = $successor;
+				} else {
+					// Untersuchen der weiteren Pfade
+					// Wenn der gefunde AND-Join gleich dem gefundenen AND-Join der vorher untersuchten Pfade ist, dann weitermachen
+					if ( $nextValidANDJoin == $successor ) {
+						$count++;
+						continue;
+					} else {
+						array_push($this->warnings, "Error in EPC (AND-soundness) near Node \"".$this->getNodeLabel($successor)."\" (".$successor.")");
+						return false;
+					}
+				}
+			} else {
+				$searchResult = $this->checkSuccessorsForANDJoin($successor, 0, array($successor));
+				if ( (is_null($searchResult) && is_null($nextValidANDJoin)) || $searchResult == $nextValidANDJoin ) {
+					$count++;
+					continue;
+				} else {
+					array_push($this->warnings, "Error in EPC (AND-soundness) near Node \"".$this->getNodeLabel($successor)."\" (".$successor.")");
+					return false;
+				}
+			}
 
-		// Ist der Nachfolgeknoten ein AND-Join?
-		if ( $this->isANDJoin($successor) ) {
-		// Untersuchen des ersten Pfades: Falls ein AND-Join gefunden wurde, dann setzen
-		if ( $count == 0 ) {
-		$nextValidANDJoin = $successor;
-		} else {
-		// Untersuchen der weiteren Pfade
-		// Wenn der gefunde AND-Join gleich dem gefundenen AND-Join der vorher untersuchten Pfade ist, dann weitermachen
-		if ( $nextValidANDJoin == $successor ) {
-		$count++;
-		continue;
-		} else {
-		array_push($this->warnings, "Error in EPC (AND-soundness) near Node \"".$this->getNodeLabel($successor)."\" (".$successor.")");
-		return false;
+			$count++;
 		}
-		}
-		} else {
-		$searchResult = $this->checkSuccessorsForANDJoin($successor, 0, array($successor));
-		if ( (is_null($searchResult) && is_null($nextValidANDJoin)) || $searchResult == $nextValidANDJoin ) {
-		$count++;
-		continue;
-		} else {
-		array_push($this->warnings, "Error in EPC (AND-soundness) near Node \"".$this->getNodeLabel($successor)."\" (".$successor.")");
-		return false;
-		}
-		}
-
-		$count++;
-		}
-		}
-		*/
+	}
+	*/
 
 	/**
 	 *
@@ -696,8 +653,8 @@ class EPC {
 	 * @param int $blocksForANDJoin soll der nachste AND-Join genommen werden (kann sein, dass nicht, wenn z.B. AND-Split -> AND-Split -> AND-Join -> AND-Join)
 	 * @param array $walkedNodes Bereits durchlaufene Knoten
 	 * @return NULL|Ambigous <>
-
-	 public function checkSuccessorsForANDJoin($nodeID, $blocksForANDJoin, $walkedNodes = array()) {
+	 
+	public function checkSuccessorsForANDJoin($nodeID, $blocksForANDJoin, $walkedNodes = array()) {
 		$successors = $this->getSuccessor($nodeID);
 
 		// Wenn keine Nachfolge existieren, dann gib null zurueck
@@ -706,41 +663,41 @@ class EPC {
 		// Nachfolger aussuchen
 		$successor = null;
 		foreach ( $successors as $succ ) {
-		if ( is_null($successor) && !in_array($succ, $walkedNodes) ) {
-		array_push($walkedNodes, $succ);
-		$successor = $succ;
-		}
+			if ( is_null($successor) && !in_array($succ, $walkedNodes) ) {
+				array_push($walkedNodes, $succ);
+				$successor = $succ;
+			}
 		}
 
 		// Kein waelbarer Nachfolger vorhanden (error in epc)
 		if ( is_null($successor) ) {
-		array_push($this->warnings, "Error in EPC near Node \"".$this->getNodeLabel($nodeID)."\" (".$nodeID.")");
-		return false;
+			array_push($this->warnings, "Error in EPC near Node \"".$this->getNodeLabel($nodeID)."\" (".$nodeID.")");
+			return false;
 		}
 
 		// Wenn nachster Knoten ein Konnektor
 		if ( $this->isConnector($successor[0]) ) {
-		// wenn nachster Knoten AND-Join
-		if ( $this->isANDJoin($successors[0]) ) {
-		// wenn der AND-Join genommen werden kann
-		if ( $blocksForANDJoin == 0 ) {
-		return $successors[0];
-		} else {
-		return $this->checkSuccessorsForANDJoin($successors[0], $blocksForANDJoin--, $walkedNodes);
-		}
-		} elseif ( $this->isANDSplit($successors[0]) ) {
-		// Wenn naechster Knoten ein AND-Split, dann setze einen blockiere den nachsten auftretenden AND-Join
-		return $this->checkSuccessorsForANDJoin($successors[0], $blocksForANDJoin++, $walkedNodes);
-		}
+			// wenn nachster Knoten AND-Join
+			if ( $this->isANDJoin($successors[0]) ) {
+				// wenn der AND-Join genommen werden kann
+				if ( $blocksForANDJoin == 0 ) {
+					return $successors[0];
+				} else {
+					return $this->checkSuccessorsForANDJoin($successors[0], $blocksForANDJoin--, $walkedNodes);
+				}
+			} elseif ( $this->isANDSplit($successors[0]) ) {
+				// Wenn naechster Knoten ein AND-Split, dann setze einen blockiere den nachsten auftretenden AND-Join
+				return $this->checkSuccessorsForANDJoin($successors[0], $blocksForANDJoin++, $walkedNodes);
+			}
 		}
 		// weiter suchen
 		return $this->checkSuccessorsForANDJoin($successors[0], $blocksForANDJoin, $walkedNodes);
-		}
-		*/
-
+	}
+	*/
+	
 	/**
 	 * Prueft, ob das Modell genau einen Startknoten UND genau einen Endknoten hat.array
-	 *
+	 * 
 	 * @return boolean
 	 */
 	public function isSESE() {
@@ -748,15 +705,15 @@ class EPC {
 		$endNodes = $this->getAllEndNodes();
 		return count($startNodes) == 1 && count($endNodes) == 1;
 	}
-
+	
 	public function exportEPML($print_ids = false) {
 		$content =  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 		$content .= "<epml:epml xmlns:epml=\"http://www.epml.de\"\n";
 		$content .= "  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"epml_1_draft.xsd\">\n";
-		$content .= "  <epc EpcId=\"".$this->id."\" name=\"".$this->convertIllegalChars($this->name)."\">\n";
-
+		$content .= "  <epc EpcId=\"1\" name=\"".$this->convertIllegalChars($this->name)."\">\n";
+		
 		$maxID = 0;
-
+		
 		foreach ( $this->functions as $id => $label ) {
 			$content .= "    <function id=\"".$id."\">\n";
 			$content .= "      <name>".$this->convertIllegalChars($label);
@@ -765,7 +722,7 @@ class EPC {
 			$content .= "    </function>\n";
 			if ( $id > $maxID ) $maxID = $id+1;
 		}
-
+		
 		foreach ( $this->events as $id => $label ) {
 			$content .= "    <event id=\"".$id."\">\n";
 			$content .= "      <name>".$this->convertIllegalChars($label);
@@ -774,34 +731,34 @@ class EPC {
 			$content .= "    </event>\n";
 			if ( $id > $maxID ) $maxID = $id+1;
 		}
-
+		
 		foreach ( $this->getAllConnectors() as $id => $label ) {
 			$content .= "    <".$label." id=\"".$id."\">\n";
 			$content .= "      <name/>\n";
 			$content .= "    </".$label.">\n";
 			if ( $id > $maxID ) $maxID = $id+1;
 		}
-
+		
 		foreach ( $this->edges as $index => $edge ) {
 			$keys = array_keys($edge);
 			$source = $keys[0];
 			$target = $edge[$source];
-				
+			
 			$content .= "    <arc id=\"".$maxID."\">\n";
 			$content .= "      <flow source=\"".$source."\" target=\"".$target."\" />\n";
 			$content .= "    </arc>\n";
-				
+			
 			$maxID++;
 		}
-
+		
 		$content .= "  </epc>\n";
 		$content .= "</epml:epml>";
-
+		
 		$fileGenerator = new FileGenerator(trim($this->name).".epml", $content);
 		$file = $fileGenerator->execute();
 		return $file;
 	}
-
+	
 	public function convertIllegalChars($string) {
 		$string = str_replace("Ä", "Ae", $string);
 		$string = str_replace("ä", "ae", $string);
@@ -813,207 +770,27 @@ class EPC {
 		$string = str_replace("\n", " ", $string);
 		return $string;
 	}
-
-	/**
-	 * Korrigiert Konnektoren, die mehrere eingehende UND mehrere ausgehende Kante haben,
-	 * indem dafuer zwei Konnektoren erzeugt werden. Ein Split- und ein Join-Konnektor
-	 */
-	public function correctSplitJoinConnectors() {
-		// XOR
-		foreach ( $this->xor as $id => $label ) {
-			$predecessors = $this->getPredecessor($id);
-			$successors = $this->getSuccessor($id);
-			if ( count($predecessors) > 1 && count($successors) > 1 ) {
-
-				// Neuen Konnektor erstellen
-				$newConnID = $this->getNextID();
-				$this->xor[$newConnID] = "xor";
-				$this->idConversion[$newConnID] = "REFMOD-AUTOGEN";
-
-				// an den neuen Konnektor die ausgehenden Kanten anschliessen und vom alten abschliessen
-				foreach ( $successors as $successor ) {
-					$this->addEdge($newConnID, $successor);
-					$this->deleteEdge($id, $successor);
-				}
-
-				// Kante zwischen altem und neuen Konnektor ziehen
-				$this->addEdge($id, $newConnID);
-
-				$this->correctSplitJoinConnectors = true;
-			}
-		}
-		// OR
-		foreach ( $this->or as $id => $label ) {
-			$predecessors = $this->getPredecessor($id);
-			$successors = $this->getSuccessor($id);
-			if ( count($predecessors) > 1 && count($successors) > 1 ) {
-
-				// Neuen Konnektor erstellen
-				$newConnID = $this->getNextID();
-				$this->or[$newConnID] = "or";
-				$this->idConversion[$newConnID] = "REFMOD-AUTOGEN";
-
-				// an den neuen Konnektor die ausgehenden Kanten anschliessen und vom alten abschliessen
-				foreach ( $successors as $successor ) {
-					$this->addEdge($newConnID, $successor);
-					$this->deleteEdge($id, $successor);
-				}
-
-				// Kante zwischen altem und neuen Konnektor ziehen
-				$this->addEdge($id, $newConnID);
-
-				$this->correctSplitJoinConnectors = true;
-			}
-		}
-		// AND
-		foreach ( $this->and as $id => $label ) {
-			$predecessors = $this->getPredecessor($id);
-			$successors = $this->getSuccessor($id);
-			if ( count($predecessors) > 1 && count($successors) > 1 ) {
-
-				// Neuen Konnektor erstellen
-				$newConnID = $this->getNextID();
-				$this->and[$newConnID] = "and";
-				$this->idConversion[$newConnID] = "REFMOD-AUTOGEN";
-
-				// an den neuen Konnektor die ausgehenden Kanten anschliessen und vom alten abschliessen
-				foreach ( $successors as $successor ) {
-					$this->addEdge($newConnID, $successor);
-					$this->deleteEdge($id, $successor);
-				}
-
-				// Kante zwischen altem und neuen Konnektor ziehen
-				$this->addEdge($id, $newConnID);
-
-				$this->correctSplitJoinConnectors = true;
-			}
-		}
-	}
-
-	/**
-	 * Entfernt sinnlose Konnektoren, die genau eine Eingangs- und Ausgangskante haben.
-	 */
-	public function correctSenselessConnectors() {
-		// XOR
-		foreach ( $this->xor as $id => $label ) {
-			$predecessors = $this->getPredecessor($id);
-			$successors = $this->getSuccessor($id);
-			if ( count($predecessors) == 1 && count($successors) == 1 ) {
-				$predecessor = $predecessors[0];
-				$successor = $successors[0];
-
-				// Kante zwischen Vorgaenger und Nachfolgerknoten erstellen
-				$this->addEdge($predecessor, $successor);
-
-				// sinnlosen Konnektor entfernen
-				unset($this->xor[$id]);
-				$this->deleteEdge($predecessor, $id);
-				$this->deleteEdge($id, $successor);
-
-				$this->correctSenselessConnectors = true;
-			}
-		}
-
-		// OR
-		foreach ( $this->or as $id => $label ) {
-			$predecessors = $this->getPredecessor($id);
-			$successors = $this->getSuccessor($id);
-			if ( count($predecessors) == 1 && count($successors) == 1 ) {
-				$predecessor = $predecessors[0];
-				$successor = $successors[0];
-
-				// Kante zwischen Vorgaenger und Nachfolgerknoten erstellen
-				$this->addEdge($predecessor, $successor);
-
-				// sinnlosen Konnektor entfernen
-				unset($this->or[$id]);
-				$this->deleteEdge($predecessor, $id);
-				$this->deleteEdge($id, $successor);
-
-				$this->correctSenselessConnectors = true;
-			}
-		}
-
-		// AND
-		foreach ( $this->and as $id => $label ) {
-			$predecessors = $this->getPredecessor($id);
-			$successors = $this->getSuccessor($id);
-			if ( count($predecessors) == 1 && count($successors) == 1 ) {
-				$predecessor = $predecessors[0];
-				$successor = $successors[0];
-
-				// Kante zwischen Vorgaenger und Nachfolgerknoten erstellen
-				$this->addEdge($predecessor, $successor);
-
-				// sinnlosen Konnektor entfernen
-				unset($this->and[$id]);
-				$this->deleteEdge($predecessor, $id);
-				$this->deleteEdge($id, $successor);
-
-				$this->correctSenselessConnectors = true;
-			}
-		}
-	}
-
-	/**
-	 * Sollten Start- bzw. Endfunktionen vorkommen, wird vor, bzw. nach diese ein Ereignis gesetzt.
-	 */
-	public function correctEndAndStartFunctions() {
-		foreach ( $this->functions as $id => $label ) {
-			$predecessors = $this->getPredecessor($id);
-			$successors = $this->getSuccessor($id);
-			// Startfunktion
-			if ( count($predecessors) == 0 ) {
-				// Neues Ereignis erstellen und Kante zur Funktion ziehen
-				$newEventID = $this->getNextID();
-				$this->events[$newEventID] = "RefMod-AutoGen: Startevent";
-				$this->addEdge($newEventID, $id);
-				$this->idConversion[$newEventID] = "REFMOD-AUTOGEN";
-				$this->correctStandAndEndFunctions = true;
-			}
-			// Endfunktion
-			if ( count($successors) == 0 ) {
-				// Neues Ereignis erstellen und Kante zur Funktion ziehen
-				$newEventID = $this->getNextID();
-				$this->events[$newEventID] = "RefMod-AutoGen: Endevent";
-				$this->addEdge($id, $newEventID);
-				$this->idConversion[$newEventID] = "REFMOD-AUTOGEN";
-				$this->correctStandAndEndFunctions = true;
-			}
-				
-		}
-	}
-
-	public function tryToCorrectSyntax() {
-		$this->correctSenselessConnectors();
-		$this->correctSplitJoinConnectors();
-		$this->correctEndAndStartFunctions();
-		$this->autoCorrected = true;
-		$this->exportEPML();
-		return $this->isSyntaxCorrect();
-	}
-
+	
 	/**
 	 * Pruefung auf Syntax-Korrektheit, wie sie im State-Explosion Papier (Thaler) definiert ist
 	 */
 	public function isSyntaxCorrect() {
-
 		// Es existiert mind. ein Start und Endereignis
 		if ( count($this->getAllStartNodes()) == 0 ) return false;
 		if ( count($this->getAllEndNodes()) == 0 ) return false;
-
+		
 		// Ereignis haben max. eine eingehende und ausgehende Kante
 		foreach ( $this->events as $eventID => $label ) {
 			if ( count($this->getPredecessor($eventID)) > 1 ) return false;
 			if ( count($this->getSuccessor($eventID)) > 1 ) return false;
 		}
-
+		
 		// Funktion haben genau eine eingehende und ausgehende Kante
 		foreach ( $this->functions as $funcID => $label ) {
 			if ( count($this->getPredecessor($funcID)) != 1 ) return false;
 			if ( count($this->getSuccessor($funcID)) != 1 ) return false;
 		}
-
+		
 		// Konnektoren haben genau eine eigehende und mehrere ausgehende Kanten (Split-Konnektor) oder mehrere eingehende und genau eine ausgehende Kante (Join-Konnektor).
 		$connectors = $this->getAllConnectors();
 		foreach ( $connectors as $connID => $type ) {
@@ -1021,30 +798,12 @@ class EPC {
 			if ( count($this->getPredecessor($connID)) <= 1 && count($this->getSuccessor($connID)) <= 1 ) return false;
 			if ( count($this->getPredecessor($connID)) > 1 && count($this->getSuccessor($connID)) > 1 ) return false;
 		}
-
+		
 		return true;
 	}
-
+	
 	private function getNextID() {
 		return count($this->idConversion);
-	}
-
-	public function getNumOfNodes() {
-		return count($this->events) + count($this->functions) + count($this->xor) + count($this->or) + count($this->and);
-	}
-
-	public function deleteDummyTransitions() {
-		foreach ( $this->functions as $id => $label ) {
-			if ( preg_match("/^t[0-9]*$/", trim($label) ) ) $this->deleteFunction($id);
-		}
-	}
-
-	public function transformFunctionToEvent($id) {
-		if ( $this->isFunction($id) ) {
-			$label = $this->functions[$id];
-			unset($this->functions[$id]);
-			$this->events[$id] = $label;
-		}
 	}
 
 }

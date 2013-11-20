@@ -86,7 +86,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 
 		// Auswahl des Mappings
 		$mapping = null;
-		if ( in_array("--nary", $argv) ) {
+		if ( in_array("--nscm", $argv) ) {
 			$mapping = $naryMapping->extractBinaryMapping($epc1, $epc2);
 		} else {
 			//$mapping = new LevenshteinWithStructuralMapping($epc1, $epc2);

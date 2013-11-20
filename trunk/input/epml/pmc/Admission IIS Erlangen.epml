@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <epml:epml xmlns:epml="http://www.epml.de"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
-  <epc EpcId="1" name="Admission IIS Erlangen">
+  <epc epcId="1" name="Admission IIS Erlangen">
     <function id="1">
       <name>german?</name>
     </function>

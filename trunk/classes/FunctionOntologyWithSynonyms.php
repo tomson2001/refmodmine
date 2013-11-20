@@ -24,7 +24,7 @@ class FunctionOntologyWithSynonyms {
 			"a", "as", "in", "other", "according"
 	);
 
-	private $remove_character_list = array("!", "?", "%", "'", "'s", "*", "<", ">", "(", ")", "/");
+	private $remove_character_list = array("!", "?", "%", "'", "'s", "*", "<", ">", "(", ")", "/", ";", ",", ".");
 
 	private $useSynonyms = true;
 
@@ -48,6 +48,8 @@ class FunctionOntologyWithSynonyms {
 	private function buildOntology() {
 		// 1. Operation: strtolower
 		$label = strtolower($this->label);
+		$label = str_replace("\n", " ", $label);
+		$label = str_replace("\r", " ", $label);
 
 		// 2. Split der Labels anhand der Leerzeichen
 		$label_components = explode(" ", $label);
@@ -126,7 +128,7 @@ class FunctionOntologyWithSynonyms {
 
 				// Testausgabe
 				//print("\"".$component."\"");
-				print(".");
+				//print("-");
 			}
 		}
 
