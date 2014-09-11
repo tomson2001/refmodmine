@@ -1,0 +1,72 @@
+<?php
+/**
+ * loading/parsing MXML Log files
+ * 
+ * @author t.thaler
+ *
+ */
+class MXMLLoader {
+	
+	private $filename;
+	private $xml;
+	private $aggregate;
+
+	public $processLog;
+	
+	/**
+	 * Constructor
+	 * 
+	 * @param unknown_type $filename
+	 * @param unknown_type $xml
+	 * @param unknown_type $aggregate decided whether the ProcessLog should be aggregated or not
+	 */
+	public function __construct($filename, $xml, $aggregate=false) {
+		$this->xml = $xml;
+		$this->filename = $filename;
+		$this->processLog = new ProcessLog($filename, $aggregate);
+		$this->aggregate = $aggregate;
+	}
+	
+	/**
+	 * Erzeugt ein ProcessLog aus einer MXML-Datei
+	 * @return number
+	 */
+	public function load() {
+		$loadedTraces = 0;
+		foreach ($this->xml->xpath("//ProcessInstance") as $xml_trace) {
+			$id = utf8_decode((string) $xml_trace["id"]);
+			
+			$trace = new Trace($id);
+			$positionInTrace = 0;
+			
+			foreach ($this->xml->xpath("//ProcessInstance[@id='".$id."']/AuditTrailEntry") as $traceEntry) {
+				$positionInTrace++;
+				$activity = rtrim(ltrim(utf8_decode($this->convertIllegalChars($traceEntry->WorkflowModelElement))));
+				$type = rtrim(ltrim(utf8_decode($this->convertIllegalChars($traceEntry->EventType))));
+				$originator = rtrim(ltrim(utf8_decode($this->convertIllegalChars($traceEntry->Originator))));
+				$timestamp = rtrim(ltrim(utf8_decode($this->convertIllegalChars($traceEntry->Timestamp))));
+				$pot = strtotime($timestamp);
+				$traceEntry = new TraceEntry($activity, $pot, $originator, $type, $positionInTrace);
+				$trace->addTraceEntry($traceEntry);
+			}
+
+			if ( $this->aggregate ) $trace->makeEntriesRepresentative();
+			$this->processLog->addTrace($trace);
+			$loadedTraces++;
+		}
+		return $this->processLog;
+	}
+	
+	public function convertIllegalChars($string) {
+		$string = str_replace("Ä", "Ae", $string);
+		$string = str_replace("ä", "ae", $string);
+		$string = str_replace("Ö", "Oe", $string);
+		$string = str_replace("ö", "oe", $string);
+		$string = str_replace("Ü", "Ue", $string);
+		$string = str_replace("ü", "ue", $string);
+		$string = str_replace("ß", "ss", $string);
+		$string = str_replace("\n", " ", $string);
+		return $string;
+	}
+}
+?>

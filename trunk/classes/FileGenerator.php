@@ -23,6 +23,8 @@ class FileGenerator {
 	public function setFilename($filename) {
 		$filename = str_replace(":", "", str_replace(" ", "", $filename));
 		$filename = str_replace("/", "-", $filename);
+		$filename = str_replace("[", "-", $filename);
+		$filename = str_replace("]", "-", $filename);
 		$this->filename = $filename;
 	}
 	
