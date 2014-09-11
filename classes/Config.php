@@ -10,6 +10,8 @@ final class Config {
 	const WORDNET_EXE = "\"c:\\Program Files (x86)\\WordNet\\2.1\\bin\\wn.exe\"";
 	const WORDNET_SYNONYM_LIMIT = 7; // Anzahl der zu beruecksichtigen Bedeutungen. Ersten Tests zufolge mindestens 7, MUSS < 10 sein!!!!
 	
+	const INPUT_FOLDER = "C:/xampp/htdocs/refmodmine/input/";
+	
 	const NUM_CORES_TO_WORK_ON = 1;
 	
 	// MOBIS SS11
@@ -51,13 +53,13 @@ final class Config {
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/handels-h-model_2004_original_noSEQ.epml";
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Klausuren Winfo II SS11.epml";
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Klausuren Winfo II WS1011.epml";
-// 	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Klausuren Winfo II WS1112.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Klausuren Winfo II WS1112.epml";
     //const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/SAP R3 prozessorientiert anwenden_adapted.epml";
-	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/SAP_ALL_EPCs_named.epml";
+	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/SAP_ALL_EPCs_named.epml";
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Vogelaar.epml";
-// 	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Y-CIM_3.0.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Y-CIM_3.0.epml";
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Y-CIM_de_adapted.epml";
-// 	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Y-CIM_en_adapted.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Y-CIM_en_adapted.epml";
     //const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/CustomB2B-ATW.epml";
     //const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/CustomB2B-Hype.epml";
     //const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/GK_Rewe_adapted.epml";
@@ -80,7 +82,7 @@ final class Config {
 	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Y-CIM_en_adapted.epml";
     //const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/CustomB2B-ATW.epml";
     //const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/CustomB2B-Hype.epml";
-    //const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/GK_Rewe_adapted.epml";
+    const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/GK_Rewe_adapted.epml";
     //const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/ITIL.epml";
     //const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/pmc_contest.epml";
 	
@@ -89,9 +91,9 @@ final class Config {
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate.epml";
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate_p31.epml";
 	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/birhtCertificate.epml";
-	const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission.epml";
+	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission.epml";
 	//const MODEL_FILE_1 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Cologne.epml";
-	const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission.epml";
+	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission.epml";
 	
 	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission Frankfurt.epml";
 	//const MODEL_FILE_2 = "C:/xampp/htdocs/refmodmine/input/epml/pmc/Admission FU Berlin.epml";
@@ -208,7 +210,8 @@ final class Config {
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/state_explosion.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/state_explosion2.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/state_explosion3.epml";
-	const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/all_examples.epml";
+	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/all_examples.epml";
+	const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/manhattan project.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/beispielmodelle.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell.epml";
 	//const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/SAP_Referenzmodell_Part1.epml";
@@ -281,6 +284,8 @@ final class Config {
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_4.csv";
 	//const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM_Variante_5.csv";
 	const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/empiric_values.csv";
+	
+	const MXML_FILE = "C:/xampp/htdocs/refmodmine/input/mxml/leginda_v2.40.mxml";
 	
 	// Input-Datei für die Berechnung der Stichprobenvarianz
 	const VARIANCE_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM.csv";

@@ -4,6 +4,7 @@ class EPC {
 	public $id;
 	public $name;
 	private $xml;
+	public $modelPath;
 
 	public $functions = array();
 	public $events = array();
@@ -40,7 +41,19 @@ class EPC {
 		$this->cleanLabels();
 		unset($this->xml);
 		$this->internalID = $this->name."_".$this->id."_".rand();
+		$this->loadModelPath($xml, $modelID);
 		//print_r($this);
+	}
+	
+	public function loadModelPath($xml, $modelID) {
+		$path = $this->name;
+		$epc_xml = $xml->xpath("//epc[@epcId='".$modelID."']");
+		$parent = $epc_xml[0]->xpath("parent::*");
+		while ( !empty($parent) ) {
+			$path = $parent[0]["name"]."/".$path;
+			$parent = $parent[0]->xpath("parent::*");
+		}
+		$this->modelPath = $path;
 	}
 
 	/**
@@ -798,6 +811,7 @@ class EPC {
 		$content .= "</epml:epml>";
 
 		$fileGenerator = new FileGenerator(trim($this->name).".epml", $content);
+		$fileGenerator->setFilename(trim($this->name).".epml");
 		$file = $fileGenerator->execute();
 		return $file;
 	}
@@ -1044,6 +1058,74 @@ class EPC {
 			$label = $this->functions[$id];
 			unset($this->functions[$id]);
 			$this->events[$id] = $label;
+		}
+	}
+	
+	/**
+	 * Berechnet die Aehnlichkeit zwischen dieser und einer anderen EPK auf Basis der enthaltenen Kanten,
+	 * wobei Kanten durch die Label der ein- und ausgehenden Knoten definiert ist.
+	 * 
+	 * @param EPC $epc
+	 * @return number
+	 */
+	public function compareTo(EPC $epc) {
+		$humanReadableEdgesThis = $this->convertEdgesToHumanReadable();
+		$humanReadableEdgesOther = $epc->convertEdgesToHumanReadable();
+		
+		$foundEdgesOfThisInOther = 0;
+		foreach ( $humanReadableEdgesThis as $edge ) {
+			if ( in_array($edge, $humanReadableEdgesOther) ) $foundEdgesOfThisInOther++;
+		}
+		
+		$foundEdgesOfOtherInThis = 0;
+		foreach ( $humanReadableEdgesOther as $edge ) {
+			if ( in_array($edge, $humanReadableEdgesThis) ) $foundEdgesOfOtherInThis++;
+		}
+		
+		$numEdgesInThis = count($humanReadableEdgesThis);
+		$numEdgesInOther = count($humanReadableEdgesOther);
+		
+		return round(((($foundEdgesOfThisInOther+$foundEdgesOfOtherInThis)/($numEdgesInThis+$numEdgesInOther)))*100, 2);
+	}
+	
+	public function convertEdgesToHumanReadable() {
+		$humanReadableEdges = array();
+		foreach ( $this->edges as $edge ) {
+			$keys = array_keys($edge);
+			$sourceID = $keys[0];
+			$targetID = $edge[$sourceID];
+			$source = "[".$this->getType($sourceID)."] ".$this->getNodeLabel($sourceID);
+			$target = "[".$this->getType($targetID)."] ".$this->getNodeLabel($targetID);
+			array_push($humanReadableEdges, array($source => $target));
+		}
+		return $humanReadableEdges;
+	}
+	
+	public function convertEdgesToHumanReadableWithIDs() {
+		$humanReadableEdges = array();
+		$humanReadableEdgesIDs = array();
+		foreach ( $this->edges as $edge ) {
+			$keys = array_keys($edge);
+			$sourceID = $keys[0];
+			$targetID = $edge[$sourceID];
+			$source = "[".$this->getType($sourceID)."] ".$this->getNodeLabel($sourceID);
+			$target = "[".$this->getType($targetID)."] ".$this->getNodeLabel($targetID);
+			array_push($humanReadableEdges, array($source => $target));
+			array_push($humanReadableEdgesIDs, array($sourceID => $targetID));
+		}
+		return array("stringEdges" => $humanReadableEdges, "idEdges" => $humanReadableEdgesIDs);
+	}
+	
+	public function removeProMLabelSuffix() {
+		foreach ($this->functions as $id => $label) {
+			$this->functions[$id] = substr($label, 0, -9);
+		}
+	
+		foreach ($this->events as $id => $label) {
+			$newLabel = str_replace("\\ncomplete", "", $label);
+			$newLabel = str_replace("  ", " ", $newLabel);
+			$newLabel = substr($newLabel, 0, -9);
+			$this->events[$id] = $newLabel;
 		}
 	}
 
