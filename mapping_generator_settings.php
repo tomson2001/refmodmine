@@ -22,8 +22,6 @@ if ( !isset($argv[1]) || !array_key_exists($argv[1], $similarityMeasures) ) {
    [--geds]          ".$similarityMeasures["--geds"]."
    [--amaged]        ".$similarityMeasures["--amaged"]."
    [--cf]            ".$similarityMeasures["--cf"]."
-   [--ts]            ".$similarityMeasures["--ts"]."
-   [--tswf]          ".$similarityMeasures["--tswf"]."
    [--nscm]          ".$similarityMeasures["--nscm"]."\n
 
    Weitere Optionen:\n

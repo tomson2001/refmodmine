@@ -13,7 +13,7 @@ class FileGenerator {
 	}
 	
 	public function execute($prefix = true) {
-		$uri = $prefix ? "files/".$this->path."".$this->filePrefix."_".$this->filename : "files/".$this->path."/".$this->filename;
+		$uri = $prefix ? "files/".$this->path."".$this->filePrefix."_".$this->filename : "files/".$this->path.$this->filename;
 		$handle = fopen($uri, "w");
 		fwrite($handle, $this->content);
 		fclose($handle);
@@ -29,7 +29,7 @@ class FileGenerator {
 	}
 	
 	public function setPath($path) {
-		$this->path = $path;
+		$this->path = $path."/";
 	}
 	
 	public function setContent($content) {
