@@ -1,0 +1,56 @@
+9383e7745668da0ad60a8e53c3b69ee1;Fig.85: WOZ YAWL model for MunG
+function;Inspect residence;{VB}{NN}
+function;Deadline;{NN}
+function;Handle complaint municipality;{VB}{NN}{NN}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Send notification letter;{VB}{NN}{NN}
+function;Send application;{VB}{NN}
+function;Process continue;{VB}{VB}
+function;Perform admissibility test municipality;{VB}{NN}{NN}{NN}
+function;Start case;{NNP}{NN}
+function;Send advice;{VB}{NN}
+function;Fill in form;{VB}{IN}{NN}
+function;Send to tax office;{VB}{TO}{NN}{NN}
+function;Possible to do assessment;{JJ}{TO}{VB}{NN}
+function;Hearing requested;{NN}{VBD}
+function;Send acknowledgment;{VB}{NN}
+function;Need to inspect site;{VBN}{TO}{VB}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Timeout;{NNP}
+function;Record objection;{VB}{NN}
+function;Sign form;{NN}{NN}
+function;Perform admissibility test;{VB}{NN}{NN}
+function;Create file;{VB}{NN}
+function;Handle administrative;{VB}{JJ}
+function;Process eventual changes;{VB}{JJ}{NNS}
+function;Hold hearing;{VB}{NN}
+function;Default positive response;{NNP}{JJ}{NN}
+function;Register;{NNP}
+event;the end;{DT}{NN}
+event;no;{DT}
+event;status change to Send advice;{NN}{NN}{TO}{VB}{NN}
+event;status change to Handle complaint municipality;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Hold hearing;{NN}{NN}{TO}{VB}{NN}
+event;status change to Deadline;{NN}{NN}{TO}{NN}
+event;status change to Possible to do assessment;{NN}{NN}{TO}{JJ}{TO}{VB}{NN}
+event;status change to Send notification letter;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Process eventual changes;{NN}{NN}{TO}{VB}{JJ}{NNS}
+event;yes;{RB}
+event;status change to Send decision to customer;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;yes;{RB}
+event;status change to Default positive response;{NN}{NN}{TO}{NNP}{JJ}{NN}
+event;status change to Timeout;{NN}{NN}{TO}{NNP}
+event;status change to Send acknowledgment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Hearing requested;{NN}{NN}{TO}{NN}{VBD}
+event;Status change to Fill in form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;Status change to Perform admissibility test;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Sign form;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;status change to Handle administrative;{NN}{NN}{TO}{VB}{JJ}
+event;status change to Create file;{NN}{NN}{TO}{VB}{NN}
+event;status change Send application;{NN}{NN}{VB}{NN}
+event;status change to Need to inspect site;{NN}{NN}{TO}{VBN}{TO}{VB}{NN}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Register;{NN}{NN}{TO}{NNP}
+event;status change to Record objection;{NN}{NN}{TO}{NNP}{NN}

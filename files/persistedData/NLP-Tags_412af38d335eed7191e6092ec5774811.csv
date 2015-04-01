@@ -1,0 +1,8 @@
+412af38d335eed7191e6092ec5774811;Account Clearing [AP]
+function;Automatic Clearing;{NNP}
+function;Manual Clearing;{NNP}
+event;Item balance is zero;{NN}{NN}{VBZ}{CD}
+event;Line items to be cleared;{NNP}{NNS}{TO}{VB}{VBN}
+event;Automatic clearing completed;{NNP}{VBG}{VBN}
+event;Manual clearing is complete;{JJ}{NN}{VBZ}{JJ}
+event;Line items to be cleared;{NNP}{NNS}{TO}{VB}{VBN}

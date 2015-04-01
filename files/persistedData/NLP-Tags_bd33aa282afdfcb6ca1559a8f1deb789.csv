@@ -1,0 +1,7 @@
+bd33aa282afdfcb6ca1559a8f1deb789;Specific Valuations
+function;Closing of Insurance Contract;{NN}{IN}{NN}{NN}
+function;Index Series;{NNP}
+event;Fixed asset should be insured;{VBN}{NN}{MD}{VB}{VBN}
+event;Insurance contract was closed;{NN}{NN}{VBD}{VBN}
+event;Index series must be updated;{NNP}{NN}{MD}{VB}{VBN}
+event;Index series was updated;{NNP}{NN}{VBD}{VBN}

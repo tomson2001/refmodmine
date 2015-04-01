@@ -1,0 +1,12 @@
+395d1a700342df03fa2c6a9b2c3de716;Protocol
+function;Answering Questionnaires;{VBG}{NNS}
+function;Medical Service Processing;{NNP}
+function;Determining Protocol Proposal Lists;{VBG}{NNP}{VBZ}
+function;Protocol Assignment;{NNP}
+function;Open Medical Service;{NNP}
+event;Evaluations are to be Performed;{NNS}{VBP}{TO}{VB}{VBN}
+event;Medical service is to be created for person;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Questionnaire answers are to be entered;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Occupational health data is to be entered;{JJ}{NN}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Protocol is to be assigned to person;{NNP}{VBZ}{TO}{VB}{VBN}{TO}{NN}
+event;Entering data is completed;{VBG}{NNS}{VBZ}{VBN}

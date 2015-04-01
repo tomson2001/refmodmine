@@ -1,0 +1,14 @@
+0f6c0c61c8e9584d75cdb27870f7b230;Compensation Planning
+function;Approval of Compensation Plan;{NN}{IN}{NNP}
+function;Compensation Plan Consolidation;{NNP}{NN}
+function;Delegation of Correction Requirement for Compensation Plan;{NN}{IN}{NNP}{NN}{IN}{NNP}
+function;Creation/ Correction of Compensation Plan;{NN}{:}{NN}{IN}{NNP}
+function;Delegation of Requirement for Compensation Planning;{NN}{IN}{NN}{IN}{NNP}
+event;Compensation plan exists for consolidation;{NNP}{NN}{VBZ}{IN}{NN}
+event;Need to correct compensation planning exists and cannot be delegated further;{VBN}{TO}{VB}{NN}{NN}{VBZ}{CC}{MD}{RB}{VB}{VBN}{RB}
+event;Compensation plan exists for approval;{NNP}{NN}{VBZ}{IN}{NN}
+event;Compensation Planning Specifications Approved;{NNPS}{VBD}
+event;Need for compensation planning exists;{VBN}{IN}{NN}{NN}{VBZ}
+event;Need to correct compensation plan exists;{VBN}{TO}{VB}{NN}{NN}{VBZ}
+event;Compensation plan is approved;{NNP}{NN}{VBZ}{VBN}
+event;Need for compensation planning exists and cannot be delegated further;{VBN}{IN}{NN}{NN}{VBZ}{CC}{MD}{RB}{VB}{VBN}{RB}

@@ -1,0 +1,10 @@
+5e8912a7a22b7245154b305479fc33a6;Business Event Resource Administration
+function;Business Event Resource Planning;{NNP}
+function;Business Event Resource Reservation;{NNP}
+event;Need for business event resource planning exists;{VBN}{IN}{NN}{NN}{NN}{NN}{VBZ}
+event;Business event resource is reserved;{NN}{NN}{NN}{VBZ}{VBN}
+event;Resource reservation plan exists;{NNP}{NN}{NN}{VBZ}
+event;Business event resource reservation is cancelled;{NN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Requirement for operative shift planning exists;{NN}{IN}{JJ}{NN}{NN}{VBZ}
+event;Resource reservation plan must be corrected;{NNP}{NN}{NN}{MD}{VB}{VBN}
+event;Item of resource reservation plan must be implemented;{NN}{IN}{NN}{NN}{NN}{MD}{VB}{VBN}

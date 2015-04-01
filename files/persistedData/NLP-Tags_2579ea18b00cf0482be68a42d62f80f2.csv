@@ -1,0 +1,9 @@
+2579ea18b00cf0482be68a42d62f80f2;Design and Implementation of Provisions for Staff and Change Planning
+function;Design of Provisions for Personnel Staff and Change Planning;{NN}{IN}{NNS}{IN}{NNP}{CC}{NNP}
+function;Implementation of Provisions for Personnel Staff and Change Planning;{NN}{IN}{NNS}{IN}{NNP}{CC}{NNP}
+event;Provisions of staff/ change planning must be corrected;{NNS}{IN}{NN}{:}{NN}{NN}{MD}{VB}{VBN}
+event;Provisions of personnel change planning are implemented;{NNS}{IN}{NNS}{VBP}{NN}{VBP}{VBN}
+event;Enterprise provisions for staff/ change planning are adopted;{NNP}{NNS}{IN}{NN}{:}{NN}{NN}{VBP}{VBN}
+event;Further implementation actions must be performed;{JJ}{NN}{NNS}{MD}{VB}{VBN}
+event;Provisions of personnel staff planning are implemented;{NNS}{IN}{NNS}{NN}{NN}{VBP}{VBN}
+event;Need for provisions for staff/ change planning exists;{VBN}{IN}{NNS}{IN}{NN}{:}{NN}{NN}{VBZ}

@@ -1128,6 +1128,38 @@ class EPC {
 			$this->events[$id] = $newLabel;
 		}
 	}
+	
+	/**
+	 * getHash
+	 * 
+	 * calculates a hash code (md5) based on function and event label and the number of edges and connectors
+	 * 
+	 * @return string
+	 */
+	public function getHash() {
+		$sFunctions = $this->functions;
+		sort($sFunctions);
+		$functionPart = implode("-", array_values($sFunctions));
+		$sEvents = $this->events;
+		sort($sEvents);
+		$eventPart = implode("-", array_values($sEvents));
+		$edgePart = count($this->edges);
+		$xorPart = count($this->xor);
+		$andPart = count($this->and);
+		$orPart = count($this->or);
+		return md5($functionPart.$eventPart.$edgePart.$xorPart.$andPart.$orPart);
+	}
+	
+	public function getIDsForLabel($label) {
+		$result = array("functions" => array(), "events" => array());
+		foreach ( $this->functions as $id => $functionLabel ) {
+			if ( strcmp($label, $functionLabel) == 0 ) array_push($result["functions"], $id);
+		}
+		foreach ( $this->events as $id => $eventLabel ) {
+			if ( strcmp($label, $eventLabel) == 0 ) array_push($result["events"], $id);
+		}
+		return $result;
+	}
 
 }
 ?>

@@ -1,0 +1,10 @@
+18c8a6d16e0f62fc3ca660eb91215cfe;Warehouse Management
+function;Difference Processing During Picking;{NN}{NNP}{IN}{VBG}
+function;Confirmation of Picking;{NN}{IN}{VBG}
+event;Transfer order item with difference exists;{NN}{NN}{NN}{IN}{NN}{VBZ}
+event;Material is removed from stock;{NN}{VBZ}{VBN}{IN}{NN}
+event;Goods movement is posted;{NNP}{NN}{VBZ}{VBN}
+event;Inventory management posting already carried out;{NN}{NN}{VBG}{RB}{VBN}{RP}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Difference is settled on srce bin location;{NN}{VBZ}{VBN}{IN}{NN}{NN}{NN}
+event;Difference has been posted to interface;{NN}{VBZ}{VBN}{VBN}{TO}{NN}

@@ -1,0 +1,4 @@
+6460dba30f5db4760ac272af30fa5094;Statistical Key Figures
+function;Statistical Key Figure Posting;{JJ}{NN}{NN}{VBG}
+event;Statistical figures are to be entered;{JJ}{NNS}{VBP}{TO}{VB}{VBN}
+event;Statistical key figure was entered for reference object;{JJ}{JJ}{NN}{VBD}{VBN}{IN}{NN}{NN}

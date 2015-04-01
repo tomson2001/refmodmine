@@ -1,0 +1,6 @@
+57815c0c8950f22d8e691a0660dfd59e;Production Processing
+function;Conversion of planned order;{NN}{IN}{VBN}{NN}
+event;Planned orders are converted to process orders;{NNP}{NNS}{VBP}{VBN}{TO}{NN}{NNS}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Conversion date is reached;{NN}{NN}{VBZ}{VBN}
+event;Planned orders converted into production orders;{NNP}{NNS}{VBD}{IN}{NN}{NNS}

@@ -1,0 +1,7 @@
+27b03f669506bcc7dadbc69ffd52dab4;Measure Processing
+function;Processing of Internal Orders [Investment Order];{NN}{IN}{JJ}{NNS}{-LRB-}{NNP}{-RRB-}
+event;Investment profile with line item settlement is specified;{NN}{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Internal order is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Order hierarchies/ groups to be created;{NNP}{NNS}{:}{NNS}{TO}{VB}{VBN}
+event;Settlement rule exists;{NNP}{NN}{VBZ}
+event;Order is processed;{NN}{VBZ}{VBN}

@@ -1,0 +1,22 @@
+96559c0ced2324a975f6a98459d168d5;Project Release
+function;Project Release;{NNP}
+event;Purchase requisition must be created;{NN}{NN}{MD}{VB}{VBN}
+event;Dates to be updated;{NNS}{TO}{VB}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Actual dates to be entered;{JJ}{NNS}{TO}{VB}{VBN}
+event;Delivery from project is to be created;{NN}{IN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Activity allocation to be carried out;{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Project is to be released;{NN}{VBZ}{TO}{VB}{VBN}
+event;Conversion date is reached;{NN}{NN}{VBZ}{VBN}
+event;Confirmation from external systems required;{NN}{IN}{JJ}{NNS}{VBN}
+event;Activity confirmation required;{NN}{NN}{VBN}
+event;Statistical figures are to be entered;{JJ}{NNS}{VBP}{TO}{VB}{VBN}
+event;Order-related invoice to be created;{JJ}{NN}{TO}{VB}{VBN}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Resource-related billing document required;{JJ}{NN}{NN}{VBN}
+event;Down payment is agreed with vendor;{IN}{NN}{VBZ}{VBN}{IN}{NN}
+event;Actual process cost allocation required;{JJ}{NN}{NN}{NN}{VBN}
+event;Periodic actual reposting required;{JJ}{JJ}{VBG}{VBN}
+event;Project must be monitored;{NN}{MD}{VB}{VBN}
+event;Down payment agreed with customer;{IN}{NN}{VBD}{IN}{NN}
+event;Project evaluation required;{NN}{NN}{VBN}

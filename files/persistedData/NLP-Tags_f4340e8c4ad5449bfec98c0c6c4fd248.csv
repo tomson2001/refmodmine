@@ -1,0 +1,77 @@
+f4340e8c4ad5449bfec98c0c6c4fd248;Fig.72: WMO YAWL model for MiunD
+function;Give instructions for housing adjustment;{VB}{NNS}{IN}{NN}{NN}
+function;Send info to ISD;{VB}{NN}{TO}{NN}
+function;Examine customer;{VB}{NN}
+function;Archive;{NNP}
+function;Send confirmation of receipt;{VB}{NN}{IN}{NN}
+function;Assign to available consultant;{VB}{TO}{JJ}{NN}
+function;Formulate decision;{VB}{NN}
+function;Determine offer;{NN}{NN}
+function;Make preliminary decision;{VB}{JJ}{NN}
+function;Start perform case-specific tasks;{NNP}{VB}{JJ}{NNS}
+function;Check filled in form;{VB}{VBN}{IN}{NN}
+function;Estimate costs;{NNP}{NNS}
+function;Need to formulate report;{VBN}{TO}{VB}{NN}
+function;Need to formulate decision;{VBN}{TO}{VB}{NN}
+function;Customer requests to seek bids;{NN}{NNS}{TO}{VB}{NNS}
+function;Receive recommendation;{VB}{NN}
+function;Case-specific tasks complete;{JJ}{NNS}{JJ}
+function;Obtain quotes;{VB}{NNS}
+function;Formulate indicative report;{VB}{JJ}{NN}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Assign category;{VB}{NN}
+function;Carry out house visit;{VB}{RP}{NN}{NN}
+function;Send copies to contractor;{VB}{NNS}{TO}{NN}
+function;Request a fitting;{VB}{DT}{JJ}
+function;Short procedure housing;{JJ}{NN}{NN}
+function;Plan exemination with customer;{NNP}{NN}{IN}{NN}
+function;More medical advice needed;{RBR}{JJ}{NN}{VBN}
+function;Examine customer;{VB}{NN}
+function;Record requested;{NNP}{VBD}
+function;Perform fitting;{VB}{JJ}
+function;Send invoice;{VB}{NN}
+function;Receive offers;{VB}{NNS}
+function;Send order;{VB}{NN}
+function;Application;{NN}
+function;Process in the system;{VB}{IN}{DT}{NN}
+function;Determine care provide  to approach;{VB}{NN}{VBP}{TO}{NN}
+function;Look for alternative living space;{VB}{IN}{JJ}{NN}{NN}
+function;State welfare request;{NNP}{NN}{NN}
+function;Plan examination with customer;{NNP}{NN}{IN}{NN}
+function;Request cost estimation for modification;{NN}{NN}{NN}{IN}{NN}
+function;Determine amount;{NN}{NN}
+function;Run file check;{NNP}{NN}{NN}
+function;Compromise on the arrangement;{NN}{IN}{DT}{NN}
+function;Contact CAK;{NN}{NN}
+function;Short procedure;{JJ}{NN}
+function;Concerns household help;{NNS}{NN}{NN}
+event;no;{DT}
+event;no;{DT}
+event;transportation facilities;{NN}{NNS}
+event;yes;{RB}
+event;yes;{RB}
+event;yes;{RB}
+event;with PGB;{IN}{NN}
+event;application;{NN}
+event;house visit needed;{NN}{NN}{VBD}
+event;other;{JJ}
+event;house visit needed but no medical advice;{NN}{NN}{VBN}{CC}{DT}{JJ}{NN}
+event;Process end;{VB}{NN}
+event;no;{DT}
+event;yes;{RB}
+event;Start process;{NNP}{NN}
+event;yes;{RB}
+event;only if building advice needed;{RB}{IN}{NN}{NN}{VBD}
+event;no;{DT}
+event;always;{RB}
+event;no PGB;{DT}{NN}
+event;help with the household;{NN}{IN}{DT}{NN}
+event;no house visit but medical advice needed;{DT}{NN}{NN}{CC}{JJ}{NN}{VBN}
+event;always;{RB}
+event;large modifications to house;{JJ}{NNS}{TO}{NN}
+event;no;{DT}
+event;no application;{DT}{NN}
+event;no house visit and no medical advice needed;{DT}{NN}{NN}{CC}{DT}{JJ}{NN}{VBN}
+event;yes;{RB}
+event;house visit needed and medical advice needed;{NN}{NN}{VBN}{CC}{JJ}{NN}{VBN}
+event;no;{DT}

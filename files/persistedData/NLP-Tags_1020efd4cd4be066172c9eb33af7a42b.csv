@@ -1,0 +1,9 @@
+1020efd4cd4be066172c9eb33af7a42b;Elimination of IC Profit and Loss in Fixed Assets
+function;Elimination of IC Profit/ Loss in Fixed Assets;{NN}{IN}{NN}{NN}{:}{NN}{IN}{NNPS}
+event;Transfer has occurred in the area of financial assets;{NN}{VBZ}{VBN}{IN}{DT}{NN}{IN}{JJ}{NNS}
+event;Asset from in-house prod- uction was transferred;{NNP}{IN}{JJ}{NN}{:}{NN}{VBD}{VBN}
+event;Asset transfer has occurred;{NNP}{NN}{VBZ}{VBN}
+event;Currency translation carried out;{NNP}{NN}{VBD}{RP}
+event;Asset transfers are entered for receiving company;{NNP}{NNS}{VBP}{VBN}{IN}{VBG}{NN}
+event;Asset transfers are entered for retiring company;{NNP}{NNS}{VBP}{VBN}{IN}{VBG}{NN}
+event;Intercompany profit/ loss in trans- ferred assets is eliminated;{NN}{NN}{:}{NN}{IN}{JJ}{:}{JJ}{NNS}{VBZ}{VBN}

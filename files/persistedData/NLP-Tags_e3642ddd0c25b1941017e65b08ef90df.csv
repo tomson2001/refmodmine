@@ -1,0 +1,110 @@
+e3642ddd0c25b1941017e65b08ef90df;Fig.75: WMO YAWL model for MunG
+function;Process continue 12;{VB}{VB}{CD}
+function;Transfer amount to CAK;{NN}{NN}{TO}{NN}
+function;Registration;{NN}
+function;Invite offerings;{JJ}{NNS}
+function;Compromise on the arrangement;{NN}{IN}{DT}{NN}
+function;Assess need for house visit and medical advice;{VB}{NN}{IN}{NN}{NN}{CC}{JJ}{NN}
+function;Formulate decision;{VB}{NN}
+function;Store as PDF;{NN}{IN}{NN}
+function;Mail recommendation to WMO advisor;{NNP}{NN}{TO}{NNP}{NN}
+function;Scan recommendation;{VB}{NN}
+function;Process continue 2;{VB}{VB}{CD}
+function;Record request in the system;{VB}{NN}{IN}{DT}{NN}
+function;Handle request;{VB}{NN}
+function;Send e-mail to WMO;{VB}{NN}{TO}{NNP}
+function;Make offer;{VB}{NN}
+function;Redirect to desk;{VB}{TO}{NN}
+function;Receive WMO request via mail;{VB}{NNP}{NN}{IN}{NN}
+function;Determine offer;{NN}{NN}
+function;Prepare requirements and first decision;{VB}{NNS}{CC}{JJ}{NN}
+function;Send order;{VB}{NN}
+function;Examine customer;{VB}{NN}
+function;Determine care provider to approach;{VB}{NN}{NN}{TO}{NN}
+function;Estimate costs;{NNP}{NNS}
+function;Proofread report;{NNP}{NN}
+function;Process continue 6;{VB}{VB}{CD}
+function;Fill in form under supervision;{VB}{IN}{NN}{IN}{NN}
+function;Contact customer;{NN}{NN}
+function;Case-specific tasks complete;{JJ}{NNS}{JJ}
+function;Start case options;{NNP}{NN}{NNS}
+function;Formulate indicative report;{VB}{JJ}{NN}
+function;Perform fitting;{VB}{JJ}
+function;Process continue 13;{VB}{VB}{CD}
+function;Carry out house visit;{VB}{RP}{NN}{NN}
+function;Process continue 3;{VB}{VB}{CD}
+function;Send invoice;{VB}{NN}
+function;Hold consultative meeting with customer;{VB}{JJ}{NN}{IN}{NN}
+function;Send recommendation to WMO;{VB}{NN}{TO}{NNP}
+function;Retrace checklist;{VB}{NN}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Enter in own backlog;{VB}{IN}{JJ}{NN}
+function;Check requirements;{VB}{NNS}
+function;Determine amount;{NN}{NN}
+function;Look for alternative living space;{VB}{IN}{JJ}{NN}{NN}
+function;Process continue 1;{VB}{VB}{CD}
+function;Execute order;{VB}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Receive recommendation;{VB}{NN}
+function;Handle Payment;{VB}{NN}
+function;Plan examination with customer;{NNP}{NN}{IN}{NN}
+function;Start perform case specific tasks;{NNP}{VB}{NN}{JJ}{NNS}
+function;Request cost estimation for modification;{NN}{NN}{NN}{IN}{NN}
+function;Request a fitting;{VB}{DT}{JJ}
+function;Process continue 4;{VB}{VB}{CD}
+function;Send confirmation of receipt;{VB}{NN}{IN}{NN}
+event;status change to Perform fitting;{NN}{NN}{TO}{VB}{JJ}
+event;status change to Proofread report;{NN}{NN}{TO}{VB}{NN}
+event;the end;{DT}{NN}
+event;status change to  Retrace checklist;{NN}{NN}{TO}{VB}{NN}
+event;status change to Execute order;{NN}{NN}{TO}{VB}{NN}
+event;status change to Record request in the system;{NN}{NN}{TO}{NNP}{NN}{IN}{DT}{NN}
+event;no house visit but medical advice needed;{DT}{NN}{NN}{CC}{JJ}{NN}{VBN}
+event;status change to Redirect to desk;{NN}{NN}{TO}{VB}{TO}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Formulate indicative report;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Receive WMO request via mail;{NN}{NN}{TO}{VB}{NN}{NN}{IN}{NN}
+event;status change to Transfer amount to CAK;{NN}{NN}{TO}{NN}{NN}{TO}{NN}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Send confirmation of receipt;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Fill in form under supervision;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NN}
+event;no PGB and home modifications;{DT}{NN}{CC}{NN}{NNS}
+event;status change to Hold consultative meeting with customer;{NN}{NN}{TO}{VB}{JJ}{NN}{IN}{NN}
+event;always;{RB}
+event;large modifications to house;{JJ}{NNS}{TO}{NN}
+event;status change to;{NN}{NN}{TO}
+event;simple household assistance;{JJ}{NN}{NN}
+event;no PGB;{DT}{NN}
+event;status change to Estimate costs;{NN}{NN}{TO}{NNP}{NNS}
+event;no PGB and no home modifications;{DT}{NN}{CC}{DT}{NN}{NNS}
+event;status change to Handle Payment;{NN}{NN}{TO}{VB}{NN}
+event;transportation facilities;{NN}{NNS}
+event;other;{JJ}
+event;status change to Start case options;{NN}{NN}{TO}{NNP}{NN}{NNS}
+event;status change to Invite offerings;{NN}{NN}{TO}{VB}{NNS}
+event;no house visit and no medical advice needed;{DT}{NN}{NN}{CC}{DT}{JJ}{NN}{VBN}
+event;status change to Plan examination with customer;{NN}{NN}{TO}{NNP}{NN}{IN}{NN}
+event;status change to Start perform case specific tasks;{NN}{NN}{TO}{NNP}{VB}{NN}{JJ}{NNS}
+event;only if building advice needed;{RB}{IN}{NN}{NN}{VBD}
+event;status change to;{NN}{NN}{TO}
+event;status change to Assess need for house visit and medical advice;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NN}{CC}{JJ}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Make offer;{NN}{NN}{TO}{VB}{NN}
+event;always;{RB}
+event;status change to Request cost estimation for modification;{NN}{NN}{TO}{NNP}{NN}{NN}{IN}{NN}
+event;with PGB;{IN}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Carry out house visit;{NN}{NN}{TO}{VB}{RP}{NN}{NN}
+event;other;{JJ}
+event;status change to Receive recommendation;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send recommendation to WMO;{NN}{NN}{TO}{VB}{NN}{TO}{NNP}
+event;status change to;{NN}{NN}{TO}
+event;house visit needed but no medical advice;{NN}{NN}{VBN}{CC}{DT}{JJ}{NN}
+event;house visit needed and medical advice needed;{NN}{NN}{VBN}{CC}{JJ}{NN}{VBN}
+event;status change to Determine offer;{NN}{NN}{TO}{VB}{NN}
+event;status change to Store as PDF;{NN}{NN}{TO}{NN}{IN}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Send e-mail to WMO;{NN}{NN}{TO}{VB}{NN}{TO}{NNP}
+event;status change to Mail recommendation to WMO advisor;{NN}{NN}{TO}{VB}{NN}{TO}{NNP}{NN}
+event;status change to;{NN}{NN}{TO}
+event;help with the house hold;{NN}{IN}{DT}{NN}{NN}

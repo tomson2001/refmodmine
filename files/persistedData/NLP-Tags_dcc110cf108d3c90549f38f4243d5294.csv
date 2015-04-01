@@ -1,0 +1,31 @@
+dcc110cf108d3c90549f38f4243d5294;Foreign Trade Processing
+function;Preference Processing;{NN}{NN}
+function;Basic Data;{JJ}{NNS}
+function;Communication/ Print;{NN}{:}{VB}
+function;Declarations to the Authorities;{NNS}{TO}{DT}{NNS}
+function;Documentary Payments;{NN}{NNS}
+function;Legal Control;{NNP}
+event;Declarations to the authorities to be carried out;{NNS}{TO}{DT}{NNS}{TO}{VB}{VBN}{RP}
+event;Foreign trade data to be processed;{JJ}{NN}{NNS}{TO}{VB}{VBN}
+event;Billing doc. relevant to accounting is created;{NN}{NN}{.}
+event;Declarations transmitted;{NNS}{VBD}
+event;Goods catalog to be created;{NNP}{NN}{TO}{VB}{VBN}
+event;Foreign trade data are complete;{JJ}{NN}{NNS}{VBP}{JJ}
+event;Declarations to the authorities to be carried out;{NNS}{TO}{DT}{NNS}{TO}{VB}{VBN}{RP}
+event;Statistical goods numbers are processed;{JJ}{NNS}{NNS}{VBP}{VBN}
+event;Billing doc. relevant to accounting is created;{NN}{NN}{.}
+event;Import code numbers are to be processed;{NN}{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Declarations transmitted;{NNS}{VBD}
+event;Financial document to be processed;{NNP}{NN}{TO}{VB}{VBN}
+event;Import code numbers are processed;{NN}{NN}{NNS}{VBP}{VBN}
+event;Financial document is released;{NNP}{NN}{VBZ}{VBN}
+event;Out-of-date vendor declarations are to be created;{JJ}{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Legal control data is processed;{JJ}{NN}{NNS}{VBZ}{VBN}
+event;Financial document is to assigned to sales document;{NNP}{NN}{VBZ}{TO}{VBN}{TO}{NNS}{NN}
+event;Export license master to be processed;{NN}{NN}{NN}{TO}{VB}{VBN}
+event;Hedging of financial document to be carried out;{NN}{IN}{JJ}{NN}{TO}{VB}{VBN}{RP}
+event;Customer master record is created;{NN}{NN}{NN}{VBZ}{VBN}
+event;Statistical goods numbers are to be processed;{JJ}{NNS}{NNS}{VBP}{TO}{VB}{VBN}
+event;Costing is carried out;{VBG}{VBZ}{VBN}{RP}
+event;Material master has been processed;{NN}{NN}{VBZ}{VBN}{VBN}
+event;Goods catalog to be created;{NNP}{NN}{TO}{VB}{VBN}

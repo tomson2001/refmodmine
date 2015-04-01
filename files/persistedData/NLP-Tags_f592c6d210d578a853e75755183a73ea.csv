@@ -1,0 +1,23 @@
+f592c6d210d578a853e75755183a73ea;Strategic Business Planning
+function;Business Planning;{NNP}
+function;Data basis;{NNS}{NN}
+function;Data transfer;{NNS}{NN}
+function;Tools;{NNS}
+function;Task Functions on Tools;{NNP}{NNS}{IN}{NNS}
+function;Basic settings;{JJ}{NNS}
+function;Data modeling;{NNS}{NN}
+function;Information System;{NNP}
+function;Task Functions on Information System;{NNP}{NNS}{IN}{NNP}
+event;Tools Set Up;{NNS}{VB}{RP}
+event;Task Functions for Tools Set Up;{NNPS}{IN}{NNP}{VB}{RP}
+event;Information System;{NNP}
+event;Task Functions for Information System Set Up;{NNPS}{IN}{NNP}{VB}{RP}
+event;File Names Established;{VB}{NNS}{VBN}
+event;Data Basis Determined;{NNS}{NNP}
+event;Data Transfer Specified;{NNS}{NN}{VBN}
+event;Business Planning Carried Out;{NNP}{VBD}{IN}
+event;Units of Measure Specified;{NNS}{IN}{NN}{VBN}
+event;Basic Settings to be made;{JJ}{NNS}{TO}{VB}{VBN}
+event;Data Modeling Required;{NNS}{VBG}{VBN}
+event;Number Ranges Defined;{NN}{VBZ}{VBN}
+event;Foreign Currencies Are Specified;{NNP}{VBP}{VBN}

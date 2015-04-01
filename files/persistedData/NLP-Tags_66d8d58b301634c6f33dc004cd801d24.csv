@@ -1,0 +1,6 @@
+66d8d58b301634c6f33dc004cd801d24;Calculation of Employment Tax
+function;Calculation of Employment Tax;{NN}{IN}{NNP}
+event;Settlement amounts for further benefits exist;{NNP}{VBZ}{IN}{JJ}{NNS}{VBP}
+event;Characterized emplyment tax amounts exist;{VBN}{JJ}{NN}{NNS}{VBP}
+event;Characterized remuneration elements exist;{VBN}{NN}{NNS}{VBP}
+event;Calculation of employment tax required;{NN}{IN}{NN}{NN}{JJ}

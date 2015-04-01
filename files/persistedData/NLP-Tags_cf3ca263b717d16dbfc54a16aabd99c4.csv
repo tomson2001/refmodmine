@@ -1,0 +1,17 @@
+cf3ca263b717d16dbfc54a16aabd99c4;Consolidation
+function;Processes of the Data Monitor;{NNS}{IN}{DT}{NNS}{NNP}
+function;Preparatory Work: General;{JJ}{NN}{:}{NNP}
+function;Preparatory Work: Integration;{JJ}{NN}{:}{NN}
+function;Processes of the Consolidation Monitor;{NNS}{IN}{DT}{NN}{NNP}
+event;Integrated Reported Financial Data Is to Be Transferred;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Different Consolidation Types Are to Be Used;{JJ}{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Different Data Categories Are to Be Consolidated;{NNP}{VBP}{TO}{VB}{NNP}
+event;Data Monitor Is Defined;{NNS}{NNP}{VBZ}{VBN}
+event;Consolidation Monitor Is Defined;{NN}{NNP}{VBZ}{VBN}
+event;Consolidation-Type-Specific Preparation Required;{JJ}{NNP}
+event;Cross-Consolidation-Type Preparation Required;{NNP}
+event;Consolidation Group Changes Requested;{NN}{NN}{NNS}{VBN}
+event;Preparation of Consolidation System Is Completed;{NN}{IN}{NN}{NN}{VBZ}{VBN}
+event;Nonintegrated Reported Financial Data Is to Be Transferred;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Data Monitor Processes Completed;{NNS}{NNP}
+event;Consolidation Monitor Processes Completed;{NN}{NNP}

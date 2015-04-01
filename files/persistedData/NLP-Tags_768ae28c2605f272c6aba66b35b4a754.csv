@@ -1,0 +1,13 @@
+768ae28c2605f272c6aba66b35b4a754;Accounting
+function;Process Payment Request;{VB}{NN}{NN}
+function;Perform Posting;{VB}{VBG}
+function;Posting Release;{VBG}{NNP}
+event;G/L posting was generated;{NN}{VBG}{VBD}{VBN}
+event;Payment is transferred by EDI;{NN}{VBZ}{VBN}{IN}{NN}
+event;Payment medium transferred;{NN}{NN}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Interest rate adjustment was carried out;{NN}{NN}{NN}{VBD}{VBN}{RP}
+event;Accrual/ deferral flows were generated;{NN}{:}{NN}{NNS}{VBD}{VBN}
+event;Payment request was generated;{NN}{NN}{VBD}{VBN}
+event;Customer open items were generated;{NN}{JJ}{NNS}{VBD}{VBN}
+event;Payment advice is sent;{NN}{NN}{VBZ}{VBN}

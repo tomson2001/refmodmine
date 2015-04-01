@@ -1,0 +1,60 @@
+dd4502b72cf2dfcb0478fc5521f6fd26;Order
+function;Work Clearance Management;{NN}{NNP}
+function;Order Execution;{NNP}
+function;Order Creation/ Processing;{NNP}{:}{NNP}
+function;Order Permit;{NNP}
+function;Order Release;{NNP}
+function;Order Printing;{NNP}
+function;Material Planning;{NNP}
+event;Capacity situation is to be evaluated;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance order is to be edited;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Material BOM is processed;{NN}{NN}{VBZ}{VBN}
+event;Maintenance operation is performed;{NN}{NN}{VBZ}{VBN}
+event;Material reservation can be withdrawn;{NN}{NN}{MD}{VB}{VBN}
+event;Shop papers are to be printed from order;{NNP}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Maintenance order is created;{NN}{NN}{VBZ}{VBN}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Material components are to be assigned to the operation;{NN}{NNS}{VBP}{TO}{VB}{VBN}{TO}{DT}{NN}
+event;Work Clearance Management Should Be Performed;{NN}{NNP}{MD}{VB}{VBN}
+event;Capacity is available;{NN}{VBZ}{JJ}
+event;Shop papers are to be printed from notification;{NNP}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Permits Issued;{VBZ}{VBN}
+event;Maintenance order is printed;{NN}{NN}{VBZ}{VBN}
+event;Shop papers are to be printed from order;{NNP}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Maintenance order is to be created manually;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;PM order is created and released;{NN}{NN}{VBZ}{VBN}{CC}{VBN}
+event;Order papers are to be printed;{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Material components are assigned via maintenance BOM;{NN}{NNS}{VBP}{VBN}{IN}{NN}{NN}
+event;Material components are assigned directly;{NN}{NNS}{VBP}{VBN}{RB}
+event;Purchase requisition with vendor has been created;{NN}{NN}{IN}{NN}{VBZ}{VBN}{VBN}
+event;Capacity requirement is created;{NN}{NN}{VBZ}{VBN}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}
+event;Material withdrawal is not required;{NN}{NN}{VBZ}{RB}{VBN}
+event;General maintenance task list is processed;{NNP}{NN}{NN}{NN}{VBZ}{VBN}
+event;Order papers are to be printed;{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Master data input is not required;{NN}{NNS}{NN}{VBZ}{RB}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Operations and Order Must Be Confirmed;{NNP}{CC}{NNP}{MD}{VB}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Notification and order assigned to one another;{NN}{CC}{NN}{VBN}{TO}{CD}{DT}
+event;Release is refused;{NNP}{VBZ}{VBN}
+event;Material withdrawal is not required;{NN}{NN}{VBZ}{RB}{VBN}
+event;Maintenance order is released;{NN}{NN}{VBZ}{VBN}
+event;Material reservation is created;{NN}{NN}{VBZ}{VBN}
+event;Equipment must be installed, dismantled or modified;{NN}{MD}{VB}{VBN}{,}{VBN}{CC}{VBN}
+event;Maintenance notification is to be generated from maintenance order;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Maintenance order is to be created for maintenance notification;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Permit is to be assigned;{NN}{VBZ}{TO}{VB}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Purchase requisitions can be ordered;{NN}{NNS}{MD}{VB}{VBN}
+event;Material components are copied from maintenance task list;{NN}{NNS}{VBP}{VBN}{IN}{NN}{NN}{NN}
+event;Order is to be performed;{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance order to be created per maintenance item;{NN}{NN}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Order is to be performed;{NN}{VBZ}{TO}{VB}{VBN}
+event;Services are to be entered;{NNPS}{VBP}{TO}{VB}{VBN}
+event;External procurement is provided;{JJ}{NN}{VBZ}{VBN}
+event;;
+event;Permits are assigned to the order;{NNS}{VBP}{VBN}{TO}{DT}{NN}
+event;Maintenance order is to be released;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance requirement has arisen;{NN}{NN}{VBZ}{VBN}

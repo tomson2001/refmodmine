@@ -1,0 +1,5 @@
+d444508728b5d96a96f4749a1cf1f207;Demand Management
+function;Demand Management;{NN}{NN}
+event;Planned Independent Requirements to be Created;{NNP}{NNS}{TO}{VB}{VBN}
+event;Results transferred to Demand Management;{NNS}{VBN}{TO}{NN}{NN}
+event;Demand Program Created;{NN}{NN}{VBN}

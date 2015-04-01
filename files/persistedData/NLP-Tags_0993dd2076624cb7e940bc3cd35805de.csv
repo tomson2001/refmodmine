@@ -1,0 +1,15 @@
+0993dd2076624cb7e940bc3cd35805de;Preparation for Project Closing
+function;Final Results Analysis;{JJ}{NNS}{NN}
+function;Final Settlement;{JJ}{NNP}
+function;Update/ Create Project Templates;{NNP}{:}{VB}{NN}{NNS}
+function;Review Project Contractual Obligations;{NNP}{NNS}
+function;Review Project Stock Inventory Balances;{NNPS}
+function;Creation of Final Invoice;{NN}{IN}{JJ}{NNP}
+event;Close project;{JJ}{NN}
+event;Activity confirmations entered;{NN}{NNS}{VBD}
+event;Internal Activity Was Allocated;{JJ}{NN}{VBD}{VBN}
+event;Actual Periodic Transfer Carried Out;{JJ}{JJ}{NN}{VBD}{IN}
+event;Actual settlement carried out;{JJ}{NN}{VBD}{RP}
+event;Confirmation from external systems entered;{NN}{IN}{JJ}{NNS}{VBD}
+event;Closing results analysis to be carried out;{NN}{VBZ}{NN}{TO}{VB}{VBN}{RP}
+event;Final settlement required;{JJ}{NN}{VBN}

@@ -1,0 +1,63 @@
+1ac8ee419edd30215109ca7b7d28200a;Execution
+function;Sales Order Processing;{NNS}{NNP}
+function;Reporting Project Results;{NNP}{NNS}
+function;Rescheduling and Actual Date Entry;{VBG}{CC}{NNP}
+function;Time Recording;{NNP}
+function;Collaboration;{NN}
+function;Project Release;{NNP}
+function;Period-End Closing;{NNP}{NN}
+function;Production Processing;{NN}{NN}
+function;Project Monitoring and Controlling;{NN}{NN}{CC}{NN}
+function;Customer Down Payments;{NN}{NN}{NNS}
+function;Statistical Key Figures;{JJ}{NN}{NNS}
+function;Vendor Down Payments;{NNP}{NNS}
+function;Billing;{NN}
+function;Budgeting;{NNP}
+function;Materials Procurement and Service Processing;{NNP}{CC}{NNP}
+event;Periodic actual reposting required;{JJ}{JJ}{VBG}{VBN}
+event;Actual process cost allocation required;{JJ}{NN}{NN}{NN}{VBN}
+event;Activity confirmations entered;{NN}{NNS}{VBD}
+event;Delivery from project is to be created;{NN}{IN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Purchase requisition must be created;{NN}{NN}{MD}{VB}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Budget released;{NNP}{VBD}
+event;Activity allocation to be carried out;{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Order-related invoice to be created;{JJ}{NN}{TO}{VB}{VBN}
+event;Dates updated;{NNS}{VBN}
+event;Dates to be updated;{NNS}{TO}{VB}{VBN}
+event;Project monitoring carried out;{NN}{NN}{VBD}{RP}
+event;Budget to be released;{NNP}{TO}{VB}{VBN}
+event;Actual dates entered;{JJ}{NNS}{VBD}
+event;Statistical key figure was entered for reference object;{JJ}{JJ}{NN}{VBD}{VBN}{IN}{NN}{NN}
+event;Planned orders are converted to process orders;{NNP}{NNS}{VBP}{VBN}{TO}{NN}{NNS}
+event;Clearing is posted;{NNP}{VBZ}{VBN}
+event;Project evaluation carried out;{NNP}{NN}{VBD}{RP}
+event;Down payment agreed with customer;{IN}{NN}{VBD}{IN}{NN}
+event;Service is accepted;{NNP}{VBZ}{VBN}
+event;Actual Periodic Transfer Carried Out;{JJ}{JJ}{NN}{VBD}{IN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Resource-related billing document required;{JJ}{NN}{NN}{VBN}
+event;Partial payment should be made;{JJ}{NN}{MD}{VB}{VBN}
+event;Sales order processing required;{NNS}{NN}{NN}{VBN}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Collaborative object processing is complete;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Project evaluation required;{NN}{NN}{VBN}
+event;Confirmation from external systems entered;{NN}{IN}{JJ}{NNS}{VBD}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Actual settlement carried out;{JJ}{NN}{VBD}{RP}
+event;Planned orders converted into production orders;{NNP}{NNS}{VBD}{IN}{NN}{NNS}
+event;Working hours data was analyzed;{VBG}{NNS}{NNS}{VBD}{VBN}
+event;Confirmation from external systems required;{NN}{IN}{JJ}{NNS}{VBN}
+event;Activity confirmation required;{NN}{NN}{VBN}
+event;Internal Activity Was Allocated;{JJ}{NN}{VBD}{VBN}
+event;Statistical figures are to be entered;{JJ}{NNS}{VBP}{TO}{VB}{VBN}
+event;Actual dates to be entered;{JJ}{NNS}{TO}{VB}{VBN}
+event;Collaborative object processing required;{JJ}{NN}{NN}{VBN}
+event;Budget is updated;{NNP}{VBZ}{VBN}
+event;Conversion date is reached;{NN}{NN}{VBZ}{VBN}
+event;Down payment is agreed with vendor;{IN}{NN}{VBZ}{VBN}{IN}{NN}
+event;Project must be monitored;{NN}{MD}{VB}{VBN}
+event;Project is to be released;{NN}{VBZ}{TO}{VB}{VBN}

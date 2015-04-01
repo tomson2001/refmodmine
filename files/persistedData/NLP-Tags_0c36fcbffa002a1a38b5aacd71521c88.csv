@@ -1,0 +1,11 @@
+0c36fcbffa002a1a38b5aacd71521c88;Specific Valuations
+function;Revaluation;{NN}
+function;Index Series;{NNP}
+function;Closing of Insurance Contract;{NN}{IN}{NN}{NN}
+event;Index series must be updated;{NNP}{NN}{MD}{VB}{VBN}
+event;Fixed asset should be insured;{VBN}{NN}{MD}{VB}{VBN}
+event;Index series was updated;{NNP}{NN}{VBD}{VBN}
+event;Insurance contract was closed;{NN}{NN}{VBD}{VBN}
+event;Revaluation was made;{NN}{VBD}{VBN}
+event;Revaluation should be carr. out f first time;{NN}{MD}{VB}{NN}{.}
+event;Revaluation is used repeatedly;{NN}{VBZ}{VBN}{RB}

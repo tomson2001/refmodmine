@@ -1,0 +1,7 @@
+fb4b6cb6fd0216a4149223a4611a796f;Goods Receipt
+function;Goods Receipt Processing with Reference;{NNP}{NN}{IN}{NNP}
+function;Goods Receipt Processing;{NNP}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Goods received;{NNP}{VBD}
+event;Inward material movement to be posted;{RB}{NN}{NN}{TO}{VB}{VBN}
+event;Inbound delivery for PO created;{JJ}{NN}{IN}{NNP}{VBD}

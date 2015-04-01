@@ -1,0 +1,23 @@
+c2a811cd918fc0709d3b83dd91cc9d7d;Measure Planning
+function;Project Budgeting [Investment Project];{NNP}{-LRB-}{NNP}{-RRB-}
+function;Planning Project Dates (Relevant to PS);{NNP}{VBZ}{-LRB-}{JJ}{TO}{NNP}{-RRB-}
+function;Overall Network Scheduling (Relevant to PS);{JJ}{NNP}{NN}{-LRB-}{JJ}{TO}{NNP}{-RRB-}
+function;Manual WBS Date Planning;{JJ}{NNP}
+function;Overhead Costing/ Cost Planning (Relevant to PS);{NN}{VBG}{:}{NN}{NNP}{-LRB-}{NNP}{TO}{NNP}{-RRB-}
+function;Network Cost Planning (Relevant to PS);{NNP}{NN}{NNP}{-LRB-}{NNP}{TO}{NNP}{-RRB-}
+function;Budget Release;{NNP}
+event;Scheduling of overall network to be carried out;{NN}{IN}{JJ}{NN}{TO}{VB}{VBN}{RP}
+event;Project planning to be carried out;{NNP}{VBG}{TO}{VB}{VBN}{RP}
+event;Period-end closing and settlement to be carried out;{JJ}{NN}{CC}{NN}{TO}{VB}{VBN}{RP}
+event;Project planning carried out;{NN}{NN}{VBD}{RP}
+event;Manual WBS scheduling carried out;{JJ}{NN}{NN}{VBD}{RP}
+event;Scheduling of overall network carried out;{NN}{IN}{JJ}{NN}{VBD}{RP}
+event;Overhead costing to be carried out;{NN}{VBG}{TO}{VB}{VBN}{RP}
+event;Budget is assigned;{NNP}{VBZ}{VBN}
+event;Total cost determined;{JJ}{NN}{VBD}
+event;Budget to be released;{NNP}{TO}{VB}{VBN}
+event;Order is processed;{NN}{VBZ}{VBN}
+event;Network cost planning to be carried out;{NNP}{VBD}{VBG}{TO}{VB}{VBN}{RP}
+event;Release and execution of measure to be triggered;{NNP}{CC}{NN}{IN}{NN}{TO}{VB}{VBN}
+event;Manual WBS scheduling to be carried out;{JJ}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Budget released;{NNP}{VBD}

@@ -1,0 +1,25 @@
+91e4ce379f841e0fd41c5d7c5b536d26;Admission Frankfurt
+function;Average Grade is Good or better;{JJ}{NNP}{VBZ}{JJ}{CC}{JJR}
+function;Evaluate;{VB}
+function;Certificate received;{NN}{VBD}
+function;Send Documents by Post;{VB}{NNS}{IN}{NN}
+function;Accepted provisionally;{JJ}{RB}
+function;Send Bachelor's Certificate;{VB}{NNP}{POS}{NNP}
+function;Apply Online;{RB}{NN}
+function;Documents received;{NNS}{VBD}
+function;Take Oral Exam;{VB}{NNP}
+function;Check Documents;{VB}{NNS}
+function;Sufficient CP in Mathematics;{JJ}{NN}{IN}{NNS}
+function;Average Grade is less than good;{JJ}{NNP}{VBZ}{RBR}{IN}{JJ}
+function;Less than 16 CP in Mathematics;{RBR}{IN}{CD}{NN}{IN}{NNS}
+function;Certificate received;{NN}{VBD}
+function;Rejected;{VBN}
+function;Send Letter of Rejection;{VB}{NN}{IN}{NN}
+function;Provisional Acceptance cancelled;{JJ}{NNP}{VBD}
+function;Provisional Acceptance confirmed;{JJ}{NNP}{VBD}
+function;Wait for Bachelor's Certificate;{VB}{IN}{NNP}{POS}{NNP}
+function;Accepted;{JJ}
+function;Send Letter of Acceptance;{VB}{NN}{IN}{NNP}
+function;Check Certificate;{VB}{NNP}
+function;Send Letter of Provisional Acceptance;{VB}{NN}{IN}{NNP}
+event;End Event;{NN}{NN}

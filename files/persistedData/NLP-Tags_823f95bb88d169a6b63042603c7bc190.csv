@@ -1,0 +1,7 @@
+823f95bb88d169a6b63042603c7bc190;Costing
+function;Product Costing for Sales Document;{NN}{VBG}{IN}{NNS}{NNP}
+function;Individual Determination for Sales Document;{JJ}{NN}{IN}{NNS}{NNP}
+event;Sales document preliminary costed via unit costing;{NNS}{VBP}{JJ}{VBN}{IN}{NN}{VBG}
+event;Product costng to material in sales document to be created;{NN}{NN}{TO}{NN}{IN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Sales order preliminary costing via product costing;{NNS}{NN}{JJ}{VBG}{IN}{NN}{VBG}
+event;Unit costing for material in sales document to be created;{NN}{VBG}{IN}{NN}{IN}{NNS}{VBP}{TO}{VB}{VBN}

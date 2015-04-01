@@ -1,0 +1,21 @@
+42c6a09204f0b245a5e3b1af8dd484ca;Settlement and Completion
+function;Business Order Completion;{NNP}
+function;Order Archiving;{NNP}
+function;Order Settlement;{NNP}
+function;Technical Order Completion;{NNP}
+event;Maintenance order is completed with time reference;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Open purchase requisitions for external operation are deleted;{VB}{NN}{NNS}{IN}{JJ}{NN}{VBP}{VBN}
+event;Order is closed technically;{NN}{VBZ}{VBN}{RB}
+event;Open material reservations are deleted;{VB}{NN}{NNS}{VBP}{VBN}
+event;Settlement rule is specified;{NNP}{NN}{VBZ}{VBN}
+event;Maintenance order is confirmed completely;{NN}{NN}{VBZ}{VBN}{RB}
+event;Open purchase requisitions for non-stock material are deleted;{VB}{NN}{NNS}{IN}{JJ}{NN}{VBP}{VBN}
+event;Order Should Be Settled;{NNP}{MD}{VB}{VBN}
+event;Order is to be archived;{NN}{VBZ}{TO}{VB}{VBN}
+event;Actual costs are updated to maintenance order;{JJ}{NNS}{VBP}{VBN}{TO}{NN}{NN}
+event;Capacity requirement records are deleted;{NN}{NN}{NNS}{VBP}{VBN}
+event;Settlement rule exists;{NNP}{NN}{VBZ}
+event;Maintenance order is to be closed;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Order Should Be Technically Completed;{NNP}{MD}{VB}{NNP}
+event;Order is settled;{NN}{VBZ}{VBN}

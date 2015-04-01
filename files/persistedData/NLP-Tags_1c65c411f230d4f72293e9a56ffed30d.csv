@@ -1,0 +1,11 @@
+1c65c411f230d4f72293e9a56ffed30d;Delivery and Transportation
+function;Transportation Planning and Processing;{NNP}{CC}{NNP}
+function;Delivery Processing;{NN}{NN}
+event;Shipment is Complete;{NN}{VBZ}{JJ}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Inspection before goods issue is to be carried out;{NNP}{IN}{NNS}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Inspect (independent of goods issue);{VB}{-LRB-}{JJ}{IN}{NNS}{NN}{-RRB-}
+event;Order generated and delivery opened;{NNP}{VBD}{CC}{NN}{VBD}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Material is removed from stock;{NN}{VBZ}{VBN}{IN}{NN}

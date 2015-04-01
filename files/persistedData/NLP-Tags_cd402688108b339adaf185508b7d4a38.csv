@@ -1,0 +1,23 @@
+cd402688108b339adaf185508b7d4a38;Procurement of Materials and External Services
+function;Purchasing;{NNP}
+function;Purchase Requisition;{NN}{NN}
+function;Service Entry Sheet;{NNP}
+function;Goods Receipt;{NNP}
+function;Invoice Verification;{NNP}
+function;Warehouse/ Stores;{NNP}{:}{NNS}
+event;Purchase requisition released for purchase order;{NN}{NN}{VBN}{IN}{NN}{NN}
+event;Purchase order created;{NN}{NN}{VBN}
+event;Service entry sheet is transmitted;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Goods received;{NNP}{VBD}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Purchase requisition released for contract release order;{NN}{NN}{VBN}{IN}{NN}{NN}{NN}
+event;Inbound delivery for PO created;{JJ}{NN}{IN}{NNP}{VBD}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Services are to be entered;{NNPS}{VBP}{TO}{VB}{VBN}
+event;Material is released;{NN}{VBZ}{VBN}
+event;Invoice received;{NNP}{VBD}
+event;Service is accepted;{NNP}{VBZ}{VBN}
+event;Requirement for material/ external services exists;{NN}{IN}{NN}{:}{JJ}{NNS}{VBZ}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;TO item confirmed without differences;{TO}{NN}{VBD}{IN}{NNS}
+event;Requisition released for scheduling agreement schedule/SA release;{NN}{VBN}{IN}{NN}{NN}{NN}{NN}

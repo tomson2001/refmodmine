@@ -1,0 +1,9 @@
+9fabf4752349aab59bd2cc04feb72291;Planning
+function;Transfer of Results to Demand Management;{NN}{IN}{NNS}{TO}{NN}{NN}
+function;Flexible Planning;{JJ}{NNP}
+function;Demand Management;{NN}{NN}
+event;Results transferred to Demand Management;{NNS}{VBN}{TO}{NN}{NN}
+event;Forecast is necessary;{NN}{VBZ}{JJ}
+event;DRP run to be executed for plant / distribution center;{NN}{NN}{TO}{VB}{VBN}{IN}{NN}{:}{NN}{NN}
+event;DRP run is to be executed for material;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;SOP data to be transferred to Demand Management;{NNP}{NNS}{TO}{VB}{VBN}{TO}{NN}{NN}

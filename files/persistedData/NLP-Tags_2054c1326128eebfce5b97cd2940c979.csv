@@ -1,0 +1,19 @@
+2054c1326128eebfce5b97cd2940c979;Bill of Exchange Receivable
+function;Bill of Exchange Usage;{NNP}{IN}{NNP}
+function;Manual Payment by Bill of Exchange;{NNP}{NN}{IN}{NNP}{IN}{NNP}
+function;Bill of Exchange Payment Request;{NNP}{IN}{NNP}{NN}{NN}
+function;Failed Bill of Exchange;{VBD}{NNP}{IN}{NNP}
+function;Check/ Bill of Exchange Receivable;{VB}{:}{NNP}{IN}{NNP}
+function;Bill of Exchange Reversal;{NNP}{IN}{NNP}{NN}
+event;Bill of exchange usage complete;{NNP}{IN}{NN}{NN}{JJ}
+event;Manual payment by bill of exchange to be made;{JJ}{NN}{IN}{NN}{IN}{NN}{TO}{VB}{VBN}
+event;Correspon- dence request is created;{NNP}{:}{NN}{NN}{VBZ}{VBN}
+event;Check/ bill of exchange receivable to be posted;{VB}{:}{NN}{IN}{NN}{NN}{TO}{VB}{VBN}
+event;Failed bill of exchange to be processed;{VBN}{NN}{IN}{NN}{TO}{VB}{VBN}
+event;Failed bill of exchange is posted;{VBN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Bill of exchange payment posted;{NNP}{IN}{NN}{NN}{VBD}
+event;Bill charges incurred;{NNP}{VBZ}{VBN}
+event;Bill of exchange payment request to be created;{NNP}{IN}{NN}{NN}{NN}{TO}{VB}{VBN}
+event;Bill of exchange tax incurred;{NNP}{IN}{NN}{NN}{VBN}
+event;Due date and protest period exceeded;{JJ}{NN}{CC}{NN}{NN}{VBD}
+event;Bill of exchange reversed;{NNP}{IN}{NN}{VBD}

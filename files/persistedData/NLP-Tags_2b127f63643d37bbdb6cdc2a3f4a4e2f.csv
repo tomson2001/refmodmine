@@ -1,0 +1,14 @@
+2b127f63643d37bbdb6cdc2a3f4a4e2f;Sales Planning
+function;Transfer of Planned Sales Quantities;{NN}{IN}{NNP}{NNS}{NNS}
+function;Manual Sales Planning;{NNP}{NNS}{NNP}
+function;Create Planning Proposal (with Sales Planning);{VB}{NNP}{-LRB-}{IN}{NNS}{NNP}{-RRB-}
+event;Plan Proposal for Sales Planning to be Created;{NNP}{IN}{NNS}{NNP}{TO}{VB}{VBN}
+event;Sales quantity forecasted;{NNS}{NN}{VBD}
+event;Plan proposal is created;{NNP}{NN}{VBZ}{VBN}
+event;Planned sales quantities to be transferred to SOP;{NNP}{NNS}{NNS}{TO}{VB}{VBN}{TO}{VB}
+event;Sales quantities planned;{NNS}{NNS}{VBD}
+event;Plan sales quantities are to be transferred;{NNP}{NNS}{NNS}{VBP}{TO}{VB}{VBN}
+event;Plan needs to be changed;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Plan sales quantities transferred to LIS;{NNP}{NNS}{NNS}{VBN}{TO}{NN}
+event;Planning revised / plan structure checked;{NNP}{VBD}{:}{NN}{NN}{VBD}
+event;Values distributed to lower planning levels;{NNS}{VBN}{TO}{JJR}{NN}{NNS}

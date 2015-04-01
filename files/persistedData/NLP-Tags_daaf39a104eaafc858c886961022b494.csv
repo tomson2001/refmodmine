@@ -1,0 +1,28 @@
+daaf39a104eaafc858c886961022b494;Fig.49: WABO1 YAWL model for MunA
+function;Hold meeting with customer;{VB}{NN}{IN}{NN}
+function;Hold consultation with customer;{VB}{NN}{IN}{NN}
+function;Check urban plan;{VB}{JJ}{NN}
+function;Receive request;{VB}{NN}
+function;Assign investigating officer;{VB}{VBG}{NN}
+function;Check wealth;{VB}{NN}
+function;Send result of consultation;{VB}{NN}{IN}{NN}
+function;Change plan;{NNP}{NN}
+function;Receive supplement;{VB}{NN}
+function;Archive;{NNP}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;Send acknowledgment;{VB}{NN}
+function;Prepare file;{VB}{NN}
+event;status change to Check urban plan;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Hold meeting with customer;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;yes;{RB}
+event;status change to Send acknowledgment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Change plan;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Hold consultation with customer;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Check wealth;{NN}{NN}{TO}{VB}{NN}
+event;status change to Record request in system;{NN}{NN}{TO}{NNP}{NN}{IN}{NN}
+event;no;{DT}
+event;status change to Receive request;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send result of consultation;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Prepare file;{NN}{NN}{TO}{VB}{NN}
+event;the end;{DT}{NN}
+event;status change to Assign investigating officer;{NN}{NN}{TO}{VB}{VBG}{NN}

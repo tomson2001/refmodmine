@@ -1,0 +1,24 @@
+bb7a727c866b89b7a9ce70be01a8ed27;Maintenance Planning
+function;Maintenance Call Processing;{NNP}
+function;Object Costing;{VB}{VBG}
+function;Maintenance Plan Costing;{NN}{NN}{VBG}
+function;Maintenance Plan Scheduling;{NN}{NN}{NN}
+event;Maintenance plan is created;{NN}{NN}{VBZ}{VBN}
+event;Cost Estimates Should Be Made for Maintenance Plans;{NN}{NNS}{MD}{VB}{VBN}{IN}{NNP}{NNS}
+event;Objects in Maintenance Plans Should Be Calculated;{NNS}{IN}{NNP}{MD}{VB}{VBN}
+event;Call horizon is reached;{VB}{NN}{VBZ}{VBN}
+event;Maintenance Costs Determined;{NNP}{NNS}{VBN}
+event;Call horizon is not reached;{VB}{NN}{VBZ}{RB}{VBN}
+event;Maintenance calls are updated;{NN}{NNS}{VBP}{VBN}
+event;Maintenance plan is to be scheduled manually;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;;
+event;Maintenance notification is to be created for each maintenance item;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{DT}{NN}{NN}
+event;Service entry sheet to be created for each maintenance item;{NNP}{NN}{NN}{TO}{VB}{VBN}{IN}{DT}{NN}{NN}
+event;Maintenance plan to be scheduled according to maintenance strategy;{NN}{NN}{TO}{VB}{VBN}{VBG}{TO}{NN}{NN}
+event;Maintenance plan released triggered;{NN}{NN}{VBN}{VBD}
+event;Schedule counter reading mtce plan;{VB}{RB}{VBG}{NN}{NN}
+event;Maintenance order to be created per maintenance item;{NN}{NN}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Maintenance plan is to be scheduled automatically;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Dates + due maintenance packages are determined;{VBZ}{CC}{JJ}{NN}{NNS}{VBP}{VBN}
+event;Maintenance call waits;{NN}{NN}{VBZ}
+event;Maintenance plan calls are processed;{NN}{NN}{NNS}{VBP}{VBN}

@@ -1,0 +1,5 @@
+38844b55c62c3da387fd1a521d59dc9d;Transport
+function;Transportation Planning and Processing;{NNP}{CC}{NNP}
+event;Shipment is Complete;{NN}{VBZ}{JJ}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Deliveries need to be planned;{NNS}{VBP}{TO}{VB}{VBN}

@@ -1,0 +1,28 @@
+8290b7bf62f419186fa94454fd9d4e35;A.I.04,a_Business Process
+function;Produktion planning;{NNP}{NN}
+function;Order tracking;{NNP}{NN}
+function;Order confirmation;{NNP}{NN}
+function;Feinsteuerung;{NNP}
+function;Planung des Primärbedarfs;{NNP}{NNS}
+function;Kundenauftragsverwaltung;{NNP}
+function;CAM i.e.S.;{NNP}
+function;Auftragsfreigabe;{NN}
+function;Reihenfolgebildung;{NNP}
+function;Requirements planning;{NNS}{VBG}
+function;Purchasing;{NNP}
+function;Reservierung;{NNP}
+function;Kapazitätsterminierung;{NN}{NN}
+function;Produktionsinformstion, -monitoring;{NNP}{,}{:}{NN}
+function;Purchasing;{NNP}
+function;Evaluate if purchasing req. are met;{VB}{IN}{VBG}{NN}{.}
+function;Service;{NNP}
+function;Marketing;{NNP}
+function;Design engineering;{NN}{NN}
+function;Equipment making;{NNP}{VBG}
+function;Evaluate if service req. are met;{VB}{IN}{NN}{NN}{.}
+function;Evaluate if customer req. are met;{VB}{IN}{NN}{NN}{.}
+function;Costing;{VBG}
+function;Documentation;{NN}
+function;General ledger accounting;{NNP}{NN}
+event;Evaluation negativ;{NN}{NN}
+event;Scheduled deadline reached;{VBN}{NN}{VBD}

@@ -1,0 +1,8 @@
+2072fbe29ba4a81ca01cfce6df49d47f;Change Analysis
+function;Graphical Product Structure Processing;{NNP}{NN}{NN}
+function;Change Overview;{NNP}
+function;Digital Signatures;{NNP}{NNS}
+event;Changes completed;{NNS}{VBD}
+event;Check changes;{VB}{NNS}
+event;Display changes to digital signature;{VB}{NNS}{TO}{JJ}{NN}
+event;Check product data;{VB}{NN}{NNS}

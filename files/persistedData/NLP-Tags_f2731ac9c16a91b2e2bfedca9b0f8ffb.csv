@@ -1,0 +1,14 @@
+f2731ac9c16a91b2e2bfedca9b0f8ffb;Personnel Shift Planning - Operative
+function;Personnel shift planning - operative;{NNP}{NN}{NN}{:}{NN}
+event;Completed operative shift plan is available;{VBN}{JJ}{NN}{NN}{VBZ}{JJ}
+event;Need for operative personnel time scheduling;{VBN}{IN}{JJ}{NNS}{NN}{NN}
+event;Operative personnel requirement for org. plan exists;{JJ}{NNS}{NN}{IN}{NN}{.}
+event;Human Resource Without Shift Accepted;{JJ}{NNP}{IN}{NN}{JJ}
+event;Need for individual personnel development planning exists;{VBN}{IN}{JJ}{NNS}{NN}{NN}{VBZ}
+event;Requirement for operative shift planning exists;{NN}{IN}{JJ}{NN}{NN}{VBZ}
+event;Shift planning for shift planning group is desired;{NN}{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Long term personnel requirement exists;{JJ}{NN}{NNS}{NN}{VBZ}
+event;Uncovered operative personnel requirement is accepted;{VBN}{JJ}{NNS}{NN}{VBZ}{VBN}
+event;Human resource cannot be implemented long term;{JJ}{NN}{MD}{RB}{VB}{VBN}{JJ}{NN}
+event;Operative personnel requirement must be reformulated;{JJ}{NNS}{NN}{MD}{VB}{VBN}
+event;Personnel assignment for org. plan exists;{NNP}{NN}{IN}{NN}{.}

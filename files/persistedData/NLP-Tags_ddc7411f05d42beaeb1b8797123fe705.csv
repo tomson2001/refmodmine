@@ -1,0 +1,7 @@
+ddc7411f05d42beaeb1b8797123fe705;General Ledger Account Analysis
+function;General Ledger Line item Analysis;{NNP}{NN}{NN}
+function;Balance Analysis;{NN}{NN}
+event;Balance analysis carried out;{NN}{NN}{VBD}{RP}
+event;G/L line item analysis carried out;{NN}{NN}{NN}{NN}{VBD}{RP}
+event;Evaluations run on general ledger;{NNS}{VBP}{IN}{JJ}{NN}
+event;G/L accounts due for analysis;{NN}{NNS}{JJ}{IN}{NN}

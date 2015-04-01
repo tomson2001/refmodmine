@@ -1,0 +1,10 @@
+ba49cadeda36359988378323f0c4aef2;Change Mgmt with Engineering Change Request/Order (ECR/ECO)
+function;Eng. Change Request/ Order Processing;{NNP}{.}
+function;Object Management Record Processing with ECR/ECO;{NNP}{IN}{NN}
+function;Change Execution with ECR/ECO;{NNP}{NN}{IN}{NN}
+function;Change message processing;{NNP}{NN}{NN}
+event;Change request exists;{NNP}{NN}{VBZ}
+event;Make changes to object;{VB}{NNS}{TO}{VB}
+event;Assign objects to object management record;{VB}{NNS}{TO}{VB}{NN}{NN}
+event;Changes necessary;{NNS}{JJ}
+event;Check changes;{VB}{NNS}

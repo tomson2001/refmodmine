@@ -1,0 +1,7 @@
+7e6fc3068ae12d0a6008055bd96f2a31;Budgeting
+function;Budget Update;{NNP}
+function;Budget Release;{NNP}
+event;Budget released;{NNP}{VBD}
+event;Budget is updated;{NNP}{VBZ}{VBN}
+event;Budget to be released;{NNP}{TO}{VB}{VBN}
+event;Budget is to be updated;{NNP}{VBZ}{TO}{VB}{VBN}

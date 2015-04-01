@@ -1,0 +1,17 @@
+6c4660068e0136f1d250886c59123c7c;Applicant Pool Administration
+function;Applicant Pool Administration;{NN}{NNP}
+function;Notification of Rejection of Application;{NN}{IN}{NN}{IN}{NN}
+function;Notification that Application is on Hold;{NN}{WDT}{NN}{VBZ}{IN}{VB}
+event;Vacancy and assigned applicants exist;{NN}{CC}{VBN}{NNS}{VBP}
+event;Applicant has been entered;{NN}{VBZ}{VBN}{VBN}
+event;Applicant pool must be updated;{NN}{NN}{MD}{VB}{VBN}
+event;Recruitment request is in process;{NN}{NN}{VBZ}{IN}{NN}
+event;Applicant is on hold;{NN}{VBZ}{IN}{NN}
+event;On hold notification is transmitted to applicant;{IN}{NN}{NN}{VBZ}{VBN}{TO}{NN}
+event;Rejection and application documents transmitted to applicant;{NN}{CC}{NN}{NNS}{VBN}{TO}{NN}
+event;Applicant is conclusively rejected;{NN}{VBZ}{RB}{VBN}
+event;Enterprise requires notification of rejection;{NN}{VBZ}{NN}{IN}{NN}
+event;Enterprise requires on hold notification;{NN}{VBZ}{IN}{NN}{NN}
+event;Applicant is rejected for vacancy;{NN}{VBZ}{VBN}{IN}{NN}
+event;Applicant is put on hold for vacancy;{NN}{VBZ}{VBN}{IN}{NN}{IN}{NN}
+event;Application is rejected;{NN}{VBZ}{VBN}

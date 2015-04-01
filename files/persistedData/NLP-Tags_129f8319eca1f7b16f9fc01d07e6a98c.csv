@@ -1,0 +1,17 @@
+129f8319eca1f7b16f9fc01d07e6a98c;Fig.15: GBA1 YAWL model for MunG
+function;No payment;{DT}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Print application;{VB}{NN}
+function;Receive payment;{VB}{NN}
+function;Determine fees;{NN}{NNS}
+function;Send extract;{VB}{NN}
+function;Process payment;{VB}{NN}
+function;Send payment request;{VB}{NN}{NN}
+function;Archive;{NNP}
+function;Decide admissible;{VB}{JJ}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;waiting for payment;{VBG}{IN}{NN}
+event;Not admissible;{RB}{JJ}
+event;Start process;{NNP}{NN}
+event;Admissibile;{NNP}
+event;Process end;{VB}{NN}

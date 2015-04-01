@@ -1,0 +1,7 @@
+5817c563df03a141958a282f482fdd64;Vendor Account Analysis
+function;Vendor Account Evaluations;{NNP}{NNS}
+function;Balance Analysis;{NN}{NN}
+event;Account analysis made;{NNP}{NN}{VBD}
+event;Balance analysis to be carried out;{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Evaluations exist;{NNS}{VBP}
+event;Line item analysis to be carried out;{NNP}{NN}{NN}{TO}{VB}{VBN}{RP}

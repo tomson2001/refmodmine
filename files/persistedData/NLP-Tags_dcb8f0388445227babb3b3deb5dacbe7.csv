@@ -1,0 +1,16 @@
+dcb8f0388445227babb3b3deb5dacbe7;Process Order
+function;Process Order Creation and Processing;{VB}{NNP}{CC}{NNP}
+function;Process Order Print;{VB}{NNP}{VB}
+function;Release of Process Order;{NNP}{IN}{VB}{NN}
+function;Conversion of Planned Order;{NN}{IN}{NNP}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Inspection lot is created automatically for order;{NNP}{NN}{VBZ}{VBN}{RB}{IN}{NN}
+event;Prelim. Costing Carried Out for Planned Order;{NNP}{.}
+event;Capacity requirement is created;{NN}{NN}{VBZ}{VBN}
+event;Conversion date is reached;{NN}{NN}{VBZ}{VBN}
+event;Material reservation is created;{NN}{NN}{VBZ}{VBN}
+event;Process order is processed;{VB}{NN}{VBZ}{VBN}
+event;Shop floor papers for process order are to be printed;{NNP}{NN}{NNS}{IN}{NN}{NN}{VBP}{TO}{VB}{VBN}
+event;Process order is released;{VB}{NN}{VBZ}{VBN}
+event;Process order is printed;{VB}{NN}{VBZ}{VBN}
+event;Conversion of planned order to process order started;{NN}{IN}{VBN}{NN}{TO}{NN}{NN}{VBD}

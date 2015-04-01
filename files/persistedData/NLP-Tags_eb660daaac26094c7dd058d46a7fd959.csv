@@ -1,0 +1,58 @@
+eb660daaac26094c7dd058d46a7fd959;Fig.42: MOR YAWL model for MunD
+function;Close case;{JJ}{NN}
+function;Update status info;{NNP}{NN}{NN}
+function;Fill in contract info;{VB}{IN}{NN}{NN}
+function;Issue signed invoice;{NN}{VBD}{NN}
+function;Enter data about issue 1;{VB}{NNS}{IN}{NN}{CD}
+function;Start case;{NNP}{NN}
+function;Contact field service;{NN}{NN}{NN}
+function;Process continue 1;{VB}{VB}{CD}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Send e-mail with issue;{VB}{NN}{IN}{NN}
+function;Issue concerning contractor;{NN}{VBG}{NN}
+function;Enter data about the Informer 1;{VB}{NNS}{IN}{DT}{NNP}{CD}
+function;Printout receipt;{NNP}{NN}
+function;Send ackn;{VB}{NN}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Assign categ resp person and dept;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Urgent issue;{JJ}{NN}
+function;Direct to desk;{JJ}{TO}{NN}
+function;Handle issue;{VB}{NN}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Process continue;{VB}{VB}
+function;Enter Data about issue;{VB}{NNS}{IN}{NN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Known issue;{VBN}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+event;status change to Transmit handling problem;{NN}{NN}{TO}{VB}{VBG}{NN}
+event;status change to Urgent issue;{NN}{NN}{TO}{JJ}{NN}
+event;no;{DT}
+event;status change to Enter data about the Informer 1;{NN}{NN}{TO}{VB}{NNS}{IN}{DT}{NNP}{CD}
+event;status change to Send e-mail with issue;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;the end;{DT}{NN}
+event;status change to Enter data about issue 1;{NN}{NN}{TO}{VB}{NNS}{IN}{NN}{CD}
+event;status change to Send ackn;{NN}{NN}{TO}{VB}{NN}
+event;Status change to Fill in contract info;{NN}{NN}{TO}{VB}{IN}{NN}{NN}
+event;no;{DT}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}
+event;yes;{RB}
+event;yes;{RB}
+event;status change to Close case;{NN}{NN}{TO}{VB}{NN}
+event;status change to Direct to desk;{NN}{NN}{TO}{JJ}{TO}{NN}
+event;status change to Issue signed invoice;{NN}{NN}{TO}{NNP}{VBD}{NN}
+event;status change to Update status info;{NN}{NN}{TO}{NNP}{NN}{NN}
+event;status  change to Fill in info about issue;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NN}
+event;status change to Enter Data about issue;{NN}{NN}{TO}{VB}{NNS}{IN}{NN}
+event;status change to Enter data about the informer;{NN}{NN}{TO}{VB}{NNS}{IN}{DT}{NN}
+event;status change to Receive call during bus hours;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NNS}
+event;yes;{RB}
+event;status change to Handle issue;{NN}{NN}{TO}{VB}{NN}
+event;status change to Issue concerning contractor;{NN}{NN}{TO}{NN}{VBG}{NN}
+event;status change to Ask cust what product he is there for;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+event;no;{DT}
+event;status change to Known issue;{NN}{NN}{TO}{VBN}{NN}
+event;status change to Printout receipt;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Receive confirmation;{NN}{NN}{TO}{VB}{NN}

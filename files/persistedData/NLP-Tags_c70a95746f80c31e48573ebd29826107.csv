@@ -1,0 +1,14 @@
+c70a95746f80c31e48573ebd29826107;Postings in G/L
+function;Clearing;{NNP}
+function;Accrual/ Deferral Posting;{NN}{:}{NNP}
+function;Recurring Entry;{VBG}{NN}
+function;G/L Account Posting;{NNP}{VBG}
+function;Park G/L Account Document;{NNP}
+event;Direct G/L account posting to be made;{JJ}{NN}{NN}{VBG}{TO}{VB}{VBN}
+event;Planning carried out;{NNP}{VBD}{RP}
+event;G/L account document parked;{NN}{NN}{NN}{VBD}
+event;Accrual/ deferral posting made;{NN}{:}{JJ}{VBG}{VBN}
+event;Offsetting reversed;{VBG}{VBN}
+event;Document posted;{NNP}{VBD}
+event;Recurring entry is made;{VBG}{NN}{VBZ}{VBN}
+event;Posting to be made in General Ledger;{VBG}{TO}{VB}{VBN}{IN}{NNP}

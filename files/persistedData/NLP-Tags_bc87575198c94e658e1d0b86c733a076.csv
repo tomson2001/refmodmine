@@ -1,0 +1,44 @@
+bc87575198c94e658e1d0b86c733a076;Fig.27: GBA2 YAWL model for MunI
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+function;Direct to right product;{JJ}{TO}{JJ}{NN}
+function;Ask customer to bring ID;{VB}{NN}{TO}{VB}{NNP}
+function;Refer to Service Desk;{VB}{TO}{NNP}
+function;Go to the end;{VB}{TO}{DT}{NN}
+function;Go to Service Desk Directly;{VB}{TO}{NNP}{RB}
+function;Give GBA extract;{VB}{NNP}{NN}
+function;No payment;{DT}{NN}
+function;Ask identifying questions;{VB}{VBG}{NNS}
+function;Determine whether proof of identity is present;{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+function;Process continue;{VB}{VB}
+function;Determine if right product;{VB}{IN}{JJ}{NN}
+function;free;{JJ}
+function;Determine fees;{NN}{NNS}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Receive payment;{VB}{NN}
+function;ID present;{NN}{JJ}
+function;Give receipt;{VB}{NN}
+function;Process payment;{VB}{NN}
+event;status change to Refer to Service Desk;{NN}{NN}{TO}{VB}{TO}{NNP}
+event;status change to Give receipt;{NN}{NN}{TO}{VB}{NN}
+event;entitled;{VBN}
+event;status change to Go TO Service Desk Directly;{NN}{NN}{TO}{VB}{TO}{NNP}{RB}
+event;status change to Determine whether requester is entitled;{NN}{NN}{TO}{VB}{IN}{NN}{VBZ}{VBN}
+event;no ID;{DT}{NN}
+event;status change to ID present;{NN}{NN}{TO}{NNP}{JJ}
+event;not free;{RB}{JJ}
+event;status change to Determine whether proof of identity is present;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Ask customer what product he is requesting;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;not entitled;{RB}{VBN}
+event;wrong product;{JJ}{NN}
+event;no ID;{DT}{NN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;the end;{DT}{NN}
+event;status change to Determine if right product;{NN}{NN}{TO}{VB}{IN}{JJ}{NN}
+event;status change to free;{NN}{NN}{TO}{JJ}
+event;right product;{JJ}{NN}
+event;status change to Give GBA extract;{NN}{NN}{TO}{VB}{NNP}{NN}

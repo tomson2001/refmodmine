@@ -1,0 +1,14 @@
+e3e502769de00340ef3c70af3d67cdd6;A.II.25,c
+function;F1;{NN}
+function;F2;{NN}
+function;F2;{NN}
+function;F1;{NN}
+function;Quality inspection;{JJ}{NN}
+function;Entry of stock in data;{NN}{IN}{NN}{IN}{NNS}
+function;Distributing delivery;{VBG}{NN}
+function;Controlling/EIS;{NN}
+event;E2;{NN}
+event;E1;{NN}
+event;E2;{NN}
+event;Materials reveived;{NNPS}{VBD}
+event;Scheduled deadline reached;{VBN}{NN}{VBD}

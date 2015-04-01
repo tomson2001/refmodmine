@@ -1,0 +1,8 @@
+602fc33d10b79b7c52bb209e90b6b701;Standard Operating Procedure
+function;Report Shipping;{NNP}
+function;Processing of Substance Report Generation Variants;{NN}{IN}{NNP}{NNS}
+function;Document Template Processing;{NNP}
+function;Substance Report Processing;{NNP}
+event;Entering data is completed;{VBG}{NNS}{VBZ}{VBN}
+event;Shipping (printing) of reports is to be triggered;{NN}{-LRB-}{NN}{-RRB-}{IN}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Create standard operating procedure;{VB}{JJ}{NN}{NN}

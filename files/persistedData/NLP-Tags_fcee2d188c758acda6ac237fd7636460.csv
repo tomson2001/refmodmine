@@ -1,0 +1,19 @@
+fcee2d188c758acda6ac237fd7636460;Complaints
+function;Invoice Correction Request;{NNP}
+function;Credit/ Debit Memo Request Processing;{NNP}{:}{NNP}
+function;Returns Processing;{NNS}{NN}
+event;Credit/ debit memo request is rejected;{NNP}{:}{NN}{NN}{NN}{VBZ}{VBN}
+event;Credit memo can be created;{NNP}{NN}{MD}{VB}{VBN}
+event;Returns already dispatched;{NNS}{RB}{VBD}
+event;Invoice correction needs to be created;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Credit memo is rejected;{NNP}{NN}{VBZ}{VBN}
+event;Returns to be collected;{NNS}{TO}{VB}{VBN}
+event;Customer wants subsequent delivery free-of-charge;{NN}{VBZ}{JJ}{NN}{NN}
+event;Credit/ debit memo is granted;{NNP}{:}{NN}{NN}{VBZ}{VBN}
+event;Credit/ debit memo request is rejected;{NNP}{:}{NN}{NN}{NN}{VBZ}{VBN}
+event;Complaint received (without goods return);{NN}{VBD}{-LRB-}{IN}{NNS}{NN}{-RRB-}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Subsequent debit reason occurred;{JJ}{NN}{NN}{VBD}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Credit/ debit memo is granted;{NNP}{:}{NN}{NN}{VBZ}{VBN}
+event;Complaints with goods returns is received;{NNS}{IN}{NNS}{NNS}{VBZ}{VBN}

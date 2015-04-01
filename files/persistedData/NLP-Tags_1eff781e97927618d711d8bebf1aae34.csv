@@ -1,0 +1,10 @@
+1eff781e97927618d711d8bebf1aae34;Currency Translation
+function;Central Currency Translation;{NNP}{NN}
+event;Standardizing entries were made;{VBG}{NNS}{VBD}{VBN}
+event;Exchange rates / translation methods are maintained centrally;{NNP}{NNS}{:}{NN}{NNS}{VBP}{VBN}{RB}
+event;Proportional cons- olidation is used for the company;{JJ}{NNS}{:}{NN}{VBZ}{VBN}{IN}{DT}{NN}
+event;Intercompany balances are to be reconciled in advance;{NN}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Individual financial statement is entered in database;{JJ}{JJ}{NN}{VBZ}{VBN}{IN}{NN}
+event;Currency translation carried out;{NNP}{NN}{VBD}{RP}
+event;Data entered for items is broken down by trading partner;{NNS}{VBD}{IN}{NNS}{VBZ}{VBN}{RP}{IN}{VBG}{NN}
+event;FS item sets were specified;{NN}{NN}{NNS}{VBD}{VBN}

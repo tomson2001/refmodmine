@@ -1,0 +1,6 @@
+c18300675a50544600e946e95acbd3d1;Monitoring of Long-Term Incentives Program
+function;Monitoring of Long-Term Incentives Program;{NN}{IN}{NNP}
+event;Long-term incentives program is deactivated;{JJ}{NNS}{NN}{VBZ}{VBN}
+event;Need for correction of long-term incentives program;{VBN}{IN}{NN}{IN}{JJ}{NNS}{NN}
+event;Need for monitoring of long-term incentives program;{VBN}{IN}{NN}{IN}{JJ}{NNS}{NN}
+event;No need to act regarding long-term incentives program;{DT}{NN}{TO}{VB}{VBG}{JJ}{NNS}{NN}

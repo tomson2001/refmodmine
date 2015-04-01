@@ -1,0 +1,7 @@
+254237f117bce258ea1bfd7a901fff7f;Plan External Services
+function;External Activity Planning;{JJ}{NN}{NNP}
+function;Subcontracted Services Planning;{NNP}
+event;Service activities are planned;{NNP}{NNS}{VBP}{VBN}
+event;Service planning required;{NNP}{NN}{VBN}
+event;External activities are planned;{JJ}{NNS}{VBP}{VBN}
+event;Activities carried out by other firms must be planned;{NNS}{VBD}{RP}{IN}{JJ}{NNS}{MD}{VB}{VBN}

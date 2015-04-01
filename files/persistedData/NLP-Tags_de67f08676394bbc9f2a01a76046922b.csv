@@ -1,0 +1,7 @@
+de67f08676394bbc9f2a01a76046922b;D.I.040.c_Event control of value- oriented processes
+function;Product costing;{NN}{VBG}
+event;Order release ( preliminary costing of order);{NNP}{NN}{-LRB-}{JJ}{VBG}{IN}{NN}{-RRB-}
+event;Data changed (data volume, values);{NNS}{VBD}{-LRB-}{NNS}{NN}{,}{NNS}{-RRB-}
+event;Scheduled deadline reached;{VBN}{NN}{VBD}
+event;Order completed (actual costing analysis od order);{NNP}{VBD}{-LRB-}{JJ}{VBG}{NN}{NN}{NN}{-RRB-}
+event;Operation completed (concurrent costing);{NN}{VBN}{-LRB-}{JJ}{VBG}{-RRB-}

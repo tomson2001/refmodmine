@@ -1,0 +1,6 @@
+a06e6100b829616a48595a4585cb8968;Injury/Illness Log
+function;Data Transfer Injury/ Illness Log to Accident;{NNS}{NN}{NNP}{:}{NN}{NN}{TO}{NNP}
+function;Injury/ Illness Log Entry Processing;{NNP}{:}{NN}{NN}{NNP}
+event;Injury/ illness log entries are to be entered in the injury/illness log;{NNP}{:}{NN}{NN}{NNS}{VBP}{TO}{VB}{VBN}{IN}{DT}{NN}{NN}
+event;Occupational health data is to be entered;{JJ}{NN}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Entering data is completed;{VBG}{NNS}{VBZ}{VBN}

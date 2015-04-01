@@ -1,0 +1,6 @@
+7c18a1e1c8abd6615de768103f1a5ed8;Purchase Requisition
+function;Purchase Requisition Processing;{NN}{NN}{NN}
+event;Requisition released for scheduling agreement schedule/SA release;{NN}{VBN}{IN}{NN}{NN}{NN}{NN}
+event;Purchase requisition released for contract release order;{NN}{NN}{VBN}{IN}{NN}{NN}{NN}
+event;Requirement for material has arisen;{NN}{IN}{NN}{VBZ}{VBN}
+event;Purchase requisition released for purchase order;{NN}{NN}{VBN}{IN}{NN}{NN}

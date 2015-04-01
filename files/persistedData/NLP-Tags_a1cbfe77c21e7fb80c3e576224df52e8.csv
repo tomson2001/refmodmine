@@ -1,0 +1,8 @@
+a1cbfe77c21e7fb80c3e576224df52e8;Customer Inquiry and Quotation Processing
+function;Resource-Related Quotation;{NNP}
+function;Customer Inquiry Processing;{NN}{NNP}
+function;Customer Quotation Processing;{NN}{NN}{NN}
+event;Customer project required;{NN}{NN}{VBN}
+event;Quotation must be created on basis of plan data;{NN}{MD}{VB}{VBN}{IN}{NN}{IN}{NN}{NNS}
+event;Customer inquires about products;{NN}{VBZ}{IN}{NNS}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}

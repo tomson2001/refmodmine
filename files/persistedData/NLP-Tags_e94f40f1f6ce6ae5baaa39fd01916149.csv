@@ -1,0 +1,37 @@
+e94f40f1f6ce6ae5baaa39fd01916149;Handling of Leased Assets
+function;Closing Operations;{NN}{NNP}
+function;Receipts;{NNPS}
+function;Depreciation;{NN}
+function;Asset Maintenance;{NNP}
+function;Business Transactions;{NN}{NNS}
+function;Specific Valuations;{JJ}{NNS}
+function;Retirements;{NNS}
+event;Index series must be updated;{NNP}{NN}{MD}{VB}{VBN}
+event;Retirement was posted and checked;{NNP}{VBD}{VBN}{CC}{VBN}
+event;New master record is necessary;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Index series was updated;{NNP}{NN}{VBD}{VBN}
+event;Fixed asset should be insured;{VBN}{NN}{MD}{VB}{VBN}
+event;Fixed asset was bought w/o purchase order;{VBN}{NN}{VBD}{VBN}{NN}{NN}{NN}
+event;Asset master record does not exist;{NNP}{NN}{NN}{VBZ}{RB}{VB}
+event;Insurance contract was closed;{NN}{NN}{VBD}{VBN}
+event;Periodic lease payment is necessary;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Leasing agrmnt conditions were changed;{NNP}{JJ}{NNS}{VBD}{VBN}
+event;Fixed asset was given;{VBN}{NN}{VBD}{VBN}
+event;Group asset to be created;{NNP}{NN}{TO}{VB}{VBN}
+event;Fixed asset was found;{VBN}{NN}{VBD}{VBN}
+event;G/L accounts were posted;{NN}{NNS}{VBD}{VBN}
+event;Acquisitions to be entered;{NNS}{TO}{VB}{VBN}
+event;Leased asset should be bought;{VBN}{NN}{MD}{VB}{VBN}
+event;Unit-of-production depreciation is to be posted;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Planned accrued depreciation and interest were transferred to CO;{NNP}{VBN}{NN}{CC}{NN}{VBD}{VBN}{TO}{NNP}
+event;Organizational allocations must be changed;{JJ}{NNS}{MD}{VB}{VBN}
+event;Retirements to be entered;{NNS}{TO}{VB}{VBN}
+event;[Depreciation posting run was carried out];{-LRB-}{NN}{VBG}{NN}{VBD}{VBN}{RP}{-RRB-}
+event;Cost-accounting depreciation/ interest transferred to Cost Accounting;{VBG}{NN}{:}{NN}{VBN}{TO}{NN}{NN}
+event;Transactions completed;{NNS}{VBD}
+event;Acquisition posted to Asset Accounting;{NNP}{VBD}{TO}{NNP}
+event;Posting is possible to assets in new fiscal year;{VBG}{VBZ}{JJ}{TO}{NNS}{IN}{JJ}{JJ}{NN}
+event;G/L accounts were posted;{NN}{NNS}{VBD}{VBN}
+event;Periodic reports are created;{JJ}{NNS}{VBP}{VBN}
+event;Depreciation should be posted regularly;{NN}{MD}{VB}{VBN}{RB}
+event;Leased asset was bought;{VBN}{NN}{VBD}{VBN}

@@ -1,0 +1,10 @@
+27bacee28d91b6cc21f423f3a7e923c9;Product Safety
+function;Phrase Processing;{NN}{NN}
+function;Substance Master Processing Product;{NNP}
+function;Dangerous Goods Classification;{JJ}{NNP}{NN}
+function;Dangerous Goods Basic Data Processing;{JJ}{NNP}
+function;Phrase Set Processing;{NN}{VB}{NN}
+event;Processing is completed;{NN}{VBZ}{VBN}
+event;Phrases are to be assigned to the characteristics of the substance properties;{NNS}{VBP}{TO}{VB}{VBN}{TO}{DT}{NNS}{IN}{DT}{NN}{NNS}
+event;Basic data is to be processed;{JJ}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Attributes are to be formulated in text form;{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}{NN}

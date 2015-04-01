@@ -1,0 +1,8 @@
+d285d095a8810817d6aa3317ef6d1889;B.III.006_EPC for the basic data management of human resource management
+function;Basic data management;{JJ}{NNS}{NN}
+event;Organizational changes;{JJ}{NNS}
+event;Personal changes;{JJ}{NNS}
+event;Recruitment;{NN}
+event;Promotion, reassignment;{NNP}{,}{NN}
+event;Dismissal;{NN}
+event;Basic data management completed;{JJ}{NNS}{NN}{VBD}

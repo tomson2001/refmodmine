@@ -1,0 +1,50 @@
+fa1386cec4d7c62b750f9904ea692043;Admission Muenster
+function;not take interview;{RB}{VB}{NN}
+function;send information to application office;{VB}{NN}{TO}{NN}{NN}
+function;receive acceptance;{VB}{NN}
+function;check application in time EU countries;{NN}{NN}{IN}{NN}{NNP}{NNS}
+function;mark applicant as qualified;{NN}{NN}{IN}{VBN}
+function;send acceptance;{VB}{NN}
+function;upload letter of motivation;{NN}{NN}{IN}{NN}
+function;Choose courses of studies;{VB}{NNS}{IN}{NNS}
+function;check citizenship;{NN}{NN}
+function;check and evaluate application;{NN}{CC}{VB}{NN}
+function;mark applicant as suitable;{NN}{NN}{IN}{JJ}
+function;receive application;{VB}{NN}
+function;upload language certificates;{NN}{NN}{NNS}
+function;check application in time non-EU countries;{NN}{NN}{IN}{NN}{JJ}{NNS}
+function;send application form;{VB}{NN}{NN}
+function;reject applicant;{VBP}{NN}
+function;receive application form;{VB}{NN}{NN}
+function;in time;{IN}{NN}
+function;create ranking;{VB}{NN}
+function;not meet the basic requirements;{RB}{VB}{DT}{JJ}{NNS}
+function;update status of application;{VB}{NN}{IN}{NN}
+function;upload cv;{NN}{NN}
+function;do the interview;{VB}{DT}{NN}
+function;invite applicant for interview;{VB}{NN}{IN}{NN}
+function;create transcript of applicant;{VB}{NN}{IN}{NN}
+function;upload bachelor's degree / transcript of records / diploma supplement;{NN}{NN}{POS}{NN}{:}{NN}{IN}{NNS}{:}{NN}{NN}
+function;receive rejection;{VB}{NN}
+function;discuss qualification;{VB}{NN}
+function;send rejection;{VB}{NN}
+function;check application complete;{NN}{NN}{JJ}
+function;accept applicant;{VB}{NN}
+function;enrollment;{NN}
+function;receive rejection for course of studies;{VB}{NN}{IN}{NN}{IN}{NNS}
+function;collect additional required documents;{VB}{JJ}{VBN}{NNS}
+function;complete online interview;{JJ}{NN}{NN}
+function;send application to selection committee;{VB}{NN}{TO}{NN}{NN}
+function;print out and sign application form;{NN}{IN}{CC}{VB}{NN}{NN}
+function;not in time;{RB}{IN}{NN}
+function;upload course description;{NN}{NN}{NN}
+function;meet the basic requirements;{VB}{DT}{JJ}{NNS}
+function;mark applicant as not suitable;{NN}{NN}{IN}{RB}{JJ}
+function;reject interview;{VBP}{NN}
+function;mark applicant as not qualified;{NN}{NN}{IN}{RB}{VBN}
+function;update application system;{VB}{NN}{NN}
+function;check responses;{NN}{NNS}
+function;receive and sort application;{VB}{CC}{VB}{NN}
+function;send application form and documents;{VB}{NN}{NN}{CC}{NNS}
+function;upload university entrance certificate;{NN}{NN}{NN}{NN}
+event;End Event;{NN}{NN}

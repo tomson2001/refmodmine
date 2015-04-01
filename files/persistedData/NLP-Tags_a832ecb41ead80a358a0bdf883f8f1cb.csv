@@ -1,0 +1,19 @@
+a832ecb41ead80a358a0bdf883f8f1cb;Cost and Revenue Allocation to Profitability Analysis
+function;Transfer of Customer Agreements to Profitability Analysis;{NN}{IN}{NN}{NNS}{TO}{NNP}{NN}
+function;Transfer and Valuation of Billing Documents (Intercompany Processing);{NN}{CC}{NN}{IN}{NNP}{NNS}{-LRB-}{NNP}{-RRB-}
+function;Transfer and Valuation of Billing Documents (Complaints Processing);{NN}{CC}{NN}{IN}{NNP}{NNS}{-LRB-}{NNS}{NN}{-RRB-}
+function;Transfer and Valuation of Billing Documents (Third-Party Transaction);{NN}{CC}{NN}{IN}{NNP}{NNS}{-LRB-}{NNP}{-RRB-}
+function;Automatic Additional Transfer into Profitability Analysis;{NNP}{JJ}{NN}{IN}{NNP}{NN}
+function;Transfer and Valuation of Incoming Sales Orders;{NN}{CC}{NN}{IN}{JJ}{NNS}{NNS}
+function;Direct Posting of Costs and Revenues From FI;{JJ}{NN}{IN}{NNS}{CC}{NNS}{IN}{NN}
+function;Transfer and Valuation of Billing Documents (Direct Sale);{NN}{CC}{NN}{IN}{NNP}{NNS}{-LRB-}{JJ}{NN}{-RRB-}
+event;Customer Agreements Are to Be Transferred;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Incoming Sales Orders Are to Be Valuated and Transferred;{JJ}{NNS}{NNS}{VBP}{TO}{VB}{JJ}{CC}{VBN}
+event;Revenues/ Costs Allocated to Profitability Analysis;{NNS}{:}{NNS}{VBN}{TO}{NNP}{NN}
+event;Special Direct Costs and Revenues Are to Be Assigned Directly;{JJ}{JJ}{NNS}{CC}{NNS}{VBP}{TO}{VB}{NNP}{RB}
+event;Billing Documents (Direct Sales) Are to Be Transferred and Valuated;{NN}{NNS}{-LRB-}{JJ}{NNS}{-RRB-}{VBP}{TO}{VB}{JJ}{CC}{JJ}
+event;;
+event;Costs Posted from Feeder Systems (MM, FI);{NNS}{VBD}{IN}{NNP}{-LRB-}{NN}{,}{NN}{-RRB-}
+event;Automatic Additional Account Assignment Required;{NNP}{JJ}{NNP}
+event;;
+event;Billing Documents (Complaints Processing) Are to be Transferred and Valuated;{NN}{NNS}{-LRB-}{NNS}{NN}{-RRB-}{VBP}{TO}{VB}{VBN}{CC}{VBN}

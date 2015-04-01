@@ -1,0 +1,10 @@
+274d7a56a173f85d1710f4443f0f07a2;Calculation of Remuneration
+function;Calculation of Time-Dependent Remuneration;{NN}{IN}{JJ}{NN}
+function;Calculation of Agreed Remuneration;{NN}{IN}{NNP}
+function;Calculation of Benefit-Dependent Remuneration;{NN}{IN}{NNP}
+function;Determination of Relevant Methods for Remuneration Calculation;{NN}{IN}{JJ}{NNS}{IN}{NNP}{NN}
+event;Benefit-dependent remuneration is to be calculated;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Characterized remuneration elements exist;{VBN}{NN}{NNS}{VBP}
+event;Time-dependent remuneration is to be calculated;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Agreed remuneration is to be calculated;{VBD}{NN}{VBZ}{TO}{VB}{VBN}
+event;Calculation of Remuneration Required;{NN}{IN}{NNP}

@@ -1,0 +1,4 @@
+adf8122c4cba3a50f98e2a038ad351e1;B.I.181_Transfer of an NC program
+function;Download NC program(s);{VB}{NNP}{NN}{-LRB-}{NNS}{-RRB-}
+event;Released operation sequence;{VBN}{NN}{NN}
+event;Start NC Program(s);{NNP}{-LRB-}{NNS}{-RRB-}

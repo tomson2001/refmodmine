@@ -1,0 +1,6 @@
+36aab36dad8a68a5054f6d99925980c1;Plan: Make or Buy Goods
+function;Material Assignment to Activities;{NNP}{TO}{NNS}
+function;Material Requirements Planning;{NN}{NNS}{NNP}
+event;Material requirements planning to be carried out;{NN}{NNS}{VBG}{TO}{VB}{VBN}{RP}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Material assignment to activities required;{NN}{NN}{TO}{NNS}{VBN}

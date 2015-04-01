@@ -1,0 +1,8 @@
+bad500e7a1f96979e5f8e700d15ddda1;Interest Rate Adjustment
+function;Process Interest Rate Adjustment;{VB}{NNP}
+function;Create Automatically;{VB}{RB}
+function;Create Manually;{VB}{RB}
+event;Interest rate adjustment was carried out;{NN}{NN}{NN}{VBD}{VBN}{RP}
+event;Interest rate adjustment to be carried out automatically;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}{RB}
+event;Interest rate adjustment to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Interest rate adjustment to be carried out manually;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}{RB}

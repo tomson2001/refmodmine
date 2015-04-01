@@ -1,0 +1,4 @@
+c7e78919da9a01eb07d0f9dfc058b0a5;B.III.007_b_EPC for attendance and performance data entry
+function;Posting performance account;{VBG}{NN}{NN}
+event;Operation comleted;{NN}{VBD}
+event;End of operation posted;{NN}{IN}{NN}{VBD}

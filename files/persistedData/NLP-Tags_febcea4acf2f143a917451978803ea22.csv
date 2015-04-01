@@ -1,0 +1,24 @@
+febcea4acf2f143a917451978803ea22;Funds Management
+function;Budget Execution;{NNP}
+function;Budget Planning;{NNP}
+function;Fiscal Year Change Operations [Funds Management];{JJ}{NN}{NNP}{-LRB-}{NNP}{-RRB-}
+function;Information System [Funds Management];{NNP}{-LRB-}{NNP}{-RRB-}
+function;Edit Basic Settings;{NNP}{NNS}
+event;Status management to be set to active;{NN}{NN}{TO}{VB}{VBN}{TO}{JJ}
+event;Revenues increasing the budget to be prepared;{NNS}{VBG}{DT}{NN}{TO}{VB}{VBN}
+event;Current budget values maintained;{JJ}{NN}{NNS}{VBD}
+event;Order assignment to be carried out;{NNP}{NN}{TO}{VB}{VBN}{RP}
+event;Budget must be planned;{NNP}{MD}{VB}{VBN}
+event;Set invoice to paid;{VB}{NN}{TO}{VBN}
+event;Profit center assignment to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Expenditure budget increased;{NN}{NN}{VBD}
+event;Budget release available;{NNP}{NN}{JJ}
+event;Evaluations to be carried out;{NNS}{TO}{VB}{VBN}{RP}
+event;Warehouse funds center assignment to be carried out;{NNP}{NNS}{JJ}{NN}{TO}{VB}{VBN}{RP}
+event;Residual budget transferred;{JJ}{NN}{VBN}
+event;Evaluations exist;{NNS}{VBP}
+event;Cost center assignment to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Balances carried forward;{NNS}{VBD}{RB}
+event;Fiscal year change operations to be performed;{JJ}{NN}{NN}{NNS}{TO}{VB}{VBN}
+event;Cost element assignment to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;WBS element assignment to be carried out;{JJ}{NN}{NN}{TO}{VB}{VBN}{RP}

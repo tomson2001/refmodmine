@@ -1,0 +1,16 @@
+627be8d0ff04a7e163e1523a12234a09;Shipping
+function;Goods Issue Processing;{NNP}
+function;Packing Processing;{NN}{NN}
+function;Delivery Processing;{NN}{NN}
+function;Picking (Lean WM);{VBG}{-LRB-}{VB}{NN}{-RRB-}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Shipping unit is to be created;{VBG}{NN}{VBZ}{TO}{VB}{VBN}
+event;Shipping unit is created;{VBG}{NN}{VBZ}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Delivery is created;{NN}{VBZ}{VBN}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Material has been picked;{NN}{VBZ}{VBN}{VBN}
+event;Goods receipt/ issue slip is printed;{NNP}{NN}{:}{NN}{NN}{VBZ}{VBN}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Picking needs to be carried out;{VBG}{NNS}{TO}{VB}{VBN}{RP}

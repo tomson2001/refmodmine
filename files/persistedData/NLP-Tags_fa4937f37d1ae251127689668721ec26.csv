@@ -1,0 +1,10 @@
+fa4937f37d1ae251127689668721ec26;C.II.023_EPC for a phase- oriented design process
+function;Detailed description;{JJ}{NN}
+function;Planing;{VBG}
+function;Concept development;{NN}{NN}
+function;Design / create;{NN}{:}{VB}
+event;Product idea released;{NN}{NN}{VBN}
+event;Basic solution strategy released;{JJ}{NN}{NN}{VBN}
+event;Development order released;{NNP}{NN}{VBD}
+event;Production release;{NN}{NN}
+event;Final design released;{JJ}{NN}{VBN}

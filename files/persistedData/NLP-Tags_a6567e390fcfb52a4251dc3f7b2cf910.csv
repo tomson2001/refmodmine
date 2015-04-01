@@ -1,0 +1,6 @@
+a6567e390fcfb52a4251dc3f7b2cf910;Recruitment Request Monitoring
+function;Recruitment Request Monitoring;{NN}{NN}{NN}
+event;Need for personnel advertising exists;{VBN}{IN}{NNS}{VBG}{VBZ}
+event;Time for order monitoring is reached;{NNP}{IN}{NN}{NN}{VBZ}{VBN}
+event;Recruitment request is in process;{NN}{NN}{VBZ}{IN}{NN}
+event;Recruitment request is complete;{NN}{NN}{VBZ}{JJ}

@@ -1,0 +1,5 @@
+b49b315567264fc4f72e0011cc420be1;Project Monitoring and Analysis
+function;Project Progress Analysis;{NNP}{NN}
+function;Project Evaluation and Analysis;{NNP}{NN}{CC}{NN}
+event;Close project;{JJ}{NN}
+event;Check project data;{VB}{NN}{NNS}

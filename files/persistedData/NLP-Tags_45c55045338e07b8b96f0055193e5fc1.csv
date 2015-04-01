@@ -1,0 +1,14 @@
+45c55045338e07b8b96f0055193e5fc1;Service Notification
+function;Notification Printing;{NN}{NN}
+function;Service Notification Creation and Processing;{NNP}{CC}{NNP}
+function;Notification Archiving;{NN}{NN}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Required Data must be Processed;{NNP}{MD}{VB}{VBN}
+event;Service Requirement Arose;{NNP}{NN}{NN}
+event;Notification papers are to be printed;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Notification is to be archived;{NN}{VBZ}{TO}{VB}{VBN}
+event;Print log is created;{VB}{NN}{VBZ}{VBN}
+event;Notification Is Completed;{NN}{VBZ}{VBN}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Notification is printed;{NN}{VBZ}{VBN}
+event;Sales and Distribution Document Must Be Created for Service Notification;{NNS}{CC}{NN}{NNP}{MD}{VB}{VBN}{IN}{NNP}

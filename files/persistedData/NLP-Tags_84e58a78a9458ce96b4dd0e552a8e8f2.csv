@@ -1,0 +1,6 @@
+84e58a78a9458ce96b4dd0e552a8e8f2;Risk/Credit Management
+function;Credit Control;{NNP}
+event;Document blocked due to insufficent hedge;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Change to terms of credit refused;{NNP}{TO}{NNS}{IN}{NN}{VBD}
+event;Credit limit is not sufficient;{NNP}{NN}{VBZ}{RB}{JJ}
+event;Terms of credit have changed;{NNS}{IN}{NN}{VBP}{VBN}

@@ -1,0 +1,4 @@
+f6dbb57b6ff13266ba2851e8d73215b1;Prepare Ledger
+function;Set Up Ledger;{VB}{RP}{NNP}
+event;Ledger set up;{NNP}{VBD}{RP}
+event;Ledger to be set up;{NNP}{TO}{VB}{VBN}{RP}

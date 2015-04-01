@@ -1,0 +1,26 @@
+1a540a9c4fa6057dd198a20fa44053e8;Transaction Processing for Exotic Currency Options
+function;Terminate Currency Option;{VB}{NNP}{NN}
+function;Process Knock-Out;{VB}{NNP}
+function;Process Knock-In;{VB}{NN}
+function;Process Exotic Currency Option;{VB}{NNP}{NN}
+function;Exercise Currency Option;{NN}{NN}{NN}
+function;Netting Processing;{VBG}{NN}
+function;Settlement;{NNP}
+function;Expiration of Currency Option;{NN}{IN}{NNP}{NN}
+event;Currency option is to be terminated;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Currency option was terminated;{NN}{NN}{VBD}{VBN}
+event;Currency option is not to be exercised;{NN}{NN}{VBZ}{RB}{TO}{VB}{VBN}
+event;Currency option is to be exercised;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Currency option was exercised physically;{NN}{NN}{VBD}{VBN}{RB}
+event;Termination flows generate settlement payments;{NN}{VBZ}{VB}{NN}{NNS}
+event;Currency option has expired;{NN}{NN}{VBZ}{VBN}
+event;Currency option was exercised with cash settlement;{NN}{NN}{VBD}{VBN}{IN}{NN}{NN}
+event;Structure characteristics were edited;{NN}{NNS}{VBD}{VBN}
+event;Currency option has expired;{NN}{NN}{VBZ}{VBN}
+event;Exotic currency option was chosen;{JJ}{NN}{NN}{VBD}{VBN}
+event;Netting proposal to be edited;{VBG}{NN}{TO}{VB}{VBN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Knock-in level reached;{JJ}{NN}{VBD}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Knock-out level reached;{JJ}{NN}{VBD}
+event;Double-barrier was knocked-in;{NN}{VBD}{JJ}

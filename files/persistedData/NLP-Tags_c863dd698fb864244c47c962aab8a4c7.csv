@@ -1,0 +1,6 @@
+c863dd698fb864244c47c962aab8a4c7;Monitoring of Budget Planning
+function;Monitoring of Budget Planning;{NN}{IN}{NNP}
+event;Need to correct budget plan exists;{VBN}{TO}{VB}{NN}{NN}{VBZ}
+event;Need for monitoring of budget planning;{VBN}{IN}{NN}{IN}{NN}{NN}
+event;No need to act for budget planning;{DT}{NN}{TO}{VB}{IN}{NN}{NN}
+event;Need to correct specifications for budget planning;{VBN}{TO}{VB}{NNS}{IN}{NN}{NN}

@@ -1,0 +1,26 @@
+7b9443f6ff1102c67ee54fc1a355ab46;Data basis
+function;Basic key figures;{JJ}{JJ}{NNS}
+function;Data slices;{NNS}{NNS}
+function;Currency Translation Types for Data Transfer and Planning Layouts;{NNP}{NN}{NNS}{IN}{NNS}{NN}{CC}{NNP}
+function;Validation;{NN}
+function;Characteristics;{NNS}
+function;Derivation;{NN}
+function;Calculated Key Figures;{VBN}{NN}{NNS}
+function;Fixed Characteristics;{VBN}{NNS}
+function;Comment tables;{NN}{NNS}
+function;Summarization levels;{NN}{NNS}
+function;Aspect;{NN}
+function;Field groups;{NN}{NNS}
+event;Summarization Levels Defined;{NN}{NNS}{VBN}
+event;Currency Translation Defined;{NNP}{NN}{VBN}
+event;Derivations Specified;{NNS}{VBN}
+event;Data Basis Determined;{NNS}{NNP}
+event;Validation Completed;{NN}{VBN}
+event;Data Basis needs to be defined;{NNS}{NNP}{VBZ}{TO}{VB}{VBN}
+event;Characteristics Defined;{NNS}{VBN}
+event;Accounted Key Figures Defined;{NNP}{NNS}{VBN}
+event;Specify Field Groups;{VB}{NNP}{NNS}
+event;Basic Key Figures Specified;{JJ}{NN}{NNS}{VBN}
+event;Comment Tables Defined;{NN}{NNS}{VBN}
+event;Fixed Characteristics Specified;{VBN}{NNP}
+event;Aspects Specified;{NNS}{VBN}

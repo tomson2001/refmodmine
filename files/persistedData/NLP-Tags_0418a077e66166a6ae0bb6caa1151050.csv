@@ -1,0 +1,8 @@
+0418a077e66166a6ae0bb6caa1151050;Customer Inquiry
+function;Customer Inquiry Processing;{NN}{NNP}
+event;Inquiry items are rejected;{NNP}{NNS}{VBP}{VBN}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Customer inquires about products;{NN}{VBZ}{IN}{NNS}
+event;Inquiry is created;{NNP}{VBZ}{VBN}
+event;Customer Inquiry is Transmitted;{NN}{NNP}{VBZ}{VBN}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}

@@ -1,0 +1,34 @@
+8d71c803624ee1b800aadf400fbd7f3b;Fig.82: WOZ YAWL model for MunD
+function;Handle administrative;{VB}{JJ}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Send acknowledgment;{VB}{NN}
+function;Conduct visit or research;{NNP}{NN}{CC}{NN}
+function;Receive application via mail;{VB}{NN}{IN}{NN}
+function;Hold hearing;{VB}{NN}
+function;Hearing requested;{NN}{VBD}
+function;Routine complaint;{JJ}{NN}
+function;Record objection;{VB}{NN}
+function;Send notification letter;{VB}{NN}{NN}
+function;Register;{NNP}
+function;Perform admissibility test municipality;{VB}{NN}{NN}{NN}
+function;Return file with advice;{NN}{NN}{IN}{NN}
+function;Send file to tax office;{VB}{NN}{TO}{NN}{NN}
+function;Create file;{VB}{NN}
+function;Default positive response;{NNP}{JJ}{NN}
+function;Handle complaint;{VB}{NN}
+function;Possible to do assessment;{JJ}{TO}{VB}{NN}
+function;Send to tax office;{VB}{TO}{NN}{NN}
+function;Send response about admissibility;{VB}{NN}{IN}{NN}
+function;Fill in form;{VB}{IN}{NN}
+function;Perform admissibility test;{VB}{NN}{NN}
+function;Process eventual changes;{VB}{JJ}{NNS}
+function;Sign form;{NN}{NN}
+event;no;{DT}
+event;Process start;{VB}{NN}
+event;yes;{RB}
+event;yes;{RB}
+event;no;{DT}
+event;no;{DT}
+event;yes;{RB}
+event;Timeout;{NNP}
+event;Process end;{VB}{NN}

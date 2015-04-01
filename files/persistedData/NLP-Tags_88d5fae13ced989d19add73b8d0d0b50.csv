@@ -1,0 +1,8 @@
+88d5fae13ced989d19add73b8d0d0b50;B.I.051_Event control for stock-in function
+function;Distributing delivery;{VBG}{NN}
+function;Quality inspection;{JJ}{NN}
+function;Entry of stock in data;{NN}{IN}{NN}{IN}{NNS}
+event;Quality checked;{JJ}{VBN}
+event;Materials reveived;{NNPS}{VBD}
+event;Inventory level updated;{NN}{NN}{VBN}
+event;Devlivery distributed;{JJ}{VBN}

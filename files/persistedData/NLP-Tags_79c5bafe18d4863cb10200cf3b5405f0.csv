@@ -1,0 +1,19 @@
+79c5bafe18d4863cb10200cf3b5405f0;Admission TU Munich
+function;Apply Online;{RB}{NN}
+function;Check Documents;{VB}{NNS}
+function;Documents received;{NNS}{VBD}
+function;Send letter of Acceptance;{VB}{NN}{IN}{NNP}
+function;Send Interview Invitation;{VB}{NNP}
+function;Go to Interview;{VB}{TO}{NNP}
+function;Rejected;{VBN}
+function;Forward Documents;{RB}{NNS}
+function;Rejected;{VBN}
+function;Send Documents by Post;{VB}{NNS}{IN}{NN}
+function;Bridging Courses < 30 CP;{VBG}{NNS}{JJR}{CD}{NN}
+function;Send letter of Rejection;{VB}{NN}{IN}{NN}
+function;Check Bachelor's degree;{VB}{NNP}{POS}{NN}
+function;Evaluate;{VB}
+function;Conduct Interview;{NNP}
+function;Documents received;{NNS}{VBD}
+function;Bridging Courses > 30 CP;{VBG}{NNS}{JJR}{CD}{NN}
+event;End Event;{NN}{NN}

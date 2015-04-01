@@ -1,0 +1,19 @@
+a555b1806fa653b7ab47c69e2be6a0aa;Product Cost Planning
+function;Standard Cost Estimate with Quantity Structure;{NNP}{NN}{NNP}{IN}{NNP}{NN}
+function;Price Release with Standard Cost Estimate;{NNP}{IN}{NNP}{NN}{NNP}
+function;Standard Cost Estimate for Co-Products;{NNP}{NN}{NNP}{IN}{NNP}
+function;Costing Analysis;{VBG}{NN}
+function;Preparation for Costing;{NN}{IN}{VBG}
+function;Price Marking;{NN}{VBG}
+function;Standard Cost Estimate Without Quantity Structure;{NNP}{NN}{NNP}{IN}{NNP}{NN}
+event;Cost and activity planning executed;{NN}{CC}{NN}{NN}{VBD}
+event;Costing (for co-products) is prepared;{VBG}{-LRB-}{IN}{NNS}{-RRB-}{VBZ}{VBN}
+event;Cost estimate needs to be revised due to variances;{NN}{NN}{VBZ}{TO}{VB}{VBN}{JJ}{TO}{NNS}
+event;Result complete; costing released;{NN}{JJ}{:}{VBG}{VBN}
+event;Costing (with quantity structure) prepared;{VBG}{-LRB-}{IN}{NN}{NN}{-RRB-}{JJ}
+event;Costing results recorded in material master as future standard price;{VBG}{NNS}{VBN}{IN}{JJ}{NN}{IN}{JJ}{JJ}{NN}
+event;Standard price updated in material master[];{JJ}{NN}{VBN}{IN}{JJ}{NN}{-LRB-}{-RRB-}
+event;Fiscal year/ period is to be costed;{JJ}{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}
+event;Product Costs Are Allocated;{NNP}{NNS}{VBP}{VBN}
+event;Stock revaluated;{NNP}{VBD}
+event;Costing (without quantity structure) prepared;{VBG}{-LRB-}{IN}{NN}{NN}{-RRB-}{JJ}

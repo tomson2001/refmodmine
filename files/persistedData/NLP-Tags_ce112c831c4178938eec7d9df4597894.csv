@@ -1,0 +1,36 @@
+ce112c831c4178938eec7d9df4597894;Long-Term Incentives
+function;Sale of Long-Term Incentives;{NN}{IN}{NNP}{NNS}
+function;Exercise of Long-Term Incentive Rights by Employee;{NN}{IN}{NNPS}{IN}{NNP}
+function;Monitoring of Long-Term Incentives Program;{NN}{IN}{NNP}
+function;Retraction of Long-Term Incentives;{NN}{IN}{NNP}{NNS}
+function;Granting of Share of Long-Term Incentive to Employee;{NN}{IN}{NN}{IN}{NNP}{TO}{NNP}
+function;Design of Long-Term Incentives Program;{NN}{IN}{NNP}
+function;Forfeiture of Long-Term Incentives;{NNP}{IN}{NNP}{NNS}
+function;Expiration of Long-Term Incentives;{NN}{IN}{NNP}{NNS}
+event;Need for granting exists;{VBN}{IN}{VBG}{VBZ}
+event;Reason for forfeiture of long-term incentive has occurred;{NN}{IN}{NN}{IN}{JJ}{NN}{VBZ}{VBN}
+event;Employee notified of approval of exercise;{NN}{VBN}{IN}{NN}{IN}{NN}
+event;Employee is notified of forfeiture;{NN}{VBZ}{VBN}{IN}{NN}
+event;Employee is notified of imminent expiration;{NN}{VBZ}{VBN}{IN}{JJ}{NN}
+event;Need for correction of long-term incentives program;{VBN}{IN}{NN}{IN}{JJ}{NNS}{NN}
+event;Need for monitoring of long-term incentives program;{VBN}{IN}{NN}{IN}{JJ}{NNS}{NN}
+event;Employee notified of retraction;{NN}{VBN}{IN}{NN}
+event;Need for retraction of long-term incentives exists;{VBN}{IN}{NN}{IN}{JJ}{NNS}{VBZ}
+event;Employee notified of sale of long-term incentives;{NN}{VBN}{IN}{NN}{IN}{JJ}{NNS}
+event;Employee requires sale of long-term incentives;{NN}{VBZ}{NN}{IN}{JJ}{NNS}
+event;No need to act regarding long-term incentives program;{DT}{NN}{TO}{VB}{VBG}{JJ}{NNS}{NN}
+event;Employee requires exercise of long-term incentive rights;{NN}{VBZ}{NN}{IN}{JJ}{NN}{NNS}
+event;Employee is notified of expiration;{NN}{VBZ}{VBN}{IN}{NN}
+event;Employee long-term incentive is granted;{NN}{JJ}{NN}{VBZ}{VBN}
+event;Need for long-term incentives program;{VBN}{IN}{JJ}{NNS}{NN}
+event;Employee notified of exercise;{NN}{VBN}{IN}{NN}
+event;Time for announcement of expiration is reached;{NNP}{IN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Employee is notified of granting;{NN}{VBZ}{VBN}{IN}{VBG}
+event;Long-term incentives program is implemented;{JJ}{NNS}{NN}{VBZ}{VBN}
+event;Need for determination of specifications for granting;{VBN}{IN}{NN}{IN}{NNS}{IN}{VBG}
+event;Employee notified of approval of sales order;{NN}{VBN}{IN}{NN}{IN}{NNS}{NN}
+event;Employee notified of rejection of sales order;{NN}{VBN}{IN}{NN}{IN}{NNS}{NN}
+event;Time for exercising rights is reached;{NNP}{IN}{VBG}{NNS}{VBZ}{VBN}
+event;Time for expiration of long-term incentive is reached;{NNP}{IN}{NN}{IN}{JJ}{NN}{VBZ}{VBN}
+event;Long-term incentives program is deactivated;{JJ}{NNS}{NN}{VBZ}{VBN}
+event;Employee notified of rejection of exercise;{NN}{VBN}{IN}{NN}{IN}{NN}

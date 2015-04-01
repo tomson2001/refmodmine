@@ -1,0 +1,6 @@
+0fcd074f142936702b64b9c1584b3344;Source Administration
+function;RFQ/Quotation;{NN}
+event;Purchase order transmitted;{NN}{NN}{VBD}
+event;Quotation chosen;{NN}{VBN}
+event;Quotation rejected;{NN}{VBD}
+event;Purchase requisition released for issue of RFQ;{NN}{NN}{VBN}{IN}{NN}{IN}{NN}

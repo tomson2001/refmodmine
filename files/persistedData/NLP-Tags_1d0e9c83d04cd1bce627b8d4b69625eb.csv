@@ -1,0 +1,21 @@
+1d0e9c83d04cd1bce627b8d4b69625eb;Real Estate Management
+function;Rent Change;{NNP}
+function;General Contract;{NNP}
+function;Rental Accounting;{JJ}{NN}
+function;Service Charge Settlement;{NNP}
+function;Rental;{JJ}
+event;General contract (lease-in) to be edited;{NNP}{NN}{-LRB-}{NN}{-RRB-}{TO}{VB}{VBN}
+event;Credit posting is made;{NNP}{VBG}{VBZ}{VBN}
+event;If required, tenant-rented object to be rented;{IN}{VBN}{,}{JJ}{NN}{TO}{VB}{VBN}
+event;Adjustment of advance payments/ flat rates should be carried out;{NNP}{IN}{NN}{NNS}{:}{JJ}{NNS}{MD}{VB}{VBN}{RP}
+event;Application- /rental request should be processed;{NN}{:}{:}{JJ}{NN}{MD}{VB}{VBN}
+event;Change conditions on lease-out/ rental unit;{NNP}{NNS}{IN}{NN}{:}{JJ}{NN}
+event;Carry out debit position;{VB}{RP}{NN}{NN}
+event;Offer should be processed;{NN}{MD}{VB}{VBN}
+event;Post external heating expenses settlement;{NNP}{JJ}{NN}{NNS}{NN}
+event;Items were cleared;{NNS}{VBD}{VBN}
+event;Items are still open and should be cleared using a suitable process;{NNS}{VBP}{RB}{JJ}{CC}{MD}{VB}{VBN}{VBG}{DT}{JJ}{NN}
+event;Rent adjustment was carried out;{NNP}{NN}{VBD}{VBN}{RP}
+event;Lease-out should be processed;{NN}{MD}{VB}{VBN}
+event;Correspondence on SCS was carried out;{NN}{IN}{NNP}{VBD}{VBN}{RP}
+event;Post one-time receiv- able to lease-out;{NNP}{JJ}{NN}{:}{JJ}{TO}{NN}

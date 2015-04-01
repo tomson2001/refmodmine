@@ -1,0 +1,21 @@
+61536742db455488ce21c7e99ca2ae6f;Investment Program Handling [Capital Investments]
+function;Budgeting [Investment Programs];{NNP}{-LRB-}{NNP}{-RRB-}
+function;Structuring [Investment Programs];{VBG}{-LRB-}{NNP}{-RRB-}
+function;Cost Planning [Investment Programs];{NN}{NNP}{-LRB-}{NNP}{-RRB-}
+event;Program structure is to be determined;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Program structure is processed;{NN}{NN}{VBZ}{VBN}
+event;Plan is approved on last approval level;{NN}{VBZ}{VBN}{IN}{JJ}{NN}{NN}
+event;Program definition is changed;{NN}{NN}{VBZ}{VBN}
+event;Production plan is processed;{NN}{NN}{VBZ}{VBN}
+event;Investment plan is to be revised;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Program positions are released;{NN}{NNS}{VBP}{VBN}
+event;Supplement requests exist for current measures;{NN}{NNS}{VBP}{IN}{JJ}{NNS}
+event;Overall costs for project are determined;{JJ}{NNS}{IN}{NN}{VBP}{VBN}
+event;Fiscal Year Change [Investment Programs];{JJ}{NN}{NNP}{-LRB-}{NNP}{-RRB-}
+event;Program is to be created for new fiscal year;{NN}{VBZ}{TO}{VB}{VBN}{IN}{JJ}{JJ}{NN}
+event;Order is assigned to an investment program;{NN}{VBZ}{VBN}{TO}{DT}{NN}{NN}
+event;Overhead debited to capital investment order;{NN}{VBN}{TO}{NN}{NN}{NN}
+event;Program positions are changed;{NN}{NNS}{VBP}{VBN}
+event;Program definition is to be changed;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Sales plan is processed;{NNS}{VBP}{VBZ}{VBN}
+event;New plan version is to be created;{NNP}{NN}{NN}{VBZ}{TO}{VB}{VBN}

@@ -1,0 +1,36 @@
+b62e3d1f4fa4b46dcde3b795d1a3fa1d;Product Structure Management for Variant Products
+function;Production Resource/ Tool Processing;{NN}{NNP}{:}{NNP}
+function;Material Variant Processing;{NNP}{JJ}{NN}
+function;Document Structure Processing;{NNP}{NN}{NN}
+function;Material BOM Processing;{NNP}
+function;Classification;{NN}
+function;Object Dependency Maintenance;{NNP}
+function;Document Processing;{NNP}
+function;Variant Table Processing;{JJ}{NNP}
+function;Integrated Product and Process Data Processing - EWB;{NNP}{CC}{VB}{NNS}{NN}{:}{NN}
+function;Graphical Product Structure Processing;{NNP}{NN}{NN}
+function;Edit Classes;{NNP}{NNS}
+function;Variant Function Processing;{JJ}{NN}{NN}
+function;Order BOM Processing;{NNP}
+function;Characteristic Processing;{JJ}{NN}
+function;Variant Condition Processing;{JJ}{NN}{NN}
+function;Configuration Profile Processing;{NN}{NNP}
+function;Configuration Simulation;{NNP}
+function;Product description using Configuration Management;{NN}{NN}{VBG}{NNP}
+function;Inspection Plan Processing;{NNP}
+function;Material Master Processing;{NNP}
+function;Routing Processing;{VBG}{NN}
+event;Check dates and transactions;{VB}{NNS}{CC}{NNS}
+event;Put together objects in the configuration folder;{VBN}{RB}{NNS}{IN}{DT}{NN}{NN}
+event;Check configuration model;{VB}{NN}{NN}
+event;Define dependency between chracteristics and characteristic values;{VB}{NN}{IN}{NNS}{CC}{JJ}{NNS}
+event;Configuration profile is to be edited;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Create order BOM;{VB}{NN}{NN}
+event;Define value combinations for characteristics;{VB}{NN}{NNS}{IN}{NNS}
+event;Define production resources/ tools;{VB}{NN}{NNS}{:}{NNS}
+event;Define price depending on characteristic values;{VB}{NN}{VBG}{IN}{JJ}{NNS}
+event;Check product data structure;{VB}{NN}{NNS}{NN}
+event;Create routings and inspection plans;{VB}{NNS}{CC}{NN}{NNS}
+event;Assign function module to function;{VB}{NN}{NN}{TO}{VB}
+event;Define variants for configurable material;{VB}{NNS}{IN}{JJ}{NN}
+event;Product structure for variants to be set up;{NN}{NN}{IN}{NNS}{TO}{VB}{VBN}{RP}

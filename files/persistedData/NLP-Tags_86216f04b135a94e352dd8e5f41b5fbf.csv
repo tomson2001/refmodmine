@@ -1,0 +1,11 @@
+86216f04b135a94e352dd8e5f41b5fbf;Production Order Execution
+function;Goods Issue Processing for Production Orders;{NNP}{IN}{NNP}{NNS}
+function;Production Order Execution;{NN}{NN}{NN}
+function;Production Order Confirmation;{NN}{NN}{NN}
+function;Processing of Goods Receipts from Production;{NN}{IN}{NNPS}{IN}{NN}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}
+event;Material withdrawal for production order is to be posted;{NN}{NN}{IN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Production order is completely confirmed;{NN}{NN}{VBZ}{RB}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Material is produced;{NN}{VBZ}{VBN}
+event;Goods issue is posted for the prod. order;{NNP}{NN}{VBZ}{VBN}{IN}{DT}{NN}{.}

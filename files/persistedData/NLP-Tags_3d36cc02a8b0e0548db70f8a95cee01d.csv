@@ -1,0 +1,15 @@
+3d36cc02a8b0e0548db70f8a95cee01d;Physical Inventory and Cycle Counting
+function;Physical Inventory;{JJ}{NN}
+function;WM Inventory;{NNP}
+event;Periodic inventory to be performed;{JJ}{NN}{TO}{VB}{VBN}
+event;Phys. inventory using cycle counting method is to be performed;{NNP}{.}
+event;Cycle counting is to be performed;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Inv. sampling procedure to be performed;{NNP}{.}
+event;Difference is posted in IM;{NN}{VBZ}{VBN}{IN}{NN}
+event;Storage bin is unblocked;{NNP}{VBZ}{JJ}
+event;Continuous inventory for stck material is to be performed;{JJ}{NN}{IN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Inventory history is updated;{NN}{NN}{VBZ}{VBN}
+event;Physical inventory is completed;{JJ}{NN}{VBZ}{VBN}
+event;Storage type is to be blocked for annual inventory;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{IN}{JJ}{NN}
+event;Annual inventory WM to be performed;{JJ}{NN}{NNP}{TO}{VB}{VBN}
+event;Continuous inventory WM is to be performed;{JJ}{NN}{NNP}{VBZ}{TO}{VB}{VBN}

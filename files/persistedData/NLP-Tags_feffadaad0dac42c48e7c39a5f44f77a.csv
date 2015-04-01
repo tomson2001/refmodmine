@@ -1,0 +1,6 @@
+feffadaad0dac42c48e7c39a5f44f77a;A.II.25,f
+function;Funktion;{NN}
+function;Estimate secondary requirement;{NNP}{JJ}{NN}
+event;E1;{NN}
+event;E2;{NN}
+event;Secondary requirement estimated;{JJ}{NN}{VBN}

@@ -1,0 +1,20 @@
+73f05ce5d89c929e2551060dedc25de4;Time Recording
+function;Time Sheet Report;{NNP}
+function;Transfer to PS of Time Recorded;{NN}{TO}{NNP}{IN}{NNP}{VBN}
+function;Confirmation from PDC and External Systems;{NN}{IN}{NNP}{CC}{NNPS}
+function;Activity Confirmation;{NN}{NN}
+function;Time Sheet Creation;{NNP}
+function;Activity allocation;{NN}{NN}
+function;Time Sheet Approval;{NNP}{NN}
+event;Working hours data was analyzed;{VBG}{NNS}{NNS}{VBD}{VBN}
+event;Activity allocation to be carried out;{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Working hours data is approved;{VBG}{NNS}{NNS}{VBZ}{VBN}
+event;Confirmation from external systems entered;{NN}{IN}{JJ}{NNS}{VBD}
+event;Internal Activity Was Allocated;{JJ}{NN}{VBD}{VBN}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Follow-on documents of target application are generated;{JJ}{NNS}{IN}{NN}{NN}{VBP}{VBN}
+event;Working hours data is to be analyzed;{VBG}{NNS}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Activity confirmations entered;{NN}{NNS}{VBD}
+event;Working hours data is to be approved;{VBG}{NNS}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Confirmation from external systems required;{NN}{IN}{JJ}{NNS}{VBN}
+event;Activity confirmation required;{NN}{NN}{VBN}

@@ -1,0 +1,24 @@
+561a82915606b3caa46b8eaba41f2898;Product Structure Management W/o Variants
+function;Integrated Product and Process Data Processing - EWB;{NNP}{CC}{VB}{NNS}{NN}{:}{NN}
+function;Routing Processing;{VBG}{NN}
+function;Order BOM Processing;{NNP}
+function;Edit Classes;{NNP}{NNS}
+function;Inspection Plan Processing;{NNP}
+function;Document Processing;{NNP}
+function;Classification;{NN}
+function;Production Resource/ Tool Processing;{NN}{NNP}{:}{NNP}
+function;Document Structure Processing;{NNP}{NN}{NN}
+function;Product description using Configuration Management;{NN}{NN}{VBG}{NNP}
+function;Material Master Processing;{NNP}
+function;Material BOM Processing;{NNP}
+function;Characteristic Processing;{JJ}{NN}
+function;Graphical Product Structure Processing;{NNP}{NN}{NN}
+function;WBS BOM Processing;{NNP}
+event;Put together objects in the configuration folder;{VBN}{RB}{NNS}{IN}{DT}{NN}{NN}
+event;Check dates and transactions;{VB}{NNS}{CC}{NNS}
+event;Define production resources/ tools;{VB}{NN}{NNS}{:}{NNS}
+event;Set up product structure without variants;{VB}{RP}{NN}{NN}{IN}{NNS}
+event;Create order BOM;{VB}{NN}{NN}
+event;Create project BOM;{VB}{NN}{NN}
+event;Check product data structure;{VB}{NN}{NNS}{NN}
+event;Create routings and inspection plans;{VB}{NNS}{CC}{NN}{NNS}

@@ -1,0 +1,26 @@
+6c5dad77f0a66de769dea27055235968;Fig.16: GBA1 YAWL model for MunH
+function;Fill in payment data and approve;{VB}{IN}{NN}{NNS}{CC}{VB}
+function;Print application;{VB}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Process continue;{VB}{VB}
+function;No payment;{DT}{NN}
+function;Send extract;{VB}{NN}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Free;{NNP}
+function;Determine fees;{NN}{NNS}
+function;Process Payment;{VB}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Free;{NN}{NN}{TO}{NNP}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;status change to Ask customer to pay;{NN}{NN}{TO}{VB}{NN}{TO}{VB}
+event;status change to Process Payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;the end;{DT}{NN}
+event;no;{DT}
+event;status change to Produce extract and sign;{NN}{NN}{TO}{VB}{NN}{CC}{NN}
+event;status change to Decide whether  to pay;{NN}{NN}{TO}{VB}{IN}{TO}{VB}
+event;status change to Print application;{NN}{NN}{TO}{VB}{NN}
+event;status change to Fill in payment data and approve;{NN}{NN}{TO}{VB}{IN}{NN}{NNS}{CC}{VB}

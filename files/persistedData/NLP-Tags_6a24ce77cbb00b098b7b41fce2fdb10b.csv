@@ -1,0 +1,4 @@
+6a24ce77cbb00b098b7b41fce2fdb10b;Correspondence with Vendors
+function;Correspondence with Vendors;{NN}{IN}{NNS}
+event;Correspondence to be sent;{NN}{TO}{VB}{VBN}
+event;Correspondence processed;{NN}{VBN}

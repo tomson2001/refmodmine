@@ -1,0 +1,8 @@
+1fe8497d8dfc2731f3562b8f8ed625e7;Date Planning
+function;Project Scheduling;{NN}{NN}
+function;Manual WBS Date Planning;{JJ}{NNP}
+function;Overall Network Scheduling;{JJ}{NNP}{NN}
+event;Dates must be planned for WBS elements;{NNS}{MD}{VB}{VBN}{IN}{JJ}{NNS}
+event;Date planning is performed;{NN}{NN}{VBZ}{VBN}
+event;Cross-project scheduling required;{JJ}{NN}{VBN}
+event;Project/ subproject with activities requires scheduling;{NN}{:}{NN}{IN}{NNS}{VBZ}{NN}

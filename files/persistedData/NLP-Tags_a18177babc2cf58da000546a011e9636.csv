@@ -1,0 +1,6 @@
+a18177babc2cf58da000546a011e9636;Personnel Selection
+function;Personnel Selection;{NNP}{NN}
+event;Applicant is rejected for vacancy;{NN}{VBZ}{VBN}{IN}{NN}
+event;Applicant is put on hold for vacancy;{NN}{VBZ}{VBN}{IN}{NN}{IN}{NN}
+event;Applicant must be offered contract for vacancy;{NN}{MD}{VB}{VBN}{NN}{IN}{NN}
+event;Vacancy and assigned applicants exist;{NN}{CC}{VBN}{NNS}{VBP}

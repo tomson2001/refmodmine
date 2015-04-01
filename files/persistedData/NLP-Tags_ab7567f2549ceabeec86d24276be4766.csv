@@ -1,0 +1,130 @@
+ab7567f2549ceabeec86d24276be4766;Fig.59: WABO2 YAWL model for MunA
+function;Forward to appropriate authority;{RB}{TO}{JJ}{NN}
+function;Check environmental aspects;{VB}{JJ}{NNS}
+function;Ask for advice;{VB}{IN}{NN}
+function;Waiting for comments;{VBG}{IN}{NNS}
+function;Right authority;{RB}{NN}
+function;Sign final decision;{NN}{JJ}{NN}
+function;Start case;{NNP}{NN}
+function;Send procedure confirmation;{VB}{NN}{NN}
+function;Determine procedure period;{NN}{NN}{NN}
+function;Check for contradiction;{VB}{IN}{NN}
+function;Publish notice request;{VB}{NN}{NN}
+function;Send decision;{VB}{NN}
+function;Check wealth;{VB}{NN}
+function;Publish decision;{VB}{NN}
+function;Informally check completeness;{RB}{VB}{NN}
+function;Negative advice;{JJ}{NN}
+function;Prepare concept decision;{VB}{NN}{NN}
+function;Time for info expired;{NNP}{IN}{NN}{VBD}
+function;Test adm environment;{NN}{NN}{NN}
+function;Send final decision;{VB}{JJ}{NN}
+function;Check completeness;{VB}{NN}
+function;Test admissibility;{NN}{NN}
+function;Archive;{NNP}
+function;Check urban plan;{VB}{JJ}{NN}
+function;Ask adjustment of request;{VB}{NN}{IN}{NN}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;Hold hearing;{VB}{NN}
+function;Process continue 2;{VB}{VB}{CD}
+function;Time for advice expired;{NNP}{IN}{NN}{VBD}
+function;Conclude decision;{VB}{NN}
+function;Sign decision;{NN}{NN}
+function;Test adm architecture advisor;{NN}{NN}{NN}{NN}
+function;Archive final decision;{NNP}{JJ}{NN}
+function;Receive VVGB;{VB}{NN}
+function;Check building regulation;{VB}{NN}{NN}
+function;VVGB required;{NN}{VBD}
+function;Hearing requested;{NN}{VBD}
+function;Assign investigating officer;{VB}{VBG}{NN}
+function;Test adm wealth;{NN}{NN}{NN}
+function;Applicant decides to reconsider application;{NN}{VBZ}{TO}{VB}{NN}
+function;VVGB time expired;{NNP}{NN}{VBD}
+function;Leave out;{VB}{RP}
+function;Receive advice;{VB}{NN}
+function;Collect admissibility tests;{VB}{NN}{NNS}
+function;Print application;{VB}{NN}
+function;Inform customer;{VB}{NN}
+function;Test adm urban planning;{NN}{NN}{JJ}{NN}
+function;Publish final decision;{VB}{JJ}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+function;Ask additional info;{VB}{JJ}{NN}
+function;Waiting for VVGB;{VBG}{IN}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Ask VVGB;{VB}{NNP}
+function;Process continue;{VB}{VB}
+function;Waiting for info;{VBG}{IN}{NN}
+function;Pieces complete;{NNP}{JJ}
+function;Check fire safety;{VB}{NN}{NN}
+function;Process result;{VB}{NN}
+function;Test adm fire department;{NN}{NN}{NN}{NN}
+function;Check concept decision;{VB}{NN}{NN}
+function;Process continue 7;{VB}{VB}{CD}
+function;Contact customer;{NN}{NN}
+function;Receive requested info;{VB}{VBN}{NN}
+function;Process continue 1;{VB}{VB}{CD}
+event;not complete;{RB}{VB}
+event;status change to Assign investigating officer;{NN}{NN}{TO}{VB}{VBG}{NN}
+event;no;{DT}
+event;status change to Test adm fire department;{NN}{NN}{TO}{VB}{NN}{NN}{NN}
+event;status change to Archive final decision;{NN}{NN}{TO}{NNP}{JJ}{NN}
+event;status change to Waiting for info;{NN}{NN}{TO}{VBG}{IN}{NN}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;yes;{RB}
+event;status change to Test admissibility;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send procedure confirmation;{NN}{NN}{TO}{VB}{NN}{NN}
+event;no;{DT}
+event;status change to Check fire safety;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Record request in system;{NN}{NN}{TO}{NNP}{NN}{IN}{NN}
+event;status change to Check completeness;{NN}{NN}{TO}{VB}{NN}
+event;status change to Print application;{NN}{NN}{TO}{VB}{NN}
+event;status change to Test adm urban planning;{NN}{NN}{TO}{VB}{NN}{JJ}{NN}
+event;the end;{DT}{NN}
+event;no;{DT}
+event;status change to Hearing requested;{NN}{NN}{TO}{NN}{VBD}
+event;status change to Check urban plan;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Process result;{NN}{NN}{TO}{VB}{NN}
+event;status change to Pieces complete;{NN}{NN}{TO}{NNP}{JJ}
+event;status change to Send final decision;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Receive advice;{NN}{NN}{TO}{VB}{NN}
+event;yes;{RB}
+event;status change to Check concept decision;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Waiting for VVGB;{NN}{NN}{TO}{VBG}{IN}{NN}
+event;status change to Ask for advice;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Collect admissibility tests;{NN}{NN}{TO}{VB}{NN}{NNS}
+event;yes;{RB}
+event;status change to Receive VVGB;{NN}{NN}{TO}{VB}{NN}
+event;status change to Publish decision;{NN}{NN}{TO}{VB}{NN}
+event;status change to Waiting for comments;{NN}{NN}{TO}{VBG}{IN}{NNS}
+event;no;{DT}
+event;status change to Test adm architecture advisor;{NN}{NN}{TO}{VB}{NN}{NN}{NN}
+event;status change to Forward to appropriate authority;{NN}{NN}{TO}{RB}{TO}{JJ}{NN}
+event;status change to Check for contradiction;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Sign decision;{NN}{NN}{TO}{VB}{NN}
+event;status change to Test adm wealth;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to VVGB time expired;{NN}{NN}{TO}{NNP}{NN}{VBD}
+event;status change to Publish final decision;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;yes;{RB}
+event;status change to Time for info expired;{NN}{NN}{TO}{NNP}{IN}{NN}{VBD}
+event;status change to Negative advice;{NN}{NN}{TO}{JJ}{NN}
+event;status change to Informally check completeness;{NN}{NN}{TO}{RB}{VB}{NN}
+event;status change to Right authority;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Send decision;{NN}{NN}{TO}{VB}{NN}
+event;status change to Check building regulation;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Conclude decision;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Receive requested info;{NN}{NN}{TO}{VB}{VBN}{NN}
+event;status change to Sign final decision;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Applicant decides to reconsider application;{NN}{NN}{TO}{NN}{VBZ}{TO}{VB}{NN}
+event;no;{DT}
+event;status change to Inform customer;{NN}{NN}{TO}{VB}{NN}
+event;status change to Publish notice request;{NN}{NN}{TO}{VB}{NN}{NN}
+event;yes;{RB}
+event;status change to Check environmental aspects;{NN}{NN}{TO}{VB}{JJ}{NNS}
+event;status change to Receive request via mail;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;complete;{JJ}
+event;status change to Check wealth;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine procedure period;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Time for advice expired;{NN}{NN}{TO}{NNP}{IN}{NN}{VBD}
+event;status change to Test adm environment;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Archive;{NN}{NN}{TO}{NNP}

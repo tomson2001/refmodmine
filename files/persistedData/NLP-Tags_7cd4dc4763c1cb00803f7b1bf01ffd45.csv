@@ -1,0 +1,8 @@
+7cd4dc4763c1cb00803f7b1bf01ffd45;Similar Part Search
+function;Find Object;{VB}{NNP}
+function;Document Search;{NNP}{VB}
+function;Material Search;{NNP}{VB}
+event;Set up product structure without variants;{VB}{RP}{NN}{NN}{IN}{NNS}
+event;Product structure for variants to be set up;{NN}{NN}{IN}{NNS}{TO}{VB}{VBN}{RP}
+event;Perform similiar part search;{VB}{JJ}{NN}{NN}
+event;Set up product strucuture using CAD interface;{VB}{RP}{NN}{NN}{VBG}{NNP}{NN}

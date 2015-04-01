@@ -1,0 +1,20 @@
+e0b6c08d09b9f2eebd7d6183fefb1520;Processes of the Consolidation Monitor
+function;Manual Consolidation Entries;{NNP}{NN}{NNS}
+function;Validation of Consolidated Data;{NN}{IN}{NNP}
+function;Preparation of Consolidation Group Changes;{NN}{IN}{NN}{NN}{NNS}
+function;Consolidation of investments;{NN}{IN}{NNS}
+function;Reclassifications;{NNS}
+function;Elimination of IU Profit/ Loss: Transferred Assets;{NN}{IN}{NNP}{:}{NN}{:}{NNPS}
+function;Interunit Elimination by Elimination of IC Revenue and Expense;{NNP}{IN}{NNP}{IN}{NN}{NN}{CC}{NN}
+function;Interunit Elimination by Elimination of Investment Income;{NNP}{IN}{NNP}{IN}{NNP}
+function;Interunit Elimination by Elimination of IU Payables and Receivables;{NNP}{IN}{NNP}{IN}{NNPS}{CC}{NNPS}
+function;Rollup in Consolidation Monitor;{NN}{IN}{NN}{NNP}
+event;Consolidation Group Changes Requested;{NN}{NN}{NNS}{VBN}
+event;Preparation for Consolidation Group Changes Prepared;{NN}{IN}{NN}{NN}{NNS}{VBN}
+event;Interunit Elimination Carried Out;{NNP}{VBD}{IN}
+event;Manual Consolidation Entries Completed;{NNP}{NN}{NNS}{VBN}
+event;Consolidation Monitor Processes Completed;{NN}{NNP}
+event;Reclassifications Completed;{NNS}{VBN}
+event;Consolidated Data Validated;{NNP}
+event;Elimination of Interunit Profit/ Loss in Inventory Carried Out;{NN}{IN}{NNP}{:}{NN}{IN}{NNP}{VBD}{IN}
+event;Consolidation of Investments Carried Out;{NN}{IN}{NNP}{VBD}{IN}

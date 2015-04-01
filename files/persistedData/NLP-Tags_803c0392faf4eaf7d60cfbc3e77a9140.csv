@@ -1,0 +1,19 @@
+803c0392faf4eaf7d60cfbc3e77a9140;Period-End Closing: Sales Order Controlling
+function;Overhead Calculation (Sales Order);{NN}{NN}{-LRB-}{NNS}{NN}{-RRB-}
+function;Revaluation at Actual Prices;{NN}{IN}{NNP}{NNS}
+function;Template Allocation (Sales Order);{NN}{NN}{-LRB-}{NNS}{NN}{-RRB-}
+function;Sales Order Settlement;{NNS}{NNP}
+function;Product Cost Analysis in Product Cost by Sales Order;{NN}{NN}{NN}{IN}{NNP}{NN}{IN}{NNS}{NN}
+function;Results Analysis for Sales Orders;{NNS}{NN}{IN}{NNS}{NNS}
+function;Overhead Calculation (Manufacturing Order);{NN}{NN}{-LRB-}{NNP}{-RRB-}
+function;Settlement of Manufacturing Order to Sales Order (Unval. Inventory Only);{NNP}{IN}{NNP}{TO}{NNS}{NN}{-LRB-}{NN}{.}
+event;Revaluation completed;{NN}{VBD}
+event;Production order settled to sales order;{NN}{NN}{VBD}{TO}{NNS}{NN}
+event;Overhead rates (sales order) were allocated;{NN}{NNS}{-LRB-}{NNS}{NN}{-RRB-}{VBD}{VBN}
+event;Product cost analysis required for sales order Controlling;{NN}{NN}{NN}{VBN}{IN}{NNS}{NN}{VBG}
+event;Order costs to be settled;{NN}{NNS}{TO}{VB}{VBN}
+event;Inventories/ accruals posted;{NNS}{:}{NNS}{VBD}
+event;Sales and Costs Settled;{NNS}{CC}{NNS}{VBN}
+event;Process costs (sales order) to be allocated;{VB}{NNS}{-LRB-}{NNS}{NN}{-RRB-}{TO}{VB}{VBN}
+event;Process costs were allocated;{VB}{NNS}{VBD}{VBN}
+event;Overhead rates (production order) allocated;{NN}{NNS}{-LRB-}{NN}{NN}{-RRB-}{VBN}

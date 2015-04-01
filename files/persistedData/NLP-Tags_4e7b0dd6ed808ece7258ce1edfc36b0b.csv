@@ -1,0 +1,28 @@
+4e7b0dd6ed808ece7258ce1edfc36b0b;WM Inventory
+function;Clear Differences WM;{JJ}{NNS}{VBP}
+function;Clear Differences (Inventory Management);{JJ}{NNS}{-LRB-}{NNP}{-RRB-}
+function;Start Inventory Recount;{NNP}
+function;Enter Count Results;{VB}{NNP}{NNS}
+function;Print Inventory List;{VB}{NNP}{NN}
+function;Cycle Counting WM;{NN}{VBG}{NN}
+function;Annual Inventory WM;{JJ}{NNP}
+function;Continuous Inventory WM;{JJ}{NNP}
+function;Storage Type Block;{NNP}{NN}{NN}
+event;Recount is necessary;{NNP}{VBZ}{JJ}
+event;Storage type is to be blocked for annual inventory;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{IN}{JJ}{NN}
+event;System inventory record is created;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Storage type is blocked;{NNP}{NN}{VBZ}{VBN}
+event;Continuous inventory WM is to be performed;{JJ}{NN}{NNP}{VBZ}{TO}{VB}{VBN}
+event;Physical inventory list is printed;{JJ}{NN}{NN}{VBZ}{VBN}
+event;Annual inventory WM to be performed;{JJ}{NN}{NNP}{TO}{VB}{VBN}
+event;Storage bin is blocked;{NNP}{VBZ}{VBN}
+event;Difference is posted in IM;{NN}{VBZ}{VBN}{IN}{NN}
+event;Recount is initiated;{NNP}{VBZ}{VBN}
+event;Physical inventory is active;{JJ}{NN}{VBZ}{JJ}
+event;Inventory history is updated;{NN}{NN}{VBZ}{VBN}
+event;Difference has been posted to interface;{NN}{VBZ}{VBN}{VBN}{TO}{NN}
+event;Storage bin is unblocked;{NNP}{VBZ}{JJ}
+event;Physical inventory is completed;{JJ}{NN}{VBZ}{VBN}
+event;Cycle counting is to be performed;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Recount is not necessary;{NNP}{VBZ}{RB}{JJ}
+event;No variance was determined;{DT}{NN}{VBD}{VBN}

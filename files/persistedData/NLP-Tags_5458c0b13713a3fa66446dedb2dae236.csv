@@ -1,0 +1,21 @@
+5458c0b13713a3fa66446dedb2dae236;Purchasing
+function;Processing of Shipping Notifications/ Confirmations;{NN}{IN}{VBG}{NNS}{:}{NNS}
+function;Transmission of Purchase Orders;{NNP}{IN}{NNP}{NNS}
+function;Transmission of Shipping Notifications;{NNP}{IN}{NNP}{NNS}
+function;Release of Purchase Orders;{NNP}{IN}{NNP}{NNS}
+function;Contract Release Order;{NNP}
+function;Purchase Order Processing;{NNP}
+function;Delivery and Acknowledgment Expediter;{NN}{CC}{NN}{NN}
+function;Scheduling Agreement Delivery Schedule;{VBG}{NN}{NN}{VBP}
+function;Transmission of Scheduling Agreements;{NNP}{IN}{NNP}
+event;Purchase requisition released for contract release order;{NN}{NN}{VBN}{IN}{NN}{NN}{NN}
+event;Requisition released for scheduling agreement schedule/SA release;{NN}{VBN}{IN}{NN}{NN}{NN}{NN}
+event;Purchase order transmitted;{NN}{NN}{VBD}
+event;Purchase order released;{NN}{NN}{VBN}
+event;Purchase requisition released for purchase order;{NN}{NN}{VBN}{IN}{NN}{NN}
+event;Shipping notification to be transmitted;{VBG}{NN}{TO}{VB}{VBN}
+event;Delivery/ confirmation expedited;{NN}{:}{NN}{VBD}
+event;Shipping notification transmitted;{VBG}{NN}{VBD}
+event;Inbound delivery for PO created;{JJ}{NN}{IN}{NNP}{VBD}
+event;Purchase order created;{NN}{NN}{VBN}
+event;Scheduling agreement schedule/ SA release created;{VBG}{NN}{NN}{:}{NNP}{NN}{VBD}

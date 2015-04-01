@@ -1,0 +1,29 @@
+0e46854da481964d7c903e59b033b681;Fig.27: GBA2 YAWL model for MunI
+function;Give receipt;{VB}{NN}
+function;Ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Determine whether proof of identity is present;{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+function;Determine fees;{NN}{NNS}
+function;Ask customer to bring ID;{VB}{NN}{TO}{VB}{NNP}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Direct to right product;{JJ}{TO}{JJ}{NN}
+function;Process payment;{VB}{NN}
+function;Receive payment;{VB}{NN}
+function;Go to Service Desk Directly;{VB}{TO}{NNP}{RB}
+function;Refer to Service Desk;{VB}{TO}{NNP}
+function;Ask identifying questions;{VB}{VBG}{NNS}
+function;Produce_extract_and_sign;{NN}
+function;Give GBA extract;{VB}{NNP}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;No payment;{DT}{NN}
+function;Determine if right product;{VB}{IN}{JJ}{NN}
+event;Start process;{NNP}{NN}
+event;no ID;{DT}{NN}
+event;no ID;{DT}{NN}
+event;wrong product;{JJ}{NN}
+event;Process end;{VB}{NN}
+event;not entitled;{RB}{VBN}
+event;free;{JJ}
+event;right product;{JJ}{NN}
+event;not free;{RB}{JJ}
+event;ID present;{NN}{JJ}

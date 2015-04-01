@@ -1,0 +1,21 @@
+91af65ced7b98f758b317881c2fca604;Executive Information System (EIS)
+function;Data transfer;{NNS}{NN}
+function;Information System (EC-EIS);{NNP}{-LRB-}{NN}{-RRB-}
+function;Basic settings;{JJ}{NNS}
+function;Task Functions on Information System;{NNP}{NNS}{IN}{NNP}
+function;Task Functions on Tools;{NNP}{NNS}{IN}{NNS}
+function;Data modeling;{NNS}{NN}
+function;Tools;{NNS}
+function;Data basis;{NNS}{NN}
+event;Number Ranges Defined;{NN}{VBZ}{VBN}
+event;Task Functions for Information System Set Up;{NNPS}{IN}{NNP}{VB}{RP}
+event;Foreign Currencies Are Specified;{NNP}{VBP}{VBN}
+event;Data Transfer Specified;{NNS}{NN}{VBN}
+event;Units of Measure Specified;{NNS}{IN}{NN}{VBN}
+event;File Names Established;{VB}{NNS}{VBN}
+event;Data Modeling Required;{NNS}{VBG}{VBN}
+event;Information System;{NNP}
+event;Tools Set Up;{NNS}{VB}{RP}
+event;Task Functions for Tools Set Up;{NNPS}{IN}{NNP}{VB}{RP}
+event;Basic Settings to be made;{JJ}{NNS}{TO}{VB}{VBN}
+event;Data Basis Determined;{NNS}{NNP}

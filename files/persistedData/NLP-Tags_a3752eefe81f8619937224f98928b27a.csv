@@ -1,0 +1,14 @@
+a3752eefe81f8619937224f98928b27a;Business Event Planning
+function;Business Event Planning;{NNP}
+function;Creation of Business Event Catalog;{NN}{IN}{NN}{NNP}{NN}
+function;Determination of Business Event Requirement;{NN}{IN}{NNP}{NN}
+event;Business event planning must be corrected;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Business event catalog exists;{NN}{NN}{NN}{VBZ}
+event;Business event requirement must be determined;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Need for business event catalog exists;{VBN}{IN}{NN}{NN}{NN}{VBZ}
+event;Need for business event planning exists;{VBN}{IN}{NN}{NN}{NN}{VBZ}
+event;Business event exists;{NN}{NN}{VBZ}
+event;Need for business event advertising exists;{VBN}{IN}{NN}{NN}{NN}{VBZ}
+event;Business event requirement exists;{NN}{NN}{NN}{VBZ}
+event;Need for business event resource planning exists;{VBN}{IN}{NN}{NN}{NN}{NN}{VBZ}
+event;Business event catalog must be corrected;{NN}{NN}{NN}{MD}{VB}{VBN}

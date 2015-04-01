@@ -1,0 +1,36 @@
+fcbc975e2a0bdbd8954322e06f767821;Fig.53: WABO1 YAWL model for MunE
+function;Check urban plan;{VB}{JJ}{NN}
+function;Check wealth;{VB}{NN}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Assign investigating officer;{VB}{VBG}{NN}
+function;Register;{NNP}
+function;Change plan;{NNP}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+function;Archive;{NNP}
+function;Send results of consultation;{VB}{NNS}{IN}{NN}
+function;Register SYSTEM;{NNP}
+function;Hold consultation with customer;{VB}{NN}{IN}{NN}
+function;Start case;{NNP}{NN}
+function;Receive supplements;{VB}{NNS}
+function;Send acknowledgment;{VB}{NN}
+function;Hold meeting with customer;{VB}{NN}{IN}{NN}
+function;Send acknowledgment SYSTEM;{VB}{NN}{NN}
+event;status change to Hold consultation with customer;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;no;{DT}
+event;status change to Register;{NN}{NN}{TO}{NNP}
+event;yes;{RB}
+event;status change to Send acknowledgment SYSTEM;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Hold meeting with customer;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Record request in system;{NN}{NN}{TO}{NNP}{NN}{IN}{NN}
+event;End case;{NNP}{NN}
+event;status change to Change plan;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Assign investigation officer;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Check urban plan;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Send acknowledgment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Register SYSTEM;{NN}{NN}{TO}{NNP}
+event;status change to Receive request via mail;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;Start case;{NNP}{NN}
+event;status change to Check wealth;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send results of consultation;{NN}{NN}{TO}{VB}{NNS}{IN}{NN}

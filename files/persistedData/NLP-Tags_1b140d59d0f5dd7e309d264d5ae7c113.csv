@@ -1,0 +1,26 @@
+1b140d59d0f5dd7e309d264d5ae7c113;Complaints Processing
+function;Billing;{NN}
+function;Warehouse Management;{NNP}
+function;Complaints;{NNS}
+function;Shipping;{VBG}
+function;Shipment;{NN}
+event;Inspection completion is carried out;{NNP}{NN}{VBZ}{VBN}{RP}
+event;Complaint received (without goods return);{NN}{VBD}{-LRB-}{IN}{NNS}{NN}{-RRB-}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Transfer order created automatically;{NN}{NN}{VBN}{RB}
+event;Complaints with goods returns is received;{NNS}{IN}{NNS}{NNS}{VBZ}{VBN}
+event;Subsequent debit reason occurred;{JJ}{NN}{NN}{VBD}
+event;Invoice correction needs to be created;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Returns already dispatched;{NNS}{RB}{VBD}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Goods movement is posted;{NNP}{NN}{VBZ}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Credit/ debit memo is granted;{NNP}{:}{NN}{NN}{VBZ}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Deliveries need to be planned;{NNS}{VBP}{TO}{VB}{VBN}
+event;Transfer order created manually;{NN}{NN}{VBN}{RB}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Returns to be collected;{NNS}{TO}{VB}{VBN}
+event;Shipment costs per item are calculated;{NN}{NNS}{IN}{NN}{VBP}{VBN}
+event;Credit memo is rejected;{NNP}{NN}{VBZ}{VBN}
+event;Customer wants subsequent delivery free-of-charge;{NN}{VBZ}{JJ}{NN}{NN}

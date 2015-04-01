@@ -1,0 +1,21 @@
+dad5db15b99b81642666b56e6bc574a0;Fig.53: WABO1 YAWL model for MunE
+function;Check urban plan;{VB}{JJ}{NN}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;Send results of consultation;{VB}{NNS}{IN}{NN}
+function;Change plan;{NNP}{NN}
+function;Send acknowledgment SYSTEM;{VB}{NN}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Archive;{NNP}
+function;Receive supplements;{VB}{NNS}
+function;Hold consultation with customer;{VB}{NN}{IN}{NN}
+function;Register SYSTEM;{NNP}
+function;Hold meeting with customer;{VB}{NN}{IN}{NN}
+function;Assign investigating officer;{VB}{VBG}{NN}
+function;Register;{NNP}
+function;Check wealth;{VB}{NN}
+function;Send acknowledgment;{VB}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+event;Start case;{NNP}{NN}
+event;End case;{NNP}{NN}
+event;no;{DT}
+event;yes;{RB}

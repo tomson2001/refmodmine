@@ -1,0 +1,32 @@
+81ee9aa85b70ec1dfe42f540d0be8025;Recruitment
+function;Work Contract Negotiation;{NN}{NN}{NN}
+function;Applicant Pool Administration;{NN}{NNP}
+function;Recruitment Request Monitoring;{NN}{NN}{NN}
+function;Application Retraction Processing;{NN}{NNP}
+function;Issuance of Recruitment Request;{NN}{IN}{NN}{NN}
+function;Personnel Advertising;{NNP}
+function;Processing Receipt of Application;{NN}{NN}{IN}{NN}
+function;Personnel Selection;{NNP}{NN}
+event;Applicant is rejected for vacancy;{NN}{VBZ}{VBN}{IN}{NN}
+event;Confirmation of receipt is transmitted to applicant;{NN}{IN}{NN}{VBZ}{VBN}{TO}{NN}
+event;Recruitment request is in process;{NN}{NN}{VBZ}{IN}{NN}
+event;Applicant pool must be updated;{NN}{NN}{MD}{VB}{VBN}
+event;Time for order monitoring is reached;{NNP}{IN}{NN}{NN}{VBZ}{VBN}
+event;Applicant must be hired;{NN}{MD}{VB}{VBN}
+event;Need for personnel advertising exists;{VBN}{IN}{NNS}{VBG}{VBZ}
+event;Retraction confirmation and application documents transmitted to applicant;{NN}{NN}{CC}{NN}{NNS}{VBN}{TO}{NN}
+event;Vacancy and assigned applicants exist;{NN}{CC}{VBN}{NNS}{VBP}
+event;Applicant has been entered;{NN}{VBZ}{VBN}{VBN}
+event;Job advertisement is determined;{NNP}{NN}{VBZ}{VBN}
+event;Need for services has arisen;{VBN}{IN}{NNS}{VBZ}{VBN}
+event;Rejection and application documents transmitted to applicant;{NN}{CC}{NN}{NNS}{VBN}{TO}{NN}
+event;On hold notification is transmitted to applicant;{IN}{NN}{NN}{VBZ}{VBN}{TO}{NN}
+event;Enterprise receives retraction of application;{NNP}{VBZ}{NN}{IN}{NN}
+event;Enterprise receives application;{NNP}{VBZ}{NN}
+event;Recruitment request is complete;{NN}{NN}{VBZ}{JJ}
+event;Time for job advertisement reached;{NNP}{IN}{NN}{NN}{VBD}
+event;Applicant is put on hold for vacancy;{NN}{VBZ}{VBN}{IN}{NN}{IN}{NN}
+event;Applicant is conclusively rejected;{NN}{VBZ}{RB}{VBN}
+event;Applicant must be offered contract for vacancy;{NN}{MD}{VB}{VBN}{NN}{IN}{NN}
+event;Applicant is on hold;{NN}{VBZ}{IN}{NN}
+event;Need for recruitment exists;{VBN}{IN}{NN}{VBZ}

@@ -1,0 +1,33 @@
+d80837251dd26af88cdb8da5e81044d1;Maintenance Order
+function;Order Completion;{NNP}
+function;Order Execution;{NNP}
+function;Overall Completion Confirmation;{JJ}{NNP}{NN}
+function;Order Settlement;{NNP}
+function;Maintenance Order Release;{NNP}
+function;Maintenance Order Creation/ Processing;{NNP}{:}{NNP}
+event;Purchase requisitions can be ordered;{NN}{NNS}{MD}{VB}{VBN}
+event;Services are to be entered;{NNPS}{VBP}{TO}{VB}{VBN}
+event;PM order is created and released;{NN}{NN}{VBZ}{VBN}{CC}{VBN}
+event;Operations and Order Must Be Confirmed;{NNP}{CC}{NNP}{MD}{VB}{VBN}
+event;Maintenance operation is performed;{NN}{NN}{VBZ}{VBN}
+event;Material reservation can be withdrawn;{NN}{NN}{MD}{VB}{VBN}
+event;PM order comes from maintenance call;{NN}{NN}{VBZ}{IN}{NN}{NN}
+event;Maintenance order is to be created manually;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Order is to be archived;{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance order is to be closed;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance order is released;{NN}{NN}{VBZ}{VBN}
+event;Maintenance order is completed with time reference;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Order is closed technically;{NN}{VBZ}{VBN}{RB}
+event;General maintenance task list is processed;{NNP}{NN}{NN}{NN}{VBZ}{VBN}
+event;Individual operations are confirmed;{JJ}{NNS}{VBP}{VBN}
+event;Maintenance order is to be released;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance order is created;{NN}{NN}{VBZ}{VBN}
+event;;
+event;Settlement rule is specified;{NNP}{NN}{VBZ}{VBN}
+event;Maintenance order to be created per maintenance item;{NN}{NN}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Actual costs are updated to maintenance order;{JJ}{NNS}{VBP}{VBN}{TO}{NN}{NN}
+event;Order is settled;{NN}{VBZ}{VBN}
+event;Inspection lot is to be created;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Open material reservations are deleted;{VB}{NN}{NNS}{VBP}{VBN}
+event;Order is to be performed;{NN}{VBZ}{TO}{VB}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}

@@ -1,0 +1,44 @@
+6401b03a13b325c9a16a9f178c174ccf;Fig.22: GBA2 YAWL model for MunD
+function;waiting for payment 3;{VBG}{IN}{NN}{CD}
+function;process payment;{NN}{NN}
+function;enabling officer;{VBG}{NN}
+function;decide whether to go on;{VB}{IN}{TO}{VB}{IN}
+function;call coupon holder;{NN}{NN}{NN}
+function;ask customer whether he has ID;{VB}{NN}{IN}{PRP}{VBZ}{VBN}
+function;Tiimeout 2;{NN}{CD}
+function;ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+function;process payment 2;{NN}{NN}{CD}
+function;determine if right product;{VB}{IN}{JJ}{NN}
+function;receive payment 2;{VB}{NN}{CD}
+function;issue invoice;{NN}{NN}
+function;ask customer to pay;{VB}{NN}{TO}{VB}
+function;waiting for payment;{VBG}{IN}{NN}
+function;end here;{NN}{RB}
+function;no payment;{DT}{NN}
+function;receive payment;{VB}{NN}
+function;give receipt;{VB}{NN}
+function;direct to right product;{JJ}{TO}{JJ}{NN}
+function;send reminder;{VB}{NN}
+function;produce extract and sign;{VB}{NN}{CC}{NN}
+function;process payment 3;{NN}{NN}{CD}
+function;give extract;{VB}{NN}
+function;determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;receive payment 3;{VB}{NN}{CD}
+function;determine whether proof of identity is present;{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+function;waiting for payment 2;{VBG}{IN}{NN}{CD}
+function;give_coupon;{NN}
+function;ask customer to bring ID;{VB}{NN}{TO}{VB}{NNP}
+function;determine fees;{VB}{NNS}
+function;Timeout 3;{NNP}{CD}
+function;give GBA extract;{VB}{NNP}{NN}
+event;wrong product;{JJ}{NN}
+event;free;{JJ}
+event;only if not free;{RB}{IN}{RB}{JJ}
+event;ID present;{NN}{JJ}
+event;not free;{RB}{JJ}
+event;Process end;{VB}{NN}
+event;right product;{JJ}{NN}
+event;no ID present;{DT}{NN}{JJ}
+event;Start process;{NNP}{NN}
+event;not entitled;{RB}{VBN}
+event;always;{RB}

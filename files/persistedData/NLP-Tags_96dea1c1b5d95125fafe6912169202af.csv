@@ -1,0 +1,14 @@
+96dea1c1b5d95125fafe6912169202af;Replenishment In-House Production with Production Order
+function;Production Order Execution;{NN}{NN}{NN}
+function;Production Order Release;{NNP}
+event;Material received by demand source;{NN}{VBN}{IN}{NN}{NN}
+event;Material is produced;{NN}{VBZ}{VBN}
+event;Status of the kanban container set to 'full';{NN}{IN}{DT}{JJ}{NN}{VBN}{TO}{``}{JJ}{''}
+event;Production order is released;{NN}{NN}{VBZ}{VBN}
+event;Material is produced;{NN}{VBZ}{VBN}
+event;Production quantities assigned to production lines;{NN}{NNS}{VBN}{TO}{NN}{NNS}
+event;Replenishment (with manual kanban) triggered;{NN}{-LRB-}{IN}{JJ}{NN}{-RRB-}{VBD}
+event;Production order is created;{NN}{NN}{VBZ}{VBN}
+event;Material is produced;{NN}{VBZ}{VBN}
+event;Run schedule quantity is created;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}

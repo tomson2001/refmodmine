@@ -1,0 +1,10 @@
+76e4d7a72a9b288fa053b39a5d89320a;Basic Data
+function;Commodity Code Processing;{NNP}
+function;Import Code Numbers Processing;{NN}{NNP}
+function;Foreign Trade Basic Data Processing;{NNP}
+event;Statistical goods numbers are processed;{JJ}{NNS}{NNS}{VBP}{VBN}
+event;Import code numbers are processed;{NN}{NN}{NNS}{VBP}{VBN}
+event;Foreign trade data are complete;{JJ}{NN}{NNS}{VBP}{JJ}
+event;Foreign trade data to be processed;{JJ}{NN}{NNS}{TO}{VB}{VBN}
+event;Statistical goods numbers are to be processed;{JJ}{NNS}{NNS}{VBP}{TO}{VB}{VBN}
+event;Import code numbers are to be processed;{NN}{NN}{NNS}{VBP}{TO}{VB}{VBN}

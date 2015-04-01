@@ -1,0 +1,13 @@
+cb42777be6f8f4f5d67a5693c6c9da0e;Measure Planning
+function;Overhead calculation;{NN}{NN}
+function;Order Budgeting;{NNP}
+function;Order Planning;{NNP}
+event;Overhead Costs Are to Be Allocated Using Overhead Rates;{NN}{NNS}{VBP}{TO}{VB}{NNP}{VBG}{NN}{NNS}
+event;Profit and cost planning to be carried out;{NN}{CC}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Budget is assigned;{NNP}{VBZ}{VBN}
+event;Plan Data for Order Exists;{NNP}{IN}{NNP}{VBZ}
+event;Release and execution of measure to be triggered;{NNP}{CC}{NN}{IN}{NN}{TO}{VB}{VBN}
+event;Period-end closing and settlement to be carried out;{JJ}{NN}{CC}{NN}{TO}{VB}{VBN}{RP}
+event;Overhead debited to capital investment order;{NN}{VBN}{TO}{NN}{NN}{NN}
+event;Operative business planning to be carried out;{JJ}{NN}{VBG}{TO}{VB}{VBN}{RP}
+event;Order is processed;{NN}{VBZ}{VBN}

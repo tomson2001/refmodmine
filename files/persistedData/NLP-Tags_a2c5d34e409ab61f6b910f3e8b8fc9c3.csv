@@ -1,0 +1,22 @@
+a2c5d34e409ab61f6b910f3e8b8fc9c3;Vendor Payments
+function;Release for Payment;{NNP}{IN}{NN}
+function;Vendor Payment Request;{NNP}{NN}{NN}
+function;Automatic Outgoing Payments;{NNP}{NNS}
+function;Manual Outgoing Payments;{NNP}{NNS}
+event;Payment medium to be created;{NN}{NN}{TO}{VB}{VBN}
+event;Payment medium transferred;{NN}{NN}{VBN}
+event;Payment advice is sent;{NN}{NN}{VBZ}{VBN}
+event;Payments must be released;{NNS}{MD}{VB}{VBN}
+event;Payment posted;{NN}{VBD}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Payment is transferred by EDI;{NN}{VBZ}{VBN}{IN}{NN}
+event;Automatic outgoing payment to be processed;{NNP}{JJ}{NN}{TO}{VB}{VBN}
+event;Items are cleared;{NNS}{VBP}{VBN}
+event;Data medium is created;{NNS}{NN}{VBZ}{VBN}
+event;Manual outgoing payment to be processed;{JJ}{JJ}{NN}{TO}{VB}{VBN}
+event;Payment posted;{NN}{VBD}
+event;Incoming payments were rejected;{JJ}{NNS}{VBD}{VBN}
+event;Partial payment should be made;{JJ}{NN}{MD}{VB}{VBN}
+event;Payment request is created;{NN}{NN}{VBZ}{VBN}
+event;Items are cleared;{NNS}{VBP}{VBN}
+event;Payments have not been created;{NNS}{VBP}{RB}{VBN}{VBN}

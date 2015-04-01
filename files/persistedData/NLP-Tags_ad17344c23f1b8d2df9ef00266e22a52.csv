@@ -1,0 +1,6 @@
+ad17344c23f1b8d2df9ef00266e22a52;Interest Calculation [A/R]
+function;Customer Account Balance Interest Calculation;{NN}{NNP}{NN}
+function;Calculation of Interest on Arrears - Customers;{NN}{IN}{NN}{IN}{NNS}{:}{NNS}
+event;Interest to be calculated on account balances;{NN}{TO}{VB}{VBN}{IN}{NN}{NNS}
+event;Interest on arrears to be calculated;{NN}{IN}{NNS}{TO}{VB}{VBN}
+event;Interest calculation is completed;{NN}{NN}{VBZ}{VBN}

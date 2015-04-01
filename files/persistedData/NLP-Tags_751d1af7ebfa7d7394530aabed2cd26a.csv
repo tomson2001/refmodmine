@@ -1,0 +1,13 @@
+751d1af7ebfa7d7394530aabed2cd26a;Career Planning
+function;Preparation of Career Planning;{NN}{IN}{NNP}
+function;Employee Notification of Career Plan;{NN}{NN}{IN}{NNP}
+function;Career Planning;{NNP}
+event;Employee career plan must be corrected;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Employee must be notified of career plan;{NN}{MD}{VB}{VBN}{IN}{NN}{NN}
+event;Career plan is transmitted to employee;{NNP}{NN}{VBZ}{VBN}{TO}{NN}
+event;Need for individual personnel development planning exists;{VBN}{IN}{JJ}{NNS}{NN}{NN}{VBZ}
+event;Personnel development system is implemented;{NNS}{NN}{NN}{VBZ}{VBN}
+event;Employee career plan is adopted;{NN}{NN}{NN}{VBZ}{VBN}
+event;Preparation of career planning is complete;{NN}{IN}{NN}{NN}{VBZ}{JJ}
+event;Need for monitoring of staff planning exists;{VBN}{IN}{NN}{IN}{NN}{NN}{VBZ}
+event;Need for career planning exists;{VBN}{IN}{NN}{NN}{VBZ}

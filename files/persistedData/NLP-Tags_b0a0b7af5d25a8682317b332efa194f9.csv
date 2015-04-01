@@ -1,0 +1,19 @@
+b0a0b7af5d25a8682317b332efa194f9;Appropriation Request
+function;Appropriation Request Processing;{NN}{NN}{NN}
+function;Appropriation Request Planning;{NN}{NN}{NNP}
+function;Mass Change for Appropriation Requests;{JJ}{NNP}{IN}{NNPS}
+function;Appropriation Request Approval;{NN}{NN}{NN}
+function;Variant Processing;{JJ}{NN}
+function;Creation of an Alternate Group of Appropriation Requests;{NN}{IN}{DT}{JJ}{NN}{IN}{NN}{NNS}
+event;Internal order is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Investment plan is to be revised;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Appropri- ation request is to be processed;{NN}{:}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Approp- riation request plan exists;{NN}{:}{NN}{NN}{NN}{VBZ}
+event;Appropri- ation request is created;{NN}{:}{NN}{NN}{VBZ}{VBN}
+event;Appropriation request to be released;{NN}{NN}{TO}{VB}{VBN}
+event;Appropriation request to be approved;{NN}{NN}{TO}{VB}{VBN}
+event;Appropri- ation request is to be processed;{NN}{:}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Variant is processed;{JJ}{VBZ}{VBN}
+event;Multiple appropriation requests are to be changed;{JJ}{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;;
+event;Mass changes were made;{JJ}{NNS}{VBD}{VBN}

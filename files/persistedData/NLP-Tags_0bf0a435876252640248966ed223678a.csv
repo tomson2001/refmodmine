@@ -1,0 +1,8 @@
+0bf0a435876252640248966ed223678a;Master Data Processing Dangerous Goods with Substance Database
+function;Product Safety;{NNP}
+function;Dangerous Goods;{JJ}{NNP}
+function;Material Master;{NNP}
+event;EH+S master data is to be created;{NN}{NN}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Basic data is to be processed;{JJ}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Dangerous goods master is to be processed;{JJ}{NNS}{NN}{VBZ}{TO}{VB}{VBN}
+event;Processing is completed;{NN}{VBZ}{VBN}

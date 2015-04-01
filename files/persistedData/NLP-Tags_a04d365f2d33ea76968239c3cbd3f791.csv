@@ -1,0 +1,17 @@
+a04d365f2d33ea76968239c3cbd3f791;Q-Notifications for a Customer Complaint
+function;Creation and Processing of Quality Notifications;{NN}{CC}{NN}{IN}{NNP}{NNS}
+function;Notification Creation on Intranet;{NN}{NN}{IN}{NNP}
+function;Notification Archiving;{NN}{NN}
+function;Worklist Generation for Notifications;{NNP}{IN}{NNS}
+event;Quality notification is completed;{JJ}{NN}{VBZ}{VBN}
+event;Defect requires manual quality notification;{NN}{VBZ}{JJ}{NN}{NN}
+event;Notification is created on the Intranet;{NN}{VBZ}{VBN}{IN}{DT}{NNP}
+event;Notification is to be archived;{NN}{VBZ}{TO}{VB}{VBN}
+event;Effectiveness of a task is documented at a later date;{NN}{IN}{DT}{NN}{VBZ}{VBN}{IN}{DT}{JJ}{NN}
+event;Worklist is created;{NNP}{VBZ}{VBN}
+event;Notification Should Be Entered in Intranet;{NN}{MD}{VB}{VBN}{IN}{NNP}
+event;Worklist is to be created;{NNP}{VBZ}{TO}{VB}{VBN}
+event;QM order is created for quality notification;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Notification is archived;{NN}{VBZ}{VBN}
+event;External sales force/ customer complaint is to be created;{JJ}{NNS}{NN}{:}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Evaluation from QMIS indicates quality problems;{NN}{IN}{NNS}{VBZ}{NN}{NNS}

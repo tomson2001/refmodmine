@@ -1,0 +1,20 @@
+c4ef2eadc7945c6a95cef26610f10e51;Product Definition/Development
+function;Product Structure Management via CAD;{NN}{NN}{NN}{IN}{NN}
+function;Product Structure Management for Variant Products;{NN}{NN}{NN}{IN}{JJ}{NNPS}
+function;Project Monitoring and Analysis;{NN}{NN}{CC}{NN}
+function;Product Structure Management W/o Variants;{NN}{NN}{NN}{NNP}{NNS}
+function;Similar Part Search;{JJ}{NN}{VB}
+function;Specification;{NN}
+function;Design;{NN}
+function;Schedule Update and Confirmation;{VB}{NNP}{CC}{NN}
+function;Project Completion Activities;{NNP}{NNS}
+event;Perform similiar part search;{VB}{JJ}{NN}{NN}
+event;Product structure for variants to be set up;{NN}{NN}{IN}{NNS}{TO}{VB}{VBN}{RP}
+event;Create product draft;{VB}{NN}{NN}
+event;Close project;{JJ}{NN}
+event;Set up product strucuture using CAD interface;{VB}{RP}{NN}{NN}{VBG}{NNP}{NN}
+event;Guarantee product service;{NN}{NN}{NN}
+event;Check project data;{VB}{NN}{NNS}
+event;Check dates and transactions;{VB}{NNS}{CC}{NNS}
+event;Carry out product development;{VB}{RP}{NN}{NN}
+event;Set up product structure without variants;{VB}{RP}{NN}{NN}{IN}{NNS}

@@ -1,0 +1,72 @@
+406d353e9bcadd7f6f8efd21fc250f99;Fig.68: WABO2 YAWL model for MunJ
+function;Publish final decision;{VB}{JJ}{NN}
+function;Collect advice;{VB}{NN}
+function;Check for contradictions;{VB}{IN}{NNS}
+function;Determine procedure period;{NN}{NN}{NN}
+function;Check fire safety;{VB}{NN}{NN}
+function;Check wealth;{VB}{NN}
+function;Archive final decision;{NNP}{JJ}{NN}
+function;Check completeness;{VB}{NN}
+function;Ask adjustment of request;{VB}{NN}{IN}{NN}
+function;VVGB required;{NN}{VBD}
+function;Format intention to refuse;{NN}{NN}{TO}{VB}
+function;Sign decision;{NN}{NN}
+function;Register;{NNP}
+function;Publish decision;{VB}{NN}
+function;Send notice to customer;{VB}{NN}{TO}{NN}
+function;Publish negative decision;{VB}{JJ}{NN}
+function;Publish notice request;{VB}{NN}{NN}
+function;Send acknowledgement;{VB}{NN}
+function;Send decision;{VB}{NN}
+function;Waiting for VVGB;{VBG}{IN}{NN}
+function;Process result;{VB}{NN}
+function;Place file in the cabinet;{NN}{NN}{IN}{DT}{NN}
+function;Send procedure confirmation;{VB}{NN}{NN}
+function;Send final decision;{VB}{JJ}{NN}
+function;Forward to appropriate authority;{RB}{TO}{JJ}{NN}
+function;Ask VVGB;{VB}{NNP}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Refuse permit;{VB}{NN}
+function;Waiting for comments;{VBG}{IN}{NNS}
+function;Sign final decision;{NN}{JJ}{NN}
+function;Positive advice;{JJ}{NN}
+function;Check building regulation;{VB}{NN}{NN}
+function;Waiting for info;{VBG}{IN}{NN}
+function;Send negative decision;{VB}{JJ}{NN}
+function;Permit;{VB}
+function;Check urban plan;{VB}{JJ}{NN}
+function;Prepare concept decision;{VB}{NN}{NN}
+function;Archive decision;{NNP}{NN}
+function;Conclude decision;{VB}{NN}
+function;Applicant decides to reconsider application;{NN}{VBZ}{TO}{VB}{NN}
+function;Ask additional info;{VB}{JJ}{NN}
+function;Hold hearing;{VB}{NN}
+function;Hearing requested;{NN}{VBD}
+function;Informally check completeness;{RB}{VB}{NN}
+function;Move file to the cabinet;{VB}{NN}{TO}{DT}{NN}
+function;Right authority;{RB}{NN}
+function;Prepare file;{VB}{NN}
+function;Archive negative decision;{NNP}{JJ}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+event;Receive VVGB;{VB}{NN}
+event;no;{DT}
+event;Start case;{NNP}{NN}
+event;no;{DT}
+event;Time for info expired;{NNP}{IN}{NN}{VBD}
+event;End case;{NNP}{NN}
+event;Time for advice expired;{NNP}{IN}{NN}{VBD}
+event;Receive advice;{VB}{NN}
+event;Receive requested info;{VB}{VBN}{NN}
+event;yes;{RB}
+event;yes;{RB}
+event;yes;{RB}
+event;VVGB time expired;{NNP}{NN}{VBD}
+event;no;{DT}
+event;not complete;{RB}{VB}
+event;no;{DT}
+event;yes;{RB}
+event;yes;{RB}
+event;yes;{RB}
+event;no;{DT}
+event;complete;{JJ}
+event;no;{DT}

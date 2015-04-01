@@ -1,0 +1,26 @@
+eea1d110fc77965afad5c798ee4a3eca;Centralized Data Entry
+function;Data Transfer;{NNS}{NN}
+event;Rollup is carried out in the same system;{NN}{VBZ}{VBN}{RP}{IN}{DT}{JJ}{NN}
+event;Investment amortization was entered;{NN}{NN}{VBD}{VBN}
+event;Group inventories are entered for the elimination of IC profit and loss;{NNP}{NNS}{VBP}{VBN}{IN}{DT}{NN}{IN}{NN}{NN}{CC}{NN}
+event;Rollup extract file is transferred;{NN}{NN}{NN}{VBZ}{VBN}
+event;Investment write-up was entered;{NN}{NN}{VBD}{VBN}
+event;Asset transfers are entered for retiring company;{NNP}{NNS}{VBP}{VBN}{IN}{VBG}{NN}
+event;Step acquisition entered;{NN}{NN}{VBD}
+event;Asset transfers are entered for receiving company;{NNP}{NNS}{VBP}{VBN}{IN}{VBG}{NN}
+event;Changes in current year are entered for equity method company;{NNS}{IN}{JJ}{NN}{VBP}{VBN}{IN}{NN}{NN}{NN}
+event;Changes in current year entered for purchase method company;{NNS}{IN}{JJ}{NN}{VBD}{IN}{NN}{NN}{NN}
+event;Individual financial statement is entered in database;{JJ}{JJ}{NN}{VBZ}{VBN}{IN}{NN}
+event;Transfer posting was created;{NN}{VBG}{VBD}{VBN}
+event;File is transferred as PC file;{VB}{VBZ}{VBN}{IN}{NN}{NN}
+event;Changes for current year are entered for proportionally consolidated co.;{NNS}{IN}{JJ}{NN}{VBP}{VBN}{IN}{RB}{JJ}{NN}{.}
+event;Export file (PC) is transferred;{NN}{NN}{-LRB-}{NN}{-RRB-}{VBZ}{VBN}
+event;Equity is entered in local and group currency;{NN}{VBZ}{VBN}{IN}{JJ}{CC}{NN}{NN}
+event;Extract is transferred as UNIX file;{NN}{VBZ}{VBN}{IN}{NNP}{NN}
+event;Increase/ reduction in capitalization entered;{NN}{:}{NN}{IN}{NN}{VBD}
+event;Extract is transferred from R/2;{NN}{VBZ}{VBN}{IN}{NN}
+event;Extract is transferred by IDOC;{NN}{VBZ}{VBN}{IN}{NN}
+event;Hidden reserves entered;{JJ}{NNS}{VBD}
+event;Extract/ download for R/ 2 is created;{NN}{:}{VB}{IN}{NN}{:}{CD}{VBZ}{VBN}
+event;Intercompany sales are entered for the elimination of IC profit and loss;{NN}{NNS}{VBP}{VBN}{IN}{DT}{NN}{IN}{NN}{NN}{CC}{NN}
+event;Investments are entered in local and group currency;{NNP}{VBP}{VBN}{IN}{JJ}{CC}{NN}{NN}

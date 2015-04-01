@@ -1,0 +1,26 @@
+f826a529d0aa25ca97856363630c9ac6;Fig.17: GBA1 YAWL model for MunI
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Fill in payment data and approve;{VB}{IN}{NN}{NNS}{CC}{VB}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;No_payment;{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Archive;{NNP}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Send extract;{VB}{NN}
+function;Print application;{VB}{NN}
+function;Determine fees;{NN}{NNS}
+function;Process payment;{VB}{NN}
+function;Process continue;{VB}{VB}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;status change to Determine  fees;{NN}{NN}{TO}{VB}{NNS}
+event;no;{DT}
+event;No payment;{DT}{NN}
+event;status change to Decide whether to pay;{NN}{NN}{TO}{VB}{IN}{TO}{VB}
+event;yes;{RB}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;the end;{DT}{NN}
+event;status change to Ask customer to pay;{NN}{NN}{TO}{VB}{NN}{TO}{VB}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Produce extract and sign;{NN}{NN}{TO}{VB}{NN}{CC}{NN}
+event;status change to Print application;{NN}{NN}{TO}{VB}{NN}

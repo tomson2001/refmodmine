@@ -1,0 +1,18 @@
+ee9b89b430be1c3e524a6b79cfd22e7a;Process OTC Derivative Transactions [TR-DE]
+function;Closing Operations;{NN}{NNP}
+function;Accounting;{NN}
+function;Interest Rate Adjustment;{NNP}
+function;Transaction Processing;{NN}{NN}
+event;Customer open items were generated;{NN}{JJ}{NNS}{VBD}{VBN}
+event;OTC interest rate instrument to be terminated;{NNP}{NN}{NN}{NN}{TO}{VB}{VBN}
+event;Termination of derivative instrument was settled;{NN}{IN}{JJ}{NN}{VBD}{VBN}
+event;Accrual/ deferral flows were generated;{NN}{:}{NN}{NNS}{VBD}{VBN}
+event;Payment is transferred by EDI;{NN}{VBZ}{VBN}{IN}{NN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Interest rate adjustment was carried out;{NN}{NN}{NN}{VBD}{VBN}{RP}
+event;Payment medium transferred;{NN}{NN}{VBN}
+event;Accrual/ deferral is to be performed;{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}
+event;Payment advice is sent;{NN}{NN}{VBZ}{VBN}
+event;G/L posting was generated;{NN}{VBG}{VBD}{VBN}
+event;OTC derivative interest rate instrument was selected;{NNP}{JJ}{NN}{NN}{NN}{VBD}{VBN}
+event;Interest rate adjustment to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}

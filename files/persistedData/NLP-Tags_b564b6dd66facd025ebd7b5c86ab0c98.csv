@@ -1,0 +1,9 @@
+b564b6dd66facd025ebd7b5c86ab0c98;B.I.202_Event control of maintenance
+function;Inform Capayity planning and detailed scheduling;{VB}{NNP}{NN}{CC}{JJ}{NN}
+function;Maintenance measure;{NN}{NN}
+event;Machine released;{NN}{VBD}
+event;Damage irreparable;{NN}{JJ}
+event;Notice from quality assurance received;{NNP}{IN}{NN}{NN}{VBD}
+event;Preventive inspections or maintenance deadline reached;{JJ}{NNS}{CC}{NN}{NN}{VBD}
+event;Machine failure;{NN}{NN}
+event;Machine downtime;{NN}{NN}

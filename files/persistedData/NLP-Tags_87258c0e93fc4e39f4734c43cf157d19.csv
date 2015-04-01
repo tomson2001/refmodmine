@@ -1,0 +1,15 @@
+87258c0e93fc4e39f4734c43cf157d19;Transaction Processing
+function;Rollover;{NN}
+function;Netting Processing;{VBG}{NN}
+function;Settlement;{NNP}
+function;Process Fixed-Term Deposit;{VB}{NNP}
+event;Fixed-term deposit was chosen;{JJ}{NN}{VBD}{VBN}
+event;Accrual/ deferral is to be performed;{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}
+event;Transaction was rolled over;{NN}{VBD}{VBN}{IN}
+event;Cash management was updated;{NN}{NN}{VBD}{VBN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Cash management was updated;{NN}{NN}{VBD}{VBN}
+event;Netting proposal to be edited;{VBG}{NN}{TO}{VB}{VBN}
+event;Transaction is to be rolled over;{NN}{VBZ}{TO}{VB}{VBN}{IN}
+event;Fixed-term deposit was edited;{JJ}{NN}{VBD}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}

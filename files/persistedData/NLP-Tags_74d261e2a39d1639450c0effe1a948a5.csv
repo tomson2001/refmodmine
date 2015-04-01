@@ -1,0 +1,25 @@
+74d261e2a39d1639450c0effe1a948a5;birhtCertificate_p248
+function;Update GBA;{NNP}
+function;Determine next action;{VB}{JJ}{NN}
+function;Send notifications;{VB}{NNS}
+function;Adjust;{VB}
+function;Sign certificate;{NN}{NN}
+function;Confirm choice of name;{VB}{NN}{IN}{NN}
+function;Fill in birth registration form;{VB}{IN}{NN}{NN}{NN}
+function;Redirect to munic. of birth;{VB}{TO}{JJ}{.}
+function;Process ackn. certificate;{VB}{NN}{.}
+function;Create birth certificate;{VB}{NN}{NN}
+function;Send data;{VB}{NNS}
+function;Correct error;{JJ}{NN}
+function;Determine GBA municipality;{VB}{NNP}{NN}
+function;Check accuracy;{VB}{NN}
+function;Confirm identity;{VB}{NN}
+function;Informer checks the certificate;{NNP}{NNS}{DT}{NN}
+function;Send PL;{VB}{NN}
+function;Receive notific. of birth;{VB}{JJ}{.}
+function;Archive documents;{NNP}{NNS}
+function;Search GBA data;{VB}{NNP}{NNS}
+function;Finalize message exch.;{VB}{NN}{NN}{.}
+function;Check GBA data;{VB}{NNP}{NNS}
+function;Return documents;{NN}{NNS}
+event;End Event;{NN}{NN}

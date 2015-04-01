@@ -1,0 +1,38 @@
+e5fd478ca662bf57509b847f7158c3d8;Fig.45: MOR YAWL model for MunG
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Urgent issue;{JJ}{NN}
+function;Printout receipt;{NNP}{NN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Contact person reporting issue;{NN}{NN}{VBG}{NN}
+function;plan in batch;{NN}{IN}{NN}
+function;Handle issue;{VB}{NN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Send written feedback to person reporting issue;{VB}{VBN}{NN}{TO}{NN}{VBG}{NN}
+function;Issue signed invoice;{NN}{VBD}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Possible solution;{JJ}{NN}
+function;Assign categ resp person and dep;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Close case;{JJ}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Known issue;{VBN}{NN}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Process continue;{VB}{VB}
+function;Receive confirmation;{VB}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Ask for more information;{VB}{IN}{JJR}{NN}
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Information complete;{NN}{JJ}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Perform workorder;{VB}{NN}
+function;Direct to desk;{JJ}{TO}{NN}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+event;Case closed;{NNP}{VBD}
+event;yes;{RB}
+event;no;{DT}
+event;no;{DT}
+event;Start case;{NNP}{NN}
+event;yes;{RB}
+event;yes;{RB}
+event;no;{DT}

@@ -1,0 +1,14 @@
+1c41a9994dc0a808a30ead8779187ed3;Closing Operations
+function;Realized Gains/ Losses;{VBN}{NNS}{:}{NNS}
+function;Key Date Valuation;{NN}{NN}{NN}
+function;Accrual/ Deferral;{NN}{:}{NN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Accrual/ deferral is to be performed;{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}
+event;Accrual/ deferral run was performed;{NN}{:}{JJ}{NN}{VBD}{VBN}
+event;Flows from realized gains/ losses were generated;{NNS}{IN}{VBN}{NNS}{:}{NNS}{VBD}{VBN}
+event;Key date valuation carried out;{NN}{NN}{NN}{VBD}{RP}
+event;Accrual/ deferral flows were generated;{NN}{:}{NN}{NNS}{VBD}{VBN}
+event;List of realized gains/ losses was sent;{NN}{IN}{VBN}{NNS}{:}{NNS}{VBD}{VBN}
+event;Valuation flows were generated;{NN}{NNS}{VBD}{VBN}
+event;Transaction was posted;{NN}{VBD}{VBN}
+event;Realized gains/ losses to be determined;{VBN}{NNS}{:}{NNS}{TO}{VB}{VBN}

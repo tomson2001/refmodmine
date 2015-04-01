@@ -1,0 +1,9 @@
+e2cba135083d3f4dd9c79408bc0b1259;Design
+function;Design BOM - Material Master Processing;{NN}{SYM}{:}{NNP}
+function;Design BOM - Material BOM Processing;{NN}{SYM}{:}{NNP}
+function;Product Design;{NN}{NN}
+event;Product structure for variants to be set up;{NN}{NN}{IN}{NNS}{TO}{VB}{VBN}{RP}
+event;Set up product structure without variants;{VB}{RP}{NN}{NN}{IN}{NNS}
+event;Create product draft;{VB}{NN}{NN}
+event;Product is to be defined;{NN}{VBZ}{TO}{VB}{VBN}
+event;Set up product strucuture using CAD interface;{VB}{RP}{NN}{NN}{VBG}{NNP}{NN}

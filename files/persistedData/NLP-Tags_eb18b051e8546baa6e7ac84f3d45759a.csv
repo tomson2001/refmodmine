@@ -1,0 +1,32 @@
+eb18b051e8546baa6e7ac84f3d45759a;Fig.46: MOR YAWL model for MunH
+function;Send ackn;{VB}{NN}
+function;Send e-mail with status info about issue;{VB}{NN}{IN}{NN}{NN}{IN}{NN}
+function;Known issue;{VBN}{NN}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Update status info;{NNP}{NN}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Assign categ resp person and dept;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Handle issue;{VB}{NN}
+function;Redirect to e-form;{VB}{TO}{VB}
+function;E-mail address known;{NN}{NN}{VBN}
+function;Close_case;{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Possible solution;{JJ}{NN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Record in DMS;{VB}{IN}{NNP}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Send letter with status info about issue;{VB}{NN}{IN}{NN}{NN}{IN}{NN}
+function;Receive mail regarding issue;{VB}{NN}{VBG}{NN}
+function;Fill in info about contact;{VB}{IN}{NN}{IN}{NN}
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Receive confirmation;{VB}{NN}
+event;yes;{RB}
+event;yes;{RB}
+event;Start case;{NNP}{NN}
+event;yes;{RB}
+event;no;{DT}
+event;no;{DT}
+event;no;{DT}
+event;Case closed;{NNP}{VBD}

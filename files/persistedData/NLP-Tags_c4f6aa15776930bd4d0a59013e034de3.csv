@@ -1,0 +1,13 @@
+c4f6aa15776930bd4d0a59013e034de3;Information System [Funds Management]
+function;Matching Line Item Totals;{VBG}{NNP}{NNS}
+function;Reports;{NNS}
+event;Evaluations to be carried out;{NNS}{TO}{VB}{VBN}{RP}
+event;Actual data does not need to be checked;{JJ}{NNS}{VBZ}{RB}{VB}{TO}{VB}{VBN}
+event;Overview of master data required;{NN}{IN}{NN}{NNS}{VBN}
+event;Budget structure was edited;{NNP}{NN}{VBD}{VBN}
+event;Additional budget structuring is not required;{JJ}{NN}{NN}{VBZ}{RB}{VBN}
+event;Line item report is required;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Actual data must be checked;{JJ}{NNS}{MD}{VB}{VBN}
+event;Fund edited;{NNP}{VBD}
+event;Matching has taken place;{VBG}{VBZ}{VBN}{NN}
+event;Overview of closing operations is required;{NN}{IN}{VBG}{NNS}{VBZ}{VBN}

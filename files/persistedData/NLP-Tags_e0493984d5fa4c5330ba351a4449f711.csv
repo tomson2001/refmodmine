@@ -1,0 +1,36 @@
+e0493984d5fa4c5330ba351a4449f711;Notification
+function;Notification Archiving;{NN}{NN}
+function;Entry of Technical Findings;{NN}{IN}{NNP}{NNS}
+function;Notification Creation/ Processing;{NN}{NN}{:}{NN}
+function;Task Definition;{NNP}
+function;Worklist Generation for Notifications;{NNP}{IN}{NNS}
+function;Notification Printing;{NN}{NN}
+event;Notification papers are to be printed;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Print log is created;{VB}{NN}{VBZ}{VBN}
+event;Shop papers are to be printed from notification;{NNP}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Maintenance tasks are to be processed;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Measures to avoid additional malfunctions to be taken;{NNS}{TO}{VB}{JJ}{NNS}{TO}{VB}{VBN}
+event;Shop papers are to be printed from order;{NNP}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Order type supports automatic generation of a notification;{NNP}{NN}{VBZ}{JJ}{NN}{IN}{DT}{NN}
+event;Maintenance notification is assigned to the existing maintenance order;{NN}{NN}{VBZ}{VBN}{TO}{DT}{VBG}{NN}{NN}
+event;Notification and order assigned to one another;{NN}{CC}{NN}{VBN}{TO}{CD}{DT}
+event;Technical findings are entered;{NNP}{NNS}{VBP}{VBN}
+event;Maintenance notification is to be generated from maintenance order;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Maintenance order to be created directly from maintenance notification;{NN}{NN}{TO}{VB}{VBN}{RB}{IN}{NN}{NN}
+event;External org measures to be taken;{JJ}{NN}{NNS}{TO}{VB}{VBN}
+event;Maintenance order is created automatically for maintenance notification;{NN}{NN}{VBZ}{VBN}{RB}{IN}{NN}{NN}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Internal org. measures to be taken;{JJ}{NN}{.}
+event;Maintenance notification is in process;{NN}{NN}{VBZ}{IN}{NN}
+event;Maintenance notification is completed with reference time;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Worklist is to be created;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Maintenance requirement has arisen;{NN}{NN}{VBZ}{VBN}
+event;Notification is to be processed by planner group;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Notification is to be archived;{NN}{VBZ}{TO}{VB}{VBN}
+event;Worklist is created;{NNP}{VBZ}{VBN}
+event;Maintenance tasks are determined;{NN}{NNS}{VBP}{VBN}
+event;Notification is printed;{NN}{VBZ}{VBN}
+event;Task is completed;{NNP}{VBZ}{VBN}
+event;Maintenance tasks are to be processed;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Technical findings are to be entered;{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Measurement doc. should be created for notif.;{NN}{NN}{.}

@@ -1,0 +1,30 @@
+e03a11d3e9b2f489b84af356a10d18ea;Closing Operations
+function;Financial Statement Creation;{NNP}
+function;Foreign Currency Valuation for Open Items;{NNP}{IN}{NNP}{NNS}
+function;Foreign Currency Valuation for Balances;{JJ}{NN}{NN}{IN}{NNS}
+function;Manual Foreign Currency Valuation;{NNP}{NN}
+function;GR/IR Clearing Account Maintenance;{NNP}
+function;Regroup Receivables/ Payables;{VB}{NNPS}{:}{NNS}
+function;Flat-Rate Individual Value Adjustment due to Default or Credit Risk;{NNP}{JJ}{TO}{NNP}{CC}{NNP}
+function;Carry Forward G/L Balances;{VB}{RB}{NNP}{NNS}
+function;Profit and Loss Adjustment;{NN}{CC}{NN}{NNP}
+function;Periodic Reports;{JJ}{NNS}
+event;Flat-rate individual adjustment is carried out;{JJ}{JJ}{NN}{VBZ}{VBN}{RP}
+event;Periodic reports are created;{JJ}{NNS}{VBP}{VBN}
+event;Carry out P&L adjustment;{VB}{RP}{NNP}{NN}
+event;Balances carried forward;{NNS}{VBD}{RB}
+event;Financial statement is created;{NNP}{NN}{VBZ}{VBN}
+event;Balances are to be carried forward;{NNS}{VBP}{TO}{VB}{VBN}{RB}
+event;P&L adjustmant carried out;{NN}{JJ}{VBD}{RP}
+event;Long-term receivables should be discounted;{JJ}{NN}{MD}{VB}{VBN}
+event;Doubtful receivables to be devalued due to country del credere;{JJ}{NN}{TO}{VB}{VBN}{JJ}{TO}{NN}{DT}{NN}
+event;Valuation of open items in foreign currency is to be carried out;{NN}{IN}{JJ}{NNS}{IN}{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Customer-specific valuation to be made;{JJ}{NN}{TO}{VB}{VBN}
+event;Foreign currency valuation carried out;{JJ}{NN}{NN}{VBD}{RP}
+event;Foreign currency valuation for balances to be carried out;{JJ}{NN}{NN}{IN}{NNS}{TO}{VB}{VBN}{RP}
+event;Manual foreign currency valuation carried out;{JJ}{JJ}{NN}{NN}{VBD}{RP}
+event;Manual foreign currency valuation to be carried out;{JJ}{JJ}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Reclassification completed;{NN}{VBD}
+event;Payables/ receivables to be regrouped by remaining term;{NNS}{:}{NN}{TO}{VB}{VBN}{IN}{VBG}{NN}
+event;GR/IR clearing account must be maintained;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;GR/IR clearing account maintained;{NN}{NN}{NN}{VBD}

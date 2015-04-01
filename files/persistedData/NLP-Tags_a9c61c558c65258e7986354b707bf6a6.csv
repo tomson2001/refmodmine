@@ -1,0 +1,6 @@
+a9c61c558c65258e7986354b707bf6a6;Revenue Planning
+function;Revenue Planning in Work Breakdown Structure;{NN}{NNP}{IN}{NNP}{NN}
+function;Revenue Planning with SD;{NN}{NNP}{IN}{NN}
+event;Revenue planning using billing plan required;{NN}{NN}{VBG}{NN}{NN}{VBN}
+event;Revenue planned;{NN}{VBD}
+event;Manual revenue planning required;{JJ}{NN}{NN}{VBN}

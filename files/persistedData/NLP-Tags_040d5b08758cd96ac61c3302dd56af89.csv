@@ -1,0 +1,22 @@
+040d5b08758cd96ac61c3302dd56af89;Business Event Follow-Up Processing
+function;Appraisal of Business Event Attendees;{NN}{IN}{NN}{NN}{NNS}
+function;Allocation and Reposting of Business Event Costs;{NN}{CC}{NN}{IN}{NNP}{NNS}
+function;Appraisal of Business Event;{NN}{IN}{NN}{NN}
+function;Processing of Business Event Results;{NN}{IN}{NN}{NNP}{NNS}
+function;Settlement and Allocation of Business Event Fees;{NNP}{CC}{NNP}{IN}{NNP}{NNS}
+event;Business event costs are reposted;{NN}{NN}{NNS}{VBP}{VBN}
+event;Specifications for appraisal of business event attendees exist;{NNS}{IN}{NN}{IN}{NN}{NN}{NNS}{VBP}
+event;Business event is complete;{NN}{NN}{VBZ}{JJ}
+event;Need for settlement and allocation of business event fees exists;{VBN}{IN}{NN}{CC}{NN}{IN}{NN}{NN}{NNS}{VBZ}
+event;Appraisal of business event exists;{NN}{IN}{NN}{NN}{VBZ}
+event;Business event is performed;{NN}{NN}{VBZ}{VBN}
+event;Need for allocation and reposting of business event costs exists;{VBN}{IN}{NN}{CC}{NN}{IN}{NN}{NN}{NNS}{VBZ}
+event;Appraisals of business event attendees exist;{NNS}{IN}{NN}{NN}{NNS}{VBP}
+event;Specifications for appraisal of business event exist;{NNS}{IN}{NN}{IN}{NN}{NN}{VBP}
+event;Need for appraisal of business event exists;{VBN}{IN}{NN}{IN}{NN}{NN}{VBZ}
+event;Need for appraisal of business event attendees exists;{VBN}{IN}{NN}{IN}{NN}{NN}{NNS}{VBZ}
+event;Specifications for settlement and allocation of business event fees exist;{NNS}{IN}{NN}{CC}{NN}{IN}{NN}{NN}{NNS}{VBP}
+event;Business event costs are allocated;{NN}{NN}{NNS}{VBP}{VBN}
+event;Specifications for allocation and reposting of business event costs exist;{NNS}{IN}{NN}{CC}{NN}{IN}{NN}{NN}{NNS}{VBP}
+event;Business event fees are settled;{NN}{NN}{NNS}{VBP}{VBN}
+event;Business event fees are allocated;{NN}{NN}{NNS}{VBP}{VBN}

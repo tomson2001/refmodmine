@@ -1,0 +1,18 @@
+ce3a6fc3c06d9694253f8e538a3326bd;Maintenance Planning
+function;Maintenance Call Processing;{NNP}
+function;Maintenance Plan Scheduling;{NN}{NN}{NN}
+event;Maintenance plan released triggered;{NN}{NN}{VBN}{VBD}
+event;Maintenance plan is to be scheduled manually;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Inspection lot is to be created automatically;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Maintenance call waits;{NN}{NN}{VBZ}
+event;Maintenance plan calls are processed;{NN}{NN}{NNS}{VBP}{VBN}
+event;Service order should be created per maint. item;{NNP}{NN}{MD}{VB}{VBN}{IN}{NN}{.}
+event;Maintenance plan is created;{NN}{NN}{VBZ}{VBN}
+event;Maintenance order to be created per maintenance item;{NN}{NN}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Call horizon is not reached;{VB}{NN}{VBZ}{RB}{VBN}
+event;Maintenance plan to be scheduled according to maintenance strategy;{NN}{NN}{TO}{VB}{VBN}{VBG}{TO}{NN}{NN}
+event;Dates + due maintenance packages are determined;{VBZ}{CC}{JJ}{NN}{NNS}{VBP}{VBN}
+event;Call horizon is reached;{VB}{NN}{VBZ}{VBN}
+event;Schedule counter reading mtce plan;{VB}{RB}{VBG}{NN}{NN}
+event;Maintenance calls are updated;{NN}{NNS}{VBP}{VBN}
+event;Maintenance plan is to be scheduled automatically;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}

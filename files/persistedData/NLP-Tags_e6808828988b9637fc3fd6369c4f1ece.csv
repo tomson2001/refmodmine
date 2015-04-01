@@ -1,0 +1,16 @@
+e6808828988b9637fc3fd6369c4f1ece;Personnel Change Planning
+function;Personnel Change Planning;{NNP}
+function;Approval of Personnel Change Plan;{NN}{IN}{NNP}
+function;Preparation of Personnel Change Planning;{NN}{IN}{NNP}
+event;Provisions of personnel change planning are implemented;{NNS}{IN}{NNS}{VBP}{NN}{VBP}{VBN}
+event;Need for personnel change planning exists;{VBN}{IN}{NNS}{VBP}{VBG}{VBZ}
+event;Personnel change plan must be corrected;{NNP}{NN}{NN}{MD}{VB}{VBN}
+event;Need for downsizing exists;{VBN}{IN}{VBG}{VBZ}
+event;Need for recruitment exists;{VBN}{IN}{NN}{VBZ}
+event;Need for position formation exists;{VBN}{IN}{NN}{NN}{VBZ}
+event;Need for recruitment exists for approval;{VBN}{IN}{NN}{VBZ}{IN}{NN}
+event;Preparation of personnel change planning is complete;{NN}{IN}{NNS}{VBP}{NN}{VBZ}{JJ}
+event;Need for personnel assignment exists;{VBN}{IN}{NNS}{NN}{VBZ}
+event;Need for downsizing exists for approval;{VBN}{IN}{VBG}{VBZ}{IN}{NN}
+event;Need for position formation exists for approval;{VBN}{IN}{NN}{NN}{VBZ}{IN}{NN}
+event;Need for personnel assignment exists for approval;{VBN}{IN}{NNS}{NN}{VBZ}{IN}{NN}

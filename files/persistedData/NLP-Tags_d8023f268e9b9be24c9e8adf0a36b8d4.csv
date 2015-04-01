@@ -1,0 +1,26 @@
+d8023f268e9b9be24c9e8adf0a36b8d4;Fig.14: GBA1 YAWL model for MunF
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Indicate that all was paid;{VB}{IN}{DT}{VBD}{VBN}
+function;Process continue;{VB}{VB}
+function;Send extract;{VB}{NN}
+function;Send to appropriate department in DMS;{VB}{TO}{JJ}{NN}{IN}{NNP}
+function;Determine fees;{NN}{NNS}
+function;Archive;{NNP}
+function;No payment;{DT}{NN}
+function;Fill in payment data and approve;{VB}{IN}{NN}{NNS}{CC}{VB}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Fill in e-form;{VB}{IN}{NN}
+event;yes;{RB}
+event;no;{DT}
+event;status change to Ask customer to pay;{NN}{NN}{TO}{VB}{NN}{TO}{VB}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Produce extract and sign;{NN}{NN}{TO}{VB}{NN}{CC}{NN}
+event;status change to Send to appropriate department in DMS;{NN}{NN}{TO}{VB}{TO}{JJ}{NN}{IN}{NNP}
+event;the end;{DT}{NN}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;status change to Indicate that all was paid;{NN}{NN}{TO}{VB}{IN}{DT}{VBD}{VBN}
+event;status change to Decide whether to pay;{NN}{NN}{TO}{VB}{IN}{TO}{VB}

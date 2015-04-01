@@ -1,0 +1,21 @@
+a22cac03f1c1bc4522a70cdc465df3ba;Period-End Closing and Settlement
+function;Investment Settlement [Investment Order];{NN}{NNP}{-LRB-}{NNP}{-RRB-}
+function;Settlement Account Assignment;{NNP}
+function;Periodic Settlement;{JJ}{NNP}
+function;Overhead Calculation [Investment Order];{NN}{NN}{-LRB-}{NN}{NN}{-RRB-}
+event;Valuation of balances affecting financial statement to be carried out;{NN}{IN}{NNS}{VBG}{JJ}{NN}{TO}{VB}{VBN}{RP}
+event;Order is closed technically;{NN}{VBZ}{VBN}{RB}
+event;Determine blanket distribution rule for periodic settlement;{JJ}{NN}{NN}{NN}{IN}{JJ}{NN}
+event;Distrb. rules for full settlement are entered;{NNP}{.}
+event;Overhead Costs Are to Be Allocated Using Overhead Rates;{NN}{NNS}{VBP}{TO}{VB}{NNP}{VBG}{NN}{NNS}
+event;Distrbution rules for periodic settlement are entered;{NNP}{NNS}{IN}{JJ}{NN}{VBP}{VBN}
+event;Settlement receiver is to be determined;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Costs were settled by cost element to asset under construction;{NNS}{VBD}{VBN}{IN}{NN}{NN}{TO}{NN}{IN}{NN}
+event;Overhead debited to capital investment order;{NN}{VBN}{TO}{NN}{NN}{NN}
+event;Costs were settled with secondary cost elements to asset under construction;{NNS}{VBD}{VBN}{IN}{JJ}{NN}{NNS}{TO}{NN}{IN}{NN}
+event;Distrb. rules for partial settlement are entered;{NNP}{.}
+event;Actual costs were incurred;{JJ}{NNS}{VBD}{VBN}
+event;Measure settled partially;{NN}{VBD}{RB}
+event;Costs were settled as non-operating expense;{NNS}{VBD}{VBN}{IN}{JJ}{NN}
+event;Indirect costs have not been incurred;{JJ}{NNS}{VBP}{RB}{VBN}{VBN}
+event;Measure is settled completely;{NN}{VBZ}{VBN}{RB}

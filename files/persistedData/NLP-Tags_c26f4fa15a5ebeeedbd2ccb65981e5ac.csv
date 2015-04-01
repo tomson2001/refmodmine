@@ -1,0 +1,58 @@
+c26f4fa15a5ebeeedbd2ccb65981e5ac;Period-End Closing in Overhead Cost Controlling
+function;Actual Indirect Activity Allocation (Indirect Entry);{JJ}{JJ}{NN}{NN}{-LRB-}{JJ}{NN}{-RRB-}
+function;Reconciliation Financial Accounting/ Controlling;{NNP}{:}{VBG}
+function;Accrual Calculation in Cost Center Accounting (Percentage Method);{NN}{NN}{IN}{NN}{NNP}{-LRB-}{NN}{NN}{-RRB-}
+function;Analysis of Overhead Orders;{NN}{IN}{NN}{NNS}
+function;Accrual Calculation in Cost Center Accounting (Target = Actual Method);{NN}{NN}{IN}{NN}{NNP}{-LRB-}{NN}{JJ}{NNP}{-RRB-}
+function;Actual Cost Assessment;{JJ}{NN}{NNP}
+function;Target=Actual Activity Allocation;{NN}{JJ}{JJ}{NN}{NN}
+function;Actual Periodic Reposting;{NNP}{VBG}
+function;Revaluation at Actual Prices;{NN}{IN}{NNP}{NNS}
+function;Business Process Analysis;{NNP}{VB}{NN}
+function;Variance Calculation for Overhead;{NN}{NN}{IN}{NN}
+function;Settlement of Accrual Orders;{NNP}{IN}{NNP}{NNS}
+function;Entry of Sender Activities;{NN}{IN}{NN}{NNS}
+function;Template Allocation (Overhead Cost Order);{NNP}{-LRB-}{NN}{NN}{NN}{-RRB-}
+function;Cost Center Analysis;{NN}{NNP}{NN}
+function;Settlement of Overhead Orders (Actual Data);{NNP}{IN}{NN}{NNS}{-LRB-}{NNP}{-RRB-}
+function;Actual Price Calculation;{JJ}{NN}{NN}
+function;Actual Interest Calculation For Order;{JJ}{NN}{NN}{IN}{NN}
+function;Predistribution of Fixed Costs;{NN}{IN}{NNP}{NNS}
+function;Overhead Calculation (Cost Center);{NN}{NN}{-LRB-}{NN}{NN}{-RRB-}
+function;Actual Indirect Activity Allocation (Manual Entry);{JJ}{JJ}{NN}{NN}{-LRB-}{JJ}{NN}{-RRB-}
+function;Overhead Calculation (Business Process);{NN}{NN}{-LRB-}{NN}{VBP}{-RRB-}
+function;Splitting;{VBG}
+function;Actual Cost Distribution;{JJ}{NN}{NN}
+function;Overhead Calculation (Overhead Cost Order);{NN}{NN}{-LRB-}{NN}{NN}{NN}{-RRB-}
+event;Cost Accrual to Be Executed Using Target=Actual Procedure;{NN}{NN}{TO}{VB}{NNP}{VBG}{NN}{JJ}{NNP}
+event;Costs were reposted;{NNS}{VBD}{VBN}
+event;Cost Accrual Executed Using Target=Actual Procedure;{NN}{NN}{VBN}{VBG}{NN}{JJ}{NNP}
+event;Order settled in CO with secondary cost element;{NNP}{VBD}{IN}{NN}{IN}{JJ}{NN}{NN}
+event;Interest Is Calculated;{NN}{VBZ}{VBN}
+event;Cost situation of cost center to be checked;{NN}{NN}{IN}{NN}{NN}{TO}{VB}{VBN}
+event;Controlling is to be reconciled with Financial Accounting;{VBG}{VBZ}{TO}{VB}{VBN}{IN}{NNP}
+event;Data was revaluated using difference between plan and actual prices;{NNS}{VBD}{VBN}{VBG}{NN}{IN}{NN}{CC}{JJ}{NNS}
+event;Process costs were allocated;{VB}{NNS}{VBD}{VBN}
+event;Orders Settled to Profitability Analysis;{NNS}{VBN}{TO}{NNP}{NN}
+event;Control measures set based on variances;{NN}{NNS}{VBN}{VBN}{IN}{NNS}
+event;Overhead Costs Are to Be Allocated Using Overhead Rates;{NN}{NNS}{VBP}{TO}{VB}{NNP}{VBG}{NN}{NNS}
+event;Business Process Is Charged with Overhead Costs;{NN}{VB}{VBZ}{VBN}{IN}{NN}{NNS}
+event;Determine activity quantity via target-to-actual activity allocation;{NN}{NN}{NN}{IN}{JJ}{NN}{NN}
+event;Indirectly allocated activity is to be entered;{RB}{VBN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Order was settled by cost element;{NN}{VBD}{VBN}{IN}{NN}{NN}
+event;Periodic transfer is to be performed;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Data was revaluated using difference between plan and actual prices;{NNS}{VBD}{VBN}{VBG}{NN}{IN}{NN}{CC}{JJ}{NNS}
+event;Overhead Is Allocated to Project/ Order;{NN}{VBZ}{VBN}{TO}{NNP}{:}{NNP}
+event;Costs were transferred to Overhead Cost Controlling;{NNS}{VBD}{VBN}{TO}{NN}{NN}{VBG}
+event;Cost Accrual Executed Using Percentage Method;{NN}{NN}{VBN}{VBG}{NN}{NN}
+event;Controlling is reconciled with Financial Accounting;{VBG}{VBZ}{VBN}{IN}{NNP}
+event;Activity price/ cost rate determined via iteration;{NN}{NN}{:}{NN}{NN}{VBN}{IN}{NN}
+event;Cost development of order is to be checked;{NN}{NN}{IN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Costs were split;{NNS}{VBD}{VBN}
+event;Actual cost recording for period is closed;{JJ}{NN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Cost Accrual to Be Executed Using Percentage Method;{NN}{NN}{TO}{VB}{NNP}{VBG}{NN}{NN}
+event;Order costs to be settled;{NN}{NNS}{TO}{VB}{VBN}
+event;Fixed costs predistributed to receiver cost centers;{VBN}{NNS}{VBD}{TO}{NN}{NN}{NNS}
+event;Cost trend of business process is to be analyzed;{NN}{NN}{IN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Overhead Was Charged to Cost Center;{NN}{VBD}{VBN}{TO}{NN}{NN}
+event;Actual sender activity quantity is posted;{JJ}{NN}{NN}{NN}{VBZ}{VBN}

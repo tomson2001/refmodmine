@@ -1,0 +1,9 @@
+81e80036284b021af29fe3d4d64c471f;Monitoring of Personnel Staff and Change Planning
+function;Monitoring of Personnel Change Planning;{NN}{IN}{NNP}
+function;Monitoring of Personnel Staff Planning;{NN}{IN}{NNP}
+event;Personnel staff plan must be corrected;{NNP}{NN}{NN}{MD}{VB}{VBN}
+event;Personnel change plan must be corrected;{NNP}{NN}{NN}{MD}{VB}{VBN}
+event;Provisions of staff/ change planning must be corrected;{NNS}{IN}{NN}{:}{NN}{NN}{MD}{VB}{VBN}
+event;Further implementation actions must be performed;{JJ}{NN}{NNS}{MD}{VB}{VBN}
+event;Need for monitoring of staff planning exists;{VBN}{IN}{NN}{IN}{NN}{NN}{VBZ}
+event;Need for monitoring of change planning exists;{VBN}{IN}{NN}{IN}{NN}{NN}{VBZ}

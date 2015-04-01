@@ -1,0 +1,5 @@
+160ca4173868937098c89aed569c124f;Product Cost Allocation
+function;Simultaneous Costing;{JJ}{VBG}
+event;Cost object is processed;{NN}{NN}{VBZ}{VBN}
+event;Product Costs Are Allocated;{NNP}{NNS}{VBP}{VBN}
+event;Cost object hierarchy is created;{NN}{NN}{NN}{VBZ}{VBN}

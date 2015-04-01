@@ -1,0 +1,8 @@
+2bf3e6560b790616158f0da4323bfe33;Document Distribution
+function;Recipient List Processing;{JJ}{NN}{NN}
+function;Document Distribution;{NNP}{NN}
+function;Distribution Monitoring;{NN}{NN}
+function;Recipient Processing;{JJ}{NN}
+event;Distribute documents;{VB}{NNS}
+event;Monitor distribution;{NNP}{NN}
+event;Check product data;{VB}{NN}{NNS}

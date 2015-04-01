@@ -1,0 +1,20 @@
+dc6cefae2428dfe8cc152881b71916f6;Currency Options [TR-FX]
+function;Transaction Processing for Standard Currency Options;{NN}{NN}{IN}{NNPS}
+function;Accounting;{NN}
+function;Transaction Processing for Exotic Currency Options;{NN}{NN}{IN}{JJ}{NN}{NNS}
+function;Closing Operations;{NN}{NNP}
+event;Currency option was exercised physically;{NN}{NN}{VBD}{VBN}{RB}
+event;Currency option has expired;{NN}{NN}{VBZ}{VBN}
+event;Customer open items were generated;{NN}{JJ}{NNS}{VBD}{VBN}
+event;Transaction was posted;{NN}{VBD}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Payment medium transferred;{NN}{NN}{VBN}
+event;Termination flows generate settlement payments;{NN}{VBZ}{VB}{NN}{NNS}
+event;G/L posting was generated;{NN}{VBG}{VBD}{VBN}
+event;Flows from realized gains/ losses were generated;{NNS}{IN}{VBN}{NNS}{:}{NNS}{VBD}{VBN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Payment advice is sent;{NN}{NN}{VBZ}{VBN}
+event;Payment is transferred by EDI;{NN}{VBZ}{VBN}{IN}{NN}
+event;Exotic currency option was chosen;{JJ}{NN}{NN}{VBD}{VBN}
+event;Standard currency option was chosen;{JJ}{NN}{NN}{VBD}{VBN}
+event;Currency option was exercised with cash settlement;{NN}{NN}{VBD}{VBN}{IN}{NN}{NN}

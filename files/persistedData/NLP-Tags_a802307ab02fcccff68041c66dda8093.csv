@@ -1,0 +1,21 @@
+a802307ab02fcccff68041c66dda8093;Fig.30: GBA3 YAWL model for MunB
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;No payment;{DT}{NN}
+function;Process payment;{VB}{NN}
+function;Receive request;{VB}{NN}
+function;Decide admissible;{VB}{JJ}
+function;Send payment request;{VB}{NN}{NN}
+function;Determine fees;{NN}{NNS}
+function;Send extract;{VB}{NN}
+function;Archive;{NNP}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Receive payment;{VB}{NN}
+function;Send mail to appropriate department;{VB}{NN}{TO}{JJ}{NN}
+event;Free;{NNP}
+event;no;{DT}
+event;Process end;{VB}{NN}
+event;yes;{RB}
+event;Start process;{NNP}{NN}

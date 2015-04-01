@@ -1,0 +1,6 @@
+45f9c7989182308c036a98a7de507d48;Entry of employee remuneration specifications
+function;Entry of employee remuneration specifications;{NN}{IN}{NN}{NN}{NNS}
+event;Activity allocation specifications are available;{NN}{NN}{NNS}{VBP}{JJ}
+event;Operative remuneration specification is available;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Personnel cost assignment specification is available;{NNP}{VBD}{NN}{NN}{VBZ}{JJ}
+event;Need for remuneration specifications is available;{VBN}{IN}{NN}{NNS}{VBZ}{JJ}

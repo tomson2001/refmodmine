@@ -1,0 +1,21 @@
+0aba5cd2c7adcf31166aad9a14ded556;Rental Accounting
+function;Posting of One-Time Debit-Side Receivables;{NN}{IN}{JJ}{NNPS}
+function;Incoming Payments - Manual;{JJ}{NNS}{:}{NN}
+function;Vacancy Debit Position;{NNP}{NN}
+function;Account Maintenance;{NNP}
+function;Rental Accounting Debit Position;{JJ}{NN}{NNP}{NN}
+function;Sales Settlement Processing;{NNS}{NNP}
+function;Sales Report Entry;{NNS}{NNP}
+event;Items are still open and should be cleared using a suitable process;{NNS}{VBP}{RB}{JJ}{CC}{MD}{VB}{VBN}{VBG}{DT}{JJ}{NN}
+event;Sales reports were created;{NNS}{NNS}{VBD}{VBN}
+event;Clear items using automatic payment program;{JJ}{NNS}{VBG}{JJ}{NN}{NN}
+event;Open customer items were generated;{VB}{NN}{NNS}{VBD}{VBN}
+event;Clear items using bank procedure (specific to Germany);{JJ}{NNS}{VBG}{NN}{NN}{-LRB-}{JJ}{TO}{NNP}{-RRB-}
+event;Carry out incoming payment via account statement transfer;{VB}{RP}{JJ}{NN}{IN}{NN}{NN}{NN}
+event;Maintain OI via receiv., instalmnts, irrecov. debt or down pymnt;{VB}{NNP}{IN}{NNP}{,}{NNS}{,}{NN}{.}
+event;Assign payment documents to open items;{VB}{NN}{NNS}{TO}{VB}{NNS}
+event;Carry out debit position;{VB}{RP}{NN}{NN}
+event;Sales-based LO exists;{JJ}{NNP}{VBZ}
+event;Imputed vacancy costs were posted;{JJ}{NN}{NNS}{VBD}{VBN}
+event;Items were cleared;{NNS}{VBD}{VBN}
+event;Post one-time receiv- able to lease-out;{NNP}{JJ}{NN}{:}{JJ}{TO}{NN}

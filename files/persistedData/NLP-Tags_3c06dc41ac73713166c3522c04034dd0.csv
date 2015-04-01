@@ -1,0 +1,24 @@
+3c06dc41ac73713166c3522c04034dd0;Process Manufacturing
+function;Process Data Documentation / Process Order Completion;{VB}{NNP}{:}{VB}{NNP}
+function;Capacity Requirements Planning;{NN}{NNS}{NNP}
+function;Process Order;{VB}{NNP}
+function;Process Management;{VB}{NNP}
+function;Process Order Execution;{VB}{NNP}
+event;Conversion date is reached;{NN}{NN}{VBZ}{VBN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}
+event;Prelim. Costing Carried Out for Planned Order;{NNP}{.}
+event;Batch record is archived;{NN}{NN}{VBZ}{VBN}
+event;Process order is released;{VB}{NN}{VBZ}{VBN}
+event;Inspection lot is created automatically for order;{NNP}{NN}{VBZ}{VBN}{RB}{IN}{NN}
+event;Process order is finally confirmed;{VB}{NN}{VBZ}{RB}{VBN}
+event;Order log is archived;{NNP}{NN}{VBZ}{VBN}
+event;Material reservation is created;{NN}{NN}{VBZ}{VBN}
+event;Goods Issue is Posted;{NNP}{VBZ}{VBN}
+event;Production Without Process Control;{NN}{IN}{VB}{NN}
+event;Capacity requirement is created;{NN}{NN}{VBZ}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Actual data is transferred to destination from process control;{JJ}{NNS}{VBZ}{VBN}{TO}{NN}{IN}{NN}{NN}
+event;Material is produced;{NN}{VBZ}{VBN}
+event;Production with process control;{NN}{IN}{NN}{NN}
+event;Process order is archived;{VB}{NN}{VBZ}{VBN}

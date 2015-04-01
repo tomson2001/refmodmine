@@ -1,0 +1,4 @@
+963ef86b1aea5799df80bbaa2ac95336;B.I.183.a_EPC for toolmaking and tooling control
+function;Toolmaking;{VBG}
+event;Order placed by process planning;{NNP}{VBN}{IN}{NN}{NN}
+event;Toolmaking completeted;{VBG}{VBN}

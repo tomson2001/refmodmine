@@ -1,0 +1,73 @@
+077b3866363908aab679eaa5396e76e9;Planned Maintenance Processing
+function;Capacity Planning;{NN}{NNP}
+function;Order;{NN}
+function;Worklist;{JJ}
+function;Notification;{NN}
+function;Settlement and Completion;{NNP}{CC}{NNP}
+function;Material Movements;{NN}{NNS}
+function;Completion Confirmation;{NNP}{NN}
+function;Maintenance Planning;{NNP}
+function;Modification of Technical Systems;{NN}{IN}{NNPS}
+event;Maintenance order is to be created manually;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Maintenance order to be created per maintenance item;{NN}{NN}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Open purchase requisitions for non-stock material are deleted;{VB}{NN}{NNS}{IN}{JJ}{NN}{VBP}{VBN}
+event;Maintenance order is confirmed completely;{NN}{NN}{VBZ}{VBN}{RB}
+event;Order Should Be Technically Completed;{NNP}{MD}{VB}{NNP}
+event;Material is not available;{NN}{VBZ}{RB}{JJ}
+event;Equipment must be installed, dismantled or modified;{NN}{MD}{VB}{VBN}{,}{VBN}{CC}{VBN}
+event;Equipment is processed;{NN}{VBZ}{VBN}
+event;Order type supports automatic generation of a notification;{NNP}{NN}{VBZ}{JJ}{NN}{IN}{DT}{NN}
+event;Maintenance requirement has arisen;{NN}{NN}{VBZ}{VBN}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}
+event;Maintenance order is to be created for maintenance notification;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;;
+event;Services are to be entered;{NNPS}{VBP}{TO}{VB}{VBN}
+event;Maintenance notification is to be created for each maintenance item;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{DT}{NN}{NN}
+event;Open material reservations are deleted;{VB}{NN}{NNS}{VBP}{VBN}
+event;Maintenance plan is to be scheduled manually;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Maintenance requirement has arisen;{NN}{NN}{VBZ}{VBN}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Task List Assigned to Maintenance Item;{NNP}{NN}{VBN}{TO}{NNP}
+event;Actual costs are updated to maintenance order;{JJ}{NNS}{VBP}{VBN}{TO}{NN}{NN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Capacity requirement records are deleted;{NN}{NN}{NNS}{VBP}{VBN}
+event;Maintenance order to be created per maintenance item;{NN}{NN}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Measurement doc. should be created for notif.;{NN}{NN}{.}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Maintenance plan released triggered;{NN}{NN}{VBN}{VBD}
+event;Schedule counter reading mtce plan;{VB}{RB}{VBG}{NN}{NN}
+event;Service is accepted;{NNP}{VBZ}{VBN}
+event;Maintenance call waits;{NN}{NN}{VBZ}
+event;Technical findings are entered;{NNP}{NNS}{VBP}{VBN}
+event;Service entry sheet to be created for each maintenance item;{NNP}{NN}{NN}{TO}{VB}{VBN}{IN}{DT}{NN}{NN}
+event;Maintenance plan calls are processed;{NN}{NN}{NNS}{VBP}{VBN}
+event;Maintenance tasks are determined;{NN}{NNS}{VBP}{VBN}
+event;Working hours data was analyzed;{VBG}{NNS}{NNS}{VBD}{VBN}
+event;Maintenance order is printed;{NN}{NN}{VBZ}{VBN}
+event;Maintenance tasks are to be processed;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Functional location is processed;{JJ}{NN}{VBZ}{VBN}
+event;Notifications Combined in Order;{NNS}{VBN}{IN}{NN}
+event;Maintenance order is partially confirmed;{NN}{NN}{VBZ}{RB}{VBN}
+event;Maintenance order is released;{NN}{NN}{VBZ}{VBN}
+event;Maintenance order is completed with time reference;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Equipment is installed, dismantled or modified;{NN}{VBZ}{VBN}{,}{VBN}{CC}{VBN}
+event;Maintenance plan is to be scheduled automatically;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Maintenance Costs Determined;{NNP}{NNS}{VBN}
+event;Notification is printed;{NN}{VBZ}{VBN}
+event;Capacity load is updated;{NN}{NN}{VBZ}{VBN}
+event;Individual operations are confirmed;{JJ}{NNS}{VBP}{VBN}
+event;Maintenance plan is created;{NN}{NN}{VBZ}{VBN}
+event;Capacity situation is to be evaluated;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance notification is to be generated from maintenance order;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Notification is to be processed by planner group;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;;
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Operations and Order Must Be Confirmed;{NNP}{CC}{NNP}{MD}{VB}{VBN}
+event;Technical findings are entered;{NNP}{NNS}{VBP}{VBN}
+event;Maintenance plan to be scheduled according to maintenance strategy;{NN}{NN}{TO}{VB}{VBN}{VBG}{TO}{NN}{NN}
+event;Material reservation can be withdrawn;{NN}{NN}{MD}{VB}{VBN}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Capacity is available;{NN}{VBZ}{JJ}
+event;Retrograde withdrawal to be posted;{NNP}{NN}{TO}{VB}{VBN}

@@ -1,0 +1,6 @@
+f50b9d3822c3d21d820de0587843c2da;Front Office
+function;Service Customer Contact Processing;{NNP}{NN}{NN}{NN}
+event;Required Data must be Processed;{NNP}{MD}{VB}{VBN}
+event;Evaluations are to be performed;{NNS}{VBP}{TO}{VB}{VBN}
+event;Call Registered;{VB}{NNP}
+event;Call Processed;{VB}{NNP}

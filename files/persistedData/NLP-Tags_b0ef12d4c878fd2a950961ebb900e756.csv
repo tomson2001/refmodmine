@@ -1,0 +1,17 @@
+b0ef12d4c878fd2a950961ebb900e756;Exercise of Long-Term Incentive Rights by Employee
+function;Employee Notification of Exercise of Rights;{NN}{NN}{IN}{NN}{IN}{NNS}
+function;Check for Request to Exercise Rights;{VB}{IN}{NNP}{TO}{NNPS}
+function;Entry of Request to Exercise Rights;{NN}{IN}{NN}{TO}{NNPS}
+function;Notification of Rejection of Exercise of Rights;{NN}{IN}{NN}{IN}{NN}{IN}{NNS}
+function;Exercise of Long-Term Incentive Rights;{NN}{IN}{NNPS}
+function;Notification of Approval of Exercise of Rights;{NN}{IN}{NN}{IN}{NN}{IN}{NNS}
+event;Request for exercise of rights is rejected;{NN}{IN}{NN}{IN}{NNS}{VBZ}{VBN}
+event;Employee notified of rejection of exercise;{NN}{VBN}{IN}{NN}{IN}{NN}
+event;Employee long-term incentive is granted;{NN}{JJ}{NN}{VBZ}{VBN}
+event;Time for exercising rights is reached;{NNP}{IN}{VBG}{NNS}{VBZ}{VBN}
+event;Employee notified of exercise;{NN}{VBN}{IN}{NN}
+event;Employee requires exercise of long-term incentive rights;{NN}{VBZ}{NN}{IN}{JJ}{NN}{NNS}
+event;Request for exercise of rights is approved;{NN}{IN}{NN}{IN}{NNS}{VBZ}{VBN}
+event;Employee notified of approval of exercise;{NN}{VBN}{IN}{NN}{IN}{NN}
+event;Request for exercise exists for approval;{NN}{IN}{NN}{VBZ}{IN}{NN}
+event;Long-term incentives right was exercised;{JJ}{NNS}{NN}{VBD}{VBN}

@@ -1,0 +1,34 @@
+33c698aba1357f2b5603e24f3a718279;Accounts Payable
+function;Vendor Account Analysis;{NNP}{NN}
+function;Bill of Exchange Payable;{NNP}{IN}{NNP}
+function;Interest Calculation [A/P];{NN}{NN}{-LRB-}{NN}{-RRB-}
+function;Correspondence with Vendors;{NN}{IN}{NNS}
+function;Account Clearing [AP];{NNP}{-LRB-}{NNP}{-RRB-}
+function;Invoices and Credit Memos;{NNS}{CC}{NN}{NNS}
+function;Vendor Down Payments;{NNP}{NNS}
+event;Interest on arrears to be calculated;{NN}{IN}{NNS}{TO}{VB}{VBN}
+event;Line items to be cleared;{NNP}{NNS}{TO}{VB}{VBN}
+event;Interest calculation is completed;{NN}{NN}{VBZ}{VBN}
+event;Evaluations exist;{NNS}{VBP}
+event;Customer initiates invoice/ credit memo;{NN}{VBZ}{NN}{:}{NN}{NN}
+event;Payment advice is sent;{NN}{NN}{VBZ}{VBN}
+event;Payment medium transferred;{NN}{NN}{VBN}
+event;Down payment is agreed with vendor;{IN}{NN}{VBZ}{VBN}{IN}{NN}
+event;Payment is transferred by EDI;{NN}{VBZ}{VBN}{IN}{NN}
+event;Bill of exchange payable posted;{NNP}{IN}{NN}{JJ}{VBD}
+event;Data medium is created;{NNS}{NN}{VBZ}{VBN}
+event;Automatic clearing completed;{NNP}{VBG}{VBN}
+event;Correspondence processed;{NN}{VBN}
+event;Payment medium created;{NN}{NN}{VBN}
+event;Bill of exchange payable to be posted;{NNP}{IN}{NN}{JJ}{TO}{VB}{VBN}
+event;Line item analysis to be carried out;{NNP}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Vendor invoice is to be parked;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Line items to be cleared;{NNP}{NNS}{TO}{VB}{VBN}
+event;Correspondence to be sent;{NN}{TO}{VB}{VBN}
+event;Clearing is posted;{NNP}{VBZ}{VBN}
+event;Balance analysis to be carried out;{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Item balance is zero;{NN}{NN}{VBZ}{CD}
+event;Interest to be calculated on account balances;{NN}{TO}{VB}{VBN}{IN}{NN}{NNS}
+event;Vendor Payments;{NNP}{NNS}
+event;Manual clearing is complete;{JJ}{NN}{VBZ}{JJ}
+event;Vendor invoice is to be parked;{NN}{NN}{VBZ}{TO}{VB}{VBN}

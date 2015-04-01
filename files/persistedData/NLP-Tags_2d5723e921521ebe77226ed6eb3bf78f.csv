@@ -1,0 +1,9 @@
+2d5723e921521ebe77226ed6eb3bf78f;Processing of personnel time evaluation messages
+function;Processing of personnel time evaluation messages;{NN}{IN}{NNS}{NN}{NN}{NNS}
+event;Need for correction of personnel time quota statement;{VBN}{IN}{NN}{IN}{NNS}{NN}{NN}{NN}
+event;Processing of pers. time evaluation messages is desired;{NN}{IN}{NNS}{.}
+event;Need for correction of employee master data;{VBN}{IN}{NN}{IN}{NN}{NN}{NNS}
+event;Personnel time evaluation message is available;{NNP}{NN}{NN}{NN}{VBZ}{JJ}
+event;Need for personnel time transfer specification;{VBN}{IN}{NNS}{NN}{NN}{NN}
+event;Need for correction of personnel time specifications;{VBN}{IN}{NN}{IN}{NNS}{NN}{NNS}
+event;No need to act because of pers. time evaluation message;{DT}{NN}{TO}{VB}{IN}{IN}{NNS}{.}

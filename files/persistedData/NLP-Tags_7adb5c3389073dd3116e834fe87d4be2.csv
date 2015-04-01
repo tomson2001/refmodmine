@@ -1,0 +1,5 @@
+7adb5c3389073dd3116e834fe87d4be2;Information System
+function;Evaluations in the Quality Information System (QMIS);{NNS}{IN}{DT}{NNP}{-LRB-}{NNP}{-RRB-}
+event;Evaluation to be performed using the Logistics Information System;{NN}{TO}{VB}{VBN}{VBG}{DT}{NNP}
+event;Evaluation from QMIS indicates quality problems;{NN}{IN}{NNS}{VBZ}{NN}{NNS}
+event;Evaluation carried out;{NN}{VBD}{RP}

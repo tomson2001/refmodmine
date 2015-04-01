@@ -1,0 +1,8 @@
+7715c97e0e0d889a98b3475e45937022;Product Structure Management Service
+function;Equipment Processing;{NNP}
+function;Functional Location Processing;{JJ}{NNP}
+function;Equipment BOM Processing;{NNP}
+function;Functional Location BOM Processing;{JJ}{NNP}
+function;Material/ Serial Number Processing;{NN}{:}{JJ}{NNP}
+event;Guarantee product service;{NN}{NN}{NN}
+event;Product service performed;{NN}{NN}{VBN}

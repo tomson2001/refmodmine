@@ -1,0 +1,48 @@
+f662da7b1675427f7638bb02806e44d2;Fig.88: WOZ YAWL model for MunJ
+function;Perform admissibility test municipality;{VB}{NN}{NN}{NN}
+function;Perform fast admissibility test;{VB}{RB}{JJ}{NN}
+function;Sort out objection;{VB}{RP}{NN}
+function;Complaint valid;{NN}{JJ}
+function;Sign form;{NN}{NN}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Register objection;{NNP}{NN}
+function;Send to tax office;{VB}{TO}{NN}{NN}
+function;Send advice;{VB}{NN}
+function;Need sorting out;{VBN}{VBG}{RP}
+function;Handle administrative;{VB}{JJ}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Register;{NNP}
+function;Create file;{VB}{NN}
+function;Send response about admissibility;{VB}{NN}{IN}{NN}
+function;Hearing requested;{NN}{VBD}
+function;Start WOZ process;{NNP}{NN}
+function;Possible to do assessment;{JJ}{TO}{VB}{NN}
+function;Default positive response;{NNP}{JJ}{NN}
+function;Handle complaint;{VB}{NN}
+function;Fill in form;{VB}{IN}{NN}
+function;Receive phone call;{VB}{NN}{NN}
+function;Resolve complaint;{VB}{NN}
+function;Process eventual changes;{VB}{JJ}{NNS}
+function;Adjust value;{VB}{NN}
+function;Perform admissibility test;{VB}{NN}{NN}
+function;Send acknowledgment;{VB}{NN}
+function;Indicate pro forma objection is recommended;{VB}{FW}{FW}{NN}{VBZ}{VBN}
+function;Contact customer;{NN}{NN}
+function;Handle on side;{VB}{IN}{NN}
+function;Record findings;{VB}{NNS}
+function;Record objection;{VB}{NN}
+function;Send notification letter;{VB}{NN}{NN}
+function;Ask tax office advice;{VB}{NN}{NN}{NN}
+function;Hold hearing;{VB}{NN}
+event;yes;{RB}
+event;no;{DT}
+event;yes;{RB}
+event;yes;{RB}
+event;no;{DT}
+event;Deadline;{NN}
+event;yes;{RB}
+event;Process end;{VB}{NN}
+event;Process start;{VB}{NN}
+event;no;{DT}
+event;no;{DT}
+event;Timeout;{NNP}

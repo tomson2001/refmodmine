@@ -1,0 +1,5 @@
+90a744fe18e34f2fcfb622a44f431f3e;Quality Notification
+function;Creation of a Quality Notification;{NN}{IN}{DT}{NNP}{NN}
+event;Task-dependent follow-up actions are triggered;{JJ}{JJ}{NNS}{VBP}{VBN}
+event;Defect requires manual quality notification;{NN}{VBZ}{JJ}{NN}{NN}
+event;Quality notification entered;{JJ}{NN}{VBD}

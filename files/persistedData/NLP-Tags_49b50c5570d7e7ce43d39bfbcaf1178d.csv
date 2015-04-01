@@ -1,0 +1,7 @@
+49b50c5570d7e7ce43d39bfbcaf1178d;B.I.193_EPC for materials handling control
+function;Triggering materials handling;{VBG}{NNS}{VBG}
+event;Tool available;{NNP}{JJ}
+event;Station reached;{NNP}{VBD}
+event;Operation completed;{NN}{VBD}
+event;Operation released;{NN}{VBD}
+event;Components available;{NNP}{JJ}

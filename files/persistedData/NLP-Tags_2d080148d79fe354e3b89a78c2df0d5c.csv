@@ -1,0 +1,17 @@
+2d080148d79fe354e3b89a78c2df0d5c;Analysis
+function;Depreciation Simulation/ Forecast [Investment Project];{NN}{NN}{:}{NN}{-LRB-}{NNP}{-RRB-}
+function;Integrated Planning in CO;{NNP}{IN}{NNP}
+function;Program Analysis;{NN}{NN}
+function;Order Analysis [Investment Order];{NNP}{-LRB-}{NNP}{-RRB-}
+function;Processing of Depreciation Simulation Data;{NN}{IN}{NNP}
+event;Cost development of order is to be checked;{NN}{NN}{IN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Program analysis completed;{NN}{NN}{VBD}
+event;Order analysis completed;{NN}{NN}{VBD}
+event;Deprec- iation simula- tion data is maintained;{NNP}{:}{NN}{NN}{:}{NN}{NNS}{VBZ}{VBN}
+event;Planned deprec- iation should be transferred to controlling;{NNP}{NN}{:}{NN}{MD}{VB}{VBN}{TO}{VBG}
+event;Investment profile with line item settlement is specified;{NN}{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Planned accrued depreciation and interest were transferred to CO;{NNP}{VBN}{NN}{CC}{NN}{VBD}{VBN}{TO}{NNP}
+event;Inv. profile specified w/summary settlement;{NNP}{.}
+event;Simulation is to be car- ried out for portion of fixed assets (future FY);{NN}{VBZ}{TO}{VB}{NN}{:}{VBD}{RP}{IN}{NN}{IN}{JJ}{NNS}{-LRB-}{JJ}{NN}{-RRB-}
+event;Simulation was carried out;{NN}{VBD}{VBN}{RP}
+event;Capital investment program is to be analyzed;{NNP}{NN}{NN}{VBZ}{TO}{VB}{VBN}

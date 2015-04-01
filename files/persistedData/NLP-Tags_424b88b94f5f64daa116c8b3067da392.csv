@@ -1,0 +1,11 @@
+424b88b94f5f64daa116c8b3067da392;Rollover
+function;Generate Rollover Offer;{VB}{NNP}{NN}
+function;Select and Assign Rollover Position;{NNP}{CC}{NNP}{NN}
+function;Determine Rollover Conditions;{VB}{NNP}{NNS}
+event;Rollover methods and variants were entered;{NN}{NNS}{CC}{NNS}{VBD}{VBN}
+event;Execution parameters were defined;{NN}{NNS}{VBD}{VBN}
+event;Rollover offer was created and printed;{NN}{NN}{VBD}{VBN}{CC}{VBN}
+event;Conditions due to expire;{NNS}{JJ}{TO}{VB}
+event;Notice for change to contract exists;{NNP}{IN}{NN}{TO}{NN}{VBZ}
+event;Planned rollover position was generated;{NNP}{NN}{NN}{VBD}{VBN}
+event;Rollover offer to be created;{NN}{NN}{TO}{VB}{VBN}

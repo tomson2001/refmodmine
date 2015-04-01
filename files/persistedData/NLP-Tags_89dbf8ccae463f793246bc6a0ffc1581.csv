@@ -1,0 +1,26 @@
+89dbf8ccae463f793246bc6a0ffc1581;Physical Inventory
+function;Physical Inventory Analysis;{JJ}{NNP}{NN}
+function;Printout of Physical Inventory Document;{NN}{IN}{JJ}{NNP}
+function;Post Inventory Differences;{NNP}{NNS}
+function;Recount;{VB}
+function;Sample Processing;{VB}{NNP}
+function;Inventory Count;{NN}{NN}
+function;Sample Definition;{VB}{NNP}
+function;Determination of Scope for Periodic and Continuous Inventory;{NN}{IN}{NN}{IN}{JJ}{CC}{JJ}{NN}
+function;Specification of Cycle Counting Phys. Inv.;{NN}{IN}{NNP}{VBG}{NNS}{.}
+function;Cycle Counting Phys. Inv. Preparation;{NN}{VBG}{NNS}{.}
+event;Inv. sampling procedure to be performed;{NNP}{.}
+event;Re-count necessary;{JJ}{JJ}
+event;Material stocks are OK;{NN}{NNS}{VBP}{JJ}
+event;Inspection sample is created;{NNP}{NN}{VBZ}{VBN}
+event;Physical inventory is completed;{JJ}{NN}{VBZ}{VBN}
+event;Phys. inv. differences are to be posted;{NNP}{.}
+event;Phys. inventory using cycle counting method is to be performed;{NNP}{.}
+event;Physical inventory document is printed;{JJ}{NN}{NN}{VBZ}{VBN}
+event;Physical inventory scope is determined;{JJ}{NN}{NN}{VBZ}{VBN}
+event;Recount is initiated;{NNP}{VBZ}{VBN}
+event;Physical inventory is to be carried out;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Periodic inventory to be performed;{JJ}{NN}{TO}{VB}{VBN}
+event;Physical inventory count is entered;{JJ}{NN}{NN}{VBZ}{VBN}
+event;Continuous inventory for stck material is to be performed;{JJ}{NN}{IN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Materials are flagged;{NNPS}{VBP}{VBN}

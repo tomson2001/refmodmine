@@ -1,0 +1,7 @@
+f06b778890bb8269a88368d123a3e6ca;Calculation of Payment Amounts
+function;Calculation of Payment Amounts;{NN}{IN}{NN}{NNS}
+event;Time for remuneration payment is scheduled;{NNP}{IN}{NN}{NN}{VBZ}{VBN}
+event;Settlement amounts for further benefits exist;{NNP}{VBZ}{IN}{JJ}{NNS}{VBP}
+event;Payment amounts exist;{NN}{NNS}{VBP}
+event;Net remuneration exists;{JJ}{NN}{VBZ}
+event;Garnishment amounts exist;{NN}{NNS}{VBP}

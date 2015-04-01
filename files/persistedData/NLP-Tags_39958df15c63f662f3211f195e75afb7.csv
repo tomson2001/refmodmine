@@ -1,0 +1,7 @@
+39958df15c63f662f3211f195e75afb7;Provision of additional personnel time specifications
+function;Transfer of activity allocation specifications;{NN}{IN}{NN}{NN}{NNS}
+function;Deriving of personnel cost assignment specifications;{VBG}{IN}{NNS}{NN}{NN}{NNS}
+event;Activity allocation specifications are available;{NN}{NN}{NNS}{VBP}{JJ}
+event;Transfer of activity allocation specifications is desired;{NN}{IN}{NN}{NN}{NNS}{VBZ}{VBN}
+event;Personnel cost assignment specification is available;{NNP}{VBD}{NN}{NN}{VBZ}{JJ}
+event;Activity allocation specifications transmitted;{NN}{NN}{NNS}{VBD}

@@ -1,0 +1,43 @@
+1c96045a2ec29a04d2827f57459dec21;QM in Materials Management
+function;Q-Notifications with Complaint Against Vendor;{NNS}{IN}{NNP}{IN}{NNP}
+function;Information System;{NNP}
+function;Quality Inspection in MM;{NNP}{IN}{NN}
+function;Procurement and Purchasing;{NNP}{CC}{NNP}
+event;Quality notification is to be supplemented;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Evaluation carried out;{NN}{VBD}{RP}
+event;Effectiveness of a task is documented at a later date;{NN}{IN}{DT}{NN}{VBZ}{VBN}{IN}{DT}{JJ}{NN}
+event;Material is to be returned;{NN}{VBZ}{TO}{VB}{VBN}
+event;Material master has been processed;{NN}{NN}{VBZ}{VBN}{VBN}
+event;Enter defects from the inspection lot;{VB}{NNS}{IN}{DT}{NN}{NN}
+event;Vendor is released;{NN}{VBZ}{VBN}
+event;Define quality assurance agreements;{VB}{NN}{NN}{NNS}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Technical delivery terms are to be defined;{NNP}{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Vendor is locked for future requests for quotation;{NN}{VBZ}{VBN}{IN}{JJ}{NNS}{IN}{NN}
+event;Vendor must be locked as regards this material;{NN}{MD}{VB}{VBN}{IN}{VBZ}{DT}{NN}
+event;Quality notification is activated from defects;{JJ}{NN}{VBZ}{VBN}{IN}{NNS}
+event;Quality assurance agreements have been defined;{JJ}{NN}{NNS}{VBP}{VBN}{VBN}
+event;Complaint score for vendor is calculated;{NN}{NN}{IN}{NN}{VBZ}{VBN}
+event;QMIS updated;{NNS}{VBN}
+event;Quality info record is created / changed;{JJ}{NN}{NN}{VBZ}{VBN}{:}{VBN}
+event;Evaluation from QMIS indicates quality problems;{NN}{IN}{NNS}{VBZ}{NN}{NNS}
+event;Vendor must be locked/ released;{NN}{MD}{VB}{VBN}{:}{VBN}
+event;Enter defects from the operation;{VB}{NNS}{IN}{DT}{NN}
+event;Inspection lot is to be created automatically;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Vendor is locked for future goods entries;{NN}{VBZ}{VBN}{IN}{JJ}{NNS}{NNS}
+event;Vendor is created;{NN}{VBZ}{VBN}
+event;Technical delivery terms have been defined;{NNP}{NN}{NNS}{VBP}{VBN}{VBN}
+event;Inspection lot is to be created manually;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Certificate receipt is processed;{NN}{NN}{VBZ}{VBN}
+event;Enter characteristic defects;{VB}{JJ}{NNS}
+event;Quality notification is completed;{JJ}{NN}{VBZ}{VBN}
+event;Certificate received;{NN}{VBD}
+event;Vendor is locked for future orders;{NN}{VBZ}{VBN}{IN}{JJ}{NNS}
+event;Material is released;{NN}{VBZ}{VBN}
+event;Evaluation to be performed using the Logistics Information System;{NN}{TO}{VB}{VBN}{VBG}{DT}{NNP}
+event;Inspection completion is carried out;{NNP}{NN}{VBZ}{VBN}{RP}
+event;Vendor evaluation to be carried out;{NN}{NN}{TO}{VB}{VBN}{RP}
+event;QM order is created for quality notification;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Defect requires manual quality notification;{NN}{VBZ}{JJ}{NN}{NN}
+event;Quality info record must be created;{JJ}{NN}{NN}{MD}{VB}{VBN}
+event;Goods receipt posted;{NNP}{NN}{VBD}

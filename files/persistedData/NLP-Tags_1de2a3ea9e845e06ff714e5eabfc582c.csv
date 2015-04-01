@@ -1,0 +1,5 @@
+1de2a3ea9e845e06ff714e5eabfc582c;Information System
+function;Report Search Using Report Information System;{NNP}{VB}{VBG}{NNP}
+function;Substance Search Using Substance Information System;{NN}{VB}{VBG}{NNP}
+event;Result is displayed;{NN}{VBZ}{VBN}
+event;Drilldown reporting is to be carried out;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}

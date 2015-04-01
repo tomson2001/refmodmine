@@ -1,0 +1,47 @@
+215f9a8fd7dac5da35c6e539f5d08ad6;D.II.019_Rough ARIS enterprise model of the requirements definition level  (selection)
+function;Order tracking;{NNP}{NN}
+function;Closing and anaysing;{NN}{CC}{NN}
+function;Posting;{VBG}
+function;Invoice acc. receiv;{NNP}{NN}{.}
+function;Inspection;{NNP}
+function;Order release;{NNP}{NN}
+function;Purchase order;{NN}{NN}
+function;Production;{NN}
+function;Order acceptance;{NNP}{NN}
+function;Cost center planning;{NN}{NN}{NN}
+function;Invoice control acc. pay;{NNP}{NN}{NN}{.}
+function;Time management;{NNP}{NN}
+function;Analysis;{NN}
+function;Requirements planning;{NNS}{VBG}
+function;Create product idea;{VB}{NN}{NN}
+function;Purchase order tracking;{NN}{NN}{NN}
+function;Shipping;{VBG}
+function;Cost objective accounting;{NN}{JJ}{NN}
+function;Development;{NNP}
+function;Simult. techn. and other dev.;{NNP}{.}
+event;Cost planning completed;{NN}{NN}{VBN}
+event;Receivings;{NNS}
+event;Goods accepted;{NNP}{VBD}
+event;Release;{NNP}
+event;Weaknesses;{NNS}
+event;Order confirmation;{NNP}{NN}
+event;Customer order;{NN}{NN}
+event;Product idea found;{NN}{NN}{VBD}
+event;Period end;{NN}{NN}
+event;Production orders;{NN}{NNS}
+event;Primary requirements;{JJ}{NNS}
+event;Order released;{NNP}{VBD}
+event;Capacity profile;{NN}{NN}
+event;Confirmation;{NN}
+event;Development order;{NNP}{NN}
+event;Purchase order completed;{NN}{NN}{VBN}
+event;Prod development completed;{VB}{NN}{VBN}
+event;Shipping completed;{VBG}{VBN}
+event;Posting completed;{VBG}{VBN}
+event;Period end;{NN}{NN}
+event;Customer order completed;{NN}{NN}{VBN}
+event;Development order;{NNP}{NN}
+event;Order prepared;{NNP}{VBD}
+event;Purchase order confirmation;{NN}{NN}{NN}
+event;Financial accounting completed;{JJ}{NN}{VBN}
+event;IS project order;{VBZ}{NN}{NN}

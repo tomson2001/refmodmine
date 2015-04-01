@@ -1,0 +1,11 @@
+65b73f5f2164a6b5ca90935170736dcf;Billing
+function;Billing Document for Free-of Charge Delivery;{NN}{NNP}{IN}{JJ}{NNP}{NN}
+function;Pro Forma Invoice Processing;{FW}{FW}{FW}{NN}
+function;Billing Document Cancellation;{NN}{NNP}
+event;Pro forma invoice is created;{FW}{FW}{NN}{VBZ}{VBN}
+event;Billing document to be cancelled;{NN}{NN}{TO}{VB}{VBN}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Billing document/ items are cancelled;{NN}{NN}{:}{NNS}{VBP}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Pro forma invoice for order/ delivery to be created;{FW}{FW}{NN}{IN}{NN}{:}{NN}{TO}{VB}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}

@@ -1,0 +1,31 @@
+088b3613e1cd3b3561cf7cd30cc79349;A.II.26,a_Event control
+function;Determine costing data;{VB}{VBG}{NNS}
+function;Execute costing;{VB}{VBG}
+function;M. Primary requirements planning;{NNP}{JJ}{NNS}{VBG}
+function;M. Estimate secondary requirement;{NNP}{JJ}{NN}
+function;M. Analysis whether net change or reoptimization;{NNP}{IN}{JJ}{NN}{CC}{NN}
+function;M. Production;{NNP}
+function;M. Purchasing;{NNP}
+function;M. Lot sizing;{NNP}{NN}{VBG}
+function;M. Estimate gross requirement;{NNP}{JJ}{NN}
+function;M. Bill of materials management;{NNP}{IN}{NNS}{NN}
+function;M. Distribution to users;{NNP}{NN}{TO}{NNS}
+function;M. Forward scheduling;{NNP}{RB}{NN}
+function;M. Estimate net requirement;{NNP}{NN}{NN}
+function;M. Determine inventory level/ reservation;{NNP}{NN}{NN}{:}{NN}
+event;Offer prepared;{NN}{VBD}
+event;Costing data complete;{VBG}{NNS}{JJ}
+event;Bill of materials updated;{NNP}{IN}{NNS}{VBN}
+event;Scheduling completed;{NN}{VBD}
+event;Reoptimization chosen;{NN}{VBN}
+event;Date is in the past;{NN}{VBZ}{IN}{DT}{NN}
+event;Gross requirement estimated;{NNP}{NN}{VBD}
+event;Release for secondary requirement estimating;{NNP}{IN}{JJ}{NN}{NN}
+event;Occurrence of original requirement;{NN}{IN}{JJ}{NN}
+event;Secondary requirement estimated;{JJ}{NN}{VBN}
+event;Work load distrubed;{NN}{NN}{VBD}
+event;Delivery updated;{NN}{VBN}
+event;Net requirement estimated;{JJ}{NN}{VBN}
+event;Net change chosen;{JJ}{NN}{VBN}
+event;Order generated;{NNP}{VBD}
+event;Plant disruption occured;{NN}{NN}{VBD}

@@ -1,0 +1,20 @@
+4adefe6455e976b7c7ba7aff582ab2fb;Period-End Closing for Profitability Analysis
+function;Project Settlement;{NNP}
+function;Analysis of Results and Contribution Margins;{NN}{IN}{NNS}{CC}{NN}{NNS}
+function;Settlement of Internal Orders (Actual Data);{NNP}{IN}{NNP}{NNS}{-LRB-}{NNP}{-RRB-}
+function;Settlement of Production Variances;{NNP}{IN}{NN}{NNS}
+function;Actual Top-Down Distribution;{JJ}{JJ}{NN}
+function;Settlement of Sales Orders;{NNP}{IN}{NNS}{NNS}
+function;Actual Allocation of Cost Center Costs to Profitability Analysis;{JJ}{NN}{IN}{NN}{NNP}{NNS}{TO}{NNP}{NN}
+function;Actual Allocation of Process Costs to Profitability Analysis;{JJ}{NN}{IN}{VB}{NNS}{TO}{NNP}{NN}
+event;Orders to Be Settled to Profitability Analysis;{NNS}{TO}{VB}{VBN}{TO}{NNP}{NN}
+event;Production Variances Are to Be Settled;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Allocation of Cost Center Costs Required;{NN}{IN}{NN}{NNP}{NNS}{VBN}
+event;Overhead Costs Are to Be Settled to Profitability Analysis;{NN}{NNS}{VBP}{TO}{VB}{VBN}{TO}{NNP}{NN}
+event;Special direct costs were distributed to a lower level;{JJ}{JJ}{NNS}{VBD}{VBN}{TO}{DT}{JJR}{NN}
+event;Organizational operating profit (actual) exists;{JJ}{NN}{NN}{-LRB-}{JJ}{-RRB-}{VBZ}
+event;Top-down distribution required;{JJ}{NN}{VBN}
+event;Control measures taken due to variances;{NN}{NNS}{VBN}{JJ}{TO}{NNS}
+event;Costs/ revenues were allocated to profitability analysis;{NNS}{:}{NNS}{VBD}{VBN}{TO}{NN}{NN}
+event;Allocation of Process Costs Required;{NN}{IN}{VB}{NNS}{VBN}
+event;Project costs/ revenues to be settled to profitability analysis;{NN}{NNS}{:}{NNS}{TO}{VB}{VBN}{TO}{NN}{NN}

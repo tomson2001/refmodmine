@@ -1,0 +1,28 @@
+dfee7d5b74dd0ac71a3148637284a1e6;Fig.11: GBA1YAWL model for MunC
+function;Send to appropriate department in DMS;{VB}{TO}{JJ}{NN}{IN}{NNP}
+function;Determine fees;{NN}{NNS}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Fill in payment data and approve;{VB}{IN}{NN}{NNS}{CC}{VB}
+function;produce extract and sign;{VB}{NN}{CC}{NN}
+function;Process continue;{VB}{VB}
+function;Send extract;{VB}{NN}
+function;Report as finished in DMS;{NNP}{IN}{VBN}{IN}{NN}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Assign employee;{VB}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Process payment;{VB}{NN}
+function;No Payment;{DT}{NN}
+event;status change to Report as finished in DMS;{NN}{NN}{TO}{NNP}{IN}{VBN}{IN}{NN}
+event;status change to Ask customer to pay;{NN}{NN}{TO}{VB}{NN}{TO}{VB}
+event;yes;{RB}
+event;the end;{DT}{NN}
+event;status change to Send to appropriate department in DMS;{NN}{NN}{TO}{VB}{TO}{JJ}{NN}{IN}{NNP}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;status change to Assign employee;{NN}{NN}{TO}{VB}{NN}
+event;status change to Produce extract and sign;{NN}{NN}{TO}{VB}{NN}{CC}{NN}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to No Payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Decide whether to pay;{NN}{NN}{TO}{VB}{IN}{TO}{VB}

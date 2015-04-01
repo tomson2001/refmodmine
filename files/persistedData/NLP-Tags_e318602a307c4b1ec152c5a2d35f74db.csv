@@ -1,0 +1,4 @@
+e318602a307c4b1ec152c5a2d35f74db;B.III.007_a_EPC for attendance and performance data entry
+function;Posting time account;{VBG}{NN}{NN}
+event;Clock-In / clock-out;{JJ}{:}{NN}
+event;Clock-in / clock-out posted;{JJ}{:}{NN}{VBD}

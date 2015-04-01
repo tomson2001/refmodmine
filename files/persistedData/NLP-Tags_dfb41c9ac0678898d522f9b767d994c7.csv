@@ -1,0 +1,5 @@
+dfb41c9ac0678898d522f9b767d994c7;Time statement creation
+function;Time statement creation;{NNP}{NN}{NN}
+event;Personnel time accounts are updated;{NNP}{NN}{NNS}{VBP}{VBN}
+event;Time statement transmitted to employee;{NNP}{NN}{VBD}{TO}{NN}
+event;Time statement creation is desired;{NNP}{NN}{NN}{VBZ}{VBN}

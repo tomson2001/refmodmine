@@ -1,0 +1,9 @@
+40ef88f2baa22fbd7d8e9a1d75f03750;Implementation of Compensation Planning
+function;Message to Employee about Compensation Adjustment;{NN}{TO}{NN}{IN}{NNP}
+function;Adjustment of Payroll Specifications;{NNP}{IN}{NNP}{NNS}
+event;Payroll accounting specifications changed;{NNP}{NN}{NNS}{VBD}
+event;Compensation plan is implemented;{NNP}{NN}{VBZ}{VBN}
+event;Compensation plan is approved;{NNP}{NN}{VBZ}{VBN}
+event;Need for notification of compensation adjustment exists;{VBN}{IN}{NN}{IN}{NN}{NN}{VBZ}
+event;Benefits offer must be adapted for employee;{NNS}{VBP}{MD}{VB}{VBN}{IN}{NN}
+event;Employee notified of compensation adjustment;{NN}{VBN}{IN}{NN}{NN}

@@ -1,0 +1,31 @@
+37d7b6bfe27d34ac1509b68b23ce286d;Budget Execution
+function;Payment Transfer;{NN}{NN}
+function;Forecast of Revenue;{NN}{IN}{NN}
+function;Funds Commitment;{NNS}{NN}
+function;Funds Blocking;{NNS}{VBG}
+function;Funds Reservation;{NNS}{NN}
+function;Payment Selection;{NN}{NN}
+function;Funds Precommitment;{NNS}{NNP}
+function;Budget Increase;{NNP}{NN}
+event;Current budget values maintained;{JJ}{NN}{NNS}{VBD}
+event;Funds precommitment to be carried out;{NNS}{VBP}{TO}{VB}{VBN}{RP}
+event;Payment transfer completed;{NN}{NN}{VBN}
+event;Purchase requisition/ order to be created;{NN}{NN}{:}{NN}{TO}{VB}{VBN}
+event;Funds commitment rejected/ funds reservation exceeded;{NNS}{NN}{VBD}{:}{NNS}{NN}{VBD}
+event;Funds reservation to be carried out;{NNS}{NN}{TO}{VB}{VBN}{RP}
+event;Invoice entered;{NNP}{VBD}
+event;Funds commitment rejected/ funds precommitment exceeded;{NNS}{NN}{VBD}{:}{NNS}{JJ}{VBD}
+event;Payment to be transferred;{NN}{TO}{VB}{VBN}
+event;Funds precommitment rejected/ funds reservation exceeded;{NNS}{JJ}{VBD}{:}{NNS}{NN}{VBD}
+event;Invoice entered;{NNP}{VBD}
+event;Budget release available;{NNP}{NN}{JJ}
+event;Funds blocking to be carried out/changed;{NNS}{VBG}{TO}{VB}{VBN}{JJ}
+event;Funds reservation rejected/ budget exceeded;{NNS}{NN}{VBD}{:}{NN}{VBD}
+event;Funds commitment carried out;{NNS}{NN}{VBD}{RP}
+event;Forecast of revenue to be entered;{NN}{IN}{NN}{TO}{VB}{VBN}
+event;Forecast of revenue entered;{NN}{IN}{NN}{VBD}
+event;Funds precommitment rejected/ budget exceeded;{NNS}{JJ}{VBD}{:}{NN}{VBD}
+event;Funds blocking carried out/changed;{NNS}{VBG}{VBD}{JJ}
+event;Set invoice to paid;{VB}{NN}{TO}{VBN}
+event;Expenditure budget increased;{NN}{NN}{VBD}
+event;Funds precommitment carried out;{NNS}{JJ}{VBD}{RP}

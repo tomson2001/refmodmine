@@ -1,0 +1,18 @@
+8e15585c28156f1bb2444a913f76260c;Billing
+function;Pro forma Invoice Processing;{FW}{FW}{NNP}
+function;Processing Billing Documents;{NNP}{NNS}
+function;Billing Document Cancellation;{NN}{NNP}
+function;Invoice List Processing;{NNP}{NN}{NN}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Billing date is reached;{NN}{NN}{VBZ}{VBN}
+event;Order-related invoice to be created;{JJ}{NN}{TO}{VB}{VBN}
+event;Pro forma invoice for order/ delivery to be created;{FW}{FW}{NN}{IN}{NN}{:}{NN}{TO}{VB}{VBN}
+event;Pro forma invoice is created;{FW}{FW}{NN}{VBZ}{VBN}
+event;Invoice list date has arrived;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Customer invoice is posted;{NN}{NN}{VBZ}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Invoice list is created;{NNP}{NN}{VBZ}{VBN}
+event;Billing document to be cancelled;{NN}{NN}{TO}{VB}{VBN}
+event;Billing document/ items are cancelled;{NN}{NN}{:}{NNS}{VBP}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}

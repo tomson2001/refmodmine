@@ -159,7 +159,14 @@ final class Config {
 	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Handels-H-Model_1996_original_noSEQ.empl";
 	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/handels-h-model_2004_original_noSEQ.epml";
 	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/Y-CIM_de_original.epml";
-	const MODEL_ANALYSIS_FILE = "/home/toth01/refmodmine/input/epml/pmc/Admission.epml";
+	
+	//const MODEL_ANALYSIS_FILE = "/home/toth01/refmodmine/input/epml/pmc/Admission.epml";
+	//const MODEL_ANALYSIS_FILE = "/home/toth01/refmodmine/input/epml/pmc/birhtCertificate.epml";
+	//const MODEL_ANALYSIS_FILE = "/home/toth01/refmodmine/input/epml/pmc/SAP_ALL_EPCs_named.epml";
+	//const MODEL_ANALYSIS_FILE = "/home/toth01/refmodmine/input/epml/pmc/vogelaar_v1.epml";
+	//const MODEL_ANALYSIS_FILE = "/home/toth01/refmodmine/input/epml/pmc/vogelaar_v4.epml";
+	//const MODEL_ANALYSIS_FILE = "/home/toth01/refmodmine/input/epml/pmc/Y-CIM_en_adapted.epml";
+	const MODEL_ANALYSIS_FILE = "/home/toth01/refmodmine/input/epml/pmc/Y-CIM_en_original.epml";
 	
 	// IWi Process Catalogue Catalogue
 	//const MODEL_ANALYSIS_FILE = "C:/xampp/htdocs/refmodmine/input/epml/ipmc/ECO-Integral_adapted.epml";

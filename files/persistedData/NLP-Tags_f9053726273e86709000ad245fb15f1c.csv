@@ -1,0 +1,5 @@
+f9053726273e86709000ad245fb15f1c;Deployment
+function;Deployment for Plant;{NNP}{IN}{NNP}
+function;Deployment for Material;{NNP}{IN}{NNP}
+event;Stock transport requisition is generated;{NNP}{NN}{NN}{VBZ}{VBN}
+event;;

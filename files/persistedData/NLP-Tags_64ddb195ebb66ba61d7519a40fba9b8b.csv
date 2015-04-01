@@ -1,0 +1,32 @@
+64ddb195ebb66ba61d7519a40fba9b8b;Travel Expenses
+function;Approval of travel request;{NN}{IN}{NN}{NN}
+function;Entry of a travel request;{NN}{IN}{DT}{NN}{NN}
+function;Approval of trip facts;{NN}{IN}{NN}{NNS}
+function;Cancellation;{NN}
+function;Travel Expenses;{NN}{NNS}
+function;Advance payment;{NNP}{NN}
+function;Entry of trip facts;{NN}{IN}{NN}{NNS}
+event;Payment amount transmitted to bank/ payee;{NN}{NN}{VBN}{TO}{NN}{:}{NN}
+event;Trip is requested;{NN}{VBZ}{VBN}
+event;Trip costs cancelation statement is transmitted;{NN}{NNS}{NN}{NN}{VBZ}{VBN}
+event;Trip costs must be included in cost accounting;{NN}{NNS}{MD}{VB}{VBN}{IN}{NN}{NN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Unrequested trip has taken place;{JJ}{NN}{VBZ}{VBN}{NN}
+event;Planned trip is rejected;{NNP}{NN}{VBZ}{VBN}
+event;Accounting date is reached;{NN}{NN}{VBZ}{VBN}
+event;Trip facts and receipts have been released for checking;{NN}{NNS}{CC}{NNS}{VBP}{VBN}{VBN}{IN}{VBG}
+event;Need to correct planned trip is transmitted;{VBN}{TO}{VB}{JJ}{NN}{VBZ}{VBN}
+event;Approval of trip facts is transmitted;{NN}{IN}{NN}{NNS}{VBZ}{VBN}
+event;Planned trip is approved;{NNP}{NN}{VBZ}{VBN}
+event;Trip facts are released for accounting;{NN}{NNS}{VBP}{VBN}{IN}{NN}
+event;Amounts liable to employment tax transmitted to payroll;{NNS}{JJ}{TO}{NN}{NN}{JJ}{TO}{NN}
+event;Approved trip has taken place;{VBN}{NN}{VBZ}{VBN}{NN}
+event;Amounts relevant to accounting transmitted to payroll accounting;{NNS}{JJ}{TO}{VBG}{VBN}{TO}{NN}{NN}
+event;Trip costs statement is transmitted;{NN}{NNS}{NN}{VBZ}{VBN}
+event;Planned trip must be canceled;{NNP}{NN}{MD}{VB}{VBN}
+event;Need for trip has arisen;{VBN}{IN}{NN}{VBZ}{VBN}
+event;Trip expenses reimbursement is rejected;{NN}{NNS}{NN}{VBZ}{VBN}
+event;Trip advance is transmitted/ paid;{NN}{NN}{VBZ}{VBN}{:}{VBN}
+event;Payments must be released;{NNS}{MD}{VB}{VBN}
+event;Trip is canceled;{NN}{VBZ}{VBN}
+event;Trip expenses reimbursement must be canceled;{NN}{NNS}{NN}{MD}{VB}{VBN}

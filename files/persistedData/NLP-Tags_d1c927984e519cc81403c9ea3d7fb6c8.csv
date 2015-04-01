@@ -1,0 +1,26 @@
+d1c927984e519cc81403c9ea3d7fb6c8;Updating [Investment Orders]
+function;Check of Order [Simple Investment Measures];{VB}{IN}{NNP}{-LRB-}{JJ}{NN}{NNS}{-RRB-}
+function;Budget Update [Capital Investment Order];{NNP}{-LRB-}{NNP}{-RRB-}
+event;Vendor down payment request is created;{VB}{RP}{NN}{NN}{VBZ}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Vendor down payment posted;{VB}{RP}{NN}{VBD}
+event;Payment posted;{NN}{VBD}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Internal Activity Was Allocated;{JJ}{NN}{VBD}{VBN}
+event;Incorrectly assigned object was credited;{RB}{VBN}{NN}{VBD}{VBN}
+event;Object to be assigned was debited;{VB}{TO}{VB}{VBN}{VBD}{VBN}
+event;Service is accepted;{NNP}{VBZ}{VBN}
+event;Budget is updated;{NNP}{VBZ}{VBN}
+event;Program positions released;{NN}{NNS}{VBN}
+event;Budget is to be updated;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Budget is assigned;{NNP}{VBZ}{VBN}
+event;Reserved funds were reduced;{VBN}{NNS}{VBD}{VBN}
+event;Release and execution of measure completed;{NNP}{CC}{NN}{IN}{NN}{VBN}
+event;Purchase requisition commitment created;{NN}{NN}{NN}{VBN}
+event;Posting was allowed despite budget overrun;{VBG}{VBD}{VBN}{IN}{NN}{NN}
+event;Assigned funds are within tolerance limits;{VBN}{NNS}{VBP}{IN}{NN}{NNS}
+event;Open item was detailed;{VB}{NN}{VBD}{VBN}
+event;Purchase order commitment created;{NN}{NN}{NN}{VBN}
+event;Posting was rejected due to budget overrun;{VBG}{VBD}{VBN}{JJ}{TO}{NN}{NN}
+event;Material is reserved;{NN}{VBZ}{VBN}

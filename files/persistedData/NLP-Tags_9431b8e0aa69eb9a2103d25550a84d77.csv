@@ -1,0 +1,12 @@
+9431b8e0aa69eb9a2103d25550a84d77;A.II.05_Example of interactive and automatic processing forms
+function;Order Confirmation;{NNP}{NN}
+function;Reservation;{NN}
+function;Order Prozessing;{NNP}
+function;Invoicing;{NN}
+function;Order entry;{NNP}{NN}
+function;Concept development;{NN}{NN}
+function;Design / create;{NN}{:}{VB}
+function;cost center accounting;{NN}{NN}{NN}
+event;Stücklistenverwaltung beendet;{NNP}{JJ}{NN}
+event;Basic solution strategy released;{JJ}{NN}{NN}{VBN}
+event;Changes in quantity;{NNS}{IN}{NN}

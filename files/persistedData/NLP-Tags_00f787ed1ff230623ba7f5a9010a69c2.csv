@@ -1,0 +1,22 @@
+00f787ed1ff230623ba7f5a9010a69c2;Fig.13: GBA1 YAWL model for MunE
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;No Payment;{DT}{NN}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Determine fees;{NN}{NNS}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Archive;{NNP}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Send to appropriate department;{VB}{TO}{JJ}{NN}
+function;Process payment;{VB}{NN}
+function;Fill in payment data;{VB}{IN}{NN}{NNS}
+function;Send extract;{VB}{NN}
+function;Decide admissible;{VB}{JJ}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Print application;{VB}{NN}
+event;Yes;{UH}
+event;Process end;{VB}{NN}
+event;Start process;{NNP}{NN}
+event;Admissible;{JJ}
+event;No;{DT}
+event;Not admissible;{RB}{JJ}

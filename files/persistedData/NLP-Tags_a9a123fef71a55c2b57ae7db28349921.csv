@@ -1,0 +1,33 @@
+a9a123fef71a55c2b57ae7db28349921;Fig.31: GBA3 YAWL model for MunC
+function;Process payment;{VB}{NN}
+function;Pay first;{VB}{RB}
+function;Send payment request;{VB}{NN}{NN}
+function;Send appropriate department in DMS;{VB}{JJ}{NN}{IN}{NNP}
+function;Send payment request;{VB}{NN}{NN}
+function;No payment;{DT}{NN}
+function;No payment;{DT}{NN}
+function;Receive payment;{VB}{NN}
+function;Decide admissible;{VB}{JJ}
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Determine fees;{NN}{NNS}
+function;Indicate as processed in DMS;{VB}{IN}{VBN}{IN}{NN}
+function;Receive payment;{VB}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Paid first;{VBN}{RB}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Archive;{NNP}
+function;Process payment;{VB}{NN}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Send extract;{VB}{NN}
+function;Register request;{NNP}{NN}
+event;no;{DT}
+event;yes;{RB}
+event;Start process;{NNP}{NN}
+event;Process end;{VB}{NN}
+event;no;{DT}
+event;free;{JJ}
+event;yes;{RB}
+event;not free;{RB}{JJ}
+event;Free;{NNP}

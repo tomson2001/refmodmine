@@ -1,0 +1,6 @@
+fa7903ad6126ec4c74831759be8832af;Invoice Verification
+function;Manual Clearing;{NNP}
+function;Invoice Reversal;{NNP}{NN}
+event;Manual clearing is complete;{JJ}{NN}{VBZ}{JJ}
+event;Task-dependent follow-up actions are triggered;{JJ}{JJ}{NNS}{VBP}{VBN}
+event;Line items to be cleared;{NNP}{NNS}{TO}{VB}{VBN}

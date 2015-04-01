@@ -1,0 +1,30 @@
+813cde59c921a73cf6eeb92a1c9dc0ed;Period-End Closing: Periodic Product Cost Controlling
+function;Settlement of Cost Object Hierarchy;{NNP}{IN}{NN}{NNP}
+function;Actual Cost Distribution - Product Costs;{JJ}{NN}{NN}{:}{NNP}{NNS}
+function;Template Allocation (Cost Object);{NNP}{-LRB-}{NN}{NN}{-RRB-}
+function;Periodic Variance Calculation;{JJ}{NNP}{NN}
+function;Revaluation at Actual Prices;{NN}{IN}{NNP}{NNS}
+function;WIP Calculation Based on Target Costs;{NNP}{VBD}{IN}{NN}{NNS}
+function;Product Cost Analysis in Product Cost by Period;{NN}{NN}{NN}{IN}{NNP}{NN}{IN}{NN}
+function;Overhead Calculation (Product Cost Collector);{NN}{NN}{-LRB-}{NN}{NN}{NNP}{-RRB-}
+function;Summarization Hierarchy;{NNP}
+function;Data Collection for Product Drilldown;{NNS}{NNP}{IN}{NNP}
+function;Cost Object Summarization;{NN}{NNP}
+function;Settlement of Product Cost Collector;{NNP}{IN}{NNP}{NN}{NNP}
+function;Overhead Calculation (Cost Object);{NN}{NN}{-LRB-}{NN}{NN}{-RRB-}
+function;Template Allocation (Product Cost Collector);{NNP}{-LRB-}{NNP}{NN}{NNP}{-RRB-}
+event;Product Costs Are to Be Settled;{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Overhead rates (product cost collector) allocated;{NN}{NNS}{-LRB-}{NN}{NN}{NN}{-RRB-}{VBN}
+event;Control Measures Taken Based On Variances;{NNP}{NNS}{VBD}{VBN}{IN}{NNS}
+event;Overhead calculation (cost object) allocated;{NN}{NN}{-LRB-}{NN}{NN}{-RRB-}{VBN}
+event;Product Cost Analysis Required in Product Cost by Period;{NN}{NN}{NN}{VBN}{IN}{NNP}{NN}{IN}{NN}
+event;Process Costs Were Allocated;{VB}{NNS}{VBD}{VBN}
+event;Overhead Costs Are to Be Allocated Using Overhead Rates;{NN}{NNS}{VBP}{TO}{VB}{NNP}{VBG}{NN}{NNS}
+event;Process costs (cost objects) to be allocated;{VB}{NNS}{-LRB-}{NN}{NNS}{-RRB-}{TO}{VB}{VBN}
+event;Costs Are to Be Analyzed;{NNS}{VBP}{TO}{VB}{VBN}
+event;Process costs (product cost collector) to be allocated;{VB}{NNS}{-LRB-}{NN}{NN}{NN}{-RRB-}{TO}{VB}{VBN}
+event;Cost Objects Are to Be Distributed to Product Cost Collectors;{NN}{NNS}{VBP}{TO}{VB}{VBN}{TO}{NNP}{NN}{NNP}
+event;Determine Variances Periodically;{VB}{NNP}{RB}
+event;Data Collection for Product Drilldown Completed;{NNS}{NNP}{IN}{NNP}
+event;Product cost collector settled;{NN}{NN}{NN}{VBD}
+event;Cost Object Hierarchy Settled;{NN}{NNP}{VBD}

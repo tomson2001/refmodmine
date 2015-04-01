@@ -1,0 +1,22 @@
+280e5adf3b73289b4500ea0aa2c6f976;birhtCertificate_p246
+function;Sign birth certificate;{NN}{NN}{NN}
+function;Search GBA data;{VB}{NNP}{NNS}
+function;Refuse continuation;{VB}{NN}
+function;Receive notification birth;{VB}{NN}{NN}
+function;Finalize message;{VB}{NN}
+function;Return documents 1;{NN}{NNS}{CD}
+function;Send notifications;{VB}{NNS}
+function;Archive documents;{NNP}{NNS}
+function;Fill in birth registration form;{VB}{IN}{NN}{NN}{NN}
+function;Send PL;{VB}{NN}
+function;Confirm identity;{VB}{NN}
+function;Confirm identity without;{VB}{NN}{IN}
+function;Determine next action;{VB}{JJ}{NN}
+function;Return documents 2;{NN}{NNS}{CD}
+function;Confirm identity with passport;{VB}{NN}{IN}{NN}
+function;Check GBA data;{VB}{NNP}{NNS}
+function;Create birth certificate;{VB}{NN}{NN}
+function;Update GBA;{NNP}
+function;Send data;{VB}{NNS}
+function;Check validity;{VB}{NN}
+event;End Event;{NN}{NN}

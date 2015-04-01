@@ -1,0 +1,57 @@
+5659a262d60949f68a7a08a613637ded;Overhead Allocation
+function;Cost Reposting, Line Item;{NN}{NN}{,}{NNP}
+function;Activity Allocation Reposting;{NN}{NN}{VBG}
+function;Time Sheet Report;{NNP}
+function;Time Sheet Permit;{NNP}
+function;Manual Entry of Statistical Key Figures;{NNP}{IN}{NNP}{NNS}
+function;Transfer Time Sheet Data to CO;{NN}{NNP}{TO}{NNP}
+function;Manual Cost Allocation;{NNP}{NN}{NN}
+function;Transfer of Statistical Key Figures From LIS (Actual);{NN}{IN}{JJ}{NN}{NNS}{IN}{NN}{-LRB-}{JJ}{-RRB-}
+function;Direct Activity Allocation (Controlling);{JJ}{NN}{NN}{-LRB-}{NN}{-RRB-}
+function;Update of Overhead Cost Order Budget;{NNP}{IN}{NN}{NN}{NNP}
+function;Manual Funds Reservation;{NNP}
+function;Cost Reposting (Controlling);{NN}{NN}{-LRB-}{NN}{-RRB-}
+function;Manual Funds Reduction;{NNPS}{NN}
+function;Direct Activity Assignment Using Time Sheet Processing;{JJ}{NN}{NN}{VBG}{NNP}
+function;Cost Reposting Using FI Document Reversal;{NN}{VBG}{VBG}{NN}{NNP}{NN}
+function;Transfer of Primary Costs to Cost Center/Order;{NN}{IN}{JJ}{NNS}{TO}{NN}{NN}
+event;Labor and salary costs transferred to cost accounting;{NN}{CC}{NN}{NNS}{VBN}{TO}{VB}{NN}
+event;Assigned funds are within tolerance limits;{VBN}{NNS}{VBP}{IN}{NN}{NNS}
+event;Working hours data was analyzed;{VBG}{NNS}{NNS}{VBD}{VBN}
+event;Costs were transferred to Overhead Cost Controlling;{NNS}{VBD}{VBN}{TO}{NN}{NN}{VBG}
+event;Follow-on documents of target application are generated;{JJ}{NNS}{IN}{NN}{NN}{VBP}{VBN}
+event;Budget is updated;{NNP}{VBZ}{VBN}
+event;Internal Activity Should Be Allocated Internally;{JJ}{NN}{MD}{VB}{NNP}{RB}
+event;Working hours data can be transferred directly to target application;{VBG}{NNS}{NNS}{MD}{VB}{VBN}{RB}{TO}{VB}{NN}
+event;Budget is assigned;{NNP}{VBZ}{VBN}
+event;Internal Activity Was Allocated;{JJ}{NN}{VBD}{VBN}
+event;Statistical Key Figures Entered;{JJ}{NN}{NNS}{VBD}
+event;Actual cost recording for period is closed;{JJ}{NN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Open item was detailed;{VB}{NN}{VBD}{VBN}
+event;Posting was allowed despite budget overrun;{VBG}{VBD}{VBN}{IN}{NN}{NN}
+event;Activity Allocation Was Reposted;{NN}{NN}{VBD}{VBN}
+event;Time sheet is to be revised;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Commitment is structured on cost center;{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Funds are reserved;{NNS}{VBP}{VBN}
+event;Working hours data is to be approved;{VBG}{NNS}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Statistical Key Figure Is to Be Transferred from LIS;{JJ}{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Commitment structured on project;{NN}{VBN}{IN}{NN}
+event;Cost-accounting depreciation/ interest transferred to Cost Accounting;{VBG}{NN}{:}{NN}{VBN}{TO}{NN}{NN}
+event;Additional account assignment entered;{JJ}{NN}{NN}{VBD}
+event;Open item is based on order;{VB}{NN}{VBZ}{VBN}{IN}{NN}
+event;Costs Allocated Manually;{NNS}{VBN}{RB}
+event;Funds for anticipated costs are to be set aside;{NNS}{IN}{JJ}{NNS}{VBP}{TO}{VB}{VBN}{RB}
+event;Working hours data is approved;{VBG}{NNS}{NNS}{VBZ}{VBN}
+event;Working hours data is to be analyzed;{VBG}{NNS}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Origin of the costs is uncertain;{NN}{IN}{DT}{NNS}{VBZ}{JJ}
+event;Statistical Key Figure Is to Be Entered Manually;{JJ}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Actual costs incurred are known;{JJ}{NNS}{VBN}{VBP}{VBN}
+event;Reserved funds were reduced;{VBN}{NNS}{VBD}{VBN}
+event;Costs were reposted;{NNS}{VBD}{VBN}
+event;Costs are expected;{NNS}{VBP}{VBN}
+event;Budget is to be updated;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Posting was rejected due to budget overrun;{VBG}{VBD}{VBN}{JJ}{TO}{NN}{NN}
+event;Trip costs must be included in cost accounting;{NN}{NNS}{MD}{VB}{VBN}{IN}{NN}{NN}
+event;Reserved funds are to be reduced;{VBN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Internal Activity Should Be Allocated Internally;{JJ}{NN}{MD}{VB}{NNP}{RB}

@@ -1,0 +1,10 @@
+2257b814fbde20b7246e81e588a966ab;Product Data Distribution
+function;Manual Sending of PDM Objects;{NNP}{IN}{NNP}{NNS}
+function;Document Distribution;{NNP}{NN}
+function;Automatic Sending of PDM Objects;{NNP}{IN}{NNP}{NNS}
+function;Cross-System Product Structure Navigation;{NNP}{NN}{NNP}
+event;Send product data manually;{VB}{NN}{NNS}{RB}
+event;Distribute documents;{VB}{NNS}
+event;Check product data;{VB}{NN}{NNS}
+event;Send product data automatically;{VB}{NN}{NNS}{RB}
+event;Product data distribution is complete;{NN}{NNS}{NN}{VBZ}{JJ}

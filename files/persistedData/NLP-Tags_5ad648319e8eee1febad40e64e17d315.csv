@@ -1,0 +1,49 @@
+5ad648319e8eee1febad40e64e17d315;Fig.39: MOR YAWL model for MunA
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Register request;{NNP}{NN}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Enable concerned service;{JJ}{JJ}{NN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Forward to public light mgmt sys;{RB}{TO}{JJ}{JJ}{NN}{NNS}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Receive call out of bus hours;{VB}{VB}{RP}{IN}{NN}{NNS}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Close case;{JJ}{NN}
+function;Direct to desk;{JJ}{TO}{NN}
+function;Concerns lighting;{NNS}{VBG}
+function;Possible solution;{JJ}{NN}
+function;Update status info;{NNP}{NN}{NN}
+function;Assign categ resp person and dept;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Timeout;{NNP}
+function;Known issue;{VBN}{NN}
+function;Printout receipt;{NNP}{NN}
+function;Send e-mail with issue;{VB}{NN}{IN}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Send message;{VB}{NN}
+function;Let colleague inspect;{VB}{NN}{VB}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Person reachable;{NN}{JJ}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Enter data in the system;{VB}{NNS}{IN}{DT}{NN}
+function;Handle issue;{VB}{NN}
+function;Enter data in public light mgmt sys;{VB}{NNS}{IN}{JJ}{JJ}{NN}{NNS}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Send ackn;{VB}{NN}
+function;Issue signed Invoice;{NN}{VBD}{NNP}
+event;Start case;{NNP}{NN}
+event;urgent;{JJ}
+event;End case;{NNP}{NN}
+event;no;{DT}
+event;not urgent;{RB}{JJ}
+event;no;{DT}
+event;yes;{RB}
+event;no;{DT}
+event;yes;{RB}
+event;yes;{RB}
+event;yes;{RB}
+event;no;{DT}
+event;yes;{RB}

@@ -1,0 +1,17 @@
+038e5d49514e5bcd66d9b4026fb0b233;Fig.16: GBA1 YAWL model for MunH
+function;Send extract;{VB}{NN}
+function;Free;{NNP}
+function;Process payment;{VB}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Print application;{VB}{NN}
+function;Fill in payment data and approve;{VB}{IN}{NN}{NNS}{CC}{VB}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;No payment;{DT}{NN}
+function;Determine fees;{NN}{NNS}
+event;Yes;{UH}
+event;Process end;{VB}{NN}
+event;Start process;{NNP}{NN}
+event;No;{DT}

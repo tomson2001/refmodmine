@@ -1,0 +1,46 @@
+efa6eb30ef0c112da7487a46b87da62a;Consolidation of Investments
+function;Increase/ Reduction in Capitalization;{NN}{:}{NN}{IN}{NN}
+function;Transfer Posting FI-LC;{NN}{VBG}{NN}
+function;Change in Indirect Investment;{NNP}{IN}{JJ}{NN}
+function;Investment Amortization/ Write-Up;{NN}{NN}{:}{NN}
+function;First Consolidation;{NNP}{NN}
+function;Subsequent Consolidation;{JJ}{NN}
+function;Step Acquisition;{VB}{NNP}
+event;Investment amortiz. from local validation must be adjusted in group;{NN}{NN}{.}
+event;Decrease in capitali- zation is to be entered for original company;{NN}{IN}{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}{IN}{JJ}{NN}
+event;Subsequent consolidation was carried out;{JJ}{NN}{VBD}{VBN}{RP}
+event;Subsequent consolidation for propor- tion- ally consolidated company;{JJ}{NN}{IN}{NN}{:}{NN}{:}{NN}{JJ}{NN}
+event;Changes in current year are entered for equity method company;{NNS}{IN}{JJ}{NN}{VBP}{VBN}{IN}{NN}{NN}{NN}
+event;Subseq. consolidation for 20%-50% invest. co.;{NNP}{.}
+event;Increase in investment for direct parent company;{NN}{IN}{NN}{IN}{JJ}{NN}{NN}
+event;Company is consolidated using purchase method or proportional consolidation;{NN}{VBZ}{VBN}{VBG}{NN}{NN}{CC}{JJ}{NN}
+event;Increase/ reduction in capitalization entered;{NN}{:}{NN}{IN}{NN}{VBD}
+event;Company is also parent company;{NN}{VBZ}{RB}{JJ}{NN}
+event;Company is consolidated using purchase method or proportional consolidation;{NN}{VBZ}{VBN}{VBG}{NN}{NN}{CC}{JJ}{NN}
+event;Transfer was posted;{NN}{VBD}{VBN}
+event;Capitalization was increased/ decreased;{NN}{VBD}{VBN}{:}{VBN}
+event;Subsequent consolidation for purchase method company;{JJ}{NN}{IN}{NN}{NN}{NN}
+event;Hidden reserves entered;{JJ}{NNS}{VBD}
+event;Increase/ decrease in capitalizat- ion carr. out;{NN}{:}{VB}{IN}{NN}{:}{NN}{NN}{.}
+event;Currency translation carried out;{NNP}{NN}{VBD}{RP}
+event;Currency translation carried out;{NNP}{NN}{VBD}{RP}
+event;Capital comes from own funds;{NN}{VBZ}{IN}{JJ}{NNS}
+event;Change in indirect investment was made;{NNP}{IN}{JJ}{NN}{VBD}{VBN}
+event;Investment amortization/ write-up was carried out;{NN}{NN}{:}{NN}{VBD}{VBN}{RP}
+event;Currency translation carried out;{NNP}{NN}{VBD}{RP}
+event;Investments are entered in local and group currency;{NNP}{VBP}{VBN}{IN}{JJ}{CC}{NN}{NN}
+event;Investment share up because of third -party purchase;{NN}{NN}{RB}{IN}{IN}{JJ}{:}{NN}{NN}
+event;Investment write-up was entered;{NN}{NN}{VBD}{VBN}
+event;Changes in current year entered for purchase method company;{NNS}{IN}{JJ}{NN}{VBD}{IN}{NN}{NN}{NN}
+event;Transfer posting was created;{NN}{VBG}{VBD}{VBN}
+event;Capital from parent company funds;{NN}{IN}{NN}{NN}{NNS}
+event;Company is included in consolidated fin. statements for the first time;{NN}{VBZ}{VBN}{IN}{JJ}{NN}{.}
+event;Investment write-up from local valuation must be adjusted in group;{NN}{NN}{IN}{JJ}{NN}{MD}{VB}{VBN}{IN}{NN}
+event;Changes for current year are entered for proportionally consolidated co.;{NNS}{IN}{JJ}{NN}{VBP}{VBN}{IN}{RB}{JJ}{NN}{.}
+event;Transfer has occurred in the area of financial assets;{NN}{VBZ}{VBN}{IN}{DT}{NN}{IN}{JJ}{NNS}
+event;First consolidation was carried out;{NNP}{NN}{VBD}{VBN}{RP}
+event;Company is sold to parent company of a different subgroup;{NN}{VBZ}{VBN}{TO}{NN}{NN}{IN}{DT}{JJ}{NN}
+event;Step acquisition entered;{NN}{NN}{VBD}
+event;Step acquisition was carried out;{NN}{NN}{VBD}{VBN}{RP}
+event;Investment amortization was entered;{NN}{NN}{VBD}{VBN}
+event;Equity is entered in local and group currency;{NN}{VBZ}{VBN}{IN}{JJ}{CC}{NN}{NN}

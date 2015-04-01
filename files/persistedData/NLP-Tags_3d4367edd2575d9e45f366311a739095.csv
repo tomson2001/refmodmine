@@ -1,0 +1,6 @@
+3d4367edd2575d9e45f366311a739095;Interest Calculation [A/P]
+function;Vendor Account Balance Interest Calculation;{NNP}{NN}
+function;Calculation of Interest on Arrears - Vendors;{NN}{IN}{NN}{IN}{NNS}{:}{NNS}
+event;Interest to be calculated on account balances;{NN}{TO}{VB}{VBN}{IN}{NN}{NNS}
+event;Interest calculation is completed;{NN}{NN}{VBZ}{VBN}
+event;Interest on arrears to be calculated;{NN}{IN}{NNS}{TO}{VB}{VBN}

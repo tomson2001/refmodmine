@@ -1,0 +1,54 @@
+880d9e6d10061ed1625de2ec974496ca;Fig.31: GBA3 YAWL model for MunC
+function;Free;{NNP}
+function;Archive;{NNP}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Send appropriate department in DMS;{VB}{JJ}{NN}{IN}{NNP}
+function;Produce extract und sign;{VB}{NN}{NN}{NN}
+function;Paid first;{VBN}{RB}
+function;Process payment;{VB}{NN}
+function;Send payment request;{VB}{NN}{NN}
+function;No payment;{DT}{NN}
+function;Go to the end;{VB}{TO}{DT}{NN}
+function;Indicate as processed in DMS;{VB}{IN}{VBN}{IN}{NN}
+function;Decide admissible;{VB}{JJ}
+function;Receive payment;{VB}{NN}
+function;Process continue;{VB}{VB}
+function;Send payment request;{VB}{NN}{NN}
+function;Process continue;{VB}{VB}
+function;Determine fees;{NN}{NNS}
+function;Send extract;{VB}{NN}
+function;Receive payment;{VB}{NN}
+function;No payment;{DT}{NN}
+function;Pay first;{VB}{RB}
+function;Register request;{NNP}{NN}
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Process continue;{VB}{VB}
+function;Process payment;{VB}{NN}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;yes;{RB}
+event;no;{DT}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Decide admissible;{NN}{NN}{TO}{VB}{JJ}
+event;free;{JJ}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;the end;{DT}{NN}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine if copy of ID is present;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+event;yes;{RB}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;not free;{RB}{JJ}
+event;status change to Produce extract and sign;{NN}{NN}{TO}{VB}{NN}{CC}{NN}
+event;not free;{RB}{JJ}
+event;status change to Send appropriate department in DMS;{NN}{NN}{TO}{VB}{JJ}{NN}{IN}{NNP}
+event;status change to Free?;{NN}{NN}{TO}{NNP}{.}
+event;yes;{RB}
+event;yes;{RB}
+event;status change to Register request;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Determine whether requester is entitled;{NN}{NN}{TO}{VB}{IN}{NN}{VBZ}{VBN}
+event;free;{JJ}
+event;status change to Indicate as processed in DMS;{NN}{NN}{TO}{VB}{IN}{VBN}{IN}{NN}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}

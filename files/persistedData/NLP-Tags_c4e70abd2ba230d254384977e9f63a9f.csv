@@ -1,0 +1,10 @@
+c4e70abd2ba230d254384977e9f63a9f;Sales Support (CAS)
+function;Sales Activity Processing;{NNS}{NN}{NN}
+function;Promotion Processing;{NNP}
+event;Direct mailing campaign is processed;{JJ}{NN}{NN}{VBZ}{VBN}
+event;Follow-up sales activity is created;{JJ}{NNS}{NN}{VBZ}{VBN}
+event;Cust. mail. campaign to be carried out;{NNP}{.}
+event;Free-of-charge delivery is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Sales activity is to be processed;{NNS}{NN}{VBZ}{TO}{VB}{VBN}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Sales activity is processed;{NNS}{NN}{VBZ}{VBN}

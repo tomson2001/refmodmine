@@ -1,0 +1,44 @@
+7970f252ff964772b0b20b6e74563177;Preparations for Consolidation
+function;Setting Up Consolidation Rules;{VBG}{RP}{NN}{NNS}
+function;Decentralized Corporate Valuation Postings;{JJ}{JJ}{NN}{NNS}
+function;Decentralized Currency Translation;{JJ}{NN}{NN}
+function;Applying Consolidation Rules;{VBG}{NN}{NNS}
+function;Decentralized Balance Reconciliation;{JJ}{NN}{NNP}
+event;Notification of accounting standards for local valuation has been received;{NN}{IN}{NN}{NNS}{IN}{JJ}{NN}{VBZ}{VBN}{VBN}
+event;Currency translation is to be carried out locally;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RP}{RB}
+event;Data is updated realtime;{NNS}{VBZ}{VBN}{NN}
+event;Group chart of accounts created/ G/L accounts assigned;{NNP}{NN}{IN}{NNS}{VBN}{:}{NN}{NNS}{VBN}
+event;Breakdown by transaction type is prepared;{NN}{IN}{NN}{NN}{VBZ}{VBN}
+event;Rollup is carried out in the same system;{NN}{VBZ}{VBN}{RP}{IN}{DT}{JJ}{NN}
+event;Data is updated realtime;{NNS}{VBZ}{VBN}{NN}
+event;Worksheet analyses are required;{NN}{NNS}{VBP}{VBN}
+event;Breakdown by transaction type is required;{NN}{IN}{NN}{NN}{VBZ}{VBN}
+event;Divestiture of company was posted;{NN}{IN}{NN}{VBD}{VBN}
+event;G/L accounts are assigned to financial statement items;{NN}{NNS}{VBP}{VBN}{TO}{JJ}{NN}{NNS}
+event;Step consolidation is carried out in local consolidation system;{NN}{NN}{VBZ}{VBN}{RP}{IN}{JJ}{NN}{NN}
+event;Data is transferred from FI to R/3 by extract;{NNS}{VBZ}{VBN}{IN}{NN}{TO}{NN}{IN}{NN}
+event;Data is transferred to R/ 2;{NNS}{VBZ}{VBN}{TO}{NN}{:}{CD}
+event;Data is transferred to higher-level subgroup;{NNS}{VBZ}{VBN}{TO}{JJ}{NN}
+event;Local chart of accounts is assigned to corporate chart of accounts;{JJ}{NN}{IN}{NNS}{VBZ}{VBN}{TO}{JJ}{NN}{IN}{NNS}
+event;Currency translation is to be carried out locally;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RP}{RB}
+event;Rollup is carried out in the same system;{NN}{VBZ}{VBN}{RP}{IN}{DT}{JJ}{NN}
+event;Balance reconcil- iation was carried out;{NN}{NN}{:}{NN}{VBD}{VBN}{RP}
+event;Main consolidation process to be started;{NNP}{NN}{NN}{TO}{VB}{VBN}
+event;Balance reconciliation is to be carried out in local FI system;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RP}{IN}{JJ}{NN}{NN}
+event;Realtime update is activated;{NNP}{VBP}{VBZ}{VBN}
+event;Cross-system rollup exists;{NN}{NN}{VBZ}
+event;Data is transferred from FI to R/3 by extract;{NNS}{VBZ}{VBN}{IN}{NN}{TO}{NN}{IN}{NN}
+event;Company has been assigned in master records;{NN}{VBZ}{VBN}{VBN}{IN}{NN}{NNS}
+event;Data is updated realtime;{NNS}{VBZ}{VBN}{NN}
+event;Data is transferred from R/2 by extract;{NNS}{VBZ}{VBN}{IN}{NN}{IN}{NN}
+event;Acquisition of a company was carried out;{NN}{IN}{DT}{NN}{VBD}{VBN}{RP}
+event;Breakdown by company is required;{NN}{IN}{NN}{VBZ}{VBN}
+event;Data is transferred by rollup;{NNS}{VBZ}{VBN}{IN}{NN}
+event;Currency translation is to be carried out centrally;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RP}{RB}
+event;Realtime update using extract from FI is activated;{NNP}{VBP}{VBG}{NN}{IN}{NN}{VBZ}{VBN}
+event;Master data is maintained in local system;{NN}{NNS}{VBZ}{VBN}{IN}{JJ}{NN}
+event;Exchange rates / translation methods are maintained centrally;{NNP}{NNS}{:}{NN}{NNS}{VBP}{VBN}{RB}
+event;Data is transferred from FI to R/3 by extract;{NNS}{VBZ}{VBN}{IN}{NN}{TO}{NN}{IN}{NN}
+event;Items are relevant for elimination;{NNS}{VBP}{JJ}{IN}{NN}
+event;Consolidation policy is to be established;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Group financial state- ment version created; G/L accounts assigned;{NNP}{JJ}{NN}{:}{NN}{NN}{VBN}{:}{NN}{NNS}{VBN}

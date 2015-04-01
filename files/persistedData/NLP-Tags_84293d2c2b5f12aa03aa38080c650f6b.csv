@@ -1,0 +1,7 @@
+84293d2c2b5f12aa03aa38080c650f6b;B.I.052_Event control for stocktaking
+function;Correct inventory level;{JJ}{NN}{NN}
+function;Execute stocktaking;{VB}{VBG}
+event;Inventory discrepancies occured;{NN}{NNS}{VBD}
+event;no Inventory discrepancies occured;{DT}{NN}{NNS}{VBD}
+event;Inventory level corrected;{NN}{NN}{VBN}
+event;Inventory level has reached closing date;{NN}{NN}{VBZ}{VBN}{VBG}{NN}

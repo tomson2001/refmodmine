@@ -1,0 +1,26 @@
+59f4d6ea4dd2372f2e62ccad06a148f2;Third-Party Order Processing
+function;Purchasing;{NNP}
+function;Sales Order;{NNS}{NN}
+function;Billing;{NN}
+function;Risk/ Credit Management;{NN}{:}{NNP}
+function;Goods Receipt;{NNP}
+event;Invoice Verification;{NNP}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Material is released;{NN}{VBZ}{VBN}
+event;Inbound delivery for PO created;{JJ}{NN}{IN}{NNP}{VBD}
+event;Invoice received;{NNP}{VBD}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Quotation reason occurred;{NN}{NN}{VBD}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Purchase order created;{NN}{NN}{VBN}
+event;Invoice list is created;{NNP}{NN}{VBZ}{VBN}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Terms of credit have changed;{NNS}{IN}{NN}{VBP}{VBN}
+event;Goods received;{NNP}{VBD}
+event;Change to terms of credit refused;{NNP}{TO}{NNS}{IN}{NN}{VBD}
+event;Standard order is received;{JJ}{NN}{VBZ}{VBN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Items are cancelled;{NNS}{VBP}{VBN}

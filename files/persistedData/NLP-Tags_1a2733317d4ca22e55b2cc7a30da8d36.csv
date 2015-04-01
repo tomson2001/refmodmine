@@ -1,0 +1,7 @@
+1a2733317d4ca22e55b2cc7a30da8d36;Monitoring of Personnel Appraisal
+function;Monitoring of Personnel Appraisal;{NN}{IN}{NNP}{NN}
+event;Additional implementation actions are required;{JJ}{NN}{NNS}{VBP}{VBN}
+event;Personnel appraisal must be corrected;{NNP}{NN}{MD}{VB}{VBN}
+event;Need to monitor personnel appraisal exists;{VBN}{TO}{VB}{NNS}{NN}{VBZ}
+event;Personnel appraisal system must be corrected;{NNP}{NN}{NN}{MD}{VB}{VBN}
+event;Need for personnel appraisal exists;{VBN}{IN}{NNS}{NN}{VBZ}

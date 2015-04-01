@@ -1,0 +1,13 @@
+270f4c74f5fcb4115afd713eeeda04b8;Process Data Documentation / Process Order Completion
+function;Order Record Archiving;{NNP}
+function;Process Order Archiving / Deletion;{VB}{NNP}{:}{NN}
+function;Batch Record Archiving;{NN}{NNP}
+event;Process order is archived;{VB}{NN}{VBZ}{VBN}
+event;Process order is finally confirmed;{VB}{NN}{VBZ}{RB}{VBN}
+event;Order log is archived;{NNP}{NN}{VBZ}{VBN}
+event;Order log is to be archived;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Process order is finally confirmed;{VB}{NN}{VBZ}{RB}{VBN}
+event;Batch record is to be archived;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Batch record is archived;{NN}{NN}{VBZ}{VBN}
+event;Process order is finally confirmed;{VB}{NN}{VBZ}{RB}{VBN}
+event;Process order is to be archived;{VB}{NN}{VBZ}{TO}{VB}{VBN}

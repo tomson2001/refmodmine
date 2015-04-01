@@ -1,0 +1,41 @@
+1a7a0a1099f99603f3a2fbe80249d1d4;Closing Operations [Asset Accounting]
+function;Integrated Planning in CO;{NNP}{IN}{NNP}
+function;Depreciation Simulation / Forecast;{NN}{NN}{:}{NNP}
+function;Inventory with Automatic Return (Fixed Assets);{NN}{IN}{NNP}{NN}{-LRB-}{JJ}{NNS}{-RRB-}
+function;Preparations for Year-End Closing in Asset Management;{NNS}{IN}{NNP}{NN}{IN}{NNP}
+function;Depreciation posting;{NN}{VBG}
+function;Periodic Reports;{JJ}{NNS}
+function;Fiscal Year Change;{JJ}{NN}{NNP}
+function;Recalculation of Depreciation;{NN}{IN}{NN}
+function;Mass Change;{JJ}{NNP}
+function;Physical Asset Inventory;{JJ}{NNP}
+function;Carry Out Year-End Closing in Asset Management;{VB}{IN}{NNP}{NN}{IN}{NNP}
+event;Physical inventory of fixed assets must be executed using external software;{JJ}{NN}{IN}{JJ}{NNS}{MD}{VB}{VBN}{VBG}{JJ}{NN}
+event;Individual asset should be simulated;{JJ}{NN}{MD}{VB}{JJ}
+event;Physical inventory date in the assets master data updated via BAPI;{JJ}{NN}{NN}{IN}{DT}{NNS}{VBP}{NNS}{VBN}{IN}{NN}
+event;Transactions completed;{NNS}{VBD}
+event;Acquisition posted to Asset Accounting;{NNP}{VBD}{TO}{NNP}
+event;Posting is possible to assets in new fiscal year;{VBG}{VBZ}{JJ}{TO}{NNS}{IN}{JJ}{JJ}{NN}
+event;Simulation is to be car- ried out for portion of fixed assets (future FY);{NN}{VBZ}{TO}{VB}{NN}{:}{VBD}{RP}{IN}{NN}{IN}{JJ}{NNS}{-LRB-}{JJ}{NN}{-RRB-}
+event;G/L accounts were posted;{NN}{NNS}{VBD}{VBN}
+event;[Depreciation posting run was carried out];{-LRB-}{NN}{VBG}{NN}{VBD}{VBN}{RP}{-RRB-}
+event;New fiscal year started;{NNP}{JJ}{NN}{VBD}
+event;Simulation was carried out;{NN}{VBD}{VBN}{RP}
+event;Periodic reports are created;{JJ}{NNS}{VBP}{VBN}
+event;Periodic reporting is required;{JJ}{NN}{VBZ}{VBN}
+event;Depreciation does not correspond to planned P&L statement;{NN}{VBZ}{RB}{VB}{TO}{VBN}{NNP}{NN}
+event;Cumulative past depreciation should be simulated;{JJ}{JJ}{NN}{MD}{VB}{JJ}
+event;Retirement was posted and checked;{NNP}{VBD}{VBN}{CC}{VBN}
+event;Cost-accounting depreciation/ interest transferred to Cost Accounting;{VBG}{NN}{:}{NN}{VBN}{TO}{NN}{NN}
+event;Several asset master records should be changed;{JJ}{NN}{NN}{NNS}{MD}{VB}{VBN}
+event;Planned deprec- iation should be transferred to controlling;{NNP}{NN}{:}{NN}{MD}{VB}{VBN}{TO}{VBG}
+event;Index series updated;{NNP}{NN}{VBN}
+event;Depreciation corresponds to planned P&L statement;{NN}{VBZ}{TO}{VBN}{NNP}{NN}
+event;Mass changes were made;{JJ}{NNS}{VBD}{VBN}
+event;Results of physical inventory are checked;{NNS}{IN}{JJ}{NN}{VBP}{VBN}
+event;Fiscal year is to be closed;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Planned accrued depreciation and interest were transferred to CO;{NNP}{VBN}{NN}{CC}{NN}{VBD}{VBN}{TO}{NNP}
+event;Recalcula- tion of de- preciation was carried out;{NNP}{:}{NN}{IN}{FW}{:}{NN}{VBD}{VBN}{RP}
+event;Depreciation should be posted regularly;{NN}{MD}{VB}{VBN}{RB}
+event;Physical inventory is to be carried out;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Year-end closing program was carried out;{NN}{NN}{NN}{VBD}{VBN}{RP}

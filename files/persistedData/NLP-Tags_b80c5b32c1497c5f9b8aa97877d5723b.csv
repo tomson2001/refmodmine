@@ -1,0 +1,17 @@
+b80c5b32c1497c5f9b8aa97877d5723b;Transaction Processing
+function;Process OTC Interest Rate Instrument (Cap/Floor);{VB}{NNP}{-LRB-}{NNP}{-RRB-}
+function;Settlement;{NNP}
+function;Process OTC Interest Rate Instrument (Swap);{VB}{NNP}{-LRB-}{NNP}{-RRB-}
+function;Order Execution;{NNP}
+function;Process OTC Interest Rate Instrument (FRA);{VB}{NNP}{-LRB-}{NNP}{-RRB-}
+function;Notice;{NNP}
+function;Netting Processing;{VBG}{NN}
+event;OTC interest rate instrument was edited in order status;{NNP}{NN}{NN}{NN}{VBD}{VBN}{IN}{NN}{NN}
+event;OTC derivative interest rate instrument was selected;{NNP}{JJ}{NN}{NN}{NN}{VBD}{VBN}
+event;OTC interest rate instrument exists in contract status;{NNP}{NN}{NN}{NN}{VBZ}{IN}{NN}{NN}
+event;OTC interest rate instrument was terminated;{NNP}{NN}{NN}{NN}{VBD}{VBN}
+event;Netting proposal to be edited;{VBG}{NN}{TO}{VB}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Accrual/ deferral is to be performed;{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}
+event;Termination of derivative instrument was settled;{NN}{IN}{JJ}{NN}{VBD}{VBN}
+event;OTC interest rate instrument to be terminated;{NNP}{NN}{NN}{NN}{TO}{VB}{VBN}

@@ -1,0 +1,21 @@
+34db71428fa5c4dd7a10e1f8fa1b2a9b;Actual Posting
+function;Direct Data Entry;{NNP}
+function;Integration Interface;{NN}{NNP}
+function;Data Transfer;{NNS}{NN}
+event;Data transferred from external systems;{NNS}{VBN}{IN}{JJ}{NNS}
+event;Planning carried out;{NNP}{VBD}{RP}
+event;Document is to be entered for company;{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Document was entered (local);{NNP}{VBD}{VBN}{-LRB-}{JJ}{-RRB-}
+event;Document was entered (local);{NNP}{VBD}{VBN}{-LRB-}{JJ}{-RRB-}
+event;Document was entered (global);{NNP}{VBD}{VBN}{-LRB-}{JJ}{-RRB-}
+event;Document was transferred to FI-Special Ledger;{NNP}{VBD}{VBN}{TO}{JJ}{NNP}
+event;Planning carried out;{NNP}{VBD}{RP}
+event;Document was entered (global);{NNP}{VBD}{VBN}{-LRB-}{JJ}{-RRB-}
+event;Data is to be posted from the CO component;{NNS}{VBZ}{TO}{VB}{VBN}{IN}{DT}{NNP}{NN}
+event;Update data from other SAP components (MM,SD,CO, FI);{NNP}{NNS}{IN}{JJ}{NN}{NNS}{-LRB-}{NN}{,}{NN}{,}{NNP}{,}{NN}{-RRB-}
+event;Data is to be posted from the FI component;{NNS}{VBZ}{TO}{VB}{VBN}{IN}{DT}{NN}{NN}
+event;Statistical key figures should be transferred from CO;{JJ}{JJ}{NNS}{MD}{VB}{VBN}{IN}{NNP}
+event;Document is to be entered for company code;{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Update external data;{NNP}{JJ}{NNS}
+event;Data from the MM component should be follow-up posted;{NNS}{IN}{DT}{NN}{NN}{MD}{VB}{JJ}{VBD}
+event;Data from the SD component should be follow-up posted;{NNS}{IN}{DT}{NN}{NN}{MD}{VB}{JJ}{VBD}

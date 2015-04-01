@@ -1,0 +1,14 @@
+ce86ab05e0c04fa085f26e15010e5cb8;Determination of lowest value
+function;Lowest Value: Determination of Mvt Rate;{JJS}{NN}{:}{NN}{IN}{NNP}
+function;Lowest value: Products;{JJS}{NN}{:}{NNPS}
+function;Lowest Value: Range of Coverage Determination;{JJS}{NN}{:}{NNP}{IN}{NNP}{NN}
+function;Lowest Value: Market Price Analysis;{JJS}{NN}{:}{NNP}{NN}
+function;Lowest Value: Price Variances;{JJS}{NN}{:}{NNPS}
+event;Tax-law-based/ commercial-law-based valuation price in material is determined;{JJ}{:}{JJ}{NN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Tax-law-based/ commercial-law-based valuation price in material is determined;{JJ}{:}{JJ}{NN}{NN}{IN}{NN}{VBZ}{VBN}
+event;List of lowest value-price variances was created;{NN}{IN}{JJS}{NN}{NNS}{VBD}{VBN}
+event;Lowest value has been determined;{JJS}{NN}{VBZ}{VBN}{VBN}
+event;Market price analysis carried out;{NN}{NN}{NN}{VBD}{RP}
+event;Material valuation price updated;{NN}{NN}{NN}{VBN}
+event;Tax-law-based/ commercial-law-based valuation price in material is determined;{JJ}{:}{JJ}{NN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Market price analysis must be carried out;{NN}{NN}{NN}{MD}{VB}{VBN}{RP}

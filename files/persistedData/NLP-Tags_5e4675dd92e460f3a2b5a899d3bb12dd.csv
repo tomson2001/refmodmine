@@ -1,0 +1,16 @@
+5e4675dd92e460f3a2b5a899d3bb12dd;Fig.18: GBA1 YAWL model for MunJ
+function;Send extract;{VB}{NN}
+function;Decide admissible;{VB}{JJ}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Archive;{NNP}
+function;Send to appropriate department;{VB}{TO}{JJ}{NN}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;admissible;{JJ}
+event;status change to Send to appropriate department;{NN}{NN}{TO}{VB}{TO}{JJ}{NN}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;the end;{DT}{NN}
+event;status change to Decide admissible;{NN}{NN}{TO}{VB}{JJ}
+event;not admissible;{RB}{JJ}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}

@@ -1,0 +1,5 @@
+e6c6e30c5f1b3e2ac003abbd28307bc5;Service Entry Sheet
+function;Service Entry Sheet;{NNP}
+event;Service is accepted;{NNP}{VBZ}{VBN}
+event;Service entry sheet is transmitted;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Services are to be entered;{NNPS}{VBP}{TO}{VB}{VBN}

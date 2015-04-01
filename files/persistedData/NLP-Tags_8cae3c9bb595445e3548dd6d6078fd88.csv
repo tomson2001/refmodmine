@@ -1,0 +1,7 @@
+8cae3c9bb595445e3548dd6d6078fd88;Rebate Processing
+function;Rebate Agreements;{NN}{NNS}
+function;Rebate Settlement;{NN}{NNP}
+event;Rebate agreement is to be settled;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Condition is to be processed;{NN}{VBZ}{TO}{VB}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Condition is processed;{NN}{VBZ}{VBN}

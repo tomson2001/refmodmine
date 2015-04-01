@@ -1,0 +1,11 @@
+90ff5a0aa52a486f2b1a3200dd1a36b0;Project Archiving
+function;Delete with Archiving;{VB}{IN}{NN}
+function;Delete Without Archiving;{VB}{IN}{VBG}
+function;Review Archived Data;{NN}{NNP}
+function;Set Deletion Flag;{VB}{NN}{NN}
+event;Deletion without archiving executed;{NN}{IN}{VBG}{VBN}
+event;Archived data must be reviewed;{VBN}{NNS}{MD}{VB}{VBN}
+event;Deletion without archiving executed;{NN}{IN}{VBG}{VBN}
+event;Archived data reviewed;{JJ}{NNS}{VBN}
+event;Deletion with archiving required;{NN}{IN}{NN}{VBN}
+event;Status Complete is set;{NNP}{JJ}{VBZ}{VBN}

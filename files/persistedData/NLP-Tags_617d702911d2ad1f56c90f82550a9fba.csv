@@ -1,0 +1,11 @@
+617d702911d2ad1f56c90f82550a9fba;Service Product Order
+function;Service Product Order Processing;{NNP}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Order generated and delivery opened;{NNP}{VBD}{CC}{NN}{VBD}
+event;Sales and Distribution Document Must Be Created for Service Notification;{NNS}{CC}{NN}{NNP}{MD}{VB}{VBN}{IN}{NNP}
+event;Customer release order received;{NN}{NN}{NN}{VBD}
+event;Expense-related invoice to be created;{JJ}{NN}{TO}{VB}{VBN}
+event;Contract is valid;{NN}{VBZ}{JJ}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}

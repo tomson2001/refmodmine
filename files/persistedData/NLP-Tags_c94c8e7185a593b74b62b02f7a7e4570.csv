@@ -1,0 +1,16 @@
+c94c8e7185a593b74b62b02f7a7e4570;Sending Samples and Advertising Materials
+function;Sales Order;{NNS}{NN}
+function;Billing;{NN}
+function;Transport;{NN}
+function;Shipping;{VBG}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Free-of-charge delivery is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Shipment is Complete;{NN}{VBZ}{JJ}
+event;Deliveries need to be planned;{NNS}{VBP}{TO}{VB}{VBN}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}

@@ -1,0 +1,53 @@
+b219468eb1f3b9cc8af942dcb20ba827;Order
+function;Order Permit;{NNP}
+function;Refurbishment Order Creation/ Processing;{NN}{NN}{NN}{:}{NN}
+function;Material Planning;{NNP}
+function;Order Release;{NNP}
+function;Order Printing;{NNP}
+function;Order Execution;{NNP}
+event;Material reservation can be withdrawn;{NN}{NN}{MD}{VB}{VBN}
+event;General maintenance task list is processed;{NNP}{NN}{NN}{NN}{VBZ}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Material components are assigned directly;{NN}{NNS}{VBP}{VBN}{RB}
+event;Permits Issued;{VBZ}{VBN}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;PM order is created and released;{NN}{NN}{VBZ}{VBN}{CC}{VBN}
+event;Maintenance operation is performed;{NN}{NN}{VBZ}{VBN}
+event;Maintenance order is to be created manually;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Release is refused;{NNP}{VBZ}{VBN}
+event;Order is to be performed;{NN}{VBZ}{TO}{VB}{VBN}
+event;Material reservation for materials to be refubished is generated;{NN}{NN}{IN}{NNS}{TO}{VB}{VBN}{VBZ}{VBN}
+event;Permit is to be assigned;{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance order is released;{NN}{NN}{VBZ}{VBN}
+event;Material BOM is processed;{NN}{NN}{VBZ}{VBN}
+event;Order papers are to be printed;{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Refurbishment order for material/ equipment is to be created;{NN}{NN}{IN}{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}
+event;Material components are assigned via maintenance BOM;{NN}{NNS}{VBP}{VBN}{IN}{NN}{NN}
+event;Operations and Order Must Be Confirmed;{NNP}{CC}{NNP}{MD}{VB}{VBN}
+event;Maintenance order is created;{NN}{NN}{VBZ}{VBN}
+event;Order papers are to be printed;{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Withdrawal of the repairable spare to be refurbished is to be posted;{NN}{IN}{DT}{JJ}{JJ}{TO}{VB}{VBN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance order is to be released;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Equipment must be installed, dismantled or modified;{NN}{MD}{VB}{VBN}{,}{VBN}{CC}{VBN}
+event;Material withdrawal is not required;{NN}{NN}{VBZ}{RB}{VBN}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}
+event;Material components are to be assigned to the operation;{NN}{NNS}{VBP}{TO}{VB}{VBN}{TO}{DT}{NN}
+event;External procurement is provided;{JJ}{NN}{VBZ}{VBN}
+event;Permits are assigned to the order;{NNS}{VBP}{VBN}{TO}{DT}{NN}
+event;Purchase requisitions can be ordered;{NN}{NNS}{MD}{VB}{VBN}
+event;Services are to be entered;{NNPS}{VBP}{TO}{VB}{VBN}
+event;Maintenance order is to be edited;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Capacity requirement is created;{NN}{NN}{VBZ}{VBN}
+event;Order is to be performed;{NN}{VBZ}{TO}{VB}{VBN}
+event;Material components are copied from maintenance task list;{NN}{NNS}{VBP}{VBN}{IN}{NN}{NN}{NN}
+event;Material withdrawal is not required;{NN}{NN}{VBZ}{RB}{VBN}
+event;Capacity is available;{NN}{VBZ}{JJ}
+event;Master data input is not required;{NN}{NNS}{NN}{VBZ}{RB}{VBN}
+event;Maintenance requirement has arisen;{NN}{NN}{VBZ}{VBN}
+event;Capacity situation is to be evaluated;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Repairable spare is to be refurbished;{JJ}{JJ}{VBZ}{TO}{VB}{VBN}
+event;Purchase requisition with vendor has been created;{NN}{NN}{IN}{NN}{VBZ}{VBN}{VBN}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Maintenance order is printed;{NN}{NN}{VBZ}{VBN}

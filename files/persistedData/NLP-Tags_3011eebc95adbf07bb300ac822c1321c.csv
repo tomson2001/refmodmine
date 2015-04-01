@@ -1,0 +1,21 @@
+3011eebc95adbf07bb300ac822c1321c;C.II.056_EPC for the design process
+function;Call of  transactions in order to validate production, quality cost suitability etc.;{NN}{IN}{NNS}{IN}{NN}{TO}{VB}{NN}{,}{NN}{NN}{NN}{NN}{.}
+function;Perform design activity;{VB}{NN}{NN}
+function;Distribution to development teams;{NN}{TO}{NN}{NNS}
+function;Initiate development transaction;{VB}{NN}{NN}
+function;Reservation design room;{NN}{NN}{NN}
+function;Finish subproject;{VB}{NN}
+function;Release design room and route information to other members of development team;{NNP}{NN}{NN}{CC}{NN}{NN}{TO}{JJ}{NNS}{IN}{NN}{NN}
+function;Save design status;{VB}{NN}{NN}
+function;Check if previous transaction is completed;{VB}{IN}{JJ}{NN}{VBZ}{VBN}
+event;Development order release;{NNP}{NN}{NN}
+event;Check succesful;{VB}{JJ}
+event;Validation check successful;{NN}{NN}{JJ}
+event;Validation check negativ;{NN}{NN}{NN}
+event;Check negativ;{VB}{NN}
+event;Reservation succesful;{NN}{JJ}
+event;Design transaction completed;{NN}{NN}{VBD}
+event;Information routed;{NNP}{VBD}
+event;Order distributed;{NNP}{VBN}
+event;Transaction released;{NN}{VBD}
+event;Design activity completed;{NN}{NN}{VBN}

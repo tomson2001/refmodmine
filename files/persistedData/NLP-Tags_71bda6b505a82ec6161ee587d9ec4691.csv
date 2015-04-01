@@ -1,0 +1,12 @@
+71bda6b505a82ec6161ee587d9ec4691;A.II.25,b
+function;F1;{NN}
+function;Reserve Article;{NNP}
+function;Reservation pratly executed;{NN}{NN}{VBD}
+function;Gross-net calculation;{NN}{NN}
+function;Period costing;{NN}{VBG}
+event;E2;{NN}
+event;Reservation completely executed;{NN}{RB}{VBD}
+event;Reservation partly executed;{NN}{RB}{VBD}
+event;Reservation order prepared;{NN}{NN}{VBN}
+event;Data change;{NNS}{VBP}
+event;Scheuled deadline reached;{VBN}{NN}{VBD}

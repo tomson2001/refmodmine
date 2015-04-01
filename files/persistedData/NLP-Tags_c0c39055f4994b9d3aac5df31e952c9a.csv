@@ -1,0 +1,9 @@
+c0c39055f4994b9d3aac5df31e952c9a;Master Data Processing Product Safety
+function;Material Master;{NNP}
+function;Information System;{NNP}
+function;Product Safety;{NNP}
+event;Processing is completed;{NN}{VBZ}{VBN}
+event;Result is displayed;{NN}{VBZ}{VBN}
+event;Drilldown reporting is to be carried out;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;EH+S master data is to be created;{NN}{NN}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Product Safety data is to be processed;{NNP}{NNS}{VBZ}{TO}{VB}{VBN}

@@ -1,0 +1,24 @@
+d6e83a6f2d1155dd42daf3f8bc451cfd;Admission Wuerzburg
+function;receive rejection;{VB}{NN}
+function;fill in online form of application;{NN}{IN}{JJ}{NN}{IN}{NN}
+function;choose uni;{VB}{NNS}
+function;match accepted;{NN}{VBD}
+function;no;{DT}
+function;International;{NNP}
+function;wait for response;{VB}{IN}{NN}
+function;check if has direct university entrance qualification;{NN}{IN}{VBZ}{JJ}{NN}{NN}{NN}
+function;checking for completeness;{VBG}{IN}{NN}
+function;send rejection;{VB}{NN}
+function;fill in printed form of application for international students;{NN}{IN}{VBN}{NN}{IN}{NN}{IN}{JJ}{NNS}
+function;complete;{JJ}
+function;send german application;{VB}{JJ}{NN}
+function;matriculate;{VB}
+function;incomplete;{JJ}
+function;check for DSH;{NN}{IN}{NN}
+function;checking for contentual match;{VBG}{IN}{JJ}{NN}
+function;receive commitment;{VB}{NN}
+function;send commitment;{VB}{NN}
+function;German;{JJ}
+function;send international application;{VB}{JJ}{NN}
+function;precheck of documents;{NN}{IN}{NNS}
+function;match refused;{NN}{VBD}

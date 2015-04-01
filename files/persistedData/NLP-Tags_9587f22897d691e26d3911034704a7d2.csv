@@ -1,0 +1,8 @@
+9587f22897d691e26d3911034704a7d2;Balance Sheet Values
+function;Balance Sheet Values by Account;{NN}{NNP}{NNS}{IN}{NNP}
+event;List of balance sheet values per account was created;{NN}{IN}{NN}{NN}{NNS}{IN}{NN}{VBD}{VBN}
+event;Market price analysis carried out;{NN}{NN}{NN}{VBD}{RP}
+event;Lowest value has been determined;{JJS}{NN}{VBZ}{VBN}{VBN}
+event;FIFO valuation was carried out;{NNP}{NN}{VBD}{VBN}{RP}
+event;LIFO single results were displayed;{NNP}{JJ}{NNS}{VBD}{VBN}
+event;List of balance sheet values per account must be created;{NN}{IN}{NN}{NN}{NNS}{IN}{NN}{MD}{VB}{VBN}

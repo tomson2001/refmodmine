@@ -1,0 +1,26 @@
+699a06193529d20275e7a70671c58b46;Procurement via Subcontracting
+function;Warehouse/ Stores;{NNP}{:}{NNS}
+function;Goods Receipt;{NNP}
+function;Provision of Components;{NN}{IN}{NNP}
+function;Purchase Requisition;{NN}{NN}
+function;Invoice Verification;{NNP}
+function;Purchasing;{NNP}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;TO item confirmed without differences;{TO}{NN}{VBD}{IN}{NNS}
+event;Requirement for material/ external services exists;{NN}{IN}{NN}{:}{JJ}{NNS}{VBZ}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Over/ under-consumption of components reported;{IN}{:}{NN}{IN}{NNS}{VBD}
+event;Invoice received;{NNP}{VBD}
+event;Requisition released for scheduling agreement schedule/SA release;{NN}{VBN}{IN}{NN}{NN}{NN}{NN}
+event;Inbound delivery for PO created;{JJ}{NN}{IN}{NNP}{VBD}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;GR items for components corrected;{NN}{NNS}{IN}{NNS}{VBN}
+event;Shipping notification transmitted;{VBG}{NN}{VBD}
+event;Material is released;{NN}{VBZ}{VBN}
+event;Components to be replenished as per delivery;{NNP}{TO}{VB}{VBN}{IN}{IN}{NN}
+event;Purchase requisition released for contract release order;{NN}{NN}{VBN}{IN}{NN}{NN}{NN}
+event;GR posted;{NN}{VBD}
+event;Purchase requisition released for purchase order;{NN}{NN}{VBN}{IN}{NN}{NN}
+event;Purchase order created;{NN}{NN}{VBN}
+event;Components are to be replenished per goods issue;{NNP}{VBP}{TO}{VB}{VBN}{IN}{NNS}{NN}

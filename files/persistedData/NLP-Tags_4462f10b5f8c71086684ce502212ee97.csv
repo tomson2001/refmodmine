@@ -1,0 +1,8 @@
+4462f10b5f8c71086684ce502212ee97;Call Center Processing
+function;Evaluations (Call Center);{NNS}{-LRB-}{VB}{NNP}{-RRB-}
+function;Front Office;{NN}{NNP}
+event;Call Registered;{VB}{NNP}
+event;Analysis performed;{NN}{VBD}
+event;Evaluations are to be performed;{NNS}{VBP}{TO}{VB}{VBN}
+event;Required Data must be Processed;{NNP}{MD}{VB}{VBN}
+event;Call Processed;{VB}{NNP}

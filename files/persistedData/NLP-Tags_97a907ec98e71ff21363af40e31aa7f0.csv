@@ -1,0 +1,10 @@
+97a907ec98e71ff21363af40e31aa7f0;Inquiry and Offer
+function;Creation of Offer of Business Event Attendances;{NN}{IN}{NN}{IN}{NNPS}
+function;Entry of Inquiry of Business Event Attendee;{NN}{IN}{NNP}{IN}{NNP}
+event;Organizer receives inquiry of business event attendee;{NN}{VBZ}{NN}{IN}{NN}{NN}{NN}
+event;Need for offer of business event attendances exists;{VBN}{IN}{NN}{IN}{NN}{NN}{NNS}{VBZ}
+event;Inquiry of business event attendee is entered;{NNP}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Offer of business event attendances is created;{NN}{IN}{NN}{NN}{NNS}{VBZ}{VBN}
+event;Place for business event attendee is reserved;{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Offer of business event attendances cannot be created;{NN}{IN}{NN}{NN}{NNS}{MD}{RB}{VB}{VBN}
+event;Business event attendee is prebooked;{NN}{NN}{NN}{VBZ}{VBN}

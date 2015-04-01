@@ -1,0 +1,32 @@
+2ee5144124bbd51b7cb8e30e0a2530cc;Fig.13: GBA1 YAWL model for MunE
+function;Fill in e-form;{VB}{IN}{NN}
+function;Decide admissible;{VB}{JJ}
+function;No payment;{DT}{NN}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Process continue;{VB}{VB}
+function;Fill in payment data and approve;{VB}{IN}{NN}{NNS}{CC}{VB}
+function;Send extract;{VB}{NN}
+function;Determine fees;{NN}{NNS}
+function;Archive;{NNP}
+function;Print application;{VB}{NN}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Send to appropriate department;{VB}{TO}{JJ}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Processs payment;{NNP}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+event;status change to Decide admissible;{NN}{NN}{TO}{VB}{JJ}
+event;the end;{DT}{NN}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;status change to Ask customer to pay;{NN}{NN}{TO}{VB}{NN}{TO}{VB}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;yes;{RB}
+event;status change to Print application;{NN}{NN}{TO}{VB}{NN}
+event;status change to Processs payment;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Send to appropriate department;{NN}{NN}{TO}{VB}{TO}{JJ}{NN}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Decide whether to pay;{NN}{NN}{TO}{VB}{IN}{TO}{VB}
+event;admissible;{JJ}
+event;no;{DT}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;not admissible;{RB}{JJ}

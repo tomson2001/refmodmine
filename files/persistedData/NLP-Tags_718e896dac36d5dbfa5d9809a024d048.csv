@@ -1,0 +1,16 @@
+718e896dac36d5dbfa5d9809a024d048;Administration of Benefits Plan Participation
+function;Enrollment in Benefits Plan Participation;{NN}{IN}{NNP}{NN}
+function;Change to Benefits Plan Participation;{NNP}{TO}{NNP}{NN}
+function;Transmission of Benefits Information to Service Provider;{NNP}{IN}{NNP}{TO}{NNP}
+function;Confirmation of Adjustment of Benefits Participation;{NN}{IN}{NNP}{IN}{NNPS}{NN}
+function;Termination of Benefits Plan Participation;{NN}{IN}{NNP}{NN}
+event;Payroll information for benefits service provider exists;{NNP}{NN}{IN}{NNS}{NN}{NN}{VBZ}
+event;Adaptation of benefits participation is transmitted to employee;{NN}{IN}{NNS}{NN}{VBZ}{VBN}{TO}{NN}
+event;Employee participation in benefits is active;{NN}{NN}{IN}{NNS}{VBZ}{JJ}
+event;Benefits information transmitted to service provider;{NNS}{NN}{VBD}{TO}{NN}{NN}
+event;Employee participation in benefits is complete;{NN}{NN}{IN}{NNS}{VBZ}{JJ}
+event;Employee participation in benefits plan is available for enrollment;{NN}{NN}{IN}{NNS}{NN}{VBZ}{JJ}{IN}{NN}
+event;Employee participation in benefits plan is available for changing;{NN}{NN}{IN}{NNS}{NN}{VBZ}{JJ}{IN}{VBG}
+event;Confirmation of adjustment of benefits participation is desired;{NN}{IN}{NN}{IN}{NNS}{NN}{VBZ}{VBN}
+event;Time for transmission of benefits information has occurred;{NNP}{IN}{NN}{IN}{NNS}{NN}{VBZ}{VBN}
+event;Employee participation in benefits plan is available for termination;{NN}{NN}{IN}{NNS}{NN}{VBZ}{JJ}{IN}{NN}

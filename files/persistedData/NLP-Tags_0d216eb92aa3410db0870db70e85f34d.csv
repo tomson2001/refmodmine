@@ -1,0 +1,19 @@
+0d216eb92aa3410db0870db70e85f34d;Warehouse Management
+function;Stock Removal Processing;{NNP}{NN}{NN}
+function;Putaway Processing;{NNP}
+function;Difference Processing;{NN}{NN}
+function;Confirmation;{NN}
+event;Goods movement is posted;{NNP}{NN}{VBZ}{VBN}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Material placed in storage;{NN}{VBN}{IN}{NN}
+event;Transfer order created manually;{NN}{NN}{VBN}{RB}
+event;Physical inventory is to be carried out;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Stock placement should be carried out via WCU;{NNP}{NN}{MD}{VB}{VBN}{RP}{IN}{NNP}
+event;Transfer order created automatically;{NN}{NN}{VBN}{RB}
+event;Difference must be adjusted in Inventory Management;{NN}{MD}{VB}{VBN}{IN}{NNP}
+event;Transfer order created automatically;{NN}{NN}{VBN}{RB}
+event;Transfer order created manually;{NN}{NN}{VBN}{RB}
+event;Stock removal to be carried out via WCU;{NNP}{NN}{TO}{VB}{VBN}{RP}{IN}{NNP}
+event;Material is removed from stock;{NN}{VBZ}{VBN}{IN}{NN}
+event;TO item confirmed without differences;{TO}{NN}{VBD}{IN}{NNS}
+event;Transfer order item with difference exists;{NN}{NN}{NN}{IN}{NN}{VBZ}

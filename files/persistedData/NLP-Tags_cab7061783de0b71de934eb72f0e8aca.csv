@@ -1,0 +1,5 @@
+cab7061783de0b71de934eb72f0e8aca;Goods Receipt
+function;Goods Receipt Processing with Reference;{NNP}{NN}{IN}{NNP}
+event;Inbound delivery entered;{JJ}{NN}{VBD}
+event;Goods received;{NNP}{VBD}
+event;Goods receipt posted;{NNP}{NN}{VBD}

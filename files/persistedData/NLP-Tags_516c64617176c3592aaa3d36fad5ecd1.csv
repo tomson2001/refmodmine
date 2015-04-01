@@ -1,0 +1,5 @@
+516c64617176c3592aaa3d36fad5ecd1;Bill of Exchange Payable
+function;Check/ Bill of Exchange Payable;{VB}{:}{NNP}{IN}{NNP}
+function;Bill of Exchange Payable;{NNP}{IN}{NNP}
+event;Bill of exchange payable posted;{NNP}{IN}{NN}{JJ}{VBD}
+event;Bill of exchange payable to be posted;{NNP}{IN}{NN}{JJ}{TO}{VB}{VBN}

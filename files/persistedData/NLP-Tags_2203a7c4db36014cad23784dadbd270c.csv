@@ -1,0 +1,22 @@
+2203a7c4db36014cad23784dadbd270c;birhtCertificate_p249
+function;Update GBA;{NNP}
+function;Send notifications;{VB}{NNS}
+function;Conform choice of name;{JJ}{NN}{IN}{NN}
+function;Archive documents;{NNP}{NNS}
+function;Scan;{VB}
+function;Return documents 1;{NN}{NNS}{CD}
+function;Search GBA data;{VB}{NNP}{NNS}
+function;Sign certificate;{NN}{NN}
+function;Determine next action;{VB}{JJ}{NN}
+function;Finalize message;{VB}{NN}
+function;Send PL;{VB}{NN}
+function;Check GBA date;{VB}{NNP}{NN}
+function;Send Tb01;{VB}{NN}
+function;Determine GBA municipality;{VB}{NNP}{NN}
+function;Check accuracy;{VB}{NN}
+function;Check identity;{VB}{NN}
+function;Cancel birth notification;{VB}{NN}{NN}
+function;Determine descent;{VB}{NN}
+function;Return documents 2;{NN}{NNS}{CD}
+function;Receive notific. of birth;{VB}{JJ}{.}
+event;End Event;{NN}{NN}

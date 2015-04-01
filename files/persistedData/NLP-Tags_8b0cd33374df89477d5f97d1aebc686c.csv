@@ -1,0 +1,17 @@
+8b0cd33374df89477d5f97d1aebc686c;Period-End Closing
+function;Actual Periodic Reposting;{NNP}{VBG}
+function;Interest Calculation;{NN}{NN}
+function;Earned Value Calculation;{VBN}{NN}{NN}
+function;Actual Process Cost Allocation;{JJ}{VBP}{NN}{NN}
+function;Actual Results Analysis;{JJ}{NNS}{NN}
+function;Actual Settlement;{NNP}
+function;Actual Overhead Costing;{JJ}{NN}{VBG}
+event;Actual overhead calculation to be carried out;{JJ}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Earned value determination required;{VBN}{NN}{NN}{VBN}
+event;Actual settlement required;{JJ}{NN}{VBN}
+event;Actual settlement carried out;{JJ}{NN}{VBD}{RP}
+event;Periodic actual reposting required;{JJ}{JJ}{VBG}{VBN}
+event;Actual process cost allocation required;{JJ}{NN}{NN}{NN}{VBN}
+event;Interest calculation required;{NN}{NN}{VBN}
+event;Actual Periodic Transfer Carried Out;{JJ}{JJ}{NN}{VBD}{IN}
+event;Actual results analysis to be carried out;{JJ}{NNS}{NN}{TO}{VB}{VBN}{RP}

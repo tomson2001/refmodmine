@@ -1,0 +1,5 @@
+617d96d6af08d52cc37ef6cbfeef74b2;B.I.183.b_EPC for toolmaking and tooling control
+function;Providing tool;{VBG}{NN}
+event;Operation released;{NN}{VBD}
+event;Tool provided;{NNP}{VBD}
+event;Tool not provided;{NNP}{RB}{VBD}

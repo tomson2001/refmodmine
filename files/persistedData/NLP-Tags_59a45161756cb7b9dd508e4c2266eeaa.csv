@@ -1,0 +1,6 @@
+59a45161756cb7b9dd508e4c2266eeaa;Internal Project Initiation
+function;Project Approval;{NN}{NN}
+function;Prepare Business Case for Project;{VB}{NNP}{IN}{NNP}
+event;Internal project approved;{JJ}{NN}{VBN}
+event;Project proposal exists;{NNP}{NN}{VBZ}
+event;Documents required for approval exist;{NNS}{VBN}{IN}{NN}{VBP}

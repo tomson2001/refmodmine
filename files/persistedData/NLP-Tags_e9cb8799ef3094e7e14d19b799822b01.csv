@@ -1,0 +1,33 @@
+e9cb8799ef3094e7e14d19b799822b01;Service Order
+function;Order Completion;{NNP}
+function;Overall Completion Confirmation;{JJ}{NNP}{NN}
+function;Maintenance Order Release;{NNP}
+function;Order Execution;{NNP}
+function;Order Settlement;{NNP}
+function;Order Creation and Processing;{NNP}{CC}{NNP}
+event;Services are to be entered;{NNPS}{VBP}{TO}{VB}{VBN}
+event;Service order is released;{NNP}{NN}{VBZ}{VBN}
+event;Order is to be performed;{NN}{VBZ}{TO}{VB}{VBN}
+event;Actual costs are updated to maintenance order;{JJ}{NNS}{VBP}{VBN}{TO}{NN}{NN}
+event;Service order is performed at customer;{NNP}{NN}{VBZ}{VBN}{IN}{NN}
+event;Service order should be created per maint. item;{NNP}{NN}{MD}{VB}{VBN}{IN}{NN}{.}
+event;Service activities are performed internally;{NNP}{NNS}{VBP}{VBN}{RB}
+event;Individual operations are confirmed;{JJ}{NNS}{VBP}{VBN}
+event;Purchase requisitions can be ordered;{NN}{NNS}{MD}{VB}{VBN}
+event;Material reservation can be withdrawn;{NN}{NN}{MD}{VB}{VBN}
+event;Order is settled;{NN}{VBZ}{VBN}
+event;Service order is to be released;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Open material reservations are deleted;{VB}{NN}{NNS}{VBP}{VBN}
+event;General maintenance task list is processed;{NNP}{NN}{NN}{NN}{VBZ}{VBN}
+event;Service Order Completed;{NNP}
+event;Order is closed technically;{NN}{VBZ}{VBN}{RB}
+event;Service order is created and released;{NNP}{NN}{VBZ}{VBN}{CC}{VBN}
+event;Inspection lot is to be created;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Order is to be archived;{NN}{VBZ}{TO}{VB}{VBN}
+event;Service order originates from maintenance plan call;{NNP}{NN}{VBZ}{IN}{NN}{NN}{VBP}
+event;Operations and Order Must Be Confirmed;{NNP}{CC}{NNP}{MD}{VB}{VBN}
+event;Service order is created;{NNP}{NN}{VBZ}{VBN}
+event;Service order should be created manually;{NNP}{NN}{MD}{VB}{VBN}{RB}
+event;Settlement rule is specified;{NNP}{NN}{VBZ}{VBN}
+event;Service Order Should Be Completed;{NNP}{MD}{VB}{VBN}

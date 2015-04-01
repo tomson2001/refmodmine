@@ -1,0 +1,14 @@
+3f3fec8a47c9828ba041edde4179ac91;Monitoring of Personnel Development Planning
+function;Monitoring of Individual Personnel Development Planning;{NN}{IN}{JJ}{NNP}
+function;Monitoring of Career Planning;{NN}{IN}{NNP}
+event;Need for monitoring of career planning exists;{VBN}{IN}{NN}{IN}{NN}{NN}{VBZ}
+event;Need for position formation exists;{VBN}{IN}{NN}{NN}{VBZ}
+event;Need for monitoring of individual personnel development planning exists;{VBN}{IN}{NN}{IN}{JJ}{NNS}{NN}{NN}{VBZ}
+event;Employee career plan must be corrected;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Individual development plan must be corrected;{JJ}{NN}{NN}{MD}{VB}{VBN}
+event;Employee career plan is deactivated;{NN}{NN}{NN}{VBZ}{VBN}
+event;Individual development plan is deactivated;{JJ}{NN}{NN}{VBZ}{VBN}
+event;Need for career planning exists;{VBN}{IN}{NN}{NN}{VBZ}
+event;Personnel development system must be corrected;{NNS}{NN}{NN}{MD}{VB}{VBN}
+event;Need for individual personnel development planning exists;{VBN}{IN}{JJ}{NNS}{NN}{NN}{VBZ}
+event;Additional implementation actions are required;{JJ}{NN}{NNS}{VBP}{VBN}

@@ -1,0 +1,48 @@
+3a14ce7fe1125e2e5151b02755b37485;Personnel Time Management
+function;Personnel time recording;{NNP}{NN}{VBG}
+function;Entry of employee remuneration specifications;{NN}{IN}{NN}{NN}{NNS}
+function;Day evaluation;{NN}{NN}
+function;Processing of personnel time evaluation messages;{NN}{IN}{NNS}{NN}{NN}{NNS}
+function;Personnel time planning;{NNP}{NN}{NN}
+function;Infrastructure setup for personnel time recording;{NN}{NN}{IN}{NNS}{NN}{NN}
+function;Provision of additional personnel time specifications;{NN}{IN}{JJ}{NNS}{NN}{NNS}
+function;Time statement creation;{NNP}{NN}{NN}
+function;Personnel time accounts administration;{NNP}{NN}{VBZ}{NN}
+event;Person-based work schedules are available;{JJ}{NN}{NNS}{VBP}{JJ}
+event;Transfer of planned personnel time specifications as actual is desired;{NN}{IN}{VBN}{NNS}{NN}{NNS}{IN}{JJ}{VBZ}{VBN}
+event;Need for correction of personnel time specifications;{VBN}{IN}{NN}{IN}{NNS}{NN}{NNS}
+event;Performance of personnel time evaluation is desired;{NNP}{IN}{NNS}{NN}{NN}{VBZ}{VBN}
+event;Personnel time evaluation message is available;{NNP}{NN}{NN}{NN}{VBZ}{JJ}
+event;Time statement creation is desired;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Requirement for operative planned working time determination;{NN}{IN}{JJ}{VBN}{VBG}{NN}{NN}
+event;Planned personnel time specifications are available;{NNP}{NNS}{NN}{NNS}{VBP}{JJ}
+event;Need for correction of personnel time quota statement;{VBN}{IN}{NN}{IN}{NNS}{NN}{NN}{NN}
+event;Need for personnel time transfer specification;{VBN}{IN}{NNS}{NN}{NN}{NN}
+event;Need for correction of employee master data;{VBN}{IN}{NN}{IN}{NN}{NN}{NNS}
+event;Need for long-term work scheduling;{VBN}{IN}{JJ}{NN}{NN}
+event;Need for remuneration specifications is available;{VBN}{IN}{NN}{NNS}{VBZ}{JJ}
+event;Personnel cost assignment specification is available;{NNP}{VBD}{NN}{NN}{VBZ}{JJ}
+event;Activity allocation specifications are available;{NN}{NN}{NNS}{VBP}{JJ}
+event;Employee - personnel day times are available;{NN}{:}{NNS}{NN}{NNS}{VBP}{JJ}
+event;Actual personnel time specifications are available;{JJ}{NNS}{NN}{NNS}{VBP}{JJ}
+event;Time remuneration specification is available;{NNP}{NN}{NN}{VBZ}{JJ}
+event;Entry of personnel time specifications is desired;{NN}{IN}{NNS}{NN}{NNS}{VBZ}{VBN}
+event;Personnel time accounts are updated;{NNP}{NN}{NNS}{VBP}{VBN}
+event;Update of personnel time accounts is desired;{NNP}{IN}{NNS}{NN}{NNS}{VBZ}{VBN}
+event;Processing of pers. time evaluation messages is desired;{NN}{IN}{NNS}{.}
+event;Need for personnel time recording infrastructure;{VBN}{IN}{NNS}{NN}{VBG}{NN}
+event;Personnel time recording infrastructure is available;{NNP}{NN}{VBG}{NN}{VBZ}{JJ}
+event;EE - planned working time determination - operative is available;{SYM}{:}{VBN}{VBG}{NN}{NN}{:}{NN}{VBZ}{JJ}
+event;Absence entitlement determination for employee is desired;{NN}{NN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Personnel time account posting is available;{NNP}{NN}{NN}{VBG}{VBZ}{JJ}
+event;Need for operative personnel time scheduling;{VBN}{IN}{JJ}{NNS}{NN}{NN}
+event;External service specifications are available;{JJ}{NN}{NNS}{VBP}{JJ}
+event;Need for absence entitlement compensation;{VBN}{IN}{NN}{NN}{NN}
+event;Activity allocation specifications transmitted;{NN}{NN}{NNS}{VBD}
+event;Need for personnel time evaluation is available;{VBN}{IN}{NNS}{NN}{NN}{VBZ}{JJ}
+event;No need to act because of pers. time evaluation message;{DT}{NN}{TO}{VB}{IN}{IN}{NNS}{.}
+event;Operative remuneration specification is available;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Time statement transmitted to employee;{NNP}{NN}{VBD}{TO}{NN}
+event;Need for personnel time transfer specification;{VBN}{IN}{NNS}{NN}{NN}{NN}
+event;Need to create calendar and work schedule;{VBN}{TO}{VB}{NN}{CC}{NN}{NN}
+event;Transfer of activity allocation specifications is desired;{NN}{IN}{NN}{NN}{NNS}{VBZ}{VBN}

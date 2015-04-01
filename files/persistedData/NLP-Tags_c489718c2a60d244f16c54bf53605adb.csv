@@ -1,0 +1,15 @@
+c489718c2a60d244f16c54bf53605adb;Project Monitoring and Controlling
+function;Forecast Remaining Work;{NNP}{VBG}{NN}
+function;Milestone Trend Analysis;{NN}{NNP}{NN}
+function;Project Progress Analysis;{NNP}{NN}
+function;Automatic Cost Forecast;{NNP}{NN}{NN}
+function;Manual Cost Forecast;{NNP}{NN}{NN}
+function;Forecast Dates;{NN}{VBZ}
+event;Forecast of remaining work required;{NN}{IN}{VBG}{NN}{VBN}
+event;Project monitoring carried out;{NN}{NN}{VBD}{RP}
+event;Project must be monitored;{NN}{MD}{VB}{VBN}
+event;Schedule forecast required;{VB}{NN}{VBN}
+event;Automatic cost forecast to be carried out;{NNP}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Manual cost forecast to be carried out;{JJ}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Project progress analysis required;{NNP}{NN}{NN}{VBN}
+event;Milestone trend analysis to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}

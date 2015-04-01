@@ -1,0 +1,8 @@
+bab3aa488103a658224178ee993d7d54;Design of Enterprise Personnel Appraisal System
+function;Design of Personnel Appraisal System;{NN}{IN}{NNP}{NN}{NN}
+function;Implementation of Personnel Appraisal System;{NN}{IN}{NNP}{NN}{NN}
+event;Personnel appraisal system is implemented;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Additional implementation actions are required;{JJ}{NN}{NNS}{VBP}{VBN}
+event;Personnel appraisal system must be corrected;{NNP}{NN}{NN}{MD}{VB}{VBN}
+event;Need for personnel appraisal system exists;{VBN}{IN}{NNS}{NN}{NN}{VBZ}
+event;Personnel appraisal system is adopted;{NNP}{NN}{NN}{VBZ}{VBN}

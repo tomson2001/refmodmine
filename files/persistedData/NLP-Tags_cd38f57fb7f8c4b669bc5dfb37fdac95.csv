@@ -1,0 +1,44 @@
+cd38f57fb7f8c4b669bc5dfb37fdac95;Fig.20: GBA2 YAWL model MunB
+function;Free;{NNP}
+function;No_payment;{NN}
+function;Receive payment;{VB}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Determine if right product;{VB}{IN}{JJ}{NN}
+function;go to the end;{VB}{TO}{DT}{NN}
+function;Process payment;{VB}{NN}
+function;Call coupon holder;{VB}{NN}{NN}
+function;Determine whether request is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Ask customer whether he has ID;{VB}{NN}{IN}{PRP}{VBZ}{VBN}
+function;Determine whether proof of identify is present;{VB}{IN}{NN}{IN}{VB}{VBZ}{JJ}
+function;Determine fees;{NN}{NNS}
+function;Asc customer to pay;{NN}{NN}{TO}{VB}
+function;Ask customer to bring ID;{VB}{NN}{TO}{VB}{NNP}
+function;Give GBA extract;{VB}{NNP}{NN}
+function;Give receipt;{VB}{NN}
+function;Process continue;{VB}{VB}
+function;Decide whether to go on;{VB}{IN}{TO}{VB}{IN}
+function;Give coupon;{VB}{NN}
+function;Direct to right product;{JJ}{TO}{JJ}{NN}
+function;Ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+event;entitled;{VBN}
+event;not entitled;{RB}{VBN}
+event;status change to Ask customer whether he has ID;{NN}{NN}{TO}{VB}{NN}{IN}{PRP}{VBZ}{VBN}
+event;right product;{JJ}{NN}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;ID present;{NN}{JJ}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Call coupon holder;{NN}{NN}{TO}{VB}{NN}{NN}
+event;no ID present;{DT}{NN}{JJ}
+event;status change to Decide whether to go on;{NN}{NN}{TO}{VB}{IN}{TO}{VB}{IN}
+event;the end;{DT}{NN}
+event;status change to Give GBA extract;{NN}{NN}{TO}{VB}{NNP}{NN}
+event;status change to Give receipt;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine if right product;{NN}{NN}{TO}{VB}{IN}{JJ}{NN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;not free;{RB}{JJ}
+event;status change to Ask customer what product he is requesting;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+event;wrong product;{JJ}{NN}
+event;status change to Free;{NN}{NN}{TO}{NNP}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;no;{DT}
+event;yes;{RB}

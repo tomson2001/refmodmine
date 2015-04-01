@@ -1,0 +1,14 @@
+cd154c97b4f76f4a92680ec1d1d1b804;Direct Capitalization
+function;Update;{NNP}
+function;Procurement and capitalization;{NN}{CC}{NN}
+function;Analysis;{NN}
+function;Blanket Order;{NNP}
+event;Order analysis completed;{NN}{NN}{VBD}
+event;Blanket order created;{NN}{NN}{VBN}
+event;Procurement and capitalization carried out;{NN}{CC}{NN}{VBD}{RP}
+event;Internal order is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Budget is updated;{NNP}{VBZ}{VBN}
+event;Simulation was carried out;{NN}{VBD}{VBN}{RP}
+event;Budget to be updated;{NNP}{TO}{VB}{VBN}
+event;Program analysis completed;{NN}{NN}{VBD}
+event;Planned accrued depreciation and interest were transferred to CO;{NNP}{VBN}{NN}{CC}{NN}{VBD}{VBN}{TO}{NNP}

@@ -1,0 +1,25 @@
+d867e1f89ce4b373dbc64834bf68c82b;Admission FU Berlin
+function;receive rejection;{VB}{NN}
+function;Check Application Complete;{VB}{NN}{JJ}
+function;Check if Bachelor is sufficient;{VB}{IN}{NN}{VBZ}{JJ}
+function;send rejection;{VB}{NN}
+function;Document;{NNP}
+function;Rank with other Applicants;{NNP}{IN}{JJ}{NNS}
+function;Talk to Applicant;{NN}{TO}{NN}
+function;Fill out Application Form;{VB}{RP}{NN}{NN}
+function;Add Certificate of Bachelor Degree;{VB}{NNP}{IN}{NNP}
+function;Set additional requirements;{VB}{JJ}{NNS}
+function;Check Application in Time;{VB}{NN}{IN}{NNP}
+function;send acceptance;{VB}{NN}
+function;Send Application;{VB}{NN}
+function;receive acceptance;{VB}{NN}
+function;Complete and in time?;{JJ}{CC}{IN}{NN}{.}
+function;immatriculate;{JJ}
+function;Check if Bachelors-Grade within top 85%;{VB}{IN}{NN}{IN}{JJ}{CD}{NN}
+function;Hand application over to Examining Board;{VB}{NN}{IN}{TO}{NNP}
+function;complete application;{JJ}{NN}
+function;Receive Application;{VB}{NN}
+function;Add Certificate of german language;{VB}{NNP}{IN}{JJ}{NN}
+function;Invite for Talk;{VB}{IN}{NN}
+function;german?;{NN}{.}
+event;End Event;{NN}{NN}

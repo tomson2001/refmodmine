@@ -1,0 +1,8 @@
+f561278f86d6b9eebf8e741138264a3f;Process Planned Items
+function;Process Planned Items;{VB}{NNP}{NNS}
+function;Create Planned Items;{VB}{NNP}{NNS}
+event;Bank/ customer payment advice for payment inflow/outflow;{NNP}{:}{NN}{NN}{NN}{IN}{NN}{NN}
+event;Planned record created;{NNP}{NN}{VBD}
+event;Planned records to be archived;{NNP}{NNS}{TO}{VB}{VBN}
+event;Planned items to be changed;{NNP}{NNS}{TO}{VB}{VBN}
+event;Planned record processing completed;{NNP}{NN}{NN}{VBN}

@@ -1,0 +1,11 @@
+2e4233ba3c2fa910e7e9b109929c0178;Invoice Verification
+function;Invoice Release;{NNP}
+function;Invoice Overview;{NNP}
+function;Invoice Processing with Reference;{NNP}{IN}{NNP}
+event;Purchase order created;{NN}{NN}{VBN}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Material is released;{NN}{VBZ}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Invoice received;{NNP}{VBD}
+event;Invoice parked;{NNP}{VBD}
+event;Invoice posted;{NNP}{VBD}

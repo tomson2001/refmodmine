@@ -1,0 +1,35 @@
+5db486b34f8592482d670928b61002ec;Budget Planning
+function;Budget Version Processing;{NNP}
+function;Budget Return (Outward by Rollup);{NNP}{NN}{-LRB-}{JJ}{IN}{NN}{-RRB-}
+function;Budget Return (Within Budget Structure/Outward);{NNP}{NN}{-LRB-}{IN}{NNP}{-RRB-}
+function;Budget Supplement (Top Down/ Bottom Up);{NNP}{-LRB-}{NNP}{:}{NNP}{IN}{-RRB-}
+function;Budget Supplement (Bottom Up through Rollup);{NNP}{-LRB-}{NNP}{IN}{IN}{NN}{-RRB-}
+function;Budget Transfer;{NNP}{NN}
+function;Copy CO Plan for FM Budget;{VB}{NNP}{IN}{NNP}
+function;Budget Release (Top Down/ Bottom Up);{NNP}{-LRB-}{NNP}{:}{NNP}{IN}{-RRB-}
+function;Original Budget Processing (Top Down/Bottom Up);{JJ}{NN}{NN}{-LRB-}{JJ}{NNP}{IN}{-RRB-}
+function;Budget Release (Bottom Up Using Rollup);{NNP}{-LRB-}{NNP}{IN}{VBG}{NN}{-RRB-}
+function;Editing Commitment Item Group;{VBG}{NN}{NNP}
+function;Budget Structure Processing;{NNP}{NN}{NN}
+function;Original Budget Processing (Bottom Up through Rollup);{NNP}{-LRB-}{NNP}{IN}{IN}{NN}{-RRB-}
+function;Automatic Budget Processing;{NNP}
+event;Budget structure edited;{NNP}{NN}{VBD}
+event;Budget supplement (bottom up) to be carried out;{NNP}{NN}{-LRB-}{NN}{IN}{-RRB-}{TO}{VB}{VBN}{RP}
+event;Change master data/ structure;{NNP}{NN}{NNS}{:}{NN}
+event;Commitment item group edited;{NN}{NN}{NN}{VBD}
+event;Budget release (bottom up by rollup) to be carried out;{NNP}{NN}{-LRB-}{NN}{RP}{IN}{NN}{-RRB-}{TO}{VB}{VBN}{RP}
+event;Budget transfer to be carried out;{NNP}{NN}{TO}{VB}{VBN}{RP}
+event;Budget return (internal) to be carried out;{NNP}{NN}{-LRB-}{JJ}{-RRB-}{TO}{VB}{VBN}{RP}
+event;Budget supplement (top down) to be carried out;{NNP}{NN}{-LRB-}{NN}{IN}{-RRB-}{TO}{VB}{VBN}{RP}
+event;Original budget (bottom up/rollup) to be processed;{JJ}{NN}{-LRB-}{NN}{NN}{-RRB-}{TO}{VB}{VBN}
+event;Budget execution due;{NNP}{NN}{JJ}
+event;Budget return (outwards) to be carried out;{NNP}{NN}{-LRB-}{RB}{-RRB-}{TO}{VB}{VBN}{RP}
+event;Budget must be planned;{NNP}{MD}{VB}{VBN}
+event;Budgeting must be executed with structure;{NNP}{MD}{VB}{VBN}{IN}{NN}
+event;Budget data from CO plan values to be adopted;{NNP}{NNS}{IN}{NNP}{NN}{NNS}{TO}{VB}{VBN}
+event;Original budget (top down/ bottom up) to be processed;{JJ}{NN}{-LRB-}{NN}{IN}{:}{NN}{RP}{-RRB-}{TO}{VB}{VBN}
+event;Budget version edited;{NNP}{NN}{VBD}
+event;Budget release available;{NNP}{NN}{JJ}
+event;Budgeting must be executed in several versions;{NNP}{MD}{VB}{VBN}{IN}{JJ}{NNS}
+event;Budget release (top down/ bottom up) to be carried out;{NNP}{NN}{-LRB-}{NN}{IN}{:}{NN}{RP}{-RRB-}{TO}{VB}{VBN}{RP}
+event;Funds must be estimated;{NNS}{MD}{VB}{VBN}

@@ -1,0 +1,7 @@
+6fc1ffe427eef56a7ef7aeaabea02cef;Specification
+function;Product Specification;{NNP}
+function;Technical detail specification;{NNP}{NN}{NN}
+function;Specification of functions;{NN}{IN}{NNS}
+event;Carry out product development;{VB}{RP}{NN}{NN}
+event;Specification is to be described in detail;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Create product draft;{VB}{NN}{NN}

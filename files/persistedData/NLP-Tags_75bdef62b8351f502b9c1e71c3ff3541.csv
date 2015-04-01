@@ -1,0 +1,18 @@
+75bdef62b8351f502b9c1e71c3ff3541;Collaboration
+function;Processing the Configuration Folder;{NN}{DT}{NNP}
+function;Status Tracking;{NNP}
+function;Upload Objects;{VB}{NNS}
+function;Offline Object Processing;{NNP}
+function;Object Transfer;{NNP}{NN}
+function;Review;{NN}
+function;Download Objects;{VB}{NNS}
+function;Object Comparison;{NNP}{NN}
+event;Query current status;{NNP}{JJ}{NN}
+event;Object processing is complete;{NN}{NN}{VBZ}{JJ}
+event;Changes should be adopted;{NNS}{MD}{VB}{VBN}
+event;Objects processed must be sent for review;{NNS}{VBN}{MD}{VB}{VBN}{IN}{NN}
+event;Compare processed objects with the originals;{VB}{VBN}{NNS}{IN}{DT}{NNS}
+event;Collaborative object processing required;{JJ}{NN}{NN}{VBN}
+event;Select objects for processing;{NNP}{NNS}{IN}{NN}
+event;Collaborative object processing is complete;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Objects to be processed;{NNS}{TO}{VB}{VBN}

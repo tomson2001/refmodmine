@@ -1,0 +1,52 @@
+cee3ce42c0dcbb2010de02aef1f7dc6f;Fig.46: MOR YAWL model for MunH
+function;E-mail address known;{NN}{NN}{VBN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Send letter with status info about issue;{VB}{NN}{IN}{NN}{NN}{IN}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Process continue;{VB}{VB}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Update status info;{NNP}{NN}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Fill in info about contact;{VB}{IN}{NN}{IN}{NN}
+function;Handle issue;{VB}{NN}
+function;Possible solution;{JJ}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Receive mail regarding issue;{VB}{NN}{VBG}{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Record in DMS;{VB}{IN}{NNP}
+function;Assign categ resp person and dept;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Close case;{JJ}{NN}
+function;Send e-mail with status info about issue;{VB}{NN}{IN}{NN}{NN}{IN}{NN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Known issue;{VBN}{NN}
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Send ackn;{VB}{NN}
+function;Start case;{NNP}{NN}
+function;Redirect to e-form;{VB}{TO}{VB}
+event;status change to Ask cust what product he is there for;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+event;yes;{RB}
+event;no;{DT}
+event;status change to Enter data about issue;{NN}{NN}{TO}{VB}{NNS}{IN}{NN}
+event;status change to Transmit handling problem;{NN}{NN}{TO}{VB}{VBG}{NN}
+event;status change to Close case;{NN}{NN}{TO}{VB}{NN}
+event;status change to;{NN}{NN}{TO}
+event;yes;{RB}
+event;status change to Enter data about the informer;{NN}{NN}{TO}{VB}{NNS}{IN}{DT}{NN}
+event;status change to Receive mail regarding issue;{NN}{NN}{TO}{VB}{NN}{VBG}{NN}
+event;status change to Known issue;{NN}{NN}{TO}{VBN}{NN}
+event;status change Update status info;{NN}{NN}{NNP}{NN}{NN}
+event;yes;{RB}
+event;status change to Receive confirmation;{NN}{NN}{TO}{VB}{NN}
+event;status change to Record in DMS;{NN}{NN}{TO}{NNP}{IN}{NNP}
+event;status change to Assign categ resp person and dept;{NN}{NN}{TO}{VB}{NN}{NN}{NN}{CC}{NN}
+event;status change to Fill in contact info;{NN}{NN}{TO}{VB}{IN}{NN}{NN}
+event;status change to Send ackn;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;status change to Possible solution;{NN}{NN}{TO}{JJ}{NN}
+event;the end;{DT}{NN}
+event;status change to Receive call during bus hours;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NNS}
+event;no;{DT}
+event;status change to E-mailstatus change to E-mail_address_known_address_known;{NN}{NN}{TO}{NN}{NN}{TO}{NN}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Redirect to e-form;{NN}{NN}{TO}{VB}{TO}{VB}

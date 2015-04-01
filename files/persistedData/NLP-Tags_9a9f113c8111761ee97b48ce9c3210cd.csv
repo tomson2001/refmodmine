@@ -1,0 +1,34 @@
+9a9f113c8111761ee97b48ce9c3210cd;Fig.42: MOR YAWL model for MunD
+function;Handle issue;{VB}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Printout receipt;{NNP}{NN}
+function;Issue signed invoice;{NN}{VBD}{NN}
+function;Enter Data about issue;{VB}{NNS}{IN}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Send e-mail with issue;{VB}{NN}{IN}{NN}
+function;Direct to desk;{JJ}{TO}{NN}
+function;Contact field service;{NN}{NN}{NN}
+function;Urgent issue;{JJ}{NN}
+function;Assign categ resp person and dept;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Close case;{JJ}{NN}
+function;Enter data about the Informer 1;{VB}{NNS}{IN}{DT}{NNP}{CD}
+function;Fill in contract info;{VB}{IN}{NN}{NN}
+function;Fill in info about issue info about issue;{VB}{IN}{NN}{IN}{NN}{NN}{IN}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Update status info;{NNP}{NN}{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Issue concerning contractor;{NN}{VBG}{NN}
+function;Known issue;{VBN}{NN}
+function;Send ackn;{VB}{NN}
+function;Enter data about issue 1;{VB}{NNS}{IN}{NN}{CD}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+event;Start case;{NNP}{NN}
+event;Case closed;{NNP}{VBD}
+event;no;{DT}
+event;no;{DT}
+event;yes;{RB}
+event;yes;{RB}
+event;no;{DT}
+event;yes;{RB}

@@ -1,0 +1,5 @@
+3db1ebd57aafdc0d2043b3a4db3a710a;B.I.187_EPC for warehouse control
+function;Reservation and making components available;{NN}{CC}{VBG}{NNS}{JJ}
+event;Some components not available;{DT}{NNS}{RB}{JJ}
+event;Components available;{NNP}{JJ}
+event;Order released;{NNP}{VBD}

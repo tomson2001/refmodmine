@@ -1,0 +1,17 @@
+cf0487f90f6d0a6a1068039805c63c51;Compensation Planning
+function;Compensation Planning Check;{NNP}{VB}
+function;Implementation of Compensation Planning;{NN}{IN}{NNP}
+function;Compensation Planning;{NNP}
+function;Preparation of Compensation Planning;{NN}{IN}{NNP}
+event;Compensation plan is approved;{NNP}{NN}{VBZ}{VBN}
+event;Compensation Planning Specifications Approved;{NNPS}{VBD}
+event;Requirement for Compensation Planning Preparation;{NN}{IN}{NNP}
+event;Benefits offer must be adapted for employee;{NNS}{VBP}{MD}{VB}{VBN}{IN}{NN}
+event;Requirement for Correction of Specifications of Compensation Planning;{NN}{IN}{NN}{IN}{NNS}{IN}{NNP}
+event;Requirement for Compensation Planning Check;{NN}{IN}{NNP}{VB}
+event;Need to correct compensation plan exists;{VBN}{TO}{VB}{NN}{NN}{VBZ}
+event;Payroll accounting specifications changed;{NNP}{NN}{NNS}{VBD}
+event;Employee notified of compensation adjustment;{NN}{VBN}{IN}{NN}{NN}
+event;Need for compensation planning exists;{VBN}{IN}{NN}{NN}{VBZ}
+event;Compensation plan is implemented;{NNP}{NN}{VBZ}{VBN}
+event;No need to act regarding compensation planning;{DT}{NN}{TO}{VB}{VBG}{NN}{NN}

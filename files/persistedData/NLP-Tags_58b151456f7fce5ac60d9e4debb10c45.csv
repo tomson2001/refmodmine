@@ -1,0 +1,14 @@
+58b151456f7fce5ac60d9e4debb10c45;Stocks [TR-SE]
+function;Transaction Processing;{NN}{NN}
+function;Accounting;{NN}
+function;Closing Operations;{NN}{NNP}
+event;Payment is transferred by EDI;{NN}{VBZ}{VBN}{IN}{NN}
+event;Payment medium transferred;{NN}{NN}{VBN}
+event;Payment advice is sent;{NN}{NN}{VBZ}{VBN}
+event;G/L posting was generated;{NN}{VBG}{VBD}{VBN}
+event;Stock transaction was selected;{NNP}{NN}{VBD}{VBN}
+event;Customer open items were generated;{NN}{JJ}{NNS}{VBD}{VBN}
+event;Transaction was posted;{NN}{VBD}{VBN}
+event;Valuation to be performed;{NN}{TO}{VB}{VBN}
+event;Valuation flows were generated;{NN}{NNS}{VBD}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}

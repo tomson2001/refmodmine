@@ -1,0 +1,58 @@
+41fefe5d6e2e259fce90e2bb27fceaa4;Fig.48: MOR YAWL model for MunJ
+function;Assign categ resp person and dep;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Report when and what;{NNP}{WRB}{CC}{WP}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Known issue;{VBN}{NN}
+function;Process continue 1;{VB}{VB}{CD}
+function;Information complete;{NN}{JJ}
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Close case;{JJ}{NN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Handle issue;{VB}{NN}
+function;Start case;{NNP}{NN}
+function;Process continue 2;{VB}{VB}{CD}
+function;Ask for more information;{VB}{IN}{JJR}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Contact person reporting issue;{NN}{NN}{VBG}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Receive mail regarding issue;{VB}{NN}{VBG}{NN}
+function;Person asked for feedback;{NN}{VBD}{IN}{NN}
+function;Possible solution;{JJ}{NN}
+function;Process continue;{VB}{VB}
+function;Information complete 1;{NN}{JJ}{CD}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+event;status change to Information complete;{NN}{NN}{TO}{NNP}{JJ}
+event;status change to Enter data about issue;{NN}{NN}{TO}{VB}{NNS}{IN}{NN}
+event;no;{DT}
+event;status change to Possible solution;{NN}{NN}{TO}{JJ}{NN}
+event;status change to Receive call during bus hours;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NNS}
+event;yes;{RB}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}
+event;no;{DT}
+event;yes;{RB}
+event;status change to Enter data about the informer;{NN}{NN}{TO}{VB}{NNS}{IN}{DT}{NN}
+event;yes;{RB}
+event;status change to Fill in info about issue;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NN}
+event;yes;{RB}
+event;status change to Fill in contact info;{NN}{NN}{TO}{VB}{IN}{NN}{NN}
+event;status change to Need to plan in batch;{NN}{NN}{TO}{VBN}{TO}{VB}{IN}{NN}
+event;status change to Transmit handling problem;{NN}{NN}{TO}{VB}{VBG}{NN}
+event;no;{DT}
+event;status change to Receive mail regarding issue;{NN}{NN}{TO}{VB}{NN}{VBG}{NN}
+event;yes;{RB}
+event;status change to Person asked for feedback;{NN}{NN}{TO}{NN}{VBD}{IN}{NN}
+event;status change to Receive confirmation;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;no;{DT}
+event;status change to Contact person reporting issue;{NN}{NN}{TO}{NN}{NN}{VBG}{NN}
+event;the end;{DT}{NN}
+event;status change to Known issue;{NN}{NN}{TO}{VBN}{NN}
+event;yes;{RB}
+event;status change to Information complete 1;{NN}{NN}{TO}{NNP}{JJ}{CD}
+event;no;{DT}

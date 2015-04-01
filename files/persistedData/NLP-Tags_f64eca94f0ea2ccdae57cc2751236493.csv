@@ -1,0 +1,15 @@
+f64eca94f0ea2ccdae57cc2751236493;Spare Parts Order
+function;Spare Parts Quotation Processing;{JJ}{NNP}
+function;Spare Parts Order Processing;{JJ}{NNP}
+event;Sales and Distribution Document Must Be Created for Service Notification;{NNS}{CC}{NN}{NNP}{MD}{VB}{VBN}{IN}{NNP}
+event;Quotation items are rejected;{NN}{NNS}{VBP}{VBN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Order is to be Created from Contact;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Generate sales order-related billing document;{VB}{NNS}{JJ}{NN}{NN}
+event;Quotation is monitored;{NN}{VBZ}{VBN}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Quotation is to be created from contact;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Document blocked due to insufficent hedge;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Order generated and delivery opened;{NNP}{VBD}{CC}{NN}{VBD}
+event;Quotation is valid;{NN}{VBZ}{JJ}

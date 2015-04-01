@@ -1,0 +1,17 @@
+311b1d817f7064aa1290c005462e41c5;Certificate Creation
+function;Creation of a Quality Certificate;{NN}{IN}{DT}{NNP}
+function;Edit Recipient of Quality Certificate;{NNP}{IN}{NNP}
+function;Certificate Profile and Profile Assignment;{NN}{NNP}{CC}{NNP}
+event;Certificate based on standard form;{NN}{VBN}{IN}{JJ}{NN}
+event;Quality certificate is released for use;{JJ}{NN}{VBZ}{VBN}{IN}{NN}
+event;Certificate has to be created for delivery item;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Certificate request exists;{NN}{NN}{VBZ}
+event;Certificate should be printed on request;{NN}{MD}{VB}{VBN}{IN}{NN}
+event;Certificate recipient is to be created;{NN}{JJ}{VBZ}{TO}{VB}{VBN}
+event;New certificate to be created;{NNP}{NN}{TO}{VB}{VBN}
+event;Certificate profile assignment exists;{NN}{NN}{NN}{VBZ}
+event;Customer requires certificate;{NN}{VBZ}{NN}
+event;Certificate creation for delivery item is triggered;{NN}{NN}{IN}{NN}{NN}{VBZ}{VBN}
+event;Certificate archived;{NN}{VBD}
+event;Customer requires certificate;{NN}{VBZ}{NN}
+event;Further copy of certificate required;{JJ}{NN}{IN}{NN}{VBN}

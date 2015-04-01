@@ -1,0 +1,14 @@
+b656e55afd83bff9336f8e96fd15357e;Warehouse Management
+function;Stock Removal Processing;{NNP}{NN}{NN}
+function;Confirmation of Removal f. Storage;{NN}{IN}{NN}{NN}{NN}
+function;Difference Processing;{NN}{NN}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Transfer order item with difference exists;{NN}{NN}{NN}{IN}{NN}{VBZ}
+event;Transfer order created automatically;{NN}{NN}{VBN}{RB}
+event;Physical inventory is to be carried out;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Transfer order created manually;{NN}{NN}{VBN}{RB}
+event;Material is removed from stock;{NN}{VBZ}{VBN}{IN}{NN}
+event;Difference must be adjusted in Inventory Management;{NN}{MD}{VB}{VBN}{IN}{NNP}
+event;TO item confirmed without differences;{TO}{NN}{VBD}{IN}{NNS}
+event;Stock removal to be carried out via WCU;{NNP}{NN}{TO}{VB}{VBN}{RP}{IN}{NNP}
+event;Goods movement is posted;{NNP}{NN}{VBZ}{VBN}

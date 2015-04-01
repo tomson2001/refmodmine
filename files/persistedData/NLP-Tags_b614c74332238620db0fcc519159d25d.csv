@@ -1,0 +1,27 @@
+b614c74332238620db0fcc519159d25d;A.II.25,d
+function;F1;{NN}
+function;F2;{NN}
+function;Correct inventory level;{JJ}{NN}{NN}
+function;Coordination between design specifications and requirements definition;{NN}{IN}{NN}{NNS}{CC}{NNS}{NN}
+function;Parallel processing of implementation;{JJ}{NN}{IN}{NN}
+function;Creation of subprojects according to subprocesses;{NN}{IN}{NNS}{VBG}{TO}{NNS}
+function;Definition of project organization;{NN}{IN}{NN}{NN}
+function;Analysis of the weaknesses using the process chain analysis;{NN}{IN}{DT}{NNS}{VBG}{DT}{NN}{NN}{NN}
+function;Parallel development of ARIS requirements definitions per subproject;{JJ}{NN}{IN}{NN}{NNS}{NNS}{IN}{NN}
+function;Developme nt of a rough target concept according to ARIS;{JJ}{NNS}{IN}{DT}{JJ}{NN}{NN}{VBG}{TO}{NN}
+function;Parallel definition of design specification of all subprojects;{JJ}{NN}{IN}{NN}{NN}{IN}{DT}{NNS}
+function;Coordination between all implementations with the requirements of the design specification;{NN}{IN}{DT}{NNS}{IN}{DT}{NNS}{IN}{DT}{NN}{NN}
+event;Inventory level corrected;{NN}{NN}{VBN}
+event;Subprojects established;{NNS}{VBD}
+event;Coordination completed;{NN}{VBD}
+event;Weaknesses identified;{NNS}{VBD}
+event;Project for further processing identified;{NN}{IN}{JJ}{NN}{VBD}
+event;Feedback to requirements definition;{NN}{TO}{NNS}{NN}
+event;Project started;{NN}{VBD}
+event;Design specification prepared;{NN}{NN}{VBN}
+event;Project finished;{NN}{VBD}
+event;Strategy of design specification determined;{NN}{IN}{NN}{NN}{VBD}
+event;Requirements definitions of all subprojects developed;{NNS}{NNS}{IN}{DT}{NNS}{VBD}
+event;Feedback to design specification;{NN}{TO}{VB}{NN}
+event;Project organization defined;{NN}{NN}{VBN}
+event;Coordination completed;{NN}{VBD}

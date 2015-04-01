@@ -1,0 +1,6 @@
+7bdff04ec70d9caf47bba4b229070cea;Dangerous Goods
+function;Dangerous Goods Master Processing;{JJ}{NNP}
+function;Dangerous Goods Master Distribution;{JJ}{NNP}{NN}
+event;Dangerous goods master is to be processed;{JJ}{NNS}{NN}{VBZ}{TO}{VB}{VBN}
+event;Processing is completed;{NN}{VBZ}{VBN}
+event;Dangerous goods master is to be distributed;{JJ}{NNS}{NN}{VBZ}{TO}{VB}{VBN}

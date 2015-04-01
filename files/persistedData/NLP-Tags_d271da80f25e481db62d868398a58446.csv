@@ -1,0 +1,12 @@
+d271da80f25e481db62d868398a58446;Pre-Sales Handling
+function;Customer Inquiry;{NN}{NNP}
+function;Sales Support (CAS);{NNS}{NN}{-LRB-}{NN}{-RRB-}
+event;Cust. mail. campaign to be carried out;{NNP}{.}
+event;Inquiry is created;{NNP}{VBZ}{VBN}
+event;Direct mailing campaign is processed;{JJ}{NN}{NN}{VBZ}{VBN}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Free-of-charge delivery is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Inquiry items are rejected;{NNP}{NNS}{VBP}{VBN}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Customer inquires about products;{NN}{VBZ}{IN}{NNS}
+event;Sales activity is processed;{NNS}{NN}{VBZ}{VBN}

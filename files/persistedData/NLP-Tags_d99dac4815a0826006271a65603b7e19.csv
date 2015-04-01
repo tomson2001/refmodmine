@@ -1,0 +1,32 @@
+d99dac4815a0826006271a65603b7e19;Fig.10: GBA1 YAWL model for MunB
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Check request in Digital Desk;{VB}{NN}{IN}{NNP}
+function;Send extract;{VB}{NN}
+function;Sent mail to Central Desk;{JJ}{NN}{TO}{NNP}
+function;Process payment;{VB}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Process continue;{VB}{VB}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Fill in payment data and approve;{VB}{IN}{NN}{NNS}{CC}{VB}
+function;Determine fees;{NN}{NNS}
+function;Indicate in the system as paid via the Internet;{VB}{IN}{DT}{NN}{IN}{VBN}{IN}{DT}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Archive;{NNP}
+function;No payment;{DT}{NN}
+function;Process payment in Finance;{VB}{NN}{IN}{NNP}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;status change to Indicate in the system as paid via the Internet;{NN}{NN}{TO}{VB}{IN}{DT}{NN}{IN}{VBN}{IN}{DT}{NN}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;no;{DT}
+event;status change to Produce extract and sign;{NN}{NN}{TO}{VB}{NN}{CC}{NN}
+event;status change to Send mail to Central Desk;{NN}{NN}{TO}{VB}{NN}{TO}{NNP}
+event;status change to Decide whether to pay;{NN}{NN}{TO}{VB}{IN}{TO}{VB}
+event;yes;{RB}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Process payment in Finance;{NN}{NN}{TO}{VB}{NN}{IN}{NNP}
+event;the end;{DT}{NN}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Ask customer to pay;{NN}{NN}{TO}{VB}{NN}{TO}{VB}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;status change to Check request in Digital Desk;{NN}{NN}{TO}{VB}{NN}{IN}{NNP}

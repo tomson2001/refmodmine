@@ -1,0 +1,78 @@
+ccda2778ae052b9abaa7a7839db76967;Fig.65: WABO2 YAWL model for MunG
+function;Archive final decision;{NNP}{JJ}{NN}
+function;Sign final decision;{NN}{JJ}{NN}
+function;Test adm fire department;{NN}{NN}{NN}{NN}
+function;Send negative decision;{VB}{JJ}{NN}
+function;Format intention to refuse;{NN}{NN}{TO}{VB}
+function;Publish decision;{VB}{NN}
+function;Ask adjustment of request;{VB}{NN}{IN}{NN}
+function;Hold hearing;{VB}{NN}
+function;Archive negative decision;{NNP}{JJ}{NN}
+function;Collect admissibility tests;{VB}{NN}{NNS}
+function;Test adm urban planning;{NN}{NN}{JJ}{NN}
+function;Forward to appropriate authority;{RB}{TO}{JJ}{NN}
+function;Send procedure confirmation;{VB}{NN}{NN}
+function;Assign investigating officer;{VB}{VBG}{NN}
+function;Waiting for info;{VBG}{IN}{NN}
+function;Check urban plan;{VB}{JJ}{NN}
+function;Refuse permit;{VB}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Publish final decision;{VB}{JJ}{NN}
+function;Process result;{VB}{NN}
+function;Send final decision;{VB}{JJ}{NN}
+function;Publish notice request;{VB}{NN}{NN}
+function;Determine procedure period;{NN}{NN}{NN}
+function;Waiting for VVGB;{VBG}{IN}{NN}
+function;VVGB required;{NN}{VBD}
+function;Ask for advice;{VB}{IN}{NN}
+function;Check for contradictions;{VB}{IN}{NNS}
+function;Check completeness;{VB}{NN}
+function;Register;{NNP}
+function;Check wealth;{VB}{NN}
+function;Send decision;{VB}{NN}
+function;Notify advisors;{VB}{NNS}
+function;Check building regulation;{VB}{NN}{NN}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;Ask additional info;{VB}{JJ}{NN}
+function;Applicant decides to reconsider application;{NN}{VBZ}{TO}{VB}{NN}
+function;Archive decision;{NNP}{NN}
+function;Sign decision;{NN}{NN}
+function;Waiting for comments;{VBG}{IN}{NNS}
+function;Informally check completeness;{RB}{VB}{NN}
+function;Publish negative decision;{VB}{JJ}{NN}
+function;Test adm wealth;{NN}{NN}{NN}
+function;Right authority;{RB}{NN}
+function;Positive advice;{JJ}{NN}
+function;Ask VVGB;{VB}{NNP}
+function;Check fire safety;{VB}{NN}{NN}
+function;Prepare concept decision;{VB}{NN}{NN}
+function;Contact customer;{NN}{NN}
+function;Conclude decision;{VB}{NN}
+function;Send acknowledgment;{VB}{NN}
+function;Negative advice;{JJ}{NN}
+function;Test admissibility;{NN}{NN}
+function;Hearing requested;{NN}{VBD}
+function;Test adm architecture advisor;{NN}{NN}{NN}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+event;Start case;{NNP}{NN}
+event;Time for advice expired;{NNP}{IN}{NN}{VBD}
+event;yes;{RB}
+event;no;{DT}
+event;yes;{RB}
+event;Receive requested info;{VB}{VBN}{NN}
+event;no;{DT}
+event;yes;{RB}
+event;VVGB time expired;{NNP}{NN}{VBD}
+event;yes;{RB}
+event;no;{DT}
+event;Time for info expired;{NNP}{IN}{NN}{VBD}
+event;complete;{JJ}
+event;End case;{NNP}{NN}
+event;yes;{RB}
+event;no;{DT}
+event;no;{DT}
+event;yes;{RB}
+event;Receive VVGB;{VB}{NN}
+event;Receive advice;{VB}{NN}
+event;not complete;{RB}{VB}
+event;no;{DT}

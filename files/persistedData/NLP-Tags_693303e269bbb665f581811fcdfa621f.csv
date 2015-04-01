@@ -1,0 +1,12 @@
+693303e269bbb665f581811fcdfa621f;Period-End Closing: Material Ledger
+function;Allocation of Follow-Up Costs to Semifinished and Finished Products;{NN}{IN}{JJ}{NNS}{TO}{VBN}{CC}{NNPS}
+function;Product Cost Analysis in Actual Costing;{NN}{NN}{NN}{IN}{NNP}{VBG}
+function;Material Price Determination;{NNP}{NN}
+function;Price Update in Actual Costing;{NN}{NNP}{IN}{NNP}{VBG}
+event;Material is settled;{NN}{VBZ}{VBN}
+event;Control measures taken based on variances;{NN}{NNS}{VBN}{VBN}{IN}{NNS}
+event;Follow-up costs allocated;{JJ}{NNS}{VBN}
+event;Production order settled to warehouse;{NN}{NN}{VBD}{TO}{NN}
+event;Price updated in actual costing;{NN}{VBN}{IN}{JJ}{VBG}
+event;Cost Object Hierarchy Settled;{NN}{NNP}{VBD}
+event;Product cost collector settled;{NN}{NN}{NN}{VBD}

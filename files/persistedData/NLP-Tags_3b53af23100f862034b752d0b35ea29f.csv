@@ -1,0 +1,28 @@
+3b53af23100f862034b752d0b35ea29f;Service Charge Settlement
+function;Ordering of SCS-relevant material;{VBG}{IN}{JJ}{NN}
+function;D-Tape Import;{NNP}{NN}
+function;Cost Collector Generator;{NN}{NNP}
+function;External Settlement Result Posting;{JJ}{NNP}{NN}{NN}
+function;ML-Tape Creation;{JJ}{NN}
+function;A-Tape Import;{NNP}{NN}
+function;Measurement Document Creation;{NNP}
+function;Carrying Out Service Charge Settlement;{VBG}{IN}{NNP}
+event;Correspondence on SCS was carried out;{NN}{IN}{NNP}{VBD}{VBN}{RP}
+event;Enter purchase order in non-SAP system;{VB}{NN}{NN}{IN}{JJ}{NN}
+event;Stt. company should be informed of cost data;{NN}{.}
+event;Copy consumer number of settlement company to lease-out;{VB}{NN}{NN}{IN}{NN}{NN}{TO}{NN}
+event;Post external heating expenses settlement;{NNP}{JJ}{NN}{NNS}{NN}
+event;Meas. documents were entered;{NNP}{.}
+event;Create purchase order in MM;{VB}{NN}{NN}{IN}{NN}
+event;;
+event;Adjustment of advance payments/ flat rates should be carried out;{NNP}{IN}{NN}{NNS}{:}{JJ}{NNS}{MD}{VB}{VBN}{RP}
+event;Consumpt.depen- dent apport- ioning acc. to meter readings;{SYM}{:}{NN}{NN}{:}{VBG}{NN}{.}
+event;Meter reading list exists;{NN}{NN}{NN}{VBZ}
+event;Vendor invoices- /recurring docu- ments were posted on stt. unit;{NN}{NNS}{:}{:}{VBG}{NN}{:}{NNS}{VBD}{VBN}{IN}{NN}{.}
+event;Vendor invoices- /recurring docu- ments were posted on stt. unit;{NN}{NNS}{:}{:}{VBG}{NN}{:}{NNS}{VBD}{VBN}{IN}{NN}{.}
+event;Settlement company provide D-tape;{NNP}{NN}{VBP}{NN}
+event;Heating expense settlement to be made via an external settlement company;{NN}{NN}{NN}{TO}{VB}{VBN}{IN}{DT}{JJ}{NN}{NN}
+event;Post external settlement result;{NNP}{JJ}{NN}{NN}
+event;Release settlement units for posting;{NNP}{NN}{NNS}{IN}{VBG}
+event;Send M/L tape;{VB}{NNP}{NN}
+event;Data medium exchange was carried out;{NNS}{NN}{NN}{VBD}{VBN}{RP}

@@ -1,0 +1,16 @@
+d1eb8a6d879a0a3d8551a78a718a0073;Forex Spot, Forward and Swap Transactions [TR-FX]
+function;Closing Operations;{NN}{NNP}
+function;Transaction Processing;{NN}{NN}
+function;Accounting;{NN}
+event;Payment is transferred by EDI;{NN}{VBZ}{VBN}{IN}{NN}
+event;Payment advice is sent;{NN}{NN}{VBZ}{VBN}
+event;Currency swap was chosen;{NNP}{NN}{VBD}{VBN}
+event;Forex spot transaction, forex forward transaction was selected;{NNP}{NN}{NN}{,}{NN}{RB}{NN}{VBD}{VBN}
+event;Transaction is to be rolled over;{NN}{VBZ}{TO}{VB}{VBN}{IN}
+event;Valuation flows were generated;{NN}{NNS}{VBD}{VBN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Transaction is to be settled prematurely;{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Customer open items were generated;{NN}{JJ}{NNS}{VBD}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Payment medium transferred;{NN}{NN}{VBN}
+event;G/L posting was generated;{NN}{VBG}{VBD}{VBN}

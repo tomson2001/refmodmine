@@ -1,0 +1,17 @@
+f08da2551c8561c8816b3e95d5aa4ad4;Materials Procurement and Service Processing
+function;Goods Issue Processing;{NNP}
+function;Delivery from Project;{NN}{IN}{NN}
+function;Goods Receipt Processing with Reference;{NNP}{NN}{IN}{NNP}
+function;Service Entry;{NNP}
+function;Purchase order processing;{NN}{NN}{NN}
+function;Processing Purchase Requisitions for Projects;{NN}{NN}{NNS}{IN}{NNS}
+event;Service is accepted;{NNP}{VBZ}{VBN}
+event;Material withdrawal posting required;{NN}{NN}{VBG}{VBN}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Purchase requisition must be created;{NN}{NN}{MD}{VB}{VBN}
+event;Purchase order is to be created;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Purchase order created;{NN}{NN}{VBN}
+event;Delivery from project is to be created;{NN}{IN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Material has arrived;{NN}{VBZ}{VBN}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Activity to be entered;{NN}{TO}{VB}{VBN}

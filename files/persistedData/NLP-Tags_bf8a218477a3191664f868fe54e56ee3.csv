@@ -1,0 +1,17 @@
+bf8a218477a3191664f868fe54e56ee3;Goods Movements
+function;Goods Receipt Processing for Returnable Material;{NNP}{IN}{NNP}
+function;Goods Issue Processing for Serviceable Material;{NNP}{IN}{NNP}
+function;Goods Issue Processing for Returnable Material;{NNP}{IN}{NNP}
+function;Goods Receipt Processing for Serviceable Material;{NNP}{IN}{NNP}
+event;Goods receipt is to be posted;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Service is completed;{NNP}{VBZ}{VBN}
+event;Material is Available on Loan;{NN}{VBZ}{JJ}{IN}{NN}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;GR at goods recipient carried out;{NN}{IN}{NNS}{JJ}{VBD}{RP}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Goods receipt is to be posted;{NNP}{NN}{VBZ}{TO}{VB}{VBN}

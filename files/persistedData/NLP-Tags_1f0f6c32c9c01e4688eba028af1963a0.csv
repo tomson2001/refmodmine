@@ -1,0 +1,24 @@
+1f0f6c32c9c01e4688eba028af1963a0;Fig.12: GBA1 YAWL model for MunD
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Process continue;{VB}{VB}
+function;Archive;{NNP}
+function;process payment;{NN}{NN}
+function;Determine fees;{NN}{NNS}
+function;Fill in payment data and approve;{VB}{IN}{NN}{NNS}{CC}{VB}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;No payment;{DT}{NN}
+function;Send extract;{VB}{NN}
+event;status change to Produce extract and sign;{NN}{NN}{TO}{VB}{NN}{CC}{NN}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;the end;{DT}{NN}
+event;yes;{RB}
+event;status change to Ask customer to pay;{NN}{NN}{TO}{VB}{NN}{TO}{VB}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Decide whether to pay;{NN}{NN}{TO}{VB}{IN}{TO}{VB}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;no;{DT}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}

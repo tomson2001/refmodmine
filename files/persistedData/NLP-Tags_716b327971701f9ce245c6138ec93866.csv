@@ -1,0 +1,9 @@
+716b327971701f9ce245c6138ec93866;B.II.032_EPC of the JIT sales process
+function;Provide products;{VB}{NNS}
+function;Provide transport capacity;{VB}{NN}{NN}
+function;Transport;{NN}
+function;Inform customer about shipping;{VB}{NN}{IN}{NN}
+event;Transport capacity provided;{NN}{NN}{VBN}
+event;Customer release;{NN}{NN}
+event;Products provided;{NNPS}{VBD}
+event;Received by customer;{VBN}{IN}{NN}

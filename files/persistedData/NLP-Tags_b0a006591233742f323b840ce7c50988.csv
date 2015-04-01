@@ -1,0 +1,5 @@
+b0a006591233742f323b840ce7c50988;Calculation of Net Remuneration
+function;Calculation of Net Remuneration;{NN}{IN}{JJ}{NN}
+event;Net remuneration exists;{JJ}{NN}{VBZ}
+event;Settlement amounts for further benefits exist;{NNP}{VBZ}{IN}{JJ}{NNS}{VBP}
+event;Characterized emplyment tax amounts exist;{VBN}{JJ}{NN}{NNS}{VBP}

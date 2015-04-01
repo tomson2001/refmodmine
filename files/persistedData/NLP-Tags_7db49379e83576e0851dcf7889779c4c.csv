@@ -1,0 +1,19 @@
+7db49379e83576e0851dcf7889779c4c;Preference Processing
+function;Vendor Declaration Compression;{NNP}
+function;Vendor Declaration Dunning;{NNP}
+function;Vendor Declaration Processing;{NNP}
+function;Vendor Declaration Request;{NNP}
+function;Preference Determination;{NN}{NN}
+event;Compression according to trading goods is to be carried out;{NN}{VBG}{TO}{NN}{NNS}{VBZ}{TO}{VB}{VBN}{RP}
+event;Collective determination is to carried out;{JJ}{NN}{VBZ}{TO}{VBN}{RP}
+event;Out-of-date vendor declarations are to be created;{JJ}{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Individual determination is to be carried out;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Vendor declarations are dunned;{NN}{NNS}{VBP}{VBN}
+event;Vendor declarations are processed;{NN}{NNS}{VBP}{VBN}
+event;Vendor declarations are to be processed;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Purchasing Info Records are Updated;{NNPS}{VBP}{VBN}
+event;Out-of-date vendor declarations are created;{JJ}{NN}{NNS}{VBP}{VBN}
+event;Vendor declarations are to be dunned;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Compression to be carried out according to indicator;{NN}{TO}{VB}{VBN}{RP}{VBG}{TO}{NN}
+event;Costing is carried out;{VBG}{VBZ}{VBN}{RP}
+event;Vendor declarations are compressed;{NN}{NNS}{VBP}{VBN}

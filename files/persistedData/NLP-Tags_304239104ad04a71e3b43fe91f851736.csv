@@ -1,0 +1,8 @@
+304239104ad04a71e3b43fe91f851736;Provision of Components
+function;Delivery Processing;{NN}{NN}
+function;Goods Issue Processing;{NNP}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Components to be replenished as per delivery;{NNP}{TO}{VB}{VBN}{IN}{IN}{NN}
+event;Components are to be replenished per goods issue;{NNP}{VBP}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Material is issued;{NN}{VBZ}{VBN}

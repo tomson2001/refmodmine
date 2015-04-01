@@ -1,0 +1,10 @@
+7073b133a84d79b886e0a0b228462258;Closing Operations
+function;Realized Gains/ Losses;{VBN}{NNS}{:}{NNS}
+function;Key Date Valuation;{NN}{NN}{NN}
+event;Transaction was posted;{NN}{VBD}{VBN}
+event;Realized gains/ losses to be determined;{VBN}{NNS}{:}{NNS}{TO}{VB}{VBN}
+event;Flows from realized gains/ losses were generated;{NNS}{IN}{VBN}{NNS}{:}{NNS}{VBD}{VBN}
+event;List of realized gains/ losses was output;{NN}{IN}{VBN}{NNS}{:}{NNS}{VBD}{NN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Key date valuation carried out;{NN}{NN}{NN}{VBD}{RP}
+event;Valuation flows were generated;{NN}{NNS}{VBD}{VBN}

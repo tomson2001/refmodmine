@@ -1,0 +1,23 @@
+7b71bcfe259b99ec251de8d2088ee17e;birhtCertificate_p33
+function;Trial in court of International Affairs;{NN}{IN}{NN}{IN}{NNPS}
+function;Receive the citizen decision;{VB}{DT}{NN}{NN}
+function;Define the name;{VB}{DT}{NN}
+function;Check if it is mother's first baby;{VB}{IN}{PRP}{VBZ}{NN}{POS}{JJ}{NN}
+function;Check if she was younger than 30 at the baby's birthday;{VB}{IN}{PRP}{VBD}{JJR}{IN}{CD}{IN}{DT}{NN}{POS}{NN}
+function;Registration in children's home;{NN}{IN}{NNS}{POS}{NN}
+function;Send birth certificate to parents;{VB}{NN}{NN}{TO}{NNS}
+function;Registration in one's place;{NN}{IN}{CD}{POS}{NN}
+function;Inform civil court;{VB}{JJ}{NN}
+function;Send the request about money benefit;{VB}{DT}{NN}{IN}{NN}{NN}
+function;Request information;{NN}{NN}
+function;Check parent's nationality;{VB}{NN}{POS}{NN}
+function;Check on parents;{VB}{IN}{NNS}
+function;Check data;{VB}{NNS}
+function;Execute the maternal capital and put the money for 18 years into statebank;{VB}{DT}{JJ}{NN}{CC}{VBD}{DT}{NN}{IN}{CD}{NNS}{IN}{NN}
+function;Trial;{NN}
+function;Register baby as russian citizen;{NNP}{NN}{IN}{JJ}{NN}
+function;Getting a citizenship stamp on birth certificate;{VBG}{DT}{NN}{NN}{IN}{NN}{NN}
+function;Register citizenship of baby;{NNP}{NN}{IN}{NN}
+function;Send the information;{VB}{DT}{NN}
+function;Formalize the month payment;{VB}{DT}{NN}{NN}
+function;Create birth certificate;{VB}{NN}{NN}

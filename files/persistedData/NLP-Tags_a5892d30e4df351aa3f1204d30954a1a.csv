@@ -1,0 +1,13 @@
+a5892d30e4df351aa3f1204d30954a1a;Project Planning
+function;Shift Planning;{NN}{NNP}
+function;Project Scheduling;{NN}{NN}
+function;Project Release;{NNP}
+function;Cost Planning in Networks;{NN}{NNP}{IN}{NNP}
+function;Project Structuring;{NN}{VBG}
+function;Budget Allocation;{NNP}
+function;Budget Release;{NNP}
+function;Cost Planning in Work Breakdown Structure;{NN}{NNP}{IN}{NNP}{NN}
+event;Define project data;{VB}{NN}{NNS}
+event;Release project planning;{NNP}{NN}{NN}
+event;Carry out project development in the project;{VB}{RP}{NN}{NN}{IN}{DT}{NN}
+event;Carry out product development;{VB}{RP}{NN}{NN}

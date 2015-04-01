@@ -1,0 +1,6 @@
+7eb30366b2ab1a2877454e52cfbcae5c;Agent
+function;Exposure Log Processing;{NN}{NN}{NN}
+function;Agent Processing;{NNP}
+event;Agents in the enterprise are to be entered;{NNS}{IN}{DT}{NN}{VBP}{TO}{VB}{VBN}
+event;Create standard operating procedure;{VB}{JJ}{NN}{NN}
+event;Agents are to be assigned to exposure logs;{NNS}{VBP}{TO}{VB}{VBN}{TO}{NN}{NNS}

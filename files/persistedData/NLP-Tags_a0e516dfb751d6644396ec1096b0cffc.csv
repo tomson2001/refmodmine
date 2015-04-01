@@ -1,0 +1,28 @@
+a0e516dfb751d6644396ec1096b0cffc;Rental
+function;Lease-Out Activation;{NNP}{NN}
+function;Offer Processing;{NN}{NN}
+function;Lease-Out Processing;{NNP}
+function;Rental Unit - Application Assignment;{JJ}{NN}{:}{NN}{NN}
+function;Application/ Rental Request Processing;{NN}{:}{JJ}{NNP}
+function;Notice Processing;{NNP}
+function;Lease-Out Renewal;{NNP}
+function;Rental Unit Inspection;{JJ}{NNP}
+event;Maintenance task or similar was determined and follow-up action initiated;{NN}{NN}{CC}{JJ}{VBD}{VBN}{CC}{JJ}{NN}{VBN}
+event;Rental end has been reached;{JJ}{NN}{VBZ}{VBN}{VBN}
+event;A new rental end was determined;{DT}{JJ}{JJ}{NN}{VBD}{VBN}
+event;Release rental collateral;{NNP}{JJ}{NN}
+event;Lease-out should be processed;{NN}{MD}{VB}{VBN}
+event;Assignment made;{NN}{VBD}
+event;Application- /rental request should be processed;{NN}{:}{:}{JJ}{NN}{MD}{VB}{VBN}
+event;Offer should be processed;{NN}{MD}{VB}{VBN}
+event;Carry out debit position;{VB}{RP}{NN}{NN}
+event;Application- /rental request was created;{NN}{:}{:}{JJ}{NN}{VBD}{VBN}
+event;RU assignment - make rental request;{NN}{NN}{:}{VB}{JJ}{NN}
+event;Offer is transferred to the lease-out;{NN}{VBZ}{VBN}{TO}{DT}{NN}
+event;Landlord serves notice;{NN}{VBZ}{NN}
+event;If required, tenant-rented object to be rented;{IN}{VBN}{,}{JJ}{NN}{TO}{VB}{VBN}
+event;RA should participate in debit position;{NN}{MD}{VB}{IN}{NN}{NN}
+event;Rental Deposit Release;{JJ}{NNP}
+event;Inspect rental unit;{VB}{JJ}{NN}
+event;Renew lease-outs;{VB}{NNS}
+event;Notice was served by the tenant;{NNP}{VBD}{VBN}{IN}{DT}{NN}

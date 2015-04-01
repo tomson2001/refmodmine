@@ -1,0 +1,27 @@
+2b01c5da168e892a13d137f80d048f87;Quality Inspection for the Technical Object
+function;Usage Decision;{NN}{NN}
+function;Defects Recording;{NNS}{NNP}
+function;Inspection Lot Creation;{NNP}{NN}{NN}
+function;Results Recording;{NNS}{NNP}
+event;Inspection lot is to be created;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Inspection completion is to be forced;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Inspection results are copied to general characteristics;{NNP}{NNS}{VBP}{VBN}{TO}{JJ}{NNS}
+event;Enter defects from the operation;{VB}{NNS}{IN}{DT}{NN}
+event;QMIS updated;{NNS}{VBN}
+event;All characteristics are closed;{DT}{NNS}{VBP}{VBN}
+event;Enter defects from the inspection lot;{VB}{NNS}{IN}{DT}{NN}{NN}
+event;Quality notification is activated from defects;{JJ}{NN}{VBZ}{VBN}{IN}{NNS}
+event;Usage decision is documented;{NN}{NN}{VBZ}{VBN}
+event;Defect is recorded;{NN}{VBZ}{VBN}
+event;Results for the technical object are to be recorded;{NNS}{IN}{DT}{JJ}{NN}{VBP}{TO}{VB}{VBN}
+event;PM order comes from maintenance call;{NN}{NN}{VBZ}{IN}{NN}{NN}
+event;Inspection lot is to be created manually;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Inspection completion is carried out;{NNP}{NN}{VBZ}{VBN}{RP}
+event;Follow-up action is triggered;{JJ}{NN}{VBZ}{VBN}
+event;Recorded defects are closed;{VBN}{NNS}{VBP}{VBN}
+event;Enter characteristic defects;{VB}{JJ}{NNS}
+event;Enter defects from the inspection lot;{VB}{NNS}{IN}{DT}{NN}{NN}
+event;Enter defects from the operation;{VB}{NNS}{IN}{DT}{NN}
+event;Enter characteristic defects;{VB}{JJ}{NNS}
+event;Data is updated;{NNS}{VBZ}{VBN}
+event;Confirmation for maintenance order is to be made;{NN}{IN}{NN}{NN}{VBZ}{TO}{VB}{VBN}

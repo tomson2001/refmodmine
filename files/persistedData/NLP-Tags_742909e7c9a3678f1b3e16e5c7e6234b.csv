@@ -1,0 +1,105 @@
+742909e7c9a3678f1b3e16e5c7e6234b;Fig.70: WNMO YAWL model for MunB
+function;Ask GGD for a consult;{VB}{NNP}{IN}{DT}{VBP}
+function;Get customer;{VB}{NN}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Determine offer;{NN}{NN}
+function;Perform consult;{VB}{VB}
+function;Assess need for house visit and medical advice;{VB}{NN}{IN}{NN}{NN}{CC}{JJ}{NN}
+function;Enter request;{VB}{NN}
+function;Archive;{NNP}
+function;Plan examination with customer;{NNP}{NN}{IN}{NN}
+function;Receive offers;{VB}{NNS}
+function;Offer previous file to IPB;{NN}{JJ}{NN}{TO}{NNP}
+function;Compromise on the arrangement;{NN}{IN}{DT}{NN}
+function;Need quotation;{VBN}{NN}
+function;Customer requests to seek bids;{NN}{NNS}{TO}{VB}{NNS}
+function;Decide about the report;{VB}{IN}{DT}{NN}
+function;Record request ISD;{VB}{NN}{NN}
+function;Determine care provider to approach;{VB}{NN}{NN}{TO}{NN}
+function;Copy card;{VB}{NN}
+function;Formulate decision;{VB}{NN}
+function;Go through app;{VB}{IN}{NN}
+function;Perform fitting;{VB}{JJ}
+function;Solve problems;{VB}{NNS}
+function;Send invoice;{VB}{NN}
+function;Report to reception;{NNP}{TO}{NN}
+function;Archive;{NNP}
+function;Examine customer;{VB}{NN}
+function;Carry out house visit;{VB}{RP}{NN}{NN}
+function;Concerns disabled parking card;{NNS}{JJ}{NN}{NN}
+function;Pay full invoice;{VB}{JJ}{NN}
+function;Formulate rejection letter;{VB}{NN}{NN}
+function;Case-specific tasks complete;{JJ}{NNS}{JJ}
+function;Request a fitting;{VB}{DT}{JJ}
+function;Assign to available consultant;{VB}{TO}{JJ}{NN}
+function;Send order;{VB}{NN}
+function;Make GBA extract;{VB}{NNP}{NN}
+function;Check application form;{VB}{NN}{NN}
+function;Send application form;{VB}{NN}{NN}
+function;Add parking card to Central Desk file;{VB}{NN}{NN}{TO}{NNP}{NN}
+function;Higher than EUR 10000;{JJR}{IN}{$}{CD}
+function;Pay part of invoice;{VB}{NN}{IN}{NN}
+function;Copy GGD report;{VB}{NN}{NN}
+function;Give card to customer;{VB}{NN}{TO}{NN}
+function;Give application form;{VB}{NN}{NN}
+function;Make preliminary decision;{VB}{JJ}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Sign parking card or municipality;{NN}{NN}{NN}{CC}{NN}
+function;Request cost estimation for modification;{NN}{NN}{NN}{IN}{NN}
+function;Determine amount;{NN}{NN}
+function;Look for alternative living space;{VB}{IN}{JJ}{NN}{NN}
+function;Send recomm;{VB}{NN}
+function;Execute order;{VB}{NN}
+function;Record request in DMS;{VB}{NN}{IN}{NNP}
+function;Compare invoice to record;{VB}{NN}{TO}{NN}
+function;Pass on form digital copy to Central Desk;{VB}{IN}{NN}{JJ}{NN}{TO}{NNP}
+function;Process in the system;{VB}{IN}{DT}{NN}
+function;Receive request ISD;{VB}{NN}{NN}
+function;Contact customer;{NN}{NN}
+function;Record request;{VB}{NN}
+function;Ask customer to come sign parking card;{VB}{NN}{TO}{VB}{NN}{NN}{NN}
+function;Send request to ISD;{VB}{NN}{TO}{NN}
+function;Pass on form hard copy to Central Desk;{VB}{IN}{NN}{JJ}{NN}{TO}{NNP}
+function;Start perform case specific tasks;{NNP}{VB}{NN}{JJ}{NNS}
+function;Estimate costs;{NNP}{NNS}
+function;Obtain quotes;{VB}{NNS}
+function;Prepare invalid parking card;{VB}{JJ}{NN}{NN}
+function;Get in contact about wrong charges;{VB}{IN}{NN}{IN}{JJ}{NNS}
+function;Copy decision;{VB}{NN}
+function;Assess need to consult ISD;{VB}{NN}{TO}{VB}{NNP}
+function;Formulate indicative report;{VB}{JJ}{NN}
+function;Send letter and report to customer;{VB}{NN}{CC}{NN}{TO}{NN}
+function;Receive recommendation;{VB}{NN}
+event;Process end;{VB}{NN}
+event;negative;{JJ}
+event;house visit needed;{NN}{NN}{VBD}
+event;complete;{JJ}
+event;other;{JJ}
+event;house visit needed but no medical advice;{NN}{NN}{VBN}{CC}{DT}{JJ}{NN}
+event;positive;{JJ}
+event;house visit needed and medical advice needed;{NN}{NN}{VBN}{CC}{JJ}{NN}{VBN}
+event;transportation facilities;{NN}{NNS}
+event;no;{DT}
+event;help with the household;{NN}{IN}{DT}{NN}
+event;large modifications to house;{JJ}{NNS}{TO}{NN}
+event;existing previous file;{VBG}{JJ}{NN}
+event;no;{DT}
+event;no house visit but medical advice needed;{DT}{NN}{NN}{CC}{JJ}{NN}{VBN}
+event;uncomplete;{JJ}
+event;Process start;{VB}{NN}
+event;yes;{RB}
+event;no;{DT}
+event;always;{RB}
+event;yes;{RB}
+event;yes;{RB}
+event;no house visit and no medical advice needed;{DT}{NN}{NN}{CC}{DT}{JJ}{NN}{VBN}
+event;no PGB;{DT}{NN}
+event;always;{RB}
+event;no;{DT}
+event;only if no PGB;{RB}{IN}{DT}{NN}
+event;no previous file;{DT}{JJ}{NN}
+event;always;{RB}
+event;with PGB;{IN}{NN}
+event;always;{RB}
+event;only if building advice needed;{RB}{IN}{NN}{NN}{VBD}
+event;yes;{RB}

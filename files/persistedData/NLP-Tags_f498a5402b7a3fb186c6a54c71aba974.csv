@@ -1,0 +1,7 @@
+f498a5402b7a3fb186c6a54c71aba974;Invoice Verification
+function;Consignment/ Pipeline Settlement;{NN}{:}{NNP}
+function;Invoice Release;{NNP}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Consignment/ pipeline liabilities are to be settled;{NN}{:}{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Invoice is posted and blocked for payment;{NNP}{VBZ}{VBN}{CC}{VBN}{IN}{NN}
+event;Consignment/ pipeline settlement document transmitted;{NN}{:}{NN}{NN}{NN}{VBD}

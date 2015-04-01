@@ -1,0 +1,5 @@
+dc48d1f8002917f1ea232f91fc7ba855;Occupational Health
+function;Injury/ Illness Log;{NNP}{:}{NN}{NN}
+function;Protocol;{NNP}
+event;Entering data is completed;{VBG}{NNS}{VBZ}{VBN}
+event;Occupational health data is to be entered;{JJ}{NN}{NNS}{VBZ}{TO}{VB}{VBN}

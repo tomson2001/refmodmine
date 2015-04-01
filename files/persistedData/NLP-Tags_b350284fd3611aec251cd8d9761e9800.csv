@@ -1,0 +1,5 @@
+b350284fd3611aec251cd8d9761e9800;D.I.040.b_Event control of value- oriented processes
+function;cost center accounting;{NN}{NN}{NN}
+event;Planning deadline reached;{NNP}{NN}{VBD}
+event;Changes in value rates;{NNS}{IN}{NN}{NNS}
+event;Changes in quantity;{NNS}{IN}{NN}

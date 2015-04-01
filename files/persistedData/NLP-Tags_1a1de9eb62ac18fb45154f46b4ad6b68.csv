@@ -1,0 +1,18 @@
+1a1de9eb62ac18fb45154f46b4ad6b68;Cash Sales/Rush Order Handling
+function;Billing;{NN}
+function;Sales Order;{NNS}{NN}
+function;Risk/ Credit Management;{NN}{:}{NNP}
+function;Shipping;{VBG}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Terms of credit have changed;{NNS}{IN}{NN}{VBP}{VBN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Change to terms of credit refused;{NNP}{TO}{NNS}{IN}{NN}{VBD}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Invoice list is created;{NNP}{NN}{VBZ}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Cash sales invoice is printed;{NN}{NNS}{NN}{VBZ}{VBN}
+event;Order generated and delivery opened;{NNP}{VBD}{CC}{NN}{VBD}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Standard order is received;{JJ}{NN}{VBZ}{VBN}

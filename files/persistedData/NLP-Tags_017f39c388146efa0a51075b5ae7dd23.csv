@@ -1,0 +1,16 @@
+017f39c388146efa0a51075b5ae7dd23;Billing
+function;Processing Billing Documents;{NNP}{NNS}
+function;Billing Document Cancellation;{NN}{NNP}
+function;Intercompany Billing;{NN}{NN}
+function;Pro Forma Invoice Processing;{FW}{FW}{FW}{NN}
+event;Billing document to be cancelled;{NN}{NN}{TO}{VB}{VBN}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Internal settlement takes place;{JJ}{NN}{VBZ}{NN}
+event;Pro forma invoice for order/ delivery to be created;{FW}{FW}{NN}{IN}{NN}{:}{NN}{TO}{VB}{VBN}
+event;Pro forma invoice is created;{FW}{FW}{NN}{VBZ}{VBN}
+event;Billing document/ items are cancelled;{NN}{NN}{:}{NNS}{VBP}{VBN}
+event;Delivering company code bills to ordering company code;{VBG}{NN}{NN}{NNS}{TO}{VBG}{NN}{NN}
+event;Ordering company code bills to customers;{VBG}{NN}{NN}{NNS}{TO}{NNS}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}

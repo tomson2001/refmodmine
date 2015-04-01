@@ -1,0 +1,8 @@
+f658b0c893ba1189c249922f52d058e2;Non-Order-Specific Trigger
+function;Reference Project Search;{NNP}{VB}
+function;Analysis of Competition;{NN}{IN}{NN}
+function;Product Idea Description;{NN}{NN}{NN}
+event;Product idea exists;{NN}{NN}{VBZ}
+event;Carry out product development;{VB}{RP}{NN}{NN}
+event;Carry out project development in the project;{VB}{RP}{NN}{NN}{IN}{DT}{NN}
+event;Product idea is described in detail;{NN}{NN}{VBZ}{VBN}{IN}{NN}

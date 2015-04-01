@@ -1,0 +1,42 @@
+19068708e99c88e55f188af832a3717a;Fig.51: WABO1 YAWL model for MunC
+function;Go to the end;{VB}{TO}{DT}{NN}
+function;Receive supplements;{VB}{NNS}
+function;Start case;{NNP}{NN}
+function;Pick request from pile;{VB}{NN}{IN}{NN}
+function;Check urban plan;{VB}{JJ}{NN}
+function;Check wealth;{VB}{NN}
+function;Hold meeting with customer;{VB}{NN}{IN}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+function;Assign investigating officer;{VB}{VBG}{NN}
+function;Invite customer for meeting;{VB}{NN}{IN}{NN}
+function;Ask for advice;{VB}{IN}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Send acknowledgment;{VB}{NN}
+function;Send acknowledgment SYSTEM;{VB}{NN}{NN}
+function;Hold consultation with customer;{VB}{NN}{IN}{NN}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;Process continue;{VB}{VB}
+function;Change plan;{NNP}{NN}
+function;Register;{NNP}
+function;Need advice;{VBN}{NN}
+event;status change to Record request in system;{NN}{NN}{TO}{NNP}{NN}{IN}{NN}
+event;status change to Need advice;{NN}{NN}{TO}{NNP}{NN}
+event;no;{DT}
+event;status change to Receive request via mail;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;End case;{NNP}{NN}
+event;yes;{RB}
+event;status change to Pick request from pile;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Check urban plan;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Send acknowledgment SYSTEM;{NN}{NN}{TO}{VB}{NN}{NN}
+event;no;{DT}
+event;status change to Hold meeting with customer;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Check wealth;{NN}{NN}{TO}{VB}{NN}
+event;status change to Register;{NN}{NN}{TO}{NNP}
+event;status change to Send acknowledgment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Hold consultation with customer;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Change plan;{NN}{NN}{TO}{NNP}{NN}
+event;yes;{RB}
+event;status change to Assign investigation officer;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Invite customer for meeting;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;Start case;{NNP}{NN}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}

@@ -1,0 +1,8 @@
+cd1aff89195673d5c0a6fe8a7ba82654;Change Mgmt w/o Engineering Change Request/Order (ECR/ECO)
+function;Change Execution W/o ECR/ ECO;{NNP}{:}{NNP}
+function;Change Master Record Processing;{NNP}
+function;Object Management Record Processing W/o ECR/ECO;{NNP}{NN}
+event;Make changes to object;{VB}{NNS}{TO}{VB}
+event;Changes necessary;{NNS}{JJ}
+event;Check changes;{VB}{NNS}
+event;Assign objects to object management record;{VB}{NNS}{TO}{VB}{NN}{NN}

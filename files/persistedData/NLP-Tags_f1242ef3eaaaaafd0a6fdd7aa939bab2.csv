@@ -1,0 +1,9 @@
+f1242ef3eaaaaafd0a6fdd7aa939bab2;Business Transactions
+function;Lease Payment;{NNP}{NN}
+function;Transfer Leased Asset;{NN}{VBD}{NNP}
+function;Change in a Leasing Agreement;{NNP}{IN}{DT}{NNP}
+event;Leased asset should be bought;{VBN}{NN}{MD}{VB}{VBN}
+event;Periodic lease payment is necessary;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Transactions completed;{NNS}{VBD}
+event;Organizational allocations must be changed;{JJ}{NNS}{MD}{VB}{VBN}
+event;Leasing agrmnt conditions were changed;{NNP}{JJ}{NNS}{VBD}{VBN}

@@ -1,0 +1,12 @@
+7b121cf9b83444cd0940f54fa01e748d;RFQ/Quotation
+function;Transmission of RFQs;{NNP}{IN}{NNS}
+function;Release of RFQs;{NNP}{IN}{NNS}
+function;Processing of Requests for Quotations;{NN}{IN}{NNS}{IN}{NNS}
+function;Vendor Quotation Processing;{NNP}
+event;Requests for quotation are created;{NNS}{IN}{NN}{VBP}{VBN}
+event;Purchasing document released;{NNP}{NN}{VBD}
+event;Purchase order transmitted;{NN}{NN}{VBD}
+event;Quotation arrived;{NN}{VBD}
+event;Purchase requisition released for issue of RFQ;{NN}{NN}{VBN}{IN}{NN}{IN}{NN}
+event;Quotation rejected;{NN}{VBD}
+event;Quotation chosen;{NN}{VBN}

@@ -1,0 +1,37 @@
+91da23c12e4e590f9cdd5e04bff30504;Quality Inspection in MM
+function;Inspection Lot Creation;{NNP}{NN}{NN}
+function;Results Recording;{NNS}{NNP}
+function;Usage Decision;{NN}{NN}
+function;Sample Calculation and Sample Management;{VB}{NN}{CC}{NNP}
+function;Defects Recording;{NNS}{NNP}
+event;Enter characteristic defects;{VB}{JJ}{NNS}
+event;Automatic label printing is triggered;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Sample is released;{NN}{VBZ}{VBN}
+event;Usage decision is documented;{NN}{NN}{VBZ}{VBN}
+event;Vendor is released;{NN}{VBZ}{VBN}
+event;Inspection completion is to be forced;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Inspection completion is carried out;{NNP}{NN}{VBZ}{VBN}{RP}
+event;Results for operation must be recorded;{NNS}{IN}{NN}{MD}{VB}{VBN}
+event;Material is released;{NN}{VBZ}{VBN}
+event;Data is updated;{NNS}{VBZ}{VBN}
+event;Inspection lot status allows a goods issue;{NNP}{NN}{NN}{VBZ}{DT}{NNS}{NN}
+event;Vendor must be locked as regards this material;{NN}{MD}{VB}{VBN}{IN}{VBZ}{DT}{NN}
+event;Defect is recorded;{NN}{VBZ}{VBN}
+event;QMIS updated;{NNS}{VBN}
+event;Enter defects from the inspection lot;{VB}{NNS}{IN}{DT}{NN}{NN}
+event;Enter characteristic defects;{VB}{JJ}{NNS}
+event;Enter defects from the inspection lot;{VB}{NNS}{IN}{DT}{NN}{NN}
+event;Results for the sample are to be recorded;{NNS}{IN}{DT}{NN}{VBP}{TO}{VB}{VBN}
+event;Physical-sample drawing is to be created with reference;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Inspection lot is to be created automatically;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Enter defects from the operation;{VB}{NNS}{IN}{DT}{NN}
+event;Material is to be returned;{NN}{VBZ}{TO}{VB}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Results for the physical sample are to be recorded;{NNS}{IN}{DT}{JJ}{NN}{VBP}{TO}{VB}{VBN}
+event;Vendor must be locked/ released;{NN}{MD}{VB}{VBN}{:}{VBN}
+event;All characteristics are closed;{DT}{NNS}{VBP}{VBN}
+event;Inspection results are copied to general characteristics;{NNP}{NNS}{VBP}{VBN}{TO}{JJ}{NNS}
+event;Inspection lot is to be created manually;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Inspection lot completion for skip is to be made;{NNP}{NN}{NN}{IN}{VB}{VBZ}{TO}{VB}{VBN}
+event;Quality notification is activated from defects;{JJ}{NN}{VBZ}{VBN}{IN}{NNS}
+event;Enter defects from the operation;{VB}{NNS}{IN}{DT}{NN}

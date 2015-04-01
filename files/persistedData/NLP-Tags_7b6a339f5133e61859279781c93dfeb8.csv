@@ -1,0 +1,10 @@
+7b6a339f5133e61859279781c93dfeb8;Change in Material Price
+function;Activate Future Material Price;{VB}{NNP}
+function;Change in Material Price;{NNP}{IN}{NNP}
+function;Material Master Change (BI for Price Change);{NNP}{-LRB-}{NNP}{IN}{NNP}{-RRB-}
+event;Validity date reset;{NN}{NN}{NN}
+event;Batch input has been created for price change;{NN}{NN}{VBZ}{VBN}{VBN}{IN}{NN}{NN}
+event;Material price has been changed;{NN}{NN}{VBZ}{VBN}{VBN}
+event;Future price reset;{JJ}{NN}{NN}
+event;Revaluation document has been created;{NN}{NN}{VBZ}{VBN}{VBN}
+event;Future material price must be activated;{JJ}{NN}{NN}{MD}{VB}{VBN}

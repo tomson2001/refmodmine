@@ -1,0 +1,11 @@
+5f8a7531231a4bf1550946203dbcf5d4;Transaction Processing
+function;Netting Processing;{VBG}{NN}
+function;Settlement;{NNP}
+function;Process Cash Flow;{VB}{NNP}{NN}
+event;Netting proposal to be edited;{VBG}{NN}{TO}{VB}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Cash flow transaction was selected;{NN}{NN}{NN}{VBD}{VBN}
+event;Cash management was updated;{NN}{NN}{VBD}{VBN}
+event;Cash flow transaction was processed;{NN}{NN}{NN}{VBD}{VBN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Accrual/ deferral is to be performed;{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}

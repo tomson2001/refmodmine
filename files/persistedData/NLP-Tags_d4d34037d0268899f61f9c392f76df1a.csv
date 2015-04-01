@@ -1,0 +1,29 @@
+d4d34037d0268899f61f9c392f76df1a;Fiscal Year Change Operations [Funds Management]
+function;Determining Budget Carryforward;{VBG}{NNP}
+function;Preparing Budget Carryforward;{NNP}
+function;Reset Commitments Carried Forward;{NNP}{NNS}{VBD}{RB}
+function;Fund Balance Carryforward;{NNP}
+function;Preparing Fiscal Year Change Operations;{VBG}{JJ}{NN}{NNP}
+function;Commitments Documents Carryforward;{NNS}{NNS}{NNP}
+function;Open Commitment Document Selection;{VB}{NNP}{NN}
+function;Define Transfer Rules;{VB}{NN}{NNS}
+function;Budget Carryforward;{NNP}
+event;Commitments documents selected;{NNS}{NNS}{VBN}
+event;Carryforward rules were defined;{NNP}{NNS}{VBD}{VBN}
+event;Commitments carryforward undone;{NNS}{VBD}{VBN}
+event;Budget carryforward determined;{NNP}{NN}{VBD}
+event;Budget carryforward prepared;{NNP}{NN}{VBD}
+event;Budget for commitments carried forward;{NNP}{IN}{NNS}{VBD}{RB}
+event;Residual budget transferred;{JJ}{NN}{VBN}
+event;Expenditure budget increased;{NN}{NN}{VBD}
+event;Year end closing operations prepared;{NN}{NN}{NN}{NNS}{VBD}
+event;Commitments budget must be carried forward;{NNS}{NN}{MD}{VB}{VBN}{RB}
+event;Evaluations to be carried out;{NNS}{TO}{VB}{VBN}{RP}
+event;Residual budgets must be carried forward;{JJ}{NNS}{MD}{VB}{VBN}{RB}
+event;Open commitments must be carried forward;{VB}{NNS}{MD}{VB}{VBN}{RB}
+event;Balances carried forward;{NNS}{VBD}{RB}
+event;Payment transfer completed;{NN}{NN}{VBN}
+event;Funds reservation entered;{NNS}{NN}{VBD}
+event;Budget release available;{NNP}{NN}{JJ}
+event;Budget return available;{NNP}{NN}{JJ}
+event;Actual balances must be carried forward from fund;{JJ}{NNS}{MD}{VB}{VBN}{RB}{IN}{NN}

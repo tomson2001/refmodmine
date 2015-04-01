@@ -1,0 +1,5 @@
+1c174574d1c60286fe343f83e1c80ee4;Preparation of Compensation Planning
+function;Creation of Specifications for Compensation Planning;{NN}{IN}{NNS}{IN}{NNP}
+event;Requirement for Correction of Specifications of Compensation Planning;{NN}{IN}{NN}{IN}{NNS}{IN}{NNP}
+event;Compensation Planning Specifications Approved;{NNPS}{VBD}
+event;Requirement for Compensation Planning Preparation;{NN}{IN}{NNP}

@@ -1,0 +1,7 @@
+3f2085d1d718448c1d41d79951ec37bb;Processing Receipt of Application
+function;Processing Receipt of Application;{NN}{NN}{IN}{NN}
+function;Confirmation of Receipt of Application;{NN}{IN}{NNP}{IN}{NN}
+event;Confirmation of receipt is transmitted to applicant;{NN}{IN}{NN}{VBZ}{VBN}{TO}{NN}
+event;Enterprise requires applicant to receive confirmation of receipt;{NN}{VBZ}{NN}{TO}{VB}{NN}{IN}{NN}
+event;Applicant has been entered;{NN}{VBZ}{VBN}{VBN}
+event;Enterprise receives application;{NNP}{VBZ}{NN}

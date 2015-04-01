@@ -1,0 +1,84 @@
+b8fe44993f8afb42987e31377b5c5c44;Cost and Activity Planning
+function;Transfer of Personnel Costs;{NN}{IN}{NNP}{NNS}
+function;Copy Actual Data to Cost Center Plan;{VB}{NNP}{TO}{NN}{NNP}
+function;Cost Accrual - Plan;{NN}{NN}{:}{NN}
+function;Overhead Calculation (Business Process);{NN}{NN}{-LRB-}{NN}{VBP}{-RRB-}
+function;Splitting;{VBG}
+function;Secondary Cost Planning (Prop./ Fixed);{JJ}{NN}{NNP}{-LRB-}{NNP}{.}
+function;Activity Type Planning;{NN}{NN}{NNP}
+function;Settlement of Overhead Cost Orders (Planning Data);{NNP}{IN}{NN}{NN}{NNS}{-LRB-}{NNP}{-RRB-}
+function;Secondary Cost Planning (Full Costs);{JJ}{NN}{NNP}{-LRB-}{JJ}{NNS}{-RRB-}
+function;Order Budgeting;{NNP}
+function;Plan Indirect Activity Allocation (Indirect Entry);{NNP}{JJ}{NN}{NN}{-LRB-}{JJ}{NN}{-RRB-}
+function;Definition of Activity Type for Cost Center;{NN}{IN}{NN}{NN}{IN}{NN}{NN}
+function;Transfer of Depreciation/ Interest (Activity-Independent);{NN}{IN}{NN}{:}{NN}{-LRB-}{JJ}{-RRB-}
+function;Transfer of Scheduled Activity from PP to CO-OM-CCA;{NN}{IN}{NNP}{NN}{IN}{NN}{TO}{NN}
+function;Template Allocation;{NNP}
+function;Budget Planning;{NNP}
+function;Planned Interest Calculation for Order;{NNP}{NN}{IN}{NN}
+function;Plan Cost Distribution;{NNP}{NN}{NN}
+function;Planning Revaluation;{NNP}
+function;Plan Indirect Activity Allocation (Manual Entry);{NNP}{JJ}{NN}{NN}{-LRB-}{JJ}{NN}{-RRB-}
+function;Transfer of Statistical Key Figures from LIS (Plan);{NN}{IN}{JJ}{NN}{NNS}{IN}{NN}{-LRB-}{NN}{-RRB-}
+function;Resource Planning;{NNP}
+function;Process Cost Planning;{VB}{NN}{NNP}
+function;Primary Cost Planning (Full Costs);{JJ}{NN}{NNP}{-LRB-}{JJ}{NNS}{-RRB-}
+function;Redefinition of Plan Version;{NN}{IN}{NNP}
+function;Transfer of Scheduled Activity PP -> CO-ABC;{NN}{IN}{NNP}{:}{JJR}{NN}
+function;Overall Planning (Order);{JJ}{NNP}{-LRB-}{NNP}{-RRB-}
+function;Overhead Calculation (Cost Center);{NN}{NN}{-LRB-}{NN}{NN}{-RRB-}
+function;Primary Cost Planning (Prop./ Fixed);{JJ}{NN}{NNP}{-LRB-}{NNP}{.}
+function;Plan Reconciliation;{NNP}
+function;Copy Plan from Previous Year to Cost Center Planning;{VB}{NNP}{IN}{JJ}{NN}{TO}{NN}{NNP}
+function;Unit Costing (Order);{NN}{NN}{-LRB-}{NN}{-RRB-}
+function;Plan Cost Assessment;{NNP}{NN}{NNP}
+function;Transfer of Depreciation/ Interest (Activity-Dependent);{NN}{IN}{NN}{:}{NN}{-LRB-}{JJ}{-RRB-}
+function;Cost Element Planning (Order);{NN}{NN}{NNP}{-LRB-}{NNP}{-RRB-}
+function;Process Quantity Planning;{VB}{NNP}
+function;Manual Planning of Statistical Key Figures;{NNP}{IN}{NNP}{NNS}
+function;Formula Planning;{NNP}
+function;Resource Planning (Order);{NNP}{-LRB-}{NNP}{-RRB-}
+function;Overhead Calculation (Overhead Cost Order);{NN}{NN}{-LRB-}{NN}{NN}{NN}{-RRB-}
+function;Cost Element Planning (Order with Integrated Planning);{NN}{NN}{NNP}{-LRB-}{NNP}{IN}{NNP}{-RRB-}
+function;Periodic Reposting of Plan Data;{JJ}{NN}{IN}{NNP}
+function;Planned Price Calculation;{NNP}{NN}
+event;Order with Integrated Planning Was Settled;{NN}{IN}{NNP}{VBD}{VBN}
+event;Process quantities (output) to be planned using SOP planning;{VB}{NNS}{-LRB-}{NN}{-RRB-}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Cost and activity planning executed;{NN}{CC}{NN}{NN}{VBD}
+event;Activity requirements transferred from production planning;{NN}{NNS}{VBN}{IN}{NN}{NN}
+event;Order Costs Are to Be Integrated in Cost Planning;{NNP}{NNS}{VBP}{TO}{VB}{NNP}{IN}{NN}{NNP}
+event;Business Process Is Processed;{NN}{VB}{VBZ}{VBN}
+event;Exist. cost planning is to be revaluated;{VB}{.}
+event;Overhead Was Charged to Cost Center;{NN}{VBD}{VBN}{TO}{NN}{NN}
+event;Plan Reconciliation Performed;{NNP}
+event;Process Quantities Planned;{VB}{NNS}{NNP}
+event;Planned Costs Distributed;{NNP}{NNS}{VBN}
+event;New Period to Be Planned (Copy of Previous Year's Plan);{NNP}{NN}{TO}{VB}{NNP}{-LRB-}{VB}{IN}{JJ}{NN}{POS}{NN}{-RRB-}
+event;Order is budgeted;{NN}{VBZ}{VBN}
+event;Interest Calculated;{NN}{VBN}
+event;Secondary cost planning to be carried out;{JJ}{NN}{VBG}{TO}{VB}{VBN}{RP}
+event;Process costs were allocated;{VB}{NNS}{VBD}{VBN}
+event;Cost center planning prepared;{NN}{NN}{NN}{VBN}
+event;Cost Center Plan Data Exists;{NN}{NNP}{VBZ}
+event;Planned Periodic Reposting Performed;{NNP}
+event;Key figures transferred from LIS;{NN}{NNS}{VBN}{IN}{NN}
+event;Planned Costs Accrued;{NNP}{NNS}{VBN}
+event;Personnel cost planning is complete;{NNP}{VBD}{NN}{VBZ}{JJ}
+event;Activity requirements transferred from production planning;{NN}{NNS}{VBN}{IN}{NN}{NN}
+event;Primary cost planning to be carried out;{JJ}{NN}{VBG}{TO}{VB}{VBN}{RP}
+event;Statistical key figure was entered for reference object;{JJ}{JJ}{NN}{VBD}{VBN}{IN}{NN}{NN}
+event;;
+event;Splitting Executed;{VBG}{VBN}
+event;Depreciation /interest to be transferred (activity-dependent);{NN}{:}{NN}{TO}{VB}{VBN}{-LRB-}{JJ}{-RRB-}
+event;Activity requirements transferred from production planning;{NN}{NNS}{VBN}{IN}{NN}{NN}
+event;Key figures from LIS to be transferred;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}
+event;Order Planning Is Prepared;{NNP}{VBZ}{VBN}
+event;New Period to Be Planned (New Definition of Plan Version);{NNP}{NN}{TO}{VB}{NNP}{-LRB-}{NNP}{IN}{NNP}{-RRB-}
+event;New Period to Be Planned (Copy of Actual);{NNP}{NN}{TO}{VB}{NNP}{-LRB-}{VB}{IN}{NNP}{-RRB-}
+event;Plan Data for Order Exists;{NNP}{IN}{NNP}{VBZ}
+event;Statistical key figure exists;{JJ}{JJ}{NN}{VBZ}
+event;Process quantities (output) to be planned manually;{VB}{NNS}{-LRB-}{NN}{-RRB-}{TO}{VB}{VBN}{RB}
+event;Depreciation / interest to be transferred (activity-independent);{NN}{:}{NN}{TO}{VB}{VBN}{-LRB-}{JJ}{-RRB-}
+event;Budget is planned;{NNP}{VBZ}{VBN}
+event;Overhead Costs Allocated Through Overhead Charges;{NN}{NNS}{VBN}{IN}{NN}{NNS}
+event;Business process is planned;{NN}{NN}{VBZ}{VBN}

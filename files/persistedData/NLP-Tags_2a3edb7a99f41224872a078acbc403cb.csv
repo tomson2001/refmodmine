@@ -1,0 +1,25 @@
+2a3edb7a99f41224872a078acbc403cb;Customer Outline Agreement
+function;Value Contract Processing;{NNP}
+function;Quantity Contract Processing;{NNP}
+function;Customer Scheduling Agreement Processing;{NN}{NN}{NN}{NN}
+function;Processing Group Master Contracts;{NNP}{NNS}
+event;Group Master Contract is Created;{NNP}{VBZ}{VBN}
+event;Framework agreement / contract is agreed with reference;{NN}{NN}{:}{NN}{VBZ}{VBN}{IN}{NN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Contract ist to be created;{NN}{NN}{TO}{VB}{VBN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Contract ist to be created;{NN}{NN}{TO}{VB}{VBN}
+event;Quotation is valid;{NN}{VBZ}{JJ}
+event;Scheduling agreement is created with ref. to quote;{VBG}{NN}{VBZ}{VBN}{IN}{NN}{.}
+event;Sched.agreement must be created;{NN}{MD}{VB}{VBN}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}
+event;Quotation is valid;{NN}{VBZ}{JJ}
+event;Framework agreement / contract is agreed with reference;{NN}{NN}{:}{NN}{VBZ}{VBN}{IN}{NN}
+event;Scheduling agreement is created;{VBG}{NN}{VBZ}{VBN}
+event;Group Master Contract is to be Created;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Quotation is valid;{NN}{VBZ}{JJ}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Items are cancelled;{NNS}{VBP}{VBN}

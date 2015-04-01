@@ -1,0 +1,10 @@
+b1338de9894c8c1abae9f6b75e11c5ce;B.I.196_EPC for quality inspection
+function;Generate correction of the production process;{VB}{NN}{IN}{DT}{NN}{NN}
+function;Perfomr quality inspection;{NNP}{NN}{NN}
+function;Report result to detailed schedulding;{NNP}{VBP}{TO}{JJ}{NN}
+function;Generate rework operation;{VB}{NN}{NN}
+event;random sample taken;{JJ}{NN}{VBN}
+event;Result unsatisfactory;{NN}{JJ}
+event;Step completed;{NN}{VBD}
+event;Operation completed;{NN}{VBD}
+event;result satsifactory;{NN}{NN}

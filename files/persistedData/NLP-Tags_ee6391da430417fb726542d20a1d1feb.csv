@@ -1,0 +1,25 @@
+ee6391da430417fb726542d20a1d1feb;Procurement and Purchasing
+function;Vendor Evaluation;{NNP}{NN}
+function;Editing of QM Documents;{NN}{IN}{NNP}{NNS}
+function;Quality Info Record Processing;{NNP}
+function;Processing of Certificate Receipt;{NN}{IN}{NNP}
+event;Quality assurance agreements have been defined;{JJ}{NN}{NNS}{VBP}{VBN}{VBN}
+event;Define quality assurance agreements;{VB}{NN}{NN}{NNS}
+event;Vendor is locked for future goods entries;{NN}{VBZ}{VBN}{IN}{JJ}{NNS}{NNS}
+event;Material master has been processed;{NN}{NN}{VBZ}{VBN}{VBN}
+event;Necessary to contact vendor;{JJ}{TO}{VB}{NN}
+event;Technical delivery terms are to be defined;{NNP}{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Technical delivery terms have been defined;{NNP}{NN}{NNS}{VBP}{VBN}{VBN}
+event;Quality info record must be created;{JJ}{NN}{NN}{MD}{VB}{VBN}
+event;Vendor is created;{NN}{VBZ}{VBN}
+event;Certificate received;{NN}{VBD}
+event;No follow-on activities required;{DT}{JJ}{NNS}{VBN}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Certificate receipt is processed;{NN}{NN}{VBZ}{VBN}
+event;Vendor evaluation to be carried out;{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Quality info record is created / changed;{JJ}{NN}{NN}{VBZ}{VBN}{:}{VBN}
+event;Vendor to be blocked;{NN}{TO}{VB}{VBN}
+event;Vendor is released;{NN}{VBZ}{VBN}
+event;Vendor must be locked as regards this material;{NN}{MD}{VB}{VBN}{IN}{VBZ}{DT}{NN}
+event;Vendor is locked for future orders;{NN}{VBZ}{VBN}{IN}{JJ}{NNS}
+event;Vendor is locked for future requests for quotation;{NN}{VBZ}{VBN}{IN}{JJ}{NNS}{IN}{NN}

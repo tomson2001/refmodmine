@@ -1,0 +1,10 @@
+719099e502f77c599bf0495e691cd2c6;Profit Center Allocation
+function;Manual Entry of Statistical Key Figures;{NNP}{IN}{NNP}{NNS}
+function;Actual Data Transfers on Profit Center;{NNPS}{IN}{NNP}
+function;Actual Transfer of Additional Balance Sheet Items to EC-PCA;{JJ}{NN}{IN}{JJ}{NN}{NNP}{NNS}{TO}{NN}
+function;Document Entry in Profit Center Accounting;{NNP}{IN}{NNP}
+event;Plan Data Can Be Transferred;{NNP}{MD}{VB}{VBN}
+event;Additional Manual Key Figures Are to Be Entered;{JJ}{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Additional Data Is to Be Entered in Profit Center Accounting;{JJ}{NNS}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NNP}
+event;Data transferred to Profit Center Accounting;{NNS}{VBN}{TO}{NN}{NNP}
+event;Additional Balance Sheet Items Are to Be Transferred;{JJ}{NN}{NNP}{NNS}{VBP}{TO}{VB}{VBN}

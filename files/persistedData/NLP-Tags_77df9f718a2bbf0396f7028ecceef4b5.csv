@@ -1,0 +1,27 @@
+77df9f718a2bbf0396f7028ecceef4b5;Intercompany Handling
+function;Shipping;{VBG}
+function;Sales Order;{NNS}{NN}
+function;Warehouse Management;{NNP}
+function;Billing;{NN}
+function;Transport;{NN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Delivering company code bills to ordering company code;{VBG}{NN}{NN}{NNS}{TO}{VBG}{NN}{NN}
+event;Delivery is generated in delivering company code;{NN}{VBZ}{VBN}{IN}{VBG}{NN}{NN}
+event;Goods movement is posted;{NNP}{NN}{VBZ}{VBN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Sales order is processed in ordering company code;{NNS}{NN}{VBZ}{VBN}{IN}{VBG}{NN}{NN}
+event;Ordering company code bills to customers;{VBG}{NN}{NN}{NNS}{TO}{NNS}
+event;Internal settlement takes place;{JJ}{NN}{VBZ}{NN}
+event;Deliveries need to be planned;{NNS}{VBP}{TO}{VB}{VBN}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Standard order is received;{JJ}{NN}{VBZ}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Transfer order created manually;{NN}{NN}{VBN}{RB}
+event;Shipment costs per item are calculated;{NN}{NNS}{IN}{NN}{VBP}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Transfer order created automatically;{NN}{NN}{VBN}{RB}
+event;Material is issued;{NN}{VBZ}{VBN}

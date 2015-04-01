@@ -1,0 +1,43 @@
+b1a37c3a5ed1eb82c1671ae06c7d5ee4;Fig.41: MOR YAWL model for MunC
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Handle issue;{VB}{NN}
+function;Known issue;{VBN}{NN}
+function;Close case;{JJ}{NN}
+function;Discuss issue;{VB}{NN}
+function;Need to talk to mgmt;{VBN}{TO}{VB}{TO}{VB}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Information complete;{NN}{JJ}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Forward to department;{RB}{TO}{NN}
+function;Team leader reports ready;{NNP}{NN}{NNS}{JJ}
+function;Printout receipt;{NNP}{NN}
+function;Concern lighting;{NN}{NN}
+function;Questions by either person reporting;{NNS}{IN}{CC}{NN}{NN}
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Forward issue to department;{RB}{NN}{TO}{NN}
+function;Possible solution;{JJ}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Print ticket and give to responsible team leader;{VB}{NN}{CC}{VB}{TO}{JJ}{NN}{NN}
+function;Ask for more information;{VB}{IN}{JJR}{NN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Add reference to earlier report;{VB}{NN}{TO}{JJR}{NN}
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;plan in batch;{NN}{IN}{NN}
+function;Enter data in public light mgmt sys;{VB}{NNS}{IN}{JJ}{JJ}{NN}{NNS}
+event;no;{DT}
+event;yes;{RB}
+event;yes;{RB}
+event;no;{DT}
+event;no;{DT}
+event;yes;{RB}
+event;Start case;{NNP}{NN}
+event;no;{DT}
+event;no;{DT}
+event;yes;{RB}
+event;Case closed;{NNP}{VBD}
+event;yes;{RB}

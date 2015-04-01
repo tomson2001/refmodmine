@@ -1,0 +1,8 @@
+1e4256ca6ae5f7a0d8782297111997f8;Rebate Settlement
+function;Credit Memo Request for Rebate Settlement;{NNP}{IN}{NNP}
+function;Rebate / Commission Calculation Processing;{NN}{:}{NNP}
+function;Rebate Credit Memo;{NNP}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Credit/ debit memo is granted;{NNP}{:}{NN}{NN}{VBZ}{VBN}
+event;Rebate agreement is to be settled;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Credit memo request to be created;{NNP}{NN}{NN}{TO}{VB}{VBN}

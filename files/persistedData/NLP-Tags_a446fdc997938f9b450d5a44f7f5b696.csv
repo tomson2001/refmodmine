@@ -1,0 +1,21 @@
+a446fdc997938f9b450d5a44f7f5b696;Receipts
+function;Direct Acquisition of Internal Activity;{NNP}{IN}{NNP}{NN}
+function;Down Payment on Asset under Construction;{IN}{NN}{IN}{NNP}{IN}{NNP}
+function;Subsequent Acquisition;{JJ}{NN}
+function;Processing of Asset Acquisition;{NN}{IN}{NNP}
+event;Acquisition posted to Asset Accounting;{NNP}{VBD}{TO}{NNP}
+event;Fixed asset created;{VBN}{NN}{VBN}
+event;Acquisitions to be entered;{NNS}{TO}{VB}{VBN}
+event;Down payment on asset under construction is to be capitalized;{IN}{NN}{IN}{NN}{IN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Service order is settled to asset;{NNP}{NN}{VBZ}{VBN}{TO}{NN}
+event;Order settled on plant;{NNP}{VBD}{IN}{NN}
+event;Internal activity posted directly to capitalized asset;{JJ}{NN}{VBD}{RB}{TO}{JJ}{NN}
+event;Subsequent acquisition to be posted to existing asset;{JJ}{NN}{TO}{VB}{VBN}{TO}{VBG}{NN}
+event;Post capi- talization is carried out;{NN}{SYM}{:}{NN}{VBZ}{VBN}{RP}
+event;Payments must be released;{NNS}{MD}{VB}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Vendor down payment is to be cleared;{VB}{RP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Revaluation is necessary due to post-capi- talization;{NN}{VBZ}{JJ}{JJ}{TO}{JJ}{:}{NN}
+event;Asset transaction with input tax was carried out;{NNP}{NN}{IN}{NN}{NN}{VBD}{VBN}{RP}
+event;New value method is not necessary;{NNP}{NN}{NN}{VBZ}{RB}{JJ}
+event;Equipment is to be edited;{NN}{VBZ}{TO}{VB}{VBN}

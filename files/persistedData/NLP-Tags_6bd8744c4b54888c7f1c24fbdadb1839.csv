@@ -1,0 +1,14 @@
+6bd8744c4b54888c7f1c24fbdadb1839;Customer Down Payments
+function;Customer Down Payment Clearing;{NN}{NN}{NN}{NNP}
+function;Customer Down Payment;{NN}{NN}{NN}
+function;Customer Down Payment Request;{NN}{NN}{NN}{NN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Down payment is made by customer;{IN}{NN}{VBZ}{VBN}{IN}{NN}
+event;Customer invoice is posted;{NN}{NN}{VBZ}{VBN}
+event;Down payment request cleared;{IN}{NN}{NN}{VBD}
+event;Collection authorization exists;{NN}{NN}{VBZ}
+event;Collection authorization does not exist;{NN}{NN}{VBZ}{RB}{VB}
+event;Clearing is posted;{NNP}{VBZ}{VBN}
+event;Down payment agreed with customer;{IN}{NN}{VBD}{IN}{NN}
+event;Down payment is to be cleared manually;{IN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Down payment posted;{IN}{NN}{VBD}

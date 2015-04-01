@@ -1,0 +1,26 @@
+510d6a78117a4d8a9974fa0017aca92d;D.II.009_ARIS procedural model in the form of an event- driven process chain
+function;Coordination between design specifications and requirements definition;{NN}{IN}{NN}{NNS}{CC}{NNS}{NN}
+function;Developme nt of a rough target concept according to ARIS;{JJ}{NNS}{IN}{DT}{JJ}{NN}{NN}{VBG}{TO}{NN}
+function;Parallel development of ARIS requirements definitions per subproject;{JJ}{NN}{IN}{NN}{NNS}{NNS}{IN}{NN}
+function;Creation of subprojects according to subprocesses;{NN}{IN}{NNS}{VBG}{TO}{NNS}
+function;Definition of project organization;{NN}{IN}{NN}{NN}
+function;Parallel definition of design specification of all subprojects;{JJ}{NN}{IN}{NN}{NN}{IN}{DT}{NNS}
+function;Coordination between ARIS view per subproject and coordination of alle ARIS views between subprojects;{NN}{IN}{NN}{NN}{IN}{NN}{CC}{NN}{IN}{FW}{FW}{NNS}{IN}{NNS}
+function;Coordination between all implementations with the requirements of the design specification;{NN}{IN}{DT}{NNS}{IN}{DT}{NNS}{IN}{DT}{NN}{NN}
+function;Analysis of the weaknesses using the process chain analysis;{NN}{IN}{DT}{NNS}{VBG}{DT}{NN}{NN}{NN}
+function;Preparation of design specifications for alle subprojects;{NN}{IN}{NN}{NNS}{IN}{FW}{FW}
+function;Parallel processing of implementation;{JJ}{NN}{IN}{NN}
+event;Project started;{NN}{VBD}
+event;Feedback to design specification;{NN}{TO}{VB}{NN}
+event;Project for further processing identified;{NN}{IN}{JJ}{NN}{VBD}
+event;Design specification prepared;{NN}{NN}{VBN}
+event;Coordination completed;{NN}{VBD}
+event;Coordination completed;{NN}{VBD}
+event;Strategy of design specification determined;{NN}{IN}{NN}{NN}{VBD}
+event;Requirements definitions of all subprojects developed;{NNS}{NNS}{IN}{DT}{NNS}{VBD}
+event;Weaknesses identified;{NNS}{VBD}
+event;Project organization defined;{NN}{NN}{VBN}
+event;Feedback to requirements definition;{NN}{TO}{NNS}{NN}
+event;Implementation completed;{NN}{VBD}
+event;Subprojects established;{NNS}{VBD}
+event;Project finished;{NN}{VBD}

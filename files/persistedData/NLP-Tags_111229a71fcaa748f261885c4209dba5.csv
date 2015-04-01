@@ -1,0 +1,8 @@
+111229a71fcaa748f261885c4209dba5;Purchase Requisition
+function;Purchase Requisition Assignment;{NN}{NN}{NN}
+function;Release Purchase Requisition;{NNP}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Purchase requisition released for purchase order;{NN}{NN}{VBN}{IN}{NN}{NN}
+event;Requisition released for scheduling agreement schedule/SA release;{NN}{VBN}{IN}{NN}{NN}{NN}{NN}
+event;Source of supply assigned;{NN}{IN}{NN}{VBN}
+event;Purchase requisition released for contract release order;{NN}{NN}{VBN}{IN}{NN}{NN}{NN}

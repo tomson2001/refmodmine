@@ -1,0 +1,29 @@
+5a4bec91255bdc510b799b607d364614;Period-End Closing (Controlling)
+function;Period-End Closing: Material Ledger;{NNP}{NN}{:}{NNP}
+function;Period-End Closing for Profitability Analysis;{NNP}{NN}{IN}{NNP}{NN}
+function;Period-End Closing: Periodic Product Cost Controlling;{NNP}{NN}{:}{NNP}{NN}{VBG}
+function;Period-End Closing in Overhead Cost Controlling;{NNP}{NN}{IN}{NN}{NN}{VBG}
+function;Period-End Closing for Profit Center Accounting;{NNP}{NN}{IN}{NN}{NNP}
+function;Period-End Closing: Order-Related Product Cost Controlling;{NNP}{NN}{:}{NNP}{NN}{VBG}
+function;Period-End Closing: Sales Order Controlling;{NNP}{NN}{:}{NNS}{NNP}
+event;Costs were transferred to Overhead Cost Controlling;{NNS}{VBD}{VBN}{TO}{NN}{NN}{VBG}
+event;Actual cost recording for period is closed;{JJ}{NN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Profit center plan exists;{NN}{NN}{NN}{VBZ}
+event;Process costs (cost objects) to be allocated;{VB}{NNS}{-LRB-}{NN}{NNS}{-RRB-}{TO}{VB}{VBN}
+event;Production order settled to warehouse;{NN}{NN}{VBD}{TO}{NN}
+event;Organizational operating profit (actual) exists;{JJ}{NN}{NN}{-LRB-}{JJ}{-RRB-}{VBZ}
+event;Production Variances Are to Be Settled;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Sales and Costs Settled;{NNS}{CC}{NNS}{VBN}
+event;Control measures set based on variances;{NN}{NNS}{VBN}{VBN}{IN}{NNS}
+event;Price Updated in Actual Costing;{NNP}{IN}{NNP}{VBG}
+event;Balance sheet items were copied to Profit Center Accounting;{NN}{NN}{NNS}{VBD}{VBN}{TO}{NN}{NNP}
+event;Profit center plan data complete;{NN}{NN}{NN}{NNS}{JJ}
+event;Overhead Costs Are to Be Settled to Profitability Analysis;{NN}{NNS}{VBP}{TO}{VB}{VBN}{TO}{NNP}{NN}
+event;Process costs (production order) to be allocated;{VB}{NNS}{-LRB-}{NN}{NN}{-RRB-}{TO}{VB}{VBN}
+event;Product cost collector settled;{NN}{NN}{NN}{VBD}
+event;Process costs (product cost collector) to be allocated;{VB}{NNS}{-LRB-}{NN}{NN}{NN}{-RRB-}{TO}{VB}{VBN}
+event;Process costs (sales order) to be allocated;{VB}{NNS}{-LRB-}{NNS}{NN}{-RRB-}{TO}{VB}{VBN}
+event;Cost Object Hierarchy Settled;{NN}{NNP}{VBD}
+event;Inventories/ Reserves Posted;{NNS}{:}{NNS}{VBN}
+event;Product Costs Are Allocated;{NNP}{NNS}{VBP}{VBN}
+event;Controlling is reconciled with Financial Accounting;{VBG}{VBZ}{VBN}{IN}{NNP}

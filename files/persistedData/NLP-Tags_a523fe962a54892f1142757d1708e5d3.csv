@@ -1,0 +1,11 @@
+a523fe962a54892f1142757d1708e5d3;Individual Personnel Development Planning
+function;Employee Notification of Individual Development Plan;{NN}{NN}{IN}{NNP}
+function;Individual Personnel Development Planning;{JJ}{NNP}
+function;Preparation of Individual Personnel Development Planning;{NN}{IN}{JJ}{NNP}
+event;Employee must be notified of individual development plan;{NN}{MD}{VB}{VBN}{IN}{JJ}{NN}{NN}
+event;Preparation of individual personnel development planning is complete;{NN}{IN}{JJ}{NNS}{NN}{NN}{VBZ}{JJ}
+event;Individual development plan must be corrected;{JJ}{NN}{NN}{MD}{VB}{VBN}
+event;Need for individual personnel development planning exists;{VBN}{IN}{JJ}{NNS}{NN}{NN}{VBZ}
+event;Personnel development system is implemented;{NNS}{NN}{NN}{VBZ}{VBN}
+event;Individual development plan is adopted;{JJ}{NN}{NN}{VBZ}{VBN}
+event;Individual development plan is transmitted to employee;{JJ}{NN}{NN}{VBZ}{VBN}{TO}{NN}

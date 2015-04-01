@@ -1,0 +1,18 @@
+0235607d8c337cea2448056d40a351af;Fig.11: GBA1YAWL model for MunC
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;No Payment;{DT}{NN}
+function;Process payment;{VB}{NN}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Send to appropriate department in DMS;{VB}{TO}{JJ}{NN}{IN}{NNP}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Report as finished in DMS;{NNP}{IN}{VBN}{IN}{NN}
+function;Send extract;{VB}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Fill in payment data;{VB}{IN}{NN}{NNS}
+function;Assign employee;{VB}{NN}
+function;Determine fees;{NN}{NNS}
+event;Process end;{VB}{NN}
+event;Start process;{NNP}{NN}
+event;No;{DT}
+event;Yes;{UH}

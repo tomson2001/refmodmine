@@ -1,0 +1,80 @@
+647e57a5041349f631c873933444123f;Consolidation
+function;Elimination of IC Profit and Loss in Fixed Assets;{NN}{IN}{NN}{NN}{CC}{NN}{IN}{NNPS}
+function;Preparations for Consolidation;{NNS}{IN}{NN}
+function;Currency Translation;{NNP}{NN}
+function;Intercompany Eliminations;{NN}{NNS}
+function;Centralized Data Entry;{NNP}
+function;Elimination of IC Profit and Loss in Current Assets;{NN}{IN}{NN}{NN}{CC}{NN}{IN}{JJ}{NNS}
+function;Postings;{NNS}
+function;Remote Data Entry;{NNP}
+function;Consolidation of Investments;{NN}{IN}{NNPS}
+function;Master Data Maintenance;{NNP}
+event;Currency translation carried out;{NNP}{NN}{VBD}{RP}
+event;Asset transfer has occurred;{NNP}{NN}{VBZ}{VBN}
+event;Changes for current year are entered for proportionally consolidated co.;{NNS}{IN}{JJ}{NN}{VBP}{VBN}{IN}{RB}{JJ}{NN}{.}
+event;Export file (PC) is transferred;{NN}{NN}{-LRB-}{NN}{-RRB-}{VBZ}{VBN}
+event;Currency translation carried out;{NNP}{NN}{VBD}{RP}
+event;New company/ ies is/ are created;{NNP}{NN}{:}{NNS}{VBZ}{:}{VBP}{VBN}
+event;Existing items should be summarized;{VBG}{NNS}{MD}{VB}{VBN}
+event;Data is transferred from FI to R/3 by extract;{NNS}{VBZ}{VBN}{IN}{NN}{TO}{NN}{IN}{NN}
+event;Changes in current year are entered for equity method company;{NNS}{IN}{JJ}{NN}{VBP}{VBN}{IN}{NN}{NN}{NN}
+event;Asset from in-house prod- uction was transferred;{NNP}{IN}{JJ}{NN}{:}{NN}{VBD}{VBN}
+event;Existing item number is to be changed;{VBG}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Intercompany balances are to be reconciled in advance;{NN}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Extract is transferred from R/2;{NN}{VBZ}{VBN}{IN}{NN}
+event;Investments are entered in local and group currency;{NNP}{VBP}{VBN}{IN}{JJ}{CC}{NN}{NN}
+event;Currency translation carried out;{NNP}{NN}{VBD}{RP}
+event;Divestiture was entered;{NN}{VBD}{VBN}
+event;Rollup is carried out in the same system;{NN}{VBZ}{VBN}{RP}{IN}{DT}{JJ}{NN}
+event;Inter- company payables and receiv- ables were eliminated;{NNP}{:}{NN}{NNS}{CC}{NN}{:}{NNS}{VBD}{VBN}
+event;Inter- company revenue and expense was eliminated;{NNP}{:}{NN}{NN}{CC}{NN}{VBD}{VBN}
+event;Transfer posting was created;{NN}{VBG}{VBD}{VBN}
+event;Investment write-up was entered;{NN}{NN}{VBD}{VBN}
+event;Existing item is to be split;{VBG}{NN}{VBZ}{TO}{VB}{VBN}
+event;Transfer has occurred in the area of financial assets;{NN}{VBZ}{VBN}{IN}{DT}{NN}{IN}{JJ}{NNS}
+event;Group financial state- ment version created; G/L accounts assigned;{NNP}{JJ}{NN}{:}{NN}{NN}{VBN}{:}{NN}{NNS}{VBN}
+event;Data entered for items is broken down by trading partner;{NNS}{VBD}{IN}{NNS}{VBZ}{VBN}{RP}{IN}{VBG}{NN}
+event;No journal entries exist for the old item number;{DT}{NN}{NNS}{VBP}{IN}{DT}{JJ}{NN}{NN}
+event;Hidden reserves entered;{JJ}{NNS}{VBD}
+event;Rollup extract file is transferred;{NN}{NN}{NN}{VBZ}{VBN}
+event;Companies plan to merge;{NNS}{VBP}{TO}{VB}
+event;Investment amortization was entered;{NN}{NN}{VBD}{VBN}
+event;Cross-system rollup exists;{NN}{NN}{VBZ}
+event;Equity is entered in local and group currency;{NN}{VBZ}{VBN}{IN}{JJ}{CC}{NN}{NN}
+event;Step acquisition entered;{NN}{NN}{VBD}
+event;Standardizing entries were made;{VBG}{NNS}{VBD}{VBN}
+event;Asset transfers are entered for receiving company;{NNP}{NNS}{VBP}{VBN}{IN}{VBG}{NN}
+event;Data is updated realtime;{NNS}{VBZ}{VBN}{NN}
+event;Extract/ download for R/ 2 is created;{NN}{:}{VB}{IN}{NN}{:}{CD}{VBZ}{VBN}
+event;Extract is transferred by IDOC;{NN}{VBZ}{VBN}{IN}{NN}
+event;Increase/ reduction in capitalization entered;{NN}{:}{NN}{IN}{NN}{VBD}
+event;Fiscal year-end is reached;{JJ}{NN}{VBZ}{VBN}
+event;Individual financial statement is entered in database;{JJ}{JJ}{NN}{VBZ}{VBN}{IN}{NN}
+event;Exchange rates / translation methods are maintained centrally;{NNP}{NNS}{:}{NN}{NNS}{VBP}{VBN}{RB}
+event;Balance reconcil- iation was carried out;{NN}{NN}{:}{NN}{VBD}{VBN}{RP}
+event;Changes in current year entered for purchase method company;{NNS}{IN}{JJ}{NN}{VBD}{IN}{NN}{NN}{NN}
+event;Main consolidation process to be started;{NNP}{NN}{NN}{TO}{VB}{VBN}
+event;FS item sets were specified;{NN}{NN}{NNS}{VBD}{VBN}
+event;G/L accounts are assigned to financial statement items;{NN}{NNS}{VBP}{VBN}{TO}{JJ}{NN}{NNS}
+event;Data is updated realtime;{NNS}{VBZ}{VBN}{NN}
+event;Group inventories are entered for the elimination of IC profit and loss;{NNP}{NNS}{VBP}{VBN}{IN}{DT}{NN}{IN}{NN}{NN}{CC}{NN}
+event;Elimination of IC profit and loss in inventory is completed;{NN}{IN}{NN}{NN}{CC}{NN}{IN}{NN}{VBZ}{VBN}
+event;Asset transfers are entered for retiring company;{NNP}{NNS}{VBP}{VBN}{IN}{VBG}{NN}
+event;Individual/ subgroup financial state- ments are to be sent to parent company;{JJ}{:}{NN}{JJ}{NN}{:}{NNS}{VBP}{TO}{VB}{VBN}{TO}{NN}{NN}
+event;Master data is maintained in local system;{NN}{NNS}{VBZ}{VBN}{IN}{JJ}{NN}
+event;File is transferred as PC file;{VB}{VBZ}{VBN}{IN}{NN}{NN}
+event;Company is sold to parent company of a different subgroup;{NN}{VBZ}{VBN}{TO}{NN}{NN}{IN}{DT}{JJ}{NN}
+event;Company is partially split into new company/ies;{NN}{VBZ}{RB}{VBN}{IN}{JJ}{NNS}
+event;Intercompany profit/ loss in trans- ferred assets is eliminated;{NN}{NN}{:}{NN}{IN}{JJ}{:}{JJ}{NNS}{VBZ}{VBN}
+event;Company is acquired;{NN}{VBZ}{VBN}
+event;Company is split completely into new companies;{NN}{VBZ}{JJ}{RB}{IN}{JJ}{NNS}
+event;New item number should be created;{NNP}{NN}{NN}{MD}{VB}{VBN}
+event;Group chart of accounts created/ G/L accounts assigned;{NNP}{NN}{IN}{NNS}{VBN}{:}{NN}{NNS}{VBN}
+event;Intercompany profit and loss in inventory is to be eliminated;{NN}{NN}{CC}{NN}{IN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Extract is transferred as UNIX file;{NN}{VBZ}{VBN}{IN}{NNP}{NN}
+event;Inconsistencies are justified;{NNS}{VBP}{JJ}
+event;Information exists for central adjustments to valuation;{NNP}{VBZ}{IN}{JJ}{NNS}{TO}{NN}
+event;Investment divesti- ture to be entered for parent of original company;{NN}{NNS}{:}{NN}{TO}{VB}{VBN}{IN}{NN}{IN}{JJ}{NN}
+event;Subsequent consolidation was carried out;{JJ}{NN}{VBD}{VBN}{RP}
+event;Provisional currency translation is carried out;{JJ}{NN}{NN}{VBZ}{VBN}{RP}
+event;Intercompany sales are entered for the elimination of IC profit and loss;{NN}{NNS}{VBP}{VBN}{IN}{DT}{NN}{IN}{NN}{NN}{CC}{NN}

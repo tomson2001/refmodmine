@@ -1,0 +1,13 @@
+74c472203dc505e3b75ced383a13a102;Performance of Personnel Appraisal
+function;Approval of Personnel Appraisal;{NN}{IN}{NNP}{NN}
+function;Performance of Personnel Appraisal;{NNP}{IN}{NNP}{NN}
+function;Notification of Personnel Appraisal Results to Those Involved;{NN}{IN}{NNP}{NN}{NNS}{TO}{DT}{VBN}
+event;Planning and organization for personnel appraisal is complete;{NNP}{CC}{NN}{IN}{NNS}{NN}{VBZ}{JJ}
+event;Updated profile of appraisee exists;{VBN}{NN}{IN}{NN}{VBZ}
+event;Valid personnel appraisal exists;{JJ}{NNS}{NN}{VBZ}
+event;Personnel appraisal exists for approval;{NNP}{NN}{VBZ}{IN}{NN}
+event;Personnel appraisal results are transmitted to those concerned;{NNP}{NN}{NNS}{VBP}{VBN}{TO}{DT}{VBN}
+event;Those involved must be notified of personnel appraisal results;{DT}{VBN}{MD}{VB}{VBN}{IN}{NNS}{NN}{VBZ}
+event;Need for personnel appraisal exists;{VBN}{IN}{NNS}{NN}{VBZ}
+event;Personnel appraisal must be corrected;{NNP}{NN}{MD}{VB}{VBN}
+event;Personnel appraisal must be performed;{NNP}{NN}{MD}{VB}{VBN}

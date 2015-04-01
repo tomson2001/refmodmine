@@ -1,0 +1,140 @@
+6788a373d51c17ab7a27a3c5833d496a;Fig.62: WABO2 YAWL model for MunD
+function;Waiting for info;{VBG}{IN}{NN}
+function;Start case;{NNP}{NN}
+function;Ask additional info;{VB}{JJ}{NN}
+function;Prepare concept decision;{VB}{NN}{NN}
+function;Send procedure confirmation;{VB}{NN}{NN}
+function;Send acknowledgment;{VB}{NN}
+function;Forward to appropriate authority;{RB}{TO}{JJ}{NN}
+function;Contact customer;{NN}{NN}
+function;Send final decision;{VB}{JJ}{NN}
+function;Right authority;{RB}{NN}
+function;Determine procedure period;{NN}{NN}{NN}
+function;Hearing requested;{NN}{VBD}
+function;Check wealth;{VB}{NN}
+function;Ask for advice;{VB}{IN}{NN}
+function;Ask VVGB;{VB}{NNP}
+function;Archive negative decision;{NNP}{JJ}{NN}
+function;Register;{NNP}
+function;Collect admissibility;{VB}{NN}
+function;Conclude decision;{VB}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+function;Check building regulation;{VB}{NN}{NN}
+function;Refuse permit;{VB}{NN}
+function;Process continue 3;{VB}{VB}{CD}
+function;Check for contradictions;{VB}{IN}{NNS}
+function;Assign investigating officer;{VB}{VBG}{NN}
+function;Format intention to refuse;{NN}{NN}{TO}{VB}
+function;Publish decision;{VB}{NN}
+function;Archive decision;{NNP}{NN}
+function;Test adm wealth;{NN}{NN}{NN}
+function;Process continue 7;{VB}{VB}{CD}
+function;Process continue 6;{VB}{VB}{CD}
+function;Process continue 4;{VB}{VB}{CD}
+function;Send negative decision;{VB}{JJ}{NN}
+function;Negative advice;{JJ}{NN}
+function;Send decision;{VB}{NN}
+function;Waiting for comments;{VBG}{IN}{NNS}
+function;Publish negative decision;{VB}{JJ}{NN}
+function;Informally check completeness;{RB}{VB}{NN}
+function;Process continue 5;{VB}{VB}{CD}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;VVGB required;{NN}{VBD}
+function;VVGB time expired;{NNP}{NN}{VBD}
+function;Receive advice;{VB}{NN}
+function;Publish notice request;{VB}{NN}{NN}
+function;Sign final decision;{NN}{JJ}{NN}
+function;Check fire safety;{VB}{NN}{NN}
+function;Applicant decides to reconsider application;{NN}{VBZ}{TO}{VB}{NN}
+function;Time for advice expired;{NNP}{IN}{NN}{VBD}
+function;Receive requested info;{VB}{VBN}{NN}
+function;Positive advice;{JJ}{NN}
+function;Check urban plan;{VB}{JJ}{NN}
+function;Ask adjustment of request;{VB}{NN}{IN}{NN}
+function;Waiting for VVGB;{VBG}{IN}{NN}
+function;Archive final decision;{NNP}{JJ}{NN}
+function;Time for info expired;{NNP}{IN}{NN}{VBD}
+function;Test adm architecture advisor;{NN}{NN}{NN}{NN}
+function;Process continue;{VB}{VB}
+function;Hold hearing;{VB}{NN}
+function;Test admissibility;{NN}{NN}
+function;Process continue 1;{VB}{VB}{CD}
+function;Publish final decision;{VB}{JJ}{NN}
+function;Receive VVGB;{VB}{NN}
+function;Test adm urban planning;{NN}{NN}{JJ}{NN}
+function;Notify advisors;{VB}{NNS}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Test adm fire department;{NN}{NN}{NN}{NN}
+function;Check completeness;{VB}{NN}
+function;Process result;{VB}{NN}
+function;Sign decision;{NN}{NN}
+event;status change to Assign investigating officer;{NN}{NN}{TO}{VB}{VBG}{NN}
+event;no;{DT}
+event;status change to Receive VVGB;{NN}{NN}{TO}{VB}{NN}
+event;status change to Check fire safety;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Test adm fire department;{NN}{NN}{TO}{VB}{NN}{NN}{NN}
+event;status change to Test adm urban planning;{NN}{NN}{TO}{VB}{NN}{JJ}{NN}
+event;no;{DT}
+event;status change to Sign decision;{NN}{NN}{TO}{VB}{NN}
+event;status change to Test adm wealth;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Check for contradictions;{NN}{NN}{TO}{VB}{IN}{NNS}
+event;status change to Publish negative decision;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Archive decision;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Informally check completeness;{NN}{NN}{TO}{RB}{VB}{NN}
+event;status change to Refuse permit;{NN}{NN}{TO}{VB}{NN}
+event;status change to Waiting for info;{NN}{NN}{TO}{VBG}{IN}{NN}
+event;yes;{RB}
+event;status change to Send decision;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send procedure confirmation;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to VVGB time expired;{NN}{NN}{TO}{NNP}{NN}{VBD}
+event;status change to Time for advice expired;{NN}{NN}{TO}{NNP}{IN}{NN}{VBD}
+event;status change to Send final decision;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;yes;{RB}
+event;status change to Sign final decision;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Record request in system;{NN}{NN}{TO}{NNP}{NN}{IN}{NN}
+event;status change to Collect admissibility;{NN}{NN}{TO}{VB}{NN}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Publish final decision;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Archive negative decision;{NN}{NN}{TO}{NNP}{JJ}{NN}
+event;status change to Send acknowledgment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Check building regulation;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Prepare concept decision;{NN}{NN}{TO}{VB}{NN}{NN}
+event;not complete;{RB}{VB}
+event;no;{DT}
+event;status change to Positive advice;{NN}{NN}{TO}{JJ}{NN}
+event;status change to Hearing requested;{NN}{NN}{TO}{NN}{VBD}
+event;status change to Time for info expired;{NN}{NN}{TO}{NNP}{IN}{NN}{VBD}
+event;no;{DT}
+event;status change to Waiting for comments;{NN}{NN}{TO}{VBG}{IN}{NNS}
+event;status change to Check wealth;{NN}{NN}{TO}{VB}{NN}
+event;status change to VVGB required;{NN}{NN}{TO}{NN}{VBD}
+event;status change to Receive request via mail;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Conclude decision;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Ask for advice;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Register;{NN}{NN}{TO}{NNP}
+event;no;{DT}
+event;no;{DT}
+event;the end;{DT}{NN}
+event;status change to Applicant decides to reconsider application;{NN}{NN}{TO}{NN}{VBZ}{TO}{VB}{NN}
+event;status change to Test adm architecture advisor;{NN}{NN}{TO}{VB}{NN}{NN}{NN}
+event;status change to Check completeness;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine procedure period;{NN}{NN}{TO}{VB}{NN}{NN}
+event;yes;{RB}
+event;status change to Check urban plan;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Format intention to refuse;{NN}{NN}{TO}{NN}{NN}{TO}{VB}
+event;status change to Waiting for VVGB;{NN}{NN}{TO}{VBG}{IN}{NN}
+event;status change to Receive advice;{NN}{NN}{TO}{VB}{NN}
+event;complete;{JJ}
+event;yes;{RB}
+event;status change to Send negative decision;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Publish notice request;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Archive final decision;{NN}{NN}{TO}{NNP}{JJ}{NN}
+event;status change to Publish decision;{NN}{NN}{TO}{VB}{NN}
+event;status change to Test admissibility;{NN}{NN}{TO}{VB}{NN}
+event;status change to Negative advice;{NN}{NN}{TO}{JJ}{NN}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Right authority;{NN}{NN}{TO}{NNP}{NN}
+event;yes;{RB}
+event;status change to Process result;{NN}{NN}{TO}{VB}{NN}
+event;status change to Receive requested info;{NN}{NN}{TO}{VB}{VBN}{NN}
+event;yes;{RB}

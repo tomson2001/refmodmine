@@ -1,0 +1,5 @@
+36e1e950b8b582e97e789b75d18eceac;Planning
+function;Planning;{NNP}
+event;Planning is to be carried out;{NNP}{VBZ}{TO}{VB}{VBN}{RP}
+event;Planning carried out;{NNP}{VBD}{RP}
+event;Ledger is ready to be updated;{NNP}{VBZ}{JJ}{TO}{VB}{VBN}

@@ -1,0 +1,8 @@
+60c1254abdaeac8feda77605e86052f7;Material Staging
+function;Processing the Pull List;{NN}{DT}{NNP}{NN}
+function;Picking;{VBG}
+event;Material is staged;{NN}{VBZ}{VBN}
+event;Material for repetitive manufacturing is to be provided;{NN}{IN}{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Stock transfer reservation is generated;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Stock transfer is posted;{NNP}{NN}{VBZ}{VBN}
+event;Master production schedule is processed;{NN}{NN}{NN}{VBZ}{VBN}

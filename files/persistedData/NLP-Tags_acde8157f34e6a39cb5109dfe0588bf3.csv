@@ -1,0 +1,11 @@
+acde8157f34e6a39cb5109dfe0588bf3;Processing of Master Production Schedule
+function;Sequencing;{NN}
+function;Production Planning in the Planning Table;{NN}{NNP}{IN}{DT}{NNP}
+event;Master production schedule is processed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Master plan (RS quantities) to be processed in planning table;{NN}{NN}{-LRB-}{NN}{NNS}{-RRB-}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Planning executed with capacity planning;{NNP}{VBD}{IN}{NN}{NN}
+event;Sequencing to be executed for planned orders;{NN}{TO}{VB}{VBN}{IN}{JJ}{NNS}
+event;Production quantities assigned to production lines;{NN}{NNS}{VBN}{TO}{NN}{NNS}
+event;Planning executed with sequencing;{NNP}{VBD}{IN}{NN}
+event;Sequencing was carried out;{NN}{VBD}{VBN}{RP}

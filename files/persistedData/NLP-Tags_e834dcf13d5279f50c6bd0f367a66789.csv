@@ -1,0 +1,23 @@
+e834dcf13d5279f50c6bd0f367a66789;Replacement, Rebooking, Cancellation, and Cancellation by Organizer
+function;Rebooking Order Processing;{VBG}{NNP}
+function;Cancellation by Organizer of Business Event Attendance;{NN}{IN}{NN}{IN}{NN}{NN}{NN}
+function;Cancellation Order Processing;{NN}{NN}{NN}
+function;Replacement Order Processing;{NNP}
+event;Place in business event is available;{NN}{IN}{NN}{NN}{VBZ}{JJ}
+event;Cancellation order exists;{NN}{NN}{VBZ}
+event;Need for operative personnel time scheduling;{VBN}{IN}{JJ}{NNS}{NN}{NN}
+event;Need for operative personnel time scheduling;{VBN}{IN}{JJ}{NNS}{NN}{NN}
+event;Business event attendance must be cancelled;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Place in business event is available;{NN}{IN}{NN}{NN}{VBZ}{JJ}
+event;Need for operative personnel time scheduling;{VBN}{IN}{JJ}{NNS}{NN}{NN}
+event;Replacement order is rejected;{NN}{NN}{VBZ}{VBN}
+event;Business event attendance exists;{NN}{NN}{NN}{VBZ}
+event;Rebooking order is rejected;{VBG}{NN}{VBZ}{VBN}
+event;Rebooking order is performed;{VBG}{NN}{VBZ}{VBN}
+event;Replacement order is performed;{NN}{NN}{VBZ}{VBN}
+event;Organizer receives rebooking order;{NN}{VBZ}{VBG}{NN}
+event;Need for operative personnel time scheduling;{VBN}{IN}{JJ}{NNS}{NN}{NN}
+event;Business event attendance is cancelled;{NN}{NN}{NN}{VBZ}{VBN}
+event;Business event attendance is cancelled by organizer;{NN}{NN}{NN}{VBZ}{VBN}{IN}{NN}
+event;Place in business event is available;{NN}{IN}{NN}{NN}{VBZ}{JJ}
+event;Organizer receives replacement order;{NN}{VBZ}{NN}{NN}

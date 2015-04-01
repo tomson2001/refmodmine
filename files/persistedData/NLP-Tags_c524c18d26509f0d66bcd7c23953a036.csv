@@ -1,0 +1,13 @@
+c524c18d26509f0d66bcd7c23953a036;Repetitive Manufacturing
+function;Production Execution and Actual Data Creation;{NN}{NN}{CC}{NNP}
+function;Material Staging;{NN}{NN}
+function;Processing of Master Production Schedule;{NN}{IN}{NN}{NN}{VBP}
+event;Master production schedule is processed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Material is staged;{NN}{VBZ}{VBN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Material is produced;{NN}{VBZ}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Production quantities assigned to production lines;{NN}{NNS}{VBN}{TO}{NN}{NNS}
+event;Goods Issue is Posted;{NNP}{VBZ}{VBN}
+event;Standard activities are posted;{JJ}{NNS}{VBP}{VBN}
+event;Master plan (RS quantities) to be processed in planning table;{NN}{NN}{-LRB-}{NN}{NNS}{-RRB-}{TO}{VB}{VBN}{IN}{NN}{NN}

@@ -1,0 +1,74 @@
+7099ddc7905c88dc48d1ccf25ccb41ef;Fig.39: MOR YAWL model for MunA
+function;Receive call out of bus hours;{VB}{VB}{RP}{IN}{NN}{NNS}
+function;Send message;{VB}{NN}
+function;Printout receipt;{NNP}{NN}
+function;Direct to desk;{JJ}{TO}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Let colleague inspect;{VB}{NN}{VB}
+function;Register request;{NNP}{NN}
+function;Known issue;{VBN}{NN}
+function;Person reachable;{NN}{JJ}
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Issue signed Invoice;{NN}{VBD}{NNP}
+function;Enter data in the system;{VB}{NNS}{IN}{DT}{NN}
+function;Possible solution;{JJ}{NN}
+function;Assign categ resp person and dept;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Send ackn;{VB}{NN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Update status info;{NNP}{NN}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Concerns lighting;{NNS}{VBG}
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Enable concerned service;{JJ}{JJ}{NN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Send e-mail with issue;{VB}{NN}{IN}{NN}
+function;Enter data in public light mgmt sys;{VB}{NNS}{IN}{JJ}{JJ}{NN}{NNS}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Handle issue;{VB}{NN}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Start case;{NNP}{NN}
+function;Forward to public light mgmt sys;{RB}{TO}{JJ}{JJ}{NN}{NNS}
+function;Process continue;{VB}{VB}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Close case;{JJ}{NN}
+event;status change to Send e-mail with issue;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Receive call out of bus hours;{NN}{NN}{TO}{VB}{VB}{RP}{IN}{NN}{NNS}
+event;status change to Send ackn;{NN}{NN}{TO}{VB}{NN}
+event;status change to Enter data about issue;{NN}{NN}{TO}{VB}{NNS}{IN}{NN}
+event;status change to Close case;{NN}{NN}{TO}{VB}{NN}
+event;status change to Person reachable;{NN}{NN}{TO}{NN}{JJ}
+event;not urgent;{RB}{JJ}
+event;status change to Receive confirmation;{NN}{NN}{TO}{VB}{NN}
+event;status change to Known issue;{NN}{NN}{TO}{VBN}{NN}
+event;yes;{RB}
+event;status change to Concerns lighting;{NN}{NN}{TO}{NNS}{VBG}
+event;status change to Issue signed Invoice;{NN}{NN}{TO}{NNP}{VBD}{NNP}
+event;status change to Enter data in public light mgmt sys;{NN}{NN}{TO}{VB}{NNS}{IN}{JJ}{JJ}{NN}{NNS}
+event;status change to Handle issue;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;status change to Give assignment to contractor;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;no;{DT}
+event;status change to Register request;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Transmit handling problem;{NN}{NN}{TO}{VB}{VBG}{NN}
+event;status change to Ask cust what product he is there for;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+event;status change to Possible solution;{NN}{NN}{TO}{JJ}{NN}
+event;yes;{RB}
+event;status change to Receive call during bus hours;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NNS}
+event;the end;{DT}{NN}
+event;no;{DT}
+event;status change to Enter data about the informer;{NN}{NN}{TO}{VB}{NNS}{IN}{DT}{NN}
+event;status change to Update status info;{NN}{NN}{TO}{NNP}{NN}{NN}
+event;yes;{RB}
+event;status change to Need to plan in batch;{NN}{NN}{TO}{VBN}{TO}{VB}{IN}{NN}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Fill in contact info;{NN}{NN}{TO}{VB}{IN}{NN}{NN}
+event;yes;{RB}
+event;urgent;{JJ}
+event;status change to Enter data in the system;{NN}{NN}{TO}{VB}{NNS}{IN}{DT}{NN}
+event;status change to Fill in info about issue;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NN}
+event;no;{DT}
+event;status change to Direct to desk;{NN}{NN}{TO}{JJ}{TO}{NN}

@@ -1,0 +1,24 @@
+705600f4da9b3726ccf80223ce0ddd24;birhtCertificate_p250
+function;Confirm choice of name;{VB}{NN}{IN}{NN}
+function;Finalize certificate;{VB}{NN}
+function;Sign certficate;{NN}{NN}
+function;Inform court;{VB}{NN}
+function;Create birth certificate;{VB}{NN}{NN}
+function;Apply decent (married/divorced);{RB}{JJ}{-LRB-}{JJ}{-RRB-}
+function;Check term of notification;{VB}{NN}{IN}{NN}
+function;Check GBA;{VB}{NNP}
+function;Determine nationality child;{JJ}{NN}{NN}
+function;Return documents;{NN}{NNS}
+function;Confirm identity without;{VB}{NN}{IN}
+function;Apply decent right (single);{RB}{JJ}{NN}{-LRB-}{JJ}{-RRB-}
+function;Send notifications;{VB}{NNS}
+function;Confirm identity;{VB}{NN}
+function;Return to migrantshelter;{NN}{TO}{NN}
+function;Refuse continuation;{VB}{NN}
+function;Run through data;{NNP}{IN}{NNS}
+function;Conform identity with passport;{VB}{NN}{IN}{NN}
+function;Start procedure;{NNP}{NN}
+function;Return and archive docs;{NN}{CC}{NN}{NNS}
+function;Receive notific. of birth;{VB}{JJ}{.}
+function;Investigate GBA data;{VB}{NNP}{NNS}
+event;End Event;{NN}{NN}

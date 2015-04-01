@@ -1,0 +1,18 @@
+106c1ff7129907efd260e14d9ca5d7c4;Sales Order
+function;Consignment Issue;{NNP}
+function;Consignment Fill-up;{NNP}{NN}
+function;Consignment Pickup;{NNP}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Consignment fill-up order is requested;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Consignment issue notification received;{NNP}{NN}{NN}{VBD}
+event;Consignment pickup is requested;{NNP}{NN}{VBZ}{VBN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}

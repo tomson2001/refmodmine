@@ -1,0 +1,9 @@
+27ad0add57abd51af0e6c75427a3643b;B.I.132.b_B.I.132.a_Capacity adjustment event control by alternative workstation groups
+function;Check basic data if alternative group exists;{VB}{JJ}{NNS}{IN}{JJ}{NN}{VBZ}
+function;Try scheduling;{VB}{NN}
+event;Scheduling unsuccessful;{VBG}{JJ}
+event;Alternative group found;{JJ}{NN}{VBD}
+event;Capacity bottleneck persists;{NN}{NN}{VBZ}
+event;Scheduling successful;{VBG}{JJ}
+event;No alternative group, capacity bottleneck persists;{DT}{JJ}{NN}{,}{NN}{NN}{VBZ}
+event;Try alternative workstation group;{VB}{NN}{NN}{NN}

@@ -1,0 +1,5 @@
+7b779b5c08cbdbddc55bea5d5d3494f4;Investment Support
+function;Application for Investment Support;{NN}{IN}{NN}{NN}
+event;Investment support was created /changed;{NN}{NN}{VBD}{VBN}{:}{VBN}
+event;Claim for support exists;{NN}{IN}{NN}{VBZ}
+event;Investment support is posted;{NN}{NN}{VBZ}{VBN}

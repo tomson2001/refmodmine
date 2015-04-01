@@ -1,0 +1,4 @@
+9eafb98e454b2cc51fff510c13baa152;Account Balance Interest Calculation (G/L)
+function;Account Balance Interest Calculation for General Ledger;{NNP}{NN}{IN}{NNP}
+event;Interest calculation is completed;{NN}{NN}{VBZ}{VBN}
+event;Interest to be calculated on account balances;{NN}{TO}{VB}{VBN}{IN}{NN}{NNS}

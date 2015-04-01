@@ -1,0 +1,5 @@
+665fc02c2b84b6413945558c3650c18e;Material Master
+function;Material Master Processing EH+S;{NNP}
+event;Dangerous goods master is to be processed;{JJ}{NNS}{NN}{VBZ}{TO}{VB}{VBN}
+event;Basic data is to be processed;{JJ}{NNS}{VBZ}{TO}{VB}{VBN}
+event;EH+S master data is to be created;{NN}{NN}{NNS}{VBZ}{TO}{VB}{VBN}

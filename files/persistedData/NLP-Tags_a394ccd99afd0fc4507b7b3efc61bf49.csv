@@ -1,0 +1,10 @@
+a394ccd99afd0fc4507b7b3efc61bf49;Outline Purchase Agreements
+function;Transmission of Scheduling Agreements;{NNP}{IN}{NNP}
+function;Transmission of Contracts;{NNP}{IN}{NNPS}
+function;Release of Outline Agreements;{NNP}{IN}{NNP}
+function;Scheduling Agreement Processing;{VBG}{NN}{NN}
+event;Quotation chosen;{NN}{VBN}
+event;Contract is drawn up;{NN}{VBZ}{VBN}{RP}
+event;Purchasing document released;{NNP}{NN}{VBD}
+event;Purchase order transmitted;{NN}{NN}{VBD}
+event;Scheduling agreement is created;{VBG}{NN}{VBZ}{VBN}

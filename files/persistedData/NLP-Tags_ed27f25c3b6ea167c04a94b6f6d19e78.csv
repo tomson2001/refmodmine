@@ -1,0 +1,8 @@
+ed27f25c3b6ea167c04a94b6f6d19e78;Employee hiring
+function;Employee hiring;{NN}{NN}
+event;Employee is active;{NN}{VBZ}{JJ}
+event;Time for restart reached;{NNP}{IN}{VB}{VBN}
+event;Employee staffs position;{NN}{NNS}{NN}
+event;Payroll accounting specifications changed;{NNP}{NN}{NNS}{VBD}
+event;Applicant must be hired;{NN}{MD}{VB}{VBN}
+event;Benefits offer must be adapted for employee;{NNS}{VBP}{MD}{VB}{VBN}{IN}{NN}

@@ -1,0 +1,27 @@
+9793ea87f9b318dfe15c0603f3fa812d;Profit and Cost Planning
+function;Profit Center Planning;{NN}{NNP}
+function;Sales Planning;{NNS}{NNP}
+function;Product Cost Planning;{NN}{NN}{NNP}
+function;Profit Planning;{NN}{NNP}
+function;Cost and Activity Planning;{NN}{CC}{NN}{NNP}
+event;New Period to Be Planned (Copy of Previous Year's Plan);{NNP}{NN}{TO}{VB}{NNP}{-LRB-}{VB}{IN}{JJ}{NN}{POS}{NN}{-RRB-}
+event;Plan sales quantities transferred to LIS;{NNP}{NNS}{NNS}{VBN}{TO}{NN}
+event;Cost estimate needs to be revised due to variances;{NN}{NN}{VBZ}{TO}{VB}{VBN}{JJ}{TO}{NNS}
+event;New Period to Be Planned (Copy of Actual);{NNP}{NN}{TO}{VB}{NNP}{-LRB-}{VB}{IN}{NNP}{-RRB-}
+event;Plan Sales Quantities Are to Be Transferred to SOP;{NNP}{NNS}{NNS}{VBP}{TO}{VB}{VBN}{TO}{VB}
+event;Profit center planning to be prepared (copy actual);{NN}{NN}{VBG}{TO}{VB}{VBN}{-LRB-}{NN}{JJ}{-RRB-}
+event;Cost and activity planning executed;{NN}{CC}{NN}{NN}{VBD}
+event;Profit center planning to be prepared (Excel upload);{NN}{NN}{VBG}{TO}{VB}{VBN}{-LRB-}{NNP}{NN}{-RRB-}
+event;Activity requirements transferred from production planning;{NN}{NNS}{VBN}{IN}{NN}{NN}
+event;New Period to Be Planned (New Definition of Plan Version);{NNP}{NN}{TO}{VB}{NNP}{-LRB-}{NNP}{IN}{NNP}{-RRB-}
+event;Profit center planning to be prepared (new definition);{NN}{NN}{VBG}{TO}{VB}{VBN}{-LRB-}{JJ}{NN}{-RRB-}
+event;Standard price updated in material master[];{JJ}{NN}{VBN}{IN}{JJ}{NN}{-LRB-}{-RRB-}
+event;Control measures taken due to variances;{NN}{NNS}{VBN}{JJ}{TO}{NNS}
+event;Sales plan is available;{NNS}{VBP}{VBZ}{JJ}
+event;Stock revaluated;{NNP}{VBD}
+event;Results plan transferred to EC-PCA;{NNS}{VBP}{VBN}{TO}{NN}
+event;Fiscal year/ period is to be costed;{JJ}{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}
+event;Plan Proposal for Sales Planning to be Created;{NNP}{IN}{NNS}{NNP}{TO}{VB}{VBN}
+event;Control measures set based on variances;{NN}{NNS}{VBN}{VBN}{IN}{NNS}
+event;Profit center planning is to be prepared (copy plan);{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}{-LRB-}{NN}{NN}{-RRB-}
+event;Plan Data for Order Exists;{NNP}{IN}{NNP}{VBZ}

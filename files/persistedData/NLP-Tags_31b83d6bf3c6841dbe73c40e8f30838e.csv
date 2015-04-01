@@ -1,0 +1,6 @@
+31b83d6bf3c6841dbe73c40e8f30838e;Registration
+function;Registration Order Processing;{NNP}
+event;Business event attendance exists;{NN}{NN}{NN}{VBZ}
+event;Registration order is rejected;{NN}{NN}{VBZ}{VBN}
+event;Need for operative personnel time scheduling;{VBN}{IN}{JJ}{NNS}{NN}{NN}
+event;Registration order exists;{NN}{NN}{VBZ}

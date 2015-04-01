@@ -1,0 +1,4 @@
+f8fcb337f5549bd6f9752d045f8b6009;Evaluations (Call Center)
+function;Call Center Evaluations;{VB}{NNP}{NNS}
+event;Analysis performed;{NN}{VBD}
+event;Evaluations are to be performed;{NNS}{VBP}{TO}{VB}{VBN}

@@ -1,0 +1,26 @@
+49a8e88c23d22fba7162ea6111d3c8c5;Invoices and Credit Memos
+function;Parked Document Posting [Vendors];{VBN}{NNP}{-LRB-}{NNP}{-RRB-}
+function;Invoice Receipt;{NNP}
+function;Vendor Credit Memo;{NNP}
+function;Internal Transfer Posting with Clearing;{JJ}{NN}{VBG}{IN}{NNP}
+function;Internal Transfer Posting;{JJ}{NN}{VBG}
+function;Vendor Document Parking;{NNP}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Document parked;{NNP}{VBD}
+event;Down payment is agreed with vendor;{IN}{NN}{VBZ}{VBN}{IN}{NN}
+event;Vendor invoices- /recurring docu- ments were posted on stt. unit;{NN}{NNS}{:}{:}{VBG}{NN}{:}{NNS}{VBD}{VBN}{IN}{NN}{.}
+event;Invoice received from one-time vendor;{NNP}{VBD}{IN}{JJ}{NN}
+event;Vendor invoice is to be parked;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Invoice received from vendor;{NNP}{VBD}{IN}{NN}
+event;Bill of exchange payable to be posted;{NNP}{IN}{NN}{JJ}{TO}{VB}{VBN}
+event;Document posted;{NNP}{VBD}
+event;Internal transfer posting with clearing to be carried out;{JJ}{NN}{VBG}{IN}{VBG}{TO}{VB}{VBN}{RP}
+event;Internal transfer posting is to be carried out;{JJ}{NN}{VBG}{VBZ}{TO}{VB}{VBN}{RP}
+event;Internal transfer posting posted;{JJ}{NN}{VBG}{VBN}
+event;Vendor down payment is to be cleared;{VB}{RP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Credit memo from one-time account vendor received;{NNP}{NN}{IN}{JJ}{NN}{NN}{VBD}
+event;Internal transfer posting with clearing carried out;{JJ}{NN}{VBG}{IN}{NN}{VBD}{RP}
+event;Vendor invoice is to be parked;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Payments must be released;{NNS}{MD}{VB}{VBN}
+event;Credit memo received from vendor;{NNP}{NN}{VBD}{IN}{NN}
+event;Credit memo posted;{NNP}{NN}{VBD}

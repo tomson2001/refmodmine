@@ -1,0 +1,11 @@
+77419d47f6e76f1bc09a2317cf197e36;Plan Capacities
+function;Planning Work in Internal Activities and Activity Elements;{NNP}{IN}{NNP}{NNS}{CC}{NN}{NNS}
+function;Shift Planning;{NN}{NNP}
+function;Capacity Leveling;{NN}{NN}
+function;Capacity Evaluation;{NN}{NN}
+event;Capacity leveling is performed;{NN}{NN}{VBZ}{VBN}
+event;Internal activity/ work planning required;{JJ}{NN}{:}{NN}{NN}{VBN}
+event;Workforce planning required;{NN}{NN}{VBN}
+event;Workforce Planning Carried Out;{NN}{NNP}{VBD}{IN}
+event;Capacity evaluation required;{NN}{NN}{VBN}
+event;Capacity leveling to be executed;{NN}{NN}{TO}{VB}{VBN}

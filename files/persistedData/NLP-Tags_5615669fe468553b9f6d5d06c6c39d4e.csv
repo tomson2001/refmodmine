@@ -1,0 +1,23 @@
+5615669fe468553b9f6d5d06c6c39d4e;Billing
+function;Declarations to Authorities;{NNS}{TO}{NNS}
+function;Credit Memo Request Processing;{NNP}
+function;Fixed Price Billing;{VBN}{NN}{NN}
+function;Resource-Related Billing;{JJ}{NN}
+function;Billing Request Processing;{NN}{NNP}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Order-related invoice to be created;{JJ}{NN}{TO}{VB}{VBN}
+event;Billing doc. relevant to accounting is created;{NN}{NN}{.}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Declarations transmitted;{NNS}{VBD}
+event;Billing document is monitored;{NN}{NN}{VBZ}{VBN}
+event;Credit/ debit memo is granted;{NNP}{:}{NN}{NN}{VBZ}{VBN}
+event;Credit/ debit memo request is rejected;{NNP}{:}{NN}{NN}{NN}{VBZ}{VBN}
+event;Credit memo request to be created;{NNP}{NN}{NN}{TO}{VB}{VBN}
+event;Billing document is monitored;{NN}{NN}{VBZ}{VBN}
+event;Declarations to the authorities to be carried out;{NNS}{TO}{DT}{NNS}{TO}{VB}{VBN}{RP}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Billing doc. relevant to accounting is created;{NN}{NN}{.}
+event;Billing request released for billing document;{NN}{NN}{VBN}{IN}{NN}{NN}

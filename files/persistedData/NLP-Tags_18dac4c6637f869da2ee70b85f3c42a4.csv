@@ -1,0 +1,11 @@
+18dac4c6637f869da2ee70b85f3c42a4;Return Deliveries
+function;Shipping;{VBG}
+function;Invoice Verification;{NNP}
+function;Warehouse;{NNP}
+function;Quality Notification;{NNP}
+event;Quality notification entered;{JJ}{NN}{VBD}
+event;Material is removed from stock;{NN}{VBZ}{VBN}{IN}{NN}
+event;Manual clearing is complete;{JJ}{NN}{VBZ}{JJ}
+event;Task-dependent follow-up actions are triggered;{JJ}{JJ}{NNS}{VBP}{VBN}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Defect requires manual quality notification;{NN}{VBZ}{JJ}{NN}{NN}

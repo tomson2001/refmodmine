@@ -1,0 +1,6 @@
+11ea7f4c061c3e93ddabaae3ae35819e;Backorder Processing
+function;Backorder Processing;{NNP}
+event;Backorder processing is to be carried out for material;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RP}{IN}{NN}
+event;Missing parts situation could not be eliminated;{VBG}{NNS}{NN}{MD}{RB}{VB}{VBN}
+event;Missing parts information is generated;{VBG}{NNS}{NN}{VBZ}{VBN}
+event;Missing parts situation is eliminated;{VBG}{NNS}{NN}{VBZ}{VBN}

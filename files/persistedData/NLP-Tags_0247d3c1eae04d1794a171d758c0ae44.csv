@@ -1,0 +1,40 @@
+0247d3c1eae04d1794a171d758c0ae44;Fig.29: GBA3 YAWL model for MunA
+function;Archive 1;{NNP}{CD}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Send payment request;{VB}{NN}{NN}
+function;Decide admissible;{VB}{JJ}
+function;Archive;{NNP}
+function;Free;{NNP}
+function;Send envelope to addressee;{VB}{NN}{TO}{NN}
+function;Receive payment;{VB}{NN}
+function;Send mail to appropriate department;{VB}{NN}{TO}{JJ}{NN}
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Process continue;{VB}{VB}
+function;Receive request;{VB}{NN}
+function;Prepare envelope for sending;{VB}{NN}{IN}{VBG}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Determine fees;{NN}{NNS}
+function;No payment;{DT}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Process payment;{VB}{NN}
+function;Send extract;{VB}{NN}
+event;no;{DT}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;status change to Determine if copy of ID is present;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+event;status change to Archive 1;{NN}{NN}{TO}{NNP}{CD}
+event;status change to Send mail to appropriate department;{NN}{NN}{TO}{VB}{NN}{TO}{JJ}{NN}
+event;status change to Send payment request;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;Status change to Free;{NN}{NN}{TO}{NNP}
+event;status change to Determine whether requester is entitled;{NN}{NN}{TO}{VB}{IN}{NN}{VBZ}{VBN}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Decide admissible;{NN}{NN}{TO}{VB}{JJ}
+event;the end;{DT}{NN}
+event;status change to Send envelope to addressee;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;yes;{RB}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Receive request;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;yes;{RB}
+event;status change to Archive;{NN}{NN}{TO}{NNP}

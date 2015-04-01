@@ -1,0 +1,16 @@
+a68d485b7c8ba9fc1f29abb1989941c7;Market-Oriented Planning
+function;Demand Management;{NN}{NN}
+function;Material Requirements Planning;{NN}{NNS}{NNP}
+function;Master Production Scheduling;{NN}{NN}{NN}
+function;Sales and Operations Planning;{NNS}{CC}{NNP}
+function;Long-Term Planning;{NNP}
+event;Sales plan is processed;{NNS}{VBP}{VBZ}{VBN}
+event;Sales and production quantities to be planned long to medium term;{NNS}{CC}{NN}{NNS}{TO}{VB}{VBN}{RB}{TO}{NN}{NN}
+event;Production plan is processed;{NN}{NN}{VBZ}{VBN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Demand Program Created;{NN}{NN}{VBN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Demand program to be planned in simulative mode;{NN}{NN}{TO}{VB}{VBN}{IN}{JJ}{NN}
+event;Separate planning run to be carried out for master schedule items;{JJ}{NN}{NN}{TO}{VB}{VBN}{RP}{IN}{NN}{NN}{NNS}
+event;Demand Program Activated;{NN}{NN}{VBN}
+event;Dependent Requirement Created;{JJ}{NN}{VBN}

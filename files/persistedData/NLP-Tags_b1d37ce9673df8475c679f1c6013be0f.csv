@@ -1,0 +1,30 @@
+b1d37ce9673df8475c679f1c6013be0f;Preparatory Work: General
+function;Creating Dimensions;{VBG}{NNS}
+function;Check Currencies;{VB}{NNS}
+function;Definition of Data Monitor;{NN}{IN}{NNS}{NNP}
+function;Definition of Ledgers;{NN}{IN}{NNS}
+function;Definition of Consolidation Monitor;{NN}{IN}{NN}{NNP}
+function;Definition of Subitems;{NN}{IN}{NNS}
+function;Creating Versions;{VBG}{NNS}
+function;Definition of Subitem Categories;{NN}{IN}{NNP}{NNS}
+function;Definition of Cons Chart of Accounts / Cons Chart of Accounts Hierarchy;{NN}{IN}{NNP}{IN}{NNPS}{:}{NNS}{NN}{IN}{NNP}
+function;Definition of Breakdown Categories;{NN}{IN}{NNP}{NNS}
+function;Definition of Consolidation Groups;{NN}{IN}{NN}{NNS}
+function;Definition of Custom Characteristics;{NN}{IN}{NNP}{NNS}
+function;Definition of Consolidation Units;{NN}{IN}{NN}{NNS}
+event;Applicable Subassignments Defined;{JJ}{NNS}{VBN}
+event;Consolidation Types Determined Through Views;{NN}{NNS}{VBN}{IN}{NNS}
+event;Different Consolidation Types Are to Be Used;{JJ}{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Currencies Checked;{NNS}{VBD}
+event;Data Monitor Is Defined;{NNS}{NNP}{VBZ}{VBN}
+event;Different Data Categories Are to Be Consolidated;{NNP}{VBP}{TO}{VB}{NNP}
+event;Consolidation Monitor Is Defined;{NN}{NNP}{VBZ}{VBN}
+event;Multiple Currencies Required;{JJ}{NNS}{VBN}
+event;Versions Created;{NNS}{VBN}
+event;Consolidation Chart of Accounts Hierarchy Defined;{NN}{NN}{IN}{NNP}
+event;Consolidation Units Defined;{NN}{NNS}{VBN}
+event;Subitems Defined;{NNP}
+event;Customer-Specific Characteristics Defined;{JJ}{NNS}{VBN}
+event;Account Assignment Categories Defined;{NNP}
+event;Consolidation Groups Defined;{NN}{NNS}{VBN}
+event;Ledger Defined in Accordance with Currencies;{NNP}{IN}{NNP}{IN}{NNPS}

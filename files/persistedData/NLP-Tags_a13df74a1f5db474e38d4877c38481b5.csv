@@ -1,0 +1,16 @@
+a13df74a1f5db474e38d4877c38481b5;Empties and Returnable Packaging Handling
+function;Sales Order;{NNS}{NN}
+function;Billing;{NN}
+function;Shipping;{VBG}
+function;Transport;{NN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Reason for charge for returnable packaging;{NN}{IN}{NN}{IN}{JJ}{NN}
+event;Returnable packaging is to be picked up;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Deliveries need to be planned;{NNS}{VBP}{TO}{VB}{VBN}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Shipment costs per item are calculated;{NN}{NNS}{IN}{NN}{VBP}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}

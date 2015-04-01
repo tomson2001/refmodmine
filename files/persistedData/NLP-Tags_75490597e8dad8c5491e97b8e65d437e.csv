@@ -1,0 +1,16 @@
+75490597e8dad8c5491e97b8e65d437e;Day evaluation
+function;Provision of required personnel time data;{NN}{IN}{VBN}{NNS}{NN}{NNS}
+function;Hour-based day evaluation;{JJ}{NN}{NN}
+function;Clock-time based day evaluation;{JJ}{VBN}{NN}{NN}
+event;Time remuneration specification is available;{NNP}{NN}{NN}{VBZ}{JJ}
+event;Need for personnel time evaluation is available;{VBN}{IN}{NNS}{NN}{NN}{VBZ}{JJ}
+event;EE - planned working time determination - operative is available;{SYM}{:}{VBN}{VBG}{NN}{NN}{:}{NN}{VBZ}{JJ}
+event;Performance of personnel time evaluation is desired;{NNP}{IN}{NNS}{NN}{NN}{VBZ}{VBN}
+event;Personnel cost assignment specification is available;{NNP}{VBD}{NN}{NN}{VBZ}{JJ}
+event;Actual personnel time specifications are available;{JJ}{NNS}{NN}{NNS}{VBP}{JJ}
+event;External service specifications are available;{JJ}{NN}{NNS}{VBP}{JJ}
+event;Required personnel time data for day is available;{VBN}{NNS}{NN}{NNS}{IN}{NN}{VBZ}{JJ}
+event;Personnel time account posting is available;{NNP}{NN}{NN}{VBG}{VBZ}{JJ}
+event;Planned personnel time specifications are available;{NNP}{NNS}{NN}{NNS}{VBP}{JJ}
+event;Person-based work schedules are available;{JJ}{NN}{NNS}{VBP}{JJ}
+event;Personnel time evaluation message is available;{NNP}{NN}{NN}{NN}{VBZ}{JJ}

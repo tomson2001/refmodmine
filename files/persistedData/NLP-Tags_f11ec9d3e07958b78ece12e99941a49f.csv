@@ -1,0 +1,9 @@
+f11ec9d3e07958b78ece12e99941a49f;Customer Complaint
+function;Creation and Processing of Quality Notifications;{NN}{CC}{NN}{IN}{NNP}{NNS}
+event;Effectiveness of a task is documented at a later date;{NN}{IN}{DT}{NN}{VBZ}{VBN}{IN}{DT}{JJ}{NN}
+event;Defect requires manual quality notification;{NN}{VBZ}{JJ}{NN}{NN}
+event;Evaluation from QMIS indicates quality problems;{NN}{IN}{NNS}{VBZ}{NN}{NNS}
+event;Sales document is to be created for the quality notification;{NNS}{VBP}{VBZ}{TO}{VB}{VBN}{IN}{DT}{NN}{NN}
+event;Quality notification is completed;{JJ}{NN}{VBZ}{VBN}
+event;External sales force/ customer complaint is to be created;{JJ}{NNS}{NN}{:}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;QM order is created for quality notification;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}

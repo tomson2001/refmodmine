@@ -1,0 +1,10 @@
+e449fd64697ced323c3a3fa1e1de0a1b;Project Completion Activities
+function;Final Results Analysis;{JJ}{NNS}{NN}
+function;Final Settlement;{JJ}{NNP}
+function;Project Closing Documentation;{NNP}{NN}{NN}
+function;Final Invoice Processing;{JJ}{NNP}
+function;Set Project Closed Status;{VB}{NNP}
+event;Close project;{JJ}{NN}
+event;Settle project;{VB}{NN}
+event;Change project status;{NNP}{NN}{NN}
+event;Guarantee product service;{NN}{NN}{NN}

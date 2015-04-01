@@ -1,0 +1,21 @@
+d3432d7cc0d091f21bf313b6efe04cae;Fig.54: WABO1 YAWL model for MunF
+function;Send acknowledgment SYSTEM;{VB}{NN}{NN}
+function;Send acknowledgment;{VB}{NN}
+function;Assign investigating officer;{VB}{VBG}{NN}
+function;Register SYSTEM;{NNP}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;Check wealth;{VB}{NN}
+function;Archive;{NNP}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+function;Register;{NNP}
+function;Change plan;{NNP}{NN}
+function;Check urban plan;{VB}{JJ}{NN}
+function;Hold consultation with customer;{VB}{NN}{IN}{NN}
+function;Hold meeting with customer;{VB}{NN}{IN}{NN}
+function;Send results of consultation;{VB}{NNS}{IN}{NN}
+function;Receive supplements;{VB}{NNS}
+event;End case;{NNP}{NN}
+event;no;{DT}
+event;Start case;{NNP}{NN}
+event;yes;{RB}

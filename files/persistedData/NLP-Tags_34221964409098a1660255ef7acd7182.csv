@@ -1,0 +1,5 @@
+34221964409098a1660255ef7acd7182;Budgeting
+function;Budget Allocation;{NNP}
+event;Costs planned;{NNS}{VBD}
+event;Budget to be released;{NNP}{TO}{VB}{VBN}
+event;Project is to be released;{NN}{VBZ}{TO}{VB}{VBN}

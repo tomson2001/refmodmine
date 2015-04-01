@@ -1,0 +1,20 @@
+4149856b58addc58c1e133afac2eca3f;Personnel Staff Planning
+function;Employee Notification of Task Area;{NN}{NN}{IN}{NNP}
+function;Approval of Results of Personnel Staff Planning;{NN}{IN}{NNS}{IN}{NNP}
+function;Preparation of Personnel Staff Planning;{NN}{IN}{NNP}
+function;Personnel Staff Planning;{NNP}
+event;Notification of task area is transmitted to employee;{NN}{IN}{NN}{NN}{VBZ}{VBN}{TO}{NN}
+event;Need for individual personnel development planning exists for approval;{VBN}{IN}{JJ}{NNS}{NN}{NN}{VBZ}{IN}{NN}
+event;Position exists;{NN}{VBZ}
+event;Department and assigned employee exist;{NNP}{CC}{VBN}{NN}{VBP}
+event;Need for personnel staff planning exists;{VBN}{IN}{NNS}{NN}{NN}{VBZ}
+event;Preparation of personnel staff planning is complete;{NN}{IN}{NNS}{NN}{NN}{VBZ}{JJ}
+event;Provisions of personnel staff planning are implemented;{NNS}{IN}{NNS}{NN}{NN}{VBP}{VBN}
+event;Personnel staff plan must be corrected;{NNP}{NN}{NN}{MD}{VB}{VBN}
+event;Need for monitoring of career planning exists;{VBN}{IN}{NN}{IN}{NN}{NN}{VBZ}
+event;Personnel staff plan exists;{NNP}{NN}{NN}{VBZ}
+event;Personnel staff plan exists for approval;{NNP}{NN}{NN}{VBZ}{IN}{NN}
+event;Need for personnel change planning exists;{VBN}{IN}{NNS}{VBP}{VBG}{VBZ}
+event;Need for individual personnel development planning exists;{VBN}{IN}{JJ}{NNS}{NN}{NN}{VBZ}
+event;Need for change planning exists for approval;{VBN}{IN}{NN}{NN}{VBZ}{IN}{NN}
+event;Need for employee notification of task area exists;{VBN}{IN}{NN}{NN}{IN}{NN}{NN}{VBZ}

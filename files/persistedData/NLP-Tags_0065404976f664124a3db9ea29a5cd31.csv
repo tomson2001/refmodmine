@@ -1,0 +1,24 @@
+0065404976f664124a3db9ea29a5cd31;Asset Maintenance
+function;Asset Master Record Change;{NNP}
+function;Creation of Leased Asset Master Record;{NN}{IN}{VBN}{NNP}
+function;Mass Change;{JJ}{NNP}
+event;Asset master record does not exist;{NNP}{NN}{NN}{VBZ}{RB}{VB}
+event;Acquisitions to be entered;{NNS}{TO}{VB}{VBN}
+event;Asset master record is incomplete;{NNP}{NN}{NN}{VBZ}{JJ}
+event;Fixed asset is changed;{VBN}{NN}{VBZ}{VBN}
+event;Operating lease procedure should be used;{VBG}{NN}{NN}{MD}{VB}{VBN}
+event;Assign asset to property, if required;{VB}{NN}{TO}{NN}{,}{IN}{VBN}
+event;Valuation leased asset is determined;{NN}{VBN}{NN}{VBZ}{VBN}
+event;An asset master record should be changed;{DT}{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Assign asset to building, if required;{VB}{NN}{TO}{NN}{,}{IN}{VBN}
+event;Leased asset is created;{VBN}{NN}{VBZ}{VBN}
+event;Cost center plan was changed;{NN}{NN}{NN}{VBD}{VBN}
+event;Revaluation is necessary due to post-capi- talization;{NN}{VBZ}{JJ}{JJ}{TO}{JJ}{:}{NN}
+event;Mass changes were made;{JJ}{NNS}{VBD}{VBN}
+event;Depreciation terms should be changed;{NN}{NNS}{MD}{VB}{VBN}
+event;Depreciation should be posted regularly;{NN}{MD}{VB}{VBN}{RB}
+event;Retirements to be entered;{NNS}{TO}{VB}{VBN}
+event;Several asset master records should be changed;{JJ}{NN}{NN}{NNS}{MD}{VB}{VBN}
+event;Worklist was created;{NNP}{VBD}{VBN}
+event;Index series must be updated;{NNP}{NN}{MD}{VB}{VBN}
+event;Post-capitalization to be posted;{NN}{TO}{VB}{VBN}

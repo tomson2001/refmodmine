@@ -1,0 +1,70 @@
+95a1f746ef51ea70971a8002009b5351;Fig.44: MOR YAWL model for MunF
+function;Close case;{JJ}{NN}
+function;Information complete;{NN}{JJ}
+function;Assign categ resp person and dept;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Process continue;{VB}{VB}
+function;Direct to desk;{JJ}{TO}{NN}
+function;Handle outside the system;{VB}{IN}{DT}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Receive confirmation;{VB}{NN}
+function;Process continue 2;{VB}{VB}{CD}
+function;Process continue 1;{VB}{VB}{CD}
+function;Start case;{NNP}{NN}
+function;Handle issue;{VB}{NN}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Contractor has reported back;{NN}{VBZ}{VBN}{RB}
+function;Handle issue 1;{VB}{NN}{CD}
+function;Contract person reporting issue;{NN}{NN}{VBG}{NN}
+function;Forward to team leaders;{RB}{TO}{NN}{NNS}
+function;Process continue 3;{VB}{VB}{CD}
+function;Receive mail regarding issue;{VB}{NN}{VBG}{NN}
+function;Fill in contract info;{VB}{IN}{NN}{NN}
+function;Sign receipt;{NN}{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Inform person reporting;{VB}{NN}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Process continue 4;{VB}{VB}{CD}
+function;Possible solution;{JJ}{NN}
+function;Receive mail of phone call directly;{VB}{NN}{IN}{NN}{NN}{RB}
+event;yes;{RB}
+event;no;{DT}
+event;status change to Information complete;{NN}{NN}{TO}{NNP}{JJ}
+event;no;{DT}
+event;status change to Ask cust what product he is there for;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+event;the end;{DT}{NN}
+event;status change to Receive mail regarding issue;{NN}{NN}{TO}{VB}{NN}{VBG}{NN}
+event;status change to Transmit handling problem;{NN}{NN}{TO}{VB}{VBG}{NN}
+event;status change to Sign receipt;{NN}{NN}{TO}{VB}{NN}
+event;status change to Receive call during bus hours;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NNS}
+event;status change to Contract person reporting issue;{NN}{NN}{TO}{NNP}{NN}{VBG}{NN}
+event;status change to Close case;{NN}{NN}{TO}{VB}{NN}
+event;yes;{RB}
+event;status change to Need to plan in batch;{NN}{NN}{TO}{VBN}{TO}{VB}{IN}{NN}
+event;status change to Inform person reporting;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Contractor has reported back;{NN}{NN}{TO}{NNP}{VBZ}{VBN}{RB}
+event;yes;{RB}
+event;status change to Handle outside the system;{NN}{NN}{TO}{VB}{IN}{DT}{NN}
+event;no;{DT}
+event;status change to Direct to desk;{NN}{NN}{TO}{JJ}{TO}{NN}
+event;status change to Forward to team leaders;{NN}{NN}{TO}{RB}{TO}{NN}{NNS}
+event;status change to Give assignment to contractor;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;no;{DT}
+event;status change to Assign categ resp person and dept;{NN}{NN}{TO}{VB}{NN}{NN}{NN}{CC}{NN}
+event;status change to Receive confirmation;{NN}{NN}{TO}{VB}{NN}
+event;yes;{RB}
+event;yes;{RB}
+event;status change to Enter data about the informer;{NN}{NN}{TO}{VB}{NNS}{IN}{DT}{NN}
+event;status change to Enter data about the informer;{NN}{NN}{TO}{VB}{NNS}{IN}{DT}{NN}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Receive mail of phone call directly;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NN}{RB}
+event;status change to Fill in info about issue;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NN}
+event;status change to Enter data about issue;{NN}{NN}{TO}{VB}{NNS}{IN}{NN}
+event;no;{DT}
+event;status change to Fill in contract info;{NN}{NN}{TO}{VB}{IN}{NN}{NN}

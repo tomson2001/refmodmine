@@ -1,0 +1,18 @@
+76f2896509daf42fc557a6827ce58067;Procurement on a Consignment Basis
+function;Goods Receipt;{NNP}
+function;Purchasing;{NNP}
+function;Invoice Verification;{NNP}
+function;Warehouse/ Stores;{NNP}{:}{NNS}
+function;Purchase Requisition;{NN}{NN}
+event;Goods received;{NNP}{VBD}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Consignment/ pipeline settlement document transmitted;{NN}{:}{NN}{NN}{NN}{VBD}
+event;Purchase requisition released for contract release order;{NN}{NN}{VBN}{IN}{NN}{NN}{NN}
+event;Requisition released for scheduling agreement schedule/SA release;{NN}{VBN}{IN}{NN}{NN}{NN}{NN}
+event;Purchase order created;{NN}{NN}{VBN}
+event;Material placed in storage;{NN}{VBN}{IN}{NN}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Requirement for material has arisen;{NN}{IN}{NN}{VBZ}{VBN}
+event;Purchase requisition released for purchase order;{NN}{NN}{VBN}{IN}{NN}{NN}
+event;Inbound delivery entered;{JJ}{NN}{VBD}
+event;Consignment/ pipeline liabilities are to be settled;{NN}{:}{NN}{NNS}{VBP}{TO}{VB}{VBN}

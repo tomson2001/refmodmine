@@ -1,0 +1,4 @@
+d1982b6de0060332319438ee8ae65de2;Pipeline Withdrawal
+function;Goods Issue Processing;{NNP}
+event;Unplanned goods issue occurred;{JJ}{NNS}{NN}{VBD}
+event;Consignment/ pipeline liability is created;{NN}{:}{NN}{NN}{VBZ}{VBN}

@@ -1,0 +1,40 @@
+569ca531578e9f80f4b3ccdd15e78ec4;Fig.44: MOR YAWL model for MunF
+function;Receive mail of phone call directly;{VB}{NN}{IN}{NN}{NN}{RB}
+function;Information complete;{NN}{JJ}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Handle issue;{VB}{NN}
+function;Direct to desk;{JJ}{TO}{NN}
+function;Sign receipt;{NN}{NN}
+function;Forward to team leaders;{RB}{TO}{NN}{NNS}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Handle issue 1;{VB}{NN}{CD}
+function;Inform person reporting;{VB}{NN}{NN}
+function;Receive mail regarding issue;{VB}{NN}{VBG}{NN}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Contractor has reported back;{NN}{VBZ}{VBN}{RB}
+function;Fill in contract info;{VB}{IN}{NN}{NN}
+function;Handle outside the system;{VB}{IN}{DT}{NN}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Assign categ resp person and dept;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Close case;{JJ}{NN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Contract person reporting issue;{NN}{NN}{VBG}{NN}
+function;Possible solution;{JJ}{NN}
+event;Case closed;{NNP}{VBD}
+event;yes;{RB}
+event;no;{DT}
+event;yes;{RB}
+event;no;{DT}
+event;yes;{RB}
+event;yes;{RB}
+event;Start case;{NNP}{NN}
+event;no;{DT}
+event;no;{DT}
+event;no;{DT}
+event;yes;{RB}

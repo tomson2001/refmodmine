@@ -1,0 +1,11 @@
+33c39fcb1a2456f258caedc2bd118960;Shipping
+function;Goods Receipt Processing for Returns;{NNP}{IN}{NNP}
+function;Delivery for Returns;{NN}{IN}{NNS}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Returns already dispatched;{NNS}{RB}{VBD}
+event;Returns to be collected;{NNS}{TO}{VB}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Transfer order created manually;{NN}{NN}{VBN}{RB}
+event;Inward material movement to be posted;{RB}{NN}{NN}{TO}{VB}{VBN}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Transfer order created automatically;{NN}{NN}{VBN}{RB}

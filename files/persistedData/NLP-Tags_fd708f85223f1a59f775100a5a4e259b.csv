@@ -1,0 +1,11 @@
+fd708f85223f1a59f775100a5a4e259b;Design of Enterprise Benefits System
+function;Implementation of Benefits Program;{NN}{IN}{NNP}
+function;Design of Benefits Programs;{NN}{IN}{NNP}
+function;Design of Benefits Plans;{NN}{IN}{NNPS}{NNS}
+event;Need for catalog of benefits plans exists;{VBN}{IN}{NN}{IN}{NNS}{NNS}{VBZ}
+event;Need for benefits program exists;{VBN}{IN}{NNS}{NN}{VBZ}
+event;Need for correction of benefits plans;{VBN}{IN}{NN}{IN}{NNS}{NNS}
+event;Need for correction of benefits program;{VBN}{IN}{NN}{IN}{NNS}{NN}
+event;Benefits program is implemented;{NNS}{NN}{VBZ}{VBN}
+event;Catalog of benefits plans is adopted;{NN}{IN}{NNS}{NNS}{VBZ}{VBN}
+event;Benefits program is adopted;{NNS}{NN}{VBZ}{VBN}

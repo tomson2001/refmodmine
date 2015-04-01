@@ -1,0 +1,13 @@
+9cc8d2cdc14edadb9461690b911a5c2f;Fig.50: WABO1 YAWL model for MunB
+function;Check urban plan;{VB}{JJ}{NN}
+function;Send acknowledgment;{VB}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+function;Send results of consultation;{VB}{NNS}{IN}{NN}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;Register;{NNP}
+function;Test admissibility;{NN}{NN}
+function;Check wealth;{VB}{NN}
+function;Process documents;{VB}{NNS}
+function;Fill in e-form;{VB}{IN}{NN}
+event;End case;{NNP}{NN}
+event;Start case;{NNP}{NN}

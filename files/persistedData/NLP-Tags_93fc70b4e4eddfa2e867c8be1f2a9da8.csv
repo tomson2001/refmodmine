@@ -1,0 +1,10 @@
+93fc70b4e4eddfa2e867c8be1f2a9da8;Retirements
+function;Mass Retirement;{NNP}
+function;Retirement;{NNP}
+event;Retirement for LVA to be carried out;{NNP}{IN}{NNP}{TO}{VB}{VBN}{RP}
+event;Plant section was sold;{NN}{NN}{VBD}{VBN}
+event;Worklist was created;{NNP}{VBD}{VBN}
+event;Retirement was posted and checked;{NNP}{VBD}{VBN}{CC}{VBN}
+event;Retirements to be entered;{NNS}{TO}{VB}{VBN}
+event;Plant section was shut down;{NN}{NN}{VBD}{VBN}{RP}
+event;Fixed assets should be posted jointly;{JJ}{NNS}{MD}{VB}{VBN}{RB}

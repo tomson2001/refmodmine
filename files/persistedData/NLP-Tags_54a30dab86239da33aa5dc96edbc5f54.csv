@@ -1,0 +1,39 @@
+54a30dab86239da33aa5dc96edbc5f54;Consignment Processing
+function;Warehouse Management;{NNP}
+function;Risk/ Credit Management;{NN}{:}{NNP}
+function;Billing;{NN}
+function;Shipping;{VBG}
+function;Sales Order;{NNS}{NN}
+function;Costing;{VBG}
+function;Transport;{NN}
+function;Backorder Processing;{NNP}
+event;Deliveries need to be planned;{NNS}{VBP}{TO}{VB}{VBN}
+event;Terms of credit have changed;{NNS}{IN}{NN}{VBP}{VBN}
+event;Consignment fill-up order is requested;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Consignment issue notification received;{NNP}{NN}{NN}{VBD}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Shipment costs per item are calculated;{NN}{NNS}{IN}{NN}{VBP}{VBN}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Unit costing for material in sales document to be created;{NN}{VBG}{IN}{NN}{IN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Sales document preliminary costed via unit costing;{NNS}{VBP}{JJ}{VBN}{IN}{NN}{VBG}
+event;Transfer order created manually;{NN}{NN}{VBN}{RB}
+event;Transfer order created automatically;{NN}{NN}{VBN}{RB}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Change to terms of credit refused;{NNP}{TO}{NNS}{IN}{NN}{VBD}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Missing parts situation could not be eliminated;{VBG}{NNS}{NN}{MD}{RB}{VB}{VBN}
+event;Consignment pickup is requested;{NNP}{NN}{VBZ}{VBN}
+event;Sales order preliminary costing via product costing;{NNS}{NN}{JJ}{VBG}{IN}{NN}{VBG}
+event;Backorder processing is to be carried out for material;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RP}{IN}{NN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Missing parts situation is eliminated;{VBG}{NNS}{NN}{VBZ}{VBN}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Product costng to material in sales document to be created;{NN}{NN}{TO}{NN}{IN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Goods movement is posted;{NNP}{NN}{VBZ}{VBN}
+event;Missing parts information is generated;{VBG}{NNS}{NN}{VBZ}{VBN}

@@ -1,0 +1,20 @@
+13d84bb99037e6b6a29a2abae2f93cdc;Group Requirements
+function;Processing of Asset Acquisition;{NN}{IN}{NNP}
+function;Retirement;{NNP}
+function;Creation of Master Record for Tangible Assets;{NN}{IN}{NNP}{IN}{JJ}{NNS}
+function;Transfer Within a Client;{NN}{IN}{DT}{NN}
+event;Operating lease procedure should be used;{VBG}{NN}{NN}{MD}{VB}{VBN}
+event;Acquisition within group to be posted;{NN}{IN}{NN}{TO}{VB}{VBN}
+event;Valuation leased asset is determined;{NN}{VBN}{NN}{VBZ}{VBN}
+event;New master record is necessary;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Acquisition within group posted;{NN}{IN}{NN}{VBD}
+event;Fixed asset was bought w/o purchase order;{VBN}{NN}{VBD}{VBN}{NN}{NN}{NN}
+event;Leased asset was bought;{VBN}{NN}{VBD}{VBN}
+event;Fixed asset was given;{VBN}{NN}{VBD}{VBN}
+event;Asset transfer within a client exists;{NNP}{NN}{IN}{DT}{NN}{VBZ}
+event;Acquisition is posted in target company code;{NN}{VBZ}{VBN}{IN}{NN}{NN}{NN}
+event;Retirement is posted in source company code;{NNP}{VBZ}{VBN}{IN}{NN}{NN}{NN}
+event;Retirement within group to be posted;{NNP}{IN}{NN}{TO}{VB}{VBN}
+event;Asset master record does not exist;{NNP}{NN}{NN}{VBZ}{RB}{VB}
+event;Fixed asset was found;{VBN}{NN}{VBD}{VBN}
+event;Retirement from group posted;{NNP}{IN}{NN}{VBD}

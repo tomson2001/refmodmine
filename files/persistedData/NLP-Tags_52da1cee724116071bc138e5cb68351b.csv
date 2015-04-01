@@ -1,0 +1,5 @@
+52da1cee724116071bc138e5cb68351b;D.I.040.a_Event control of value- oriented processes
+function;General ledger accounting;{NNP}{NN}
+event;Closing period reached;{NN}{NN}{VBD}
+event;Transfer of entry from subsidiary accounts;{NN}{IN}{NN}{IN}{NN}{NNS}
+event;Scheduled deadline reached;{VBN}{NN}{VBD}

@@ -1,0 +1,35 @@
+7cd2a131e455ef2becaa2e1c729bacfd;Release and Implementation of Measure
+function;Manual Funds Reservation;{NNP}
+function;Order Release;{NNP}
+function;Goods Issue Processing [Stock Material];{NNP}{-LRB-}{NNP}{-RRB-}
+function;Cost Reposting;{NN}{NN}
+function;Direct Activity Allocation;{JJ}{NN}{NN}
+function;Manual Entry of Statistical Key Figures;{NNP}{IN}{NNP}{NNS}
+function;Reservation Processing;{NN}{NN}
+function;Manual Funds Reduction;{NNPS}{NN}
+event;Posting error from primary system occurred;{VBG}{NN}{IN}{JJ}{NN}{VBD}
+event;Material is reserved;{NN}{VBZ}{VBN}
+event;Funds for anticipated costs are to be set aside;{NNS}{IN}{JJ}{NNS}{VBP}{TO}{VB}{VBN}{RB}
+event;Open item was detailed;{VB}{NN}{VBD}{VBN}
+event;Stock material is to be reserved;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Goods issue is planned;{NNP}{NN}{VBZ}{VBN}
+event;Statistical figures are to be entered;{JJ}{NNS}{VBP}{TO}{VB}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Budget is assigned;{NNP}{VBZ}{VBN}
+event;Wrongly-assigned object entered;{JJ}{NN}{VBD}
+event;Statistical key figure was entered for reference object;{JJ}{JJ}{NN}{VBD}{VBN}{IN}{NN}{NN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Order is released;{NN}{VBZ}{VBN}
+event;Internal procurement to be triggered;{JJ}{NN}{TO}{VB}{VBN}
+event;Object to be assigned was debited;{VB}{TO}{VB}{VBN}{VBD}{VBN}
+event;Accounts payable/ down payments to be triggered;{NNPS}{JJ}{:}{IN}{NNS}{TO}{VB}{VBN}
+event;Actual costs incurred are known;{JJ}{NNS}{VBN}{VBP}{VBN}
+event;Internal Activity Should Be Allocated Internally;{JJ}{NN}{MD}{VB}{NNP}{RB}
+event;Reserved funds are to be reduced;{VBN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Posting was rejected due to budget overrun;{VBG}{VBD}{VBN}{JJ}{TO}{NN}{NN}
+event;Release and execution of measure to be triggered;{NNP}{CC}{NN}{IN}{NN}{TO}{VB}{VBN}
+event;Internal Activity Was Allocated;{JJ}{NN}{VBD}{VBN}
+event;Open item is based on order;{VB}{NN}{VBZ}{VBN}{IN}{NN}
+event;Funds are reserved;{NNS}{VBP}{VBN}
+event;Need for trip has arisen;{VBN}{IN}{NN}{VBZ}{VBN}
+event;Reserved funds were reduced;{VBN}{NNS}{VBD}{VBN}

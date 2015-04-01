@@ -1,0 +1,8 @@
+44ce24d8de7e9a4f9a8c5086e2918369;Application Retraction Processing
+function;Application Retraction Processing;{NN}{NNP}
+function;Application Retraction Confirmation;{NN}{NNP}{NN}
+event;Applicant has retracted application;{NN}{VBZ}{VBN}{NN}
+event;Applicant has been entered;{NN}{VBZ}{VBN}{VBN}
+event;Enterprise receives retraction of application;{NNP}{VBZ}{NN}{IN}{NN}
+event;Enterprise requires retraction confirmation;{NN}{VBZ}{NN}{NN}
+event;Retraction confirmation and application documents transmitted to applicant;{NN}{NN}{CC}{NN}{NNS}{VBN}{TO}{NN}

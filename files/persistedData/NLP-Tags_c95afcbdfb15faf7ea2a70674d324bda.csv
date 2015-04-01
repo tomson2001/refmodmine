@@ -1,0 +1,35 @@
+c95afcbdfb15faf7ea2a70674d324bda;Admission Hohenheim
+function;proof of uni degree provided;{NN}{IN}{JJ}{NN}{VBN}
+function;Mark as not complete;{NNP}{IN}{RB}{JJ}
+function;receive application;{VB}{NN}
+function;Complete and send application form online;{JJ}{CC}{VB}{NN}{NN}{NN}
+function;checking if complete;{VBG}{IN}{JJ}
+function;Final confirmation by head of university;{JJ}{NN}{IN}{NN}{IN}{NN}
+function;publishing the letters;{VBG}{DT}{NNS}
+function;Mark as complete;{NNP}{IN}{JJ}
+function;Rejection;{NN}
+function;Send documents to selection committee;{VB}{NNS}{TO}{NN}{NN}
+function;German applicant;{JJ}{NN}
+function;requirements are not met of low ranking;{NNS}{VBP}{RB}{VBN}{IN}{JJ}{NN}
+function;Providing the missing documents;{VBG}{DT}{VBG}{NNS}
+function;proposed as rejected;{VBN}{IN}{VBN}
+function;Print out the online application form (INT);{VB}{RP}{DT}{JJ}{NN}{NN}{-LRB-}{NN}{-RRB-}
+function;Choose Master Program;{VB}{NNP}
+function;update the applicant status;{VB}{DT}{NN}{NN}
+function;proposed as reserved;{VBN}{IN}{VBN}
+function;rank application on scale of 1 to 10;{NN}{NN}{IN}{NN}{IN}{CD}{TO}{CD}
+function;proposed as accepted;{VBN}{IN}{VBN}
+function;Receive application number and a password;{VB}{NN}{NN}{CC}{DT}{NN}
+function;Receiving the written applications;{VBG}{DT}{VBN}{NNS}
+function;Document Online Applications;{NNP}{NNS}
+function;assessment of application;{NN}{IN}{NN}
+function;Waiting for response;{VBG}{IN}{NN}
+function;Print out the online application form (GER);{VB}{RP}{DT}{JJ}{NN}{NN}{-LRB-}{NN}{-RRB-}
+function;Receiving acceptance letter;{VBG}{NN}{NN}
+function;Allocate an application number and password to each applicant;{VB}{DT}{NN}{NN}{CC}{NN}{TO}{DT}{NN}
+function;high ranking requirements are met;{JJ}{JJ}{NNS}{VBP}{VBN}
+function;Enrollment;{NN}
+function;Reservation place;{NN}{NN}
+function;Send all the requirements to the secretarial office for students;{VB}{PDT}{DT}{NNS}{TO}{DT}{JJ}{NN}{IN}{NNS}
+function;International applicant;{NNP}{NN}
+event;End Event;{NN}{NN}

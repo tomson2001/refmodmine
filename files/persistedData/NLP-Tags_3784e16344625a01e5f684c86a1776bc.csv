@@ -1,0 +1,13 @@
+3784e16344625a01e5f684c86a1776bc;Work Contract Negotiation
+function;Preparation for Hiring;{NN}{IN}{VBG}
+function;Processing Offer of Work Contract;{NN}{NN}{IN}{NN}{NN}
+function;Work Contract Rejection Processing;{NN}{NNP}
+function;Entry of Rejection of Work Contract;{NN}{IN}{NN}{IN}{NN}{NN}
+event;Enterprise receives acceptance of offer of contract;{NNP}{VBZ}{NN}{IN}{NN}{IN}{NN}
+event;Applicant must be offered contract for vacancy;{NN}{MD}{VB}{VBN}{NN}{IN}{NN}
+event;Offer of work contract must be revised;{NN}{IN}{NN}{NN}{MD}{VB}{VBN}
+event;Offer of work contract is transmitted;{NN}{IN}{NN}{NN}{VBZ}{VBN}
+event;Applicant must be hired;{NN}{MD}{VB}{VBN}
+event;Enterprise receives rejection of offer of contract;{NNP}{VBZ}{NN}{IN}{NN}{IN}{NN}
+event;Enterprise does not require a new offer of work contract;{NN}{VBZ}{RB}{VB}{DT}{JJ}{NN}{IN}{NN}{NN}
+event;Applicant has rejected offer of work contract;{NN}{VBZ}{VBN}{NN}{IN}{NN}{NN}

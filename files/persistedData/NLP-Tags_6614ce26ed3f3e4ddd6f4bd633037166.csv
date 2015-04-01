@@ -1,0 +1,8 @@
+6614ce26ed3f3e4ddd6f4bd633037166;Design of Enterprise-Wide Personnel Development System
+function;Design of Personnel Development System;{NN}{IN}{NNP}
+function;Implementation of Personnel Development System;{NN}{IN}{NNP}
+event;Need for personnel development system exists;{VBN}{IN}{NNS}{NN}{NN}{VBZ}
+event;Personnel development system is implemented;{NNS}{NN}{NN}{VBZ}{VBN}
+event;Personnel development system is adopted;{NNS}{NN}{NN}{VBZ}{VBN}
+event;Additional implementation actions are required;{JJ}{NN}{NNS}{VBP}{VBN}
+event;Personnel development system must be corrected;{NNS}{NN}{NN}{MD}{VB}{VBN}

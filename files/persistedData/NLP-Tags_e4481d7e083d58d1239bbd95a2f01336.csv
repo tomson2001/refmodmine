@@ -1,0 +1,11 @@
+e4481d7e083d58d1239bbd95a2f01336;Remote Data Entry
+function;Data Transfer;{NNS}{NN}
+event;Data is updated realtime;{NNS}{VBZ}{VBN}{NN}
+event;Rollup extract file is transferred;{NN}{NN}{NN}{VBZ}{VBN}
+event;Individual/ subgroup financial state- ments are to be sent to parent company;{JJ}{:}{NN}{JJ}{NN}{:}{NNS}{VBP}{TO}{VB}{VBN}{TO}{NN}{NN}
+event;Extract is transferred by IDOC;{NN}{VBZ}{VBN}{IN}{NN}
+event;Extract is transferred from R/2;{NN}{VBZ}{VBN}{IN}{NN}
+event;File is transferred as PC file;{VB}{VBZ}{VBN}{IN}{NN}{NN}
+event;Extract/ download for R/ 2 is created;{NN}{:}{VB}{IN}{NN}{:}{CD}{VBZ}{VBN}
+event;Export file (PC) is transferred;{NN}{NN}{-LRB-}{NN}{-RRB-}{VBZ}{VBN}
+event;Extract is transferred as UNIX file;{NN}{VBZ}{VBN}{IN}{NNP}{NN}

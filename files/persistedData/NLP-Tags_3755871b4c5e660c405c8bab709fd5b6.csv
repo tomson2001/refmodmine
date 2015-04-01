@@ -1,0 +1,25 @@
+3755871b4c5e660c405c8bab709fd5b6;Benefits Administration
+function;Design of Enterprise Benefits System;{NN}{IN}{NNP}
+function;Payroll Processing for Benefits Plans;{NNP}{IN}{NNPS}{NNS}
+function;Administration of Benefits Plan Participation;{NN}{IN}{NNP}{NN}
+function;Benefits Selection;{NNS}{NN}
+function;Monitoring of Enterprise Benefits System;{NN}{IN}{NNP}
+event;Need for catalog of benefits plans exists;{VBN}{IN}{NN}{IN}{NNS}{NNS}{VBZ}
+event;Need for correction of benefits program;{VBN}{IN}{NN}{IN}{NNS}{NN}
+event;Adaptation of benefits participation is transmitted to employee;{NN}{IN}{NNS}{NN}{VBZ}{VBN}{TO}{NN}
+event;Employee benefits accounts are updated;{NN}{NNS}{NNS}{VBP}{VBN}
+event;Need for benefits program exists;{VBN}{IN}{NNS}{NN}{VBZ}
+event;Benefits information transmitted to service provider;{NNS}{NN}{VBD}{TO}{NN}{NN}
+event;Payroll information for benefits service provider exists;{NNP}{NN}{IN}{NNS}{NN}{NN}{VBZ}
+event;Time for payroll processing for benefits has occurred;{NNP}{IN}{NN}{NN}{IN}{NNS}{VBZ}{VBN}
+event;Period for recurring enrollment has started;{NN}{IN}{VBG}{NN}{VBZ}{VBN}
+event;Employee participation in benefits plan is available for enrollment;{NN}{NN}{IN}{NNS}{NN}{VBZ}{JJ}{IN}{NN}
+event;Employee participation in benefits is active;{NN}{NN}{IN}{NNS}{VBZ}{JJ}
+event;Employee participation in benefits plan is available for changing;{NN}{NN}{IN}{NNS}{NN}{VBZ}{JJ}{IN}{VBG}
+event;Employee participation in benefits plan is available for termination;{NN}{NN}{IN}{NNS}{NN}{VBZ}{JJ}{IN}{NN}
+event;Benefits amounts are transmitted to service provider;{NNS}{NNS}{VBP}{VBN}{TO}{NN}{NN}
+event;Benefits program is implemented;{NNS}{NN}{VBZ}{VBN}
+event;Need for monitoring of benefits system;{VBN}{IN}{NN}{IN}{NNS}{NN}
+event;Employee participation in benefits is complete;{NN}{NN}{IN}{NNS}{VBZ}{JJ}
+event;Need for correction of benefits plans;{VBN}{IN}{NN}{IN}{NNS}{NNS}
+event;Benefits offer must be adapted for employee;{NNS}{VBP}{MD}{VB}{VBN}{IN}{NN}

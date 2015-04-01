@@ -1,0 +1,60 @@
+2da5ef3f88b435d1263577d0b8027a7b;Fig.40: MOR YAWL model for MunB
+function;Known issue;{VBN}{NN}
+function;Handle issue;{VB}{NN}
+function;Assign categ resp person and dept;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Send e-mail with issue;{VB}{NN}{IN}{NN}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Fill in contract info;{VB}{IN}{NN}{NN}
+function;Possible solution;{JJ}{NN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Information complete;{NN}{JJ}
+function;Start case;{NNP}{NN}
+function;Register e-mail;{NNP}{NN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Process continue;{VB}{VB}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Printout receipt;{NNP}{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Issue signed invoice;{NN}{VBD}{NN}
+function;Enter data in public light mgmt sys;{VB}{NNS}{IN}{JJ}{JJ}{NN}{NNS}
+function;Receive confirmation;{VB}{NN}
+function;Direct to desk;{JJ}{TO}{NN}
+function;Contract person who reported;{NN}{NN}{WP}{VBD}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Close_case;{NN}
+function;Process continue 1;{VB}{VB}{CD}
+function;Concerns lighting;{NNS}{VBG}
+function;Enter data about the issue;{VB}{NNS}{IN}{DT}{NN}
+event;status change to Issue signed invoice;{NN}{NN}{TO}{NNP}{VBD}{NN}
+event;status change to Give assignment to contractor;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Send e-mail with issue;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Direct to desk;{NN}{NN}{TO}{JJ}{TO}{NN}
+event;status change to Possible solution;{NN}{NN}{TO}{JJ}{NN}
+event;status change to Receive confirmation;{NN}{NN}{TO}{VB}{NN}
+event;status change to Register e-mail;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Need to plan in batch;{NN}{NN}{TO}{VBN}{TO}{VB}{IN}{NN}
+event;status change to Enter data in public light mgmt sys;{NN}{NN}{TO}{VB}{NNS}{IN}{JJ}{JJ}{NN}{NNS}
+event;status change to Handle issue;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;no;{DT}
+event;status change to Known issue;{NN}{NN}{TO}{VBN}{NN}
+event;status change to Fill in contract info;{NN}{NN}{TO}{VB}{IN}{NN}{NN}
+event;status change to Inform person who reported;{NN}{NN}{TO}{VB}{NN}{WP}{VBD}
+event;status change to Enter data about the issue;{NN}{NN}{TO}{VB}{NNS}{IN}{DT}{NN}
+event;yes;{RB}
+event;yes;{RB}
+event;status change to Transmit handling problem;{NN}{NN}{TO}{VB}{VBG}{NN}
+event;status change to Ask cust what product he is there for;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+event;no;{DT}
+event;status change to Information complete;{NN}{NN}{TO}{NNP}{JJ}
+event;the end;{DT}{NN}
+event;status change to Receive call during bus hours;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NNS}
+event;yes;{RB}
+event;status change to Concern lighting;{NN}{NN}{TO}{NN}{NN}
+event;status change to Close case;{NN}{NN}{TO}{VB}{NN}
+event;yes;{RB}
+event;no;{DT}

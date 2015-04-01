@@ -1,0 +1,18 @@
+f6b29d03d16662de48963a30bfb7324b;B.I.158_EPC of the order release process
+function;Order released, distribution to plant departments;{NNP}{VBD}{,}{NN}{TO}{NN}{NNS}
+function;Analysis whether net change or reoptimazation;{NN}{IN}{JJ}{NN}{CC}{NN}
+function;Check, if planning release possible;{VB}{,}{IN}{NN}{NN}{JJ}
+function;Distribution of orders to planners;{NN}{IN}{NNS}{TO}{NNS}
+function;Availability check of all resources;{NN}{NN}{IN}{DT}{NNS}
+function;Inventorycheck;{NNP}
+event;Orders distributed;{NNS}{VBN}
+event;Scheduled deadline reached;{VBN}{NN}{VBD}
+event;Time-critical orders identified;{JJ}{NNS}{VBN}
+event;Reoptimization chosen;{NN}{VBN}
+event;Net change chosen;{JJ}{NN}{VBN}
+event;Rush order received;{NN}{NN}{VBD}
+event;Resources incomplete;{NNP}{JJ}
+event;Order not released;{NNP}{RB}{VBD}
+event;Change within production occured;{NNP}{IN}{NN}{VBD}
+event;All resources available;{DT}{NNS}{JJ}
+event;Order by planner released;{NN}{IN}{NN}{VBN}

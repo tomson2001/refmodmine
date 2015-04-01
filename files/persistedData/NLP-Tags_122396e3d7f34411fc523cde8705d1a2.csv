@@ -1,0 +1,34 @@
+122396e3d7f34411fc523cde8705d1a2;Operational business planning
+function;Profit Planning;{NN}{NNP}
+function;Cost and Activity Planning;{NN}{CC}{NN}{NNP}
+function;Production Planning;{NN}{NNP}
+function;Product Cost Planning;{NN}{NN}{NNP}
+function;Sales Planning;{NNS}{NNP}
+function;Profit Center Planning;{NN}{NNP}
+event;Long-Term Planning Evaluated;{NNP}
+event;Plan sales quantities transferred to LIS;{NNP}{NNS}{NNS}{VBN}{TO}{NN}
+event;Results plan transferred to EC-PCA;{NNS}{VBP}{VBN}{TO}{NN}
+event;Control measures taken due to variances;{NN}{NNS}{VBN}{JJ}{TO}{NNS}
+event;Sales plan is available;{NNS}{VBP}{VBZ}{JJ}
+event;Planned sales quantities to be transferred to SOP;{NNP}{NNS}{NNS}{TO}{VB}{VBN}{TO}{VB}
+event;Stock revaluated;{NNP}{VBD}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Cost estimate needs to be revised due to variances;{NN}{NN}{VBZ}{TO}{VB}{VBN}{JJ}{TO}{NNS}
+event;Master Production Scheduling Evaluated;{NN}{NN}{NN}{VBN}
+event;Control measures set based on variances;{NN}{NNS}{VBN}{VBN}{IN}{NNS}
+event;Profit center planning is to be prepared (copy plan);{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}{-LRB-}{NN}{NN}{-RRB-}
+event;New Period to Be Planned (New Definition of Plan Version);{NNP}{NN}{TO}{VB}{NNP}{-LRB-}{NNP}{IN}{NNP}{-RRB-}
+event;Forecast parameters exist;{NN}{NNS}{VBP}
+event;Standard price updated in material master[];{JJ}{NN}{VBN}{IN}{JJ}{NN}{-LRB-}{-RRB-}
+event;Activity requirements to be transferred to Cost Planning;{NN}{NNS}{TO}{VB}{VBN}{TO}{NN}{NNP}
+event;Plan Proposal for Sales Planning to be Created;{NNP}{IN}{NNS}{NNP}{TO}{VB}{VBN}
+event;Material Requirements Planning Evaluated;{NN}{NNS}{NNP}
+event;New Period to Be Planned (Copy of Actual);{NNP}{NN}{TO}{VB}{NNP}{-LRB-}{VB}{IN}{NNP}{-RRB-}
+event;Profit center planning to be prepared (new definition);{NN}{NN}{VBG}{TO}{VB}{VBN}{-LRB-}{JJ}{NN}{-RRB-}
+event;Fiscal year/ period is to be costed;{JJ}{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}
+event;Plan Data for Order Exists;{NNP}{IN}{NNP}{VBZ}
+event;Mat.forecast is to be carried out;{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Profit center planning to be prepared (copy actual);{NN}{NN}{VBG}{TO}{VB}{VBN}{-LRB-}{NN}{JJ}{-RRB-}
+event;New Period to Be Planned (Copy of Previous Years Plan);{NNP}{NN}{TO}{VB}{NNP}{-LRB-}{VB}{IN}{JJ}{NNS}{NN}{-RRB-}
+event;Cost and activity planning executed;{NN}{CC}{NN}{NN}{VBD}
+event;Profit center planning to be prepared (Excel upload);{NN}{NN}{VBG}{TO}{VB}{VBN}{-LRB-}{NNP}{NN}{-RRB-}

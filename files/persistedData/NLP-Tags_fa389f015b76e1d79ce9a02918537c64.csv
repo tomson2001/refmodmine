@@ -1,0 +1,31 @@
+fa389f015b76e1d79ce9a02918537c64;Customer Payments
+function;Payment Advice Note Processing;{NN}{NNP}{VB}{NN}
+function;Automatic Incoming Payments;{NNP}{NNS}
+function;Release for Payment;{NNP}{IN}{NN}
+function;Manual Incoming Payments;{JJ}{JJ}{NNS}
+function;Customer Payment Request;{NN}{NN}{NN}
+event;Payment posted;{NN}{VBD}
+event;Payment advice note has arrived;{NN}{NN}{NN}{VBZ}{VBN}
+event;Partial payment should be made;{JJ}{NN}{MD}{VB}{VBN}
+event;Payment deadline is reached;{NN}{NN}{VBZ}{VBN}
+event;Customer open items were generated;{NN}{JJ}{NNS}{VBD}{VBN}
+event;Payment advice note created;{NN}{NN}{NN}{VBN}
+event;Automatic debit exists;{NNP}{NN}{VBZ}
+event;Payment received;{NN}{VBD}
+event;Payment advice is sent;{NN}{NN}{VBZ}{VBN}
+event;Payment request was created;{NN}{NN}{VBD}{VBN}
+event;Individual posting items should be checked via workflow;{JJ}{VBG}{NNS}{MD}{VB}{VBN}{IN}{NN}
+event;Payment medium transferred;{NN}{NN}{VBN}
+event;Items are cleared;{NNS}{VBP}{VBN}
+event;Incoming payment was posted to bank clearing account;{JJ}{NN}{VBD}{VBN}{TO}{NN}{NN}{NN}
+event;Payment to be made manually;{NN}{TO}{VB}{VBN}{RB}
+event;Incoming payment to be made;{JJ}{NN}{TO}{VB}{VBN}
+event;Payment is transferred by EDI;{NN}{VBZ}{VBN}{IN}{NN}
+event;Document is to be reworked;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Payment to be made with form printout;{NN}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Data medium is created;{NNS}{NN}{VBZ}{VBN}
+event;Payment medium to be created;{NN}{NN}{TO}{VB}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Clear items using automatic payment program;{JJ}{NNS}{VBG}{JJ}{NN}{NN}
+event;Payment request is created;{NN}{NN}{VBZ}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}

@@ -1,0 +1,36 @@
+130ff38aa42d8dc8437c1b307270d849;A.II.25,a
+function;F1;{NN}
+function;Distribution to users;{NN}{TO}{NNS}
+function;Purchasing;{NNP}
+function;Analysis whether net change or reoptimazation;{NN}{IN}{JJ}{NN}{CC}{NN}
+function;Check whether the date is in the past;{VB}{IN}{DT}{NN}{VBZ}{IN}{DT}{NN}
+function;Forward scheduling;{RB}{NN}
+function;Estimate gross requirement;{NNP}{JJ}{NN}
+function;Lot sizing;{NN}{VBG}
+function;Production;{NN}
+function;Primary requirements planning;{JJ}{NNS}{VBG}
+function;Determine inventory level/ reservation;{NN}{NN}{NN}{:}{NN}
+function;Bill of materials management;{NNP}{IN}{NNS}{NN}
+function;Estimate net requirement;{NNP}{JJ}{NN}
+function;Estimate secondary requirement;{NNP}{JJ}{NN}
+function;Consumptionbased requirements forecast;{JJ}{NNS}{VBP}
+function;Initiate development transaction;{VB}{NN}{NN}
+function;Finish subproject;{VB}{NN}
+function;Perform design activity;{VB}{NN}{NN}
+function;Call of  transactions in order to validate production, quality cost suitability etc.;{NN}{IN}{NNS}{IN}{NN}{TO}{VB}{NN}{,}{NN}{NN}{NN}{NN}{.}
+function;Reservation design room;{NN}{NN}{NN}
+function;Product costing;{NN}{VBG}
+event;Reoptimization chosen;{NN}{VBN}
+event;Bill of materials updated;{NNP}{IN}{NNS}{VBN}
+event;Delivery updated;{NN}{VBN}
+event;Net change chosen;{JJ}{NN}{VBN}
+event;Date is in the past;{NN}{VBZ}{IN}{DT}{NN}
+event;Work load distrubed;{NN}{NN}{VBD}
+event;Order generated;{NNP}{VBD}
+event;Plant disruption occured;{NN}{NN}{VBD}
+event;Scheduling completed;{NN}{VBD}
+event;Secondary requirement estimated;{JJ}{NN}{VBN}
+event;Occurrence of original requirement;{NN}{IN}{JJ}{NN}
+event;Design activity completed;{NN}{NN}{VBN}
+event;Validation check successful;{NN}{NN}{JJ}
+event;Order release ( preliminary costing of order);{NNP}{NN}{-LRB-}{JJ}{VBG}{IN}{NN}{-RRB-}

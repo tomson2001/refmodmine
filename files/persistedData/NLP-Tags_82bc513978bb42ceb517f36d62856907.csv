@@ -1,0 +1,6 @@
+82bc513978bb42ceb517f36d62856907;Consumption-Driven Planning
+function;Material Requirements Planning;{NN}{NNS}{NNP}
+function;Forecast;{NN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Mat.forecast is to be carried out;{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Forecast requirements generated;{NN}{NNS}{VBD}

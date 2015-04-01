@@ -1,0 +1,4 @@
+4346bdd3e6c7aa2e5205a2dbac268cd0;B.I.056.b_Event control of requirements tracking
+function;Estimate secondary requirement;{NNP}{JJ}{NN}
+event;Secondary requirement estimated;{JJ}{NN}{VBN}
+event;Requirements derivation;{NNS}{NN}

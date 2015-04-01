@@ -1,0 +1,8 @@
+9d19201ffdc3cf5aa9795908ff3ebc29;Sales Order Oriented Planning
+function;Master Production Scheduling;{NN}{NN}{NN}
+function;Material Requirements Planning;{NN}{NNS}{NNP}
+event;Customer Requirements Occurred;{NN}{NNS}{VBD}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Dependent Requirement Created;{JJ}{NN}{VBN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Separate planning run to be carried out for master schedule items;{JJ}{NN}{NN}{TO}{VB}{VBN}{RP}{IN}{NN}{NN}{NNS}

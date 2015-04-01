@@ -1,0 +1,7 @@
+e791d7128dab37e9190350942a609697;Project Completion
+function;Set Project Closed Status;{VB}{NNP}
+function;Project Closing Documentation;{NNP}{NN}{NN}
+event;Close project;{JJ}{NN}
+event;Project close documentation is executed;{NNP}{RB}{NN}{VBZ}{VBN}
+event;Status Complete is set;{NNP}{JJ}{VBZ}{VBN}
+event;Project close documentation to be carried out;{NNP}{RB}{NN}{TO}{VB}{VBN}{RP}

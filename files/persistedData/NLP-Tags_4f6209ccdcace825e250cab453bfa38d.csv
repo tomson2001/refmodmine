@@ -1,0 +1,20 @@
+4f6209ccdcace825e250cab453bfa38d;Manual Sending of PDM Objects
+function;Table Contents Distribution;{NNP}{NN}
+function;Dependency Distribution;{NN}{NN}
+function;Configuration Profile Distribution;{NN}{NNP}{NN}
+function;Table Structure Distribution;{NNP}{NN}{NN}
+function;Material Master Distribution;{NNP}{NN}
+function;Material Variant Distribution;{NNP}{JJ}{NN}
+function;Change Number Distribution;{NNP}{NN}
+function;Material BOM Distribution;{NNP}{NN}
+function;Order BOM Distribution;{NNP}{NN}
+function;Characteristics Distribution;{NNS}{NN}
+function;Plant Assignment Distribution;{NNP}{NN}
+function;Function Distribution;{NN}{NN}
+function;Class Distribution;{NNP}{NN}
+function;Document Structure Distribution;{NNP}{NN}{NN}
+function;Document Distribution ALE;{NNP}{NN}{NN}
+function;Classification Distribution;{NN}{NN}
+function;Dependency Net Distribution;{NN}{NN}{NN}
+event;Send product data manually;{VB}{NN}{NNS}{RB}
+event;Check product data;{VB}{NN}{NNS}

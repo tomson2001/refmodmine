@@ -1,0 +1,6 @@
+36e6591d4a8347dededb675cb3708e4c;General Ledger Planning
+function;General Ledger Planning;{NNP}
+event;Planning carried out;{NNP}{VBD}{RP}
+event;P+L statement account is created;{NN}{NN}{NN}{VBZ}{VBN}
+event;G/L account planning is to be carried out;{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Balance sheet account is created;{NN}{NN}{NN}{VBZ}{VBN}

@@ -1,0 +1,25 @@
+851d4e5aa15ac1f1cc67494ecd4fcd64;Update
+function;Check of Order Update [Direct Capitalization];{VB}{IN}{NNP}{-LRB-}{NNP}{NN}{-RRB-}
+function;Budget Update [Capital Investment];{NNP}{-LRB-}{NNP}{-RRB-}
+event;Budget is updated;{NNP}{VBZ}{VBN}
+event;Purchase order commitment created;{NN}{NN}{NN}{VBN}
+event;Reserved funds were reduced;{VBN}{NNS}{VBD}{VBN}
+event;Procurement and capitalization carried out;{NN}{CC}{NN}{VBD}{RP}
+event;Vendor down payment request is created;{VB}{RP}{NN}{NN}{VBZ}{VBN}
+event;Open item was detailed;{VB}{NN}{VBD}{VBN}
+event;Service is accepted;{NNP}{VBZ}{VBN}
+event;Payment posted;{NN}{VBD}
+event;Budget is to be updated;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Material is reserved;{NN}{VBZ}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Vendor down payment posted;{VB}{RP}{NN}{VBD}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Posting was rejected due to budget overrun;{VBG}{VBD}{VBN}{JJ}{TO}{NN}{NN}
+event;Purchase requisition commitment created;{NN}{NN}{NN}{VBN}
+event;Internal Activity Was Allocated;{JJ}{NN}{VBD}{VBN}
+event;Assigned funds are within tolerance limits;{VBN}{NNS}{VBP}{IN}{NN}{NNS}
+event;Incorrectly assigned object was credited;{RB}{VBN}{NN}{VBD}{VBN}
+event;Posting was allowed despite budget overrun;{VBG}{VBD}{VBN}{IN}{NN}{NN}
+event;Program positions released;{NN}{NNS}{VBN}
+event;Object to be assigned was debited;{VB}{TO}{VB}{VBN}{VBD}{VBN}

@@ -1,0 +1,45 @@
+f9196bf553c58cdac1374f2d7d19c3ea;Spare Parts Delivery Processing
+function;Delivery and Transportation;{NN}{CC}{NN}
+function;Service Notification;{NNP}
+function;Spare Parts Order;{JJ}{NNP}
+function;Billing;{NN}
+function;Presales;{NNS}
+function;Warehouse Management;{NNP}
+function;Risk/ Credit Management;{NN}{:}{NNP}
+event;Service Requirement Arose;{NNP}{NN}{NN}
+event;Customer inquires about products;{NN}{VBZ}{IN}{NNS}
+event;Change to terms of credit refused;{NNP}{TO}{NNS}{IN}{NN}{VBD}
+event;Generate sales order-related billing document;{VB}{NNS}{JJ}{NN}{NN}
+event;Print log is created;{VB}{NN}{VBZ}{VBN}
+event;Document blocked due to insufficent hedge;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Goods issue blocked for export;{NNP}{NN}{VBD}{IN}{NN}
+event;Inquiry items are rejected;{NNP}{NNS}{VBP}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Legal control data is processed;{JJ}{NN}{NNS}{VBZ}{VBN}
+event;Order is to be Created from Contact;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Cust. mail. campaign to be carried out;{NNP}{.}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Difference has been posted to interface;{NN}{VBZ}{VBN}{VBN}{TO}{NN}
+event;Sales activity is to be processed;{NNS}{NN}{VBZ}{TO}{VB}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Material is removed from stock;{NN}{VBZ}{VBN}{IN}{NN}
+event;Quotation items are rejected;{NN}{NNS}{VBP}{VBN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Notification is printed;{NN}{VBZ}{VBN}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Credit limit is not sufficient;{NNP}{NN}{VBZ}{RB}{JJ}
+event;Inventory management posting already carried out;{NN}{NN}{VBG}{RB}{VBN}{RP}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Declarations transmitted;{NNS}{VBD}
+event;Sales and Distribution Document Must Be Created for Service Notification;{NNS}{CC}{NN}{NNP}{MD}{VB}{VBN}{IN}{NNP}
+event;Goods movement is posted;{NNP}{NN}{VBZ}{VBN}
+event;Difference is settled on srce bin location;{NN}{VBZ}{VBN}{IN}{NN}{NN}{NN}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Quotation is to be created from contact;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Terms of credit have changed;{NNS}{IN}{NN}{VBP}{VBN}
+event;Quotation is monitored;{NN}{VBZ}{VBN}
+event;Billing document is monitored;{NN}{NN}{VBZ}{VBN}
+event;Order generated and delivery opened;{NNP}{VBD}{CC}{NN}{VBD}
+event;Required Data must be Processed;{NNP}{MD}{VB}{VBN}

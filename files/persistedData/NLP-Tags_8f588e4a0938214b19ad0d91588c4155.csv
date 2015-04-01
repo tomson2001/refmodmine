@@ -1,0 +1,28 @@
+8f588e4a0938214b19ad0d91588c4155;Special Purpose Ledger
+function;Table Maintenance;{NNP}
+function;Planning;{NNP}
+function;Prepare Ledger;{VB}{NNP}
+function;Actual Posting;{JJ}{NN}
+function;Periodic Processing;{JJ}{NN}
+event;Assessment was carried out;{NNP}{VBD}{VBN}{RP}
+event;Planning is to be carried out;{NNP}{VBZ}{TO}{VB}{VBN}{RP}
+event;Translation was carried out;{NN}{VBD}{VBN}{RP}
+event;Translation is to be carried out for company;{NN}{VBZ}{TO}{VB}{VBN}{RP}{IN}{NN}
+event;Pl. distri- bution is to be carried out;{NN}{.}
+event;Ledger to be prepared;{NNP}{TO}{VB}{VBN}
+event;Planning carried out;{NNP}{VBD}{RP}
+event;Master data is to be maintained in other components;{NN}{NNS}{VBZ}{TO}{VB}{VBN}{IN}{JJ}{NNS}
+event;Document was transferred to FI-Special Ledger;{NNP}{VBD}{VBN}{TO}{JJ}{NNP}
+event;Data transferred from external systems;{NNS}{VBN}{IN}{JJ}{NNS}
+event;Data is to be summarized;{NNS}{VBZ}{TO}{VB}{VBN}
+event;Actual postings to be made;{JJ}{NNS}{TO}{VB}{VBN}
+event;Planned assessment to be performed;{NNP}{NN}{TO}{VB}{VBN}
+event;Rollup was carried out;{NN}{VBD}{VBN}{RP}
+event;Table group must be created;{NNP}{NN}{MD}{VB}{VBN}
+event;Translation is to be carried out for company code;{NN}{VBZ}{TO}{VB}{VBN}{RP}{IN}{NN}{NN}
+event;Balances were carried forward;{NNS}{VBD}{VBN}{RB}
+event;Ledger is ready to be updated;{NNP}{VBZ}{JJ}{TO}{VB}{VBN}
+event;Actual assessment is to be made;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Act. distri- bution is to be carried out;{NNP}{.}
+event;Balances are to be carried forward;{NNS}{VBP}{TO}{VB}{VBN}{RB}
+event;Distribution was carried out;{NN}{VBD}{VBN}{RP}

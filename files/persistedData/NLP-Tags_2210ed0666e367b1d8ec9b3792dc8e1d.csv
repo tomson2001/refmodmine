@@ -1,0 +1,33 @@
+2210ed0666e367b1d8ec9b3792dc8e1d;B.II.024_EPC for the sales process
+function;Take article out of stock;{VB}{NN}{IN}{IN}{NN}
+function;Posting;{VBG}
+function;Update basic data;{NNP}{JJ}{NNS}
+function;Prepare production order (primary requirements);{VB}{NN}{NN}{-LRB-}{JJ}{NNS}{-RRB-}
+function;Availability check;{NN}{NN}
+function;Production order monitoring;{NN}{NN}{NN}
+function;Prepare invoice;{VB}{NN}
+function;Display route;{VB}{NN}
+function;Quote monitoring;{NN}{NN}
+function;Transport;{NN}
+function;Provide transport resources;{VB}{NN}{NNS}
+function;Quality inspection;{JJ}{NN}
+function;Prepare shipping documents;{VB}{VBG}{NNS}
+function;Post invoice;{NNP}{NN}
+function;Quaote preparation;{NN}{NN}
+function;Reserve Article;{NNP}
+event;Quality o.k.;{JJ}{NN}
+event;Production order prepared;{NN}{NN}{VBN}
+event;Quality not o.k.;{NNP}{RB}{VB}
+event;Article provided;{NNP}{VBD}
+event;Quote sent;{NN}{VBD}
+event;Customer inquiry;{NN}{NN}
+event;Transport resources provided;{NN}{NNS}{VBN}
+event;Customer dunning note received;{NN}{NN}{NN}{VBD}
+event;Sales process completed;{NNS}{NN}{VBN}
+event;Shipping documents prepared;{VBG}{NNS}{VBN}
+event;Customer order received;{NN}{NN}{VBD}
+event;Article taken out of stock;{NNP}{VBN}{IN}{IN}{NN}
+event;Invoice prepared;{NNP}{VBD}
+event;Order confirmation;{NNP}{NN}
+event;Article reserved;{NNP}{VBD}
+event;Sales activity;{NNS}{NN}

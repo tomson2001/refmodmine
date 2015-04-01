@@ -1,0 +1,20 @@
+906c905aa51afeb60ad8fa9467b28450;Period-End Closing for Profit Center Accounting
+function;Profit Center: Transfer of Assets;{NN}{NNP}{:}{NN}{IN}{NNS}
+function;Profit Center: Transfer of Receivables/ Payables;{NN}{NNP}{:}{NN}{IN}{NNPS}{:}{NNS}
+function;Profit Center Distribution: Actual;{NN}{NNP}{NN}{:}{NNP}
+function;Profit Center Analysis;{NN}{NNP}{NN}
+function;Profit Center Balance Carryforward;{NN}{NNP}
+function;Profit Center: Transfer of Work in Process;{NN}{NNP}{:}{NN}{IN}{NN}{IN}{VB}
+function;Actual Profit Center Assessment;{JJ}{NN}{NNP}
+function;Profit Center: Transfer of Material Stock;{NN}{NNP}{:}{NN}{IN}{NNP}
+event;Profit Center Transfer of Receivables/ Payables Required;{NN}{NNP}{NN}{IN}{NNPS}{:}{NNP}
+event;Profit center transfer of fixed assets required;{NN}{NN}{NN}{IN}{JJ}{NNS}{VBN}
+event;Profit Center Transfer of WIP Required;{NN}{NNP}{NN}{IN}{NNP}
+event;Profit Center Balance Carryforward Required;{NN}{NNP}
+event;Profit Center Transfer of Material Inventories Required;{NN}{NNP}{NN}{IN}{NNP}{NNS}{VBN}
+event;Balance sheet items were copied to Profit Center Accounting;{NN}{NN}{NNS}{VBD}{VBN}{TO}{NN}{NNP}
+event;Balance sheet items were distributed;{NN}{NN}{NNS}{VBD}{VBN}
+event;All profit center actual data exists;{DT}{NN}{NN}{JJ}{NNS}{VBZ}
+event;Distribute profit center overhead costs;{VB}{NN}{NN}{NN}{NNS}
+event;Control measures set based on variances;{NN}{NNS}{VBN}{VBN}{IN}{NNS}
+event;Balances carried forward to Profit Center Accounting;{NNS}{VBD}{RB}{TO}{NN}{NNP}

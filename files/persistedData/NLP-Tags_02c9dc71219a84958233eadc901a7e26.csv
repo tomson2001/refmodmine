@@ -1,0 +1,55 @@
+02c9dc71219a84958233eadc901a7e26;Production Planning
+function;Standard SOP;{NNP}
+function;Long-Term Planning: Evaluation;{NNP}{:}{NN}
+function;Long-Term Planning - Total Planning;{NNP}{:}{JJ}{NNP}
+function;Demand management;{NN}{NN}
+function;Forecast;{NN}
+function;Overall Material Requirements Planning;{JJ}{NNP}{NNS}{NNP}
+function;Transfer of Results to Demand Management;{NN}{IN}{NNS}{TO}{NN}{NN}
+function;Master Production Scheduling - Evaluation;{NN}{NN}{NN}{:}{NN}
+function;Material requirements planning - evaluation;{NN}{NNS}{VBG}{:}{NN}
+function;Master Production Scheduling - Total Planning;{NN}{NN}{NN}{:}{JJ}{NNP}
+function;Planning Scenario Processing;{NNP}{NN}{NN}
+function;Processing of planned indep. reqmts for long-term planning;{NN}{IN}{VBN}{NN}{.}
+event;Dependent Requirement Created;{JJ}{NN}{VBN}
+event;Safety stock is generated;{NNP}{NN}{VBZ}{VBN}
+event;MRP list to be processed;{NN}{NN}{TO}{VB}{VBN}
+event;Consumption values exist;{NN}{NNS}{VBP}
+event;MRP list is created;{NN}{NN}{VBZ}{VBN}
+event;Demand Program Created;{NN}{NN}{VBN}
+event;Planned independent reqmts to be created for simulation;{NNP}{JJ}{NNS}{TO}{VB}{VBN}{IN}{NN}
+event;Demand program to be planned in simulative mode;{NN}{NN}{TO}{VB}{VBN}{IN}{JJ}{NN}
+event;SOP data to be transferred to Demand Management;{NNP}{NNS}{TO}{VB}{VBN}{TO}{NN}{NN}
+event;Long-Term Planning Evaluated;{NNP}
+event;Forecast requirements generated;{NN}{NNS}{VBD}
+event;Forecast values are corrected;{NN}{NNS}{VBP}{VBN}
+event;Production plan is processed;{NN}{NN}{VBZ}{VBN}
+event;Scenario for long-term planning to be processed;{NN}{IN}{JJ}{NN}{TO}{VB}{VBN}
+event;MRP list is created;{NN}{NN}{VBZ}{VBN}
+event;Sales quantities are forecast;{NNS}{NNS}{VBP}{VBN}
+event;Simulated planned ind. reqmts are created;{JJ}{VBN}{NN}{NNS}{VBP}{VBN}
+event;Master Production Scheduling Evaluated;{NN}{NN}{NN}{VBN}
+event;Mat.forecast is to be carried out;{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Stock/ requirements list to be processed;{NNP}{:}{NNS}{NN}{TO}{VB}{VBN}
+event;Separate planning run to be carried out for master schedule items;{JJ}{NN}{NN}{TO}{VB}{VBN}{RP}{IN}{NN}{NN}{NNS}
+event;MRP list to be processed;{NN}{NN}{TO}{VB}{VBN}
+event;Results transferred to Demand Management;{NNS}{VBN}{TO}{NN}{NN}
+event;Planned independent requirements are forecast;{NNP}{JJ}{NNS}{VBP}{VBN}
+event;Forecast values created;{NN}{NNS}{VBN}
+event;Stock/ requirements list to be processed;{NNP}{:}{NNS}{NN}{TO}{VB}{VBN}
+event;Demand Program Activated;{NN}{NN}{VBN}
+event;Activity requirements to be transferred to Cost Planning;{NN}{NNS}{TO}{VB}{VBN}{TO}{NN}{NNP}
+event;Reorder point is created;{NN}{NN}{VBZ}{VBN}
+event;Sales plan is processed;{NNS}{VBP}{VBZ}{VBN}
+event;Sales and production quantities to be planned long to medium term;{NNS}{CC}{NN}{NNS}{TO}{VB}{VBN}{RB}{TO}{NN}{NN}
+event;Plant material has been created;{NN}{NN}{VBZ}{VBN}{VBN}
+event;Sales quantities are to be forecasted;{NNS}{NNS}{VBP}{TO}{VB}{VBN}
+event;Planning scenario is processed;{NNP}{NN}{VBZ}{VBN}
+event;Material Requirements Planning Evaluated;{NN}{NNS}{NNP}
+event;Planned independent requirements to be adjusted;{NNP}{JJ}{NNS}{TO}{VB}{VBN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Planned independent requirements to be forecast;{NNP}{JJ}{NNS}{TO}{VB}{VBN}
+event;Forecast parameters exist;{NN}{NNS}{VBP}
+event;Demand management to be carried out for material or PG;{NN}{NN}{TO}{VB}{VBN}{RP}{IN}{NN}{CC}{NN}
+event;Planned sales quantities to be transferred to SOP;{NNP}{NNS}{NNS}{TO}{VB}{VBN}{TO}{VB}
+event;Entries made in MRP file;{NNS}{VBN}{IN}{NN}{NN}

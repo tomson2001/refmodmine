@@ -1,0 +1,11 @@
+045e000839a80f93d200ce547bae4d3d;Billing
+function;Billing Request Processing;{NN}{NNP}
+function;Resource-Related Billing;{JJ}{NN}
+function;Invoicing Billing Plans;{NN}{NN}{NNS}
+event;Down payment agreed with customer;{IN}{NN}{VBD}{IN}{NN}
+event;Resource-related billing document required;{JJ}{NN}{NN}{VBN}
+event;Order-related invoice to be created;{JJ}{NN}{TO}{VB}{VBN}
+event;Partial payment should be made;{JJ}{NN}{MD}{VB}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Billing request is released for billing;{NN}{NN}{VBZ}{VBN}{IN}{NN}

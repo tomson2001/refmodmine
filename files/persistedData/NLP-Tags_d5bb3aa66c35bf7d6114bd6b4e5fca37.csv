@@ -1,0 +1,15 @@
+d5bb3aa66c35bf7d6114bd6b4e5fca37;Admission Cologne
+function;Check Documents;{VB}{NNS}
+function;Send letter of rejection;{VB}{NN}{IN}{NN}
+function;Keep in the Applicant pool;{VB}{IN}{DT}{NN}{NN}
+function;Take Aptitude test;{VB}{NNP}{NN}
+function;Apply Online;{RB}{NN}
+function;Acceptance;{NNP}
+function;Documents received;{NNS}{VBD}
+function;Rank Students according to GPA and the test results;{NNP}{NNS}{VBG}{TO}{NN}{CC}{DT}{NN}{VBZ}
+function;Invite to an aptitude test;{VB}{TO}{DT}{NN}{NN}
+function;Send Documents by Post;{VB}{NNS}{IN}{NN}
+function;Pay for Aptitude test;{VB}{IN}{NNP}{NN}
+function;Evaluate;{VB}
+function;Send Online Protocol;{VB}{NNP}
+event;End Event;{NN}{NN}

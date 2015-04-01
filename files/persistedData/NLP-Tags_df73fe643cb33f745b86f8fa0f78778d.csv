@@ -1,0 +1,11 @@
+df73fe643cb33f745b86f8fa0f78778d;Procurement and capitalization
+function;Creation of Master Record for Tangible Assets;{NN}{IN}{NNP}{IN}{JJ}{NNS}
+function;Processing of Asset Acquisition;{NN}{IN}{NNP}
+event;Assgnmt. of asset to inv. project/ order was carried out;{NNP}{.}
+event;Blanket order created;{NN}{NN}{VBN}
+event;Vendor down payment is to be cleared;{VB}{RP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Equipment is to be edited;{NN}{VBZ}{TO}{VB}{VBN}
+event;Procurement and capitalization carried out;{NN}{CC}{NN}{VBD}{RP}
+event;Acquisition posted to Asset Accounting;{NNP}{VBD}{TO}{NNP}
+event;Asset master record does not exist;{NNP}{NN}{NN}{VBZ}{RB}{VB}
+event;Fixed asset created;{VBN}{NN}{VBN}

@@ -1,0 +1,24 @@
+83669638bd3d05bf1cf203f026d68ef4;Profit Planning
+function;Settlement of Overhead Cost Orders (Planning Data);{NNP}{IN}{NN}{NN}{NNS}{-LRB-}{NNP}{-RRB-}
+function;Project Settlement;{NNP}
+function;Creation of Proposal for Sales and Profit Planning;{NN}{IN}{NNP}{IN}{NNS}{CC}{NN}{NNP}
+function;Valuation of Sales Planning;{NN}{IN}{NNS}{NNP}
+function;Planned Allocation Cost Center Costs to Profitability Analysis;{NNP}{NN}{NNP}{NNS}{TO}{NNP}{NN}
+function;Planned Allocation of Process Costs to Profitability Analysis;{NNP}{IN}{VB}{NNS}{TO}{NNP}{NN}
+function;Analysis of Results And Contribution Margins;{NN}{IN}{NNS}{CC}{NN}{NNS}
+function;Manual Profit Planning;{NNP}
+event;Overhead cost orders are allocated;{NN}{NN}{NNS}{VBP}{VBN}
+event;Plan Proposal for Sales Planning to be Created;{NNP}{IN}{NNS}{NNP}{TO}{VB}{VBN}
+event;Process costs are allocated;{VB}{NNS}{VBP}{VBN}
+event;Cost center costs are allocated;{NN}{NN}{NNS}{VBP}{VBN}
+event;Organizational operating profit (plan) exists;{JJ}{NN}{NN}{-LRB-}{NN}{-RRB-}{VBZ}
+event;Plan allocation of process costs required;{NNP}{NN}{IN}{NN}{NNS}{VBN}
+event;Plan allocation of cost center costs required;{NNP}{NN}{IN}{NN}{NN}{NNS}{VBN}
+event;Control measures taken due to variances;{NN}{NNS}{VBN}{JJ}{TO}{NNS}
+event;Settle project;{VB}{NN}
+event;Project costs are allocated;{NN}{NNS}{VBP}{VBN}
+event;Sales plan is available;{NNS}{VBP}{VBZ}{JJ}
+event;Results plan transferred to EC-PCA;{NNS}{VBP}{VBN}{TO}{NN}
+event;Standard price updated in material master[];{JJ}{NN}{VBN}{IN}{JJ}{NN}{-LRB-}{-RRB-}
+event;Plan needs to be changed;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Overhead cost orders to be settled;{NN}{NN}{NNS}{TO}{VB}{VBN}

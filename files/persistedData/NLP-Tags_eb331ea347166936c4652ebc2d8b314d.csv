@@ -1,0 +1,5 @@
+eb331ea347166936c4652ebc2d8b314d;B.I.104_Event control of basic data management for scheduling and capacity planning
+function;Basic data management (create, update, delete);{JJ}{NNS}{NN}{-LRB-}{VB}{,}{VB}{,}{VB}{-RRB-}
+event;New Bill of materials released;{NNP}{IN}{NNS}{VBN}
+event;Organization changed;{NNP}{VBD}
+event;Operation updated;{NN}{VBN}

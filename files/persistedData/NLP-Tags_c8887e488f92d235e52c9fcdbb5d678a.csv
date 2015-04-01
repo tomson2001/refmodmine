@@ -1,0 +1,75 @@
+c8887e488f92d235e52c9fcdbb5d678a;Fig.77: WMO YAWL model for MunI
+function;Request a fitting;{VB}{DT}{JJ}
+function;Send digital request to ISD;{VB}{JJ}{NN}{TO}{NN}
+function;Compare invoice to record;{VB}{NN}{TO}{NN}
+function;Start perform case specific tasks;{NNP}{VB}{NN}{JJ}{NNS}
+function;Examine customer;{VB}{NN}
+function;Receive offers;{VB}{NNS}
+function;Send digital application to care provider;{VB}{JJ}{NN}{TO}{VB}{NN}
+function;Determine offer;{NN}{NN}
+function;Obtain quotes;{VB}{NNS}
+function;Case-specific tasks complete;{JJ}{NNS}{JJ}
+function;Customer requests to seek bids;{NN}{NNS}{TO}{VB}{NNS}
+function;Plan examination with customer;{NNP}{NN}{IN}{NN}
+function;Copy decision;{VB}{NN}
+function;Pay full invoice;{VB}{JJ}{NN}
+function;Determine amount;{NN}{NN}
+function;Pay part of invoice;{VB}{NN}{IN}{NN}
+function;Request cost estimation for modification;{NN}{NN}{NN}{IN}{NN}
+function;Set indication;{VB}{NN}
+function;Archive;{NNP}
+function;Receive recommendation;{VB}{NN}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Process in the system;{VB}{IN}{DT}{NN}
+function;Execute order;{VB}{NN}
+function;Get in contact about wrong charges;{VB}{IN}{NN}{IN}{JJ}{NNS}
+function;Compromise on the arrangement;{NN}{IN}{DT}{NN}
+function;Send order;{VB}{NN}
+function;Make preliminary decision;{VB}{JJ}{NN}
+function;Assess need for house visit and medical advice;{VB}{NN}{IN}{NN}{NN}{CC}{JJ}{NN}
+function;Report to reception;{NNP}{TO}{NN}
+function;Need quotation;{VBN}{NN}
+function;Perform fitting;{VB}{JJ}
+function;Estimate costs;{NNP}{NNS}
+function;Formulate decision;{VB}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Look for alternative living space;{VB}{IN}{JJ}{NN}{NN}
+function;Send invoice;{VB}{NN}
+function;Record request;{VB}{NN}
+function;Formulate indicative report;{VB}{JJ}{NN}
+function;Go through app;{VB}{IN}{NN}
+function;Concerns PGB;{NNS}{NN}
+function;Assign to available consultant;{VB}{TO}{JJ}{NN}
+function;Determine care provider to approach;{VB}{NN}{NN}{TO}{NN}
+function;Carry out house visit;{VB}{RP}{NN}{NN}
+function;Receive request ISD;{VB}{NN}{NN}
+function;Get customer;{VB}{NN}
+function;Decide about the report;{VB}{IN}{DT}{NN}
+function;Higher than EUR 10000;{JJR}{IN}{$}{CD}
+function;Record request ISD;{VB}{NN}{NN}
+event;house visit needed and medical advice needed;{NN}{NN}{VBN}{CC}{JJ}{NN}{VBN}
+event;other;{JJ}
+event;yes;{RB}
+event;large modifications to house;{JJ}{NNS}{TO}{NN}
+event;no;{DT}
+event;no;{DT}
+event;always;{RB}
+event;Process end;{VB}{NN}
+event;transportation facilities;{NN}{NNS}
+event;only if no PGB;{RB}{IN}{DT}{NN}
+event;no PGB;{DT}{NN}
+event;about household help;{IN}{NN}{NN}
+event;only if building advice needed;{RB}{IN}{NN}{NN}{VBD}
+event;yes;{RB}
+event;yes;{RB}
+event;with PGB;{IN}{NN}
+event;help with the house hold;{NN}{IN}{DT}{NN}{NN}
+event;house visit needed but no medical advice;{NN}{NN}{VBN}{CC}{DT}{JJ}{NN}
+event;Process start;{VB}{NN}
+event;no house visit but medical advice needed;{DT}{NN}{NN}{CC}{JJ}{NN}{VBN}
+event;always;{RB}
+event;no;{DT}
+event;always;{RB}
+event;no house visit and no medical advice needed;{DT}{NN}{NN}{CC}{DT}{JJ}{NN}{VBN}
+event;house visit needed;{NN}{NN}{VBD}
+event;always;{RB}

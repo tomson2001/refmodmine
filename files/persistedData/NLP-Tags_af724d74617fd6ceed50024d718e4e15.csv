@@ -1,0 +1,31 @@
+af724d74617fd6ceed50024d718e4e15;B.I.037_Event control of requirements explosion
+function;Lot sizing;{NN}{VBG}
+function;Analysis whether net change or reoptimazation;{NN}{IN}{JJ}{NN}{CC}{NN}
+function;Determine inventory level/ reservation;{NN}{NN}{NN}{:}{NN}
+function;Production;{NN}
+function;Primary requirements planning;{JJ}{NNS}{VBG}
+function;Estimate gross requirement;{NNP}{JJ}{NN}
+function;Distribution to users;{NN}{TO}{NNS}
+function;Purchasing;{NNP}
+function;Bill of materials management;{NNP}{IN}{NNS}{NN}
+function;Forward scheduling;{RB}{NN}
+function;Estimate net requirement;{NNP}{JJ}{NN}
+function;Consumptionbased requirements forecast;{JJ}{NNS}{VBP}
+function;Estimate secondary requirement;{NNP}{JJ}{NN}
+function;Check whether the date is in the past;{VB}{IN}{DT}{NN}{VBZ}{IN}{DT}{NN}
+event;Secondary requirement estimated;{JJ}{NN}{VBN}
+event;Date is in the past;{NN}{VBZ}{IN}{DT}{NN}
+event;Occurrence of original requirement;{NN}{IN}{JJ}{NN}
+event;Order generated;{NNP}{VBD}
+event;Plant disruption occured;{NN}{NN}{VBD}
+event;Scheduling completed;{NN}{VBD}
+event;Work load distrubed;{NN}{NN}{VBD}
+event;Delivery updated;{NN}{VBN}
+event;Scheduled deadline reached;{VBN}{NN}{VBD}
+event;Reoptimization chosen;{NN}{VBN}
+event;Release for secondary requirement estimating;{NNP}{IN}{JJ}{NN}{NN}
+event;Gross requirement estimated;{NNP}{NN}{VBD}
+event;Reservation completed;{NN}{VBD}
+event;Net requirements estimated;{JJ}{NNS}{VBN}
+event;Bill of materials updated;{NNP}{IN}{NNS}{VBN}
+event;Net change chosen;{JJ}{NN}{VBN}

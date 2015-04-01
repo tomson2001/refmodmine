@@ -1,0 +1,35 @@
+f15969ac23fa44e6848e20d0185c9b02;B.II.009_EPC for inbound logistics
+function;Quality inspection;{JJ}{NN}
+function;Order monitoring;{NNP}{NN}
+function;Correct invoice;{JJ}{NN}
+function;Prepare complaint; correct data;{VB}{NN}{:}{JJ}{NNS}
+function;Update basic data;{NNP}{JJ}{NNS}
+function;Generate past due notice;{VB}{IN}{JJ}{NN}
+function;Routing to warehouse, posting;{VBG}{TO}{NN}{,}{VBG}
+function;Supplier inquiries;{NN}{NNS}
+function;Posting "receivings";{VBG}{``}{NNS}{''}
+function;Stipulation of sipplier and order quantity; account codes accounts payable, general ledger account; writing of pro forma invoice;{NN}{IN}{NN}{CC}{NN}{NN}{:}{NN}{VBZ}{NNS}{JJ}{,}{JJ}{NN}{NN}{:}{NN}{IN}{FW}{FW}{NN}
+function;Process purchasing requisition account coding CC, COB;{VB}{VBG}{NN}{NN}{VBG}{NN}{,}{NN}
+function;Order writing and transmission (letter, fax, EDI);{NNP}{VBG}{CC}{NN}{-LRB-}{NN}{,}{NN}{,}{NN}{-RRB-}
+function;Post invoice;{NNP}{NN}
+function;Invoice control;{NNP}{NN}
+event;Solicited quotes received;{VBN}{NNS}{VBD}
+event;Order confirmation by supplier;{NNP}{NN}{IN}{NN}
+event;Posting completed;{VBG}{VBN}
+event;Invoice corrected;{NNP}{VBN}
+event;Inspection not o.k.;{NNP}{RB}{VB}
+event;Routing completed;{VBG}{VBN}
+event;Planning deadline of net requisition calculation reached;{NNP}{NN}{IN}{JJ}{NN}{NN}{VBD}
+event;Quotes up-todate;{NNS}{VBP}
+event;Outsourced resources received;{JJ}{NNS}{VBD}
+event;Receiving data corrected;{VBG}{NNS}{VBN}
+event;Purchase data provided;{NN}{NNS}{VBN}
+event;Schadule delivery deadline exceeded;{JJ}{NN}{NN}{VBD}
+event;basic data updated;{JJ}{NNS}{VBN}
+event;Invoice o.k.;{NNP}
+event;Inspection o.k.;{NNP}
+event;Invoice posted;{NNP}{VBD}
+event;Requisition message from line department;{NN}{NN}{IN}{NN}{NN}
+event;Changes within net requisition in net change;{NNS}{IN}{JJ}{NN}{IN}{JJ}{NN}
+event;Invoice not o.k.;{NNP}{RB}{VB}
+event;New quote necessary;{NNP}{NN}{JJ}

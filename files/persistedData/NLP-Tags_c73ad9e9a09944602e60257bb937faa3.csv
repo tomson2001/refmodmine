@@ -1,0 +1,19 @@
+c73ad9e9a09944602e60257bb937faa3;Transaction Processing
+function;Netting Processing;{VBG}{NN}
+function;Settlement;{NNP}
+function;Exercise Option;{NN}{NN}
+function;Terminate Options;{VB}{NNS}
+function;Option Expiration;{NN}{NN}
+function;Process Options;{VB}{NNS}
+event;Termination flows generate settlement payments;{NN}{VBZ}{VB}{NN}{NNS}
+event;Option was selected;{NN}{VBD}{VBN}
+event;Transaction exists with contract status;{NN}{VBZ}{IN}{NN}{NN}
+event;Option not to be exercised;{NN}{RB}{TO}{VB}{VBN}
+event;Netting proposal to be edited;{VBG}{NN}{TO}{VB}{VBN}
+event;Option to be terminated;{NN}{TO}{VB}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Option to be exercised;{NN}{TO}{VB}{VBN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Option was exercised with cash settlement;{NN}{VBD}{VBN}{IN}{NN}{NN}
+event;Option was exercised physically;{NN}{VBD}{VBN}{RB}
+event;Option has expired;{NN}{VBZ}{VBN}

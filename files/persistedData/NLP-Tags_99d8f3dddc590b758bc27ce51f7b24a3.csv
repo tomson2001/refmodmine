@@ -1,0 +1,8 @@
+99d8f3dddc590b758bc27ce51f7b24a3;General Contract
+function;Editing General Contract;{NNP}
+function;Periodic Posting (General RE Contract);{JJ}{NN}{-LRB-}{NNP}{-RRB-}
+event;General contract (lease-in) to be edited;{NNP}{NN}{-LRB-}{NN}{-RRB-}{TO}{VB}{VBN}
+event;Termination of general contract to be edited;{NN}{IN}{JJ}{NN}{TO}{VB}{VBN}
+event;Credit posting is made;{NNP}{VBG}{VBZ}{VBN}
+event;Renew lease-outs;{VB}{NNS}
+event;Credit posting to be made;{NNP}{VBG}{TO}{VB}{VBN}

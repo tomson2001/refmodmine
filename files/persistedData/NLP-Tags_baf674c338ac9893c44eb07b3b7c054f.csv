@@ -1,0 +1,7 @@
+baf674c338ac9893c44eb07b3b7c054f;Elimination of IC Profit and Loss in Current Assets
+function;Elimination of IU Profit/ Loss in Transferred Inventory;{NN}{IN}{NNP}{:}{NN}{IN}{NNP}
+event;Intercompany profit and loss in inventory is to be eliminated;{NN}{NN}{CC}{NN}{IN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Group inventories are entered for the elimination of IC profit and loss;{NNP}{NNS}{VBP}{VBN}{IN}{DT}{NN}{IN}{NN}{NN}{CC}{NN}
+event;Elimination of IC profit and loss in inventory is completed;{NN}{IN}{NN}{NN}{CC}{NN}{IN}{NN}{VBZ}{VBN}
+event;Currency translation carried out;{NNP}{NN}{VBD}{RP}
+event;Intercompany sales are entered for the elimination of IC profit and loss;{NN}{NNS}{VBP}{VBN}{IN}{DT}{NN}{IN}{NN}{NN}{CC}{NN}

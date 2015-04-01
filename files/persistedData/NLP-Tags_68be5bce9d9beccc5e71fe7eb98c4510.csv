@@ -1,0 +1,11 @@
+68be5bce9d9beccc5e71fe7eb98c4510;Status Analysis
+function;Status Analysis Cash Position;{NNP}{NN}
+event;Bank data was processed;{NNP}{NNS}{VBD}{VBN}
+event;Value dates were compared;{NNP}{NNS}{VBD}{VBN}
+event;Status analysis carried out;{NN}{NN}{VBD}{RP}
+event;Bill of exchange presentation completed;{NNP}{IN}{NN}{NN}{VBN}
+event;Clearing is posted;{NNP}{VBZ}{VBN}
+event;Payment advice created;{NN}{NN}{VBN}
+event;Payment advice transferred to bank;{NN}{NN}{VBN}{TO}{NN}
+event;Payment advice processing completed;{NN}{NN}{NN}{VBN}
+event;Bank message about debit memo exists;{NNP}{NN}{IN}{NN}{NN}{VBZ}

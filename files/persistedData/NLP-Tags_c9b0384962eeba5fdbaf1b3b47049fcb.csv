@@ -1,0 +1,13 @@
+c9b0384962eeba5fdbaf1b3b47049fcb;POS interface - inbound
+function;Non-cash payment (store);{JJ}{NN}{-LRB-}{NN}{-RRB-}
+function;Master data processing (store);{NN}{NNS}{NN}{-LRB-}{NN}{-RRB-}
+function;Sale/ return (store);{NN}{:}{NN}{-LRB-}{NN}{-RRB-}
+event;Materials are selected for purchase;{NNPS}{VBP}{VBN}{IN}{NN}
+event;Payment method is non-cash payment;{NN}{NN}{VBZ}{JJ}{NN}
+event;Accounts are posted;{NNPS}{VBP}{VBN}
+event;A return is to be entered;{DT}{NN}{VBZ}{TO}{VB}{VBN}
+event;Documents are printed;{NNS}{VBP}{VBN}
+event;Data is transferred to Information System;{NNS}{VBZ}{VBN}{TO}{NNP}
+event;Financial transactions (store);{JJ}{NNS}{-LRB-}{NN}{-RRB-}
+event;POS sales audit;{NN}{NNS}{NN}
+event;A sale is to be entered;{DT}{NN}{VBZ}{TO}{VB}{VBN}

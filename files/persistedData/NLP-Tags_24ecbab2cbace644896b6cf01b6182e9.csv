@@ -1,0 +1,17 @@
+24ecbab2cbace644896b6cf01b6182e9;Fig.09: GBA1 YAWL model for MunA
+function;Process payment;{VB}{NN}
+function;Waiting for Payment;{VBG}{IN}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Determine fees;{NN}{NNS}
+function;Fill in payment data;{VB}{IN}{NN}{NNS}
+function;send extract;{VB}{NN}
+function;Print application;{VB}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;No Payment;{DT}{NN}
+function;Free;{NNP}
+function;Decide wether to pay;{VB}{NN}{TO}{VB}
+function;Fill in e-form;{VB}{IN}{NN}
+event;Start process;{NNP}{NN}
+event;Yes;{UH}
+event;No;{DT}
+event;Process end;{VB}{NN}

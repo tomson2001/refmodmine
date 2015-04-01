@@ -1,0 +1,7 @@
+bc0312ab93bb587c520296d766f337f1;Plan Cash Flow
+function;Manual Payment Planning;{NNP}{NN}{NNP}
+function;Cash Flow Evaluation;{NN}{NN}{NN}
+event;Cash flow analyzed;{NN}{NN}{VBN}
+event;Cash Flow Analysis Required;{NN}{NN}{NN}{VBN}
+event;Cash flow planning required;{NN}{NN}{NN}{VBN}
+event;Cash Flow Planned;{NN}{NN}{NNP}

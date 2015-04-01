@@ -1,0 +1,7 @@
+a6a73664c308c27a72c1719b5cf96a4a;B.I.128_Scheduling event control and capacity load calculation
+function;Scheduling of all operations;{NN}{IN}{DT}{NNS}
+function;Assaignement of OPs to capacities and load calculation;{NN}{IN}{NNS}{TO}{NNS}{CC}{NN}{NN}
+event;Capacity bottleneck occured;{NN}{NN}{VBD}
+event;Order supplement compledted;{NNP}{NN}{VBD}
+event;Scheduling completed;{NN}{VBD}
+event;No capacity outlier occured, end of capacity planning;{DT}{NN}{NN}{VBD}{,}{NN}{IN}{NN}{NN}

@@ -1,0 +1,14 @@
+a3b2bdd8084965bbc771ca937d910a07;Budget Planning
+function;Delegation of Need for Budget Planning;{NN}{IN}{NNP}{IN}{NNP}
+function;Delegation of Need to Correct Budget Plan;{NN}{IN}{NNP}{TO}{NNP}
+function;Approval of Budget Plan;{NN}{IN}{NNP}
+function;Budget Plan Consolidation;{NNP}{NN}
+function;Creation / Correction of Budget Plan;{NN}{:}{NN}{IN}{NNP}
+event;Need to correct budget planning exists and cannot be delegated further;{VBN}{TO}{VB}{NN}{NN}{VBZ}{CC}{MD}{RB}{VB}{VBN}{RB}
+event;Need for budget planning exists and cannot be delegated further;{VBN}{IN}{NN}{NN}{VBZ}{CC}{MD}{RB}{VB}{VBN}{RB}
+event;Budget plan exists for consolidation;{NNP}{NN}{VBZ}{IN}{NN}
+event;Need to correct budget plan exists;{VBN}{TO}{VB}{NN}{NN}{VBZ}
+event;Budget plan exists for approval;{NNP}{NN}{VBZ}{IN}{NN}
+event;Specifications for budget planning are adopted;{NNS}{IN}{NN}{NN}{VBP}{VBN}
+event;Budget plan is approved;{NNP}{NN}{VBZ}{VBN}
+event;Need for budget planning exists;{VBN}{IN}{NN}{NN}{VBZ}

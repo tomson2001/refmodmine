@@ -1,0 +1,24 @@
+7da1f55d325891bd4e37eacc7dddc1eb;Sales Order
+function;Sales Order Processing;{NNS}{NNP}
+function;Customer Quotation Processing;{NN}{NN}{NN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Product costng to material in sales document to be created;{NN}{NN}{TO}{NN}{IN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Unit costing for material in sales document to be created;{NN}{VBG}{IN}{NN}{IN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Quotation reason occurred;{NN}{NN}{VBD}
+event;Quotation is valid;{NN}{VBZ}{JJ}
+event;Scheduling agreement release is issued;{VBG}{NN}{NN}{VBZ}{VBN}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Quotation items are rejected;{NN}{NNS}{VBP}{VBN}
+event;Quotation is created;{NN}{VBZ}{VBN}
+event;Standard order is received;{JJ}{NN}{VBZ}{VBN}
+event;Customer release order received;{NN}{NN}{NN}{VBD}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}

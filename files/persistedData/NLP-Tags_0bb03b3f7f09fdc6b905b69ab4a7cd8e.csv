@@ -1,0 +1,6 @@
+0bb03b3f7f09fdc6b905b69ab4a7cd8e;Risk/Credit Management
+function;Credit Control;{NNP}
+event;Terms of credit have changed;{NNS}{IN}{NN}{VBP}{VBN}
+event;Credit limit is not sufficient;{NNP}{NN}{VBZ}{RB}{JJ}
+event;Change to terms of credit refused;{NNP}{TO}{NNS}{IN}{NN}{VBD}
+event;Credit limit check is to be performed manually;{NNP}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}

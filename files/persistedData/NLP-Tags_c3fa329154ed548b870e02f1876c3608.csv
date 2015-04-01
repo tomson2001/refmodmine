@@ -1,0 +1,38 @@
+c3fa329154ed548b870e02f1876c3608;Fig.43: MOR YAWL model for MunE
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Receive confirmation;{VB}{NN}
+function;Concern lighting;{NN}{NN}
+function;Information complete;{NN}{JJ}
+function;Direct to desk;{JJ}{TO}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Close case;{JJ}{NN}
+function;Known issue;{VBN}{NN}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Possible solution;{JJ}{NN}
+function;Ask for more information;{VB}{IN}{JJR}{NN}
+function;Handle issue;{VB}{NN}
+function;Print ticket and give to responsible team leader;{VB}{NN}{CC}{VB}{TO}{JJ}{NN}{NN}
+function;Urgent_issue;{NN}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Enter data in public light mgmt sys;{VB}{NNS}{IN}{JJ}{JJ}{NN}{NNS}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Printout receipt;{NNP}{NN}
+function;Issue signed invoice;{NN}{VBD}{NN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+event;no;{DT}
+event;Case closed;{NNP}{VBD}
+event;no;{DT}
+event;no;{DT}
+event;Start case;{NNP}{NN}
+event;yes;{RB}
+event;yes;{RB}
+event;yes;{RB}
+event;plan in batch;{NN}{IN}{NN}
+event;no;{DT}
+event;yes;{RB}

@@ -1,0 +1,15 @@
+213bded54b662321368bec7dad0fcc94;Intercompany Eliminations
+function;Elimination of IC Payables & Receivables;{NN}{IN}{NN}{NNPS}{CC}{NNPS}
+function;Intercompany Balance Verification;{NN}{NN}{NN}
+function;Elimination of IC Revenue and Expense;{NN}{IN}{NN}{NN}{CC}{NN}
+event;Inter- company payables and receiv- ables were eliminated;{NNP}{:}{NN}{NNS}{CC}{NN}{:}{NNS}{VBD}{VBN}
+event;Intercompany payables and receivables are to be eliminated;{NN}{NNS}{CC}{NNS}{VBP}{TO}{VB}{VBN}
+event;Data entered for items is broken down by trading partner;{NNS}{VBD}{IN}{NNS}{VBZ}{VBN}{RP}{IN}{VBG}{NN}
+event;Inter- company revenue and expense was eliminated;{NNP}{:}{NN}{NN}{CC}{NN}{VBD}{VBN}
+event;Elimination of IC revenue and expense is to be performed;{NN}{IN}{NN}{NN}{CC}{NN}{VBZ}{TO}{VB}{VBN}
+event;Data entered for items is broken down by trading partner;{NNS}{VBD}{IN}{NNS}{VBZ}{VBN}{RP}{IN}{VBG}{NN}
+event;FS item sets were specified;{NN}{NN}{NNS}{VBD}{VBN}
+event;Intercompany balances are to be reconciled in advance;{NN}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Provisional currency translation is carried out;{JJ}{NN}{NN}{VBZ}{VBN}{RP}
+event;List created for balance reconciliation;{NN}{VBN}{IN}{NN}{NN}
+event;Currency translation carried out;{NNP}{NN}{VBD}{RP}

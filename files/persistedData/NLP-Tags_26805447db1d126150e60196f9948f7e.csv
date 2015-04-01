@@ -1,0 +1,39 @@
+26805447db1d126150e60196f9948f7e;Fig.38: GBA3 YAWL model for MunJ
+function;Hand in written request and receipt;{VB}{IN}{VBN}{NN}{CC}{NN}
+function;No payment;{DT}{NN}
+function;Copy extract;{VB}{NN}
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Process payment;{VB}{NN}
+function;Send mail to appropriate department;{VB}{NN}{TO}{JJ}{NN}
+function;Register request;{NNP}{NN}
+function;Free?;{NNP}{.}
+function;Send extract;{VB}{NN}
+function;Archive;{NNP}
+function;Receive payment;{VB}{NN}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Decide admissible;{VB}{JJ}
+function;Process continue;{VB}{VB}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Determine fees;{NN}{NNS}
+function;Send payment request;{VB}{NN}{NN}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;status change to Send mail to appropriate department;{NN}{NN}{TO}{VB}{NN}{TO}{JJ}{NN}
+event;no;{DT}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;status change to Decide admissible;{NN}{NN}{TO}{VB}{JJ}
+event;status change to Hand in written request and receipt;{NN}{NN}{TO}{VB}{IN}{VBN}{NN}{CC}{NN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine whether requester is entitled;{NN}{NN}{TO}{VB}{IN}{NN}{VBZ}{VBN}
+event;status change to Copy extract;{NN}{NN}{TO}{VB}{NN}
+event;Status change to Free?;{NN}{NN}{TO}{NNP}{.}
+event;status change to Produce extract and sign;{NN}{NN}{TO}{VB}{NN}{CC}{NN}
+event;yes;{RB}
+event;status change to Send Payment request;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;yes;{RB}
+event;status change to Register request;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Determine if copy of ID is present;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;the end;{DT}{NN}

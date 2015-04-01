@@ -1,0 +1,7 @@
+ac21ccdbc1cdf704d3941a131a7443d3;Forfeiture of Long-Term Incentives
+function;Employee Notification of Forfeiture;{NN}{NN}{IN}{NNP}
+function;Forfeiture of Long-Term Incentives;{NNP}{IN}{NNP}{NNS}
+event;Long-term incentive is forfeited;{JJ}{NN}{VBZ}{VBN}
+event;Employee long-term incentive is granted;{NN}{JJ}{NN}{VBZ}{VBN}
+event;Employee is notified of forfeiture;{NN}{VBZ}{VBN}{IN}{NN}
+event;Reason for forfeiture of long-term incentive has occurred;{NN}{IN}{NN}{IN}{JJ}{NN}{VBZ}{VBN}

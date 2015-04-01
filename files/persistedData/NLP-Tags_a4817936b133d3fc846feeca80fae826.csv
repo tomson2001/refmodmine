@@ -1,0 +1,8 @@
+a4817936b133d3fc846feeca80fae826;Worklist
+function;Worklist Prerequisite;{NNP}
+function;Worklist Generation;{NNP}
+event;Maintenance requirement has arisen;{NN}{NN}{VBZ}{VBN}
+event;Maintenance notification is to be created for each maintenance item;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{DT}{NN}{NN}
+event;Notifications Combined in Order;{NNS}{VBN}{IN}{NN}
+event;Notifications Should Be Combined in Order;{NNS}{MD}{VB}{VBN}{IN}{NN}
+event;Task List Assigned to Maintenance Item;{NNP}{NN}{VBN}{TO}{NNP}

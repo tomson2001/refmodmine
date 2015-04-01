@@ -1,0 +1,5 @@
+ee89cd74ff9ea2b860e3d07219696be3;Closing Operations
+function;Key Date Valuation;{NN}{NN}{NN}
+event;Key date valuation carried out;{NN}{NN}{NN}{VBD}{RP}
+event;Valuation to be performed;{NN}{TO}{VB}{VBN}
+event;Valuation flows were generated;{NN}{NNS}{VBD}{VBN}

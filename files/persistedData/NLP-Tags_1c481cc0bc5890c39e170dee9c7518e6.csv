@@ -1,0 +1,6 @@
+1c481cc0bc5890c39e170dee9c7518e6;Documentary Payments
+function;Financial Document Master Processing;{NNP}
+event;Hedging of financial document to be carried out;{NN}{IN}{JJ}{NN}{TO}{VB}{VBN}{RP}
+event;Financial document to be processed;{NNP}{NN}{TO}{VB}{VBN}
+event;Financial document is to assigned to sales document;{NNP}{NN}{VBZ}{TO}{VBN}{TO}{NNS}{NN}
+event;Financial document is released;{NNP}{NN}{VBZ}{VBN}

@@ -1,0 +1,4 @@
+e705643262b700819b5153a49b821094;B.I.056.a_Event control of requirements tracking
+function;Lot sizing;{NN}{VBG}
+event;Order generated;{NNP}{VBD}
+event;Requirements coverage;{NNS}{NN}

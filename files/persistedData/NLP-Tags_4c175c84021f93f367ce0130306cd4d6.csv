@@ -1,0 +1,10 @@
+4c175c84021f93f367ce0130306cd4d6;Expiration of Long-Term Incentives
+function;Employee Notification of Expiration;{NN}{NN}{IN}{NN}
+function;Expiration of Long-Term Incentives;{NN}{IN}{NNP}{NNS}
+function;Employee Notification of Imminent Expiration;{NN}{NN}{IN}{NNP}
+event;Employee is notified of expiration;{NN}{VBZ}{VBN}{IN}{NN}
+event;Employee is notified of imminent expiration;{NN}{VBZ}{VBN}{IN}{JJ}{NN}
+event;Employee long-term incentive is granted;{NN}{JJ}{NN}{VBZ}{VBN}
+event;Time for announcement of expiration is reached;{NNP}{IN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Time for expiration of long-term incentive is reached;{NNP}{IN}{NN}{IN}{JJ}{NN}{VBZ}{VBN}
+event;Long-term incentive has expired;{JJ}{NN}{VBZ}{VBN}

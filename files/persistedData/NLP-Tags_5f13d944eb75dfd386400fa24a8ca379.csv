@@ -1,0 +1,9 @@
+5f13d944eb75dfd386400fa24a8ca379;Modification of Technical Systems
+function;Installation, Dismantling and Modification of Equipment;{NN}{,}{VBG}{CC}{NN}{IN}{NN}
+event;Item for hierarchy level is entered;{NN}{IN}{NN}{NN}{VBZ}{VBN}
+event;Equipment is processed;{NN}{VBZ}{VBN}
+event;Equipment is assigned to superior equipment;{NN}{VBZ}{VBN}{TO}{JJ}{NN}
+event;Equipment is installed, dismantled or modified;{NN}{VBZ}{VBN}{,}{VBN}{CC}{VBN}
+event;Equipment must be installed, dismantled or modified;{NN}{MD}{VB}{VBN}{,}{VBN}{CC}{VBN}
+event;Installation or dismantling time is specified;{NN}{CC}{VBG}{NN}{VBZ}{VBN}
+event;Functional location is processed;{JJ}{NN}{VBZ}{VBN}

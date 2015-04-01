@@ -1,0 +1,6 @@
+86c72cd37d6dd395b7459a1c6921edc9;Compensation Planning Check
+function;Compensation Planning Check;{NNP}{VB}
+event;No need to act regarding compensation planning;{DT}{NN}{TO}{VB}{VBG}{NN}{NN}
+event;Need to correct compensation plan exists;{VBN}{TO}{VB}{NN}{NN}{VBZ}
+event;Requirement for Compensation Planning Check;{NN}{IN}{NNP}{VB}
+event;Requirement for Correction of Specifications of Compensation Planning;{NN}{IN}{NN}{IN}{NNS}{IN}{NNP}

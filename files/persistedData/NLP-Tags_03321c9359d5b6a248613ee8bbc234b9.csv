@@ -1,0 +1,5 @@
+03321c9359d5b6a248613ee8bbc234b9;D.I.040.d_Event control of value- oriented processes
+function;Period costing;{NN}{VBG}
+event;Data change;{NNS}{VBP}
+event;Scheuled deadline reached;{VBN}{NN}{VBD}
+event;Case- related analyses required;{NN}{:}{JJ}{NNS}{VBN}

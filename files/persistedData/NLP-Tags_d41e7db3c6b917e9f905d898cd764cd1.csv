@@ -1,0 +1,14 @@
+d41e7db3c6b917e9f905d898cd764cd1;Long-Term Service Agreements
+function;Service Contract Processing;{NNP}
+function;Presales Activities;{NNP}{NNS}
+event;Quotation is valid;{NN}{VBZ}{JJ}
+event;Service contract to be offered;{NNP}{NN}{TO}{VB}{VBN}
+event;Cust. mail. campaign to be carried out;{NNP}{.}
+event;Service contract to be created w/o ref. to quotation;{NNP}{NN}{TO}{VB}{VBN}{JJ}{NN}{.}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Sales activity is to be processed;{NNS}{NN}{VBZ}{TO}{VB}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Service contract canceled;{NNP}{NN}{VBD}
+event;Miscellaneous Subsequent Activity Performed;{NNP}{JJ}{NN}{VBN}
+event;Service contract to be created from contact;{NNP}{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Customer inquires about products;{NN}{VBZ}{IN}{NNS}

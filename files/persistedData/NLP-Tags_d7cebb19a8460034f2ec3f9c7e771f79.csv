@@ -1,0 +1,9 @@
+d7cebb19a8460034f2ec3f9c7e771f79;Capacity Planning
+function;Capacity Evaluation;{NN}{NN}
+function;Capacity Dispatching and Leveling;{NN}{VBG}{CC}{VBG}
+event;Capacity is not available;{NN}{VBZ}{RB}{JJ}
+event;Maintenance order is released;{NN}{NN}{VBZ}{VBN}
+event;Capacity is available;{NN}{VBZ}{JJ}
+event;Capacity situation is to be evaluated;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Sequencing to be carried out;{NN}{TO}{VB}{VBN}{RP}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}

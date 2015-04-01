@@ -1,0 +1,10 @@
+8fd94eb707e20962b65c569ecf9250fb;Purchase Requisition
+function;Purchase Requisition Processing;{NN}{NN}{NN}
+function;Purchase Requisition Assignment;{NN}{NN}{NN}
+function;Release Purchase Requisition;{NNP}
+event;Requisition released for scheduling agreement schedule/SA release;{NN}{VBN}{IN}{NN}{NN}{NN}{NN}
+event;Requirement for material has arisen;{NN}{IN}{NN}{VBZ}{VBN}
+event;Purchase requisition created;{NN}{NN}{VBN}
+event;Requisition flagged for issue of RFQ;{NN}{VBD}{IN}{NN}{IN}{NN}
+event;Purchase requisition released for purchase order;{NN}{NN}{VBN}{IN}{NN}{NN}
+event;Source of supply assigned;{NN}{IN}{NN}{VBN}

@@ -1,0 +1,8 @@
+fa7aef9622b8b6f828b20f531ea23855;Employee transfer
+function;Employee transfer;{NN}{NN}
+event;Payroll accounting specifications changed;{NNP}{NN}{NNS}{VBD}
+event;Benefits offer must be adapted for employee;{NNS}{VBP}{MD}{VB}{VBN}{IN}{NN}
+event;Employee staffs position;{NN}{NNS}{NN}
+event;Employee is active;{NN}{VBZ}{JJ}
+event;Position is vacant;{NN}{VBZ}{JJ}
+event;Notification given of approval of employee transfer;{NN}{VBN}{IN}{NN}{IN}{NN}{NN}

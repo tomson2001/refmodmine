@@ -1,0 +1,15 @@
+f5c7817b6dcf7c65f4f10951d17331f8;Rent Change
+function;Activating Rent Adjustment (Including Approval);{VBG}{NNP}{-LRB-}{VBG}{NN}{-RRB-}
+function;Data Entry for Cost Efficiency Analysis;{NNS}{NN}{IN}{NN}{NN}{NN}
+function;Generating Rent Adjustment Data;{NNP}
+function;Comparative Group Rent Adjustment Preparation;{JJ}{NNP}
+function;Modernization Measure Processing;{NN}{NN}{NN}
+function;Expert Opinion Processing;{NN}{NNP}
+function;Rent Reduction Processing;{NNP}
+function;Advance Payment/ Flat Rates Adjustment;{NNP}{NN}{:}{NNP}
+event;If required, meet prerequisites for rent adjustment methods;{IN}{VBN}{,}{VB}{NNS}{IN}{NN}{NN}{NNS}
+event;Rent adjustment is possible;{NNP}{NN}{VBZ}{JJ}
+event;;
+event;Change conditions on lease-out/ rental unit;{NNP}{NNS}{IN}{NN}{:}{JJ}{NN}
+event;Adjustment of advance payments/ flat rates should be carried out;{NNP}{IN}{NN}{NNS}{:}{JJ}{NNS}{MD}{VB}{VBN}{RP}
+event;Rent adjustment was carried out;{NNP}{NN}{VBD}{VBN}{RP}

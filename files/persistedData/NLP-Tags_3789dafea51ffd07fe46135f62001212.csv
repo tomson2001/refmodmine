@@ -1,0 +1,19 @@
+3789dafea51ffd07fe46135f62001212;Plan Periodic Processing
+function;Results Analysis Planning;{NNS}{NN}{NNP}
+function;Planned Process Cost Allocation;{NNP}{VB}{NN}{NN}
+function;Periodic Reposting of Plan Data;{JJ}{NN}{IN}{NNP}
+function;Planned Overhead Costing;{NNP}{NN}{VBG}
+function;Plan Settlement;{NNP}
+function;Planned Interest Calculation;{NNP}{NN}
+event;Planned process costs allocated;{NNP}{NN}{NNS}{VBN}
+event;Planned overhead costing executed;{NNP}{JJ}{VBG}{VBN}
+event;Planned settlement required;{NNP}{NN}{VBN}
+event;Periodic transfer required;{JJ}{NN}{VBN}
+event;Periodic repostign carried out;{JJ}{NN}{VBD}{RP}
+event;Sales order processing required;{NNS}{NN}{NN}{VBN}
+event;Quotation must be created on basis of plan data;{NN}{MD}{VB}{VBN}{IN}{NN}{IN}{NN}{NNS}
+event;Planned settlement carried out;{NNP}{NN}{VBD}{RP}
+event;Revenue planned;{NN}{VBD}
+event;Planned interest calculation carried out;{NNP}{NN}{NN}{VBD}{RP}
+event;Cost planning data exists for planned interest calculation;{NN}{NN}{NNS}{VBZ}{IN}{JJ}{NN}{NN}
+event;Periodic allocations executed;{JJ}{NNS}{VBN}

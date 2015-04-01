@@ -1,0 +1,10 @@
+c8ded8c5b34f50fdda6557778be913cf;Sales Order
+function;Sales Order Processing;{NNS}{NNP}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Sales order is processed in ordering company code;{NNS}{NN}{VBZ}{VBN}{IN}{VBG}{NN}{NN}
+event;Delivery is generated in delivering company code;{NN}{VBZ}{VBN}{IN}{VBG}{NN}{NN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Standard order is received;{JJ}{NN}{VBZ}{VBN}

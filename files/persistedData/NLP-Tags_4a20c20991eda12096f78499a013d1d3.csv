@@ -1,0 +1,28 @@
+4a20c20991eda12096f78499a013d1d3;Closing Operations
+function;Periodic Reports;{JJ}{NNS}
+function;Carry Out Year-End Closing in Asset Management;{VB}{IN}{NNP}{NN}{IN}{NNP}
+function;Depreciation Simulation / Forecast;{NN}{NN}{:}{NNP}
+function;Preparations for Year-End Closing in Asset Management;{NNS}{IN}{NNP}{NN}{IN}{NNP}
+function;Recalculation of Depreciation;{NN}{IN}{NN}
+function;Depreciation Posting;{NN}{NN}
+function;Mass Change;{JJ}{NNP}
+event;Cumulative past depreciation should be simulated;{JJ}{JJ}{NN}{MD}{VB}{JJ}
+event;Periodic reports are created;{JJ}{NNS}{VBP}{VBN}
+event;Acquisition posted to Asset Accounting;{NNP}{VBD}{TO}{NNP}
+event;Depreciation corresponds to planned P&L statement;{NN}{VBZ}{TO}{VBN}{NNP}{NN}
+event;Individual asset should be simulated;{JJ}{NN}{MD}{VB}{JJ}
+event;G/L accounts were posted;{NN}{NNS}{VBD}{VBN}
+event;Simulation was carried out;{NN}{VBD}{VBN}{RP}
+event;Mass changes were made;{JJ}{NNS}{VBD}{VBN}
+event;Year-end closing program was carried out;{NN}{NN}{NN}{VBD}{VBN}{RP}
+event;[Depreciation posting run was carried out];{-LRB-}{NN}{VBG}{NN}{VBD}{VBN}{RP}{-RRB-}
+event;Several asset master records should be changed;{JJ}{NN}{NN}{NNS}{MD}{VB}{VBN}
+event;Depreciation should be posted regularly;{NN}{MD}{VB}{VBN}{RB}
+event;Periodic reporting is required;{JJ}{NN}{VBZ}{VBN}
+event;Recalcula- tion of de- preciation was carried out;{NNP}{:}{NN}{IN}{FW}{:}{NN}{VBD}{VBN}{RP}
+event;Index series updated;{NNP}{NN}{VBN}
+event;Transactions completed;{NNS}{VBD}
+event;Depreciation transferred;{NN}{VBD}
+event;Simulation is to be car- ried out for portion of fixed assets (future FY);{NN}{VBZ}{TO}{VB}{NN}{:}{VBD}{RP}{IN}{NN}{IN}{JJ}{NNS}{-LRB-}{JJ}{NN}{-RRB-}
+event;Depreciation does not correspond to planned P&L statement;{NN}{VBZ}{RB}{VB}{TO}{VBN}{NNP}{NN}
+event;Retirement was posted and checked;{NNP}{VBD}{VBN}{CC}{VBN}

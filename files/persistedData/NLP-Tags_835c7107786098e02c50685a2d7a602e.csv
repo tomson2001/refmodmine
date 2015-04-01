@@ -1,0 +1,31 @@
+835c7107786098e02c50685a2d7a602e;B.I.143_EPC for time and capacity management
+function;Analysis whether net change or reoptimazation;{NN}{IN}{JJ}{NN}{CC}{NN}
+function;Supplement order data;{NN}{NN}{NNS}
+function;Requirements planning;{NNS}{VBG}
+function;Analysis whether automatic or interactive capacity adjustment;{NN}{IN}{JJ}{CC}{JJ}{NN}{NN}
+function;Allocation of operations to capacities; load profiles;{NN}{IN}{NNS}{TO}{NNS}{:}{NN}{NNS}
+function;Time scheduling;{NNP}{NN}
+function;Interactive processing;{JJ}{NN}
+function;call algorithm;{NN}{NN}
+function;Production;{NN}
+function;Basicc data management routings;{NNP}{NNS}{NN}{NNS}
+function;Distribution to users;{NN}{TO}{NNS}
+function;check the network for consequences;{VB}{DT}{NN}{IN}{NNS}
+event;Capacity bottleneck exists;{NN}{NN}{VBZ}
+event;Capacity problem unsolveable;{NN}{NN}{JJ}
+event;Time scheduling completed;{NNP}{NN}{VBD}
+event;Organizational change occured;{JJ}{NN}{VBD}
+event;Order updated;{NNP}{VBN}
+event;Automatic capacity adjustment;{NNP}{NN}{NN}
+event;Update of bill of materials occured;{NNP}{IN}{NN}{IN}{NNS}{VBD}
+event;No capacity overload, capacity planning completed;{DT}{NN}{NN}{,}{NN}{NN}{VBN}
+event;Task defined;{NNP}{VBD}
+event;Technical process changed;{NNP}{NN}{VBD}
+event;Routing updated;{VBG}{VBN}
+event;Reoptimization;{NN}
+event;Order data supplemented;{NNP}{NNS}{VBN}
+event;Plant disruption occured;{NN}{NN}{VBD}
+event;Capacity problem eliminated;{NN}{NN}{VBD}
+event;Net change;{JJ}{NN}
+event;Ineractive capacity adjustment;{JJ}{NN}{NN}
+event;Capacity planning completed;{NN}{NN}{VBN}

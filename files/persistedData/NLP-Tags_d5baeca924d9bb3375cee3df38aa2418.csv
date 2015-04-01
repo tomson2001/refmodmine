@@ -1,0 +1,46 @@
+d5baeca924d9bb3375cee3df38aa2418;Handling Fixed Assets
+function;Asset Maintenance;{NNP}
+function;Specific Valuations;{JJ}{NNS}
+function;Receipts;{NNPS}
+function;Investment Support;{NN}{NN}
+function;Retirements;{NNS}
+function;Depreciation;{NN}
+function;Business Transactions;{NN}{NNS}
+function;Closing Operations [Asset Accounting];{NN}{NNP}{-LRB-}{NNP}{-RRB-}
+event;Transactions completed;{NNS}{VBD}
+event;Index series was updated;{NNP}{NN}{VBD}{VBN}
+event;Cost-accounting depreciation/ interest transferred to Cost Accounting;{VBG}{NN}{:}{NN}{VBN}{TO}{NN}{NN}
+event;Insurance contract was closed;{NN}{NN}{VBD}{VBN}
+event;Acquisitions to be entered;{NNS}{TO}{VB}{VBN}
+event;Revaluation should be carr. out f first time;{NN}{MD}{VB}{NN}{.}
+event;New master record is necessary;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Post-capitalization to be posted;{NN}{TO}{VB}{VBN}
+event;Fixed asset was found;{VBN}{NN}{VBD}{VBN}
+event;Investment support was created /changed;{NN}{NN}{VBD}{VBN}{:}{VBN}
+event;Group asset to be created;{NNP}{NN}{TO}{VB}{VBN}
+event;Retirement was posted and checked;{NNP}{VBD}{VBN}{CC}{VBN}
+event;Asset master record does not exist;{NNP}{NN}{NN}{VBZ}{RB}{VB}
+event;Retirements to be entered;{NNS}{TO}{VB}{VBN}
+event;Periodic reports are created;{JJ}{NNS}{VBP}{VBN}
+event;Planned accrued depreciation and interest were transferred to CO;{NNP}{VBN}{NN}{CC}{NN}{VBD}{VBN}{TO}{NNP}
+event;Special tax depreciation is only to be partly claimed;{JJ}{NN}{NN}{VBZ}{RB}{TO}{VB}{RB}{VBN}
+event;[Depreciation posting run was carried out];{-LRB-}{NN}{VBG}{NN}{VBD}{VBN}{RP}{-RRB-}
+event;Leased asset was bought;{VBN}{NN}{VBD}{VBN}
+event;Write-up on asset(s) to be posted;{NN}{IN}{NN}{-LRB-}{NNS}{-RRB-}{TO}{VB}{VBN}
+event;Depreciation should be posted regularly;{NN}{MD}{VB}{VBN}{RB}
+event;Fixed asset was given;{VBN}{NN}{VBD}{VBN}
+event;G/L accounts were posted;{NN}{NNS}{VBD}{VBN}
+event;Asset(s) to be transferred;{NNP}{-LRB-}{NNS}{-RRB-}{TO}{VB}{VBN}
+event;[Unplanned depreciation should be used];{-LRB-}{JJ}{NN}{MD}{VB}{VBN}{-RRB-}
+event;G/L accounts were posted;{NN}{NNS}{VBD}{VBN}
+event;Fixed asset was bought w/o purchase order;{VBN}{NN}{VBD}{VBN}{NN}{NN}{NN}
+event;Index series must be updated;{NNP}{NN}{MD}{VB}{VBN}
+event;Revaluation was made;{NN}{VBD}{VBN}
+event;Acquisition posted to Asset Accounting;{NNP}{VBD}{TO}{NNP}
+event;Claim for support exists;{NN}{IN}{NN}{VBZ}
+event;Investment support is posted;{NN}{NN}{VBZ}{VBN}
+event;Revaluation is used repeatedly;{NN}{VBZ}{VBN}{RB}
+event;Posting is possible to assets in new fiscal year;{VBG}{VBZ}{JJ}{TO}{NNS}{IN}{JJ}{JJ}{NN}
+event;Unit-of-production depreciation is to be posted;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Fixed asset should be insured;{VBN}{NN}{MD}{VB}{VBN}
+event;Settlement for asset under construction due;{NNP}{IN}{NN}{IN}{NN}{JJ}

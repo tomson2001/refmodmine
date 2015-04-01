@@ -1,0 +1,15 @@
+f0f200389f34f4094cd472cf6448df0f;Discrete Production
+function;Production Order Execution;{NN}{NN}{NN}
+function;Production Order Creation;{NN}{NN}{NN}
+function;Capacity Requirements Planning;{NN}{NNS}{NNP}
+event;Inspection lot is created automatically for order;{NNP}{NN}{VBZ}{VBN}{RB}{IN}{NN}
+event;Conversion date is reached;{NN}{NN}{VBZ}{VBN}
+event;Capacity requirement is created;{NN}{NN}{VBZ}{VBN}
+event;Production order is completely confirmed;{NN}{NN}{VBZ}{RB}{VBN}
+event;Material reservation is created;{NN}{NN}{VBZ}{VBN}
+event;Prelim. Costing Carried Out for Planned Order;{NNP}{.}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Goods Issue is Posted;{NNP}{VBZ}{VBN}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}
+event;Production order is released;{NN}{NN}{VBZ}{VBN}

@@ -1,0 +1,68 @@
+d96ad9ba1e0424583fb785dbc10626e8;Fig.41: MOR YAWL model for MunC
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Process continue 2;{VB}{VB}{CD}
+function;Close case;{JJ}{NN}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Questions by either person reporting;{NNS}{IN}{CC}{NN}{NN}
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Process continue 1;{VB}{VB}{CD}
+function;Known issue;{VBN}{NN}
+function;Handle issue;{VB}{NN}
+function;Concern lighting;{NN}{NN}
+function;Process continue;{VB}{VB}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Receive confirmation;{VB}{NN}
+function;Discuss issue;{VB}{NN}
+function;Team leader reports ready;{NNP}{NN}{NNS}{JJ}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Ask for more information;{VB}{IN}{JJR}{NN}
+function;Start case;{NNP}{NN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Forward issue to department;{RB}{NN}{TO}{NN}
+function;Forward to department;{RB}{TO}{NN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Add reference to earlier report;{VB}{NN}{TO}{JJR}{NN}
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Need to talk to mgmt;{VBN}{TO}{VB}{TO}{VB}
+function;Print ticket and give to responsible team leader;{VB}{NN}{CC}{VB}{TO}{JJ}{NN}{NN}
+function;Printout receipt;{NNP}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Enter data in public light mgmt sys;{VB}{NNS}{IN}{JJ}{JJ}{NN}{NNS}
+function;Possible solution;{JJ}{NN}
+function;Information complete;{NN}{JJ}
+event;status change to Transmit handling problem;{NN}{NN}{TO}{VB}{VBG}{NN}
+event;status change to Known issue;{NN}{NN}{TO}{VBN}{NN}
+event;no;{DT}
+event;status change to Give assignment to contractor;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;yes;{RB}
+event;status change to Handle issue;{NN}{NN}{TO}{VB}{NN}
+event;status change to Team leader reports ready;{NN}{NN}{TO}{NNP}{NN}{NNS}{JJ}
+event;status change to Fill in info about issue;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NN}
+event;status change to Need to talk to mgmt;{NN}{NN}{TO}{VBN}{TO}{VB}{TO}{VB}
+event;yes;{RB}
+event;yes;{RB}
+event;status change to Questions by either person reporting;{NN}{NN}{TO}{NNS}{IN}{CC}{NN}{NN}
+event;no;{DT}
+event;no;{DT}
+event;no;{DT}
+event;yes;{RB}
+event;the end;{DT}{NN}
+event;no;{DT}
+event;status change to Close case;{NN}{NN}{TO}{VB}{NN}
+event;status change to Discuss issue;{NN}{NN}{TO}{VB}{NN}
+event;status change to Receive confirmation;{NN}{NN}{TO}{VB}{NN}
+event;plan in batch;{NN}{IN}{NN}
+event;yes;{RB}
+event;status change to Printout receipt;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Need to plan in batch;{NN}{NN}{TO}{VBN}{TO}{VB}{IN}{NN}
+event;status change to Concerns lighting;{NN}{NN}{TO}{NNS}{VBG}
+event;status change to Possible solution;{NN}{NN}{TO}{JJ}{NN}
+event;status change to Ask cust what product he is there for;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+event;status change to Information complete;{NN}{NN}{TO}{NNP}{JJ}
+event;status change to Receive call during bus hours;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NNS}
+event;status change to Fill in contact info;{NN}{NN}{TO}{VB}{IN}{NN}{NN}
+event;status change to Print ticket and give to responsible team leader;{NN}{NN}{TO}{VB}{NN}{CC}{VB}{TO}{JJ}{NN}{NN}
+event;status change to Enter data about issue;{NN}{NN}{TO}{VB}{NNS}{IN}{NN}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}

@@ -1,0 +1,25 @@
+86c8646c9a77356905cf6d1ab6355af4;Period-End Closing: Order-Related Product Cost Controlling
+function;WIP Calculation Based On Actual Costs;{NNP}{VBD}{IN}{NNP}{NNS}
+function;Preliminary Settlement for Co-Products, Rework;{JJ}{NNP}{IN}{NNP}{,}{NNP}
+function;Settlement of Manufacturing Order to Inventory;{NNP}{IN}{NNP}{TO}{NNP}
+function;Data Collection for Product Drilldown;{NNS}{NNP}{IN}{NNP}
+function;Overhead Calculation (Manufacturing Order);{NN}{NN}{-LRB-}{NNP}{-RRB-}
+function;Product Cost Analysis for Co-Products;{NN}{NN}{NN}{IN}{NNS}
+function;Template Allocation (Manufacturing Order);{NNP}{-LRB-}{NNP}{-RRB-}
+function;Summarization Hierarchy;{NNP}
+function;Variance Calculation Cumulated;{NN}{NN}{JJ}
+function;Revaluation at Actual Prices;{NN}{IN}{NNP}{NNS}
+function;Product Cost Analysis in Product Cost by Order;{NN}{NN}{NN}{IN}{NNP}{NN}{IN}{NN}
+event;Production order settled to warehouse;{NN}{NN}{VBD}{TO}{NN}
+event;Order item was debited;{NNP}{NN}{VBD}{VBN}
+event;Product cost analysis required for order-related Controlling;{NN}{NN}{NN}{VBN}{IN}{JJ}{NN}
+event;Product cost analysis required for co-products;{NN}{NN}{NN}{VBN}{IN}{NNS}
+event;Process costs were allocated;{VB}{NNS}{VBD}{VBN}
+event;Process costs (production order) to be allocated;{VB}{NNS}{-LRB-}{NN}{NN}{-RRB-}{TO}{VB}{VBN}
+event;Revaluation completed;{NN}{VBD}
+event;Order header is to be distributed to FS items;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{TO}{NN}{NNS}
+event;Product costs are to be settled;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Control measures taken due to variances;{NN}{NNS}{VBN}{JJ}{TO}{NNS}
+event;Costs are to be analyzed;{NNS}{VBP}{TO}{VB}{VBN}
+event;Overhead rates (production order) allocated;{NN}{NNS}{-LRB-}{NN}{NN}{-RRB-}{VBN}
+event;Data collection for product drilldown completed;{NNS}{NN}{IN}{NN}{NN}{VBN}

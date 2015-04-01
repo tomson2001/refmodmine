@@ -1,0 +1,11 @@
+258379d116a625ade4c50f942702d6a5;Distribution Requirements Planning
+function;Planning;{NNP}
+function;Distribution Network;{NN}{NNP}
+function;Deployment;{NNP}
+function;DRP - Distribution Resource Planning Run;{SYM}{:}{NN}{NNP}
+event;Forecast is necessary;{NN}{VBZ}{JJ}
+event;;
+event;Stock transport requisition is generated;{NNP}{NN}{NN}{VBZ}{VBN}
+event;DRP run is to be executed for material;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;DRP run to be executed for plant / distribution center;{NN}{NN}{TO}{VB}{VBN}{IN}{NN}{:}{NN}{NN}
+event;Distribution network is to be processed;{NN}{NN}{VBZ}{TO}{VB}{VBN}

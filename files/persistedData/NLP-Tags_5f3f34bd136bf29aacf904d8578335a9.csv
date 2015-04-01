@@ -1,0 +1,18 @@
+5f3f34bd136bf29aacf904d8578335a9;Sales Order
+function;Third-party Sales Order Processing;{JJ}{NNS}{NN}{NN}
+function;Customer Quotation Processing;{NN}{NN}{NN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Quotation is valid;{NN}{VBZ}{JJ}
+event;Quotation is created;{NN}{VBZ}{VBN}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Quotation items are rejected;{NN}{NNS}{VBP}{VBN}
+event;Standard order is received;{JJ}{NN}{VBZ}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Quotation reason occurred;{NN}{NN}{VBD}

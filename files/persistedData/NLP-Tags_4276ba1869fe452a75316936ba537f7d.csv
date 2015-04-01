@@ -1,0 +1,8 @@
+4276ba1869fe452a75316936ba537f7d;Billing
+function;Billing Document Cancellation;{NN}{NNP}
+function;Billing Returnable Packaging;{NN}{JJ}{NN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Billing document to be cancelled;{NN}{NN}{TO}{VB}{VBN}
+event;Billing document/ items are cancelled;{NN}{NN}{:}{NNS}{VBP}{VBN}

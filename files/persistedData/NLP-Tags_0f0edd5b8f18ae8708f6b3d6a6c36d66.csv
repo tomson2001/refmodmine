@@ -1,0 +1,7 @@
+0f0edd5b8f18ae8708f6b3d6a6c36d66;Material Movements
+function;Goods Issue Processing;{NNP}
+event;Retrograde withdrawal to be posted;{NNP}{NN}{TO}{VB}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Material is not available;{NN}{VBZ}{RB}{JJ}
+event;Material is issued;{NN}{VBZ}{VBN}

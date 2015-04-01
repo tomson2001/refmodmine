@@ -1,0 +1,9 @@
+facd4628a74044b95343981e477449de;Product Trigger
+function;Non-Order-Specific Trigger;{JJ}{NN}
+function;Order-Specific Trigger;{JJ}{NN}
+function;Project Planning;{NNP}
+event;Product idea exists;{NN}{NN}{VBZ}
+event;Carry out project development in the project;{VB}{RP}{NN}{NN}{IN}{DT}{NN}
+event;Carry out product development;{VB}{RP}{NN}{NN}
+event;Customer order exists;{NN}{NN}{VBZ}
+event;Carry out product development;{VB}{RP}{NN}{NN}

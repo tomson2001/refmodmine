@@ -1,0 +1,14 @@
+19cabd2e76f97a871ceeedce1d012cc9;Production Supply with KANBAN
+function;Replenishment External Procurement with Standard Purchase Order/Source List;{NNP}{IN}{NNP}{NN}
+function;Replenishment In-House Production with Production Order;{NNP}{NN}{IN}{NN}{NN}
+function;Trigger Replenishment Through Kanban Signal;{NN}{NN}{IN}{NNP}
+event;Material issued from Kanban container;{NN}{VBN}{IN}{NNP}{NN}
+event;Status of the kanban container set to 'full';{NN}{IN}{DT}{JJ}{NN}{VBN}{TO}{``}{JJ}{''}
+event;Material received by demand source;{NN}{VBN}{IN}{NN}{NN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Production order is created;{NN}{NN}{VBZ}{VBN}
+event;Run schedule quantity is created;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Delivery schedule/ release transferred;{NN}{NN}{:}{NN}{VBN}
+event;Replenishment (with manual kanban) triggered;{NN}{-LRB-}{IN}{JJ}{NN}{-RRB-}{VBD}
+event;Purchase order transmitted;{NN}{NN}{VBD}
+event;Stock transfer is posted;{NNP}{NN}{VBZ}{VBN}

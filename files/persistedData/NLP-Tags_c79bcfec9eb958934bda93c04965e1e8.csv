@@ -1,0 +1,8 @@
+c79bcfec9eb958934bda93c04965e1e8;B.I.174_Event control for detailed scheduling
+function;Detailed scheduling;{JJ}{NN}
+event;New order released;{NNP}{NN}{VBD}
+event;Distribution occured;{NN}{VBD}
+event;Planning objective changed;{NNP}{JJ}{VBD}
+event;Reservation;{NN}
+event;Planning deadline reached;{NNP}{NN}{VBD}
+event;Start execution;{NNP}{NN}

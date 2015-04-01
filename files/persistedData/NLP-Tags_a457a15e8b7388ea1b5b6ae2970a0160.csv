@@ -1,0 +1,20 @@
+a457a15e8b7388ea1b5b6ae2970a0160;Delivery and Transportation
+function;Goods Issue Processing;{NNP}
+function;Delivery Processing;{NN}{NN}
+function;Transportation Planning and Processing;{NNP}{CC}{NNP}
+function;Monitoring of Legal Controls;{NN}{IN}{JJ}{NNP}
+event;Inspect (independent of goods issue);{VB}{-LRB-}{JJ}{IN}{NNS}{NN}{-RRB-}
+event;Material is removed from stock;{NN}{VBZ}{VBN}{IN}{NN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Inspection before goods issue is to be carried out;{NNP}{IN}{NNS}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Document blocked due to insufficent hedge;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Legal control data is processed;{JJ}{NN}{NNS}{VBZ}{VBN}
+event;Credit limit is not sufficient;{NNP}{NN}{VBZ}{RB}{JJ}
+event;Goods issue blocked for export;{NNP}{NN}{VBD}{IN}{NN}
+event;Inspection lot status allows a goods issue;{NNP}{NN}{NN}{VBZ}{DT}{NNS}{NN}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Order generated and delivery opened;{NNP}{VBD}{CC}{NN}{VBD}

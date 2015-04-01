@@ -1,0 +1,8 @@
+dc0d233d1cc29f2040245a4d4728a54f;Retirements
+function;Retirement of Leased Asset;{NNP}{IN}{NNP}
+event;Retirements to be entered;{NNS}{TO}{VB}{VBN}
+event;Loss of a leased system has occurred;{NN}{IN}{DT}{VBN}{NN}{VBZ}{VBN}
+event;Leased system must be scrapped;{VBN}{NN}{MD}{VB}{VBN}
+event;Leasing agreement runs out;{NNP}{NN}{VBZ}{RP}
+event;Retirement was posted and checked;{NNP}{VBD}{VBN}{CC}{VBN}
+event;Premature termination of lease agreement necessary;{JJ}{NN}{IN}{NN}{NN}{JJ}

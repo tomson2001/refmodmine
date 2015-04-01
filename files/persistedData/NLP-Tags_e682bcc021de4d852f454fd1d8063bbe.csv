@@ -1,0 +1,37 @@
+e682bcc021de4d852f454fd1d8063bbe;Fig.40: MOR YAWL model for MunB
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Close case;{JJ}{NN}
+function;Assign categ resp person and dept;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Send e-mail with issue;{VB}{NN}{IN}{NN}
+function;Contract person who reported;{NN}{NN}{WP}{VBD}
+function;Known issue;{VBN}{NN}
+function;Information complete;{NN}{JJ}
+function;Enter data in public light mgmt sys;{VB}{NNS}{IN}{JJ}{JJ}{NN}{NNS}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Concerns ighting;{NNS}{VBG}
+function;Receive confirmation;{VB}{NN}
+function;Register e-mail;{NNP}{NN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Printout receipt;{NNP}{NN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Direct to desk;{JJ}{TO}{NN}
+function;Issue signed invoice;{NN}{VBD}{NN}
+function;Fill in contract info;{VB}{IN}{NN}{NN}
+function;Enter data about the issue;{VB}{NNS}{IN}{DT}{NN}
+function;Handle issue;{VB}{NN}
+event;Possible solution;{JJ}{NN}
+event;no;{DT}
+event;Case closed;{NNP}{VBD}
+event;no;{DT}
+event;yes;{RB}
+event;yes;{RB}
+event;no;{DT}
+event;Start case;{NNP}{NN}
+event;no;{DT}
+event;yes;{RB}
+event;yes;{RB}

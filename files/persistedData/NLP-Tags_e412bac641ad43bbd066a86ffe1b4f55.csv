@@ -1,0 +1,48 @@
+e412bac641ad43bbd066a86ffe1b4f55;A.II.25,e
+function;F2;{NN}
+function;F;{NN}
+function;F1;{NN}
+function;Lot sizing;{NN}{VBG}
+function;Order tracking;{NNP}{NN}
+function;Closing and anaysing;{NN}{CC}{NN}
+function;Invoice acc. receiv;{NNP}{NN}{.}
+function;Shipping;{VBG}
+function;Cost objective accounting;{NN}{JJ}{NN}
+function;Time management;{NNP}{NN}
+function;Production;{NN}
+function;Cost center planning;{NN}{NN}{NN}
+function;Posting;{VBG}
+function;Order release;{NNP}{NN}
+function;Purchase order;{NN}{NN}
+function;Simult. techn. and other dev.;{NNP}{.}
+function;Inspection;{NNP}
+function;Create product idea;{VB}{NN}{NN}
+function;Purchase order tracking;{NN}{NN}{NN}
+function;Order acceptance;{NNP}{NN}
+function;Invoice control acc. pay;{NNP}{NN}{NN}{.}
+function;Analysis;{NN}
+function;Requirements planning;{NNS}{VBG}
+event;E3;{NN}
+event;E1;{NN}
+event;Order generated;{NNP}{VBD}
+event;Period end;{NN}{NN}
+event;Financial accounting completed;{JJ}{NN}{VBN}
+event;Cost planning completed;{NN}{NN}{VBN}
+event;IS project order;{VBZ}{NN}{NN}
+event;Purchase order completed;{NN}{NN}{VBN}
+event;Purchase order confirmation;{NN}{NN}{NN}
+event;Customer order;{NN}{NN}
+event;Period end;{NN}{NN}
+event;Receivings;{NNS}
+event;Product idea found;{NN}{NN}{VBD}
+event;Development order;{NNP}{NN}
+event;Primary requirements;{JJ}{NNS}
+event;Order released;{NNP}{VBD}
+event;Posting completed;{VBG}{VBN}
+event;Goods accepted;{NNP}{VBD}
+event;Weaknesses;{NNS}
+event;Capacity profile;{NN}{NN}
+event;Prod development completed;{VB}{NN}{VBN}
+event;Confirmation;{NN}
+event;Development order;{NNP}{NN}
+event;Production orders;{NN}{NNS}

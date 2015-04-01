@@ -1,0 +1,36 @@
+e4ada601d9c24c35784ae5041e7bfb56;Fig.25: GBA2 YAWL model for MunG
+function;go to the end;{VB}{TO}{DT}{NN}
+function;Give receipt;{VB}{NN}
+function;Determine whether proof of identity is present;{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+function;Call coupon holder;{VB}{NN}{NN}
+function;Determine fees;{NN}{NNS}
+function;ID present;{NN}{JJ}
+function;Receive payment;{VB}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Process continue;{VB}{VB}
+function;No payment;{DT}{NN}
+function;Ask identifying questions;{VB}{VBG}{NNS}
+function;Give coupon;{VB}{NN}
+function;Process payment;{VB}{NN}
+function;Give GBA extract;{VB}{NNP}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Choose Product;{VB}{NNP}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;status change to Give receipt;{NN}{NN}{TO}{VB}{NN}
+event;not free;{RB}{JJ}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;the end;{DT}{NN}
+event;status change to Determine whether proof of identity is present;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;free;{JJ}
+event;not entitled;{RB}{VBN}
+event;entitled;{VBN}
+event;status change to Give GBA extract;{NN}{NN}{TO}{VB}{NNP}{NN}
+event;status change to Give coupon;{NN}{NN}{TO}{VB}{NN}
+event;status change to ID present;{NN}{NN}{TO}{NNP}{JJ}
+event;status change to Call coupon holder;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Choose Product;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine whether requester is entitled;{NN}{NN}{TO}{VB}{IN}{NN}{VBZ}{VBN}
+event;no ID present;{DT}{NN}{JJ}

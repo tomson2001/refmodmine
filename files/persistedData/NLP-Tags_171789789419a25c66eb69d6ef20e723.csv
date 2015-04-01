@@ -1,0 +1,25 @@
+171789789419a25c66eb69d6ef20e723;Fig.29: GBA3 YAWL model for MunA
+function;Send mail to appropriate department;{VB}{NN}{TO}{JJ}{NN}
+function;No payment;{DT}{NN}
+function;Send extract;{VB}{NN}
+function;Receive payment;{VB}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Prepare envelope for sending;{VB}{NN}{IN}{VBG}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Send payment request;{VB}{NN}{NN}
+function;Determine fees;{NN}{NNS}
+function;Archive 1;{NNP}{CD}
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Decide admissible;{VB}{JJ}
+function;Send envelope to addressee;{VB}{NN}{TO}{NN}
+function;Process payment;{VB}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Archive;{NNP}
+function;Receive request;{VB}{NN}
+function;Free;{NNP}
+event;yes;{RB}
+event;no;{DT}
+event;yes;{RB}
+event;Start process;{NNP}{NN}
+event;process end;{NN}{NN}
+event;no;{DT}

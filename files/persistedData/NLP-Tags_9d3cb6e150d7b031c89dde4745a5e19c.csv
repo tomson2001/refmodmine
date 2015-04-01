@@ -1,0 +1,11 @@
+9d3cb6e150d7b031c89dde4745a5e19c;Goods Movements
+function;Goods Receipt for Refurbishment;{NNP}{IN}{NN}
+function;Goods Issue for Refurbishment;{NNP}{IN}{NN}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Material is not available;{NN}{VBZ}{RB}{JJ}
+event;Refurbished repairable spare is to be posted into the warehouse;{VBN}{JJ}{JJ}{VBZ}{TO}{VB}{VBN}{IN}{DT}{NN}
+event;Retrograde withdrawal to be posted;{NNP}{NN}{TO}{VB}{VBN}
+event;Withdrawal of the repairable spare to be refurbished is to be posted;{NN}{IN}{DT}{JJ}{JJ}{TO}{VB}{VBN}{VBZ}{TO}{VB}{VBN}

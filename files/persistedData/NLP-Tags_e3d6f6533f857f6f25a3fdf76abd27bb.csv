@@ -1,0 +1,36 @@
+e3d6f6533f857f6f25a3fdf76abd27bb;Fig.54: WABO1 YAWL model for MunF
+function;Send results of consultation;{VB}{NNS}{IN}{NN}
+function;Hold meeting with customer;{VB}{NN}{IN}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+function;Check urban plan;{VB}{JJ}{NN}
+function;Register;{NNP}
+function;Receive supplements;{VB}{NNS}
+function;Send acknowledgment SYSTEM;{VB}{NN}{NN}
+function;Start case;{NNP}{NN}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Check wealth;{VB}{NN}
+function;Assign investigating officer;{VB}{VBG}{NN}
+function;Archive;{NNP}
+function;Send acknowledgment;{VB}{NN}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;Register SYSTEM;{NNP}
+function;Hold consultation with customer;{VB}{NN}{IN}{NN}
+function;Change plan;{NNP}{NN}
+event;status change to Change plan;{NN}{NN}{TO}{NNP}{NN}
+event;yes;{RB}
+event;status change to Check urban plan;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Send acknowledgment SYSTEM;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Register;{NN}{NN}{TO}{NNP}
+event;status change to Record request in system;{NN}{NN}{TO}{NNP}{NN}{IN}{NN}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Send results of consultation;{NN}{NN}{TO}{VB}{NNS}{IN}{NN}
+event;no;{DT}
+event;status change to Check wealth;{NN}{NN}{TO}{VB}{NN}
+event;status change to Hold meeting with customer;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Send acknowledgment;{NN}{NN}{TO}{VB}{NN}
+event;Start case;{NNP}{NN}
+event;status change to Receive request via mail;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;End case;{NNP}{NN}
+event;status change to Assign investigation officer;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Register SYSTEM;{NN}{NN}{TO}{NNP}
+event;status change to Hold consultation with customer;{NN}{NN}{TO}{VB}{NN}{IN}{NN}

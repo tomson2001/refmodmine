@@ -1,0 +1,116 @@
+286dc4a3d82e07d4149bba6a62c9eb6d;Fig.73: WMO YAWL model for MunE
+function;Send order;{VB}{NN}
+function;Request a fitting;{VB}{DT}{JJ}
+function;Record request in the system;{VB}{NN}{IN}{DT}{NN}
+function;Receive recommendation;{VB}{NN}
+function;Estimate costs;{NNP}{NNS}
+function;Send e-mail to WMO;{VB}{NN}{TO}{NNP}
+function;Clarify request;{VB}{NN}
+function;Examine customer;{VB}{NN}
+function;Transfer amount to CAK;{NN}{NN}{TO}{NN}
+function;Directly send order;{RB}{VB}{NN}
+function;Send order 1;{VB}{NN}{CD}
+function;Look for alternative living space;{VB}{IN}{JJ}{NN}{NN}
+function;Start case options;{NNP}{NN}{NNS}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Process continue 13;{VB}{VB}{CD}
+function;Send confirmation of receipt;{VB}{NN}{IN}{NN}
+function;Process continue 1;{VB}{VB}{CD}
+function;Make offer;{VB}{NN}
+function;Determine offer;{NN}{NN}
+function;Process continue 2;{VB}{VB}{CD}
+function;Record request in the system 1;{VB}{NN}{IN}{DT}{NN}{CD}
+function;Start perform case specific tasks;{NNP}{VB}{NN}{JJ}{NNS}
+function;Handle Payment;{VB}{NN}
+function;Compromise on the arrangement;{NN}{IN}{DT}{NN}
+function;Carry out house visit;{VB}{RP}{NN}{NN}
+function;Formulate decision;{VB}{NN}
+function;Process continue 4;{VB}{VB}{CD}
+function;Order sent;{NN}{VBD}
+function;Formulate decision;{VB}{NN}
+function;Redirect to desk;{VB}{TO}{NN}
+function;Receive WMO request via mail;{VB}{NNP}{NN}{IN}{NN}
+function;Have phone conversation;{VBP}{NN}{NN}
+function;Assess need of external advice;{VB}{NN}{IN}{JJ}{NN}
+function;Register mail;{NNP}{NN}
+function;Close case;{JJ}{NN}
+function;Case-specific tasks complete;{JJ}{NNS}{JJ}
+function;Execute order;{VB}{NN}
+function;Formulate request for offers;{VB}{NN}{IN}{NNS}
+function;Send invoice;{VB}{NN}
+function;Process continue 6;{VB}{VB}{CD}
+function;Assign to available consultant;{VB}{TO}{JJ}{NN}
+function;Check decision by quality employee;{VB}{NN}{IN}{NN}{NN}
+function;Send request for offers;{VB}{NN}{IN}{NNS}
+function;Process continue 12;{VB}{VB}{CD}
+function;About household help;{IN}{NN}{NN}
+function;Give or send decision;{VB}{CC}{VB}{NN}
+function;Archive;{NNP}
+function;Plan examination with customer;{NNP}{NN}{IN}{NN}
+function;Execute order 1;{VB}{NN}{CD}
+function;Determine care provider to approach;{VB}{NN}{NN}{TO}{NN}
+function;Archive decision;{NNP}{NN}
+function;Formulate indicative report;{VB}{JJ}{NN}
+function;Perform fitting;{VB}{JJ}
+function;Request cost estimation for modification;{NN}{NN}{NN}{IN}{NN}
+function;Process continue 3;{VB}{VB}{CD}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Determine amount;{NN}{NN}
+event;only if building advice needed;{RB}{IN}{NN}{NN}{VBD}
+event;transportation facilities;{NN}{NNS}
+event;house visit needed and medical advice needed;{NN}{NN}{VBN}{CC}{JJ}{NN}{VBN}
+event;status change to;{NN}{NN}{TO}
+event;the end;{DT}{NN}
+event;always;{RB}
+event;no house visit and no medical advice needed;{DT}{NN}{NN}{CC}{DT}{JJ}{NN}{VBN}
+event;status change to Send order;{NN}{NN}{TO}{VB}{NN}
+event;house visit needed but no medical advice;{NN}{NN}{VBN}{CC}{DT}{JJ}{NN}
+event;status change to Send confirmation of receipt;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Execute order;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send e-mail to WMO;{NN}{NN}{TO}{VB}{NN}{TO}{NNP}
+event;status change to Fill in e-form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to Assess need of external advice;{NN}{NN}{TO}{VB}{NN}{IN}{JJ}{NN}
+event;status change to Assign to available consultant;{NN}{NN}{TO}{VB}{TO}{JJ}{NN}
+event;status change to Redirect to desk;{NN}{NN}{TO}{VB}{TO}{NN}
+event;status change to Send order 1;{NN}{NN}{TO}{VB}{NN}{CD}
+event;status change to Estimate costs;{NN}{NN}{TO}{NNP}{NNS}
+event;status change to Make offer;{NN}{NN}{TO}{VB}{NN}
+event;no PGB;{DT}{NN}
+event;no house visit but medical advice needed;{DT}{NN}{NN}{CC}{JJ}{NN}{VBN}
+event;with PGB;{IN}{NN}
+event;status change to Carry out house visit;{NN}{NN}{TO}{VB}{RP}{NN}{NN}
+event;status change to Send invoice;{NN}{NN}{TO}{VB}{NN}
+event;status change to Give or send decision;{NN}{NN}{TO}{VB}{CC}{VB}{NN}
+event;help with the house hold;{NN}{IN}{DT}{NN}{NN}
+event;always;{RB}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;status change to Determine offer;{NN}{NN}{TO}{VB}{NN}
+event;status change to Clarify request;{NN}{NN}{TO}{VB}{NN}
+event;status change to Receive recommendation;{NN}{NN}{TO}{VB}{NN}
+event;yes;{RB}
+event;large modifications to house;{JJ}{NNS}{TO}{NN}
+event;status change to Register mail;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Start perform case specific tasks;{NN}{NN}{TO}{NNP}{VB}{NN}{JJ}{NNS}
+event;status change to;{NN}{NN}{TO}
+event;status change to Have phone conversation;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Start case options;{NN}{NN}{TO}{NNP}{NN}{NNS}
+event;status change to;{NN}{NN}{TO}
+event;status change to Plan examination with customer;{NN}{NN}{TO}{NNP}{NN}{IN}{NN}
+event;status change to Formulate indicative report;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;no;{DT}
+event;status change to Formulate decision;{NN}{NN}{TO}{VB}{NN}
+event;status change to Archive decision;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Formulate request for offers;{NN}{NN}{TO}{VB}{NN}{IN}{NNS}
+event;status change to Send request for offers;{NN}{NN}{TO}{VB}{NN}{IN}{NNS}
+event;status change to Handle Payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Receive WMO request via mail;{NN}{NN}{TO}{VB}{NN}{NN}{IN}{NN}
+event;status change to Execute order 1;{NN}{NN}{TO}{VB}{NN}{CD}
+event;status change to Perform fitting;{NN}{NN}{TO}{VB}{JJ}
+event;status change to Check decision by quality employee;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NN}
+event;status change to Order sent;{NN}{NN}{TO}{NN}{VBD}
+event;other;{JJ}
+event;status change to About household help;{NN}{NN}{TO}{IN}{NN}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Close case;{NN}{NN}{TO}{VB}{NN}
+event;status change to Formulate decision;{NN}{NN}{TO}{VB}{NN}

@@ -1,0 +1,12 @@
+35a366614d806bd7872aa1617f4b6d26;Process Order Execution
+function;GR Processing from Production;{NN}{NN}{IN}{NN}
+function;Process Order Confirmation;{VB}{NNP}{NN}
+function;Process Order Execution;{VB}{NNP}
+function;Goods Issue for Process Order;{NNP}{IN}{VB}{NN}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}
+event;Production Without Process Control;{NN}{IN}{VB}{NN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Process order is finally confirmed;{VB}{NN}{VBZ}{RB}{VBN}
+event;Material is produced;{NN}{VBZ}{VBN}
+event;Goods Issue is Posted;{NNP}{VBZ}{VBN}
+event;Components are to be withdrawn for process order;{NNP}{VBP}{TO}{VB}{VBN}{IN}{NN}{NN}

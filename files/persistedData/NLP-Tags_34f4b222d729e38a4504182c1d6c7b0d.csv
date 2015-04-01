@@ -1,0 +1,34 @@
+34f4b222d729e38a4504182c1d6c7b0d;QM in Production
+function;Inspection During Production;{NNP}{IN}{NN}
+function;Quality Inspection for Goods Receipt from Production;{NNP}{IN}{NNP}{IN}{NN}
+function;Internal Quality Notifications;{JJ}{NNP}{NNS}
+function;Information System;{NNP}
+event;Quality notification is activated from defects;{JJ}{NN}{VBZ}{VBN}{IN}{NNS}
+event;Defect requires manual quality notification;{NN}{VBZ}{JJ}{NN}{NN}
+event;Inspection lot is to be created manually;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Inspection lot status allows a goods issue;{NNP}{NN}{NN}{VBZ}{DT}{NNS}{NN}
+event;Automatically created quality notification is to be edited;{RB}{VBN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Evaluation from QMIS indicates quality problems;{NN}{IN}{NNS}{VBZ}{NN}{NNS}
+event;Data is updated;{NNS}{VBZ}{VBN}
+event;Data is updated;{NNS}{VBZ}{VBN}
+event;Inspection lot is to be created manually;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Quality notification is activated from defects;{JJ}{NN}{VBZ}{VBN}{IN}{NNS}
+event;Vendor must be locked/ released;{NN}{MD}{VB}{VBN}{:}{VBN}
+event;Quality notification is completed;{JJ}{NN}{VBZ}{VBN}
+event;Effectiveness of a task is documented at a later date;{NN}{IN}{DT}{NN}{VBZ}{VBN}{IN}{DT}{JJ}{NN}
+event;QMIS updated;{NNS}{VBN}
+event;Usage decision is documented;{NN}{NN}{VBZ}{VBN}
+event;Inspection results are copied to general characteristics;{NNP}{NNS}{VBP}{VBN}{TO}{JJ}{NNS}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Vendor must be locked as regards this material;{NN}{MD}{VB}{VBN}{IN}{VBZ}{DT}{NN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Inspection results are copied to general characteristics;{NNP}{NNS}{VBP}{VBN}{TO}{JJ}{NNS}
+event;Evaluation to be performed using the Logistics Information System;{NN}{TO}{VB}{VBN}{VBG}{DT}{NNP}
+event;Inspection completion is carried out;{NNP}{NN}{VBZ}{VBN}{RP}
+event;Usage decision is documented;{NN}{NN}{VBZ}{VBN}
+event;Evaluation carried out;{NN}{VBD}{RP}
+event;QM order is created for quality notification;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Inspection lot is created automatically for order;{NNP}{NN}{VBZ}{VBN}{RB}{IN}{NN}
+event;Preferred goods receipt inspection lot is to be created automatically;{NNP}{NNS}{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Inspection lot is to be created automatically for run schedule header;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}{IN}{NN}{NN}{NN}
+event;Inspection completion is carried out;{NNP}{NN}{VBZ}{VBN}{RP}

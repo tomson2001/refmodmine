@@ -1,0 +1,7 @@
+c9fe57998b5cff5bc96e1ae95ad2c41c;Dunning Notice
+function;Automatic Dunning;{NNP}
+event;Master data updated;{NN}{NNS}{VBN}
+event;Account has dunning block;{NNP}{VBZ}{VBG}{NN}
+event;Reminder is created;{NN}{VBZ}{VBN}
+event;Items to be dunned;{NNS}{TO}{VB}{VBN}
+event;Dunning stage reached;{VBG}{NN}{VBD}

@@ -1,0 +1,42 @@
+d68d7aa6f28fb74b7afbbf1fed758faa;Fig.36: GBA3 YAWL model for MunH
+function;Decide admissible;{VB}{JJ}
+function;Copy extract;{VB}{NN}
+function;Send extract;{VB}{NN}
+function;Pass on copy of request;{VB}{IN}{NN}{IN}{NN}
+function;Send payment request;{VB}{NN}{NN}
+function;Free;{NNP}
+function;Make copy of request;{VB}{NN}{IN}{NN}
+function;Archive;{NNP}
+function;No payment;{DT}{NN}
+function;Receive request;{VB}{NN}
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Determine fees;{NN}{NNS}
+function;Send mail to appropriate department;{VB}{NN}{TO}{JJ}{NN}
+function;Receive payment;{VB}{NN}
+function;Inform customer in writing;{VB}{NN}{IN}{VBG}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Process payment;{VB}{NN}
+function;Process continue;{VB}{VB}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Inform customer in writing 1;{VB}{NN}{IN}{VBG}{CD}
+event;status change to Determine whether requester is entitled;{NN}{NN}{TO}{VB}{IN}{NN}{VBZ}{VBN}
+event;status change to Receive request;{NN}{NN}{TO}{VB}{NN}
+event;entitled;{VBN}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Receive_payment;{NN}{NN}{TO}{NN}
+event;yes;{RB}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;status change to Determine_fees;{NN}{NN}{TO}{NNS}
+event;the end;{DT}{NN}
+event;status change to Send_payment_request;{NN}{NN}{TO}{NN}
+event;status change to Decide admissible;{NN}{NN}{TO}{VB}{JJ}
+event;status change to Inform customer in writing;{NN}{NN}{TO}{VB}{NN}{IN}{VBG}
+event;status change to Copy extract;{NN}{NN}{TO}{VB}{NN}
+event;status change to Free?;{NN}{NN}{TO}{NNP}{.}
+event;yes;{RB}
+event;not entitled;{RB}{VBN}
+event;no;{DT}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send mail to appropriate department;{NN}{NN}{TO}{VB}{NN}{TO}{JJ}{NN}
+event;status change to Make copy of request;{NN}{NN}{TO}{VB}{NN}{IN}{NN}

@@ -1,0 +1,14 @@
+00d4b10a5d2f5bdb12366ddbd0349ed4;Presales
+function;Mailing Campaign Processing;{VBG}{NNP}
+function;Spare Parts Request Processing;{JJ}{NNP}
+function;Customer Contact Processing;{NN}{NN}{NN}
+event;Inquiry to be created from contact;{NNP}{TO}{VB}{VBN}{IN}{NN}
+event;Follow-up sales activity is created;{JJ}{NNS}{NN}{VBZ}{VBN}
+event;Cust. mail. campaign to be carried out;{NNP}{.}
+event;Customer inquires about products;{NN}{VBZ}{IN}{NNS}
+event;Free-of-charge delivery is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Order is to be Created from Contact;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Sales activity is to be processed;{NNS}{NN}{VBZ}{TO}{VB}{VBN}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Inquiry items are rejected;{NNP}{NNS}{VBP}{VBN}
+event;Quotation is to be created from contact;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}

@@ -1,0 +1,26 @@
+f504548aa3d24c6fef21e411b56bfc85;Actual Cost/Revenue Allocation
+function;Cost and Revenue Allocation to Profitability Analysis;{NN}{CC}{NN}{NN}{TO}{NNP}{NN}
+function;Overhead Allocation;{NN}{NN}
+function;Profit Center Allocation;{NN}{NNP}
+event;;
+event;;
+event;Labor and salary costs transferred to cost accounting;{NN}{CC}{NN}{NNS}{VBN}{TO}{VB}{NN}
+event;Internal Activity Should Be Allocated Internally;{JJ}{NN}{MD}{VB}{NNP}{RB}
+event;Trip costs must be included in cost accounting;{NN}{NNS}{MD}{VB}{VBN}{IN}{NN}{NN}
+event;Billing Documents (Complaints Processing) Are to be Transferred and Valuated;{NN}{NNS}{-LRB-}{NNS}{NN}{-RRB-}{VBP}{TO}{VB}{VBN}{CC}{VBN}
+event;Cost-accounting depreciation/ interest transferred to Cost Accounting;{VBG}{NN}{:}{NN}{VBN}{TO}{NN}{NN}
+event;Customer Agreements Are to Be Transferred;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Open item was detailed;{VB}{NN}{VBD}{VBN}
+event;Costs were reposted;{NNS}{VBD}{VBN}
+event;Costs Posted from Feeder Systems (MM, FI);{NNS}{VBD}{IN}{NNP}{-LRB-}{NN}{,}{NN}{-RRB-}
+event;Additional Data Is to Be Entered in Profit Center Accounting;{JJ}{NNS}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NNP}
+event;Actual cost recording for period is closed;{JJ}{NN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Internal Activity Was Allocated;{JJ}{NN}{VBD}{VBN}
+event;Costs Allocated Manually;{NNS}{VBN}{RB}
+event;Additional Balance Sheet Items Are to Be Transferred;{JJ}{NN}{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Revenues/ Costs Allocated to Profitability Analysis;{NNS}{:}{NNS}{VBN}{TO}{NNP}{NN}
+event;Incoming Sales Orders Are to Be Valuated and Transferred;{JJ}{NNS}{NNS}{VBP}{TO}{VB}{JJ}{CC}{VBN}
+event;Additional Manual Key Figures Are to Be Entered;{JJ}{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Data transferred to Profit Center Accounting;{NNS}{VBN}{TO}{NN}{NNP}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Billing Documents (Direct Sales) Are to Be Transferred and Valuated;{NN}{NNS}{-LRB-}{JJ}{NNS}{-RRB-}{VBP}{TO}{VB}{JJ}{CC}{JJ}

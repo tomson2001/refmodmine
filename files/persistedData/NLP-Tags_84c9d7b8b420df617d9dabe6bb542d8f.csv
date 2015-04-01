@@ -1,0 +1,5 @@
+84c9d7b8b420df617d9dabe6bb542d8f;Closing Operations
+function;Interest Accrual/ Deferral;{NN}{NN}{:}{NN}
+event;Accrual/ deferral is to be performed;{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}
+event;Accrual/ deferral run was performed;{NN}{:}{JJ}{NN}{VBD}{VBN}
+event;Accrual/ deferral flows were generated;{NN}{:}{NN}{NNS}{VBD}{VBN}

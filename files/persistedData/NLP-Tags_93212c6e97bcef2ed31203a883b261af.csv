@@ -1,0 +1,26 @@
+93212c6e97bcef2ed31203a883b261af;Fig.09: GBA1 YAWL model for MunA
+function;Send extract;{VB}{NN}
+function;No payment;{DT}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;determine fees;{VB}{NNS}
+function;Process payment;{VB}{NN}
+function;Print application;{VB}{NN}
+function;Free;{NNP}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Process continue;{VB}{VB}
+function;Fill in payment data and approve;{VB}{IN}{NN}{NNS}{CC}{VB}
+event;status change to Ask customer to  pay;{NN}{NN}{TO}{VB}{NN}{TO}{VB}
+event;the end;{DT}{NN}
+event;status change to Print application;{NN}{NN}{TO}{VB}{NN}
+event;status change to Free;{NN}{NN}{TO}{NNP}
+event;no;{DT}
+event;Status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Decide whether to pay;{NN}{NN}{TO}{VB}{IN}{TO}{VB}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;yes;{RB}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;Status change to Fill in e form;{NN}{NN}{TO}{VB}{IN}{LS}{NN}
+event;status change to Produce extract and sign;{NN}{NN}{TO}{VB}{NN}{CC}{NN}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}

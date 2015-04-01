@@ -1,0 +1,9 @@
+915c693066a046000055251e5899b98c;Product Structure Management via CAD
+function;Information Transfer via Office Function/ CAD Interface;{NNP}{NN}{IN}{NNP}{NN}{:}{NNP}
+function;Material Master Processing via CAD Interface;{NNP}{IN}{NNP}
+function;BOM Processing via CAD Interface;{NNP}{IN}{NNP}
+function;Change Master Record Processing via CAD Interface;{NNP}{IN}{NNP}
+function;Document Processing via CAD Interface;{NNP}{IN}{NNP}
+event;Set up product strucuture using CAD interface;{VB}{RP}{NN}{NN}{VBG}{NNP}{NN}
+event;Office function of CAD interface can be selected;{NNP}{NN}{IN}{NNP}{NN}{MD}{VB}{VBN}
+event;Check project data;{VB}{NN}{NNS}

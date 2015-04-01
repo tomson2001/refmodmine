@@ -1,0 +1,8 @@
+5722d66dea9fcd2e976bdb6bde688a9a;Rescheduling and Actual Date Entry
+function;Rescheduling;{VBG}
+function;Actual Date Entry;{JJ}{NN}{NN}
+event;Dates to be updated;{NNS}{TO}{VB}{VBN}
+event;Dates updated;{NNS}{VBN}
+event;Dates must be updated on the basis of the actual dates;{NNS}{MD}{VB}{VBN}{IN}{DT}{NN}{IN}{DT}{JJ}{NNS}
+event;Actual dates to be entered;{JJ}{NNS}{TO}{VB}{VBN}
+event;Actual dates entered;{JJ}{NNS}{VBD}

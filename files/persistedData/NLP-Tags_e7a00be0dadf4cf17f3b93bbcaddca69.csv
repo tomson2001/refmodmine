@@ -1,0 +1,10 @@
+e7a00be0dadf4cf17f3b93bbcaddca69;Blanket Order
+function;Processing of Internal Orders [Direct Investment Capitalization];{NN}{IN}{JJ}{NNS}{-LRB-}{NNP}{NN}{-RRB-}
+function;Order Budgeting [Investment - Direct Capitalization];{NNP}{-LRB-}{NNP}{:}{JJ}{NN}{-RRB-}
+function;Release of Order [Capital Investment - Direct Capitalization];{NNP}{IN}{NNP}{-LRB-}{NNP}{:}{JJ}{NN}{-RRB-}
+event;Blanket order to be released;{NN}{NN}{TO}{VB}{VBN}
+event;Budget is assigned;{NNP}{VBZ}{VBN}
+event;Internal order is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Blanket order created;{NN}{NN}{VBN}
+event;Order is to be implemented;{NN}{VBZ}{TO}{VB}{VBN}
+event;Statistical capital spending order is processed;{JJ}{NN}{NN}{NN}{VBZ}{VBN}

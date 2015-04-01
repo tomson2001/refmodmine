@@ -1,0 +1,18 @@
+f83e375d73ef0ae2f04f4ce7bc8a758e;International Payroll
+function;Garnishment of Wages;{NN}{IN}{NNS}
+function;Payroll Processing of Further Benefits;{NNP}{IN}{JJ}{NNS}
+function;Calculation of Remuneration;{NN}{IN}{NN}
+function;Calculation of Payment Amounts;{NN}{IN}{NN}{NNS}
+function;Calculation of Net Remuneration;{NN}{IN}{JJ}{NN}
+function;Calculation of Employment Tax;{NN}{IN}{NNP}
+event;Calculation of Remuneration Required;{NN}{IN}{NNP}
+event;Payroll Processing of Further Benefits Required;{NNP}{IN}{JJ}{NNS}{VBN}
+event;Net remuneration exists;{JJ}{NN}{VBZ}
+event;Characterized emplyment tax amounts exist;{VBN}{JJ}{NN}{NNS}{VBP}
+event;Calculation of employment tax required;{NN}{IN}{NN}{NN}{JJ}
+event;Characterized remuneration elements exist;{VBN}{NN}{NNS}{VBP}
+event;Need for wage garnishment exists;{VBN}{IN}{NN}{NN}{VBZ}
+event;Settlement amounts for further benefits exist;{NNP}{VBZ}{IN}{JJ}{NNS}{VBP}
+event;Time for remuneration payment is scheduled;{NNP}{IN}{NN}{NN}{VBZ}{VBN}
+event;Garnishment amounts exist;{NN}{NNS}{VBP}
+event;Payment amounts exist;{NN}{NNS}{VBP}

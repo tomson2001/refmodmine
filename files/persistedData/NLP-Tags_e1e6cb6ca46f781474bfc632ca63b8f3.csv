@@ -1,0 +1,5 @@
+e1e6cb6ca46f781474bfc632ca63b8f3;Garnishment of Wages
+function;Garnishment of Wages;{NN}{IN}{NNS}
+event;Need for wage garnishment exists;{VBN}{IN}{NN}{NN}{VBZ}
+event;Net remuneration exists;{JJ}{NN}{VBZ}
+event;Garnishment amounts exist;{NN}{NNS}{VBP}

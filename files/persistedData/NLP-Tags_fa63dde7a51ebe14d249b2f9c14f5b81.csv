@@ -1,0 +1,53 @@
+fa63dde7a51ebe14d249b2f9c14f5b81;Service Order
+function;Service Order Permit;{NNP}
+function;Service Order Execution;{NNP}
+function;Material Planning;{NNP}
+function;Service Order Release;{NNP}
+function;Service Order Creation and Processing;{NNP}{CC}{NNP}
+function;Service Order Printing;{NNP}{NN}
+event;Order papers are to be printed;{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Permits are assigned to the order;{NNS}{VBP}{VBN}{TO}{DT}{NN}
+event;Notification and order assigned to one another;{NN}{CC}{NN}{VBN}{TO}{CD}{DT}
+event;Service order is created;{NNP}{NN}{VBZ}{VBN}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Service order is created and released;{NNP}{NN}{VBZ}{VBN}{CC}{VBN}
+event;Credit limit check is to be performed manually;{NNP}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Material withdrawal is not required;{NN}{NN}{VBZ}{RB}{VBN}
+event;Service order is released;{NNP}{NN}{VBZ}{VBN}
+event;Purchase requisitions can be ordered;{NN}{NNS}{MD}{VB}{VBN}
+event;Material components are assigned directly;{NN}{NNS}{VBP}{VBN}{RB}
+event;Shop papers are to be printed from order;{NNP}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Service product exists;{NNP}{NN}{VBZ}
+event;Service order is to be released;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Default values for service product are maintained;{NNP}{NNS}{IN}{NN}{NN}{VBP}{VBN}
+event;Material reservation can be withdrawn;{NN}{NN}{MD}{VB}{VBN}
+event;Permits Issued;{VBZ}{VBN}
+event;Shop papers are to be printed from notification;{NNP}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Release is refused;{NNP}{VBZ}{VBN}
+event;Order is to be performed;{NN}{VBZ}{TO}{VB}{VBN}
+event;Warranty is to be checked;{NN}{VBZ}{TO}{VB}{VBN}
+event;Material components are to be assigned to the operation;{NN}{NNS}{VBP}{TO}{VB}{VBN}{TO}{DT}{NN}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}
+event;Service order to be created for service notification;{NNP}{NN}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Material components are copied from maintenance task list;{NN}{NNS}{VBP}{VBN}{IN}{NN}{NN}{NN}
+event;Services are to be entered;{NNPS}{VBP}{TO}{VB}{VBN}
+event;Material reservation is created;{NN}{NN}{VBZ}{VBN}
+event;Purchase requisition with vendor has been created;{NN}{NN}{IN}{NN}{VBZ}{VBN}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Material withdrawal is not required;{NN}{NN}{VBZ}{RB}{VBN}
+event;Credit limit check is to be performed automatically;{NNP}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Material components are assigned via maintenance BOM;{NN}{NNS}{VBP}{VBN}{IN}{NN}{NN}
+event;Order papers are to be printed;{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Permit is to be assigned;{NN}{VBZ}{TO}{VB}{VBN}
+event;Service order to be created from sales order item;{NNP}{NN}{TO}{VB}{VBN}{IN}{NNS}{NN}{NN}
+event;Operations and Order Must Be Confirmed;{NNP}{CC}{NNP}{MD}{VB}{VBN}
+event;Maintenance order is printed;{NN}{NN}{VBZ}{VBN}
+event;Capacity requirement is created;{NN}{NN}{VBZ}{VBN}
+event;Service order should be created manually;{NNP}{NN}{MD}{VB}{VBN}{RB}
+event;Capacity is available;{NN}{VBZ}{JJ}
+event;Capacity situation is to be evaluated;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Order is to be performed;{NN}{VBZ}{TO}{VB}{VBN}
+event;External procurement is provided;{JJ}{NN}{VBZ}{VBN}

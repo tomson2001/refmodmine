@@ -1,0 +1,5 @@
+e7c54aa1d3086ee168bec366eb720b6f;Forecast
+function;Material Forecast;{NNP}
+event;Consumption values exist;{NN}{NNS}{VBP}
+event;Forecast requirements generated;{NN}{NNS}{VBD}
+event;Mat.forecast is to be carried out;{NN}{VBZ}{TO}{VB}{VBN}{RP}

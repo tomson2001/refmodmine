@@ -1,0 +1,62 @@
+22a25682965fccb157b2990dfc60696a;Fig.22: GBA2 YAWL model for MunD
+function;Receive payment 3;{VB}{NN}{CD}
+function;Determine fees;{NN}{NNS}
+function;Receive payment;{VB}{NN}
+function;Give coupon;{VB}{NN}
+function;go to the end;{VB}{TO}{DT}{NN}
+function;No payment;{DT}{NN}
+function;Give_extract;{NN}
+function;Determine whether proof of identity is present;{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+function;Enabling officer;{VBG}{NN}
+function;Call coupon holder;{VB}{NN}{NN}
+function;Ask customer whether he has ID;{VB}{NN}{IN}{PRP}{VBZ}{VBN}
+function;Ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Process payment 3;{VB}{NN}{CD}
+function;Ask customer to bring ID;{VB}{NN}{TO}{VB}{NNP}
+function;Give GBA extract;{VB}{NNP}{NN}
+function;Give receipt;{VB}{NN}
+function;Process payment 2;{VB}{NN}{CD}
+function;Send reminder;{VB}{NN}
+function;Issue invoice;{NN}{NN}
+function;Direct to right product;{JJ}{TO}{JJ}{NN}
+function;Determine if right product;{VB}{IN}{JJ}{NN}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Process payment;{VB}{NN}
+function;Decide whether to go on;{VB}{IN}{TO}{VB}{IN}
+function;Receive payment 2;{VB}{NN}{CD}
+function;Free;{NNP}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;go to the end;{VB}{TO}{DT}{NN}
+event;status change to Ask customer whether he has ID;{NN}{NN}{TO}{VB}{NN}{IN}{PRP}{VBZ}{VBN}
+event;status change to Call coupon holder;{NN}{NN}{TO}{VB}{NN}{NN}
+event;not free;{RB}{JJ}
+event;status change to Give extract;{NN}{NN}{TO}{VB}{NN}
+event;not entitled;{RB}{VBN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Decide whether to go on;{NN}{NN}{TO}{VB}{IN}{TO}{VB}{IN}
+event;status change to Determine if right product;{NN}{NN}{TO}{VB}{IN}{JJ}{NN}
+event;entitled;{VBN}
+event;status change to Waiting for payment;{NN}{NN}{TO}{VBG}{IN}{NN}
+event;the end;{DT}{NN}
+event;always;{RB}
+event;status change to  Send reminder;{NN}{NN}{TO}{VB}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Receive payment 2;{NN}{NN}{TO}{VB}{NN}{CD}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Process payment 3;{NN}{NN}{TO}{VB}{NN}{CD}
+event;status change to Receive payment 3;{NN}{NN}{TO}{VB}{NN}{CD}
+event;status change to  Ask customer what product he is requesting;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+event;status change to Free;{NN}{NN}{TO}{NNP}
+event;yes;{RB}
+event;wrong product;{JJ}{NN}
+event;status change to Issue invoice;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Process payment 2;{NN}{NN}{TO}{VB}{NN}{CD}
+event;no ID present;{DT}{NN}{JJ}
+event;no;{DT}
+event;status change to No_payment;{NN}{NN}{TO}{NN}
+event;status change to Enabling officer;{NN}{NN}{TO}{VBG}{NN}
+event;ID present;{NN}{JJ}
+event;only if not free;{RB}{IN}{RB}{JJ}
+event;right product;{JJ}{NN}

@@ -1,0 +1,8 @@
+8417370d62dfaa17e034f7f7c40abfc1;Cost Planning
+function;Easy Cost Planning;{NNP}{NN}{NNP}
+function;Cost Planning in Work Breakdown Structure;{NN}{NNP}{IN}{NNP}{NN}
+function;Cost Planning in Networks;{NN}{NNP}{IN}{NNP}
+event;Cost planning using existing price/quantity structure required;{NN}{NN}{VBG}{VBG}{NN}{NN}{VBN}
+event;Costs planned;{NNS}{VBD}
+event;Easy Cost Planning required;{NNP}{NN}{NNP}{VBD}
+event;Cost planning in WBS required;{NN}{NN}{IN}{NNP}{VBD}

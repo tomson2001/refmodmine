@@ -1,0 +1,7 @@
+d5f542ba26b92520cc31b6f44b2704d4;Structuring [Investment Programs]
+function;Program Structuring;{NN}{VBG}
+event;Program structure is processed;{NN}{NN}{VBZ}{VBN}
+event;Program definition is changed;{NN}{NN}{VBZ}{VBN}
+event;Program structure is to be determined;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Program positions are changed;{NN}{NNS}{VBP}{VBN}
+event;Program definition is to be changed;{NN}{NN}{VBZ}{TO}{VB}{VBN}

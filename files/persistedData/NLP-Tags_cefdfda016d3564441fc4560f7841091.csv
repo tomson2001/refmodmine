@@ -1,0 +1,13 @@
+cefdfda016d3564441fc4560f7841091;Payroll Processing for Benefits Plans
+function;Update for Employee Benefits Accounts;{NNP}{IN}{NNPS}
+function;Transmission of Benefits Amounts to Service Provider;{NNP}{IN}{NNPS}{TO}{NNP}
+function;Regular Payroll Processing for Benefits Plans;{JJ}{NNP}{IN}{NNPS}{NNS}
+event;Amount to be paid to benefits service provider exists;{NN}{TO}{VB}{VBN}{TO}{NNS}{NN}{NN}{VBZ}
+event;Employee participation in benefits is complete;{NN}{NN}{IN}{NNS}{VBZ}{JJ}
+event;Employer share for benefits plans exists;{NN}{NN}{IN}{NNS}{NNS}{VBZ}
+event;Benefits amounts are transmitted to service provider;{NNS}{NNS}{VBP}{VBN}{TO}{NN}{NN}
+event;Employee benefits accounts are updated;{NN}{NNS}{NNS}{VBP}{VBN}
+event;Time for transmission of benefits amounts has occurred;{NNP}{IN}{NN}{IN}{NNS}{NNS}{VBZ}{VBN}
+event;Payroll information for benefits service provider exists;{NNP}{NN}{IN}{NNS}{NN}{NN}{VBZ}
+event;Employee participation in benefits is active;{NN}{NN}{IN}{NNS}{VBZ}{JJ}
+event;Employee share for benefits plans exists;{NN}{NN}{IN}{NNS}{NNS}{VBZ}

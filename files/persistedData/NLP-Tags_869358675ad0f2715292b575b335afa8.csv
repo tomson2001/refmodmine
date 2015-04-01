@@ -1,0 +1,8 @@
+869358675ad0f2715292b575b335afa8;Billing
+function;Credit Memo from Customer Complaint / Returns;{NNP}{IN}{NN}{NN}{:}{NNS}
+function;Billing Document Cancellation;{NN}{NNP}
+event;Billing document to be cancelled;{NN}{NN}{TO}{VB}{VBN}
+event;Credit memo can be created;{NNP}{NN}{MD}{VB}{VBN}
+event;Credit/ debit memo is granted;{NNP}{:}{NN}{NN}{VBZ}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Billing document/ items are cancelled;{NN}{NN}{:}{NNS}{VBP}{VBN}

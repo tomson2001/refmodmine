@@ -1,0 +1,24 @@
+3bb14780b479637ef6c68b6bc947ec47;Handling Complex Investment Measures
+function;Period-End Closing and Settlement;{NNP}{NN}{CC}{NNP}
+function;Appropriation Request;{NN}{NN}
+function;Measure Processing;{NN}{NN}
+function;Updating [Investment Projects];{VBG}{-LRB-}{NNPS}{-RRB-}
+function;Analysis;{NN}
+function;Measure Planning;{NN}{NNP}
+function;Release and Implementation of Measure;{NNP}{CC}{NNP}{IN}{NN}
+event;Period-end closing and settlement to be carried out;{JJ}{NN}{CC}{NN}{TO}{VB}{VBN}{RP}
+event;Order analysis completed;{NN}{NN}{VBD}
+event;Simulation was carried out;{NN}{VBD}{VBN}{RP}
+event;Order is processed;{NN}{VBZ}{VBN}
+event;Release and execution of measure to be triggered;{NNP}{CC}{NN}{IN}{NN}{TO}{VB}{VBN}
+event;Release and execution of measure completed;{NNP}{CC}{NN}{IN}{NN}{VBN}
+event;Inv. profile specified w/summary settlement;{NNP}{.}
+event;Program analysis completed;{NN}{NN}{VBD}
+event;Appropri- ation request is to be processed;{NN}{:}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Budget is updated;{NNP}{VBZ}{VBN}
+event;Internal order is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Investment profile with line item settlement is specified;{NN}{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Measure settled partially;{NN}{VBD}{RB}
+event;Measure is settled completely;{NN}{VBZ}{VBN}{RB}
+event;Valuation of balances affecting financial statement to be carried out;{NN}{IN}{NNS}{VBG}{JJ}{NN}{TO}{VB}{VBN}{RP}
+event;Planned accrued depreciation and interest were transferred to CO;{NNP}{VBN}{NN}{CC}{NN}{VBD}{VBN}{TO}{NNP}

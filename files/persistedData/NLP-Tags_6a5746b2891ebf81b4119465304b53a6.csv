@@ -1,0 +1,20 @@
+6a5746b2891ebf81b4119465304b53a6;Purchasing
+function;Inbound EDI Processing;{JJ}{NNP}{NN}
+function;Processing of Shipping Notifications/ Confirmations;{NN}{IN}{VBG}{NNS}{:}{NNS}
+function;Delivery and Acknowledgment Expediter;{NN}{CC}{NN}{NN}
+function;Release of Purchase Orders;{NNP}{IN}{NNP}{NNS}
+function;Transmission of Scheduling Agreements;{NNP}{IN}{NNP}
+function;Purchase Order Processing;{NNP}
+function;Scheduling Agreement Delivery Schedule;{VBG}{NN}{NN}{VBP}
+function;Transmission of Purchase Orders;{NNP}{IN}{NNP}{NNS}
+event;Inbound delivery entered;{JJ}{NN}{VBD}
+event;Purchase order created;{NN}{NN}{VBN}
+event;Delivery urged;{NN}{VBD}
+event;Reminder sent;{NN}{VBD}
+event;IDoc processing initiated for shipping notification;{NN}{NN}{VBN}{IN}{NN}{NN}
+event;IDoc received;{NN}{VBD}
+event;Purchase order transmitted;{NN}{NN}{VBD}
+event;Purchasing document released;{NNP}{NN}{VBD}
+event;Requisition released for scheduling agreement schedule/SA release;{NN}{VBN}{IN}{NN}{NN}{NN}{NN}
+event;Scheduling agreement schedule/ SA release created;{VBG}{NN}{NN}{:}{NNP}{NN}{VBD}
+event;Purchase requisition released for purchase order;{NN}{NN}{VBN}{IN}{NN}{NN}

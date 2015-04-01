@@ -1,0 +1,122 @@
+4ab9a107251827b7b52826e57909e6f1;Fig.72: WMO YAWL model for MiunD
+function;Short procedure housing;{JJ}{NN}{NN}
+function;Examine customer;{VB}{NN}
+function;Determine which category of need it is;{NN}{WDT}{NN}{IN}{NN}{PRP}{VBZ}
+function;Process continue 22;{VB}{VB}{CD}
+function;Process continue 2;{VB}{VB}{CD}
+function;Process continue 4;{VB}{VB}{CD}
+function;Process continue 6;{VB}{VB}{CD}
+function;Determine amount;{NN}{NN}
+function;Process continue 19;{VB}{VB}{CD}
+function;Record requested;{NNP}{VBD}
+function;Determine care provider to approach;{VB}{NN}{NN}{TO}{NN}
+function;Send confirmation of receipt;{VB}{NN}{IN}{NN}
+function;Run file check;{NNP}{NN}{NN}
+function;Receive recommendation;{VB}{NN}
+function;Examine customer 1;{VB}{NN}{CD}
+function;Estimate costs;{NNP}{NNS}
+function;Process continue 13;{VB}{VB}{CD}
+function;Process continue 21;{VB}{VB}{CD}
+function;Make preliminary decision;{VB}{JJ}{NN}
+function;Process continue 17;{VB}{VB}{CD}
+function;State welfare request;{NNP}{NN}{NN}
+function;Process in the system;{VB}{IN}{DT}{NN}
+function;Application;{NN}
+function;Process continue 1;{VB}{VB}{CD}
+function;Process continue 18;{VB}{VB}{CD}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Check filled in form;{VB}{VBN}{IN}{NN}
+function;Formulate indicative report;{VB}{JJ}{NN}
+function;Give instructions for housing adjustment;{VB}{NNS}{IN}{NN}{NN}
+function;Customer requests to seek bids;{NN}{NNS}{TO}{VB}{NNS}
+function;Compromise on the arrangement;{NN}{IN}{DT}{NN}
+function;Short procedure;{JJ}{NN}
+function;Request a fitting;{VB}{DT}{JJ}
+function;Request cost estimation for modification;{NN}{NN}{NN}{IN}{NN}
+function;Determine offer;{NN}{NN}
+function;Send order;{VB}{NN}
+function;Send info to ISD;{VB}{NN}{TO}{NN}
+function;Receive offers;{VB}{NNS}
+function;Contact CAK;{NN}{NN}
+function;Need to formulate report;{VBN}{TO}{VB}{NN}
+function;Send invoice;{VB}{NN}
+function;Concerns household help;{NNS}{NN}{NN}
+function;Archive;{NNP}
+function;Obtain quotes;{VB}{NNS}
+function;Start perform case specific tasks;{NNP}{VB}{NN}{JJ}{NNS}
+function;Assign category;{VB}{NN}
+function;Process continue 20;{VB}{VB}{CD}
+function;Formulate decision;{VB}{NN}
+function;Need to formulate decision;{VBN}{TO}{VB}{NN}
+function;More medical advice needed;{RBR}{JJ}{NN}{VBN}
+function;Process continue 23;{VB}{VB}{CD}
+function;Perform fitting;{VB}{JJ}
+function;Send copies to contractor;{VB}{NNS}{TO}{NN}
+function;Carry out house visit;{VB}{RP}{NN}{NN}
+function;Case-specific tasks complete;{JJ}{NNS}{JJ}
+function;Assign to available consultant;{VB}{TO}{JJ}{NN}
+function;Look for alternative living space;{VB}{IN}{JJ}{NN}{NN}
+function;Process continue 12;{VB}{VB}{CD}
+function;Plan exemination with customer;{NNP}{NN}{IN}{NN}
+function;Plan examination with customer;{NNP}{NN}{IN}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to;{NN}{NN}{TO}
+event;no application;{DT}{NN}
+event;status change to Concerns household help;{NN}{NN}{TO}{NNS}{NN}{NN}
+event;status change to Record requested;{NN}{NN}{TO}{NNP}{VBD}
+event;status change to State welfare request;{NN}{NN}{TO}{NNP}{NN}{NN}
+event;status change to Send info to ISD;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;only if building advice needed;{RB}{IN}{NN}{NN}{VBD}
+event;status change to Make preliminary decision;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Need to formulate decision;{NN}{NN}{TO}{VBN}{TO}{VB}{NN}
+event;status change to Perform fitting;{NN}{NN}{TO}{VB}{JJ}
+event;status change to Start perform case specific tasks;{NN}{NN}{TO}{NNP}{VB}{NN}{JJ}{NNS}
+event;no house visit and no medical advice needed;{DT}{NN}{NN}{CC}{DT}{JJ}{NN}{VBN}
+event;yes;{RB}
+event;no;{DT}
+event;status change to Receive recommendation;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine offer;{NN}{NN}{TO}{VB}{NN}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;no;{DT}
+event;status change to;{NN}{NN}{TO}
+event;status change to;{NN}{NN}{TO}
+event;status change to;{NN}{NN}{TO}
+event;house visit needed and medical advice needed;{NN}{NN}{VBN}{CC}{JJ}{NN}{VBN}
+event;status change to Plan examination with customer;{NN}{NN}{TO}{NNP}{NN}{IN}{NN}
+event;yes;{RB}
+event;with PGB;{IN}{NN}
+event;no;{DT}
+event;status change to Short procedure;{NN}{NN}{TO}{JJ}{NN}
+event;yes;{RB}
+event;house visit needed but no medical advice;{NN}{NN}{VBN}{CC}{DT}{JJ}{NN}
+event;no;{DT}
+event;no PGB;{DT}{NN}
+event;always;{RB}
+event;status change to Receive offers;{NN}{NN}{TO}{VB}{NNS}
+event;transportation facilities;{NN}{NNS}
+event;yes;{RB}
+event;large modifications to house;{JJ}{NNS}{TO}{NN}
+event;yes;{RB}
+event;status change to;{NN}{NN}{TO}
+event;the end;{DT}{NN}
+event;status change to Carry out house visit;{NN}{NN}{TO}{VB}{RP}{NN}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Formulate decision;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;help with the house hold;{NN}{IN}{DT}{NN}{NN}
+event;status change to Send confirmation of receipt;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Assign category;{NN}{NN}{TO}{VB}{NN}
+event;status change to;{NN}{NN}{TO}
+event;no;{DT}
+event;other;{JJ}
+event;status change to Estimate costs;{NN}{NN}{TO}{NNP}{NNS}
+event;status change to;{NN}{NN}{TO}
+event;status change to;{NN}{NN}{TO}
+event;status change to Process in the system;{NN}{NN}{TO}{VB}{IN}{DT}{NN}
+event;status change to Assign to available consultant;{NN}{NN}{TO}{VB}{TO}{JJ}{NN}
+event;yes;{RB}
+event;status change to Send invoice;{NN}{NN}{TO}{VB}{NN}
+event;status change to Obtain quotes;{NN}{NN}{TO}{VB}{NNS}
+event;no house visit but medical advice needed;{DT}{NN}{NN}{CC}{JJ}{NN}{VBN}
+event;application;{NN}
+event;status change to Send decision to customer;{NN}{NN}{TO}{VB}{NN}{TO}{NN}

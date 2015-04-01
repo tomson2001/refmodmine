@@ -1,0 +1,33 @@
+071bd8ec51a7a3a8a22372d82db743f7;Asset Maintenance
+function;Asset Shutdown;{NNP}
+function;Mass Change;{JJ}{NNP}
+function;Asset Master Record Change;{NNP}
+function;Creation of Group Asset;{NN}{IN}{NNP}
+function;Creation of Master Record for Tangible Assets;{NN}{IN}{NNP}{IN}{JJ}{NNS}
+event;Acquisitions to be entered;{NNS}{TO}{VB}{VBN}
+event;Asset master record is incomplete;{NNP}{NN}{NN}{VBZ}{JJ}
+event;Asset master record does not exist;{NNP}{NN}{NN}{VBZ}{RB}{VB}
+event;Fixed asset created;{VBN}{NN}{VBN}
+event;New master record is necessary;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Asset(s) to be shut down;{NNP}{-LRB-}{NNS}{-RRB-}{TO}{VB}{VBN}{RP}
+event;Assign asset to property, if required;{VB}{NN}{TO}{NN}{,}{IN}{VBN}
+event;Mass changes were made;{JJ}{NNS}{VBD}{VBN}
+event;Assign asset to building, if required;{VB}{NN}{TO}{NN}{,}{IN}{VBN}
+event;Group asset to be created;{NNP}{NN}{TO}{VB}{VBN}
+event;Asset shutdown posted;{NNP}{NN}{VBD}
+event;Fixed asset was bought w/o purchase order;{VBN}{NN}{VBD}{VBN}{NN}{NN}{NN}
+event;Fixed asset was given;{VBN}{NN}{VBD}{VBN}
+event;Leased asset was bought;{VBN}{NN}{VBD}{VBN}
+event;Cost center plan was changed;{NN}{NN}{NN}{VBD}{VBN}
+event;An asset master record should be changed;{DT}{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Depreciation terms should be changed;{NN}{NNS}{MD}{VB}{VBN}
+event;Depreciation should be posted regularly;{NN}{MD}{VB}{VBN}{RB}
+event;Claim for support exists;{NN}{IN}{NN}{VBZ}
+event;Revaluation should be carr. out f first time;{NN}{MD}{VB}{NN}{.}
+event;Retirements to be entered;{NNS}{TO}{VB}{VBN}
+event;Fixed asset is changed;{VBN}{NN}{VBZ}{VBN}
+event;Several asset master records should be changed;{JJ}{NN}{NN}{NNS}{MD}{VB}{VBN}
+event;Post-capitalization to be posted;{NN}{TO}{VB}{VBN}
+event;Revaluation is necessary due to post-capi- talization;{NN}{VBZ}{JJ}{JJ}{TO}{JJ}{:}{NN}
+event;Worklist was created;{NNP}{VBD}{VBN}
+event;Fixed asset was found;{VBN}{NN}{VBD}{VBN}

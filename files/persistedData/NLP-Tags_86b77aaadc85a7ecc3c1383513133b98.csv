@@ -1,0 +1,34 @@
+86b77aaadc85a7ecc3c1383513133b98;Processes of the Data Monitor
+function;Currency Translation;{NNP}{NN}
+function;Preparation of consolidation group changes (Data monitor);{NN}{IN}{NN}{NN}{NNS}{-LRB-}{NNS}{VBP}{-RRB-}
+function;Non-integrated Financial Data Transfer by Online Entry;{JJ}{NNP}{NN}{IN}{NNP}
+function;Rollup Consolidation Groups;{NN}{NN}{NNS}
+function;Tasks for Data Transfer;{NNS}{IN}{NNS}{NN}
+function;Integrated Financial Data Transfer by Rollup;{NNP}{NN}{IN}{NN}
+function;Central Standardizing Entries by Reclassification in Individual Statement;{NNPS}{IN}{NNP}{IN}{NNP}
+function;Balance Carried Forward (Consolidation);{NN}{VBD}{RB}{-LRB-}{NN}{-RRB-}
+function;Integrated Financial Data Transfer by Realtime Update;{NNP}{NN}{IN}{NNP}
+function;Local Standardizing Entry by Offline Entry;{JJ}{VBG}{NN}{IN}{NNP}
+function;Additional Financial Data Transfer by Flexible Upload;{JJ}{NNP}{NN}{IN}{NNP}
+function;Central Standardizing Entries: Manual;{NNPS}{:}{NNP}
+function;Additional Financial Data Transfer by Online Entry;{JJ}{NNP}{NN}{IN}{NNP}
+function;Apportionment (Consolidation);{NN}{-LRB-}{NN}{-RRB-}
+function;Integrated Financial Data Transfer by Periodic Extract;{NNP}{NN}{IN}{JJ}{NN}
+function;Validations;{NNS}
+function;Non-integrated Financial Data Transfer by Offline Entry;{JJ}{NNP}{NN}{IN}{NNP}
+function;Non-integrated Financial Data Transfer by Flexible Upload;{JJ}{NNP}{NN}{IN}{NNP}
+function;Local Standardizing Entry by Flexible Upload;{JJ}{VBG}{NN}{IN}{NNP}
+event;Integrated Reported Financial Data Is to Be Transferred;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Data Monitor Processes Completed;{NNS}{NNP}
+event;Nonintegrated Reported Financial Data Is to Be Transferred;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Validations Completed;{NNS}{VBN}
+event;Carrying Forward of Balances Carried Out;{VBG}{RB}{IN}{NNS}{VBD}{IN}
+event;Nonintegrated Financial Reporting Data Transferred;{NNP}
+event;Apportionment Completed;{NN}{VBN}
+event;Additional Financial Data Transferred;{JJ}{NNP}
+event;Integrated Reported Financial Data;{NNP}
+event;Translations Established;{NNS}{VBN}
+event;Decentral Standardizing Entries Executed;{JJ}{VBG}{NNS}{VBN}
+event;Tasks for Data Transfer Established;{NNS}{IN}{NNS}{NN}{VBN}
+event;Central Standardizing Entries Executed;{NNP}
+event;Rollup Consolidation Groups Carried Out;{NN}{NN}{NNS}{VBD}{IN}

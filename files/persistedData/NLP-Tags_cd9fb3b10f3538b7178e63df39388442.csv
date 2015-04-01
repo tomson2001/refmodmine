@@ -1,0 +1,9 @@
+cd9fb3b10f3538b7178e63df39388442;Warehouse/Stores
+function;Difference Processing;{NN}{NN}
+function;Confirmation;{NN}
+function;Stock Placement Processing;{NNP}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Material placed in storage;{NN}{VBN}{IN}{NN}
+event;Transfer order item with difference exists;{NN}{NN}{NN}{IN}{NN}{VBZ}
+event;TO item confirmed without differences;{TO}{NN}{VBD}{IN}{NNS}

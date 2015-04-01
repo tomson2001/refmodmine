@@ -1,0 +1,7 @@
+b02d4f9447f72194e3b56fb968edf1eb;Retraction of Long-Term Incentives
+function;Employee Notification of Retraction;{NN}{NN}{IN}{NNP}
+function;Retraction of Long-Term Incentives;{NN}{IN}{NNP}{NNS}
+event;Employee notified of retraction;{NN}{VBN}{IN}{NN}
+event;Employee long-term incentive is granted;{NN}{JJ}{NN}{VBZ}{VBN}
+event;Need for retraction of long-term incentives exists;{VBN}{IN}{NN}{IN}{JJ}{NNS}{VBZ}
+event;Long-term incentives are retracted;{JJ}{NNS}{VBP}{VBN}

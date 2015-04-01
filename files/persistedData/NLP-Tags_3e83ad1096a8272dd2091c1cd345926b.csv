@@ -1,0 +1,13 @@
+3e83ad1096a8272dd2091c1cd345926b;Accounting
+function;Posting Release;{VBG}{NNP}
+function;Perform Posting;{VB}{VBG}
+event;Transaction was posted;{NN}{VBD}{VBN}
+event;Valuation flows were generated;{NN}{NNS}{VBD}{VBN}
+event;Flows from realized gains/ losses were generated;{NNS}{IN}{VBN}{NNS}{:}{NNS}{VBD}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Option was exercised with cash settlement;{NN}{VBD}{VBN}{IN}{NN}{NN}
+event;Termination flows generate settlement payments;{NN}{VBZ}{VB}{NN}{NNS}
+event;Flows were released for posting;{NNS}{VBD}{VBN}{IN}{VBG}
+event;Customer open items were generated;{NN}{JJ}{NNS}{VBD}{VBN}
+event;Payment request was generated;{NN}{NN}{VBD}{VBN}
+event;G/L posting was generated;{NN}{VBG}{VBD}{VBN}

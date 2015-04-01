@@ -1,0 +1,8 @@
+642d7dd31ad7bf1a32c0c1491f2ce13e;Pipeline Processing
+function;Pipeline Withdrawal;{NNP}
+function;Invoice Verification;{NNP}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Consignment/ pipeline liability is created;{NN}{:}{NN}{NN}{VBZ}{VBN}
+event;Consignment/ pipeline liabilities are to be settled;{NN}{:}{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Consignment/ pipeline settlement document transmitted;{NN}{:}{NN}{NN}{NN}{VBD}
+event;Unplanned goods issue occurred;{JJ}{NNS}{NN}{VBD}

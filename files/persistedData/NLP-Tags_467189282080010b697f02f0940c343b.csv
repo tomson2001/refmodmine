@@ -1,0 +1,8 @@
+467189282080010b697f02f0940c343b;Check
+function;Compare Payment Advices;{VB}{NN}{NNS}
+function;Compare Value Dates;{VB}{NNP}{VBZ}
+event;Planned value date to be compared with actual value date;{NNP}{NN}{NN}{TO}{VB}{VBN}{IN}{JJ}{NN}{NN}
+event;Bank document posted;{NNP}{NN}{VBD}
+event;Bank data was processed;{NNP}{NNS}{VBD}{VBN}
+event;Cash Management advice notes exist;{NNP}{NN}{VBZ}{VBP}
+event;Value dates were compared;{NNP}{NNS}{VBD}{VBN}

@@ -1,0 +1,12 @@
+eac47a3c84805b270bfc30a7e142b216;Personnel Budget Planning
+function;Budget Planning;{NNP}
+function;Preparation of Budget Planning;{NN}{IN}{NNP}
+function;Monitoring of Budget Planning;{NN}{IN}{NNP}
+event;Need to prepare budget planning exists;{VBN}{TO}{VB}{NN}{NN}{VBZ}
+event;Need to correct specifications for budget planning;{VBN}{TO}{VB}{NNS}{IN}{NN}{NN}
+event;Specifications for budget planning are adopted;{NNS}{IN}{NN}{NN}{VBP}{VBN}
+event;Need for budget planning exists;{VBN}{IN}{NN}{NN}{VBZ}
+event;Budget plan is approved;{NNP}{NN}{VBZ}{VBN}
+event;Need to correct budget plan exists;{VBN}{TO}{VB}{NN}{NN}{VBZ}
+event;Need for monitoring of budget planning;{VBN}{IN}{NN}{IN}{NN}{NN}
+event;No need to act for budget planning;{DT}{NN}{TO}{VB}{IN}{NN}{NN}

@@ -1,0 +1,44 @@
+41324bd781e82d3358513c00f5e912f2;Accounts Receivable
+function;Interest Calculation [A/R];{NN}{NN}{-LRB-}{NN}{-RRB-}
+function;Customer Down Payments;{NN}{NN}{NNS}
+function;Account Analysis [A/R];{NNP}{NN}{-LRB-}{NN}{-RRB-}
+function;Bill of Exchange Receivable;{NNP}{IN}{NNP}
+function;Account Clearing [AR];{NNP}{-LRB-}{NNS}{-RRB-}
+function;Correspondence with Customers;{NN}{IN}{NNS}
+function;Dunning Notice;{NNP}
+function;Invoices and Credit Memos;{NNS}{CC}{NN}{NNS}
+function;Customer Payments;{NN}{NNS}
+event;Bill of exchange payment posted;{NNP}{IN}{NN}{NN}{VBD}
+event;Down payment agreed with customer;{IN}{NN}{VBD}{IN}{NN}
+event;Payment received;{NN}{VBD}
+event;Invoice to be entered for one-time customer;{NNP}{TO}{VB}{VBN}{IN}{JJ}{NN}
+event;Internal transfer posting with clearing carried out;{JJ}{NN}{VBG}{IN}{NN}{VBD}{RP}
+event;Balance analysis to be carried out;{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Line item analysis to be carried out;{NNP}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Correspondence processed;{NN}{VBN}
+event;Manual clearing is complete;{JJ}{NN}{VBZ}{JJ}
+event;Invoice to be entered for customer;{NNP}{TO}{VB}{VBN}{IN}{NN}
+event;Automatic clearing completed;{NNP}{VBG}{VBN}
+event;Correspondence to be sent;{NN}{TO}{VB}{VBN}
+event;Partial payment should be made;{JJ}{NN}{MD}{VB}{VBN}
+event;Line items to be cleared;{NNP}{NNS}{TO}{VB}{VBN}
+event;Customer invoice is to be parked;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Bill of exchange payment request to be created;{NNP}{IN}{NN}{NN}{NN}{TO}{VB}{VBN}
+event;Items to be dunned;{NNS}{TO}{VB}{VBN}
+event;Internal transfer posting posted;{JJ}{NN}{VBG}{VBN}
+event;Down payment is to be cleared manually;{IN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Customer credit memo is to be entered;{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Payment medium created;{NN}{NN}{VBN}
+event;Reminder is created;{NN}{VBZ}{VBN}
+event;Credit management analysis to be carried out;{NNP}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Evaluations exist;{NNS}{VBP}
+event;Customer credit memo is to be parked;{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Clearing is posted;{NNP}{VBZ}{VBN}
+event;Interest on arrears to be calculated;{NN}{IN}{NNS}{TO}{VB}{VBN}
+event;Line items to be cleared;{NNP}{NNS}{TO}{VB}{VBN}
+event;Credit memo for one-time account customer is to be entered;{NNP}{NN}{IN}{JJ}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Interest to be calculated on account balances;{NN}{TO}{VB}{VBN}{IN}{NN}{NNS}
+event;Item balance is zero;{NN}{NN}{VBZ}{CD}
+event;Interest calculation is completed;{NN}{NN}{VBZ}{VBN}
+event;Customer invoice is posted;{NN}{NN}{VBZ}{VBN}

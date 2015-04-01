@@ -1,0 +1,15 @@
+1010704f701f8a83aff457b4abf4dcb7;B.I.132.a_Capacity adjustment event control
+function;Try temporal shifting;{VB}{JJ}{VBG}
+function;Check the whole network for discrepancies;{VB}{DT}{JJ}{NN}{IN}{NNS}
+function;Try plant displacement;{VB}{NN}{NN}
+function;Try alternative workstation group sequence;{VB}{NN}{NN}{NN}{NN}
+function;Try alternative worstation group;{VB}{NN}{NN}{NN}
+function;Check whether automatic or interactive capacity adjustment;{VB}{IN}{JJ}{CC}{JJ}{NN}{NN}
+function;Try additional capacity/ overtime;{VB}{JJ}{NN}{:}{NN}
+event;Interactive capacity adjustment;{JJ}{NN}{NN}
+event;Automatic capacity adjustment;{NNP}{NN}{NN}
+event;Capacity bottleneck occured;{NN}{NN}{VBD}
+event;Capacity bottleneck persists, new attempts is useful;{NN}{NN}{VBZ}{,}{JJ}{NNS}{VBZ}{JJ}
+event;Capacity problem eliminated;{NN}{NN}{VBD}
+event;Capacity adjustment completed;{NN}{NN}{VBN}
+event;Capacity problem unsolveable;{NN}{NN}{JJ}

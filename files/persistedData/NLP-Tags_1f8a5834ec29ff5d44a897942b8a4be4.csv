@@ -1,0 +1,8 @@
+1f8a5834ec29ff5d44a897942b8a4be4;Initiation
+function;Customer Inquiry and Quotation Processing;{NN}{NNP}{CC}{NNP}
+function;Internal Project Initiation;{NNP}{NN}
+event;Customer inquires about products;{NN}{VBZ}{IN}{NNS}
+event;Customer project required;{NN}{NN}{VBN}
+event;Internal project approved;{JJ}{NN}{VBN}
+event;Project proposal exists;{NNP}{NN}{VBZ}
+event;Quotation must be created on basis of plan data;{NN}{MD}{VB}{VBN}{IN}{NN}{IN}{NN}{NNS}

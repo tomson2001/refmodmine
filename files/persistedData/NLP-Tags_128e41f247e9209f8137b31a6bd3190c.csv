@@ -1,0 +1,9 @@
+128e41f247e9209f8137b31a6bd3190c;Employee leaving
+function;Employee leaving;{NN}{VBG}
+event;Employee is retired;{NN}{VBZ}{VBN}
+event;Position is vacant;{NN}{VBZ}{JJ}
+event;Employee is active;{NN}{VBZ}{JJ}
+event;Employee is in an inactive work relationship;{NN}{VBZ}{IN}{DT}{JJ}{NN}{NN}
+event;Reason for employee leaving has arisen;{NN}{IN}{NN}{NN}{VBZ}{VBN}
+event;Payroll accounting specifications changed;{NNP}{NN}{NNS}{VBD}
+event;Employee has left;{NN}{VBZ}{VBN}

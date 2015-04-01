@@ -1,0 +1,18 @@
+deaeb5265cba296aa28f2a9356d62b54;Internal Procurement
+function;Goods Receipt;{NNP}
+function;Invoice Verification;{NNP}
+function;Warehouse/ Stores;{NNP}{:}{NNS}
+function;Purchasing;{NNP}
+function;Purchase Requisition;{NN}{NN}
+event;TO item confirmed without differences;{TO}{NN}{VBD}{IN}{NNS}
+event;Purchase requisition released for purchase order;{NN}{NN}{VBN}{IN}{NN}{NN}
+event;Goods received;{NNP}{VBD}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Requisition released for scheduling agreement schedule/SA release;{NN}{VBN}{IN}{NN}{NN}{NN}{NN}
+event;Inbound delivery entered;{JJ}{NN}{VBD}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Material is released;{NN}{VBZ}{VBN}
+event;Requirement for material has arisen;{NN}{IN}{NN}{VBZ}{VBN}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Purchase order created;{NN}{NN}{VBN}
+event;Invoice received;{NNP}{VBD}

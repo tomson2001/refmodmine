@@ -1,0 +1,5 @@
+4bf03ee111e290d8efe77266a9c4bf59;D.I.040.e_Event control of value- oriented processes
+function;Controlling/EIS;{NN}
+event;Scheduled deadline reached;{VBN}{NN}{VBD}
+event;Exceptional situation identified;{JJ}{NN}{VBD}
+event;Case- related analysis required;{NN}{:}{JJ}{NN}{VBN}

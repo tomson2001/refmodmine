@@ -1,0 +1,58 @@
+a2c6a1fc5d0f80842609e1b31aa68ef0;Fig.86: WOZ YAWL model for MunH
+function;Create file;{VB}{NN}
+function;Ask tax office advice;{VB}{NN}{NN}{NN}
+function;Send response about admissibility;{VB}{NN}{IN}{NN}
+function;Assign responsible employee;{VB}{JJ}{NN}
+function;Record objection;{VB}{NN}
+function;Process eventual changes;{VB}{JJ}{NNS}
+function;Send notification letter;{VB}{NN}{NN}
+function;Resolve complaint;{VB}{NN}
+function;Handle complaint municipality;{VB}{NN}{NN}
+function;Hold hearing;{VB}{NN}
+function;Perform admissibility test municipality;{VB}{NN}{NN}{NN}
+function;Fill in form;{VB}{IN}{NN}
+function;Sign form;{NN}{NN}
+function;Default positive response;{NNP}{JJ}{NN}
+function;Timeout;{NNP}
+function;Hearing requested;{NN}{VBD}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Send advice;{VB}{NN}
+function;Receive application via mail;{VB}{NN}{IN}{NN}
+function;Handle on side;{VB}{IN}{NN}
+function;Handle administrative;{VB}{JJ}
+function;Process continue;{VB}{VB}
+function;Possible to do assessment;{JJ}{TO}{VB}{NN}
+function;Register;{NNP}
+function;Send acknowledgment;{VB}{NN}
+function;Send to tax office;{VB}{TO}{NN}{NN}
+function;Deadline;{NN}
+function;Perform admissibility test;{VB}{NN}{NN}
+event;status change to Handle complaint municipality;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Handle on side;{NN}{NN}{TO}{VB}{IN}{NN}
+event;the end;{DT}{NN}
+event;status change to Record objection;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Deadline;{NN}{NN}{TO}{NN}
+event;Status change to Fill in form;{NN}{NN}{TO}{VB}{IN}{NN}
+event;no;{DT}
+event;status change to Send advice;{NN}{NN}{TO}{VB}{NN}
+event;yes;{RB}
+event;status change to Create file;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send decision to customer;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;status change to Hearing requested;{NN}{NN}{TO}{NN}{VBD}
+event;status change to Assign responsible employee;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;Status change to Send response about admissibility;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Timeout;{NN}{NN}{TO}{NNP}
+event;Status change to Perform admissibility test;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;status change to Sign form;{NN}{NN}{TO}{VB}{NN}
+event;no;{DT}
+event;no;{DT}
+event;status change to Default positive response;{NN}{NN}{TO}{NNP}{JJ}{NN}
+event;status change to Process eventual changes;{NN}{NN}{TO}{VB}{JJ}{NNS}
+event;status change to Send notification letter;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Receive application via mail;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Handle administrative;{NN}{NN}{TO}{VB}{JJ}
+event;status change to Register;{NN}{NN}{TO}{NNP}
+event;yes;{RB}
+event;status change to Send acknowledgment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Possible to do assessment;{NN}{NN}{TO}{JJ}{TO}{VB}{NN}
+event;yes;{RB}

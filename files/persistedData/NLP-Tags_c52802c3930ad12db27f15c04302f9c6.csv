@@ -1,0 +1,14 @@
+c52802c3930ad12db27f15c04302f9c6;Preparatory Work: Production
+function;Transport of Transaction Data;{NN}{IN}{NNP}
+function;Administration of Authorizations;{NN}{IN}{NNS}
+function;Delete transaction data;{VB}{NN}{NNS}
+function;Copy of Dimensions;{VB}{IN}{NNS}
+function;Transport of Customizing Settings;{NN}{IN}{VBG}{NNS}
+function;Setting up Translation;{VBG}{RP}{NN}
+event;Views Copied;{NNS}{VBD}
+event;Transaction Data Deleted;{NNP}{JJ}
+event;Production Is to Be Prepared;{NN}{VBZ}{TO}{VB}{VBN}
+event;Transaction Data Transported;{NNP}
+event;Authorizations Defined;{NNS}{VBN}
+event;Translation Set Up;{NN}{VB}{RP}
+event;Customizing Settings Transported;{VBG}{NNS}{VBN}

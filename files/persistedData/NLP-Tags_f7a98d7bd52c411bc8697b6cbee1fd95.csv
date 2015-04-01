@@ -1,0 +1,29 @@
+f7a98d7bd52c411bc8697b6cbee1fd95;General Ledger Accounting
+function;General Ledger Planning;{NNP}
+function;Closing Operations;{NN}{NNP}
+function;Account Balance Interest Calculation (G/L);{NNP}{NN}{-LRB-}{NN}{-RRB-}
+function;General Ledger Account Analysis;{NNP}{NN}
+function;Account Clearing [GL];{NNP}{-LRB-}{NNP}{-RRB-}
+function;Postings in G/ L;{NNS}{IN}{NN}{:}{NN}
+event;Accrual/ deferral posting made;{NN}{:}{JJ}{VBG}{VBN}
+event;Evaluations run on general ledger;{NNS}{VBP}{IN}{JJ}{NN}
+event;Financial statement is created;{NNP}{NN}{VBZ}{VBN}
+event;Direct G/L account posting to be made;{JJ}{NN}{NN}{VBG}{TO}{VB}{VBN}
+event;Line items to be cleared;{NNP}{NNS}{TO}{VB}{VBN}
+event;Valuation of open items in foreign currency is to be carried out;{NN}{IN}{JJ}{NNS}{IN}{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;G/L accounts due for analysis;{NN}{NNS}{JJ}{IN}{NN}
+event;Item balance is zero;{NN}{NN}{VBZ}{CD}
+event;Automatic clearing completed;{NNP}{VBG}{VBN}
+event;P+L statement account is created;{NN}{NN}{NN}{VBZ}{VBN}
+event;Manual clearing is complete;{JJ}{NN}{VBZ}{JJ}
+event;G/L account postings made for period;{NN}{NN}{NNS}{VBN}{IN}{NN}
+event;Planning carried out;{NNP}{VBD}{RP}
+event;Manual foreign currency valuation to be carried out;{JJ}{JJ}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Line items to be cleared;{NNP}{NNS}{TO}{VB}{VBN}
+event;Foreign currency valuation for balances to be carried out;{JJ}{NN}{NN}{IN}{NNS}{TO}{VB}{VBN}{RP}
+event;Interest to be calculated on account balances;{NN}{TO}{VB}{VBN}{IN}{NN}{NNS}
+event;Periodic reports are created;{JJ}{NNS}{VBP}{VBN}
+event;G/L account planning is to be carried out;{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Posting to be made in General Ledger;{VBG}{TO}{VB}{VBN}{IN}{NNP}
+event;Balance sheet account is created;{NN}{NN}{NN}{VBZ}{VBN}
+event;Interest calculation is completed;{NN}{NN}{VBZ}{VBN}

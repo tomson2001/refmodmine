@@ -1,0 +1,9 @@
+59fd176db68b40e799c125a58b310734;Shipping
+function;Goods Issue Processing;{NNP}
+function;Picking;{VBG}
+function;Packing Processing;{NN}{NN}
+event;Material is removed from stock;{NN}{VBZ}{VBN}{IN}{NN}
+event;Shipping unit is to be created;{VBG}{NN}{VBZ}{TO}{VB}{VBN}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Material has been picked;{NN}{VBZ}{VBN}{VBN}
+event;Shipping unit is created;{VBG}{NN}{VBZ}{VBN}

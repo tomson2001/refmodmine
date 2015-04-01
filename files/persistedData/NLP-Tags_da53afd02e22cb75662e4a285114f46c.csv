@@ -1,0 +1,4 @@
+da53afd02e22cb75662e4a285114f46c;Infrastructure setup for personnel time recording
+function;Infrastructure setup for personnel time recording;{NN}{NN}{IN}{NNS}{NN}{NN}
+event;Need for personnel time recording infrastructure;{VBN}{IN}{NNS}{NN}{VBG}{NN}
+event;Personnel time recording infrastructure is available;{NNP}{NN}{VBG}{NN}{VBZ}{JJ}

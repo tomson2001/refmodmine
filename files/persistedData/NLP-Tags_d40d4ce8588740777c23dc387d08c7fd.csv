@@ -1,0 +1,43 @@
+d40d4ce8588740777c23dc387d08c7fd;Admission IIS Erlangen
+function;german?;{NN}{.}
+function;Applicant qualified under constraints;{NN}{VBN}{IN}{NNS}
+function;Check Application in Time;{VB}{NN}{IN}{NNP}
+function;Check Application Complete;{VB}{NN}{JJ}
+function;Appoint Applicant;{VB}{NN}
+function;Applicant qualified;{NN}{VBD}
+function;Sum Score;{NN}{NN}
+function;Reject Application;{VB}{NN}
+function;Add Certificates of further language skills;{VB}{NNS}{IN}{JJ}{NN}{NNS}
+function;Create and add english letter of Motivation;{VB}{CC}{VB}{JJ}{NN}{IN}{NN}
+function;receive acceptance;{VB}{NN}
+function;Send rejection;{VB}{NN}
+function;Invite Applicant for Appointment;{VB}{NN}{IN}{NN}
+function;Receive Application;{VB}{NN}
+function;Score Bachelor;{NN}{NN}
+function;Accept Application;{VB}{NN}
+function;Score Qualification;{NN}{NN}
+function;Applicant not qualified;{NN}{RB}{VBN}
+function;Create and Add CV;{VB}{CC}{VB}{NN}
+function;Score Motivation;{NN}{NN}
+function;Make Decision;{VB}{NN}
+function;Send Acceptance;{VB}{NNP}
+function;Send Application;{VB}{NN}
+function;receive rejection;{VB}{NN}
+function;Add Certificate of Bachelor Degree;{VB}{NNP}{IN}{NNP}
+function;Take Interview;{VB}{NNP}
+function;Fill out Application Form;{VB}{RP}{NN}{NN}
+function;Attach additional requirements;{VB}{JJ}{NNS}
+function;immatriculate;{JJ}
+function;add Certificate of english language;{VB}{NNP}{IN}{JJ}{NN}
+function;50-69 Points;{CD}{NNS}
+function;Add Certificates of Qualification;{VB}{NNS}{IN}{NN}
+function;less than 50 points;{JJR}{IN}{CD}{NNS}
+function;Hand Application over to Examining Board;{VB}{NN}{IN}{TO}{NNP}
+function;complete and in time?;{JJ}{CC}{IN}{NN}{.}
+function;more than 70 Points;{JJR}{IN}{CD}{NNS}
+function;Add Certificate of german language;{VB}{NNP}{IN}{JJ}{NN}
+function;complete application;{JJ}{NN}
+event;End Event;{NN}{NN}
+event;End Event;{NN}{NN}
+event;End Event;{NN}{NN}
+event;End Event;{NN}{NN}

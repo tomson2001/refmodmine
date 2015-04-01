@@ -1,0 +1,40 @@
+c54faf38da7b9f22060d93d849f9134f;Fig.23: GBA2 YAWL model MunE
+function;Give receipt;{VB}{NN}
+function;Receive_payment;{NN}
+function;Ask identifying_question;{VB}{NN}
+function;Give GBA extract;{VB}{NNP}{NN}
+function;Direct to right product;{JJ}{TO}{JJ}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Process payment;{VB}{NN}
+function;Determine fees;{NN}{NNS}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Determine if right product;{VB}{IN}{JJ}{NN}
+function;ask customer to pay;{VB}{NN}{TO}{VB}
+function;Call coupon holder;{VB}{NN}{NN}
+function;Give coupon;{VB}{NN}
+function;Process continue;{VB}{VB}
+function;Free;{NNP}
+function;No payment;{DT}{NN}
+function;Determine whether proof of identity is present;{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+function;Ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+function;go to the end;{VB}{TO}{DT}{NN}
+event;status change to Determine if right product;{NN}{NN}{TO}{VB}{IN}{JJ}{NN}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;not entitled;{RB}{VBN}
+event;status change to Free;{NN}{NN}{TO}{NNP}
+event;No ID present;{DT}{NN}{JJ}
+event;status change to Give coupon;{NN}{NN}{TO}{VB}{NN}
+event;status change to GBA extract;{NN}{NN}{TO}{NNP}{NN}
+event;not free;{RB}{JJ}
+event;entitled;{VBN}
+event;right product;{JJ}{NN}
+event;ID present;{NN}{JJ}
+event;wrong product;{JJ}{NN}
+event;status change to Ask customer what product he is requesting;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+event;the end;{DT}{NN}
+event;status change to Give receipt;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;status change to Determine whether requester is entitled;{NN}{NN}{TO}{VB}{IN}{NN}{VBZ}{VBN}
+event;status change to Call coupon holder;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}

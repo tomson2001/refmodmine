@@ -1,0 +1,7 @@
+fa55ce4839ce1df59d533ac1516b70bc;Goods Receipt
+function;Goods Receipt Processing with Reference;{NNP}{NN}{IN}{NNP}
+function;Subsequent Adjustment of Components;{JJ}{NNP}{IN}{NNP}
+event;Over/ under-consumption of components reported;{IN}{:}{NN}{IN}{NNS}{VBD}
+event;GR posted;{NN}{VBD}
+event;Inbound delivery for PO created;{JJ}{NN}{IN}{NNP}{VBD}
+event;GR items for components corrected;{NN}{NNS}{IN}{NNS}{VBN}

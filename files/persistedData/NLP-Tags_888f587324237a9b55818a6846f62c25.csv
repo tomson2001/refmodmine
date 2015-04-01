@@ -1,0 +1,11 @@
+888f587324237a9b55818a6846f62c25;Material Requirements Planning
+function;Material Requirements Planning - Evaluation;{NN}{NNS}{NNP}{:}{NN}
+function;Material Requirements Planning - Individual;{NN}{NNS}{NNP}{:}{NN}
+function;Overall Material Requirements Planning;{JJ}{NNP}{NNS}{NNP}
+event;Forecast requirements generated;{NN}{NNS}{VBD}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Purchase Requisition Created;{NN}{NN}{VBN}
+event;Dependent Requirement Created;{JJ}{NN}{VBN}
+event;MRP list is created;{NN}{NN}{VBZ}{VBN}
+event;Stock/ requirements list to be processed;{NNP}{:}{NNS}{NN}{TO}{VB}{VBN}
+event;Planning results or stock/ reqmts situation is processed;{NNP}{VBZ}{CC}{NN}{:}{NNS}{NN}{VBZ}{VBN}

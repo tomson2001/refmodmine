@@ -1,0 +1,11 @@
+9717b48c75e291ffb7d65729d82afbae;Cost Planning [Investment Programs]
+function;Program Cost Planning;{NN}{NN}{NNP}
+event;Supplement requests exist for current measures;{NN}{NNS}{VBP}{IN}{JJ}{NNS}
+event;Investment plan is to be revised;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Program structure is processed;{NN}{NN}{VBZ}{VBN}
+event;Overall costs for project are determined;{JJ}{NNS}{IN}{NN}{VBP}{VBN}
+event;Plan is approved on last approval level;{NN}{VBZ}{VBN}{IN}{JJ}{NN}{NN}
+event;Order is assigned to an investment program;{NN}{VBZ}{VBN}{TO}{DT}{NN}{NN}
+event;Overhead debited to capital investment order;{NN}{VBN}{TO}{NN}{NN}{NN}
+event;Sales plan is processed;{NNS}{VBP}{VBZ}{VBN}
+event;Production plan is processed;{NN}{NN}{VBZ}{VBN}

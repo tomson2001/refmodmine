@@ -1,0 +1,11 @@
+6487457a107c1524ade1b95796bf28b4;B.III.011_EPC for payroll accounting
+function;Payment to employee;{NN}{TO}{NN}
+function;Posting into payroll account;{VBG}{IN}{NN}{NN}
+function;Calculation of net pay;{NN}{IN}{JJ}{NN}
+function;Data transfer;{NNS}{NN}
+function;Pay determination from time and performance account;{VB}{NN}{IN}{NN}{CC}{NN}{NN}
+event;Accounting completed;{NNP}{VBD}
+event;Period of computation is due;{NN}{IN}{NN}{VBZ}{JJ}
+event;Ad hoc request;{NN}{FW}{NN}
+event;Net pay calculated;{JJ}{NN}{VBN}
+event;Gross pay calculated;{NNP}{NN}{VBN}

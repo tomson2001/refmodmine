@@ -1,0 +1,10 @@
+f50cea91a2d620f57722695119256e3a;birhtCertificate_p34
+function;Decide on first name 1;{VB}{IN}{JJ}{NN}{CD}
+function;Decide on first name 2;{VB}{IN}{JJ}{NN}{CD}
+function;Register child as foreign birth;{NNP}{NN}{IN}{JJ}{NN}
+function;Process birth certificate;{VB}{NN}{NN}
+function;Deliver birth certificate;{VB}{NN}{NN}
+function;Consult father;{VB}{NN}
+function;Consult mother;{VB}{NN}
+function;Decide on surname; decide on first name;{VB}{IN}{NN}{:}{VB}{IN}{JJ}{NN}
+function;Receive information;{VB}{NN}

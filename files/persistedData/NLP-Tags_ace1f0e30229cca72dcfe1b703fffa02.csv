@@ -1,0 +1,23 @@
+ace1f0e30229cca72dcfe1b703fffa02;Invoices and Credit Memos
+function;Internal Transfer Posting with Clearing;{JJ}{NN}{VBG}{IN}{NNP}
+function;Customer Credit Memo;{NN}{NN}{NNP}
+function;Outgoing Invoice;{JJ}{NNP}
+function;Parked Document Posting [Customers];{VBN}{NNP}{-LRB-}{NNS}{-RRB-}
+function;Customer Document Parking;{NN}{NNP}
+function;Internal Transfer Posting;{JJ}{NN}{VBG}
+event;Invoice to be entered for one-time customer;{NNP}{TO}{VB}{VBN}{IN}{JJ}{NN}
+event;Document parked;{NNP}{VBD}
+event;Customer credit memo is to be parked;{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Document posted;{NNP}{VBD}
+event;Down payment is to be cleared manually;{IN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Items to be dunned;{NNS}{TO}{VB}{VBN}
+event;Invoice to be entered for customer;{NNP}{TO}{VB}{VBN}{IN}{NN}
+event;Customer invoice is to be parked;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Internal transfer posting is to be carried out;{JJ}{NN}{VBG}{VBZ}{TO}{VB}{VBN}{RP}
+event;Credit memo for one-time account customer is to be entered;{NNP}{NN}{IN}{JJ}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Internal transfer posting with clearing to be carried out;{JJ}{NN}{VBG}{IN}{VBG}{TO}{VB}{VBN}{RP}
+event;Credit memo posted;{NNP}{NN}{VBD}
+event;Customer credit memo is to be entered;{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Customer invoice is posted;{NN}{NN}{VBZ}{VBN}
+event;Internal transfer posting with clearing carried out;{JJ}{NN}{VBG}{IN}{NN}{VBD}{RP}
+event;Internal transfer posting posted;{JJ}{NN}{VBG}{VBN}

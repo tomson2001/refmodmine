@@ -1,0 +1,23 @@
+2553342c47a59e3ec45069b06b037c9a;Fig.38: GBA3 YAWL model for MunJ
+function;Decide admissible;{VB}{JJ}
+function;Receive payment;{VB}{NN}
+function;Archive;{NNP}
+function;Send payment request;{VB}{NN}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Register request;{NNP}{NN}
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Send mail to appropriate department;{VB}{NN}{TO}{JJ}{NN}
+function;No payment;{DT}{NN}
+function;Determine fees;{NN}{NNS}
+function;Hand in written request and receipt;{VB}{IN}{VBN}{NN}{CC}{NN}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Process payment;{VB}{NN}
+function;Copy extract;{VB}{NN}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Send extract;{VB}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+event;yes;{RB}
+event;no;{DT}
+event;Free;{NNP}
+event;Process end;{VB}{NN}
+event;Process start;{VB}{NN}

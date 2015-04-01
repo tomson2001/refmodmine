@@ -1,0 +1,6 @@
+976b503c379beba5e20a3e91c923da89;Fiscal Year Change [Investment Programs]
+function;Fiscal Year Change for Program;{JJ}{NN}{NNP}{IN}{NNP}
+event;New plan version is to be created;{NNP}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Program structure is processed;{NN}{NN}{VBZ}{VBN}
+event;Program is to be created for new fiscal year;{NN}{VBZ}{TO}{VB}{VBN}{IN}{JJ}{JJ}{NN}
+event;Fiscal year change was carried out for investment program;{JJ}{NN}{NN}{VBD}{VBN}{RP}{IN}{NN}{NN}

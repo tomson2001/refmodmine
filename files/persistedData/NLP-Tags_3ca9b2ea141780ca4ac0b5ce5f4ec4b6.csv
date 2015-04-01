@@ -1,0 +1,6 @@
+3ca9b2ea141780ca4ac0b5ce5f4ec4b6;Personnel Advertising
+function;Personnel Advertising;{NNP}
+event;Job advertisement is determined;{NNP}{NN}{VBZ}{VBN}
+event;Time for job advertisement reached;{NNP}{IN}{NN}{NN}{VBD}
+event;Need for personnel advertising exists;{VBN}{IN}{NNS}{VBG}{VBZ}
+event;Need for services has arisen;{VBN}{IN}{NNS}{VBZ}{VBN}

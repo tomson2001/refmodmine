@@ -1,0 +1,4 @@
+d1648d3b992901f26e34b6d94f6643d3;Automatic Sending of PDM Objects
+function;Reporting for Change Pointers;{NNP}{IN}{NNP}{NNS}
+event;Check product data;{VB}{NN}{NNS}
+event;Send product data automatically;{VB}{NN}{NNS}{RB}

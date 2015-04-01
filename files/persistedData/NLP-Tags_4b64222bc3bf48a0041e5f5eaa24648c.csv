@@ -1,0 +1,28 @@
+4b64222bc3bf48a0041e5f5eaa24648c;Depreciation
+function;Manual Depreciation Planning;{NNP}
+function;Unit-of-Production Depreciation;{NNP}
+function;Depreciation Processing;{NN}{NN}
+function;Depreciation Posting;{NN}{NN}
+event;G/L accounts were posted;{NN}{NNS}{VBD}{VBN}
+event;Create tax depreciation area;{VB}{NN}{NN}{NN}
+event;New valuation key is necessary;{NNP}{NN}{NN}{VBZ}{JJ}
+event;Unit-of-production depreciation is to be posted;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Create group depreciation area;{VB}{NN}{NN}{NN}
+event;Useful life should be changed;{JJ}{NN}{MD}{VB}{VBN}
+event;Shortened fiscal year is necessary;{VBN}{JJ}{NN}{VBZ}{JJ}
+event;New valuation method is defined;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Recalcula- tion of de- preciation was carried out;{NNP}{:}{NN}{IN}{FW}{:}{NN}{VBD}{VBN}{RP}
+event;Depreciation should be posted regularly;{NN}{MD}{VB}{VBN}{RB}
+event;Costs were settled by cost element to asset under construction;{NNS}{VBD}{VBN}{IN}{NN}{NN}{TO}{NN}{IN}{NN}
+event;Create foreign currency depreciation area;{VB}{JJ}{NN}{NN}{NN}
+event;Cost-accounting depreciation/ interest transferred to Cost Accounting;{VBG}{NN}{:}{NN}{VBN}{TO}{NN}{NN}
+event;Create statistical depreciation area;{VB}{JJ}{NN}{NN}
+event;Costs were settled with secondary cost elements to asset under construction;{NNS}{VBD}{VBN}{IN}{JJ}{NN}{NNS}{TO}{NN}{IN}{NN}
+event;Create ins./ net worth tax depreciation area;{VB}{NNS}{.}
+event;Unit-of-production method of depreciation has been prepared;{NN}{NN}{IN}{NN}{VBZ}{VBN}{VBN}
+event;Features of depreciation area must be changed;{NNS}{IN}{NN}{NN}{MD}{VB}{VBN}
+event;Manual depreciation is planned;{JJ}{NN}{VBZ}{VBN}
+event;[Depreciation posting run was carried out];{-LRB-}{NN}{VBG}{NN}{VBD}{VBN}{RP}{-RRB-}
+event;Special tax depreciation is only to be partly claimed;{JJ}{NN}{NN}{VBZ}{RB}{TO}{VB}{RB}{VBN}
+event;Employment fluctuations are to be included when calculating depreciation;{NNP}{NNS}{VBP}{TO}{VB}{VBN}{WRB}{VBG}{NN}
+event;[Unplanned depreciation should be used];{-LRB-}{JJ}{NN}{MD}{VB}{VBN}{-RRB-}

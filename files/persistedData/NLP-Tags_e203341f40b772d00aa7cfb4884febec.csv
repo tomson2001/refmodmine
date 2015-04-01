@@ -1,0 +1,33 @@
+e203341f40b772d00aa7cfb4884febec;QM in Sales and Distribution
+function;Certificate Creation;{NNP}
+function;Q-Notifications for a Customer Complaint;{NNS}{IN}{DT}{NN}{NN}
+function;Information System;{NNP}
+function;Quality Inspection for Delivery and Return Delivery;{NNP}{IN}{NN}{CC}{NN}{NN}
+event;Defect requires manual quality notification;{NN}{VBZ}{JJ}{NN}{NN}
+event;Certificate recipient is to be created;{NN}{JJ}{VBZ}{TO}{VB}{VBN}
+event;Evaluation to be performed using the Logistics Information System;{NN}{TO}{VB}{VBN}{VBG}{DT}{NNP}
+event;Customer requires certificate;{NN}{VBZ}{NN}
+event;New certificate to be created;{NNP}{NN}{TO}{VB}{VBN}
+event;Inspection before goods issue is to be carried out;{NNP}{IN}{NNS}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Inspection lot is to be created manually;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Inspect (independent of goods issue);{VB}{-LRB-}{JJ}{IN}{NNS}{NN}{-RRB-}
+event;External sales force/ customer complaint is to be created;{JJ}{NNS}{NN}{:}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Usage decision is documented;{NN}{NN}{VBZ}{VBN}
+event;Certificate has to be created for delivery item;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Certificate based on standard form;{NN}{VBN}{IN}{JJ}{NN}
+event;Quality notification is activated from defects;{JJ}{NN}{VBZ}{VBN}{IN}{NNS}
+event;Inspection completion is carried out;{NNP}{NN}{VBZ}{VBN}{RP}
+event;QMIS updated;{NNS}{VBN}
+event;Quality level is updated;{JJ}{NN}{VBZ}{VBN}
+event;Certificate creation for delivery item is triggered;{NN}{NN}{IN}{NN}{NN}{VBZ}{VBN}
+event;Internal Activity Should Be Allocated Internally;{JJ}{NN}{MD}{VB}{NNP}{RB}
+event;Inspection results are copied to general characteristics;{NNP}{NNS}{VBP}{VBN}{TO}{JJ}{NNS}
+event;QM order is created for quality notification;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Inspection lot status allows a goods issue;{NNP}{NN}{NN}{VBZ}{DT}{NNS}{NN}
+event;Inspection lot completion is triggered using QM-IDI;{NNP}{NN}{NN}{VBZ}{VBN}{VBG}{NN}
+event;Quality certificate is released for use;{JJ}{NN}{VBZ}{VBN}{IN}{NN}
+event;Quality notification is completed;{JJ}{NN}{VBZ}{VBN}
+event;Data is updated;{NNS}{VBZ}{VBN}
+event;Evaluation carried out;{NN}{VBD}{RP}
+event;Effectiveness of a task is documented at a later date;{NN}{IN}{DT}{NN}{VBZ}{VBN}{IN}{DT}{JJ}{NN}
+event;Evaluation from QMIS indicates quality problems;{NN}{IN}{NNS}{VBZ}{NN}{NNS}

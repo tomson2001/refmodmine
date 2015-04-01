@@ -1,0 +1,16 @@
+9b49446a0e05143ff28241a976342e55;Shipping
+function;Goods Receipt Processing for Returnables and Empties;{NNP}{IN}{NNP}{CC}{NNP}
+function;Delivery for Returnable Packaging Pickup;{NN}{IN}{NNP}{NN}{NN}
+function;Delivery for Returnable Packaging Issue;{NN}{IN}{NNP}{NN}{NN}
+function;Goods Issue from Returnable Packaging Stock;{NNP}{IN}{NNP}{NN}{NN}
+event;Delivery is created;{NN}{VBZ}{VBN}
+event;Delivery is not relevant for billing;{NN}{VBZ}{RB}{JJ}{IN}{NN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Inward material movement to be posted;{RB}{NN}{NN}{TO}{VB}{VBN}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Delivery is created;{NN}{VBZ}{VBN}

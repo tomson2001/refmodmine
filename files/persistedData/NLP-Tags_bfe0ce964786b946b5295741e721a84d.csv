@@ -1,0 +1,4 @@
+bfe0ce964786b946b5295741e721a84d;Accident
+function;Incident/ Accident Log Processing;{NN}{:}{NNP}
+event;Create standard operating procedure;{VB}{JJ}{NN}{NN}
+event;Accident data is to be entered;{NNP}{NNS}{VBZ}{TO}{VB}{VBN}

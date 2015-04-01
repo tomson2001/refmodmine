@@ -1,0 +1,9 @@
+5fa1259d8ab17525a9b3daefaa8edca1;Trigger Replenishment Through Kanban Signal
+function;Trigger Replenishment Through Kanban Signal;{NN}{NN}{IN}{NNP}
+event;Replenishment (with manual kanban) triggered;{NN}{-LRB-}{IN}{JJ}{NN}{-RRB-}{VBD}
+event;Delivery schedule/ release transferred;{NN}{NN}{:}{NN}{VBN}
+event;Production order is created;{NN}{NN}{VBZ}{VBN}
+event;Purchase order transmitted;{NN}{NN}{VBD}
+event;Run schedule quantity is created;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Material issued from Kanban container;{NN}{VBN}{IN}{NNP}{NN}
+event;Stock transfer is posted;{NNP}{NN}{VBZ}{VBN}

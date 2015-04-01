@@ -1,0 +1,8 @@
+b086e05e88ebb8fca764f5e0e6c41859;Sales Order
+function;Sending Samples and Advertising Materials;{VBG}{NNS}{CC}{NNPS}
+event;Free-of-charge delivery is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Order is created;{NN}{VBZ}{VBN}

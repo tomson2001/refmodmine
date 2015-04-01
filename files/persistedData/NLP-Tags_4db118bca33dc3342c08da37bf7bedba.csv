@@ -1,0 +1,69 @@
+4db118bca33dc3342c08da37bf7bedba;B.I.222_Event driven CAM process chain
+function;Execute operation;{VB}{NN}
+function;Check whether releaseable, if possible, release;{VB}{IN}{JJ}{,}{IN}{JJ}{,}{NN}
+function;Data entry;{NNS}{NN}
+function;Toolmaking;{VBG}
+function;Trigger availibility check;{NN}{NN}{NN}
+function;Check NC programm;{VB}{NN}{NN}
+function;Detailed control;{JJ}{NN}
+function;Workpiece handling to warehouse;{NNP}{VBG}{TO}{NN}
+function;Tool handling from warehouse;{NNP}{VBG}{IN}{NN}
+function;Check tools;{VB}{NNS}
+function;Check inspection equipment;{VB}{NN}{NN}
+function;Stock-out;{NN}
+function;Trigger provision;{NN}{NN}
+function;Toolhandling to Warehouse;{VBG}{TO}{NNP}
+function;Check capayity;{VB}{NN}
+function;Tool provision;{NNP}{NN}
+function;Quality inspection;{JJ}{NN}
+function;Warehousing;{NN}
+function;Workpiece handling from warehouse;{NNP}{VBG}{IN}{NN}
+function;Check components;{VB}{NNS}
+function;Download NC programm;{VB}{NNP}{NN}
+function;Maintenance measures;{NN}{NNS}
+function;Check of operation release;{VB}{IN}{NN}{NN}
+function;Tool warehousing;{NNP}{NN}
+function;Distribution to plant department and reservation;{NN}{TO}{NN}{NN}{CC}{NN}
+event;Order released;{NNP}{VBD}
+event;Trigger warehousing;{NN}{NN}
+event;Start;{NNP}
+event;Tool warehousing completed;{NNP}{NN}{VBD}
+event;Tools available;{NNS}{JJ}
+event;Rush order received;{NN}{NN}{VBD}
+event;Stock- out triggered;{NN}{:}{IN}{VBN}
+event;Capacity available;{NN}{JJ}
+event;NC programm available;{NN}{NN}{JJ}
+event;Order from process planning;{NN}{IN}{NN}{NN}
+event;Start;{NNP}
+event;Arrive or leave occured;{VB}{CC}{VB}{VBD}
+event;Start;{NNP}
+event;Order unreleaseable;{NNP}{JJ}
+event;Inspection equipment available;{NNP}{NN}{JJ}
+event;Warehousing completed;{NN}{VBD}
+event;NC programm available;{NN}{NN}{JJ}
+event;Handling completed;{VBG}{VBN}
+event;Maintenance interval reached;{NN}{NN}{VBD}
+event;No Components available;{DT}{NNP}{JJ}
+event;Inspection ok;{NNP}{NN}
+event;Download triggered;{VB}{VBN}
+event;Objective changed;{NN}{VBD}
+event;Trigger provision of tools;{NN}{NN}{IN}{NNS}
+event;Components provided;{NNP}{VBD}
+event;Operation released;{NN}{VBD}
+event;Attendance entered;{NN}{VBD}
+event;Start;{NNP}
+event;Machine malfunction occured;{NN}{NN}{VBD}
+event;Activity;{NN}
+event;Components available;{NNP}{JJ}
+event;Toolmaking completed;{VBG}{VBN}
+event;No tool available;{DT}{NN}{JJ}
+event;Handling completed;{VBG}{VBN}
+event;Start;{NNP}
+event;Operation completed;{NN}{VBD}
+event;Tool arrived at warehouse;{NNP}{VBD}{IN}{NN}
+event;Tool provided;{NNP}{VBD}
+event;Change within production occured;{NNP}{IN}{NN}{VBD}
+event;Quality problem recorded;{JJ}{NN}{VBD}
+event;Measures completed;{NNS}{VBD}
+event;Planning deadline reached;{NNP}{NN}{VBD}
+event;Order distributed;{NNP}{VBN}

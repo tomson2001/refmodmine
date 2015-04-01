@@ -1,0 +1,6 @@
+7360e56e88da61eeac2d02fb1c99a8bc;B.I.138.a_EPC for successive ans simultaneous requirements and capacity planning
+function;Distribution of req. among planners according to part numbers;{NN}{IN}{NN}{.}
+function;Execute simultaneos requirements and capacity planning;{VB}{NN}{NNS}{CC}{NN}{NN}
+event;Scheduling completed;{NN}{VBD}
+event;Primary requirements update;{JJ}{NNS}{VBP}
+event;Planning load allocated;{NNP}{NN}{VBN}

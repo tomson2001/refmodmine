@@ -1,0 +1,15 @@
+8291ceb31263b0e164f037ecf5f609a3;birhtCertificate_p32
+function;Check prename;{VB}{NN}
+function;Register nationality of baby;{NNP}{NN}{IN}{NN}
+function;Create certificate of birth;{VB}{NN}{IN}{NN}
+function;Give married name of parents;{VB}{JJ}{NN}{IN}{NNS}
+function;Receive birth notification;{VB}{NN}{NN}
+function;Inform responsible authority;{VB}{JJ}{NN}
+function;Register baby as german 1;{NNP}{NN}{IN}{NN}{CD}
+function;Check condition;{VB}{NN}
+function;Register baby as german 2;{NNP}{NN}{IN}{NN}{CD}
+function;Clarify name;{VB}{NN}
+function;Give prename;{VB}{NN}
+function;Check documents;{VB}{NNS}
+function;Check nationality of parents;{VB}{NN}{IN}{NNS}
+function;Receive documents;{VB}{NNS}

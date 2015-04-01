@@ -1,0 +1,21 @@
+5d67f2a58079cd2e9eaba4c9db193845;Fig.19: GBA2 YAWL model for MunA
+function;produce extract and sign;{VB}{NN}{CC}{NN}
+function;ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+function;give coupon;{VB}{NN}
+function;give GBA extract;{VB}{NNP}{NN}
+function;determine whether proof of identity is present;{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+function;waiting for payment;{VBG}{IN}{NN}
+function;process payment;{NN}{NN}
+function;give receipt;{VB}{NN}
+function;determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;call coupon holder;{NN}{NN}{NN}
+function;ask customer to pay;{VB}{NN}{TO}{VB}
+function;determine fees;{VB}{NNS}
+function;ask identifying questions;{VB}{VBG}{NNS}
+event;no payment;{DT}{NN}
+event;free;{JJ}
+event;Start process;{NNP}{NN}
+event;not entitled;{RB}{VBN}
+event;receive payment;{VB}{NN}
+event;not free;{RB}{JJ}
+event;process end;{NN}{NN}

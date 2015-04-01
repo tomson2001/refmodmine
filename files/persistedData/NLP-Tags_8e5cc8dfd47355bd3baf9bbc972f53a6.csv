@@ -1,0 +1,20 @@
+8e5cc8dfd47355bd3baf9bbc972f53a6;Depreciation
+function;Depreciation Posting;{NN}{NN}
+function;Depreciation Processing;{NN}{NN}
+event;New valuation key is necessary;{NNP}{NN}{NN}{VBZ}{JJ}
+event;Useful life should be changed;{JJ}{NN}{MD}{VB}{VBN}
+event;New valuation method is defined;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Recalcula- tion of de- preciation was carried out;{NNP}{:}{NN}{IN}{FW}{:}{NN}{VBD}{VBN}{RP}
+event;Depreciation should be posted regularly;{NN}{MD}{VB}{VBN}{RB}
+event;Create ins./ net worth tax depreciation area;{VB}{NNS}{.}
+event;Costs were settled by cost element to asset under construction;{NNS}{VBD}{VBN}{IN}{NN}{NN}{TO}{NN}{IN}{NN}
+event;Costs were settled with secondary cost elements to asset under construction;{NNS}{VBD}{VBN}{IN}{JJ}{NN}{NNS}{TO}{NN}{IN}{NN}
+event;Create tax depreciation area;{VB}{NN}{NN}{NN}
+event;Create foreign currency depreciation area;{VB}{JJ}{NN}{NN}{NN}
+event;[Depreciation posting run was carried out];{-LRB-}{NN}{VBG}{NN}{VBD}{VBN}{RP}{-RRB-}
+event;Create statistical depreciation area;{VB}{JJ}{NN}{NN}
+event;Create group depreciation area;{VB}{NN}{NN}{NN}
+event;G/L accounts were posted;{NN}{NNS}{VBD}{VBN}
+event;Shortened fiscal year is necessary;{VBN}{JJ}{NN}{VBZ}{JJ}
+event;Cost-accounting depreciation/ interest transferred to Cost Accounting;{VBG}{NN}{:}{NN}{VBN}{TO}{NN}{NN}
+event;Features of depreciation area must be changed;{NNS}{IN}{NN}{NN}{MD}{VB}{VBN}

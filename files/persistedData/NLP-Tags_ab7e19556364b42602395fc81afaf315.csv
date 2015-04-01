@@ -1,0 +1,9 @@
+ab7e19556364b42602395fc81afaf315;Receipts
+function;Acquisition of Leased Asset;{NN}{IN}{VBN}{NNP}
+event;Acquisition posted to Asset Accounting;{NNP}{VBD}{TO}{NNP}
+event;Asset class was determined;{NNP}{NN}{VBD}{VBN}
+event;New Capital Lease para- meters were determined;{NNP}{NN}{:}{NNS}{VBD}{VBN}
+event;Goods receipt of leased asset carri.out;{NNP}{NN}{IN}{VBN}{NN}{NN}
+event;Fixed asset created;{VBN}{NN}{VBN}
+event;New sub- number was determined;{NNP}{SYM}{:}{NN}{VBD}{VBN}
+event;Acquisitions to be entered;{NNS}{TO}{VB}{VBN}

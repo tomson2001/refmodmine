@@ -1,0 +1,13 @@
+01f943348f60e5c2a8ccee9c9bca05bf;Benefits Selection
+function;Selection of Benefits;{NN}{IN}{NNS}
+function;Consistency Check for Benefits Selection;{NN}{VB}{IN}{NNS}{NN}
+function;Determination of Benefits Offer for Employee;{NN}{IN}{NNPS}{NN}{IN}{NN}
+event;Employee participation in benefits plan is available for termination;{NN}{NN}{IN}{NNS}{NN}{VBZ}{JJ}{IN}{NN}
+event;Employee participation in benefits plan is available for enrollment;{NN}{NN}{IN}{NNS}{NN}{VBZ}{JJ}{IN}{NN}
+event;Benefits selection of employee is available to enterprise;{NNS}{NN}{IN}{NN}{VBZ}{JJ}{TO}{NN}
+event;Benefits plans are available to employee for selection;{NNS}{NNS}{VBP}{JJ}{TO}{NN}{IN}{NN}
+event;Employee participation in benefits plan is available for changing;{NN}{NN}{IN}{NNS}{NN}{VBZ}{JJ}{IN}{VBG}
+event;Need to correct benefits selection exists;{VBN}{TO}{VB}{NNS}{NN}{VBZ}
+event;Benefits offer must be adapted for employee;{NNS}{VBP}{MD}{VB}{VBN}{IN}{NN}
+event;Period for recurring enrollment has started;{NN}{IN}{VBG}{NN}{VBZ}{VBN}
+event;Benefits program is implemented;{NNS}{NN}{VBZ}{VBN}

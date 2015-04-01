@@ -1,0 +1,16 @@
+e297690db96fbdcafeea49e171dbd511;Sale of Long-Term Incentives
+function;Notification of Sale of Long-Term Incentives;{NN}{IN}{NN}{IN}{NNP}{NNS}
+function;Notification of Approval of Sales Order;{NN}{IN}{NN}{IN}{NNS}{NN}
+function;Notification of Rejection of Sales Order;{NN}{IN}{NN}{IN}{NNS}{NN}
+function;Sale of Long-Term Incentives;{NN}{IN}{NNP}{NNS}
+function;Entry of Sales Order for Long-Term Incentives;{NN}{IN}{NNS}{NN}{IN}{NNP}{NNS}
+event;Check for Sales Order for Long-Term Incentives;{VB}{IN}{NNS}{NN}{IN}{NNP}{NNS}
+event;Employee long-term incentive is granted;{NN}{JJ}{NN}{VBZ}{VBN}
+event;Sale of long-term incentives performed;{NN}{IN}{JJ}{NNS}{VBN}
+event;Sales order is rejected;{NNS}{NN}{VBZ}{VBN}
+event;Employee notified of approval of sales order;{NN}{VBN}{IN}{NN}{IN}{NNS}{NN}
+event;Employee notified of rejection of sales order;{NN}{VBN}{IN}{NN}{IN}{NNS}{NN}
+event;Employee notified of sale of long-term incentives;{NN}{VBN}{IN}{NN}{IN}{JJ}{NNS}
+event;Sales order exists for approval;{NNS}{NN}{VBZ}{IN}{NN}
+event;Sales order is approved;{NNS}{NN}{VBZ}{VBN}
+event;Employee requires sale of long-term incentives;{NN}{VBZ}{NN}{IN}{JJ}{NNS}

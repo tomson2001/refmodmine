@@ -1,0 +1,19 @@
+e01b322e74998b879477fe4c1fcd7ad7;Internal Quality Notifications
+function;Notification Archiving;{NN}{NN}
+function;Worklist Generation for Notifications;{NNP}{IN}{NNS}
+function;Notification Creation on Intranet;{NN}{NN}{IN}{NNP}
+function;Creation and Processing of Quality Notifications;{NN}{CC}{NN}{IN}{NNP}{NNS}
+event;Notification is archived;{NN}{VBZ}{VBN}
+event;Quality notification is completed;{JJ}{NN}{VBZ}{VBN}
+event;Automatically created quality notification is to be edited;{RB}{VBN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Evaluation from QMIS indicates quality problems;{NN}{IN}{NNS}{VBZ}{NN}{NNS}
+event;Defect requires manual quality notification;{NN}{VBZ}{JJ}{NN}{NN}
+event;Notification Should Be Entered in Intranet;{NN}{MD}{VB}{VBN}{IN}{NNP}
+event;Quality notification is activated from defects;{JJ}{NN}{VBZ}{VBN}{IN}{NNS}
+event;Notification is created on the Intranet;{NN}{VBZ}{VBN}{IN}{DT}{NNP}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;QM order is created for quality notification;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Effectiveness of a task is documented at a later date;{NN}{IN}{DT}{NN}{VBZ}{VBN}{IN}{DT}{JJ}{NN}
+event;Worklist is to be created;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Worklist is created;{NNP}{VBZ}{VBN}
+event;Notification is to be archived;{NN}{VBZ}{TO}{VB}{VBN}

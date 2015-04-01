@@ -1,0 +1,23 @@
+ecc763402b103aedabf5a57dc9d35501;Fig.24: GBA2 YAWL model MunF
+function;Determine whether proof of identity is present;{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+function;Determine fees;{NN}{NNS}
+function;Receive payment;{VB}{NN}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Ask customer to bring ID;{VB}{NN}{TO}{VB}{NNP}
+function;Give receipt;{VB}{NN}
+function;Process payment;{VB}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;No payment;{DT}{NN}
+function;Call coupon holder;{VB}{NN}{NN}
+function;Give GBA extract;{VB}{NNP}{NN}
+function;Ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+function;Give coupon;{VB}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+event;No ID present;{DT}{NN}{JJ}
+event;free;{JJ}
+event;not entitled;{RB}{VBN}
+event;ID present;{NN}{JJ}
+event;not free;{RB}{JJ}
+event;Process end;{VB}{NN}
+event;Start process;{NNP}{NN}

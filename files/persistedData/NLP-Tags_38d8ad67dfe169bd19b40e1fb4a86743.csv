@@ -1,0 +1,16 @@
+38d8ad67dfe169bd19b40e1fb4a86743;Options on Interest Rate Instruments and Securities [TR-DE]
+function;Accounting;{NN}
+function;Transaction Processing;{NN}{NN}
+function;Closing Operations;{NN}{NNP}
+event;Customer open items were generated;{NN}{JJ}{NNS}{VBD}{VBN}
+event;Termination flows generate settlement payments;{NN}{VBZ}{VB}{NN}{NNS}
+event;Option was selected;{NN}{VBD}{VBN}
+event;Option has expired;{NN}{VBZ}{VBN}
+event;Option was exercised with cash settlement;{NN}{VBD}{VBN}{IN}{NN}{NN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Payment request was generated;{NN}{NN}{VBD}{VBN}
+event;Option was exercised physically;{NN}{VBD}{VBN}{RB}
+event;Transaction was posted;{NN}{VBD}{VBN}
+event;Valuation flows were generated;{NN}{NNS}{VBD}{VBN}
+event;G/L posting was generated;{NN}{VBG}{VBD}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}

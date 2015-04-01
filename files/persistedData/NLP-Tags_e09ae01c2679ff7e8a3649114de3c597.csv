@@ -1,0 +1,29 @@
+e09ae01c2679ff7e8a3649114de3c597;Transaction Processing
+function;Settlement;{NNP}
+function;Manual Fixing Processing;{NNP}
+function;Automatic Fixing Processing;{NNP}
+function;Order Execution;{NNP}
+function;Premature Settlement;{JJ}{NNP}
+function;Rollover;{NN}
+function;Spot/ Forward Exchange Transaction;{NN}{:}{NNP}{NN}
+function;Netting Processing;{VBG}{NN}
+function;Process Forex Swap;{VB}{NNP}
+function;Order Expiration;{NNP}
+event;Automatic fixing was chosen;{NNP}{VBG}{VBD}{VBN}
+event;Transaction is to be rolled over;{NN}{VBZ}{TO}{VB}{VBN}{IN}
+event;Order has expired;{NNP}{VBZ}{VBN}
+event;Transaction was settled prematurely;{NN}{VBD}{VBN}{RB}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Forex spot transaction, forex forward transaction was selected;{NNP}{NN}{NN}{,}{NN}{RB}{NN}{VBD}{VBN}
+event;Transaction was rolled over;{NN}{VBD}{VBN}{IN}
+event;Cash management was updated;{NN}{NN}{VBD}{VBN}
+event;Currency swap was chosen;{NNP}{NN}{VBD}{VBN}
+event;Netting proposal to be edited;{VBG}{NN}{TO}{VB}{VBN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Cash management was updated;{NN}{NN}{VBD}{VBN}
+event;Order is to be executed;{NN}{VBZ}{TO}{VB}{VBN}
+event;Cash management was updated;{NN}{NN}{VBD}{VBN}
+event;Order is not to be executed;{NN}{VBZ}{RB}{TO}{VB}{VBN}
+event;Transaction exists with contract status;{NN}{VBZ}{IN}{NN}{NN}
+event;Manual fixing was chosen;{JJ}{VBG}{VBD}{VBN}
+event;Transaction is to be settled prematurely;{NN}{VBZ}{TO}{VB}{VBN}{RB}

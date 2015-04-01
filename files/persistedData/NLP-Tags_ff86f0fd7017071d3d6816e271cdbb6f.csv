@@ -1,0 +1,34 @@
+ff86f0fd7017071d3d6816e271cdbb6f;Fig.19: GBA2 YAWL model for MunA
+function;Give receipt;{VB}{NN}
+function;Determine whether proof of identity present;{VB}{IN}{NN}{IN}{NN}{JJ}
+function;Ask identifying questions;{VB}{VBG}{NNS}
+function;Determine fees;{NN}{NNS}
+function;Receive payment;{VB}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Give GBA extract;{VB}{NNP}{NN}
+function;Process payment;{VB}{NN}
+function;Give coupon;{VB}{NN}
+function;No Payment;{DT}{NN}
+function;Process continue;{VB}{VB}
+function;Free;{NNP}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Call coupon holder;{VB}{NN}{NN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Determine whether proof of identity present;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NN}{JJ}
+event;status change to Determine whether requester is entitled;{NN}{NN}{TO}{VB}{IN}{NN}{VBZ}{VBN}
+event;status change to Free;{NN}{NN}{TO}{NNP}
+event;status change to Call coupon holder;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Ask identifying questions;{NN}{NN}{TO}{VB}{VBG}{NNS}
+event;status change to No Payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Give receipt;{NN}{NN}{TO}{VB}{NN}
+event;entitled;{VBN}
+event;the end;{DT}{NN}
+event;not entitled;{RB}{VBN}
+event;status change to Give coupon;{NN}{NN}{TO}{VB}{NN}
+event;status change to Give GBA extract;{NN}{NN}{TO}{VB}{NNP}{NN}
+event;status change to Ask customer what product he is requesting;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;not free;{RB}{JJ}

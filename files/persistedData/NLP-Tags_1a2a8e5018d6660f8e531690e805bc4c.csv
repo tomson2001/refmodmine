@@ -1,0 +1,168 @@
+1a2a8e5018d6660f8e531690e805bc4c;Fig.70: WNMO YAWL model for MunB
+function;Enter request;{VB}{NN}
+function;Process continue 10;{VB}{VB}{CD}
+function;Request cost estimation for modification;{NN}{NN}{NN}{IN}{NN}
+function;Ask customer to come sign parking card;{VB}{NN}{TO}{VB}{NN}{NN}{NN}
+function;Copy decision;{VB}{NN}
+function;Get customer;{VB}{NN}
+function;Make GBA extract;{VB}{NNP}{NN}
+function;Receive request ISD;{VB}{NN}{NN}
+function;Record request ISD;{VB}{NN}{NN}
+function;Archive;{NNP}
+function;Pay part of invoice;{VB}{NN}{IN}{NN}
+function;Process continue 11;{VB}{VB}{CD}
+function;Process continue 12;{VB}{VB}{CD}
+function;Customer requests to seek bids;{NN}{NNS}{TO}{VB}{NNS}
+function;Process continue 13;{VB}{VB}{CD}
+function;Request a fitting;{VB}{DT}{JJ}
+function;Plan examination with customer;{NNP}{NN}{IN}{NN}
+function;Assign to available consultant;{VB}{TO}{JJ}{NN}
+function;Process continue 6;{VB}{VB}{CD}
+function;Formulate rejection letter;{VB}{NN}{NN}
+function;Send invoice;{VB}{NN}
+function;Send recomm;{VB}{NN}
+function;Add parking card to Central Desk file;{VB}{NN}{NN}{TO}{NNP}{NN}
+function;Carry out house visit;{VB}{RP}{NN}{NN}
+function;Give application form;{VB}{NN}{NN}
+function;Offer previous file to IPB;{NN}{JJ}{NN}{TO}{NNP}
+function;Decide about the report;{VB}{IN}{DT}{NN}
+function;Pay full invoice;{VB}{JJ}{NN}
+function;Process continue 3;{VB}{VB}{CD}
+function;Concerns disabled parking card;{NNS}{JJ}{NN}{NN}
+function;Solve problems;{VB}{NNS}
+function;Receive offers;{VB}{NNS}
+function;Report to reception;{NNP}{TO}{NN}
+function;Sign parking card or municipality;{NN}{NN}{NN}{CC}{NN}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Estimate costs;{NNP}{NNS}
+function;Ask GGD for a consult;{VB}{NNP}{IN}{DT}{VBP}
+function;Pass on form digital copy to Central Desk;{VB}{IN}{NN}{JJ}{NN}{TO}{NNP}
+function;Obtain quotes;{VB}{NNS}
+function;Compromise on the arrangement;{NN}{IN}{DT}{NN}
+function;Execute order;{VB}{NN}
+function;Record request;{VB}{NN}
+function;Send order;{VB}{NN}
+function;Determine care provider to approach;{VB}{NN}{NN}{TO}{NN}
+function;Process continue 2;{VB}{VB}{CD}
+function;Determine amount;{NN}{NN}
+function;Archive;{NNP}
+function;Process continue 10;{VB}{VB}{CD}
+function;Send letter and report to customer;{VB}{NN}{CC}{NN}{TO}{NN}
+function;Contact customer;{NN}{NN}
+function;Process continue 5;{VB}{VB}{CD}
+function;Go through app;{VB}{IN}{NN}
+function;Formulate decision;{VB}{NN}
+function;Prepare invalid parking card;{VB}{JJ}{NN}{NN}
+function;Examine customer;{VB}{NN}
+function;Send request to ISD;{VB}{NN}{TO}{NN}
+function;Copy card;{VB}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Process continue 9;{VB}{VB}{CD}
+function;Send application form;{VB}{NN}{NN}
+function;Perform fitting;{VB}{JJ}
+function;Process continue 4;{VB}{VB}{CD}
+function;Give card to customer;{VB}{NN}{TO}{NN}
+function;Determine offer;{NN}{NN}
+function;Start perform case specific tasks;{NNP}{VB}{NN}{JJ}{NNS}
+function;Process in the system;{VB}{IN}{DT}{NN}
+function;Process continue 1;{VB}{VB}{CD}
+function;Receive recommendation;{VB}{NN}
+function;Pass on form hard copy to Central Desk;{VB}{IN}{NN}{JJ}{NN}{TO}{NNP}
+function;Compare invoice to record;{VB}{NN}{TO}{NN}
+function;Assess need to consult ISD;{VB}{NN}{TO}{VB}{NNP}
+function;Make preliminary decision;{VB}{JJ}{NN}
+function;Process continue 7;{VB}{VB}{CD}
+function;Record request in DMS;{VB}{NN}{IN}{NNP}
+function;Formulate indicative report;{VB}{JJ}{NN}
+function;Copy GGD report;{VB}{NN}{NN}
+function;Higher than EUR 10000;{JJR}{IN}{$}{CD}
+function;Need quotation;{VBN}{NN}
+function;Look for alternative living space;{VB}{IN}{JJ}{NN}{NN}
+function;Perform consult;{VB}{VB}
+function;Get in contact about wrong charges;{VB}{IN}{NN}{IN}{JJ}{NNS}
+function;Assess need for house visit and medical advice;{VB}{NN}{IN}{NN}{NN}{CC}{JJ}{NN}
+function;Case-specific tasks complete;{JJ}{NNS}{JJ}
+event;status change to Concerns disabled parking card;{NN}{NN}{TO}{NNS}{JJ}{NN}{NN}
+event;status change to;{NN}{NN}{TO}
+event;no;{DT}
+event;existing previous file;{VBG}{JJ}{NN}
+event;no PGB;{DT}{NN}
+event;status change to Assess need for house visit and medical advice;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NN}{CC}{JJ}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Enter request;{NN}{NN}{TO}{VB}{NN}
+event;with PGB;{IN}{NN}
+event;status change to Compare invoice to record;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;status change to Add parking card to Central Desk file;{NN}{NN}{TO}{VB}{NN}{NN}{TO}{NNP}{NN}
+event;only if building advice needed;{RB}{IN}{NN}{NN}{VBD}
+event;status change to Pay part of invoice;{NN}{NN}{TO}{VB}{NN}{IN}{NN}
+event;status change to Perform consult;{NN}{NN}{TO}{VB}{VB}
+event;the end;{DT}{NN}
+event;no house visit but medical advice needed;{DT}{NN}{NN}{CC}{JJ}{NN}{VBN}
+event;always;{RB}
+event;status change to Receive request ISD;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Send request to ISD;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;status change to Higher than EUR 10000;{NN}{NN}{TO}{JJR}{IN}{$}{CD}
+event;uncomplete;{JJ}
+event;status change to Need quotation;{NN}{NN}{TO}{NNP}{NN}
+event;yes;{RB}
+event;status change to Get in contact about wrong charges;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{JJ}{NNS}
+event;always;{RB}
+event;status change to Make GBA extract;{NN}{NN}{TO}{VB}{NNP}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Receive offers;{NN}{NN}{TO}{VB}{NNS}
+event;yes;{RB}
+event;yes;{RB}
+event;only if no PGB;{RB}{IN}{DT}{NN}
+event;status change to Plan examination with customer;{NN}{NN}{TO}{NNP}{NN}{IN}{NN}
+event;negative;{JJ}
+event;status change to;{NN}{NN}{TO}
+event;status change to Pass on form hard copy to Central Desk;{NN}{NN}{TO}{VB}{IN}{NN}{JJ}{NN}{TO}{NNP}
+event;status change to Determine offer;{NN}{NN}{TO}{VB}{NN}
+event;status change to Execute order;{NN}{NN}{TO}{VB}{NN}
+event;status change to Go through app;{NN}{NN}{TO}{VB}{IN}{NN}
+event;status change to;{NN}{NN}{TO}
+event;always;{RB}
+event;status change to Assess need to consult ISD;{NN}{NN}{TO}{VB}{NN}{TO}{VB}{NNP}
+event;status change to Give card to customer;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;no;{DT}
+event;status change to Sign parking card or municipality;{NN}{NN}{TO}{VB}{NN}{NN}{CC}{NN}
+event;status change to Obtain quotes;{NN}{NN}{TO}{VB}{NNS}
+event;status change to Formulate indicative report;{NN}{NN}{TO}{VB}{JJ}{NN}
+event;no;{DT}
+event;status change to Formulate rejection letter;{NN}{NN}{TO}{VB}{NN}{NN}
+event;status change to Record request ISD;{NN}{NN}{TO}{NNP}{NN}{NN}
+event;status change to Receive confirmation;{NN}{NN}{TO}{VB}{NN}
+event;house visit needed but no medical advice;{NN}{NN}{VBN}{CC}{DT}{JJ}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Estimate costs;{NN}{NN}{TO}{NNP}{NNS}
+event;complete;{JJ}
+event;status change to;{NN}{NN}{TO}
+event;status change to;{NN}{NN}{TO}
+event;no house visit and no medical advice needed;{DT}{NN}{NN}{CC}{DT}{JJ}{NN}{VBN}
+event;status change to Record request in DMS;{NN}{NN}{TO}{NNP}{NN}{IN}{NNP}
+event;status change to Copy card;{NN}{NN}{TO}{VB}{NN}
+event;status change to Assign to available consultant;{NN}{NN}{TO}{VB}{TO}{JJ}{NN}
+event;status change to Prepare invalid parking card;{NN}{NN}{TO}{VB}{JJ}{NN}{NN}
+event;transportation facilities;{NN}{NNS}
+event;status change to Record request;{NN}{NN}{TO}{NNP}{NN}
+event;status change to;{NN}{NN}{TO}
+event;status change to Start perform case specific tasks;{NN}{NN}{TO}{NNP}{VB}{NN}{JJ}{NNS}
+event;status change to Archive;{NN}{NN}{TO}{NNP}
+event;status change to Give application form;{NN}{NN}{TO}{VB}{NN}{NN}
+event;positive;{JJ}
+event;status change to Perform fitting;{NN}{NN}{TO}{VB}{JJ}
+event;yes;{RB}
+event;always;{RB}
+event;no;{DT}
+event;help with the house hold;{NN}{IN}{DT}{NN}{NN}
+event;status change to Get customer;{NN}{NN}{TO}{VB}{NN}
+event;house visit needed and medical advice needed;{NN}{NN}{VBN}{CC}{JJ}{NN}{VBN}
+event;large modifications to house;{JJ}{NNS}{TO}{NN}
+event;no previous file;{DT}{JJ}{NN}
+event;status change to Carry out house visit;{NN}{NN}{TO}{VB}{RP}{NN}{NN}
+event;other;{JJ}
+event;status change to Solve problems;{NN}{NN}{TO}{VB}{NNS}
+event;status change to Receive recommendation;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send letter and report to customer;{NN}{NN}{TO}{VB}{NN}{CC}{NN}{TO}{NN}
+event;status change to Send recomm;{NN}{NN}{TO}{VB}{NN}

@@ -1,0 +1,18 @@
+d890d608e02e160100ec3264946b5b71;Payroll Processing of Further Benefits
+function;Payroll Processing of Social Insurance;{NNP}{IN}{NNP}
+function;Payroll Processing of Other Benefits;{NNP}{IN}{JJ}{NNS}
+function;Calculation of Further Benefits for Payroll Processing;{NN}{IN}{JJ}{NNS}{IN}{NNP}
+function;Calculation of Capital Formation Payments;{NN}{IN}{NNP}{NN}{NNS}
+function;Payroll Processing for Company Loan Contract;{NNP}{IN}{NNP}
+function;Payroll Processing of Company Car Contract;{NNP}{IN}{NNP}
+function;Calculation of Leave Remuneration;{NN}{IN}{VB}{NNP}
+function;Continued Pay for Sickness;{VBN}{VB}{IN}{NN}
+event;Need to calculate vacation pay;{VBN}{TO}{VB}{NN}{NN}
+event;Need for payroll processing of company loan contract;{VBN}{IN}{NN}{NN}{IN}{NN}{NN}{NN}
+event;Need for coninued remuneration in case of sickness;{VBN}{IN}{JJ}{NN}{IN}{NN}{IN}{NN}
+event;Need for payroll processing for other benefits;{VBN}{IN}{NN}{NN}{IN}{JJ}{NNS}
+event;Need for payroll processing of social insurance;{VBN}{IN}{NN}{NN}{IN}{JJ}{NN}
+event;Need for payroll processing of company car contract;{VBN}{IN}{NN}{NN}{IN}{NN}{NN}{NN}
+event;Payroll Processing of Further Benefits Required;{NNP}{IN}{JJ}{NNS}{VBN}
+event;Settlement amounts for further benefits exist;{NNP}{VBZ}{IN}{JJ}{NNS}{VBP}
+event;Need for calculation of capital formation savings;{VBN}{IN}{NN}{IN}{NN}{NN}{NNS}

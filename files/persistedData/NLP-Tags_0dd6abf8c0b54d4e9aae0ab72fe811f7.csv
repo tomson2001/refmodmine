@@ -1,0 +1,27 @@
+0dd6abf8c0b54d4e9aae0ab72fe811f7;Profit Center Planning
+function;Copy Actual Costs - Profit Center Planning;{VB}{NNP}{NNS}{:}{NN}{NNP}
+function;Copy Plan from Previous Year - Profit Center Planning;{VB}{NNP}{IN}{JJ}{NN}{:}{NN}{NNP}
+function;Profit Center Assessment: Plan;{NN}{NNP}{:}{NNP}
+function;Profit Center Analysis;{NN}{NNP}{NN}
+function;Manual Profit Center Planning;{NNP}
+function;Profit Center Planning Integration;{NN}{NNP}{NN}
+function;Redefinition of Plan Version (Profit Center Planning);{NN}{IN}{NNP}{-LRB-}{NNP}{-RRB-}
+function;Excel Upload - Profit Center Planning;{NNP}{:}{NN}{NNP}
+function;Plan Data Transfer to EC-PCA from Profitability Analysis;{NNP}{NN}{TO}{JJ}{IN}{NNP}{NN}
+function;Profit Center Distribution: Plan;{NN}{NNP}{NN}{:}{NNP}
+event;Profit center planning to be prepared (new definition);{NN}{NN}{VBG}{TO}{VB}{VBN}{-LRB-}{JJ}{NN}{-RRB-}
+event;Profit center plan exists;{NN}{NN}{NN}{VBZ}
+event;Plan Data Transferred from Other Applications;{NNP}{VBN}{IN}{JJ}{NNS}
+event;Tranferred plan data is to be changed manually;{VBN}{NN}{NNS}{VBZ}{TO}{VB}{VBN}{RB}
+event;Plan data transferred from profitability analysis;{NNP}{NNS}{VBN}{IN}{NN}{NN}
+event;Distribute profit center overhead costs;{VB}{NN}{NN}{NN}{NNS}
+event;Assess profit center overhead costs;{VB}{NN}{NN}{NN}{NNS}
+event;Create plan for profit center;{VB}{NN}{IN}{NN}{NN}
+event;Control measures set based on variances;{NN}{NNS}{VBN}{VBN}{IN}{NNS}
+event;All master data assigned to profit centers;{DT}{NN}{NNS}{VBN}{TO}{VB}{NNS}
+event;Organizational operating profit (plan) exists;{JJ}{NN}{NN}{-LRB-}{NN}{-RRB-}{VBZ}
+event;Profit center planning to be prepared (Excel upload);{NN}{NN}{VBG}{TO}{VB}{VBN}{-LRB-}{NNP}{NN}{-RRB-}
+event;Profit center planning is to be prepared (copy plan);{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}{-LRB-}{NN}{NN}{-RRB-}
+event;Profit center planning is prepared;{NN}{NN}{NN}{VBZ}{VBN}
+event;Profit center planning to be prepared (copy actual);{NN}{NN}{VBG}{TO}{VB}{VBN}{-LRB-}{NN}{JJ}{-RRB-}
+event;Plan data to be transferred from profitability analysis;{NNP}{NNS}{TO}{VB}{VBN}{IN}{NN}{NN}

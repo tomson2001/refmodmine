@@ -1,0 +1,32 @@
+05af239d73540e1c4a6837a4fea808b5;Test Equipment Management
+function;Quality Inspection for the Technical Object;{NNP}{IN}{DT}{NNP}
+function;Service Order;{NNP}
+function;Maintenance Planning;{NNP}
+function;Maintenance Order;{NNP}
+event;Inspection results are copied to general characteristics;{NNP}{NNS}{VBP}{VBN}{TO}{JJ}{NNS}
+event;Follow-up action is triggered;{JJ}{NN}{VBZ}{VBN}
+event;Inspection lot is to be created;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance plan is to be scheduled automatically;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Schedule counter reading mtce plan;{VB}{RB}{VBG}{NN}{NN}
+event;Maintenance plan is created;{NN}{NN}{VBZ}{VBN}
+event;Service Order Completed;{NNP}
+event;Order is to be archived;{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance plan to be scheduled according to maintenance strategy;{NN}{NN}{TO}{VB}{VBN}{VBG}{TO}{NN}{NN}
+event;General maintenance task list is processed;{NNP}{NN}{NN}{NN}{VBZ}{VBN}
+event;Maintenance plan calls are processed;{NN}{NN}{NNS}{VBP}{VBN}
+event;Maintenance plan released triggered;{NN}{NN}{VBN}{VBD}
+event;Confirmation for maintenance order is to be made;{NN}{IN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Service order should be created per maint. item;{NNP}{NN}{MD}{VB}{VBN}{IN}{NN}{.}
+event;Inspection completion is carried out;{NNP}{NN}{VBZ}{VBN}{RP}
+event;Maintenance order to be created per maintenance item;{NN}{NN}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;PM order comes from maintenance call;{NN}{NN}{VBZ}{IN}{NN}{NN}
+event;Service order originates from maintenance plan call;{NNP}{NN}{VBZ}{IN}{NN}{NN}{VBP}
+event;Order is to be archived;{NN}{VBZ}{TO}{VB}{VBN}
+event;Inspection lot is to be created;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;QMIS updated;{NNS}{VBN}
+event;Maintenance call waits;{NN}{NN}{VBZ}
+event;Maintenance plan is to be scheduled manually;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Inspection lot is to be created automatically;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;General maintenance task list is processed;{NNP}{NN}{NN}{NN}{VBZ}{VBN}
+event;Maintenance order is completed with time reference;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Dates + due maintenance packages are determined;{VBZ}{CC}{JJ}{NN}{NNS}{VBP}{VBN}

@@ -1,0 +1,16 @@
+902e134daf88446150cdf2b2b7624c67;Production Order Creation
+function;Printout of Production Order;{NNP}{IN}{NNP}
+function;Creating/ Processing Production Order;{VBG}{:}{NNP}
+function;Conversion of Planned Order;{NN}{IN}{NNP}
+function;Release of Production Order;{NNP}{IN}{NNP}
+event;Material reservation is created;{NN}{NN}{VBZ}{VBN}
+event;Conversion date is reached;{NN}{NN}{VBZ}{VBN}
+event;Conversion of planned order to production order triggered;{NN}{IN}{VBN}{NN}{TO}{NN}{NN}{VBD}
+event;Prelim. Costing Carried Out for Planned Order;{NNP}{.}
+event;Capacity requirement is created;{NN}{NN}{VBZ}{VBN}
+event;Production order is created;{NN}{NN}{VBZ}{VBN}
+event;Inspection lot is created automatically for order;{NNP}{NN}{VBZ}{VBN}{RB}{IN}{NN}
+event;Production order is to be printed;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Production order is released;{NN}{NN}{VBZ}{VBN}
+event;Production order is printed;{NN}{NN}{VBZ}{VBN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}

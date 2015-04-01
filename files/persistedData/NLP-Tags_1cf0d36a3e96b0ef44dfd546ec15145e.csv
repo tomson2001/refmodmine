@@ -1,0 +1,8 @@
+1cf0d36a3e96b0ef44dfd546ec15145e;Production Execution and Actual Data Creation
+function;Production Execution (with Run Schedule Quantities);{NN}{NN}{-LRB-}{IN}{NNP}{VB}{NNS}{-RRB-}
+function;REM Backflush;{NNP}
+event;Standard activities are posted;{JJ}{NNS}{VBP}{VBN}
+event;Material is produced;{NN}{VBZ}{VBN}
+event;Material is staged;{NN}{VBZ}{VBN}
+event;Goods Issue is Posted;{NNP}{VBZ}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}

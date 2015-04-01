@@ -1,0 +1,5 @@
+f40c8cde480bc5b756b19e86f5c73ea6;Goods Receipt
+function;Goods Receipt Processing with Reference;{NNP}{NN}{IN}{NNP}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Goods received;{NNP}{VBD}
+event;Inbound delivery for PO created;{JJ}{NN}{IN}{NNP}{VBD}

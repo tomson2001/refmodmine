@@ -1,0 +1,4 @@
+7a47c64f8b82d0e528b678bf5cca9e5b;Distribution Network
+function;Distribution Network Processing;{NN}{NNP}
+event;Distribution network is to be processed;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Forecast is necessary;{NN}{VBZ}{JJ}

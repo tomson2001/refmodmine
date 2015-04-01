@@ -1,0 +1,5 @@
+f114c1b1cf71a57bb99caa36b6dd781c;Risk/Credit Management
+function;Credit Control;{NNP}
+event;Terms of credit have changed;{NNS}{IN}{NN}{VBP}{VBN}
+event;Change to terms of credit refused;{NNP}{TO}{NNS}{IN}{NN}{VBD}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}

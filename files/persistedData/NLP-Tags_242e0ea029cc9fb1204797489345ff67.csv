@@ -1,0 +1,54 @@
+242e0ea029cc9fb1204797489345ff67;Breakdown Maintenance Processing
+function;Material Movements;{NN}{NNS}
+function;Modification of Technical Systems;{NN}{IN}{NNPS}
+function;Completion Confirmation;{NNP}{NN}
+function;Order;{NN}
+function;Settlement and Completion;{NNP}{CC}{NNP}
+function;Capacity Planning;{NN}{NNP}
+function;Notification;{NN}
+event;Retrograde withdrawal to be posted;{NNP}{NN}{TO}{VB}{VBN}
+event;Equipment must be installed, dismantled or modified;{NN}{MD}{VB}{VBN}{,}{VBN}{CC}{VBN}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Material reservation can be withdrawn;{NN}{NN}{MD}{VB}{VBN}
+event;Capacity is available;{NN}{VBZ}{JJ}
+event;Working hours data was analyzed;{VBG}{NNS}{NNS}{VBD}{VBN}
+event;Equipment is installed, dismantled or modified;{NN}{VBZ}{VBN}{,}{VBN}{CC}{VBN}
+event;Technical findings are entered;{NNP}{NNS}{VBP}{VBN}
+event;Maintenance order is released;{NN}{NN}{VBZ}{VBN}
+event;Maintenance order is to be created manually;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Maintenance tasks are determined;{NN}{NNS}{VBP}{VBN}
+event;Open material reservations are deleted;{VB}{NN}{NNS}{VBP}{VBN}
+event;Order Should Be Technically Completed;{NNP}{MD}{VB}{NNP}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Technical findings are entered;{NNP}{NNS}{VBP}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Maintenance order is confirmed completely;{NN}{NN}{VBZ}{VBN}{RB}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Maintenance order is completed with time reference;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Open purchase requisitions for non-stock material are deleted;{VB}{NN}{NNS}{IN}{JJ}{NN}{VBP}{VBN}
+event;Operations and Order Must Be Confirmed;{NNP}{CC}{NNP}{MD}{VB}{VBN}
+event;Notification is printed;{NN}{VBZ}{VBN}
+event;Maintenance tasks are to be processed;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Actual costs are updated to maintenance order;{JJ}{NNS}{VBP}{VBN}{TO}{NN}{NN}
+event;Maintenance order to be created directly from maintenance notification;{NN}{NN}{TO}{VB}{VBN}{RB}{IN}{NN}{NN}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}
+event;Individual operations are confirmed;{JJ}{NNS}{VBP}{VBN}
+event;Notification is to be processed by planner group;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Capacity requirement records are deleted;{NN}{NN}{NNS}{VBP}{VBN}
+event;Capacity situation is to be evaluated;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Measurement doc. should be created for notif.;{NN}{NN}{.}
+event;Maintenance order is printed;{NN}{NN}{VBZ}{VBN}
+event;Maintenance notification is to be generated from maintenance order;{NN}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Maintenance order is partially confirmed;{NN}{NN}{VBZ}{RB}{VBN}
+event;Order type supports automatic generation of a notification;{NNP}{NN}{VBZ}{JJ}{NN}{IN}{DT}{NN}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Maintenance requirement has arisen;{NN}{NN}{VBZ}{VBN}
+event;Service is accepted;{NNP}{VBZ}{VBN}
+event;Material is not available;{NN}{VBZ}{RB}{JJ}
+event;Functional location is processed;{JJ}{NN}{VBZ}{VBN}
+event;Services are to be entered;{NNPS}{VBP}{TO}{VB}{VBN}
+event;Equipment is processed;{NN}{VBZ}{VBN}
+event;Maintenance requirement has arisen;{NN}{NN}{VBZ}{VBN}
+event;Capacity load is updated;{NN}{NN}{VBZ}{VBN}

@@ -1,0 +1,8 @@
+38ba01056770c35650b854a32b57ce75;B.I.209_EPC for factory data entry
+function;FDE process;{NN}{NN}
+event;Data routed to analysis system;{NNS}{VBN}{TO}{NN}{NN}
+event;Data routed to execution system;{NNS}{VBN}{TO}{NN}{NN}
+event;Periodic data capture deadline reached;{JJ}{NNS}{VBP}{NN}{VBD}
+event;Document for "central" online - entry received;{NNP}{IN}{``}{JJ}{''}{NN}{:}{NN}{VBD}
+event;Message from subsystem;{NN}{IN}{NN}
+event;Data routed to information system;{NNS}{VBN}{TO}{NN}{NN}

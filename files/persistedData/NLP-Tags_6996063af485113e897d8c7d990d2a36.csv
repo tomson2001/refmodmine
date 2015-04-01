@@ -1,0 +1,5 @@
+6996063af485113e897d8c7d990d2a36;Material Master
+function;Material Master Processing EH+S;{NNP}
+event;Product Safety data is to be processed;{NNP}{NNS}{VBZ}{TO}{VB}{VBN}
+event;EH+S master data is to be created;{NN}{NN}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Drilldown reporting is to be carried out;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}

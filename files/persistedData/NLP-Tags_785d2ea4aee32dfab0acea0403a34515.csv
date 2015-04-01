@@ -1,0 +1,13 @@
+785d2ea4aee32dfab0acea0403a34515;Personnel time planning
+function;Operative personnel time planning;{JJ}{NNS}{NN}{NN}
+function;Operative planned working time specification;{JJ}{VBN}{VBG}{NN}{NN}
+function;Work schedule creation;{NN}{NN}{NN}
+function;Long-term working time planning;{JJ}{VBG}{NN}{NN}
+event;Need to create calendar and work schedule;{VBN}{TO}{VB}{NN}{CC}{NN}{NN}
+event;EE - planned working time determination - operative is available;{SYM}{:}{VBN}{VBG}{NN}{NN}{:}{NN}{VBZ}{JJ}
+event;Planned personnel time specifications are available;{NNP}{NNS}{NN}{NNS}{VBP}{JJ}
+event;Person-based work schedules are available;{JJ}{NN}{NNS}{VBP}{JJ}
+event;Work schedule is available;{NN}{NN}{VBZ}{JJ}
+event;Need for long-term work scheduling;{VBN}{IN}{JJ}{NN}{NN}
+event;Requirement for operative planned working time determination;{NN}{IN}{JJ}{VBN}{VBG}{NN}{NN}
+event;Need for operative personnel time scheduling;{VBN}{IN}{JJ}{NNS}{NN}{NN}

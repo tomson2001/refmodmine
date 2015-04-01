@@ -1,0 +1,20 @@
+e406aaa61f261ca98617631ff5f1834a;Presales Activities
+function;Service Contract Quotation Processing;{NNP}
+function;Service Contract Request Processing;{NNP}
+function;Customer Contact Processing;{NN}{NN}{NN}
+function;Mailing Campaign Processing;{VBG}{NNP}
+event;Quotation items are rejected;{NN}{NNS}{VBP}{VBN}
+event;Quotation is valid;{NN}{VBZ}{JJ}
+event;Follow-up sales activity is created;{JJ}{NNS}{NN}{VBZ}{VBN}
+event;Free-of-charge delivery is to be created;{JJ}{NN}{VBZ}{TO}{VB}{VBN}
+event;Quotation is monitored;{NN}{VBZ}{VBN}
+event;Cust. mail. campaign to be carried out;{NNP}{.}
+event;Sales activity is to be processed;{NNS}{NN}{VBZ}{TO}{VB}{VBN}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Inquiry items are rejected;{NNP}{NNS}{VBP}{VBN}
+event;Inquiry is monitored;{NNP}{VBZ}{VBN}
+event;Customer inquires about products;{NN}{VBZ}{IN}{NNS}
+event;Quotation is to be created from contact;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Inquiry to be created from contact;{NNP}{TO}{VB}{VBN}{IN}{NN}
+event;Service contract to be created from contact;{NNP}{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Expenses incurred;{NNS}{VBN}

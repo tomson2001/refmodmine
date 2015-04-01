@@ -1,0 +1,40 @@
+54c1def7c1ffca692ba8c69ca4eeb4e8;Fig.48: MOR YAWL model for MunJ
+function;Possible solution;{JJ}{NN}
+function;Receive mail regarding issue;{VB}{NN}{VBG}{NN}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Close case;{JJ}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Assign categ resp person and dep;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Known issue;{VBN}{NN}
+function;Handle issue;{VB}{NN}
+function;Ask for more information;{VB}{IN}{JJR}{NN}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Process continue;{VB}{VB}
+function;Inform person whob reported;{VB}{NN}{NN}{VBD}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Information_complete_1;{NN}
+function;Contact person reporting issue;{NN}{NN}{VBG}{NN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Person asked for feedback;{NN}{VBD}{IN}{NN}
+function;Information complete;{NN}{JJ}
+function;Report when and what;{NNP}{WRB}{CC}{WP}
+event;yes;{RB}
+event;Start case;{NNP}{NN}
+event;no;{DT}
+event;yes;{RB}
+event;no;{DT}
+event;no;{DT}
+event;yes;{RB}
+event;no;{DT}
+event;no;{DT}
+event;Case closed;{NNP}{VBD}
+event;yes;{RB}
+event;no;{DT}
+event;yes;{RB}
+event;yes;{RB}

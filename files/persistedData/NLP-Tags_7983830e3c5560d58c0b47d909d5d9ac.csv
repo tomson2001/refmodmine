@@ -1,0 +1,9 @@
+7983830e3c5560d58c0b47d909d5d9ac;Order-Specific Trigger
+function;Sales Order Processing;{NNS}{NNP}
+function;Customer inquiry processing;{NN}{NN}{NN}
+function;Customer Quotation Processing;{NN}{NN}{NN}
+event;Carry out project development in the project;{VB}{RP}{NN}{NN}{IN}{DT}{NN}
+event;Quotation is valid;{NN}{VBZ}{JJ}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Carry out product development;{VB}{RP}{NN}{NN}
+event;Customer order exists;{NN}{NN}{VBZ}

@@ -1,0 +1,41 @@
+c4dab17c2328b6975a367a32cf0cefca;Business Event Planning and Performance
+function;Business Event Advertising;{NN}{NNP}
+function;Business Event Follow-Up Processing;{NN}{NN}{JJ}{NN}
+function;Business Event Monitoring;{NNP}{VBG}
+function;Business Event Resource Administration;{NNP}
+function;Business Event Performance;{NNP}
+function;Business Event Planning;{NNP}
+event;Business event costs are allocated;{NN}{NN}{NNS}{VBP}{VBN}
+event;Specifications for appraisal of business event attendees exist;{NNS}{IN}{NN}{IN}{NN}{NN}{NNS}{VBP}
+event;Need for appraisal of business event exists;{VBN}{IN}{NN}{IN}{NN}{NN}{VBZ}
+event;Need for appraisal of business event attendees exists;{VBN}{IN}{NN}{IN}{NN}{NN}{NNS}{VBZ}
+event;Business event is cancelled;{NN}{NN}{VBZ}{VBN}
+event;Need for allocation and reposting of business event costs exists;{VBN}{IN}{NN}{CC}{NN}{IN}{NN}{NN}{NNS}{VBZ}
+event;Business event exists;{NN}{NN}{VBZ}
+event;Preparation of business event performance is desired;{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Specifications for settlement and allocation of business event fees exist;{NNS}{IN}{NN}{CC}{NN}{IN}{NN}{NN}{NNS}{VBP}
+event;Need for settlement and allocation of business event fees exists;{VBN}{IN}{NN}{CC}{NN}{IN}{NN}{NN}{NNS}{VBZ}
+event;Advertising action of business event management is specified;{NNP}{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Need for business event catalog exists;{VBN}{IN}{NN}{NN}{NN}{VBZ}
+event;Business event fees are settled;{NN}{NN}{NNS}{VBP}{VBN}
+event;Business event attendance must be cancelled;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Item of resource reservation plan must be implemented;{NN}{IN}{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Need for business event resource planning exists;{VBN}{IN}{NN}{NN}{NN}{NN}{VBZ}
+event;Need for business event advertising exists;{VBN}{IN}{NN}{NN}{NN}{VBZ}
+event;Business event is performed;{NN}{NN}{VBZ}{VBN}
+event;Specifications for allocation and reposting of business event costs exist;{NNS}{IN}{NN}{CC}{NN}{IN}{NN}{NN}{NNS}{VBP}
+event;Business event resource is reserved;{NN}{NN}{NN}{VBZ}{VBN}
+event;Business event catalog must be corrected;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Business event requirement must be determined;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Need for business event planning exists;{VBN}{IN}{NN}{NN}{NN}{VBZ}
+event;Resource reservation plan must be corrected;{NNP}{NN}{NN}{MD}{VB}{VBN}
+event;Business event planning must be corrected;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Specifications for appraisal of business event exist;{NNS}{IN}{NN}{IN}{NN}{NN}{VBP}
+event;Appraisal of business event exists;{NN}{IN}{NN}{NN}{VBZ}
+event;Business event resource reservation is cancelled;{NN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Appraisals of business event attendees exist;{NNS}{IN}{NN}{NN}{NNS}{VBP}
+event;Business event costs are reposted;{NN}{NN}{NNS}{VBP}{VBN}
+event;Requirement for operative shift planning exists;{NN}{IN}{JJ}{NN}{NN}{VBZ}
+event;Business event is complete;{NN}{NN}{VBZ}{JJ}
+event;Need for business event monitoring exists;{VBN}{IN}{NN}{NN}{NN}{VBZ}
+event;Business event fees are allocated;{NN}{NN}{NNS}{VBP}{VBN}

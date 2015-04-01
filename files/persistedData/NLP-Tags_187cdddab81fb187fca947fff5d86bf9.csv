@@ -1,0 +1,10 @@
+187cdddab81fb187fca947fff5d86bf9;Basic settings
+function;Quantity Units;{NN}{NNS}
+function;File names;{VB}{NNS}
+function;Number ranges;{NN}{NNS}
+function;Foreign currencies;{JJ}{NNS}
+event;Basic Settings to be made;{JJ}{NNS}{TO}{VB}{VBN}
+event;File Names Established;{VB}{NNS}{VBN}
+event;Foreign Currencies Are Specified;{NNP}{VBP}{VBN}
+event;Number Ranges Defined;{NN}{VBZ}{VBN}
+event;Units of Measure Specified;{NNS}{IN}{NN}{VBN}

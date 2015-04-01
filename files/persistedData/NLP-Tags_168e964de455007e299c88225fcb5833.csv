@@ -1,0 +1,15 @@
+168e964de455007e299c88225fcb5833;Process Management
+function;PI Sheet Processing;{NN}{NNP}
+function;Control Recipe Transfer;{NNP}{NN}
+function;Process Message Processing and Transfer;{VB}{NNP}{CC}{NN}
+function;Control Recipe Creation;{NNP}
+function;Process Order Processing with Process Control System;{VB}{NNP}{IN}{VB}{NNP}
+event;Process order is released;{VB}{NN}{VBZ}{VBN}
+event;Production with process control;{NN}{IN}{NN}{NN}
+event;Capacity Leveling or Planning Is Performed;{NN}{NN}{CC}{NNP}{VBZ}{VBN}
+event;Process message has been automatically generated;{VB}{NN}{VBZ}{VBN}{RB}{VBN}
+event;Control recipe is created;{NNP}{NN}{VBZ}{VBN}
+event;Actual data is transferred to destination from process control;{JJ}{NNS}{VBZ}{VBN}{TO}{NN}{IN}{NN}{NN}
+event;Control recipe is sent;{NNP}{NN}{VBZ}{VBN}
+event;Process message received from ext. system;{VB}{NN}{VBN}{IN}{FW}{NN}
+event;PI sheet is sent;{NN}{NN}{VBZ}{VBN}

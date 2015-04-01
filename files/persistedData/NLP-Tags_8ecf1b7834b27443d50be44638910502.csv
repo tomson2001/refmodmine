@@ -1,0 +1,29 @@
+8ecf1b7834b27443d50be44638910502;Fig.36: GBA3 YAWL model for MunH
+function;Copy extract;{VB}{NN}
+function;Receive payment;{VB}{NN}
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Pass on copy of request;{VB}{IN}{NN}{IN}{NN}
+function;Receive request;{VB}{NN}
+function;No payment;{DT}{NN}
+function;Send extract;{VB}{NN}
+function;Process payment;{VB}{NN}
+function;Make copy of request;{VB}{NN}{IN}{NN}
+function;Inform customer in writing1;{VB}{NN}{IN}{NN}
+function;Send mail to appropriate department;{VB}{NN}{TO}{JJ}{NN}
+function;Determine fees;{NN}{NNS}
+function;Archive;{NNP}
+function;Inform customer in writing;{VB}{NN}{IN}{VBG}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Decide_admissible;{JJ}
+function;Send payment request;{VB}{NN}{NN}
+event;Process end;{VB}{NN}
+event;not entitled;{RB}{VBN}
+event;yes;{RB}
+event;entitled;{VBN}
+event;no;{DT}
+event;Free;{NNP}
+event;Process start;{VB}{NN}
+event;yes;{RB}
+event;no;{DT}

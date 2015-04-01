@@ -1,0 +1,16 @@
+f21c3c1aa38297614d592ef109dea0af;Commercial Paper [TR-MM]
+function;Transaction Processing;{NN}{NN}
+function;Accounting;{NN}
+function;Closing Operations;{NN}{NNP}
+event;Accrual/ deferral flows were generated;{NN}{:}{NN}{NNS}{VBD}{VBN}
+event;Valuation flows were generated;{NN}{NNS}{VBD}{VBN}
+event;Customer open items were generated;{NN}{JJ}{NNS}{VBD}{VBN}
+event;Accrual/ deferral is to be performed;{NN}{:}{NN}{VBZ}{TO}{VB}{VBN}
+event;Commercial Paper was chosen;{NNP}{VBD}{VBN}
+event;Transaction was posted;{NN}{VBD}{VBN}
+event;Key date valuation to be carried out;{NN}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;G/L posting was generated;{NN}{VBG}{VBD}{VBN}
+event;Payment is transferred by EDI;{NN}{VBZ}{VBN}{IN}{NN}
+event;Payment medium transferred;{NN}{NN}{VBN}
+event;Payment advice is sent;{NN}{NN}{VBZ}{VBN}

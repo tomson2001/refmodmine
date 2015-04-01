@@ -1,0 +1,70 @@
+1544dc3f30997f0230df8a2ea6d7898d;Fig.76: WMO YAWL model for MunH
+function;Decide about the report;{VB}{IN}{DT}{NN}
+function;Compare invoice to record;{VB}{NN}{TO}{NN}
+function;Process in the system;{VB}{IN}{DT}{NN}
+function;Determine amount;{NN}{NN}
+function;Estimate costs;{NNP}{NNS}
+function;Higher than EUR 10000;{JJR}{IN}{$}{CD}
+function;Report to reception;{NNP}{TO}{NN}
+function;Compromise on the arrangement;{NN}{IN}{DT}{NN}
+function;Perform fitting;{VB}{JJ}
+function;Give application form;{VB}{NN}{NN}
+function;Make preliminary decision;{VB}{JJ}{NN}
+function;Send request to ISD;{VB}{NN}{TO}{NN}
+function;Get customer;{VB}{NN}
+function;Go through app;{VB}{IN}{NN}
+function;Record request;{VB}{NN}
+function;Receive confirmation;{VB}{NN}
+function;Request cost estimation for modification;{NN}{NN}{NN}{IN}{NN}
+function;Customer requests to seek bids;{NN}{NNS}{TO}{VB}{NNS}
+function;Need quotation;{VBN}{NN}
+function;Send invoice;{VB}{NN}
+function;Send decision to customer;{VB}{NN}{TO}{NN}
+function;Execute order;{VB}{NN}
+function;Examine customer;{VB}{NN}
+function;Determine care provider to approach;{VB}{NN}{NN}{TO}{NN}
+function;Request a fitting;{VB}{DT}{JJ}
+function;Copy decision;{VB}{NN}
+function;Obtain quotes;{VB}{NNS}
+function;Receive request ISD;{VB}{NN}{NN}
+function;Case-specific tasks complete;{JJ}{NNS}{JJ}
+function;Formulate decision;{VB}{NN}
+function;Determine offer;{NN}{NN}
+function;Receive recommendation;{VB}{NN}
+function;Pay full invoice;{VB}{JJ}{NN}
+function;Receive offers;{VB}{NNS}
+function;Carry out house visit;{VB}{RP}{NN}{NN}
+function;Pay part of invoice;{VB}{NN}{IN}{NN}
+function;Formulate indicative report;{VB}{JJ}{NN}
+function;Start perform case-specific tasks;{NNP}{VB}{JJ}{NNS}
+function;Send order;{VB}{NN}
+function;Plan examination with customer;{NNP}{NN}{IN}{NN}
+function;Look for alternative living space;{VB}{IN}{JJ}{NN}{NN}
+function;Get in contact about wrong charges;{VB}{IN}{NN}{IN}{JJ}{NNS}
+function;Archive;{NNP}
+function;Record request ISD;{VB}{NN}{NN}
+function;Assess need for house visit and medical advice;{VB}{NN}{IN}{NN}{NN}{CC}{JJ}{NN}
+function;Assign to available consultant;{VB}{TO}{JJ}{NN}
+event;always;{RB}
+event;house visit needed but no medical advice;{NN}{NN}{VBN}{CC}{DT}{JJ}{NN}
+event;yes;{RB}
+event;other;{JJ}
+event;large modifications to house;{JJ}{NNS}{TO}{NN}
+event;house visit needed;{NN}{NN}{VBD}
+event;with PGB;{IN}{NN}
+event;yes;{RB}
+event;no;{DT}
+event;always;{RB}
+event;only if building advice needed;{RB}{IN}{NN}{NN}{VBD}
+event;Process start;{VB}{NN}
+event;house visit needed and medical advice needed;{NN}{NN}{VBN}{CC}{JJ}{NN}{VBN}
+event;no house visit but medical advice needed;{DT}{NN}{NN}{CC}{JJ}{NN}{VBN}
+event;no;{DT}
+event;transportation facilities;{NN}{NNS}
+event;no house visit and no medical advice needed;{DT}{NN}{NN}{CC}{DT}{JJ}{NN}{VBN}
+event;no PGB;{DT}{NN}
+event;help with the house hold;{NN}{IN}{DT}{NN}{NN}
+event;only if no PGB;{RB}{IN}{DT}{NN}
+event;always;{RB}
+event;always;{RB}
+event;Process end;{VB}{NN}

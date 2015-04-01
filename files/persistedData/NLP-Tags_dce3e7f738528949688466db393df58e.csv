@@ -1,0 +1,22 @@
+dce3e7f738528949688466db393df58e;Granting of Share of Long-Term Incentive to Employee
+function;Creation / Correction of Grant Plan;{NN}{:}{NN}{IN}{NNP}
+function;Employee Notification of Granting of Long-Term Incentive;{NN}{NN}{IN}{NN}{IN}{NNP}
+function;Approval of Grant Plan;{NN}{IN}{NNP}
+function;Granting of Long-Term Incentives;{NN}{IN}{NNP}{NNS}
+function;Consolidation of Grant Plan;{NN}{IN}{NNP}
+function;Delegation of Need to Correct Grant Plan;{NN}{IN}{NNP}{TO}{NNP}
+function;Delegation of Need for Grant;{NN}{IN}{NNP}{IN}{NNP}
+function;Determination of Specifications for Granting;{NN}{IN}{NNS}{IN}{VBG}
+event;Need for determination of specifications for granting;{VBN}{IN}{NN}{IN}{NNS}{IN}{VBG}
+event;Specifications for granting exist;{NNS}{IN}{VBG}{VBP}
+event;Need for granting exists;{VBN}{IN}{VBG}{VBZ}
+event;Long-term incentives program is implemented;{JJ}{NNS}{NN}{VBZ}{VBN}
+event;Need for employee notification of granting;{VBN}{IN}{NN}{NN}{IN}{VBG}
+event;Grant plan exists for consolidation;{NNP}{NN}{VBZ}{IN}{NN}
+event;Need to correct grant plan exists;{VBN}{TO}{VB}{NN}{NN}{VBZ}
+event;Grant plan is approved;{NNP}{NN}{VBZ}{VBN}
+event;Employee long-term incentive is granted;{NN}{JJ}{NN}{VBZ}{VBN}
+event;Employee is notified of granting;{NN}{VBZ}{VBN}{IN}{VBG}
+event;Need for granting exists and cannot be delegated further;{VBN}{IN}{VBG}{VBZ}{CC}{MD}{RB}{VB}{VBN}{RB}
+event;Need to correct exists and cannot be delegated further;{VBN}{TO}{VB}{VBZ}{CC}{MD}{RB}{VB}{VBN}{RB}
+event;Grant plan is released for approval;{NNP}{NN}{VBZ}{VBN}{IN}{NN}

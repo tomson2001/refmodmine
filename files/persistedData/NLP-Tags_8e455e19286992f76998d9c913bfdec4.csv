@@ -1,0 +1,17 @@
+8e455e19286992f76998d9c913bfdec4;Personnel Appraisal
+function;Planning and Organization of Personnel Appraisal;{NNP}{CC}{NNP}{IN}{NNP}{NN}
+function;Monitoring of Personnel Appraisal;{NN}{IN}{NNP}{NN}
+function;Performance of Personnel Appraisal;{NNP}{IN}{NNP}{NN}
+function;Design of Enterprise Personnel Appraisal System;{NN}{IN}{NNP}{NN}{NN}
+event;Valid personnel appraisal exists;{JJ}{NNS}{NN}{VBZ}
+event;Personnel appraisal results are transmitted to those concerned;{NNP}{NN}{NNS}{VBP}{VBN}{TO}{DT}{VBN}
+event;Need for personnel appraisal system exists;{VBN}{IN}{NNS}{NN}{NN}{VBZ}
+event;Personnel appraisal system must be corrected;{NNP}{NN}{NN}{MD}{VB}{VBN}
+event;Planning and organization for personnel appraisal is complete;{NNP}{CC}{NN}{IN}{NNS}{NN}{VBZ}{JJ}
+event;Updated profile of appraisee exists;{VBN}{NN}{IN}{NN}{VBZ}
+event;Additional implementation actions are required;{JJ}{NN}{NNS}{VBP}{VBN}
+event;Need to monitor personnel appraisal exists;{VBN}{TO}{VB}{NNS}{NN}{VBZ}
+event;Personnel appraisal must be performed;{NNP}{NN}{MD}{VB}{VBN}
+event;Personnel appraisal system is implemented;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Need for personnel appraisal exists;{VBN}{IN}{NNS}{NN}{VBZ}
+event;Personnel appraisal must be corrected;{NNP}{NN}{MD}{VB}{VBN}

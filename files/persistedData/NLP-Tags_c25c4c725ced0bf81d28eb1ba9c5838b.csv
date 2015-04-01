@@ -1,0 +1,19 @@
+c25c4c725ced0bf81d28eb1ba9c5838b;Long-Term Planning
+function;Transfer of Stock/ Requirement Data to Inventory Controlling;{NN}{IN}{NNP}{:}{NN}{NNS}{TO}{NNP}
+function;Planning Scenario Processing;{NNP}{NN}{NN}
+function;Transfer Activity Type Requirement to Cost Accounting;{NN}{NN}{NN}{NN}{TO}{NN}{NN}
+function;Long-Term Planning - Total Planning;{NNP}{:}{JJ}{NNP}
+function;Transfer of External Procurement Data to Purchasing Information System;{NN}{IN}{NNP}{TO}{NNP}
+function;Long-Term Planning - Single-Item;{NNP}{:}{NNP}
+function;Long-Term Planning: Evaluation;{NNP}{:}{NN}
+event;Stock/ requirements list to be processed;{NNP}{:}{NNS}{NN}{TO}{VB}{VBN}
+event;Demand Program Created;{NN}{NN}{VBN}
+event;Demand program to be planned in simulative mode;{NN}{NN}{TO}{VB}{VBN}{IN}{JJ}{NN}
+event;Data Transferred to Cost Accounting;{NNS}{VBN}{TO}{NN}{NN}
+event;Data Transferred to Inventory Controlling;{NNS}{VBN}{TO}{NNP}
+event;Dependent Requirement Created;{JJ}{NN}{VBN}
+event;Planning scenario is processed;{NNP}{NN}{VBZ}{VBN}
+event;Planning results or stock/ reqmts situation is processed;{NNP}{VBZ}{CC}{NN}{:}{NNS}{NN}{VBZ}{VBN}
+event;Data trans- ferred to purchasing info system;{NNS}{JJ}{:}{VBN}{TO}{VBG}{NN}{NN}
+event;MRP list is created;{NN}{NN}{VBZ}{VBN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}

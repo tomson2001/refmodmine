@@ -1,0 +1,62 @@
+afb3e86aa2594be82deb23b3efdf31aa;Fig.45: MOR YAWL model for MunG
+function;Enter data about issue;{VB}{NNS}{IN}{NN}
+function;Possible solution;{JJ}{NN}
+function;Handle issue;{VB}{NN}
+function;Process continue;{VB}{VB}
+function;Information complete;{NN}{JJ}
+function;Receive confirmation;{VB}{NN}
+function;Issue signed invoice;{NN}{VBD}{NN}
+function;Contract person reporting issue;{NN}{NN}{VBG}{NN}
+function;Known issue;{VBN}{NN}
+function;Assign categ resp person and dep;{VB}{NN}{NN}{NN}{CC}{NN}
+function;Need to plan in batch;{VBN}{TO}{VB}{IN}{NN}
+function;Transmit handling problem;{VB}{VBG}{NN}
+function;Start case;{NNP}{NN}
+function;Agree with contractor;{VB}{IN}{NN}
+function;Ask for more information;{VB}{IN}{JJR}{NN}
+function;Send written feedback to person reporting issue;{VB}{VBN}{NN}{TO}{NN}{VBG}{NN}
+function;Printout receipt;{NNP}{NN}
+function;Ask cust what product he is there for;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+function;Contact person who reported;{NN}{NN}{WP}{VBD}
+function;Fill in info about issue;{VB}{IN}{NN}{IN}{NN}
+function;Close case;{JJ}{NN}
+function;Process continue;{VB}{VB}
+function;Receive call during bus hours;{VB}{NN}{IN}{NN}{NNS}
+function;Perform workorder;{VB}{NN}
+function;Enter data about the informer;{VB}{NNS}{IN}{DT}{NN}
+function;Give assignment to contractor;{VB}{NN}{TO}{NN}
+function;Fill in contact info;{VB}{IN}{NN}{NN}
+function;Inform person who reported;{VB}{NN}{WP}{VBD}
+function;Urgent issue;{JJ}{NN}
+function;Direct to desk;{JJ}{TO}{NN}
+event;status change to Possible solution;{NN}{NN}{TO}{JJ}{NN}
+event;the end;{DT}{NN}
+event;status change to Give assignment to contractor;{NN}{NN}{TO}{VB}{NN}{TO}{NN}
+event;status change to Receive call during bus hours;{NN}{NN}{TO}{VB}{NN}{IN}{NN}{NNS}
+event;yes;{RB}
+event;no;{DT}
+event;status change to Contract person reporting issue;{NN}{NN}{TO}{NNP}{NN}{VBG}{NN}
+event;status change to Issue signed invoice;{NN}{NN}{TO}{NNP}{VBD}{NN}
+event;status change to Receive confirmation;{NN}{NN}{TO}{VB}{NN}
+event;status change to Perform workorder;{NN}{NN}{TO}{VB}{NN}
+event;status change to Start case;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Enter data about the informer;{NN}{NN}{TO}{VB}{NNS}{IN}{DT}{NN}
+event;status change to Information complete;{NN}{NN}{TO}{NNP}{JJ}
+event;status change to Need to plan in batch;{NN}{NN}{TO}{VBN}{TO}{VB}{IN}{NN}
+event;yes;{RB}
+event;status change to Fill in info about issue;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NN}
+event;no;{DT}
+event;status change to Close case;{NN}{NN}{TO}{VB}{NN}
+event;status change to Known issue;{NN}{NN}{TO}{VBN}{NN}
+event;plan in batch;{NN}{IN}{NN}
+event;no;{DT}
+event;status change to Ask cust what product he is there for;{NN}{NN}{TO}{VB}{NN}{WDT}{NN}{PRP}{VBZ}{RB}{IN}
+event;status change to Handle issue;{NN}{NN}{TO}{VB}{NN}
+event;status change to Urgent issue;{NN}{NN}{TO}{JJ}{NN}
+event;status change to Transmit handling problem;{NN}{NN}{TO}{VB}{VBG}{NN}
+event;status change to Enter data about issue;{NN}{NN}{TO}{VB}{NNS}{IN}{NN}
+event;status change to Fill in contact info;{NN}{NN}{TO}{VB}{IN}{NN}{NN}
+event;status change to Send written feedback to person reporting issue;{NN}{NN}{TO}{VB}{JJ}{NN}{TO}{NN}{VBG}{NN}
+event;status change to Printout receipt;{NN}{NN}{TO}{NNP}{NN}
+event;status change to Direct to desk;{NN}{NN}{TO}{JJ}{TO}{NN}
+event;yes;{RB}

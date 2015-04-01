@@ -1,0 +1,20 @@
+ea5eb502c9eb24cb85eeba0a6a17b2b6;New Transactions
+function;Process Inquiry;{VB}{NNP}
+function;Process Contract;{VB}{NNP}
+function;Process Disbursement;{VB}{NNP}
+function;Loan Approval;{NN}{NN}
+function;Process Offer;{VB}{NN}
+function;Check Credit Standing;{VB}{NNP}{VBG}
+function;Process Application;{VB}{NN}
+event;Loan contract was processed;{NN}{NN}{VBD}{VBN}
+event;Loan contract to be created;{NN}{NN}{TO}{VB}{VBN}
+event;Payment program to be triggered;{NN}{NN}{TO}{VB}{VBN}
+event;Loan application to be checked;{NN}{NN}{TO}{VB}{VBN}
+event;Loan application was accepted;{NN}{NN}{VBD}{VBN}
+event;Loan application to be approved;{NN}{NN}{TO}{VB}{VBN}
+event;Loan application was converted to offer status;{NN}{NN}{VBD}{VBN}{TO}{VB}{NN}
+event;Loan application was rejected;{NN}{NN}{VBD}{VBN}
+event;Loan offer to be processed;{NN}{NN}{TO}{VB}{VBN}
+event;Interested party was created;{JJ}{NN}{VBD}{VBN}
+event;Loan application to be processed;{NN}{NN}{TO}{VB}{VBN}
+event;Interested party makes loan application;{JJ}{NN}{VBZ}{NN}{NN}

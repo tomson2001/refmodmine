@@ -1,0 +1,4 @@
+17a7965373b053e08bcbc38a43f52c22;Correspondence with Customers
+function;Correspondence with Customers;{NN}{IN}{NNS}
+event;Correspondence processed;{NN}{VBN}
+event;Correspondence to be sent;{NN}{TO}{VB}{VBN}

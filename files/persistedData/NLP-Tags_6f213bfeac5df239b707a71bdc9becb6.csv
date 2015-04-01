@@ -1,0 +1,10 @@
+6f213bfeac5df239b707a71bdc9becb6;Account Analysis [A/R]
+function;Customer Evaluations;{NN}{NNS}
+function;Customer Line Item Analysis;{NN}{NN}{NNP}{NN}
+function;Balance Analysis;{NN}{NN}
+function;Credit Management Analysis;{NNP}{NN}
+event;Credit management analysis to be carried out;{NNP}{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Balance analysis to be carried out;{NN}{NN}{TO}{VB}{VBN}{RP}
+event;Account analysis made;{NNP}{NN}{VBD}
+event;Evaluations exist;{NNS}{VBP}
+event;Line item analysis to be carried out;{NNP}{NN}{NN}{TO}{VB}{VBN}{RP}

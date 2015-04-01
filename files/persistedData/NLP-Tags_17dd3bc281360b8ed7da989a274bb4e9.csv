@@ -1,0 +1,22 @@
+17dd3bc281360b8ed7da989a274bb4e9;Profit Planning
+function;Manual Profit Planning;{NNP}
+function;Analysis of Results And Contribution Margins;{NN}{IN}{NNS}{CC}{NN}{NNS}
+function;Project Settlement;{NNP}
+function;Settlement of Overhead Cost Orders (Planning Data);{NNP}{IN}{NN}{NN}{NNS}{-LRB-}{NNP}{-RRB-}
+function;Planned Allocation Cost Center Costs to Profitability Analysis;{NNP}{NN}{NNP}{NNS}{TO}{NNP}{NN}
+function;Creation of Proposal for Profit Planning;{NN}{IN}{NNP}{IN}{NNP}
+function;Planned Allocation of Process Costs to Profitability Analysis;{NNP}{IN}{VB}{NNS}{TO}{NNP}{NN}
+function;Valuation of Sales Planning;{NN}{IN}{NNS}{NNP}
+event;Project costs are allocated;{NN}{NNS}{VBP}{VBN}
+event;Control measures taken due to variances;{NN}{NNS}{VBN}{JJ}{TO}{NNS}
+event;Settle project;{VB}{NN}
+event;Plan Proposal for Sales Planning to be Created;{NNP}{IN}{NNS}{NNP}{TO}{VB}{VBN}
+event;Sales plan is consistent and can be valuated;{NNS}{VBP}{VBZ}{JJ}{CC}{MD}{VB}{VBN}
+event;Overhead cost orders are allocated;{NN}{NN}{NNS}{VBP}{VBN}
+event;Plan needs to be changed;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Plan allocation of process costs required;{NNP}{NN}{IN}{NN}{NNS}{VBN}
+event;Plan allocation of cost center costs required;{NNP}{NN}{IN}{NN}{NN}{NNS}{VBN}
+event;Process costs are allocated;{VB}{NNS}{VBP}{VBN}
+event;Cost center costs are allocated;{NN}{NN}{NNS}{VBP}{VBN}
+event;Organizational operating profit (plan) exists;{JJ}{NN}{NN}{-LRB-}{NN}{-RRB-}{VBZ}
+event;Overhead cost orders to be settled;{NN}{NN}{NNS}{TO}{VB}{VBN}

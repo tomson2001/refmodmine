@@ -1,0 +1,19 @@
+ff2a9053b50747588da90a23fe6cee13;Business Planning
+function;Create Distribution Key;{VB}{NN}{NN}
+function;Maintain forecast profiles;{VB}{NN}{NNS}
+function;Maintain planner profiles;{VB}{NN}{NNS}
+function;Change Revaluation Factor;{NNP}{NN}
+function;Maintain weighting group;{VB}{NN}{NN}
+function;Object-Dependent Parameters;{JJ}{NNS}
+function;Create planning layout;{VB}{VBG}{NN}
+function;Maintain calculation formulas for basic key figures;{VB}{NN}{NNS}{IN}{JJ}{JJ}{NNS}
+event;Business Planning Carried Out;{NNP}{VBD}{IN}
+event;Weighting Group Maintained;{NNP}
+event;Distribution Key Created;{NN}{NN}{VBN}
+event;Data Transfer Specified;{NNS}{NN}{VBN}
+event;Forecast Profiles Maintained;{NN}{NNS}{VBN}
+event;Object-dependent Parameters Set Up;{JJ}{NNS}{VB}{RP}
+event;Planning Layout Defined;{NNP}
+event;Planning Layout to be defined;{NNP}{TO}{VB}{VBN}
+event;Planner Profiles Maintained;{NN}{NNS}{VBN}
+event;Revaluation Key Changed;{NN}{NN}{VBN}

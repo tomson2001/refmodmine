@@ -1,0 +1,4 @@
+47081d9f007a18e28cb9b43b8dfe22b5;Table Maintenance
+function;Table Definition and Installation;{NNP}{CC}{NN}
+event;Table group must be created;{NNP}{NN}{MD}{VB}{VBN}
+event;Ledger is ready to be updated;{NNP}{VBZ}{JJ}{TO}{VB}{VBN}

@@ -1,0 +1,31 @@
+651b1fe4d1ee35555c7d15599dbf1dfb;B.I.091_Trigger and action control of requirements planning
+function;M. Distribution to users;{NNP}{NN}{TO}{NNS}
+function;M. Determine inventory level/ reservation;{NNP}{NN}{NN}{:}{NN}
+function;M. Estimate secondary requirement;{NNP}{JJ}{NN}
+function;M. Primary requirements planning;{NNP}{JJ}{NNS}{VBG}
+function;M. Analysis whether net change or reoptimization;{NNP}{IN}{JJ}{NN}{CC}{NN}
+function;M. Bill of materials management;{NNP}{IN}{NNS}{NN}
+function;M. Consumptionbased requirement forecast;{NNP}{NN}{NN}
+function;M. Production;{NNP}
+function;M. Forward scheduling;{NNP}{RB}{NN}
+function;M. Estimate net requirement;{NNP}{NN}{NN}
+function;M. Check whether date is in the past;{NNP}{VB}{IN}{NN}{VBZ}{IN}{DT}{NN}
+function;M. Estimate gross requirement;{NNP}{JJ}{NN}
+function;M. Lot sizing;{NNP}{NN}{VBG}
+function;M. Purchasing;{NNP}
+event;Reoptimization chosen;{NN}{VBN}
+event;Net requirement estimated;{JJ}{NN}{VBN}
+event;Net change chosen;{JJ}{NN}{VBN}
+event;Occurrence of original requirement;{NN}{IN}{JJ}{NN}
+event;Secondary requirement estimated;{JJ}{NN}{VBN}
+event;Order generated;{NNP}{VBD}
+event;Work load distrubed;{NN}{NN}{VBD}
+event;Scheduled deadline reached;{VBN}{NN}{VBD}
+event;Bill of materials updated;{NNP}{IN}{NNS}{VBN}
+event;Plant disruption occured;{NN}{NN}{VBD}
+event;Release for secondary requirement estimating;{NNP}{IN}{JJ}{NN}{NN}
+event;Scheduling completed;{NN}{VBD}
+event;Reservation completed;{NN}{VBD}
+event;Date is in the past;{NN}{VBZ}{IN}{DT}{NN}
+event;Gross requirement estimated;{NNP}{NN}{VBD}
+event;Delivery updated;{NN}{VBN}

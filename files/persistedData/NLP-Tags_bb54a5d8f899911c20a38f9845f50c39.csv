@@ -1,0 +1,26 @@
+bb54a5d8f899911c20a38f9845f50c39;C.I.007_EPC for Product development
+function;Evaluate if production req. are met;{VB}{IN}{NN}{NN}{.}
+function;Marketing;{NNP}
+function;Equipment making;{NNP}{VBG}
+function;Evaluate if quality req. are met;{VB}{IN}{NN}{NN}{.}
+function;Evaluate if service req. are met;{VB}{IN}{NN}{NN}{.}
+function;Production;{NN}
+function;Create rough design;{VB}{JJ}{NN}
+function;Quality assurance;{JJ}{NN}
+function;Design engineering;{NN}{NN}
+function;Evaluate if customer req. are met;{VB}{IN}{NN}{NN}{.}
+function;Evaluate if recycling req. are met;{VB}{IN}{VBG}{NN}{.}
+function;Evaluate if purchasing req. are met;{VB}{IN}{VBG}{NN}{.}
+function;Purchasing;{NNP}
+function;Production setup;{NN}{NN}
+function;Documentation;{NN}
+function;Detailed design developed;{JJ}{NN}{VBD}
+function;Costing;{VBG}
+function;Evaluate if cost req. are met;{VB}{IN}{NN}{NN}{.}
+function;Service;{NNP}
+event;Evaluation negativ;{NN}{NN}
+event;Detailed design developed;{JJ}{NN}{VBD}
+event;Rough design created;{JJ}{NN}{VBN}
+event;Evaluation positive;{NN}{JJ}
+event;End;{NN}
+event;Procuct (modification) proposal prepared;{NNP}{-LRB-}{NN}{-RRB-}{NN}{VBN}

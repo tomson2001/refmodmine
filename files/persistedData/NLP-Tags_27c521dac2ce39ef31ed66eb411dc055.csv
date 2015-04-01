@@ -1,0 +1,15 @@
+27c521dac2ce39ef31ed66eb411dc055;Product Safety
+function;Substance Report Processing;{NNP}
+function;Phrase Set Processing;{NN}{VB}{NN}
+function;Document Template Processing;{NNP}
+function;Processing of Substance Report Generation Variants;{NN}{IN}{NNP}{NNS}
+function;Phrase Processing;{NN}{NN}
+function;Substance Classification Using EH+S Expert;{NN}{NN}{VBG}{NN}{NN}
+function;Substance Master Processing for Product Safety;{NNP}{IN}{NNP}
+function;Report Shipping;{NNP}
+event;Processing is completed;{NN}{VBZ}{VBN}
+event;Shipping (printing) of reports is to be triggered;{NN}{-LRB-}{NN}{-RRB-}{IN}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Phrases are to be assigned to the characteristics of the substance properties;{NNS}{VBP}{TO}{VB}{VBN}{TO}{DT}{NNS}{IN}{DT}{NN}{NNS}
+event;Attributes are to be formulated in text form;{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Product Safety data is to be processed;{NNP}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Substance report is to be created;{NN}{NN}{VBZ}{TO}{VB}{VBN}

@@ -1,0 +1,8 @@
+165897e11319e11b72d0fa2bf553b268;Dangerous Goods
+function;Filling Dangerous Goods Master from Substance Database;{VBG}{JJ}{NNP}{NN}{IN}{NNP}
+function;Subsequent Processing of Dangerous Goods Master;{JJ}{NN}{IN}{NNP}
+function;Dangerous Goods Master Distribution;{JJ}{NNP}{NN}
+event;Automatic retrieval of dangerous goods data is to be carried out;{NNP}{NN}{IN}{JJ}{NNS}{NNS}{VBZ}{TO}{VB}{VBN}{RP}
+event;Dangerous goods master is to be processed;{JJ}{NNS}{NN}{VBZ}{TO}{VB}{VBN}
+event;Dangerous goods master is to be distributed;{JJ}{NNS}{NN}{VBZ}{TO}{VB}{VBN}
+event;Processing is completed;{NN}{VBZ}{VBN}

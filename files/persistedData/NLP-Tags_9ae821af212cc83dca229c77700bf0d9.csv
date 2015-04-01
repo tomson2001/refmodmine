@@ -1,0 +1,23 @@
+9ae821af212cc83dca229c77700bf0d9;Data transfer
+function;Comments;{NNS}
+function;Transaction data;{NN}{NNS}
+function;Master Data Hierarchy;{NNP}
+function;External Systems;{NNPS}
+function;Repeatability of Data Transfer (Automation/ Scheduling);{NN}{IN}{NNS}{NN}{-LRB-}{NN}{:}{NN}{-RRB-}
+function;Steps when setting up a data transfer;{NNS}{WRB}{VBG}{RP}{DT}{NN}{NN}
+function;Control Report Portfolio;{NNP}
+function;File;{VB}
+function;Master data;{NN}{NNS}
+function;Transfer procedure;{NN}{NN}
+event;Comments Defined;{NNS}{VBN}
+event;Master Data Hierarchy Defined;{NNP}
+event;Control Report Portfolio Defined;{NNP}
+event;Transfer Procedure Defined;{NN}{NNP}
+event;Data Transfer Set Up;{NNS}{NN}{VB}{RP}
+event;Data Transfer Steps Defined;{NNS}{NN}{VBZ}{VBN}
+event;File Defined;{VB}{VBN}
+event;Data is to be transferred from Source System;{NNS}{VBZ}{TO}{VB}{VBN}{IN}{NNP}
+event;Data is to be transferred from Other Applications;{NNS}{VBZ}{TO}{VB}{VBN}{IN}{JJ}{NNS}
+event;Non-SAP Systems Defined;{NNP}
+event;Transaction Data Defined;{NNP}{VBN}
+event;Master Data Defined;{NNP}{VBN}

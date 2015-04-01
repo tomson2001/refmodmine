@@ -1,0 +1,8 @@
+b218ab1d1ccc17a8186378bcdc597a34;Declarations to the Authorities
+function;Declarations to the Authorities;{NNS}{TO}{DT}{NNS}
+function;Goods Catalog Processing;{NNP}{NN}{NN}
+event;Goods catalog to be created;{NNP}{NN}{TO}{VB}{VBN}
+event;Declarations transmitted;{NNS}{VBD}
+event;Declarations to the authorities to be carried out;{NNS}{TO}{DT}{NNS}{TO}{VB}{VBN}{RP}
+event;Billing doc. relevant to accounting is created;{NN}{NN}{.}
+event;Goods catalog transmitted to authorities;{NNP}{NN}{VBD}{TO}{NNS}

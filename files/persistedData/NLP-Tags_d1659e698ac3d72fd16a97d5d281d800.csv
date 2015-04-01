@@ -1,0 +1,14 @@
+d1659e698ac3d72fd16a97d5d281d800;Personnel Actions
+function;Employee leaving;{NN}{VBG}
+function;Employee hiring;{NN}{NN}
+function;Employee transfer;{NN}{NN}
+event;Time for restart reached;{NNP}{IN}{VB}{VBN}
+event;Employee is retired;{NN}{VBZ}{VBN}
+event;Position is vacant;{NN}{VBZ}{JJ}
+event;Reason for employee leaving has arisen;{NN}{IN}{NN}{NN}{VBZ}{VBN}
+event;Employee is in an inactive work relationship;{NN}{VBZ}{IN}{DT}{JJ}{NN}{NN}
+event;Employee staffs position;{NN}{NNS}{NN}
+event;Employee is active;{NN}{VBZ}{JJ}
+event;Notification given of approval of employee transfer;{NN}{VBN}{IN}{NN}{IN}{NN}{NN}
+event;Applicant must be offered contract for vacancy;{NN}{MD}{VB}{VBN}{NN}{IN}{NN}
+event;Employee has left;{NN}{VBZ}{VBN}

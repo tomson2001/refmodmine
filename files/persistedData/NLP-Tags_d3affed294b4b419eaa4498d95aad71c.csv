@@ -1,0 +1,8 @@
+d3affed294b4b419eaa4498d95aad71c;Business Event Monitoring
+function;Business Event Monitoring;{NNP}{VBG}
+event;Business event requirement must be determined;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Business event catalog must be corrected;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Need for business event planning exists;{VBN}{IN}{NN}{NN}{NN}{VBZ}
+event;Need for business event monitoring exists;{VBN}{IN}{NN}{NN}{NN}{VBZ}
+event;Business event planning must be corrected;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Resource reservation plan must be corrected;{NNP}{NN}{NN}{MD}{VB}{VBN}

@@ -1,0 +1,6 @@
+5f904cd1d9b1df33b7d35b432b9eee5b;Schedule Update and Confirmation
+function;Schedule Update;{VB}{NNP}
+function;Actual Date Entry;{JJ}{NN}{NN}
+function;Activity Confirmation;{NN}{NN}
+event;Check project data;{VB}{NN}{NNS}
+event;Check dates and transactions;{VB}{NNS}{CC}{NNS}

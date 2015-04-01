@@ -1,0 +1,33 @@
+dea9c059fbfed5e5660c36ed23339b07;Admission Potsdam
+function;receive rejection;{VB}{NN}
+function;rank case;{NN}{NN}
+function;Add Certificate of Bachelor Degree;{VB}{NNP}{IN}{NNP}
+function;Case of Hardship?;{NN}{IN}{NN}{.}
+function;Fill out Application Form;{VB}{RP}{NN}{NN}
+function;complete and in time?;{JJ}{CC}{IN}{NN}{.}
+function;Set additional requirements;{VB}{JJ}{NNS}
+function;Check Application in Time;{VB}{NN}{IN}{NNP}
+function;Accept Application;{VB}{NN}
+function;Add Certificate of german language;{VB}{NNP}{IN}{JJ}{NN}
+function;immatriculate;{JJ}
+function;Hand Application over to Examining Board;{VB}{NN}{IN}{TO}{NNP}
+function;Sum Scores;{NN}{NNS}
+function;german?;{NN}{.}
+function;Receive Application;{VB}{NN}
+function;Attach additional Requirements;{VB}{JJ}{NNS}
+function;Check if Bachelor Equivalent to Uni Potsdam;{VB}{IN}{NNP}{TO}{NNP}
+function;Send Application;{VB}{NN}
+function;Check Application Complete;{VB}{NN}{JJ}
+function;receive acceptance;{VB}{NN}
+function;Send rejection;{VB}{NN}
+function;complete application;{JJ}{NN}
+function;Create and add letter of Motivation;{VB}{CC}{VB}{NN}{IN}{NN}
+function;Add Certificates of Qualification;{VB}{NNS}{IN}{NN}
+function;Add Case-of-Hardship Certificate;{VB}{NNP}
+function;Score Qualifications by 7(1)(b) * 34;{NN}{NNS}{IN}{CD}{-LRB-}{CD}{-RRB-}{-LRB-}{NN}{-RRB-}{SYM}{CD}
+function;Send Acceptance;{VB}{NNP}
+function;Create and Add CV;{VB}{CC}{VB}{NN}
+function;Score Qualifiacations by 7(1)(c) * 15;{NN}{NNS}{IN}{CD}{-LRB-}{CD}{-RRB-}{-LRB-}{NN}{-RRB-}{SYM}{CD}
+function;Score Bachelors Grade by 7(1)(a) * 51;{NN}{NNS}{NNP}{IN}{CD}{-LRB-}{CD}{-RRB-}{-LRB-}{DT}{-RRB-}{SYM}{CD}
+function;Add Recommendations;{VB}{NNS}
+event;End Event;{NN}{NN}

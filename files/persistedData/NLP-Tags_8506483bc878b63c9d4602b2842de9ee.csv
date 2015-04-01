@@ -1,0 +1,28 @@
+8506483bc878b63c9d4602b2842de9ee;Fig.28: GBA2 YAWL model for MunJ
+function;Give GBA extract;{VB}{NNP}{NN}
+function;Process payment;{VB}{NN}
+function;Determine if right product;{VB}{IN}{JJ}{NN}
+function;Call coupon holder;{VB}{NN}{NN}
+function;Ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Ask customer whether he has ID;{VB}{NN}{IN}{PRP}{VBZ}{VBN}
+function;Give receipt;{VB}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Determine fees;{NN}{NNS}
+function;Give coupon;{VB}{NN}
+function;Direct to right product;{JJ}{TO}{JJ}{NN}
+function;Ask customer to bring ID;{VB}{NN}{TO}{VB}{NNP}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Determine whether proof of identity is present;{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+function;No payment;{DT}{NN}
+function;Receive payment;{VB}{NN}
+function;Decide whether to go on;{VB}{IN}{TO}{VB}{IN}
+event;free;{JJ}
+event;process end;{NN}{NN}
+event;no ID present;{DT}{NN}{JJ}
+event;Start Process;{NNP}{VBP}
+event;not free;{RB}{JJ}
+event;right product;{JJ}{NN}
+event;ID present;{NN}{JJ}
+event;not entitled;{RB}{VBN}
+event;wrong product;{JJ}{NN}

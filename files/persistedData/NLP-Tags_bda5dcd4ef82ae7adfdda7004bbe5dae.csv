@@ -1,0 +1,7 @@
+bda5dcd4ef82ae7adfdda7004bbe5dae;Engineering Change Management
+function;Change Analysis;{NNP}{NN}
+function;Change Mgmt with Engineering Change Request/Order (ECR/ECO);{NNP}{IN}{NNP}{NN}{-LRB-}{NN}{-RRB-}
+function;Change Mgmt w/o Engineering Change Request/Order (ECR/ECO);{NNP}{NN}{-LRB-}{NN}{-RRB-}
+event;Check changes;{VB}{NNS}
+event;Changes completed;{NNS}{VBD}
+event;Changes necessary;{NNS}{JJ}

@@ -1,0 +1,6 @@
+aa3fee9990d42aa3e4399755f054fe7a;Planning and Organization of Personnel Appraisal
+function;Planning and Organization of Personnel Appraisal;{NNP}{CC}{NNP}{IN}{NNP}{NN}
+event;Personnel appraisal must be corrected;{NNP}{NN}{MD}{VB}{VBN}
+event;Need for personnel appraisal exists;{VBN}{IN}{NNS}{NN}{VBZ}
+event;Planning and organization for personnel appraisal is complete;{NNP}{CC}{NN}{IN}{NNS}{NN}{VBZ}{JJ}
+event;Personnel appraisal system is implemented;{NNP}{NN}{NN}{VBZ}{VBN}

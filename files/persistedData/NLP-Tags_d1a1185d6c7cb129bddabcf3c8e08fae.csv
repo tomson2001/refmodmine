@@ -1,0 +1,48 @@
+d1a1185d6c7cb129bddabcf3c8e08fae;Fig.33: GBA3 YAWL model for MunE
+function;Inform customer;{VB}{NN}
+function;Citizen address secret;{NNP}{NN}{NN}
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Ask citizen for permission;{VB}{NN}{IN}{NN}
+function;No payment;{DT}{NN}
+function;Send payment request;{VB}{NN}{NN}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Process payment;{VB}{NN}
+function;Copy extract;{VB}{NN}
+function;Determine fees;{NN}{NNS}
+function;Register request;{NNP}{NN}
+function;Send extract;{VB}{NN}
+function;Send mail to appropriate department;{VB}{NN}{TO}{JJ}{NN}
+function;Process continue;{VB}{VB}
+function;Decide admissible;{VB}{JJ}
+function;Free;{NNP}
+function;Archive;{NNP}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Decide to provide extract;{VB}{TO}{VB}{NN}
+function;Provide extract;{VB}{NN}
+function;Weigh interests;{VB}{NNS}
+function;Receive payment;{VB}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+event;no;{DT}
+event;status change to Send extract;{NN}{NN}{TO}{VB}{NN}
+event;status change to Send mail to appropriate department;{NN}{NN}{TO}{VB}{NN}{TO}{JJ}{NN}
+event;no;{DT}
+event;not free;{RB}{JJ}
+event;status change to Determine if copy of ID is present;{NN}{NN}{TO}{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+event;status change to No payment;{NN}{NN}{TO}{DT}{NN}
+event;status change to Produce extract and sign;{NN}{NN}{TO}{VB}{NN}{CC}{NN}
+event;status change to Determine whether requester is entitled;{NN}{NN}{TO}{VB}{IN}{NN}{VBZ}{VBN}
+event;status change to Decide admissible;{NN}{NN}{TO}{VB}{JJ}
+event;secret;{NN}
+event;status change to Determine fees;{NN}{NN}{TO}{VB}{NNS}
+event;status change to Weigh interests;{NN}{NN}{TO}{VB}{NNS}
+event;the end;{DT}{NN}
+event;status change to Decide_to_provide_extract;{NN}{NN}{TO}{NN}
+event;status change to Process payment;{NN}{NN}{TO}{VB}{NN}
+event;status change to Receive payment;{NN}{NN}{TO}{VB}{NN}
+event;yes;{RB}
+event;status change to free;{NN}{NN}{TO}{JJ}
+event;not secret;{RB}{NN}
+event;status change to Copy extract;{NN}{NN}{TO}{VB}{NN}
+event;status change to Register request;{NN}{NN}{TO}{NNP}{NN}
+event;yes;{RB}
+event;status change to Archive;{NN}{NN}{TO}{NNP}

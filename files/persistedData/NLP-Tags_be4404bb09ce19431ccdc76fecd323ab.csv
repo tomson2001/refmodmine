@@ -1,0 +1,20 @@
+be4404bb09ce19431ccdc76fecd323ab;birhtCertificate_p31
+function;Decide family name based on law of nationality of child;{VB}{NN}{NN}{VBN}{IN}{NN}{IN}{NN}{IN}{NN}
+function;register child;{NN}{NN}
+function;Send birth certificate to respective local public office;{VB}{NN}{NN}{TO}{JJ}{JJ}{JJ}{NN}
+function;Check fatherhood;{VB}{NN}
+function;Decide first name based on international law;{VB}{JJ}{NN}{VBN}{IN}{JJ}{NN}
+function;Check for name;{VB}{IN}{NN}
+function;decide together on family name;{VB}{RB}{IN}{NN}{NN}
+function;Check data;{VB}{NNS}
+function;Check international law;{VB}{JJ}{NN}
+function;Send information to Buergeramt via internal IT;{VB}{NN}{TO}{JJ}{IN}{JJ}{PRP}
+function;decide on family name if parents have different family names;{VB}{IN}{NN}{NN}{IN}{NNS}{VBP}{JJ}{NN}{NNS}
+function;Check information of new born child;{VB}{NN}{IN}{JJ}{VBN}{NN}
+function;Request new first name;{VB}{JJ}{JJ}{NN}
+function;open proceeding;{JJ}{NN}
+function;mother chooses family name;{NN}{VBZ}{NN}{NN}
+function;Create birth certificate;{VB}{NN}{NN}
+function;Inform Jugendamt;{VB}{NN}
+function;Decide first name;{VB}{JJ}{NN}
+function;inform responsible court;{VB}{JJ}{NN}

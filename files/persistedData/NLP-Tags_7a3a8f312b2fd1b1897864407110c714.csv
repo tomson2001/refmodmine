@@ -1,0 +1,22 @@
+7a3a8f312b2fd1b1897864407110c714;Service Contract Processing
+function;Service Contract Follow-Up Activity Processing;{NNP}{JJ}{NN}{NN}
+function;Service Contract Cancellation;{NNP}
+function;Billing Processing for Service Contract;{NN}{NN}{IN}{NNP}
+function;Billing Request Processing;{NN}{NNP}
+function;Service Contract Completion and Processing;{NNP}{CC}{NNP}
+event;Service Contract must be Invoiced;{NNP}{MD}{VB}{VBN}
+event;Service contract to be created from contact;{NNP}{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Down payment agreed with customer;{IN}{NN}{VBD}{IN}{NN}
+event;Debit memo request is created for service contract;{NNP}{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Service contract to be created from existing service contract;{NNP}{NN}{TO}{VB}{VBN}{IN}{VBG}{NN}{NN}
+event;Partial payment should be made;{JJ}{NN}{MD}{VB}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Service contract to be canceled as follow-up activity;{NNP}{NN}{TO}{VB}{VBN}{IN}{JJ}{NN}
+event;Subsequent activities are to be carried out;{JJ}{NNS}{VBP}{TO}{VB}{VBN}{RP}
+event;Service contract cancellation has arrived;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Service contract canceled;{NNP}{NN}{VBD}
+event;Miscellaneous Subsequent Activity Performed;{NNP}{JJ}{NN}{VBN}
+event;Service contract to be created w/o ref. to quotation;{NNP}{NN}{TO}{VB}{VBN}{JJ}{NN}{.}
+event;Quotation is valid;{NN}{VBZ}{JJ}
+event;Service contract to be offered;{NNP}{NN}{TO}{VB}{VBN}

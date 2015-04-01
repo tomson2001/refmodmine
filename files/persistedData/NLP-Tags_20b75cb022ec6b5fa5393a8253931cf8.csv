@@ -1,0 +1,16 @@
+20b75cb022ec6b5fa5393a8253931cf8;Personnel time recording
+function;Transfer of planned personnel time specifications as actual;{NN}{IN}{VBN}{NNS}{NN}{NNS}{IN}{JJ}
+function;Entry of Personnel Time Specifications-Actual;{NN}{IN}{NNP}{JJ}
+function;Counting of personnel time specifications;{VBG}{IN}{NNS}{NN}{NNS}
+event;Activity allocation specifications are available;{NN}{NN}{NNS}{VBP}{JJ}
+event;Planned personnel time specifications are available;{NNP}{NNS}{NN}{NNS}{VBP}{JJ}
+event;Personnel time recording infrastructure is available;{NNP}{NN}{VBG}{NN}{VBZ}{JJ}
+event;Person-based work schedules are available;{JJ}{NN}{NNS}{VBP}{JJ}
+event;Transfer of planned personnel time specifications as actual is desired;{NN}{IN}{VBN}{NNS}{NN}{NNS}{IN}{JJ}{VBZ}{VBN}
+event;Need to count personnel time specifications is available;{VBN}{TO}{VB}{NNS}{NN}{NNS}{VBZ}{JJ}
+event;EE - planned working time determination - operative is available;{SYM}{:}{VBN}{VBG}{NN}{NN}{:}{NN}{VBZ}{JJ}
+event;Actual personnel time specifications are available;{JJ}{NNS}{NN}{NNS}{VBP}{JJ}
+event;Entry of personnel time specifications is desired;{NN}{IN}{NNS}{NN}{NNS}{VBZ}{VBN}
+event;Planned personnel time specifications are available;{NNP}{NNS}{NN}{NNS}{VBP}{JJ}
+event;Employee - personnel day times are available;{NN}{:}{NNS}{NN}{NNS}{VBP}{JJ}
+event;Requirement for operative planned working time determination;{NN}{IN}{JJ}{VBN}{VBG}{NN}{NN}

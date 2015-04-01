@@ -1,0 +1,15 @@
+e5d42c3cbae951aacf559491a86c6247;Invoice Verification
+function;Invoice Processing with Reference;{NNP}{IN}{NNP}
+function;Invoice Release;{NNP}
+function;Invoice Overview;{NNP}
+function;Evaluated Receipt Settlement (ERS);{VBN}{NNP}{-LRB-}{NNS}{-RRB-}
+event;Invoice transmitted for vendors records;{NN}{VBD}{IN}{NNS}{NNS}
+event;Invoice posted;{NNP}{VBD}
+event;Material is released;{NN}{VBZ}{VBN}
+event;Payment must be effected;{NN}{MD}{VB}{VBN}
+event;Goods receipt posted;{NNP}{NN}{VBD}
+event;Invoice received;{NNP}{VBD}
+event;Purchase order created;{NN}{NN}{VBN}
+event;Goods receipts to be settled automatically;{NNP}{NNS}{TO}{VB}{VBN}{RB}
+event;Service is accepted;{NNP}{VBZ}{VBN}
+event;Invoice parked;{NNP}{VBD}

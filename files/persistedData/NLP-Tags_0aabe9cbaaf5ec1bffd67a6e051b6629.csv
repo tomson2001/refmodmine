@@ -1,0 +1,10 @@
+0aabe9cbaaf5ec1bffd67a6e051b6629;Transaction Processing
+function;Settlement;{NNP}
+function;Netting Processing;{VBG}{NN}
+function;Process Stock Transactions;{VB}{NNP}{NNS}
+event;Stock transaction was processed;{NNP}{NN}{VBD}{VBN}
+event;Netting proposal was accepted;{VBG}{NN}{VBD}{VBN}
+event;Stock transaction was selected;{NNP}{NN}{VBD}{VBN}
+event;Valuation to be performed;{NN}{TO}{VB}{VBN}
+event;Cash management was updated;{NN}{NN}{VBD}{VBN}
+event;Netting proposal to be edited;{VBG}{NN}{TO}{VB}{VBN}

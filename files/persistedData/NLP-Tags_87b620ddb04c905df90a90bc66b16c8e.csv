@@ -1,0 +1,9 @@
+87b620ddb04c905df90a90bc66b16c8e;Vendor Down Payments
+function;Vendor down payment;{VB}{RP}{NN}
+function;Vendor Down Payment Clearing;{NNP}{NN}{NNP}
+function;Vendor Down Payment Request;{NNP}{NN}{NN}
+event;Vendor down payment request is created;{VB}{RP}{NN}{NN}{VBZ}{VBN}
+event;Clearing is posted;{NNP}{VBZ}{VBN}
+event;Down payment can be cleared automatic.;{IN}{NN}{MD}{VB}{VBN}{JJ}{.}
+event;Down payment is agreed with vendor;{IN}{NN}{VBZ}{VBN}{IN}{NN}
+event;Down payment is to be cleared manually;{IN}{NN}{VBZ}{TO}{VB}{VBN}{RB}

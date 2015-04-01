@@ -1,0 +1,27 @@
+fbe4b9837dd97c128d0df6b8d417eda3;Fig.21: GBA2 YAWL model for MunC
+function;no payment;{DT}{NN}
+function;give GBA extract;{VB}{NNP}{NN}
+function;determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;receive payment;{VB}{NN}
+function;decide whether to go on;{VB}{IN}{TO}{VB}{IN}
+function;process payment;{NN}{NN}
+function;choose product;{VB}{NN}
+function;Give_coupon;{NN}
+function;ask customer whether he has ID;{VB}{NN}{IN}{PRP}{VBZ}{VBN}
+function;ask customer to pay;{VB}{NN}{TO}{VB}
+function;direct to right product;{JJ}{TO}{JJ}{NN}
+function;ask identifying question;{VB}{VBG}{NN}
+function;determine if right product;{VB}{IN}{JJ}{NN}
+function;call coupon holder;{NN}{NN}{NN}
+function;ask customer what product he is requesting;{VB}{NN}{WDT}{NN}{PRP}{VBZ}{VBG}
+function;give receipt;{VB}{NN}
+function;determine fees;{VB}{NNS}
+function;determine whether proof of identity is present;{VB}{IN}{NN}{IN}{NN}{VBZ}{JJ}
+function;waiting for payment;{VBG}{IN}{NN}
+function;produce extract and sign;{VB}{NN}{CC}{NN}
+event;not free;{RB}{JJ}
+event;start case;{VB}{NN}
+event;wrong product;{JJ}{NN}
+event;not entitled;{RB}{VBN}
+event;free;{JJ}
+event;process end;{NN}{NN}

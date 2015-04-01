@@ -1,0 +1,8 @@
+fa7b34b26d129586c15de0387aaecdb7;Preparatory Work: Integration
+function;Preparations Sending System: Consolidation Type Specific;{NNS}{VBG}{NN}{:}{NN}{NN}{JJ}
+function;Preparations Consolidation System;{NNS}{NN}{NN}
+function;Preparations Sender System: Related to All Consolidation Types;{NNS}{NNP}{:}{VBN}{TO}{DT}{NN}{NNS}
+event;Preparation of Sending System Completed;{NN}{IN}{VBG}{NNP}
+event;Consolidation-Type-Specific Preparation Required;{JJ}{NNP}
+event;Preparation of Consolidation System Is Completed;{NN}{IN}{NN}{NN}{VBZ}{VBN}
+event;Cross-Consolidation-Type Preparation Required;{NNP}

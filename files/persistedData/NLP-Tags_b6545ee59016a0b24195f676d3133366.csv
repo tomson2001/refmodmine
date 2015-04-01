@@ -1,0 +1,20 @@
+b6545ee59016a0b24195f676d3133366;Fig.10: GBA1 YAWL model for MunB
+function;Check request in Digital Desk;{VB}{NN}{IN}{NNP}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Fill in payment data;{VB}{IN}{NN}{NNS}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;Send extract;{VB}{NN}
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Indicate in the system as paid via Internet;{VB}{IN}{DT}{NN}{IN}{VBN}{IN}{NN}
+function;Archive;{NNP}
+function;Send mail to Central Desk;{VB}{NN}{TO}{NNP}
+function;Determine fees;{NN}{NNS}
+function;Fill in e-form;{VB}{IN}{NN}
+function;No Payment;{DT}{NN}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Process payment;{VB}{NN}
+event;No;{DT}
+event;Start process;{NNP}{NN}
+event;Process end;{VB}{NN}
+event;Yes;{UH}
+event;Process payment in Finance;{VB}{NN}{IN}{NNP}

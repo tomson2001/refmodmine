@@ -1,0 +1,32 @@
+a6fd113cfbe91212740ca5ff09ce9e22;Cash Position [TR-CM]
+function;Status Analysis;{NNP}{NN}
+function;Planning;{NNP}
+function;Check;{VB}
+function;Incoming Data;{JJ}{NNS}
+event;Bank data was processed;{NNP}{NNS}{VBD}{VBN}
+event;Bill of exchange presentation completed;{NNP}{IN}{NN}{NN}{VBN}
+event;Balance of bills of exchange payable to be settled;{NN}{IN}{NNS}{IN}{NN}{JJ}{TO}{VB}{VBN}
+event;Bank sends DME file on bill holdings;{NNP}{VBZ}{NNP}{VB}{IN}{NN}{NNS}
+event;Bank document posted;{NNP}{NN}{VBD}
+event;Clear items using bank procedure (specific to Germany);{JJ}{NNS}{VBG}{NN}{NN}{-LRB-}{JJ}{TO}{NNP}{-RRB-}
+event;Planned value date to be compared with actual value date;{NNP}{NN}{NN}{TO}{VB}{VBN}{IN}{JJ}{NN}{NN}
+event;Carry out incoming payment via account statement transfer;{VB}{RP}{JJ}{NN}{IN}{NN}{NN}{NN}
+event;Bank/ customer payment advice for payment inflow/outflow;{NNP}{:}{NN}{NN}{NN}{IN}{NN}{NN}
+event;Cash concentration posted;{NN}{NN}{VBD}
+event;Cash Management advice notes exist;{NNP}{NN}{VBZ}{VBP}
+event;Payment advices to be changed;{NN}{NNS}{TO}{VB}{VBN}
+event;Status analysis carried out;{NN}{NN}{VBD}{RP}
+event;Payment advices to be archived;{NN}{NNS}{TO}{VB}{VBN}
+event;Electronic bank statements received;{JJ}{NN}{NNS}{VBD}
+event;Payment advice transferred to bank;{NN}{NN}{VBN}{TO}{NN}
+event;Account statement (paper) received;{NNP}{NN}{-LRB-}{NN}{-RRB-}{VBD}
+event;Bank message about debit memo exists;{NNP}{NN}{IN}{NN}{NN}{VBZ}
+event;Clearing is posted;{NNP}{VBZ}{VBN}
+event;Value dates were compared;{NNP}{NNS}{VBD}{VBN}
+event;Items to be cleared using POR procedure (CH);{NNS}{TO}{VB}{VBN}{VBG}{NN}{NN}{-LRB-}{NN}{-RRB-}
+event;Cashed checks to be edited;{VBN}{NNS}{TO}{VB}{VBN}
+event;Bill of exchange payment posted;{NNP}{IN}{NN}{NN}{VBD}
+event;Lockbox file has arrived;{NNP}{NN}{VBZ}{VBN}
+event;Payment order with reference number received;{NN}{NN}{IN}{NN}{NN}{VBD}
+event;Payment advice processing completed;{NN}{NN}{NN}{VBN}
+event;Payment advice created;{NN}{NN}{VBN}

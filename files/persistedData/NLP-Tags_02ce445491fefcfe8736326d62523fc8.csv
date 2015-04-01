@@ -1,0 +1,79 @@
+02ce445491fefcfe8736326d62523fc8;Repairs Processing in Service Center (Inhouse)
+function;Settlement and Completion;{NNP}{CC}{NNP}
+function;Goods Movements;{NNP}{NNS}
+function;Service Order;{NNP}
+function;Warehouse Management;{NNP}
+function;Repair Order;{NNP}
+function;Service Notification;{NNP}
+function;Delivery and Transportation;{NN}{CC}{NN}
+function;Customer Complaint;{NN}{NN}
+function;Risk/ Credit Management;{NN}{:}{NNP}
+function;Completion Confirmation;{NNP}{NN}
+function;Billing;{NN}
+event;Credit limit check is to be performed manually;{NNP}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Retrograde withdrawal to be posted;{NNP}{NN}{TO}{VB}{VBN}
+event;Open purchase requisitions for non-stock material are deleted;{VB}{NN}{NNS}{IN}{JJ}{NN}{VBP}{VBN}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Operations and Order Must Be Confirmed;{NNP}{CC}{NNP}{MD}{VB}{VBN}
+event;Service order to be created from sales order item;{NNP}{NN}{TO}{VB}{VBN}{IN}{NNS}{NN}{NN}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Individual operations are confirmed;{JJ}{NNS}{VBP}{VBN}
+event;Default values for service product are maintained;{NNP}{NNS}{IN}{NN}{NN}{VBP}{VBN}
+event;Service order to be created for service notification;{NNP}{NN}{TO}{VB}{VBN}{IN}{NN}{NN}
+event;Service notification data is to be processed;{NNP}{NN}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Technical findings are entered;{NNP}{NNS}{VBP}{VBN}
+event;Material withdrawal is to be posted;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Difference is settled on srce bin location;{NN}{VBZ}{VBN}{IN}{NN}{NN}{NN}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Sales and Distribution Document Must Be Created for Service Notification;{NNS}{CC}{NN}{NNP}{MD}{VB}{VBN}{IN}{NNP}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Difference has been posted to interface;{NN}{VBZ}{VBN}{VBN}{TO}{NN}
+event;Service order is created in background;{NNP}{NN}{VBZ}{VBN}{IN}{NN}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Technical findings are entered;{NNP}{NNS}{VBP}{VBN}
+event;Actual costs are updated to maintenance order;{JJ}{NNS}{VBP}{VBN}{TO}{NN}{NN}
+event;Measurement doc. should be created for notif.;{NN}{NN}{.}
+event;Service product exists;{NNP}{NN}{VBZ}
+event;Goods issue blocked for export;{NNP}{NN}{VBD}{IN}{NN}
+event;External sales force/ customer complaint is to be created;{JJ}{NNS}{NN}{:}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Capacity load is updated;{NN}{NN}{VBZ}{VBN}
+event;Defect requires manual quality notification;{NN}{VBZ}{JJ}{NN}{NN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Credit limit check is to be performed automatically;{NNP}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Services are to be entered;{NNPS}{VBP}{TO}{VB}{VBN}
+event;Contract is valid;{NN}{VBZ}{JJ}
+event;Service requirement arose;{NNP}{NN}{VBD}
+event;Order generated and delivery opened;{NNP}{VBD}{CC}{NN}{VBD}
+event;Terms of credit have changed;{NNS}{IN}{NN}{VBP}{VBN}
+event;Working hours data was analyzed;{VBG}{NNS}{NNS}{VBD}{VBN}
+event;Maintenance order is printed;{NN}{NN}{VBZ}{VBN}
+event;Material is removed from stock;{NN}{VBZ}{VBN}{IN}{NN}
+event;Maintenance order is partially confirmed;{NN}{NN}{VBZ}{RB}{VBN}
+event;Quotation is monitored;{NN}{VBZ}{VBN}
+event;Generate sales order-related billing document;{VB}{NNS}{JJ}{NN}{NN}
+event;Declarations transmitted;{NNS}{VBD}
+event;Order Should Be Technically Completed;{NNP}{MD}{VB}{NNP}
+event;Maintenance order is confirmed completely;{NN}{NN}{VBZ}{VBN}{RB}
+event;Billing document is monitored;{NN}{NN}{VBZ}{VBN}
+event;Service order should be created manually;{NNP}{NN}{MD}{VB}{VBN}{RB}
+event;Material is not available;{NN}{VBZ}{RB}{JJ}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Open material reservations are deleted;{VB}{NN}{NNS}{VBP}{VBN}
+event;Customer release order received;{NN}{NN}{NN}{VBD}
+event;Maintenance order is completed with time reference;{NN}{NN}{VBZ}{VBN}{IN}{NN}{NN}
+event;Legal control data is processed;{JJ}{NN}{NNS}{VBZ}{VBN}
+event;Capacity requirement records are deleted;{NN}{NN}{NNS}{VBP}{VBN}
+event;Material reservation can be withdrawn;{NN}{NN}{MD}{VB}{VBN}
+event;Inventory management posting already carried out;{NN}{NN}{VBG}{RB}{VBN}{RP}
+event;Sales document is to be created for the quality notification;{NNS}{VBP}{VBZ}{TO}{VB}{VBN}{IN}{DT}{NN}{NN}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Change to terms of credit refused;{NNP}{TO}{NNS}{IN}{NN}{VBD}
+event;Goods movement is posted;{NNP}{NN}{VBZ}{VBN}
+event;Notification is printed;{NN}{VBZ}{VBN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Quotation items are rejected;{NN}{NNS}{VBP}{VBN}

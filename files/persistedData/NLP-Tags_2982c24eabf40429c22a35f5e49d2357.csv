@@ -1,0 +1,35 @@
+2982c24eabf40429c22a35f5e49d2357;Completion Confirmation
+function;Individual Time Confirmation;{JJ}{NNP}{NN}
+function;Collective Time Confirmation;{JJ}{NNP}{NN}
+function;Measurement Document Archiving;{NNP}
+function;Time Sheet Processing;{NNP}
+function;Measurement Document Processing;{NNP}
+function;Overall Completion Confirmation;{JJ}{NNP}{NN}
+function;Entry of Technical Findings;{NN}{IN}{NNP}{NNS}
+function;Time Sheet Report;{NNP}
+function;Forwarding of Time Sheet Data to CS;{NN}{IN}{NNP}{TO}{NNP}
+function;Time Sheet Permit;{NNP}
+event;Maintenance order is confirmed completely;{NN}{NN}{VBZ}{VBN}{RB}
+event;Actual costs are updated to maintenance order;{JJ}{NNS}{VBP}{VBN}{TO}{NN}{NN}
+event;Working hours data is approved;{VBG}{NNS}{NNS}{VBZ}{VBN}
+event;Time sheet is to be revised;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Open material reservations are deleted;{VB}{NN}{NNS}{VBP}{VBN}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Material withdrawal is not required;{NN}{NN}{VBZ}{RB}{VBN}
+event;Technical findings are entered;{NNP}{NNS}{VBP}{VBN}
+event;Measurement doc. should be created for order;{NN}{NN}{.}
+event;Completion confirmations of time to be created using time sheet;{NN}{NNS}{IN}{NN}{TO}{VB}{VBN}{VBG}{NN}{NN}
+event;Working hours data is to be approved;{VBG}{NNS}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Working hours data can be transferred directly to target application;{VBG}{NNS}{NNS}{MD}{VB}{VBN}{RB}{TO}{VB}{NN}
+event;Follow-on documents of target application are generated;{JJ}{NNS}{IN}{NN}{NN}{VBP}{VBN}
+event;Individual operations are confirmed;{JJ}{NNS}{VBP}{VBN}
+event;Technical findings are to be entered;{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Maintenance order is partially confirmed;{NN}{NN}{VBZ}{RB}{VBN}
+event;Measurement document to be created without notification or order description;{NN}{NN}{TO}{VB}{VBN}{IN}{NN}{CC}{NN}{NN}
+event;Operations and Order Must Be Confirmed;{NNP}{CC}{NNP}{MD}{VB}{VBN}
+event;Working hours data was analyzed;{VBG}{NNS}{NNS}{VBD}{VBN}
+event;Working hours data is to be analyzed;{VBG}{NNS}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Measurement readings are transferred to dep.meas.pts;{NN}{NNS}{VBP}{VBN}{TO}{NNS}
+event;Measurement document is to be archived;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Measurement doc. should be created for notif.;{NN}{NN}{.}
+event;Backflush is to be posted;{NNP}{VBZ}{TO}{VB}{VBN}

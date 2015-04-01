@@ -1,0 +1,32 @@
+27dc51193a577914180000279c0efea4;Business Event Attendance Administration
+function;Notification;{NN}
+function;Registration;{NN}
+function;Replacement, Rebooking, Cancellation, and Cancellation by Organizer;{NN}{,}{NN}{,}{NN}{,}{CC}{NN}{IN}{NN}
+function;Inquiry and Offer;{NNP}{CC}{NN}
+event;Notification of business event management is desired;{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Replacement order is performed;{NN}{NN}{VBZ}{VBN}
+event;Business event attendance exists;{NN}{NN}{NN}{VBZ}
+event;Business event resource is reserved;{NN}{NN}{NN}{VBZ}{VBN}
+event;Organizer receives replacement order;{NN}{VBZ}{NN}{NN}
+event;Organizer receives inquiry of business event attendee;{NN}{VBZ}{NN}{IN}{NN}{NN}{NN}
+event;Organizer receives rebooking order;{NN}{VBZ}{VBG}{NN}
+event;Place in business event is available;{NN}{IN}{NN}{NN}{VBZ}{JJ}
+event;Inquiry of business event attendee is entered;{NNP}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Replacement order is rejected;{NN}{NN}{VBZ}{VBN}
+event;Business event resource reservation is cancelled;{NN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Rebooking order is performed;{VBG}{NN}{VBZ}{VBN}
+event;Notification of business event management is transmitted;{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Need for operative personnel time scheduling;{VBN}{IN}{JJ}{NNS}{NN}{NN}
+event;Cancellation order exists;{NN}{NN}{VBZ}
+event;Offer of business event attendances is created;{NN}{IN}{NN}{NN}{NNS}{VBZ}{VBN}
+event;Place for business event attendee is reserved;{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Business event is complete;{NN}{NN}{VBZ}{JJ}
+event;Offer of business event attendances cannot be created;{NN}{IN}{NN}{NN}{NNS}{MD}{RB}{VB}{VBN}
+event;Registration order exists;{NN}{NN}{VBZ}
+event;Business event attendance must be cancelled;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Business event attendee is prebooked;{NN}{NN}{NN}{VBZ}{VBN}
+event;Registration order is rejected;{NN}{NN}{VBZ}{VBN}
+event;Business event attendance is cancelled by organizer;{NN}{NN}{NN}{VBZ}{VBN}{IN}{NN}
+event;Business event attendance is cancelled;{NN}{NN}{NN}{VBZ}{VBN}
+event;Rebooking order is rejected;{VBG}{NN}{VBZ}{VBN}
+event;Preparation of business event performance is successfully completed;{NN}{IN}{NN}{NN}{NN}{VBZ}{RB}{VBN}

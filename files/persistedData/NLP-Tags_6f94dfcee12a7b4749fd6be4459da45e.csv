@@ -1,0 +1,11 @@
+6f94dfcee12a7b4749fd6be4459da45e;Business Event Performance
+function;Business Event Performance;{NNP}
+function;Preparation of Business Event Performance;{NN}{IN}{NNP}
+event;Business event exists;{NN}{NN}{VBZ}
+event;Preparation of business event performance is desired;{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Business event is cancelled;{NN}{NN}{VBZ}{VBN}
+event;Business event attendance must be cancelled;{NN}{NN}{NN}{MD}{VB}{VBN}
+event;Need for business event resource planning exists;{VBN}{IN}{NN}{NN}{NN}{NN}{VBZ}
+event;Preparation of business event performance is successfully completed;{NN}{IN}{NN}{NN}{NN}{VBZ}{RB}{VBN}
+event;Business event is performed;{NN}{NN}{VBZ}{VBN}
+event;Time for performance of business event is reached;{NNP}{IN}{NN}{IN}{NN}{NN}{VBZ}{VBN}

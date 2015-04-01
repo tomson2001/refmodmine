@@ -1,0 +1,5 @@
+61c8e48d927ecf781677397a5eb47cdd;Work Area
+function;Work Area Processing;{NN}{NN}{NN}
+event;Agents in the enterprise are to be entered;{NNS}{IN}{DT}{NN}{VBP}{TO}{VB}{VBN}
+event;Work area is to be defined;{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Accident data is to be entered;{NNP}{NNS}{VBZ}{TO}{VB}{VBN}

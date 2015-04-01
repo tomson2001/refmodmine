@@ -1,0 +1,24 @@
+e1c7af6711970fbff2cf20746ac43a64;Personnel shift planning - operative
+function;Create operative shift plan;{VB}{NN}{NN}{NN}
+function;Determine handling options for coverage of operative personnel requirement;{VB}{VBG}{NNS}{IN}{NN}{IN}{JJ}{NNS}{NN}
+function;Operative adjustment of personnel reqmnt assignment for org. plan unit;{JJ}{NN}{IN}{NNS}{JJ}{NN}{IN}{NN}{.}
+function;Determine handling options for usage of human resources;{VB}{VBG}{NNS}{IN}{NN}{IN}{JJ}{NNS}
+function;Operative adjustment of personnel assignment for organizational plan unit;{JJ}{NN}{IN}{NNS}{NN}{IN}{JJ}{NN}{NN}
+event;Need for operative personnel time scheduling;{VBN}{IN}{JJ}{NNS}{NN}{NN}
+event;Operative personnel requirement must be obtained for org. plan unit;{JJ}{NNS}{NN}{MD}{VB}{VBN}{IN}{NN}{.}
+event;Operative personnel requirement cannot be covered by existing human resources;{JJ}{NNS}{NN}{MD}{RB}{VB}{VBN}{IN}{VBG}{JJ}{NNS}
+event;Operative personnel requirement must be reformulated;{JJ}{NNS}{NN}{MD}{VB}{VBN}
+event;Personnel assignment for org. plan exists;{NNP}{NN}{IN}{NN}{.}
+event;Human resource cannot be used to cover the operative personnel requirement;{JJ}{NN}{MD}{RB}{VB}{VBN}{TO}{VB}{DT}{JJ}{NNS}{NN}
+event;Operative personnel requirement for org. plan exists;{JJ}{NNS}{NN}{IN}{NN}{.}
+event;Human Resource Without Shift Accepted;{JJ}{NNP}{IN}{NN}{JJ}
+event;Requirement for operative shift planning exists;{NN}{IN}{JJ}{NN}{NN}{VBZ}
+event;Completed operative shift plan is available;{VBN}{JJ}{NN}{NN}{VBZ}{JJ}
+event;Human resource cannot be implemented long term;{JJ}{NN}{MD}{RB}{VB}{VBN}{JJ}{NN}
+event;Shift planning for shift planning group is desired;{NN}{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Long term personnel requirement exists;{JJ}{NN}{NNS}{NN}{VBZ}
+event;Need for individual personnel development planning exists;{VBN}{IN}{JJ}{NNS}{NN}{NN}{VBZ}
+event;Uncovered operative personnel requirement is accepted;{VBN}{JJ}{NNS}{NN}{VBZ}{VBN}
+event;Operative personnel requirement must be released by org. plan unit;{JJ}{NNS}{NN}{MD}{VB}{VBN}{IN}{NN}{.}
+event;Human resource must be released operatively;{JJ}{NN}{MD}{VB}{VBN}{RB}
+event;Human resource must be obtained operatively;{JJ}{NN}{MD}{VB}{VBN}{RB}

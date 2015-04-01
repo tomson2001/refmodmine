@@ -1,0 +1,17 @@
+a1f372e3d54ec39042c7cc2046a393a4;Fig.14: GBA1 YAWL model for MunF
+function;Decide whether to pay;{VB}{IN}{TO}{VB}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Fill in payment data;{VB}{IN}{NN}{NNS}
+function;Ask customer to pay;{VB}{NN}{TO}{VB}
+function;No Payment;{DT}{NN}
+function;Send extract;{VB}{NN}
+function;Archive;{NNP}
+function;Send to appropriate department in DMS;{VB}{TO}{JJ}{NN}{IN}{NNP}
+function;Determine fees;{NN}{NNS}
+function;Indicate that all was paid;{VB}{IN}{DT}{VBD}{VBN}
+function;Waiting for payment;{VBG}{IN}{NN}
+event;Process end;{VB}{NN}
+event;No;{DT}
+event;Yes;{UH}
+event;Start process;{NNP}{NN}

@@ -1,0 +1,27 @@
+0757b3d09d9220c92ff09141a04fc9b1;Service Notification
+function;Notification Archiving;{NN}{NN}
+function;Service Notification Creation and Processing;{NNP}{CC}{NNP}
+function;Notification Printing;{NN}{NN}
+function;Entry of Technical Findings;{NN}{IN}{NNP}{NNS}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Credit limit check is to be performed automatically;{NNP}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Maintenance notification is assigned to the existing maintenance order;{NN}{NN}{VBZ}{VBN}{TO}{DT}{VBG}{NN}{NN}
+event;Service requirement arose;{NNP}{NN}{VBD}
+event;Credit limit check is to be performed manually;{NNP}{NN}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;Service notification data is to be processed;{NNP}{NN}{NNS}{VBZ}{TO}{VB}{VBN}
+event;Shop papers are to be printed from order;{NNP}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Notification papers are to be printed;{NN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Measurement doc. should be created for notif.;{NN}{NN}{.}
+event;Technical findings are to be entered;{NNP}{NNS}{VBP}{TO}{VB}{VBN}
+event;Archiving carried out;{VBG}{VBD}{RP}
+event;Shop papers are to be printed from notification;{NNP}{NNS}{VBP}{TO}{VB}{VBN}{IN}{NN}
+event;Notification and order assigned to one another;{NN}{CC}{NN}{VBN}{TO}{CD}{DT}
+event;Warranty is to be checked;{NN}{VBZ}{TO}{VB}{VBN}
+event;Service order is created in background;{NNP}{NN}{VBZ}{VBN}{IN}{NN}
+event;Service order should be created directly from service notification;{NNP}{NN}{MD}{VB}{VBN}{RB}{IN}{NN}{NN}
+event;Notification is completed;{NN}{VBZ}{VBN}
+event;Service notification is being processed;{NNP}{NN}{VBZ}{VBG}{VBN}
+event;Print log is created;{VB}{NN}{VBZ}{VBN}
+event;Notification is printed;{NN}{VBZ}{VBN}
+event;Notification is to be archived;{NN}{VBZ}{TO}{VB}{VBN}
+event;Technical findings are entered;{NNP}{NNS}{VBP}{VBN}

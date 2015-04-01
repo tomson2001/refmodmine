@@ -1,0 +1,13 @@
+ed77bd23b68af943d54fe7add244a26c;Master Production Scheduling
+function;Master Production Scheduling - Total Planning;{NN}{NN}{NN}{:}{JJ}{NNP}
+function;Master Production Scheduling - Interactive;{NN}{NN}{NN}{:}{JJ}
+function;Master Production Scheduling - Single-Item;{NN}{NN}{NN}{:}{NNP}
+function;Master Production Scheduling - Evaluation;{NN}{NN}{NN}{:}{NN}
+event;Planned Order Created Automatically;{NNP}{VBN}{RB}
+event;Purchase Requisition Created;{NN}{NN}{VBN}
+event;Separate planning run to be carried out for master schedule items;{JJ}{NN}{NN}{TO}{VB}{VBN}{RP}{IN}{NN}{NN}{NNS}
+event;Planning results or stock/ reqmts situation is processed;{NNP}{VBZ}{CC}{NN}{:}{NNS}{NN}{VBZ}{VBN}
+event;Dependent Requirement Created;{JJ}{NN}{VBN}
+event;MRP list is created;{NN}{NN}{VBZ}{VBN}
+event;Stock/ requirements list to be processed;{NNP}{:}{NNS}{NN}{TO}{VB}{VBN}
+event;Demand Program Created;{NN}{NN}{VBN}

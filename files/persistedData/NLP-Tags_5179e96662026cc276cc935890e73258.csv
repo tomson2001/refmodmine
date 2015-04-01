@@ -1,0 +1,8 @@
+5179e96662026cc276cc935890e73258;Updating [Investment Projects]
+function;Budget Update [Capital Investment Project];{NNP}{-LRB-}{NNP}{-RRB-}
+event;Posting was allowed despite budget overrun;{VBG}{VBD}{VBN}{IN}{NN}{NN}
+event;Assigned funds are within tolerance limits;{VBN}{NNS}{VBP}{IN}{NN}{NNS}
+event;Budget is updated;{NNP}{VBZ}{VBN}
+event;Posting was rejected due to budget overrun;{VBG}{VBD}{VBN}{JJ}{TO}{NN}{NN}
+event;Release and execution of measure completed;{NNP}{CC}{NN}{IN}{NN}{VBN}
+event;Budget is to be updated;{NNP}{VBZ}{TO}{VB}{VBN}

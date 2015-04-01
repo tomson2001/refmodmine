@@ -1,0 +1,15 @@
+9696dcb73b4113d83673ec4a572c13ef;Personnel time accounts administration
+function;Updating of personnel time accounts;{VBG}{IN}{NNS}{NN}{NNS}
+function;Personnel time transfer;{NNP}{NN}{NN}
+function;Absence entitlement compensation;{NN}{NN}{NN}
+function;Time quota deduction using personnel time specifications;{NNP}{NN}{NN}{VBG}{NNS}{NN}{NNS}
+function;Absence entitlement accrual;{NN}{NN}{NN}
+event;Employee - personnel day times are available;{NN}{:}{NNS}{NN}{NNS}{VBP}{JJ}
+event;Personnel time account posting is available;{NNP}{NN}{NN}{VBG}{VBZ}{JJ}
+event;Personnel time accounts are updated;{NNP}{NN}{NNS}{VBP}{VBN}
+event;Update of personnel time accounts is desired;{NNP}{IN}{NNS}{NN}{NNS}{VBZ}{VBN}
+event;Absence entitlement determination for employee is desired;{NN}{NN}{NN}{IN}{NN}{VBZ}{VBN}
+event;Need for absence entitlement compensation;{VBN}{IN}{NN}{NN}{NN}
+event;Need for personnel time transfer specification;{VBN}{IN}{NNS}{NN}{NN}{NN}
+event;Operative remuneration specification is available;{JJ}{NN}{NN}{VBZ}{JJ}
+event;Actual personnel time specifications are available;{JJ}{NNS}{NN}{NNS}{VBP}{JJ}

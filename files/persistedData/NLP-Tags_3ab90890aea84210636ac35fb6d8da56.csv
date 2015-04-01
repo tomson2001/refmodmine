@@ -1,0 +1,19 @@
+3ab90890aea84210636ac35fb6d8da56;Notification
+function;Notification of Business Event Management;{NN}{IN}{NN}{NNP}
+event;Rebooking order is rejected;{VBG}{NN}{VBZ}{VBN}
+event;Inquiry of business event attendee is entered;{NNP}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Rebooking order is performed;{VBG}{NN}{VBZ}{VBN}
+event;Offer of business event attendances is created;{NN}{IN}{NN}{NN}{NNS}{VBZ}{VBN}
+event;Business event attendance is cancelled by organizer;{NN}{NN}{NN}{VBZ}{VBN}{IN}{NN}
+event;Business event attendance exists;{NN}{NN}{NN}{VBZ}
+event;Business event resource is reserved;{NN}{NN}{NN}{VBZ}{VBN}
+event;Registration order is rejected;{NN}{NN}{VBZ}{VBN}
+event;Replacement order is performed;{NN}{NN}{VBZ}{VBN}
+event;Business event resource reservation is cancelled;{NN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Notification of business event management is transmitted;{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}
+event;Offer of business event attendances cannot be created;{NN}{IN}{NN}{NN}{NNS}{MD}{RB}{VB}{VBN}
+event;Preparation of business event performance is successfully completed;{NN}{IN}{NN}{NN}{NN}{VBZ}{RB}{VBN}
+event;Replacement order is rejected;{NN}{NN}{VBZ}{VBN}
+event;Business event is complete;{NN}{NN}{VBZ}{JJ}
+event;Business event attendance is cancelled;{NN}{NN}{NN}{VBZ}{VBN}
+event;Notification of business event management is desired;{NN}{IN}{NN}{NN}{NN}{VBZ}{VBN}

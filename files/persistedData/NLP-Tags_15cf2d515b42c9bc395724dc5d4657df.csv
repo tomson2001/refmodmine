@@ -1,0 +1,25 @@
+15cf2d515b42c9bc395724dc5d4657df;Fig.51: WABO1 YAWL model for MunC
+function;Send acknowledgment SYSTEM;{VB}{NN}{NN}
+function;Send acknowledgment;{VB}{NN}
+function;Check wealth;{VB}{NN}
+function;Close case;{JJ}{NN}
+function;Invite customer for meeting;{VB}{NN}{IN}{NN}
+function;Register;{NNP}
+function;Hold meeting with customer;{VB}{NN}{IN}{NN}
+function;Record request in system;{VB}{NN}{IN}{NN}
+function;Change plan;{NNP}{NN}
+function;Assign investigating officer;{VB}{VBG}{NN}
+function;Hold consultation with customer;{VB}{NN}{IN}{NN}
+function;Check urban plan;{VB}{JJ}{NN}
+function;Receive request via mail;{VB}{NN}{IN}{NN}
+function;Pick request from pile;{VB}{NN}{IN}{NN}
+function;Need advice;{VBN}{NN}
+function;Receive supplements;{VB}{NNS}
+function;Fill in e-form;{VB}{IN}{NN}
+function;Ask for advice;{VB}{IN}{NN}
+event;Start case;{NNP}{NN}
+event;yes;{RB}
+event;yes;{RB}
+event;no;{DT}
+event;no;{DT}
+event;Case closed;{NNP}{VBD}

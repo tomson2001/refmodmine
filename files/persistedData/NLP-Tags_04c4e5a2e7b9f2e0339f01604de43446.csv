@@ -1,0 +1,14 @@
+04c4e5a2e7b9f2e0339f01604de43446;Business Transactions
+function;Post-capitalization;{NN}
+function;Settlement of Asset under Construction;{NNP}{IN}{NNP}{IN}{NNP}
+function;Reposting;{VBG}
+function;Write-up;{NN}
+event;Fixed asset was rebuilt;{VBN}{NN}{VBD}{VBN}
+event;Class assignment needs changing;{NNP}{NN}{VBZ}{VBG}
+event;Bus.area/ cost center assignment needs to be changed;{NN}{:}{NN}{NN}{NN}{VBZ}{TO}{VB}{VBN}
+event;Transactions completed;{NNS}{VBD}
+event;[Subsequent valuation change is necessary];{-LRB-}{JJ}{NN}{NN}{VBZ}{JJ}{-RRB-}
+event;Stock mat. should be posted to fix. asset;{NNP}{NN}{.}
+event;Post-capitalization to be posted;{NN}{TO}{VB}{VBN}
+event;Asset under construction should be settled;{NNP}{IN}{NN}{MD}{VB}{VBN}
+event;Fixed asset should be split;{VBN}{NN}{MD}{VB}{VBN}

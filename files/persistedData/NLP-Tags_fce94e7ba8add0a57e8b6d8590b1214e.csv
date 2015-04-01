@@ -1,0 +1,13 @@
+fce94e7ba8add0a57e8b6d8590b1214e;Closing
+function;Project Completion;{NNP}
+function;Preparation for Project Closing;{NN}{IN}{NN}{NN}
+function;Project Archiving;{NNP}
+event;Archived data reviewed;{JJ}{NNS}{VBN}
+event;Internal Activity Was Allocated;{JJ}{NN}{VBD}{VBN}
+event;Activity confirmations entered;{NN}{NNS}{VBD}
+event;Confirmation from external systems entered;{NN}{IN}{JJ}{NNS}{VBD}
+event;Actual settlement carried out;{JJ}{NN}{VBD}{RP}
+event;Close project;{JJ}{NN}
+event;Actual Periodic Transfer Carried Out;{JJ}{JJ}{NN}{VBD}{IN}
+event;Status Complete is set;{NNP}{JJ}{VBZ}{VBN}
+event;Deletion without archiving executed;{NN}{IN}{VBG}{VBN}

@@ -1,0 +1,12 @@
+7e459027b3846c7a2b5ca14e36adf289;B.II.018_EPC for JIT release
+function;Trigger provision;{NN}{NN}
+function;Prepare credit;{VB}{NN}
+function;Provide outsourced res. at assembly line;{VB}{JJ}{NNS}{.}
+function;Detailed scheduling;{JJ}{NN}
+function;Shipping;{VBG}
+event;Scheduled deadline reached;{VBN}{NN}{VBD}
+event;Credit memo;{NNP}{NN}
+event;Outsourced resources received;{JJ}{NNS}{VBD}
+event;Activity;{NN}
+event;Start assembly;{NNP}{NN}
+event;Short- term release;{JJ}{:}{NN}{NN}

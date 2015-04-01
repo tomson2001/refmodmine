@@ -1,0 +1,9 @@
+6cb74cfff3dfe664057121fd484e98c1;Warehouse
+function;Difference Processing;{NN}{NN}
+function;Confirmation;{NN}
+function;Stock Removal Processing;{NNP}{NN}{NN}
+event;Transfer order item with difference exists;{NN}{NN}{NN}{IN}{NN}{VBZ}
+event;Material is removed from stock;{NN}{VBZ}{VBN}{IN}{NN}
+event;Task-dependent follow-up actions are triggered;{JJ}{JJ}{NNS}{VBP}{VBN}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;TO item confirmed without differences;{TO}{NN}{VBD}{IN}{NNS}

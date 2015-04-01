@@ -1,0 +1,9 @@
+bfe81948625763e06e2702551c261126;Sales Order
+function;Returnable Packaging Pickup;{JJ}{NN}{NN}
+function;Returnable Packaging/  Empties Issue;{JJ}{NN}{:}{NNP}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Reason for charge for returnable packaging;{NN}{IN}{NN}{IN}{JJ}{NN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Returnable packaging is to be picked up;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{RP}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}

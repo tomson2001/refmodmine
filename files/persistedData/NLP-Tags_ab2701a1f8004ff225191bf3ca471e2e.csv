@@ -1,0 +1,5 @@
+ab2701a1f8004ff225191bf3ca471e2e;Status Analysis
+function;Status Analysis Liquidity Forecast;{NNP}{NN}{NN}
+event;Planned record processing completed;{NNP}{NN}{NN}{VBN}
+event;Status analysis carried out;{NN}{NN}{VBD}{RP}
+event;Planned record created;{NNP}{NN}{VBD}

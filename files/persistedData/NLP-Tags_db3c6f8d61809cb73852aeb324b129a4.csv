@@ -1,0 +1,15 @@
+db3c6f8d61809cb73852aeb324b129a4;Mortgage Loans Given [TR-LO]
+function;Accounting;{NN}
+function;Rollover;{NN}
+function;New Transactions;{NNP}{NNS}
+event;Conditions due to expire;{NNS}{JJ}{TO}{VB}
+event;Notice for change to contract exists;{NNP}{IN}{NN}{TO}{NN}{VBZ}
+event;Loan offer to be processed;{NN}{NN}{TO}{VB}{VBN}
+event;Loan contract to be created;{NN}{NN}{TO}{VB}{VBN}
+event;Loan application was rejected;{NN}{NN}{VBD}{VBN}
+event;Payment program to be triggered;{NN}{NN}{TO}{VB}{VBN}
+event;Loan was partially disbursed;{NN}{VBD}{RB}{VBN}
+event;Loan was fully disbursed;{NN}{VBD}{RB}{VBN}
+event;Interested party makes loan application;{JJ}{NN}{VBZ}{NN}{NN}
+event;Rollover offer was created and printed;{NN}{NN}{VBD}{VBN}{CC}{VBN}
+event;Loan application to be processed;{NN}{NN}{TO}{VB}{VBN}

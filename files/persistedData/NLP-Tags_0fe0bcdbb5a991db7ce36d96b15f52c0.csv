@@ -1,0 +1,20 @@
+0fe0bcdbb5a991db7ce36d96b15f52c0;Structure
+function;Project Structuring;{NN}{VBG}
+event;Statistical key figures to be planned;{JJ}{JJ}{NNS}{TO}{VB}{VBN}
+event;Dates must be planned for WBS elements;{NNS}{MD}{VB}{VBN}{IN}{JJ}{NNS}
+event;Revenue planning using billing plan required;{NN}{NN}{VBG}{NN}{NN}{VBN}
+event;Cost planning in WBS required;{NN}{NN}{IN}{NNP}{VBD}
+event;Cash flow planning required;{NN}{NN}{NN}{VBN}
+event;Internal activity/ work planning required;{JJ}{NN}{:}{NN}{NN}{VBN}
+event;Service planning required;{NNP}{NN}{VBN}
+event;Periodic allocations executed;{JJ}{NNS}{VBN}
+event;Cost planning using existing price/quantity structure required;{NN}{NN}{VBG}{VBG}{NN}{NN}{VBN}
+event;Project/ subproject with activities requires scheduling;{NN}{:}{NN}{IN}{NNS}{VBZ}{NN}
+event;Manual revenue planning required;{JJ}{NN}{NN}{VBN}
+event;Customer project required;{NN}{NN}{VBN}
+event;Cross-project scheduling required;{JJ}{NN}{VBN}
+event;Activities carried out by other firms must be planned;{NNS}{VBD}{RP}{IN}{JJ}{NNS}{MD}{VB}{VBN}
+event;Internal project approved;{JJ}{NN}{VBN}
+event;Material assignment to activities required;{NN}{NN}{TO}{NNS}{VBN}
+event;Project planning for customer quotation processing required;{NN}{NN}{IN}{NN}{NN}{NN}{VBN}
+event;Periodic transfer required;{JJ}{NN}{VBN}

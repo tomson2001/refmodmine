@@ -1,0 +1,6 @@
+6b68fc6ffb4cde6df0bcea1b996e91ad;B.I.010_Event control of bill of materials management
+function;Stücklistenverwaltung (Anlegen, Ändern, Löschen);{NNP}{NN}{-LRB-}{NNP}{,}{NN}{,}{NN}{NN}{-RRB-}
+event;Neues Teil v. Konstruktion freigegeben;{NNP}{CC}{NNP}{NN}
+event;Stücklistenverwaltung beendet;{NNP}{JJ}{NN}
+event;Teilkomponente durch Mawi ausgetauscht;{NNP}{VBP}{JJ}{NN}
+event;Teil fertigungstechnisch geändert;{NN}{NN}{NN}{NN}

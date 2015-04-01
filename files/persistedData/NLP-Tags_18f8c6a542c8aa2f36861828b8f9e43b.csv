@@ -1,0 +1,31 @@
+18f8c6a542c8aa2f36861828b8f9e43b;Quality Inspection for Goods Receipt from Production
+function;Results Recording;{NNS}{NNP}
+function;Sample Calculation and Sample Management;{VB}{NN}{CC}{NNP}
+function;Usage decision;{NN}{NN}
+function;Inspection Lot Creation;{NNP}{NN}{NN}
+function;Defects Recording;{NNS}{NNP}
+event;Defect is recorded;{NN}{VBZ}{VBN}
+event;Enter characteristic defects;{VB}{JJ}{NNS}
+event;Quality notification is activated from defects;{JJ}{NN}{VBZ}{VBN}{IN}{NNS}
+event;Automatic label printing is triggered;{NNP}{NN}{NN}{VBZ}{VBN}
+event;Results for the sample are to be recorded;{NNS}{IN}{DT}{NN}{VBP}{TO}{VB}{VBN}
+event;Sample is released;{NN}{VBZ}{VBN}
+event;Inspection lot completion for skip is to be made;{NNP}{NN}{NN}{IN}{VB}{VBZ}{TO}{VB}{VBN}
+event;Enter defects from the operation;{VB}{NNS}{IN}{DT}{NN}
+event;Enter defects from the inspection lot;{VB}{NNS}{IN}{DT}{NN}{NN}
+event;Results for the physical sample are to be recorded;{NNS}{IN}{DT}{JJ}{NN}{VBP}{TO}{VB}{VBN}
+event;Usage decision is documented;{NN}{NN}{VBZ}{VBN}
+event;Enter characteristic defects;{VB}{JJ}{NNS}
+event;QMIS updated;{NNS}{VBN}
+event;Inspection lot is to be created manually;{NNP}{NN}{VBZ}{TO}{VB}{VBN}{RB}
+event;All characteristics are closed;{DT}{NNS}{VBP}{VBN}
+event;Results for operation must be recorded;{NNS}{IN}{NN}{MD}{VB}{VBN}
+event;Data is updated;{NNS}{VBZ}{VBN}
+event;Inspection lot status allows a goods issue;{NNP}{NN}{NN}{VBZ}{DT}{NNS}{NN}
+event;Physical-sample drawing is to be created with reference;{JJ}{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Enter defects from the inspection lot;{VB}{NNS}{IN}{DT}{NN}{NN}
+event;Enter defects from the operation;{VB}{NNS}{IN}{DT}{NN}
+event;Inspection results are copied to general characteristics;{NNP}{NNS}{VBP}{VBN}{TO}{JJ}{NNS}
+event;Inspection completion is to be forced;{NNP}{NN}{VBZ}{TO}{VB}{VBN}
+event;Goods Receipt Posted;{NNP}{VBD}
+event;Inspection completion is carried out;{NNP}{NN}{VBZ}{VBN}{RP}

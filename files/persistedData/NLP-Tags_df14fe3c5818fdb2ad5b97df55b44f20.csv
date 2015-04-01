@@ -1,0 +1,4 @@
+df14fe3c5818fdb2ad5b97df55b44f20;Budgeting [Investment Programs]
+function;Program Budgeting;{NN}{NNP}
+event;Program positions are released;{NN}{NNS}{VBP}{VBN}
+event;Plan is approved on last approval level;{NN}{VBZ}{VBN}{IN}{JJ}{NN}{NN}

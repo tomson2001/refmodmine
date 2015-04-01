@@ -1,0 +1,20 @@
+a1b8239241bbd3eb3fb59f9548dfe11a;Repair Order
+function;Service Quotation Processing;{NNP}
+function;Repair Order Processing;{NNP}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Service is completed;{NNP}{VBZ}{VBN}
+event;Credit memo request to be created;{NNP}{NN}{NN}{TO}{VB}{VBN}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Sales document is to be created for the quality notification;{NNS}{VBP}{VBZ}{TO}{VB}{VBN}{IN}{DT}{NN}{NN}
+event;Quotation is monitored;{NN}{VBZ}{VBN}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Quotation is to be created from contact;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Order is to be Created from Contact;{NN}{VBZ}{TO}{VB}{VBN}{IN}{NN}
+event;Order-related invoice to be created;{JJ}{NN}{TO}{VB}{VBN}
+event;Quotation items are rejected;{NN}{NNS}{VBP}{VBN}
+event;Quotation is valid;{NN}{VBZ}{JJ}
+event;Sales and Distribution Document Must Be Created for Service Notification;{NNS}{CC}{NN}{NNP}{MD}{VB}{VBN}{IN}{NNP}
+event;Pro forma invoice for order/ delivery to be created;{FW}{FW}{NN}{IN}{NN}{:}{NN}{TO}{VB}{VBN}
+event;Service contract to be offered;{NNP}{NN}{TO}{VB}{VBN}
+event;;

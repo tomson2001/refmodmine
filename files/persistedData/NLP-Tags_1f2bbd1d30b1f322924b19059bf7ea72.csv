@@ -1,0 +1,53 @@
+1f2bbd1d30b1f322924b19059bf7ea72;Sales Order Processing: Make/Assembly To Order
+function;Billing;{NN}
+function;Customer Outline Agreement;{NN}{NNP}
+function;Shipping;{VBG}
+function;Transport;{NN}
+function;Sales order;{NNS}{NN}
+function;Risk/ Credit Management;{NN}{:}{NNP}
+function;Costing;{VBG}
+function;Warehouse management;{NNP}{NN}
+function;Backorder Processing;{NNP}
+event;Missing parts situation could not be eliminated;{VBG}{NNS}{NN}{MD}{RB}{VB}{VBN}
+event;Quotation to be created from inquiry;{NN}{TO}{VB}{VBN}{IN}{NN}
+event;Transfer order item is confirmed;{NN}{NN}{NN}{VBZ}{VBN}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Document Blocked due to Insufficient Payment Guarantee;{NNP}{JJ}{TO}{JJ}{NN}{NN}
+event;Sales document preliminary costed via unit costing;{NNS}{VBP}{JJ}{VBN}{IN}{NN}{VBG}
+event;Backorder processing is to be carried out for material;{NN}{NN}{VBZ}{TO}{VB}{VBN}{RP}{IN}{NN}
+event;Transfer order created automatically;{NN}{NN}{VBN}{RB}
+event;Production order created directly from sales order;{NN}{NN}{VBN}{RB}{IN}{NNS}{NN}
+event;Product costng to material in sales document to be created;{NN}{NN}{TO}{NN}{IN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Invoice list is created;{NNP}{NN}{VBZ}{VBN}
+event;Unit costing for material in sales document to be created;{NN}{VBG}{IN}{NN}{IN}{NNS}{VBP}{TO}{VB}{VBN}
+event;Purchase requisition without source of supply created;{NN}{NN}{IN}{NN}{IN}{NN}{VBN}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Material is issued;{NN}{VBZ}{VBN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Quotation reason occurred;{NN}{NN}{VBD}
+event;Missing parts situation is eliminated;{VBG}{NNS}{NN}{VBZ}{VBN}
+event;Deliveries need to be planned;{NNS}{VBP}{TO}{VB}{VBN}
+event;Sched.agreement must be created;{NN}{MD}{VB}{VBN}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Standard order is received;{JJ}{NN}{VBZ}{VBN}
+event;Goods movement is posted;{NNP}{NN}{VBZ}{VBN}
+event;Terms of credit have changed;{NNS}{IN}{NN}{VBP}{VBN}
+event;Scheduling agreement release is issued;{VBG}{NN}{NN}{VBZ}{VBN}
+event;Contract ist to be created;{NN}{NN}{TO}{VB}{VBN}
+event;Proc. order is directly created from sales order;{NNP}{.}
+event;Sales requirements are created;{NNS}{NNS}{VBP}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}
+event;Scheduling agreement is created;{VBG}{NN}{VBZ}{VBN}
+event;Transfer order created manually;{NN}{NN}{VBN}{RB}
+event;Items are cancelled;{NNS}{VBP}{VBN}
+event;Delivery is to be created;{NN}{VBZ}{TO}{VB}{VBN}
+event;Sales order preliminary costing via product costing;{NNS}{NN}{JJ}{VBG}{IN}{NN}{VBG}
+event;Contract is created;{NN}{VBZ}{VBN}
+event;Shipment costs per item are calculated;{NN}{NNS}{IN}{NN}{VBP}{VBN}
+event;Subsequent Document is to be Created from Sales Activity;{JJ}{NNP}{VBZ}{TO}{VB}{VBN}{IN}{NNS}{NN}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Group Master Contract is to be Created;{NNP}{VBZ}{TO}{VB}{VBN}
+event;Missing parts information is generated;{VBG}{NNS}{NN}{VBZ}{VBN}
+event;Change to terms of credit refused;{NNP}{TO}{NNS}{IN}{NN}{VBD}
+event;Customer release order received;{NN}{NN}{NN}{VBD}

@@ -1,0 +1,10 @@
+3fb5b0cc22a5a1470f4a545d3951d77d;Billing
+function;Fixed Price Billing;{VBN}{NN}{NN}
+function;Declarations to Authorities;{NNS}{TO}{NNS}
+event;Goods issue is posted;{NNP}{NN}{VBZ}{VBN}
+event;Billing doc. relevant to accounting is created;{NN}{NN}{.}
+event;Declarations to the authorities to be carried out;{NNS}{TO}{DT}{NNS}{TO}{VB}{VBN}{RP}
+event;Delivery is relevant for billing;{NN}{VBZ}{JJ}{IN}{NN}
+event;Declarations transmitted;{NNS}{VBD}
+event;Bil. doc. is released for billing;{NNP}{.}
+event;Billing document is monitored;{NN}{NN}{VBZ}{VBN}

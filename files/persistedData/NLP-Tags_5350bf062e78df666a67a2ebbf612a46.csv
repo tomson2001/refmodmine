@@ -1,0 +1,4 @@
+5350bf062e78df666a67a2ebbf612a46;Sales Order Processing
+function;Sales Order Processing;{NNS}{NNP}
+event;Sales order processing required;{NNS}{NN}{NN}{VBN}
+event;Order is created;{NN}{VBZ}{VBN}

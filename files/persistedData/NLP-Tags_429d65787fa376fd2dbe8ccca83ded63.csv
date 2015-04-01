@@ -1,0 +1,25 @@
+429d65787fa376fd2dbe8ccca83ded63;B.I.121_Event control of supplemental order data
+function;Control whether further OP exists;{NN}{IN}{JJ}{NN}{VBZ}
+function;Analysis whether net change orreoptimization;{NN}{IN}{JJ}{NN}{NN}
+function;Requirements planning;{NNS}{VBG}
+function;Worksation group selection;{JJ}{NN}{NN}
+function;Production;{NN}
+function;Routing selection;{VBG}{NN}
+function;Operation sequence selection;{NN}{NN}{NN}
+function;Basic data management routings;{JJ}{NNS}{NN}{NNS}
+function;Distribution zo users;{NN}{NN}{NNS}
+function;Plant selection;{NN}{NN}
+function;Operation selection;{NN}{NN}
+event;Further OP exists;{JJ}{NN}{VBZ}
+event;Plant allocated;{NN}{VBN}
+event;Sequence allocated;{NN}{VBN}
+event;All OPs identified;{DT}{NNS}{VBD}
+event;Routing allocated;{VBG}{VBN}
+event;Plant disruption occured;{NN}{NN}{VBD}
+event;Reoptimization;{NN}
+event;Routing updated;{VBG}{VBN}
+event;Net change;{JJ}{NN}
+event;Operation allocated;{NN}{VBN}
+event;Task defined;{NNP}{VBD}
+event;Workstation group allocated;{NN}{NN}{VBN}
+event;Order updated;{NNP}{VBN}

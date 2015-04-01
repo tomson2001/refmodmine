@@ -1,0 +1,9 @@
+76d4469f4dad5ef33cf87aebfb8c0a7c;Legal Control
+function;Monitoring of Legal Control Regulations;{NN}{IN}{NNPS}
+function;Basic Data Processing for Legal Controls;{NNP}{IN}{NNP}
+event;Legal control data is processed;{JJ}{NN}{NNS}{VBZ}{VBN}
+event;Customer master record is created;{NN}{NN}{NN}{VBZ}{VBN}
+event;Document blocked due to legal control;{NNP}{VBD}{JJ}{TO}{JJ}{NN}
+event;Material master has been processed;{NN}{NN}{VBZ}{VBN}{VBN}
+event;Export license master to be processed;{NN}{NN}{NN}{TO}{VB}{VBN}
+event;Export license master is processed;{NN}{NN}{NN}{VBZ}{VBN}

@@ -1,0 +1,4 @@
+3fe3c56a935a780e54a730655c86f3b4;Rebate Agreements
+function;Condition Processing;{NN}{NN}
+event;Condition is to be processed;{NN}{VBZ}{TO}{VB}{VBN}
+event;Condition is processed;{NN}{VBZ}{VBN}

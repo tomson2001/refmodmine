@@ -1,0 +1,28 @@
+d457a899229412898b16920f3e68f958;Fig.32: GBA3 YAWL model for MunD
+function;Receive payment1;{VB}{NN}
+function;Enabling_officer;{NN}
+function;Send payment request;{VB}{NN}{NN}
+function;Process payment1;{VB}{NN}
+function;Register request;{NNP}{NN}
+function;Receive payment;{VB}{NN}
+function;Determine if copy of ID is present;{VB}{IN}{NN}{IN}{NNP}{VBZ}{JJ}
+function;Waiting for payment;{VBG}{IN}{NN}
+function;Determine whether requester is entitled;{VB}{IN}{NN}{VBZ}{VBN}
+function;Decide admissible;{VB}{JJ}
+function;Waiting for payment1;{VBG}{IN}{NN}
+function;Send mail to  appropriate department;{VB}{NN}{TO}{JJ}{NN}
+function;Copy extract;{VB}{NN}
+function;No payment1;{DT}{NN}
+function;No payment1;{DT}{NN}
+function;Process payment;{VB}{NN}
+function;Send extract;{VB}{NN}
+function;Determine fees;{NN}{NNS}
+function;Send reminder;{VB}{NN}
+function;Produce extract and sign;{VB}{NN}{CC}{NN}
+function;Inform customer via phone or mail;{VB}{NN}{IN}{NN}{CC}{NN}
+function;Archive;{NNP}
+event;Free;{NNP}
+event;Start Process;{NNP}{VBP}
+event;no;{DT}
+event;yes;{RB}
+event;Process end;{VB}{NN}

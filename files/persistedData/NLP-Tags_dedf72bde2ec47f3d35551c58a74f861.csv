@@ -1,0 +1,9 @@
+dedf72bde2ec47f3d35551c58a74f861;B.I.050_Event control for reservation
+function;Gross-net calculation;{NN}{NN}
+function;Reserve Article;{NNP}
+function;Marketing/ Sales;{NNP}{:}{NNS}
+function;Reservation pratly executed;{NN}{NN}{VBD}
+event;Reservation completely executed;{NN}{RB}{VBD}
+event;Reservation partly executed;{NN}{RB}{VBD}
+event;Reservation rejected;{NN}{VBD}
+event;Reservation order prepared;{NN}{NN}{VBN}

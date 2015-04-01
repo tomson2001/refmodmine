@@ -1,0 +1,4 @@
+02a187588763f58a9415a1bc5969e94a;Issuance of Recruitment Request
+function;Issuance of Recruitment Request;{NN}{IN}{NN}{NN}
+event;Recruitment request is in process;{NN}{NN}{VBZ}{IN}{NN}
+event;Need for recruitment exists;{VBN}{IN}{NN}{VBZ}

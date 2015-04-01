@@ -1,0 +1,8 @@
+6db7d2eda80845b7c9765d0d64a2fccf;Transport
+function;Transportation Planning and Processing;{NNP}{CC}{NNP}
+function;Shipment cost calculation and settlement;{NN}{NN}{NN}{CC}{NN}
+event;Shipment is Complete;{NN}{VBZ}{JJ}
+event;Deliveries need to be planned;{NNS}{VBP}{TO}{VB}{VBN}
+event;Shipment costs per item are calculated;{NN}{NNS}{IN}{NN}{VBP}{VBN}
+event;Delivery is relevant for shipment;{NN}{VBZ}{JJ}{IN}{NN}
+event;Shipment is relevant for freight;{NN}{VBZ}{JJ}{IN}{NN}
