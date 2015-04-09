@@ -5,6 +5,7 @@ class EPC {
 	public $name;
 	private $xml;
 	public $modelPath;
+	public $modelPathOnly;
 
 	public $functions = array();
 	public $events = array();
@@ -54,6 +55,7 @@ class EPC {
 			$parent = $parent[0]->xpath("parent::*");
 		}
 		$this->modelPath = $path;
+		$this->modelPathOnly = str_replace("/".$this->name, "", $this->modelPath);
 	}
 
 	/**

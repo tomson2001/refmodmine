@@ -18,7 +18,7 @@ if ( $argv[1] == "--lcsot") {
 		$lastTime = time();
 
 		$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
-		$epc1 = new EPC($xml1, $xml_epc1["name"]);
+		$epc1 = new EPC($xml1, $xml_epc1["epcId"], $xml_epc1["name"]);
 
 		if ( !in_array($nameOfEPC1, $ignore_models) ) {
 			$traceExtractor = null;
@@ -53,6 +53,8 @@ if ( $argv[1] == "--lcsot") {
 				}
 				$traces_csv .= "\n\n";
 				$fileGenerator = new FileGenerator(date('Y-m-d_H-i-s', $start)."_Traces.csv", $traces_csv);
+				$fileGenerator->setFilename(date('Y-m-d_H-i-s', $start)."_Traces.csv");
+				$fileGenerator->setContent($traces_csv);
 				$file = $fileGenerator->execute(false);
 
 				$readme .= "   ".$i.": ".$nameOfEPC1." (".count($epcTraces)." Traces) - Dauer: ".$minutes." Min. ".$seconds." Sek.\r\n";
@@ -91,7 +93,7 @@ $allMatchedFuncNodesOfModelFile2 = array();
 
 foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
-	$epc1 = new EPC($xml1, $xml_epc1["name"]);
+	$epc1 = new EPC($xml1, $xml_epc1["epcId"], $xml_epc1["name"]);
 	
 	foreach ( $epc1->functions as $funcLabel ) {
 		$allFuncNodesOfModelFile1[$funcLabel] = true;
@@ -110,7 +112,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 
 	foreach ($xml2->xpath("//epc") as $xml_epc2) {
 		$nameOfEPC2 = utf8_decode((string) $xml_epc2["name"]);
-		$epc2 = new EPC($xml2, $xml_epc2["name"]);
+		$epc2 = new EPC($xml2, $xml_epc2["epcId"], $xml_epc2["name"]);
 		
 		foreach ( $epc2->functions as $funcLabel ) {
 			$allFuncNodesOfModelFile2[$funcLabel] = true;
@@ -294,6 +296,8 @@ if (!$isLight) $html_analysis .= "</body></html>";
 
 // ERSTELLEN DER AUSGABEDATEIEN
 $fileGenerator = new FileGenerator("Model_Similarity_Matrix.csv", $similarity_matrix_csv);
+$fileGenerator->setFilename("Model_Similarity_Matrix.csv");
+$fileGenerator->setContent($similarity_matrix_csv);
 if ( $doMapping ) $uri_similarity_matrix = $fileGenerator->execute();
 
 if (!$isLight) {

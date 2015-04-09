@@ -8,8 +8,18 @@
    	<link href="gui/css/navbar-fixed-top.css" rel="stylesheet">
    	<script type="text/javascript" src="gui/lib/jQuery-2.1.3/jquery-2.1.3.min.js"></script>
    	<script src="gui/lib/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+   	<link rel="stylesheet" href="gui/lib/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
 </head>
 <body>
-<?php include 'gui/main.php'; ?>
+<?php 
+session_start();
+require 'autoloader.php';
+
+// Proceed Actions
+if ( isset($_REQUEST['action']) ) include "gui/actions/".$_REQUEST['action'].".php";
+
+include 'gui/main.php'; 
+
+?>
 </body>
 </html>

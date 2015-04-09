@@ -11,8 +11,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">Repository</a></li>
+            <li <?php if (is_null($site) || $site == "home" ) { ?>class="active" <?php } ?>><a href="index.php">Home</a></li>
+            <li <?php if ( $site == "repository" ) { ?>class="active" <?php } ?>><a href="index.php?site=repository">Repository</a></li>
+            <li <?php if ( $site == "workspace" ) { ?>class="active" <?php } ?>><a href="index.php?site=workspace">Workspace <span class="badge">0</span></a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tools<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -27,9 +28,9 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Imprint</a></li>
+            <li <?php if ( $site == "about" ) { ?>class="active" <?php } ?>><a href="index.php?site=about">About</a></li>
+            <li <?php if ( $site == "contact" ) { ?>class="active" <?php } ?>><a href="index.php?site=contact">Contact</a></li>
+            <li <?php if ( $site == "imprint" ) { ?>class="active" <?php } ?>><a href="index.php?site=imprint">Imprint</a></li>
           </ul>
         </div>
       </div>

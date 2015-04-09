@@ -319,6 +319,8 @@ abstract class AMapping {
 		}
 		
 		$fileGenerator = new FileGenerator(trim($this->epc1->name)."_".trim($this->epc2->name).".txt", $content);
+		$fileGenerator->setFilename(trim($this->epc1->name)."_".trim($this->epc2->name).".txt");
+		$fileGenerator->setContent($content);
 		$file = $fileGenerator->execute();
 		return $file;
 	}

@@ -1,0 +1,2328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <directory name='birhtCertificate'>
+  <epc epcId="1" name="birhtCertificate_p31">
+    <function id="1">
+      <name>t12</name>
+    </function>
+    <function id="2">
+      <name>t7</name>
+    </function>
+    <function id="3">
+      <name>t8</name>
+    </function>
+    <function id="4">
+      <name>t21</name>
+    </function>
+    <function id="5">
+      <name>Decide family name based on law of nationality of child</name>
+    </function>
+    <function id="6">
+      <name>register child</name>
+    </function>
+    <function id="7">
+      <name>t9</name>
+    </function>
+    <function id="8">
+      <name>t24</name>
+    </function>
+    <function id="9">
+      <name>t32</name>
+    </function>
+    <function id="10">
+      <name>Send birth certificate to respective local public office</name>
+    </function>
+    <function id="11">
+      <name>Check fatherhood</name>
+    </function>
+    <function id="12">
+      <name>t5</name>
+    </function>
+    <function id="13">
+      <name>Decide first name based on international law</name>
+    </function>
+    <function id="14">
+      <name>t13</name>
+    </function>
+    <function id="15">
+      <name>t14</name>
+    </function>
+    <function id="16">
+      <name>Check for name</name>
+    </function>
+    <function id="17">
+      <name>t20</name>
+    </function>
+    <function id="18">
+      <name>t11</name>
+    </function>
+    <function id="19">
+      <name>decide together on family name</name>
+    </function>
+    <function id="20">
+      <name>t3</name>
+    </function>
+    <function id="21">
+      <name>Check data</name>
+    </function>
+    <function id="22">
+      <name>Check international law</name>
+    </function>
+    <function id="23">
+      <name>t4</name>
+    </function>
+    <function id="24">
+      <name>Send information to Buergeramt via internal IT</name>
+    </function>
+    <function id="25">
+      <name>decide on family name if parents have different family names</name>
+    </function>
+    <function id="26">
+      <name>t16</name>
+    </function>
+    <function id="27">
+      <name>Check information of new born child</name>
+    </function>
+    <function id="28">
+      <name>Request new first name</name>
+    </function>
+    <function id="29">
+      <name>open proceeding</name>
+    </function>
+    <function id="30">
+      <name>mother chooses family name</name>
+    </function>
+    <function id="31">
+      <name>t27</name>
+    </function>
+    <function id="32">
+      <name>Create birth certificate</name>
+    </function>
+    <function id="33">
+      <name>Inform Jugendamt</name>
+    </function>
+    <function id="34">
+      <name>Decide first name</name>
+    </function>
+    <function id="35">
+      <name>inform responsible court</name>
+    </function>
+    <xor id="72">
+      <name/>
+    </xor>
+    <xor id="73">
+      <name/>
+    </xor>
+    <xor id="74">
+      <name/>
+    </xor>
+    <xor id="75">
+      <name/>
+    </xor>
+    <xor id="76">
+      <name/>
+    </xor>
+    <xor id="77">
+      <name/>
+    </xor>
+    <xor id="78">
+      <name/>
+    </xor>
+    <xor id="79">
+      <name/>
+    </xor>
+    <xor id="80">
+      <name/>
+    </xor>
+    <xor id="81">
+      <name/>
+    </xor>
+    <xor id="82">
+      <name/>
+    </xor>
+    <xor id="83">
+      <name/>
+    </xor>
+    <xor id="84">
+      <name/>
+    </xor>
+    <xor id="85">
+      <name/>
+    </xor>
+    <xor id="86">
+      <name/>
+    </xor>
+    <xor id="87">
+      <name/>
+    </xor>
+    <xor id="88">
+      <name/>
+    </xor>
+    <arc id="89">
+      <flow source="1" target="82" />
+    </arc>
+    <arc id="90">
+      <flow source="2" target="3" />
+    </arc>
+    <arc id="91">
+      <flow source="3" target="78" />
+    </arc>
+    <arc id="92">
+      <flow source="4" target="73" />
+    </arc>
+    <arc id="93">
+      <flow source="5" target="13" />
+    </arc>
+    <arc id="94">
+      <flow source="7" target="82" />
+    </arc>
+    <arc id="95">
+      <flow source="8" target="74" />
+    </arc>
+    <arc id="96">
+      <flow source="9" target="85" />
+    </arc>
+    <arc id="97">
+      <flow source="10" target="83" />
+    </arc>
+    <arc id="98">
+      <flow source="11" target="75" />
+    </arc>
+    <arc id="99">
+      <flow source="12" target="76" />
+    </arc>
+    <arc id="100">
+      <flow source="13" target="85" />
+    </arc>
+    <arc id="101">
+      <flow source="14" target="77" />
+    </arc>
+    <arc id="102">
+      <flow source="15" target="82" />
+    </arc>
+    <arc id="103">
+      <flow source="16" target="72" />
+    </arc>
+    <arc id="104">
+      <flow source="17" target="82" />
+    </arc>
+    <arc id="105">
+      <flow source="18" target="79" />
+    </arc>
+    <arc id="106">
+      <flow source="19" target="87" />
+    </arc>
+    <arc id="107">
+      <flow source="20" target="80" />
+    </arc>
+    <arc id="108">
+      <flow source="21" target="81" />
+    </arc>
+    <arc id="109">
+      <flow source="22" target="78" />
+    </arc>
+    <arc id="110">
+      <flow source="23" target="18" />
+    </arc>
+    <arc id="111">
+      <flow source="24" target="83" />
+    </arc>
+    <arc id="112">
+      <flow source="25" target="87" />
+    </arc>
+    <arc id="113">
+      <flow source="26" target="78" />
+    </arc>
+    <arc id="114">
+      <flow source="27" target="6" />
+    </arc>
+    <arc id="115">
+      <flow source="28" target="87" />
+    </arc>
+    <arc id="116">
+      <flow source="29" target="72" />
+    </arc>
+    <arc id="117">
+      <flow source="30" target="87" />
+    </arc>
+    <arc id="118">
+      <flow source="31" target="84" />
+    </arc>
+    <arc id="119">
+      <flow source="32" target="86" />
+    </arc>
+    <arc id="120">
+      <flow source="33" target="78" />
+    </arc>
+    <arc id="121">
+      <flow source="34" target="88" />
+    </arc>
+    <arc id="122">
+      <flow source="35" target="29" />
+    </arc>
+    <arc id="123">
+      <flow source="79" target="1" />
+    </arc>
+    <arc id="124">
+      <flow source="80" target="2" />
+    </arc>
+    <arc id="125">
+      <flow source="72" target="4" />
+    </arc>
+    <arc id="126">
+      <flow source="73" target="5" />
+    </arc>
+    <arc id="127">
+      <flow source="80" target="7" />
+    </arc>
+    <arc id="128">
+      <flow source="73" target="8" />
+    </arc>
+    <arc id="129">
+      <flow source="88" target="9" />
+    </arc>
+    <arc id="130">
+      <flow source="86" target="10" />
+    </arc>
+    <arc id="131">
+      <flow source="77" target="11" />
+    </arc>
+    <arc id="132">
+      <flow source="81" target="12" />
+    </arc>
+    <arc id="133">
+      <flow source="79" target="14" />
+    </arc>
+    <arc id="134">
+      <flow source="77" target="15" />
+    </arc>
+    <arc id="135">
+      <flow source="78" target="16" />
+    </arc>
+    <arc id="136">
+      <flow source="76" target="17" />
+    </arc>
+    <arc id="137">
+      <flow source="84" target="19" />
+    </arc>
+    <arc id="138">
+      <flow source="81" target="20" />
+    </arc>
+    <arc id="139">
+      <flow source="82" target="22" />
+    </arc>
+    <arc id="140">
+      <flow source="81" target="23" />
+    </arc>
+    <arc id="141">
+      <flow source="86" target="24" />
+    </arc>
+    <arc id="142">
+      <flow source="74" target="25" />
+    </arc>
+    <arc id="143">
+      <flow source="75" target="26" />
+    </arc>
+    <arc id="144">
+      <flow source="83" target="27" />
+    </arc>
+    <arc id="145">
+      <flow source="88" target="28" />
+    </arc>
+    <arc id="146">
+      <flow source="84" target="30" />
+    </arc>
+    <arc id="147">
+      <flow source="74" target="31" />
+    </arc>
+    <arc id="148">
+      <flow source="85" target="32" />
+    </arc>
+    <arc id="149">
+      <flow source="76" target="33" />
+    </arc>
+    <arc id="150">
+      <flow source="87" target="34" />
+    </arc>
+    <arc id="151">
+      <flow source="75" target="35" />
+    </arc>
+  </epc>
+  <epc epcId="2" name="birhtCertificate_p32">
+    <function id="1">
+      <name>t55</name>
+    </function>
+    <function id="2">
+      <name>t45</name>
+    </function>
+    <function id="3">
+      <name>Check prename</name>
+    </function>
+    <function id="4">
+      <name>Register nationality of baby</name>
+    </function>
+    <function id="5">
+      <name>Create certificate of birth</name>
+    </function>
+    <function id="6">
+      <name>Give married name of parents</name>
+    </function>
+    <function id="7">
+      <name>Receive birth notification</name>
+    </function>
+    <function id="8">
+      <name>t48</name>
+    </function>
+    <function id="9">
+      <name>t1</name>
+    </function>
+    <function id="10">
+      <name>t56</name>
+    </function>
+    <function id="11">
+      <name>Inform responsible authority</name>
+    </function>
+    <function id="12">
+      <name>t47</name>
+    </function>
+    <function id="13">
+      <name>Register baby as german 1</name>
+    </function>
+    <function id="14">
+      <name>Check condition</name>
+    </function>
+    <function id="15">
+      <name>Register baby as german 2</name>
+    </function>
+    <function id="16">
+      <name>Clarify name</name>
+    </function>
+    <function id="17">
+      <name>Give prename</name>
+    </function>
+    <function id="18">
+      <name>Check documents</name>
+    </function>
+    <function id="19">
+      <name>Check nationality of parents</name>
+    </function>
+    <function id="20">
+      <name>Receive documents</name>
+    </function>
+    <xor id="42">
+      <name/>
+    </xor>
+    <xor id="43">
+      <name/>
+    </xor>
+    <xor id="44">
+      <name/>
+    </xor>
+    <xor id="45">
+      <name/>
+    </xor>
+    <xor id="46">
+      <name/>
+    </xor>
+    <xor id="48">
+      <name/>
+    </xor>
+    <xor id="49">
+      <name/>
+    </xor>
+    <xor id="51">
+      <name/>
+    </xor>
+    <and id="47">
+      <name/>
+    </and>
+    <and id="50">
+      <name/>
+    </and>
+    <arc id="52">
+      <flow source="1" target="49" />
+    </arc>
+    <arc id="53">
+      <flow source="2" target="44" />
+    </arc>
+    <arc id="54">
+      <flow source="3" target="45" />
+    </arc>
+    <arc id="55">
+      <flow source="4" target="49" />
+    </arc>
+    <arc id="56">
+      <flow source="5" target="11" />
+    </arc>
+    <arc id="57">
+      <flow source="6" target="46" />
+    </arc>
+    <arc id="58">
+      <flow source="7" target="50" />
+    </arc>
+    <arc id="59">
+      <flow source="8" target="15" />
+    </arc>
+    <arc id="60">
+      <flow source="9" target="47" />
+    </arc>
+    <arc id="61">
+      <flow source="10" target="48" />
+    </arc>
+    <arc id="62">
+      <flow source="12" target="42" />
+    </arc>
+    <arc id="63">
+      <flow source="13" target="49" />
+    </arc>
+    <arc id="64">
+      <flow source="14" target="42" />
+    </arc>
+    <arc id="65">
+      <flow source="15" target="49" />
+    </arc>
+    <arc id="66">
+      <flow source="16" target="46" />
+    </arc>
+    <arc id="67">
+      <flow source="17" target="3" />
+    </arc>
+    <arc id="68">
+      <flow source="18" target="19" />
+    </arc>
+    <arc id="69">
+      <flow source="19" target="51" />
+    </arc>
+    <arc id="70">
+      <flow source="20" target="50" />
+    </arc>
+    <arc id="71">
+      <flow source="45" target="1" />
+    </arc>
+    <arc id="72">
+      <flow source="51" target="2" />
+    </arc>
+    <arc id="73">
+      <flow source="43" target="4" />
+    </arc>
+    <arc id="74">
+      <flow source="46" target="5" />
+    </arc>
+    <arc id="75">
+      <flow source="48" target="6" />
+    </arc>
+    <arc id="76">
+      <flow source="47" target="7" />
+    </arc>
+    <arc id="77">
+      <flow source="51" target="8" />
+    </arc>
+    <arc id="78">
+      <flow source="45" target="10" />
+    </arc>
+    <arc id="79">
+      <flow source="44" target="12" />
+    </arc>
+    <arc id="80">
+      <flow source="43" target="13" />
+    </arc>
+    <arc id="81">
+      <flow source="44" target="14" />
+    </arc>
+    <arc id="82">
+      <flow source="48" target="16" />
+    </arc>
+    <arc id="83">
+      <flow source="49" target="17" />
+    </arc>
+    <arc id="84">
+      <flow source="50" target="18" />
+    </arc>
+    <arc id="85">
+      <flow source="47" target="20" />
+    </arc>
+    <arc id="86">
+      <flow source="42" target="43" />
+    </arc>
+  </epc>
+  <epc epcId="3" name="birhtCertificate_p33">
+    <function id="1">
+      <name>Trial in court of International Affairs</name>
+    </function>
+    <function id="2">
+      <name>Receive the citizen decision</name>
+    </function>
+    <function id="3">
+      <name>Define the name</name>
+    </function>
+    <function id="4">
+      <name>Check if it is mother's first baby</name>
+    </function>
+    <function id="5">
+      <name>Check if she was younger than 30 at the baby's birthday</name>
+    </function>
+    <function id="6">
+      <name>t26</name>
+    </function>
+    <function id="7">
+      <name>Registration in children's home</name>
+    </function>
+    <function id="8">
+      <name>t24</name>
+    </function>
+    <function id="9">
+      <name>t8</name>
+    </function>
+    <function id="10">
+      <name>t7</name>
+    </function>
+    <function id="11">
+      <name>Send birth certificate to parents</name>
+    </function>
+    <function id="12">
+      <name>Registration in one's place</name>
+    </function>
+    <function id="13">
+      <name>t19</name>
+    </function>
+    <function id="14">
+      <name>t6</name>
+    </function>
+    <function id="15">
+      <name>t5</name>
+    </function>
+    <function id="16">
+      <name>Inform civil court</name>
+    </function>
+    <function id="17">
+      <name>t23</name>
+    </function>
+    <function id="18">
+      <name>Send the request about money benefit</name>
+    </function>
+    <function id="19">
+      <name>Request information</name>
+    </function>
+    <function id="20">
+      <name>Check parent's nationality</name>
+    </function>
+    <function id="21">
+      <name>Check on parents</name>
+    </function>
+    <function id="22">
+      <name>Check data</name>
+    </function>
+    <function id="23">
+      <name>t16</name>
+    </function>
+    <function id="24">
+      <name>t22</name>
+    </function>
+    <function id="25">
+      <name>t34</name>
+    </function>
+    <function id="26">
+      <name>Execute the maternal capital and put the money for 18 years into statebank</name>
+    </function>
+    <function id="27">
+      <name>Trial</name>
+    </function>
+    <function id="28">
+      <name>Register baby as russian citizen</name>
+    </function>
+    <function id="29">
+      <name>Getting a citizenship stamp on birth certificate</name>
+    </function>
+    <function id="30">
+      <name>Register citizenship of baby</name>
+    </function>
+    <function id="31">
+      <name>Send the information</name>
+    </function>
+    <function id="32">
+      <name>t20</name>
+    </function>
+    <function id="33">
+      <name>Formalize the month payment</name>
+    </function>
+    <function id="34">
+      <name>Create birth certificate</name>
+    </function>
+    <function id="35">
+      <name>t32</name>
+    </function>
+    <xor id="72">
+      <name/>
+    </xor>
+    <xor id="73">
+      <name/>
+    </xor>
+    <xor id="74">
+      <name/>
+    </xor>
+    <xor id="75">
+      <name/>
+    </xor>
+    <xor id="76">
+      <name/>
+    </xor>
+    <xor id="77">
+      <name/>
+    </xor>
+    <xor id="78">
+      <name/>
+    </xor>
+    <xor id="79">
+      <name/>
+    </xor>
+    <xor id="80">
+      <name/>
+    </xor>
+    <xor id="81">
+      <name/>
+    </xor>
+    <xor id="82">
+      <name/>
+    </xor>
+    <xor id="83">
+      <name/>
+    </xor>
+    <xor id="84">
+      <name/>
+    </xor>
+    <xor id="86">
+      <name/>
+    </xor>
+    <or id="85">
+      <name/>
+    </or>
+    <and id="87">
+      <name/>
+    </and>
+    <arc id="87">
+      <flow source="1" target="2" />
+    </arc>
+    <arc id="88">
+      <flow source="2" target="30" />
+    </arc>
+    <arc id="89">
+      <flow source="3" target="86" />
+    </arc>
+    <arc id="90">
+      <flow source="4" target="72" />
+    </arc>
+    <arc id="91">
+      <flow source="5" target="73" />
+    </arc>
+    <arc id="92">
+      <flow source="6" target="77" />
+    </arc>
+    <arc id="93">
+      <flow source="7" target="82" />
+    </arc>
+    <arc id="94">
+      <flow source="8" target="74" />
+    </arc>
+    <arc id="95">
+      <flow source="9" target="76" />
+    </arc>
+    <arc id="96">
+      <flow source="10" target="75" />
+    </arc>
+    <arc id="97">
+      <flow source="11" target="85" />
+    </arc>
+    <arc id="98">
+      <flow source="12" target="29" />
+    </arc>
+    <arc id="99">
+      <flow source="13" target="86" />
+    </arc>
+    <arc id="100">
+      <flow source="14" target="75" />
+    </arc>
+    <arc id="101">
+      <flow source="15" target="79" />
+    </arc>
+    <arc id="102">
+      <flow source="16" target="78" />
+    </arc>
+    <arc id="103">
+      <flow source="17" target="85" />
+    </arc>
+    <arc id="104">
+      <flow source="18" target="33" />
+    </arc>
+    <arc id="105">
+      <flow source="19" target="16" />
+    </arc>
+    <arc id="106">
+      <flow source="20" target="80" />
+    </arc>
+    <arc id="107">
+      <flow source="21" target="79" />
+    </arc>
+    <arc id="108">
+      <flow source="22" target="81" />
+    </arc>
+    <arc id="109">
+      <flow source="23" target="83" />
+    </arc>
+    <arc id="110">
+      <flow source="24" target="84" />
+    </arc>
+    <arc id="111">
+      <flow source="25" target="85" />
+    </arc>
+    <arc id="112">
+      <flow source="26" target="85" />
+    </arc>
+    <arc id="113">
+      <flow source="27" target="77" />
+    </arc>
+    <arc id="114">
+      <flow source="28" target="82" />
+    </arc>
+    <arc id="115">
+      <flow source="29" target="18" />
+    </arc>
+    <arc id="116">
+      <flow source="30" target="82" />
+    </arc>
+    <arc id="117">
+      <flow source="31" target="7" />
+    </arc>
+    <arc id="118">
+      <flow source="33" target="4" />
+    </arc>
+    <arc id="119">
+      <flow source="34" target="87" />
+    </arc>
+    <arc id="120">
+      <flow source="35" target="85" />
+    </arc>
+    <arc id="121">
+      <flow source="80" target="1" />
+    </arc>
+    <arc id="122">
+      <flow source="83" target="3" />
+    </arc>
+    <arc id="123">
+      <flow source="72" target="5" />
+    </arc>
+    <arc id="124">
+      <flow source="74" target="6" />
+    </arc>
+    <arc id="125">
+      <flow source="84" target="8" />
+    </arc>
+    <arc id="126">
+      <flow source="75" target="9" />
+    </arc>
+    <arc id="127">
+      <flow source="81" target="10" />
+    </arc>
+    <arc id="128">
+      <flow source="87" target="11" />
+    </arc>
+    <arc id="129">
+      <flow source="77" target="12" />
+    </arc>
+    <arc id="130">
+      <flow source="83" target="13" />
+    </arc>
+    <arc id="131">
+      <flow source="78" target="14" />
+    </arc>
+    <arc id="132">
+      <flow source="81" target="15" />
+    </arc>
+    <arc id="133">
+      <flow source="84" target="17" />
+    </arc>
+    <arc id="134">
+      <flow source="79" target="19" />
+    </arc>
+    <arc id="135">
+      <flow source="76" target="20" />
+    </arc>
+    <arc id="136">
+      <flow source="78" target="21" />
+    </arc>
+    <arc id="137">
+      <flow source="82" target="23" />
+    </arc>
+    <arc id="138">
+      <flow source="87" target="24" />
+    </arc>
+    <arc id="139">
+      <flow source="73" target="25" />
+    </arc>
+    <arc id="140">
+      <flow source="73" target="26" />
+    </arc>
+    <arc id="141">
+      <flow source="74" target="27" />
+    </arc>
+    <arc id="142">
+      <flow source="80" target="28" />
+    </arc>
+    <arc id="143">
+      <flow source="76" target="31" />
+    </arc>
+    <arc id="144">
+      <flow source="85" target="32" />
+    </arc>
+    <arc id="145">
+      <flow source="86" target="34" />
+    </arc>
+    <arc id="146">
+      <flow source="72" target="35" />
+    </arc>
+  </epc>
+  <epc epcId="4" name="birhtCertificate_p34">
+    <function id="1">
+      <name>Decide on first name 1</name>
+    </function>
+    <function id="2">
+      <name>Decide on first name 2</name>
+    </function>
+    <function id="3">
+      <name>Register child as foreign birth</name>
+    </function>
+    <function id="4">
+      <name>t1</name>
+    </function>
+    <function id="5">
+      <name>Process birth certificate</name>
+    </function>
+    <function id="6">
+      <name>Deliver birth certificate</name>
+    </function>
+    <function id="7">
+      <name>t3</name>
+    </function>
+    <function id="8">
+      <name>Consult father</name>
+    </function>
+    <function id="9">
+      <name>t7</name>
+    </function>
+    <function id="10">
+      <name>Consult mother</name>
+    </function>
+    <function id="11">
+      <name>Decide on surname; decide on first name</name>
+    </function>
+    <function id="12">
+      <name>Receive information</name>
+    </function>
+    <xor id="26">
+      <name/>
+    </xor>
+    <xor id="27">
+      <name/>
+    </xor>
+    <xor id="28">
+      <name/>
+    </xor>
+    <xor id="29">
+      <name/>
+    </xor>
+    <xor id="30">
+      <name/>
+    </xor>
+    <arc id="31">
+      <flow source="1" target="30" />
+    </arc>
+    <arc id="32">
+      <flow source="2" target="30" />
+    </arc>
+    <arc id="33">
+      <flow source="3" target="26" />
+    </arc>
+    <arc id="34">
+      <flow source="4" target="28" />
+    </arc>
+    <arc id="35">
+      <flow source="5" target="6" />
+    </arc>
+    <arc id="36">
+      <flow source="7" target="26" />
+    </arc>
+    <arc id="37">
+      <flow source="8" target="2" />
+    </arc>
+    <arc id="38">
+      <flow source="9" target="1" />
+    </arc>
+    <arc id="39">
+      <flow source="10" target="29" />
+    </arc>
+    <arc id="40">
+      <flow source="11" target="30" />
+    </arc>
+    <arc id="41">
+      <flow source="12" target="5" />
+    </arc>
+    <arc id="42">
+      <flow source="28" target="3" />
+    </arc>
+    <arc id="43">
+      <flow source="28" target="7" />
+    </arc>
+    <arc id="44">
+      <flow source="27" target="8" />
+    </arc>
+    <arc id="45">
+      <flow source="29" target="9" />
+    </arc>
+    <arc id="46">
+      <flow source="27" target="10" />
+    </arc>
+    <arc id="47">
+      <flow source="29" target="11" />
+    </arc>
+    <arc id="48">
+      <flow source="30" target="12" />
+    </arc>
+    <arc id="49">
+      <flow source="26" target="27" />
+    </arc>
+  </epc>
+  <epc epcId="5" name="birhtCertificate_p246">
+    <function id="1">
+      <name>Sign birth certificate</name>
+    </function>
+    <function id="2">
+      <name>Search GBA data</name>
+    </function>
+    <function id="3">
+      <name>Refuse continuation</name>
+    </function>
+    <function id="4">
+      <name>Receive notification birth</name>
+    </function>
+    <function id="5">
+      <name>Finalize message</name>
+    </function>
+    <function id="6">
+      <name>Return documents 1</name>
+    </function>
+    <function id="7">
+      <name>t11</name>
+    </function>
+    <function id="8">
+      <name>Send notifications</name>
+    </function>
+    <function id="9">
+      <name>Archive documents</name>
+    </function>
+    <function id="10">
+      <name>t7</name>
+    </function>
+    <function id="11">
+      <name>Fill in birth registration form</name>
+    </function>
+    <function id="12">
+      <name>Send PL</name>
+    </function>
+    <function id="13">
+      <name>Confirm identity</name>
+    </function>
+    <function id="14">
+      <name>Confirm identity without</name>
+    </function>
+    <function id="15">
+      <name>Determine next action</name>
+    </function>
+    <function id="16">
+      <name>Return documents 2</name>
+    </function>
+    <function id="17">
+      <name>Confirm identity with passport</name>
+    </function>
+    <function id="18">
+      <name>Check GBA data</name>
+    </function>
+    <function id="19">
+      <name>Create birth certificate</name>
+    </function>
+    <function id="20">
+      <name>Update GBA</name>
+    </function>
+    <function id="21">
+      <name>Send data</name>
+    </function>
+    <function id="22">
+      <name>Check validity</name>
+    </function>
+    <event id="23">
+      <name>End Event</name>
+    </event>
+    <xor id="46">
+      <name/>
+    </xor>
+    <xor id="47">
+      <name/>
+    </xor>
+    <xor id="48">
+      <name/>
+    </xor>
+    <xor id="49">
+      <name/>
+    </xor>
+    <xor id="50">
+      <name/>
+    </xor>
+    <xor id="51">
+      <name/>
+    </xor>
+    <xor id="52">
+      <name/>
+    </xor>
+    <xor id="53">
+      <name/>
+    </xor>
+    <xor id="54">
+      <name/>
+    </xor>
+    <xor id="55">
+      <name/>
+    </xor>
+    <arc id="55">
+      <flow source="1" target="16" />
+    </arc>
+    <arc id="56">
+      <flow source="2" target="55" />
+    </arc>
+    <arc id="57">
+      <flow source="3" target="46" />
+    </arc>
+    <arc id="58">
+      <flow source="4" target="49" />
+    </arc>
+    <arc id="59">
+      <flow source="5" target="51" />
+    </arc>
+    <arc id="60">
+      <flow source="6" target="46" />
+    </arc>
+    <arc id="61">
+      <flow source="7" target="55" />
+    </arc>
+    <arc id="62">
+      <flow source="8" target="12" />
+    </arc>
+    <arc id="63">
+      <flow source="9" target="46" />
+    </arc>
+    <arc id="64">
+      <flow source="10" target="11" />
+    </arc>
+    <arc id="65">
+      <flow source="11" target="18" />
+    </arc>
+    <arc id="66">
+      <flow source="12" target="50" />
+    </arc>
+    <arc id="67">
+      <flow source="13" target="52" />
+    </arc>
+    <arc id="68">
+      <flow source="14" target="47" />
+    </arc>
+    <arc id="69">
+      <flow source="15" target="51" />
+    </arc>
+    <arc id="70">
+      <flow source="16" target="53" />
+    </arc>
+    <arc id="71">
+      <flow source="17" target="47" />
+    </arc>
+    <arc id="72">
+      <flow source="18" target="54" />
+    </arc>
+    <arc id="73">
+      <flow source="19" target="1" />
+    </arc>
+    <arc id="74">
+      <flow source="20" target="22" />
+    </arc>
+    <arc id="75">
+      <flow source="21" target="50" />
+    </arc>
+    <arc id="76">
+      <flow source="22" target="8" />
+    </arc>
+    <arc id="77">
+      <flow source="54" target="2" />
+    </arc>
+    <arc id="78">
+      <flow source="48" target="3" />
+    </arc>
+    <arc id="79">
+      <flow source="50" target="5" />
+    </arc>
+    <arc id="80">
+      <flow source="49" target="6" />
+    </arc>
+    <arc id="81">
+      <flow source="54" target="7" />
+    </arc>
+    <arc id="82">
+      <flow source="51" target="9" />
+    </arc>
+    <arc id="83">
+      <flow source="48" target="10" />
+    </arc>
+    <arc id="84">
+      <flow source="49" target="13" />
+    </arc>
+    <arc id="85">
+      <flow source="52" target="14" />
+    </arc>
+    <arc id="86">
+      <flow source="53" target="15" />
+    </arc>
+    <arc id="87">
+      <flow source="52" target="17" />
+    </arc>
+    <arc id="88">
+      <flow source="55" target="19" />
+    </arc>
+    <arc id="89">
+      <flow source="53" target="20" />
+    </arc>
+    <arc id="90">
+      <flow source="53" target="21" />
+    </arc>
+    <arc id="91">
+      <flow source="46" target="23" />
+    </arc>
+    <arc id="92">
+      <flow source="47" target="48" />
+    </arc>
+  </epc>
+  <epc epcId="6" name="birhtCertificate_p247">
+    <function id="1">
+      <name>t8</name>
+    </function>
+    <function id="2">
+      <name>Send PL</name>
+    </function>
+    <function id="3">
+      <name>Informer checks the certificate</name>
+    </function>
+    <function id="4">
+      <name>Redirect to munic. of birth</name>
+    </function>
+    <function id="5">
+      <name>Adjust</name>
+    </function>
+    <function id="6">
+      <name>Sign certificate</name>
+    </function>
+    <function id="7">
+      <name>Update GBA</name>
+    </function>
+    <function id="8">
+      <name>Finalize message exch.</name>
+    </function>
+    <function id="9">
+      <name>t17</name>
+    </function>
+    <function id="10">
+      <name>Archive documents</name>
+    </function>
+    <function id="11">
+      <name>Receive notification of birth</name>
+    </function>
+    <function id="12">
+      <name>Check validity</name>
+    </function>
+    <function id="13">
+      <name>Create birth certificate</name>
+    </function>
+    <function id="14">
+      <name>Fill in birth certificate</name>
+    </function>
+    <function id="15">
+      <name>Return documents</name>
+    </function>
+    <function id="16">
+      <name>Determine GBA municipality</name>
+    </function>
+    <function id="17">
+      <name>Confirm identity</name>
+    </function>
+    <function id="18">
+      <name>Send notifications</name>
+    </function>
+    <function id="19">
+      <name>t2</name>
+    </function>
+    <function id="20">
+      <name>Certificate based on info mother</name>
+    </function>
+    <function id="21">
+      <name>Process ackn. certificate</name>
+    </function>
+    <function id="22">
+      <name>Send Data</name>
+    </function>
+    <function id="23">
+      <name>t34</name>
+    </function>
+    <function id="24">
+      <name>Determine next action</name>
+    </function>
+    <function id="25">
+      <name>Search GBA data</name>
+    </function>
+    <function id="26">
+      <name>t16</name>
+    </function>
+    <function id="27">
+      <name>Confirm choice of name</name>
+    </function>
+    <function id="28">
+      <name>Check GBA</name>
+    </function>
+    <function id="29">
+      <name>Collect docs munici. of</name>
+    </function>
+    <function id="30">
+      <name>t15</name>
+    </function>
+    <function id="31">
+      <name>Correct error</name>
+    </function>
+    <event id="32">
+      <name>End Event</name>
+    </event>
+    <xor id="64">
+      <name/>
+    </xor>
+    <xor id="65">
+      <name/>
+    </xor>
+    <xor id="66">
+      <name/>
+    </xor>
+    <xor id="67">
+      <name/>
+    </xor>
+    <xor id="68">
+      <name/>
+    </xor>
+    <xor id="69">
+      <name/>
+    </xor>
+    <xor id="70">
+      <name/>
+    </xor>
+    <xor id="71">
+      <name/>
+    </xor>
+    <xor id="72">
+      <name/>
+    </xor>
+    <xor id="73">
+      <name/>
+    </xor>
+    <xor id="74">
+      <name/>
+    </xor>
+    <xor id="75">
+      <name/>
+    </xor>
+    <xor id="76">
+      <name/>
+    </xor>
+    <xor id="77">
+      <name/>
+    </xor>
+    <xor id="78">
+      <name/>
+    </xor>
+    <xor id="79">
+      <name/>
+    </xor>
+    <arc id="79">
+      <flow source="1" target="71" />
+    </arc>
+    <arc id="80">
+      <flow source="2" target="67" />
+    </arc>
+    <arc id="81">
+      <flow source="3" target="66" />
+    </arc>
+    <arc id="82">
+      <flow source="4" target="64" />
+    </arc>
+    <arc id="83">
+      <flow source="5" target="65" />
+    </arc>
+    <arc id="84">
+      <flow source="6" target="15" />
+    </arc>
+    <arc id="85">
+      <flow source="7" target="69" />
+    </arc>
+    <arc id="86">
+      <flow source="8" target="10" />
+    </arc>
+    <arc id="87">
+      <flow source="9" target="68" />
+    </arc>
+    <arc id="88">
+      <flow source="10" target="64" />
+    </arc>
+    <arc id="89">
+      <flow source="11" target="17" />
+    </arc>
+    <arc id="90">
+      <flow source="12" target="70" />
+    </arc>
+    <arc id="91">
+      <flow source="13" target="65" />
+    </arc>
+    <arc id="92">
+      <flow source="14" target="13" />
+    </arc>
+    <arc id="93">
+      <flow source="15" target="16" />
+    </arc>
+    <arc id="94">
+      <flow source="16" target="72" />
+    </arc>
+    <arc id="95">
+      <flow source="17" target="73" />
+    </arc>
+    <arc id="96">
+      <flow source="18" target="2" />
+    </arc>
+    <arc id="97">
+      <flow source="19" target="71" />
+    </arc>
+    <arc id="98">
+      <flow source="20" target="74" />
+    </arc>
+    <arc id="99">
+      <flow source="21" target="71" />
+    </arc>
+    <arc id="100">
+      <flow source="22" target="67" />
+    </arc>
+    <arc id="101">
+      <flow source="23" target="76" />
+    </arc>
+    <arc id="102">
+      <flow source="24" target="78" />
+    </arc>
+    <arc id="103">
+      <flow source="25" target="78" />
+    </arc>
+    <arc id="104">
+      <flow source="26" target="75" />
+    </arc>
+    <arc id="105">
+      <flow source="27" target="71" />
+    </arc>
+    <arc id="106">
+      <flow source="28" target="77" />
+    </arc>
+    <arc id="107">
+      <flow source="29" target="76" />
+    </arc>
+    <arc id="108">
+      <flow source="30" target="79" />
+    </arc>
+    <arc id="109">
+      <flow source="31" target="69" />
+    </arc>
+    <arc id="110">
+      <flow source="79" target="1" />
+    </arc>
+    <arc id="111">
+      <flow source="65" target="3" />
+    </arc>
+    <arc id="112">
+      <flow source="73" target="4" />
+    </arc>
+    <arc id="113">
+      <flow source="66" target="5" />
+    </arc>
+    <arc id="114">
+      <flow source="66" target="6" />
+    </arc>
+    <arc id="115">
+      <flow source="72" target="7" />
+    </arc>
+    <arc id="116">
+      <flow source="67" target="8" />
+    </arc>
+    <arc id="117">
+      <flow source="75" target="9" />
+    </arc>
+    <arc id="118">
+      <flow source="69" target="12" />
+    </arc>
+    <arc id="119">
+      <flow source="71" target="14" />
+    </arc>
+    <arc id="120">
+      <flow source="70" target="18" />
+    </arc>
+    <arc id="121">
+      <flow source="68" target="19" />
+    </arc>
+    <arc id="122">
+      <flow source="73" target="20" />
+    </arc>
+    <arc id="123">
+      <flow source="75" target="21" />
+    </arc>
+    <arc id="124">
+      <flow source="72" target="22" />
+    </arc>
+    <arc id="125">
+      <flow source="74" target="23" />
+    </arc>
+    <arc id="126">
+      <flow source="77" target="24" />
+    </arc>
+    <arc id="127">
+      <flow source="77" target="25" />
+    </arc>
+    <arc id="128">
+      <flow source="79" target="26" />
+    </arc>
+    <arc id="129">
+      <flow source="68" target="27" />
+    </arc>
+    <arc id="130">
+      <flow source="76" target="28" />
+    </arc>
+    <arc id="131">
+      <flow source="74" target="29" />
+    </arc>
+    <arc id="132">
+      <flow source="78" target="30" />
+    </arc>
+    <arc id="133">
+      <flow source="70" target="31" />
+    </arc>
+    <arc id="134">
+      <flow source="64" target="32" />
+    </arc>
+  </epc>
+  <epc epcId="7" name="birhtCertificate_p248">
+    <function id="1">
+      <name>Update GBA</name>
+    </function>
+    <function id="2">
+      <name>Determine next action</name>
+    </function>
+    <function id="3">
+      <name>Send notifications</name>
+    </function>
+    <function id="4">
+      <name>Adjust</name>
+    </function>
+    <function id="5">
+      <name>Sign certificate</name>
+    </function>
+    <function id="6">
+      <name>Confirm choice of name</name>
+    </function>
+    <function id="7">
+      <name>Fill in birth registration form</name>
+    </function>
+    <function id="8">
+      <name>Redirect to munic. of birth</name>
+    </function>
+    <function id="9">
+      <name>Process ackn. certificate</name>
+    </function>
+    <function id="10">
+      <name>Create birth certificate</name>
+    </function>
+    <function id="11">
+      <name>Send data</name>
+    </function>
+    <function id="12">
+      <name>Correct error</name>
+    </function>
+    <function id="13">
+      <name>Determine GBA municipality</name>
+    </function>
+    <function id="14">
+      <name>Check accuracy</name>
+    </function>
+    <function id="15">
+      <name>t2</name>
+    </function>
+    <function id="16">
+      <name>Confirm identity</name>
+    </function>
+    <function id="17">
+      <name>t8</name>
+    </function>
+    <function id="18">
+      <name>Informer checks the certificate</name>
+    </function>
+    <function id="19">
+      <name>Send PL</name>
+    </function>
+    <function id="20">
+      <name>Receive notific. of birth</name>
+    </function>
+    <function id="21">
+      <name>Archive documents</name>
+    </function>
+    <function id="22">
+      <name>Search GBA data</name>
+    </function>
+    <function id="23">
+      <name>Finalize message exch.</name>
+    </function>
+    <function id="24">
+      <name>Check GBA data</name>
+    </function>
+    <function id="25">
+      <name>Return documents</name>
+    </function>
+    <function id="26">
+      <name>t7</name>
+    </function>
+    <event id="27">
+      <name>End Event</name>
+    </event>
+    <xor id="54">
+      <name/>
+    </xor>
+    <xor id="55">
+      <name/>
+    </xor>
+    <xor id="56">
+      <name/>
+    </xor>
+    <xor id="57">
+      <name/>
+    </xor>
+    <xor id="58">
+      <name/>
+    </xor>
+    <xor id="59">
+      <name/>
+    </xor>
+    <xor id="60">
+      <name/>
+    </xor>
+    <xor id="61">
+      <name/>
+    </xor>
+    <xor id="62">
+      <name/>
+    </xor>
+    <xor id="63">
+      <name/>
+    </xor>
+    <xor id="64">
+      <name/>
+    </xor>
+    <xor id="65">
+      <name/>
+    </xor>
+    <xor id="66">
+      <name/>
+    </xor>
+    <arc id="67">
+      <flow source="1" target="58" />
+    </arc>
+    <arc id="68">
+      <flow source="2" target="56" />
+    </arc>
+    <arc id="69">
+      <flow source="3" target="19" />
+    </arc>
+    <arc id="70">
+      <flow source="4" target="62" />
+    </arc>
+    <arc id="71">
+      <flow source="5" target="25" />
+    </arc>
+    <arc id="72">
+      <flow source="6" target="55" />
+    </arc>
+    <arc id="73">
+      <flow source="7" target="24" />
+    </arc>
+    <arc id="74">
+      <flow source="8" target="54" />
+    </arc>
+    <arc id="75">
+      <flow source="9" target="55" />
+    </arc>
+    <arc id="76">
+      <flow source="10" target="62" />
+    </arc>
+    <arc id="77">
+      <flow source="11" target="64" />
+    </arc>
+    <arc id="78">
+      <flow source="12" target="58" />
+    </arc>
+    <arc id="79">
+      <flow source="13" target="57" />
+    </arc>
+    <arc id="80">
+      <flow source="14" target="59" />
+    </arc>
+    <arc id="81">
+      <flow source="15" target="60" />
+    </arc>
+    <arc id="82">
+      <flow source="16" target="61" />
+    </arc>
+    <arc id="83">
+      <flow source="17" target="55" />
+    </arc>
+    <arc id="84">
+      <flow source="18" target="63" />
+    </arc>
+    <arc id="85">
+      <flow source="19" target="64" />
+    </arc>
+    <arc id="86">
+      <flow source="20" target="16" />
+    </arc>
+    <arc id="87">
+      <flow source="21" target="54" />
+    </arc>
+    <arc id="88">
+      <flow source="22" target="56" />
+    </arc>
+    <arc id="89">
+      <flow source="23" target="21" />
+    </arc>
+    <arc id="90">
+      <flow source="24" target="65" />
+    </arc>
+    <arc id="91">
+      <flow source="25" target="13" />
+    </arc>
+    <arc id="92">
+      <flow source="26" target="66" />
+    </arc>
+    <arc id="93">
+      <flow source="57" target="1" />
+    </arc>
+    <arc id="94">
+      <flow source="65" target="2" />
+    </arc>
+    <arc id="95">
+      <flow source="59" target="3" />
+    </arc>
+    <arc id="96">
+      <flow source="63" target="4" />
+    </arc>
+    <arc id="97">
+      <flow source="63" target="5" />
+    </arc>
+    <arc id="98">
+      <flow source="66" target="6" />
+    </arc>
+    <arc id="99">
+      <flow source="55" target="7" />
+    </arc>
+    <arc id="100">
+      <flow source="61" target="8" />
+    </arc>
+    <arc id="101">
+      <flow source="60" target="9" />
+    </arc>
+    <arc id="102">
+      <flow source="56" target="10" />
+    </arc>
+    <arc id="103">
+      <flow source="57" target="11" />
+    </arc>
+    <arc id="104">
+      <flow source="59" target="12" />
+    </arc>
+    <arc id="105">
+      <flow source="58" target="14" />
+    </arc>
+    <arc id="106">
+      <flow source="61" target="15" />
+    </arc>
+    <arc id="107">
+      <flow source="66" target="17" />
+    </arc>
+    <arc id="108">
+      <flow source="62" target="18" />
+    </arc>
+    <arc id="109">
+      <flow source="65" target="22" />
+    </arc>
+    <arc id="110">
+      <flow source="64" target="23" />
+    </arc>
+    <arc id="111">
+      <flow source="60" target="26" />
+    </arc>
+    <arc id="112">
+      <flow source="54" target="27" />
+    </arc>
+  </epc>
+  <epc epcId="8" name="birhtCertificate_p249">
+    <function id="1">
+      <name>Update GBA</name>
+    </function>
+    <function id="2">
+      <name>Send notifications</name>
+    </function>
+    <function id="3">
+      <name>Conform choice of name</name>
+    </function>
+    <function id="4">
+      <name>Archive documents</name>
+    </function>
+    <function id="5">
+      <name>Scan</name>
+    </function>
+    <function id="6">
+      <name>Return documents 1</name>
+    </function>
+    <function id="7">
+      <name>Search GBA data</name>
+    </function>
+    <function id="8">
+      <name>Sign certificate</name>
+    </function>
+    <function id="9">
+      <name>Determine next action</name>
+    </function>
+    <function id="10">
+      <name>Finalize message</name>
+    </function>
+    <function id="11">
+      <name>Send PL</name>
+    </function>
+    <function id="12">
+      <name>Check GBA date</name>
+    </function>
+    <function id="13">
+      <name>Send Tb01</name>
+    </function>
+    <function id="14">
+      <name>Determine GBA municipality</name>
+    </function>
+    <function id="15">
+      <name>Check accuracy</name>
+    </function>
+    <function id="16">
+      <name>t32</name>
+    </function>
+    <function id="17">
+      <name>Check identity</name>
+    </function>
+    <function id="18">
+      <name>Cancel birth notification</name>
+    </function>
+    <function id="19">
+      <name>Determine descent</name>
+    </function>
+    <function id="20">
+      <name>Return documents 2</name>
+    </function>
+    <function id="21">
+      <name>Receive notific. of birth</name>
+    </function>
+    <event id="22">
+      <name>End Event</name>
+    </event>
+    <xor id="44">
+      <name/>
+    </xor>
+    <xor id="45">
+      <name/>
+    </xor>
+    <xor id="46">
+      <name/>
+    </xor>
+    <xor id="47">
+      <name/>
+    </xor>
+    <xor id="48">
+      <name/>
+    </xor>
+    <xor id="49">
+      <name/>
+    </xor>
+    <xor id="50">
+      <name/>
+    </xor>
+    <xor id="51">
+      <name/>
+    </xor>
+    <xor id="52">
+      <name/>
+    </xor>
+    <arc id="53">
+      <flow source="1" target="49" />
+    </arc>
+    <arc id="54">
+      <flow source="2" target="49" />
+    </arc>
+    <arc id="55">
+      <flow source="3" target="8" />
+    </arc>
+    <arc id="56">
+      <flow source="4" target="5" />
+    </arc>
+    <arc id="57">
+      <flow source="5" target="44" />
+    </arc>
+    <arc id="58">
+      <flow source="6" target="44" />
+    </arc>
+    <arc id="59">
+      <flow source="7" target="51" />
+    </arc>
+    <arc id="60">
+      <flow source="8" target="20" />
+    </arc>
+    <arc id="61">
+      <flow source="9" target="45" />
+    </arc>
+    <arc id="62">
+      <flow source="10" target="45" />
+    </arc>
+    <arc id="63">
+      <flow source="11" target="46" />
+    </arc>
+    <arc id="64">
+      <flow source="12" target="47" />
+    </arc>
+    <arc id="65">
+      <flow source="13" target="46" />
+    </arc>
+    <arc id="66">
+      <flow source="14" target="48" />
+    </arc>
+    <arc id="67">
+      <flow source="15" target="11" />
+    </arc>
+    <arc id="68">
+      <flow source="16" target="51" />
+    </arc>
+    <arc id="69">
+      <flow source="17" target="50" />
+    </arc>
+    <arc id="70">
+      <flow source="18" target="44" />
+    </arc>
+    <arc id="71">
+      <flow source="19" target="3" />
+    </arc>
+    <arc id="72">
+      <flow source="20" target="14" />
+    </arc>
+    <arc id="73">
+      <flow source="21" target="52" />
+    </arc>
+    <arc id="74">
+      <flow source="48" target="1" />
+    </arc>
+    <arc id="75">
+      <flow source="48" target="2" />
+    </arc>
+    <arc id="76">
+      <flow source="45" target="4" />
+    </arc>
+    <arc id="77">
+      <flow source="52" target="6" />
+    </arc>
+    <arc id="78">
+      <flow source="47" target="7" />
+    </arc>
+    <arc id="79">
+      <flow source="48" target="9" />
+    </arc>
+    <arc id="80">
+      <flow source="46" target="10" />
+    </arc>
+    <arc id="81">
+      <flow source="50" target="12" />
+    </arc>
+    <arc id="82">
+      <flow source="48" target="13" />
+    </arc>
+    <arc id="83">
+      <flow source="49" target="15" />
+    </arc>
+    <arc id="84">
+      <flow source="47" target="16" />
+    </arc>
+    <arc id="85">
+      <flow source="52" target="17" />
+    </arc>
+    <arc id="86">
+      <flow source="50" target="18" />
+    </arc>
+    <arc id="87">
+      <flow source="51" target="19" />
+    </arc>
+    <arc id="88">
+      <flow source="44" target="22" />
+    </arc>
+  </epc>
+  <epc epcId="9" name="birhtCertificate_p250">
+    <function id="1">
+      <name>t29</name>
+    </function>
+    <function id="2">
+      <name>t15</name>
+    </function>
+    <function id="3">
+      <name>Confirm choice of name</name>
+    </function>
+    <function id="4">
+      <name>t21</name>
+    </function>
+    <function id="5">
+      <name>Finalize certificate</name>
+    </function>
+    <function id="6">
+      <name>Sign certficate</name>
+    </function>
+    <function id="7">
+      <name>Inform court</name>
+    </function>
+    <function id="8">
+      <name>t9</name>
+    </function>
+    <function id="9">
+      <name>t30</name>
+    </function>
+    <function id="10">
+      <name>Create birth certificate</name>
+    </function>
+    <function id="11">
+      <name>Apply decent (married/divorced)</name>
+    </function>
+    <function id="12">
+      <name>Check term of notification</name>
+    </function>
+    <function id="13">
+      <name>Check GBA</name>
+    </function>
+    <function id="14">
+      <name>Determine nationality child</name>
+    </function>
+    <function id="15">
+      <name>t20</name>
+    </function>
+    <function id="16">
+      <name>Return documents</name>
+    </function>
+    <function id="17">
+      <name>Confirm identity without</name>
+    </function>
+    <function id="18">
+      <name>Apply decent right (single)</name>
+    </function>
+    <function id="19">
+      <name>Send notifications</name>
+    </function>
+    <function id="20">
+      <name>Confirm identity</name>
+    </function>
+    <function id="21">
+      <name>Return to migrantshelter</name>
+    </function>
+    <function id="22">
+      <name>t34</name>
+    </function>
+    <function id="23">
+      <name>Refuse continuation</name>
+    </function>
+    <function id="24">
+      <name>Run through data</name>
+    </function>
+    <function id="25">
+      <name>Conform identity with passport</name>
+    </function>
+    <function id="26">
+      <name>t19</name>
+    </function>
+    <function id="27">
+      <name>Start procedure</name>
+    </function>
+    <function id="28">
+      <name>t16</name>
+    </function>
+    <function id="29">
+      <name>Return and archive docs</name>
+    </function>
+    <function id="30">
+      <name>Receive notific. of birth</name>
+    </function>
+    <function id="31">
+      <name>t5</name>
+    </function>
+    <function id="32">
+      <name>Investigate GBA data</name>
+    </function>
+    <function id="33">
+      <name>t28</name>
+    </function>
+    <event id="34">
+      <name>End Event</name>
+    </event>
+    <xor id="68">
+      <name/>
+    </xor>
+    <xor id="69">
+      <name/>
+    </xor>
+    <xor id="70">
+      <name/>
+    </xor>
+    <xor id="71">
+      <name/>
+    </xor>
+    <xor id="72">
+      <name/>
+    </xor>
+    <xor id="73">
+      <name/>
+    </xor>
+    <xor id="74">
+      <name/>
+    </xor>
+    <xor id="75">
+      <name/>
+    </xor>
+    <xor id="76">
+      <name/>
+    </xor>
+    <xor id="77">
+      <name/>
+    </xor>
+    <xor id="78">
+      <name/>
+    </xor>
+    <xor id="79">
+      <name/>
+    </xor>
+    <xor id="80">
+      <name/>
+    </xor>
+    <xor id="81">
+      <name/>
+    </xor>
+    <xor id="82">
+      <name/>
+    </xor>
+    <xor id="83">
+      <name/>
+    </xor>
+    <xor id="84">
+      <name/>
+    </xor>
+    <xor id="85">
+      <name/>
+    </xor>
+    <arc id="85">
+      <flow source="1" target="81" />
+    </arc>
+    <arc id="86">
+      <flow source="2" target="69" />
+    </arc>
+    <arc id="87">
+      <flow source="3" target="10" />
+    </arc>
+    <arc id="88">
+      <flow source="4" target="72" />
+    </arc>
+    <arc id="89">
+      <flow source="5" target="71" />
+    </arc>
+    <arc id="90">
+      <flow source="6" target="5" />
+    </arc>
+    <arc id="91">
+      <flow source="7" target="79" />
+    </arc>
+    <arc id="92">
+      <flow source="8" target="82" />
+    </arc>
+    <arc id="93">
+      <flow source="9" target="81" />
+    </arc>
+    <arc id="94">
+      <flow source="10" target="6" />
+    </arc>
+    <arc id="95">
+      <flow source="11" target="75" />
+    </arc>
+    <arc id="96">
+      <flow source="12" target="73" />
+    </arc>
+    <arc id="97">
+      <flow source="13" target="74" />
+    </arc>
+    <arc id="98">
+      <flow source="14" target="3" />
+    </arc>
+    <arc id="99">
+      <flow source="15" target="72" />
+    </arc>
+    <arc id="100">
+      <flow source="16" target="68" />
+    </arc>
+    <arc id="101">
+      <flow source="17" target="76" />
+    </arc>
+    <arc id="102">
+      <flow source="18" target="77" />
+    </arc>
+    <arc id="103">
+      <flow source="19" target="78" />
+    </arc>
+    <arc id="104">
+      <flow source="20" target="80" />
+    </arc>
+    <arc id="105">
+      <flow source="21" target="83" />
+    </arc>
+    <arc id="106">
+      <flow source="22" target="75" />
+    </arc>
+    <arc id="107">
+      <flow source="23" target="68" />
+    </arc>
+    <arc id="108">
+      <flow source="24" target="13" />
+    </arc>
+    <arc id="109">
+      <flow source="25" target="82" />
+    </arc>
+    <arc id="110">
+      <flow source="26" target="18" />
+    </arc>
+    <arc id="111">
+      <flow source="27" target="68" />
+    </arc>
+    <arc id="112">
+      <flow source="28" target="69" />
+    </arc>
+    <arc id="113">
+      <flow source="29" target="68" />
+    </arc>
+    <arc id="114">
+      <flow source="30" target="84" />
+    </arc>
+    <arc id="115">
+      <flow source="31" target="79" />
+    </arc>
+    <arc id="116">
+      <flow source="32" target="85" />
+    </arc>
+    <arc id="117">
+      <flow source="33" target="83" />
+    </arc>
+    <arc id="118">
+      <flow source="78" target="1" />
+    </arc>
+    <arc id="119">
+      <flow source="85" target="2" />
+    </arc>
+    <arc id="120">
+      <flow source="77" target="4" />
+    </arc>
+    <arc id="121">
+      <flow source="73" target="7" />
+    </arc>
+    <arc id="122">
+      <flow source="76" target="8" />
+    </arc>
+    <arc id="123">
+      <flow source="71" target="9" />
+    </arc>
+    <arc id="124">
+      <flow source="72" target="11" />
+    </arc>
+    <arc id="125">
+      <flow source="84" target="12" />
+    </arc>
+    <arc id="126">
+      <flow source="75" target="14" />
+    </arc>
+    <arc id="127">
+      <flow source="70" target="15" />
+    </arc>
+    <arc id="128">
+      <flow source="84" target="16" />
+    </arc>
+    <arc id="129">
+      <flow source="80" target="17" />
+    </arc>
+    <arc id="130">
+      <flow source="71" target="19" />
+    </arc>
+    <arc id="131">
+      <flow source="79" target="20" />
+    </arc>
+    <arc id="132">
+      <flow source="81" target="21" />
+    </arc>
+    <arc id="133">
+      <flow source="77" target="22" />
+    </arc>
+    <arc id="134">
+      <flow source="76" target="23" />
+    </arc>
+    <arc id="135">
+      <flow source="82" target="24" />
+    </arc>
+    <arc id="136">
+      <flow source="80" target="25" />
+    </arc>
+    <arc id="137">
+      <flow source="70" target="26" />
+    </arc>
+    <arc id="138">
+      <flow source="85" target="27" />
+    </arc>
+    <arc id="139">
+      <flow source="74" target="28" />
+    </arc>
+    <arc id="140">
+      <flow source="83" target="29" />
+    </arc>
+    <arc id="141">
+      <flow source="73" target="31" />
+    </arc>
+    <arc id="142">
+      <flow source="74" target="32" />
+    </arc>
+    <arc id="143">
+      <flow source="78" target="33" />
+    </arc>
+    <arc id="144">
+      <flow source="68" target="34" />
+    </arc>
+    <arc id="145">
+      <flow source="69" target="70" />
+    </arc>
+  </epc>
+  </directory>
+</epml:epml>
