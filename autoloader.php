@@ -2,7 +2,8 @@
 // Registrierung der Klassenverzeichnisse
 set_include_path(
     get_include_path() . 
-    PATH_SEPARATOR . "classes"
+    PATH_SEPARATOR . "classes" .  
+    PATH_SEPARATOR . "gui/classes"
 );
 
 /**
@@ -20,7 +21,7 @@ class Autoloader {
 	 * @param String $classname Name der Klasse
 	 */
 	public static function load($classname) {
-		include "classes/".$classname.".php";
+		include $classname.".php";
 	}
 
 }

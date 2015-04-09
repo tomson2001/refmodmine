@@ -51,5 +51,10 @@ class EPML {
 		$this->numDirectories = count($this->directories);
 	}
 	
+	public function getEPC($modelPath) {
+		if ( empty($modelPath) || is_null($modelPath) ) return null;
+		return isset($this->epcs[$modelPath]) ? $this->epcs[$modelPath] : null;
+	}
+	
 }
 ?>
