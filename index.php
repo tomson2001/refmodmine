@@ -1,5 +1,6 @@
 <?php 
 session_start();
+if ( !isset($_SESSION['numWorkspaceModels']) ) $_SESSION['numWorkspaceModels'] = 0;  
 require 'autoloader.php';
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
 $onload = "";

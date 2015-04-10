@@ -6,7 +6,7 @@ $epml = new EPML($file, $fileSource);
 
 $workspace = new WorkspaceEPML();
 foreach ( $epml->epcs as $epc ) {
-	$workspace->addEPC($epc, $epml->filename);
+	if ( $workspace->addEPC($epc, $epml->filename) ) $_SESSION['numWorkspaceModels']++;
 }
 $workspace->updateWorkspaceEPMLFile();
 ?>

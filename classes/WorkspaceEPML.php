@@ -135,12 +135,23 @@ class WorkspaceEPML {
 	}
 	
 	public function addEPC(EPC $epc, $sourceFilename) {
+		if ( $this->includes($epc) ) return false;
 		if ( !in_array($sourceFilename, $this->sources) ) array_push($this->sources, $sourceFilename);
 		$this->sourceAssignments[$this->currentEpcID] = $sourceFilename;
 		$this->epcs[$this->currentEpcID] = $epc;
 		$this->epcs[$this->currentEpcID]->id = $this->currentEpcID;
 		$this->updateIDsInEPC($this->currentEpcID);
 		$this->currentEpcID++;
+		return true;
+	}
+	
+	public function includes(EPC $epc) {
+		$checkHash = $epc->getHash();
+		foreach ( $this->epcs as $currEPC ) {
+			$hash = $currEPC->getHash();
+			if ( $checkHash == $hash ) return true;
+		}
+		return false;
 	}
 	
 	/**
@@ -177,13 +188,13 @@ class WorkspaceEPML {
 				
 				foreach ( $this->epcs[$epcID]->functions as $id => $label ) {
 					$content .= "      <function id=\"".$id."\">\n";
-					$content .= "        <name>".utf8_encode($this->epcs[$epcID]->convertIllegalChars($label))."</name>\n";
+					$content .= "        <name>".htmlspecialchars($this->epcs[$epcID]->convertIllegalChars($label))."</name>\n";
 					$content .= "      </function>\n";
 				}
 				
 				foreach ( $this->epcs[$epcID]->events as $id => $label ) {
 					$content .= "      <event id=\"".$id."\">\n";
-					$content .= "        <name>".utf8_encode($this->epcs[$epcID]->convertIllegalChars($label))."</name>\n";
+					$content .= "        <name>".htmlspecialchars($this->epcs[$epcID]->convertIllegalChars($label))."</name>\n";
 					$content .= "      </event>\n";
 				}
 				
@@ -213,7 +224,7 @@ class WorkspaceEPML {
 		$handler = fopen($this->file, "w");
 		fwrite($handler, $content);
 		fclose($handler);
-		chmod($this->file, 0777);
+		//chmod($this->file, 0777);
 	}
 	
 }

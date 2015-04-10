@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <epml:epml xmlns:epml="http://www.epml.de"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
-  <epc EpcId="1" name="example01_simpleAND (2 Traces)">
+  <epc epcId="1" name="example01_simpleAND (2 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="150" y="50"/>
@@ -81,7 +81,7 @@
       <flow source="6" target="4"/>
     </arc>
   </epc>
-  <epc EpcId="2" name="example02_simpleAND_with_events (2 Traces)">
+  <epc epcId="2" name="example02_simpleAND_with_events (2 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="150" y="105"/>
@@ -240,7 +240,7 @@
       <flow source="17" target="2"/>
     </arc>
   </epc>
-  <epc EpcId="3" name="example03_nestedAND (8 Traces)">
+  <epc epcId="3" name="example03_nestedAND (8 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="150" y="50"/>
@@ -379,7 +379,7 @@
       <flow source="20" target="6"/>
     </arc>
   </epc>
-  <epc EpcId="4" name="example04_nestedAND_XOR (40 Traces)">
+  <epc epcId="4" name="example04_nestedAND_XOR (40 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="150" y="50"/>
@@ -577,7 +577,7 @@
       <flow source="36" target="6"/>
     </arc>
   </epc>
-  <epc EpcId="5" name="example05_loop (12 Traces)">
+  <epc epcId="5" name="example05_loop (12 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="160" y="40"/>
@@ -769,7 +769,7 @@
       <flow source="24" target="20"/>
     </arc>
   </epc>
-  <epc EpcId="6" name="example06_loop_with_and (0 Traces)">
+  <epc epcId="6" name="example06_loop_with_and (0 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="160" y="40"/>
@@ -961,7 +961,7 @@
       <flow source="42" target="20"/>
     </arc>
   </epc>
-  <epc EpcId="7" name="example07_and_with_multiple_exits (8 Traces)">
+  <epc epcId="7" name="example07_and_with_multiple_exits (8 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="150" y="50"/>
@@ -1054,7 +1054,7 @@
       <flow source="5" target="13"/>
     </arc>
   </epc>
-  <epc EpcId="8" name="example08_deadlock (0 Traces)">
+  <epc epcId="8" name="example08_deadlock (0 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="160" y="40"/>
@@ -1246,7 +1246,7 @@
       <flow source="41" target="62"/>
     </arc>
   </epc>
-  <epc EpcId="9" name="example09_multiple_starts_with_AND (3 Traces)">
+  <epc epcId="9" name="example09_multiple_starts_with_AND (3 Traces)">
     <function id="13">
       <graphics>
         <position height="41" width="81" x="70" y="45"/>
@@ -1306,7 +1306,7 @@
       <flow source="14" target="17"/>
     </arc>
   </epc>
-  <epc EpcId="10" name="example10_or_split (64 Traces)">
+  <epc epcId="10" name="example10_or_split (64 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="185" y="30"/>
@@ -1379,7 +1379,7 @@
       <flow source="7" target="5"/>
     </arc>
   </epc>
-  <epc EpcId="11" name="example11_simple_or (15 Traces)">
+  <epc epcId="11" name="example11_simple_or (15 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="120" y="20"/>
@@ -1479,7 +1479,7 @@
       <flow source="13" target="14"/>
     </arc>
   </epc>
-  <epc EpcId="12" name="example12_or_with_multiple_exits (19 Traces)">
+  <epc epcId="12" name="example12_or_with_multiple_exits (19 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="150" y="50"/>
@@ -1572,7 +1572,7 @@
       <flow source="24" target="4"/>
     </arc>
   </epc>
-  <epc EpcId="13" name="example13_complex_or (141 Traces)">
+  <epc epcId="13" name="example13_complex_or (141 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="210" y="35"/>
@@ -1750,7 +1750,7 @@
       <flow source="4" target="13"/>
     </arc>
   </epc>
-  <epc EpcId="14" name="example14_or_wait_for_decision (11 Traces)">
+  <epc epcId="14" name="example14_or_wait_for_decision (11 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="100" y="30"/>
@@ -1869,7 +1869,7 @@
       <flow source="9" target="6"/>
     </arc>
   </epc>
-  <epc EpcId="15" name="example15_becker_c_v2 (2220 Traces)">
+  <epc epcId="15" name="example15_becker_c_v2 (2220 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="125" y="30"/>
@@ -2061,7 +2061,7 @@
       <flow source="12" target="11"/>
     </arc>
   </epc>
-  <epc EpcId="16" name="example16_becker_c_v2_easy (312 Traces)">
+  <epc epcId="16" name="example16_becker_c_v2_easy (312 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="90" y="15"/>
@@ -2220,7 +2220,7 @@
       <flow source="28" target="27"/>
     </arc>
   </epc>
-  <epc EpcId="17" name="example17_multiple_starts_with_OR (5 Traces)">
+  <epc epcId="17" name="example17_multiple_starts_with_OR (5 Traces)">
     <function id="13">
       <graphics>
         <position height="41" width="81" x="70" y="45"/>
@@ -2280,7 +2280,7 @@
       <flow source="22" target="16"/>
     </arc>
   </epc>
-  <epc EpcId="18" name="example18_multiple_starts_with_XOR (2 Traces)">
+  <epc epcId="18" name="example18_multiple_starts_with_XOR (2 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="35" y="25"/>
@@ -2340,7 +2340,7 @@
       <flow source="5" target="4"/>
     </arc>
   </epc>
-  <epc EpcId="19" name="example19_multiple_start_nested_xor (4 Traces)">
+  <epc epcId="19" name="example19_multiple_start_nested_xor (4 Traces)">
     <function id="1">
       <graphics>
         <position height="41" width="81" x="110" y="20"/>

@@ -81,7 +81,7 @@ class EPCVisualizer {
 		$nodeType = $this->epc->getType($nodeID);
 		switch ( $nodeType ) {
 			case "function": return "{id: ".$nodeID.", label: '".str_replace("'", "\'", $this->epc->functions[$nodeID])."', shape: 'box', group: '".$this->epc->name."', color: '#00ff00', level: ".$level."}";
-			case "event":	 return "{id: ".$nodeID.", label: '".str_replace("'", "\'", $this->epc->events[$nodeID])."', shape: 'ellipse', group: '".$this->epc->name."', color: '#990099', level: ".$level."}";	
+			case "event":	 return "{id: ".$nodeID.", label: '".str_replace("'", "\'", $this->epc->events[$nodeID])."', shape: 'ellipse', group: '".$this->epc->name."', color: '#FF6CFF', level: ".$level."}";	
 			case "xor":		 return "{id: ".$nodeID.", label: '', image: DIR + 'xor.gif', shape: 'image', group: '".$this->epc->name."', color: 'gray', level: ".$level."}";
 			case "or":		 return "{id: ".$nodeID.", label: '', image: DIR + 'or.gif', shape: 'image', group: '".$this->epc->name."', color: 'gray', level: ".$level."}";
 			case "and":		 return "{id: ".$nodeID.", label: '', image: DIR + 'and.gif', shape: 'image', group: '".$this->epc->name."', color: 'gray', level: ".$level."}";

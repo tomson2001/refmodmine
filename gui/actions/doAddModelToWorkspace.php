@@ -8,6 +8,6 @@ $modelPath = isset($_REQUEST['modelPath']) ? $_REQUEST['modelPath'] : null;
 $epc = $epml->getEPC($modelPath);
 
 $workspace = new WorkspaceEPML();
-$workspace->addEPC($epc, $epml->filename);
+if ( $workspace->addEPC($epc, $epml->filename) ) $_SESSION['numWorkspaceModels']++;
 $workspace->updateWorkspaceEPMLFile();
 ?>
