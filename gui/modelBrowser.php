@@ -87,7 +87,7 @@ $reloadLink = "index.php?site=modelBrowser&file=".$file."&source=".$fileSource;
 		    <h4 class="list-group-item-heading"><?php echo $epc->name; ?>.epml</h4>
 		    <p class="list-group-item-text"><?php echo $modelPath; ?></p>
 		  </a>
-		  <a href="index.php?site=repository&file=<?php echo $file; ?>&addFileToWorkspace=<?php echo $file; ?>&source=<?php echo $fileSource;?>" class="list-group-item">
+		  <a href="<?php echo $reloadLink; ?>&modelPath=<?php echo $epc->modelPath; ?>&action=doAddModelToWorkspace" class="list-group-item">
 		    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add model to workspace</h4>
 		  </a>		  
 		</div>

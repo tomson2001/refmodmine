@@ -103,6 +103,8 @@ class EPC {
 		// Kanten laden
 		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/arc") as $edge) {
 			$flow = $edge->flow;
+			//var_dump($flow['source']);
+			//echo "S: ".(string) $flow['source']." T: ".(string) $flow['target']."<br>";
 			$sourceIndex = $this->idConversion[(string) $flow['source']];
 			$targetIndex = $this->idConversion[(string) $flow['target']];
 			$edge = array($sourceIndex => $targetIndex);
@@ -1161,6 +1163,10 @@ class EPC {
 			if ( strcmp($label, $eventLabel) == 0 ) array_push($result["events"], $id);
 		}
 		return $result;
+	}
+	
+	public function getEPCName(){
+		return $this->convertIllegalChars($this->name);
 	}
 
 }

@@ -117,7 +117,7 @@ if ( $fileSource == "userRepo" ) {
 		    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> add to global repository</h4>
 		  </a>
 		  <?php } ?>
-		  <a href="index.php?site=repository&file=<?php echo $file; ?>&addFileToWorkspace=<?php echo $file; ?>&source=<?php echo $fileSource;?>" class="list-group-item">
+		  <a href="index.php?site=repository&file=<?php echo $file; ?>&action=doAddAllModelsToWorkspace&source=<?php echo $fileSource;?>" class="list-group-item">
 		    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add models to workspace</h4>
 		  </a>
 		  <a href="index.php?site=modelBrowser&file=<?php echo $file; ?>&source=<?php echo $fileSource;?>" class="list-group-item">

@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require 'autoloader.php';
-$action = isset($_REQUEST['action']) ? isset($_REQUEST['action']) : null;
+$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
 $onload = "";
 
 function callAction($action) {
@@ -36,7 +36,7 @@ if ( $action == "modelBrowser" ) {
 </head>
 <body <?php
 // Special handling for model visualizuation 
-if ( isset($_REQUEST['modelPath']) && isset($_REQUEST['site']) && $_REQUEST['site'] == "modelBrowser" )  echo ' onload="drawEPC()"';
+if ( (isset($_REQUEST['modelPath']) || isset($_REQUEST['modelID'])) && isset($_REQUEST['site']) && ($_REQUEST['site'] == "modelBrowser" || $_REQUEST['site'] == "workspace") )  echo ' onload="drawEPC()"';
 ?>>
 <?php include 'gui/main.php'; ?>
 </body>
