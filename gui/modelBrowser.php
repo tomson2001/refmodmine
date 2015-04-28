@@ -29,10 +29,23 @@ $reloadLink = "index.php?site=modelBrowser&file=".$file."&source=".$fileSource;
     	
 	        <div class="list-group">
 	        <?php 
-	        foreach ( $epml->epcs as $currEpc ) { ?>
-	        	<a href="<?php echo $reloadLink."&modelPath=".$currEpc->modelPath; ?>" class="list-group-item"><small><?php echo $currEpc->name; ?></small></a>
-	        <?php } ?>
+	        foreach ( $epml->epcs as $currEpc ) {
+				$highlighting = ""; 
+				if ( WorkspaceEPML::inWorkspace($epml->filename, $currEpc->name) ) $highlighting = " list-group-item-info";
+				if ( !is_null($epc) && $epc->modelPath == $currEpc->modelPath ) $highlighting = " active";
+				?>
+	        	<a href="<?php echo $reloadLink."&modelPath=".$currEpc->modelPath; ?>" class="list-group-item<?php echo $highlighting; ?>"><small><?php echo $currEpc->name; ?></small></a>
+	        <?php			
+			} ?>
 			</div>
+			
+			<?php 
+			$reloadURL = "index.php?site=modelBrowser&action=doLoadNewFileToModelBrowser";
+			include 'gui/uploader.php'; 
+			?>
+			<ol class="breadcrumb">
+				<li class="active"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Drag &amp; drop files here</li>
+			</ol>
     </div>
     <div class="col-md-6">
         <h2>Preview</h2>
@@ -87,9 +100,17 @@ $reloadLink = "index.php?site=modelBrowser&file=".$file."&source=".$fileSource;
 		    <h4 class="list-group-item-heading"><?php echo $epc->name; ?>.epml</h4>
 		    <p class="list-group-item-text"><?php echo $modelPath; ?></p>
 		  </a>
-		  <a href="<?php echo $reloadLink; ?>&modelPath=<?php echo $epc->modelPath; ?>&action=doAddModelToWorkspace" class="list-group-item">
+		  
+		  <?php if ( WorkspaceEPML::inWorkspace($epml->filename, $epc->name) ) { ?>
+		  <a href="<?php echo $reloadLink; ?>&modelPath=<?php echo $epc->modelPath; ?>&action=doRemoveModelFromWorkspace2" class="list-group-item list-group-item-danger">
+		    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> remove from workspace</h4>
+		  </a>
+		  <?php } else { ?>
+		  <a href="<?php echo $reloadLink; ?>&modelPath=<?php echo $epc->modelPath; ?>&action=doAddModelToWorkspace" class="list-group-item list-group-item-success">
 		    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add model to workspace</h4>
-		  </a>		  
+		  </a>
+		  <?php } ?>
+		  		  
 		</div>
 		
 		<div class="panel panel-default">

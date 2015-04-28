@@ -16,7 +16,8 @@ final class Config {
 	const WORDNET_SYNONYM_LIMIT = 7; // Anzahl der zu beruecksichtigen Bedeutungen. Ersten Tests zufolge mindestens 7, MUSS < 10 sein!!!!
 	
 	const NUM_CORES_TO_WORK_ON = 1;
-	const STANDFORD_POS_TAGGER_PATH = "/home/toth01/refmodmine/lib/stanford-postagger-full-2015-01-30/";
+	const STANDFORD_POS_TAGGER_PATH = "/var/www/lib/stanford-postagger-full-2015-01-30/";
+	const REFMOD_MINER_JAVA_PATH_WITH_FILENAME = "/var/www/lib/refmod-miner/master.jar";
 	
 	// MOBIS SS11
 	//const MODEL_FILE_1 = "P:/Projekte/RefModMiner/Data_old/data_kontrollierte_modellierung/Klausuren_MobIS_SS11/loesungen.epml";

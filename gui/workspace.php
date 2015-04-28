@@ -27,6 +27,7 @@ $reloadLink = "index.php?site=workspace";
 			    <p class="list-group-item-text">
 			    	<b><?php echo $workspace->numModels; ?> models</b> from <b><?php echo $workspace->numSources." ".$sourcesString; ?></b><br /><br />
 			    	<a href="<?php echo $downloadPath; ?>" download="workspace.epml" class="list-group-item-warning"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> download as EPML</a>
+			    	&nbsp;<a href="<?php echo $reloadLink; ?>&action=doClearWorkspace" class="list-group-item-warning"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> clear</a>
 			    </p>
 			  </li>
 			</ul>
@@ -36,18 +37,32 @@ $reloadLink = "index.php?site=workspace";
 	        	<a href="<?php echo $reloadLink."&modelID=".$currEpcID; ?>" class="list-group-item"><small><?php echo $currEpc->name; ?></small></a>
 	        <?php } ?>
 			</div>
+			<?php 
+			$reloadURL = is_null($modelID) ? $reloadLink : "&".$reloadLink."modelID=".$modelID;
+			$reloadURL .= "&action=doLoadNewFileToWorkspace";
+			include 'gui/uploader.php'; 
+			?>
+			<ol class="breadcrumb">
+				<li class="active"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Drag &amp; drop files here</li>
+			</ol>
 			    </div>
 			    <div class="col-md-6">
-			        <h2>Preview</h2>
-					  
+
 					<?php 
 			        if ( is_null($epc) ) {
 					?>
-			        <p>Please select a model.</p>
+					<h2>Available Data</h2>
+					<?php 
+					$workspaceData = $workspace->getAvailableData();
+					?>
 			        <?php 
 					} else {
-						echo $jsCode;
-						echo "<div id='EPC'></div>";
+						echo $jsCode; ?>
+						
+						<h2>Preview</h2>
+						<div id='EPC'></div>
+						
+					<?php 
 			        } 
 			        ?>  
 					      
@@ -86,8 +101,11 @@ $reloadLink = "index.php?site=workspace";
 					    <h4 class="list-group-item-heading"><?php echo $epc->name; ?></h4>
 					    <p class="list-group-item-text"><?php echo $modelPath; ?></p>
 					  </a>
+					  <a href="index.php?site=workspace&epcID=<?php echo $epc->id; ?>&action=doRemoveModelFromWorkspace" class="list-group-item list-group-item-danger">
+					    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> remove from workspace</h4>
+					  </a>
 					  <a href="index.php?site=modelBrowser&file=<?php echo $file; ?>&source=<?php echo $sourceRepo;?>" class="list-group-item">
-					    <h4 class="list-group-item-heading"><span class=" glyphicon glyphicon-zoom-in" aria-hidden="true"></span> browse source file</h4>
+					    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> browse source file</h4>
 					  </a>
 					  <a href="<?php echo $modelPath; ?>" download="<?php echo $sourceFilename; ?>" class="list-group-item">
 					    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> download source file</h4>
@@ -182,6 +200,53 @@ $reloadLink = "index.php?site=workspace";
 					  </div>
 					</div>
 		
+		<?php } else {?>
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingOne">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					          Tools
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseOne" class="panel-collapse collapse in list-group" role="tabpanel" aria-labelledby="headingOne">
+					        <a href="<?php echo $reloadLink; ?>&action=doRMM_CLI_Metrics" class="list-group-item">Calculate Metrics</a>
+					      
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingTwo">
+					      <h4 class="panel-title">
+					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					          Further Tools
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					      <div class="panel-body">
+					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingThree">
+					      <h4 class="panel-title">
+					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					          Source file options
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					      <div class="panel-body">
+					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					      </div>
+					    </div>
+					  </div>
+					  
+					  
+					</div>
 		<?php } ?>
     </div>
 </div>

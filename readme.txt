@@ -1,0 +1,96 @@
+####################
+SETUP MANUAL
+####################
+
+
+Recommended environment (tested): Ubuntu 12.04, PHP 5.5.5 (self compiled with pthreads for multi-core readiness)
+
+
+1. Step: Install required dependencies
+
+apt-get install \
+libxml2 \
+libxml2-dev \
+libssl-dev \
+pkg-config \
+curl \
+libcurl4-nss-dev \
+enchant \
+libenchant-dev \
+libjpeg8 \
+libjpeg8-dev \
+libpng12-0 \
+libpng12-dev \
+libvpx1 \
+libvpx-dev \
+libfreetype6 \
+libfreetype6-dev \
+libt1-5 \
+libt1-dev \
+libgmp10 \
+libgmp-dev \
+libicu48 \
+libicu-dev \
+mcrypt \
+libmcrypt4 \
+libmcrypt-dev \
+libpspell-dev \
+libedit2 \
+libedit-dev \
+libsnmp15 \
+libsnmp-dev \
+libxslt1.1 \
+libxslt1-dev \
+checkinstall \
+autoconf \
+subversion \
+php-pear \
+wordnet
+
+2. Prepare, Compile, Install PHP 5.5.5 with pthreads
+
+### look for the correct link at http://php.net/downloads.php
+wget http://us3.php.net/get/php-5.5.5.tar.bz2/from/de3.php.net/mirror -O php.tar.bz2
+tar xvjf php.tar.bz2
+
+cd php-5.5.5
+./configure --enable-debug --enable-maintainer-zts --enable-pthreads
+make
+checkinstall
+
+cp php.ini-production /usr/local/lib/php.ini
+pear config-set php_ini /usr/local/lib/php.ini
+pecl config-set php_ini /usr/local/lib/php.ini
+pecl install pthreads
+
+
+3. Step: Install apache
+apt-get install apache2
+apt-get install libapache2-mod-php5
+# it might be meaningful to apadt the max_execution_time, max_input_time and allowed_memory 
+# to your preference (depending on the task, that is very important!
+/etc/init.d/apache2 restart
+
+
+4. Step: Copy the files to the webdir
+svn co https://github.com/tomson2001/refmodmine/trunk /var/www
+chown -R www-data:www-data /var/www
+chmod -R 777 /var/www/repository
+chmod -R 777 /var/www/workspace
+chmod -R 777 /var/www/files
+
+
+6. Step: Inject RefMod-Miner(Java-Version)
+
+# Install Java
+apt-get install python-software-properties
+add-apt-repository ppa:webupd8team/java
+apt-get update
+apt-get install oracle-java8-installer
+
+# Get RefMod-Miner (Java)
+# copy RefMod-Miner (Java) jar and ressources to /var/www/lib/refmod-miner
+# rename the executable jar file to master.jar
+
+# DEPENDENCIES
+sudo apt-get install r-base r-base-dev 

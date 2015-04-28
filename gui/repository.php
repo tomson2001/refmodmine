@@ -33,10 +33,10 @@ if ( $fileSource == "userRepo" ) {
 	        if ( !$userRepo->isEmpty() ) {
 				$userRepoClearLink = "index.php?site=repository&action=doClearUserRepoEPMLFiles";
 				if ( $fileSource != "userRepo" ) {
-					$userRepoClearLink .= "&file=".$file."&source=repo";
+					$userRepoClearLink .= "&file=".$filename."&source=repo";
 				}
 				
-				$userRepoMoveLink = "index.php?site=repository&action=doMoveUserRepoEPMLFilesToGlobalRepo&file=".$file."&source=repo";
+				$userRepoMoveLink = "index.php?site=repository&action=doMoveUserRepoEPMLFilesToGlobalRepo&file=".$filename."&source=repo";
 	        ?>
 			
 			<div class="list-group">
@@ -55,7 +55,12 @@ if ( $fileSource == "userRepo" ) {
 			  <div class="panel-heading"><b>Add files</b></div>
 			  <div class="panel-body">
   
-			<?php include 'gui/uploader.php'; ?>
+			<?php
+			$reloadURL = "index.php?site=repository";
+			if ( !is_null($file) ) $reloadURL .= "&file=".$file;
+			if ( !is_null($fileSource) ) $reloadURL .= "&source=".$fileSource;
+			include 'gui/uploader.php'; 
+			?>
 				<ol class="breadcrumb">
 				  <li class="active"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Drag &amp; drop files here</li>
 				</ol>
@@ -70,9 +75,11 @@ if ( $fileSource == "userRepo" ) {
         <p>Please select a file.</p>
         <?php 
 		} else {
-		$size = ( $epml->numModels < 30 ) ? $epml->numModels+3 : 30;
+		$size = ( $epml->numModels + $epml->numDirectories < 30 ) ? $epml->numModels+$epml->numDirectories : 28;
 		?>
-		<select multiple class="form-control" name="models" size="<?php echo $size; ?>">
+		<form action="index.php?site=repository&file=<?php echo $file; ?>&source=<?php echo $fileSource; ?>" method="post">
+		<input type="hidden" name="action" value="doAddSelectedModelsToWorkspace" />
+		<select multiple class="form-control" name="modelPaths[]" size="<?php echo $size; ?>">
 		<?php  
 			$path = "";
         	foreach ( $epml->epcs as $epc ) { 
@@ -84,10 +91,13 @@ if ( $fileSource == "userRepo" ) {
 					echo '<optgroup label="'.$path.'">';
 				}			
 		?>
-				<option value="<?php echo $file.';;;'.$epc->name; ?>"><?php echo $epc->name; ?></option>
+				<option <?php if ( WorkspaceEPML::inWorkspace($epml->filename, $epc->name) ) echo "selected "; ?>value="<?php echo $epc->modelPath; ?>"><?php echo $epc->name; ?></option>
 		<?php 
 			} ?>
 		</select>
+		<br />
+		<button type="submit" class="btn btn-success btn-block">add to workspace</button>
+		</form>
 		<?php 
         } 
         ?>
@@ -118,7 +128,7 @@ if ( $fileSource == "userRepo" ) {
 		  </a>
 		  <?php } ?>
 		  <a href="index.php?site=repository&file=<?php echo $file; ?>&action=doAddAllModelsToWorkspace&source=<?php echo $fileSource;?>" class="list-group-item">
-		    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add models to workspace</h4>
+		    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add all to workspace</h4>
 		  </a>
 		  <a href="index.php?site=modelBrowser&file=<?php echo $file; ?>&source=<?php echo $fileSource;?>" class="list-group-item">
 		    <h4 class="list-group-item-heading"><span class=" glyphicon glyphicon-zoom-in" aria-hidden="true"></span> browse models</h4>

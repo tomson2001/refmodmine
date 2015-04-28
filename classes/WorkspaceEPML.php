@@ -22,6 +22,13 @@ class WorkspaceEPML {
 	public function __construct() {	
 		$this->init();
 	}
+	
+	public function clear() {
+		$_SESSION['numWorkspaceModels'] = 0;
+		$_SESSION["modelsInWorkspace"] = array();
+		unlink($this->file);
+		//$this->init();
+	}
 		
 	private function init() {
 		$this->sessionID = session_id();
@@ -136,13 +143,73 @@ class WorkspaceEPML {
 	
 	public function addEPC(EPC $epc, $sourceFilename) {
 		if ( $this->includes($epc) ) return false;
-		if ( !in_array($sourceFilename, $this->sources) ) array_push($this->sources, $sourceFilename);
+		if ( !in_array($sourceFilename, $this->sources) ) {
+			array_push($this->sources, $sourceFilename);
+			$this->numSources++;
+		}
 		$this->sourceAssignments[$this->currentEpcID] = $sourceFilename;
 		$this->epcs[$this->currentEpcID] = $epc;
 		$this->epcs[$this->currentEpcID]->id = $this->currentEpcID;
 		$this->updateIDsInEPC($this->currentEpcID);
 		$this->currentEpcID++;
+		$this->numModels++;
+		$this->updateSessionAdd($sourceFilename, $epc->name);
 		return true;
+	}
+	
+	public function removeEPC($id) {
+		if ( is_null($id) ) return;
+		$this->numSources++;
+		$this->numModels--;
+		$sourceFilename = $this->sourceAssignments[$id];
+		$modelName = $this->epcs[$id]->name;
+		
+		$numModelsOfSource = 0;
+		foreach ( $this->sourceAssignments as $epcID => $filename ) {
+			if ( $filename == $sourceFilename ) $numModelsOfSource++;
+		}
+		if ( $numModelsOfSource == 1 ) unset($this->sources[$sourceFilename]);
+		unset($this->sourceAssignments[$id]);
+		
+		$this->updateSessionRemove($sourceFilename, $modelName);
+		unset($this->epcs[$id]);
+	}
+	
+	public function removeEPC2(EPC $epc, $sourceFilename) {
+		$workspaceEPCID = null;
+		foreach ( $this->sourceAssignments as $epcID => $filename ) {
+			if ( $filename == $sourceFilename ) {
+				if ( $this->epcs[$epcID]->name == $epc->name ) $workspaceEPCID = $epcID;
+			}
+		}
+		$this->removeEPC($workspaceEPCID);
+	}
+	
+	public function removeAllEPCsOfSource($sourceFilename) {
+		foreach ( $this->sourceAssignments as $epcID => $filename ) {
+			if ( $filename == $sourceFilename ) $this->removeEPC($epcID);
+		}
+	}
+	
+	private function updateSessionAdd($sourceFilename, $modelName) {
+		$_SESSION['numWorkspaceModels']++;
+		$modelsInWorkspace = $_SESSION["modelsInWorkspace"];
+		if ( !in_array($sourceFilename."/".$modelName, $modelsInWorkspace) ) array_push($modelsInWorkspace, $sourceFilename."/".$modelName);
+		$_SESSION["modelsInWorkspace"] = $modelsInWorkspace;
+	}
+	
+	private function updateSessionRemove($sourceFilename, $modelName) {
+		$_SESSION['numWorkspaceModels']--;
+		$modelsInWorkspace = $_SESSION["modelsInWorkspace"];
+		$flipped = array_flip($modelsInWorkspace);
+		$index = $flipped[$sourceFilename."/".$modelName];
+		unset($modelsInWorkspace[$index]);
+		$_SESSION["modelsInWorkspace"] = $modelsInWorkspace;
+	}
+	
+	public static function inWorkspace($sourceFilename, $modelName) {
+		if ( in_array($sourceFilename."/".$modelName, $_SESSION["modelsInWorkspace"]) ) return true;
+		return false;
 	}
 	
 	public function includes(EPC $epc) {
@@ -225,6 +292,10 @@ class WorkspaceEPML {
 		fwrite($handler, $content);
 		fclose($handler);
 		//chmod($this->file, 0777);
+	}
+	
+	public function getAvailableData() {
+		return new WorkspaceData($this->filepath);
 	}
 	
 }

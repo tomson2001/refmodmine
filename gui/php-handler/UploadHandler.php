@@ -1078,6 +1078,8 @@ class UploadHandler
                     $append_file ? FILE_APPEND : 0
                 );
             }
+            if ( isset($_SESSION['uploadedFilePath']) ) unset($_SESSION['uploadedFilePath']);
+            $_SESSION['uploadedFilePath'] = $file_path;
             $file_size = $this->get_file_size($file_path, $append_file);
             if ($file_size === $file->size) {
                 $file->url = $this->get_download_url($file->name);

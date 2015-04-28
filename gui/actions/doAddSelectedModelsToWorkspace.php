@@ -4,10 +4,13 @@ $file = isset($_REQUEST['file']) ? $_REQUEST['file'] : null;
 $fileSource = isset($_REQUEST['source']) ? $_REQUEST['source'] : null;
 $epml = new EPML($file, $fileSource);
 
-$modelPath = isset($_REQUEST['modelPath']) ? $_REQUEST['modelPath'] : null;
-$epc = $epml->getEPC($modelPath);
+$modelPaths = isset($_REQUEST['modelPaths']) ? $_REQUEST['modelPaths'] : array();
 
 $workspace = new WorkspaceEPML();
-$workspace->addEPC($epc, $epml->filename);
+$workspace->removeAllEPCsOfSource($epml->filename);
+foreach ( $modelPaths as $modelPath ) {
+	$epc = $epml->getEPC($modelPath);
+	$workspace->addEPC($epc, $epml->filename);
+}
 $workspace->updateWorkspaceEPMLFile();
 ?>
