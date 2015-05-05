@@ -60,6 +60,7 @@ class WorkspaceEPML {
 			
 			$this->numSources = count($this->sources);
 			$this->numModels = count($this->sourceAssignments);
+			$_SESSION['numWorkspaceModels'] = $this->numModels;
 			
 			$this->loadEPCs($xml);
 		} else {

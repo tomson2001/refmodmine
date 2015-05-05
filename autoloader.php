@@ -3,7 +3,8 @@
 set_include_path(
     get_include_path() . 
     PATH_SEPARATOR . "classes" .
-    PATH_SEPARATOR . "classes/RMM_CLI" .    
+    PATH_SEPARATOR . "classes/RMM_CLI" .
+    PATH_SEPARATOR . "classes/PHP_CLI" .
     PATH_SEPARATOR . "gui/classes"
 );
 

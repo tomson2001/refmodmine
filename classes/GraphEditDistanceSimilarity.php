@@ -1,6 +1,8 @@
 <?php
 class GraphEditDistanceSimilarity implements ISimilarityMeasure {
 	
+	public static $literatureSource = "Dijkman et al. 2009: Graph Matching Algorithms for Business Process Model Similarity Search";
+	
 	private $mapping;
 	private $similarityValue;
 	

@@ -1,6 +1,8 @@
 <?php
 class PercentageOfCommonNodesAndEdges implements ISimilarityMeasure {
 	
+	public static $literatureSource = "Minor et al. 2007: Representation and Structure-Based Similarity Assessment for Agile Workflows";
+	
 	private $mapping;
 	private $similarityValue;
 	

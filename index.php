@@ -1,7 +1,10 @@
 <?php 
+if ( isset($_REQUEST['sid']) ) session_id($_REQUEST['sid']);
 session_start();
 if ( !isset($_SESSION['numWorkspaceModels']) ) $_SESSION['numWorkspaceModels'] = 0;  
 if ( !isset($_SESSION['modelsInWorkspace']) ) $_SESSION['modelsInWorkspace'] = array();
+if ( !isset($_SESSION['email']) ) $_SESSION['email'] = "";
+if ( !isset($_SESSION['workspaceOpened']) ) $_SESSION['workspaceOpened'] = false;
 require 'autoloader.php';
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
 $onload = "";
@@ -17,15 +20,19 @@ if ( !is_null($action) ) callAction($action);
 if ( $action == "modelBrowser" ) {
 	callAction("doPrepareModelVisualization");
 }
+
+// Messages
+$msg = null;
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  	<meta charset="utf-8">
+  	<meta charset="UTF-8">
   	<title>RefModMining</title>
    	<link rel="stylesheet" href="gui/lib/bootstrap-3.3.4-dist/css/bootstrap.min.css">
    	<link rel="stylesheet" href="gui/lib/bootstrap-3.3.4-dist/css/bootstrap-theme.min.css">
+	
    	<link href="gui/css/navbar-fixed-top.css" rel="stylesheet">
    	<script type="text/javascript" src="gui/lib/jQuery-2.1.3/jquery-2.1.3.min.js"></script>
    	<script src="gui/lib/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
@@ -34,7 +41,19 @@ if ( $action == "modelBrowser" ) {
    	<!-- Graph Bib -->
    	<script type="text/javascript" src="gui/lib/visjs/dist/vis.js"></script>
   	<link href="gui/lib/visjs/dist/vis.css" rel="stylesheet" type="text/css" />
- 	
+
+  	<script type="text/javascript">
+		$(document).ready(function(){
+		    $('[data-toggle="popover"]').popover();   
+		});
+	</script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();   
+		});
+	</script>
+  	
 </head>
 <body <?php
 // Special handling for model visualizuation 

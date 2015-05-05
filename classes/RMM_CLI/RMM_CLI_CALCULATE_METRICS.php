@@ -7,6 +7,8 @@ class RMM_CLI_CALCULATE_METRICS implements iRefModMiner {
 	private $_RESULT_FILE_EXTENSION = "metrics";
 	public static $_DOWNLOAD_FILE_EXTENSION = ".csv";
 	
+	public $execResult = "";
+	
 	private $modes = array(
 		"standard" => "EVENTS FUNCTIONS AND_SPLITS AND_JOINS XOR_SPLITS XOR_JOINS OR_SPLITS OR_JOINS CONNECTORS NODES ARCS DIAMETER DENSITY_1 COEFFICIENT_CONNECTIVITY"
 	);
@@ -16,7 +18,7 @@ class RMM_CLI_CALCULATE_METRICS implements iRefModMiner {
 		$execCommand .= " INPUT_DATA=".$inputEPMLFilename." OUTPUT_DATA=".$inputEPMLFilename.".".$this->_RESULT_FILE_EXTENSION.".".$mode;
 		$execCommand .= " METRICS=".$this->modes[$mode];
 		$execResult = exec($execCommand);
-		echo $execResult;
+		$this->execResult = $execResult;
 	}
 	
 	

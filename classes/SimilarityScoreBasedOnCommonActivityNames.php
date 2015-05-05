@@ -1,6 +1,8 @@
 <?php
 class SimilarityScoreBasedOnCommonActivityNames implements ISimilarityMeasure {
 	
+	public static $literatureSource = "Akkiraju et al. 2010: Discovering Business Process Similarities: An Empirical Study with SAP Best Practice Business Processes";
+	
 	protected $mapping;
 	protected $similarityValue;
 	

@@ -1,6 +1,8 @@
 <?php
 class LabelMatchingSimilarity implements ISimilarityMeasure {
 	
+	public static $literatureSource = "Dijkman et al. 2011: Similarity of business process models: metrics and evaluation";
+	
 	private $mapping;
 	private $similarityValue;
 	

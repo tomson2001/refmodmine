@@ -1,5 +1,7 @@
 <?php
 class ActivityMatchingAndGraphEditDistance implements ISimilarityMeasure {
+	
+	public static $literatureSource = "La Rosa et al. 2010: Merging Business Process Models";
 
 	private $mapping;
 	private $similarityValue;

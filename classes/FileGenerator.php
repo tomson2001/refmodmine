@@ -5,6 +5,7 @@ class FileGenerator {
 	public $content;
 	public $filePrefix;
 	public $path = "";
+	public $isPathFilename = false;
 	
 	public function __construct($filename, $content) {
 		$this->filename = $this->setFilename($filename);
@@ -13,7 +14,12 @@ class FileGenerator {
 	}
 	
 	public function execute($prefix = true) {
-		$uri = $prefix ? "files/".$this->path."".$this->filePrefix."_".$this->filename : "files/".$this->path.$this->filename;
+		$uri = "";
+		if ( $this->isPathFilename ) {
+			$uri = $this->filename;
+		} else {
+			$uri = $prefix ? "files/".$this->path."".$this->filePrefix."_".$this->filename : "files/".$this->path.$this->filename;
+		}
 		$handle = fopen($uri, "w");
 		fwrite($handle, $this->content);
 		fclose($handle);
@@ -26,6 +32,14 @@ class FileGenerator {
 		$filename = str_replace("[", "-", $filename);
 		$filename = str_replace("]", "-", $filename);
 		$this->filename = $filename;
+	}
+	
+	public function setPathFilename($filename) {
+		$filename = str_replace(":", "", str_replace(" ", "", $filename));
+		$filename = str_replace("[", "-", $filename);
+		$filename = str_replace("]", "-", $filename);
+		$this->filename = $filename;
+		$this->isPathFilename = true;
 	}
 	
 	public function setPath($path) {

@@ -3,6 +3,8 @@
  * Implementierung basierend auf Dongen: Measuring Similarity between Business Process Models
  */
 class CausalFootprints implements ISimilarityMeasure {
+	
+	public static $literatureSource = "Dongen et al. 2008: Measuring Similarity between Business Process Models";
 
 	private $mapping;
 	private $similarityValue;

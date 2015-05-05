@@ -7,6 +7,7 @@
  */
 final class Config {
 	
+	const WEB_PATH = "http://rmm.iwi.uni-sb.de/";
 	const FILES_PATH = "files";
 	const WORKSPACE_PATH = "workspace";
 	const REPOSITORY_PATH = "repository";

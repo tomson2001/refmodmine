@@ -13,7 +13,7 @@
           <ul class="nav navbar-nav">
             <li <?php if (is_null($site) || $site == "home" ) { ?>class="active" <?php } ?>><a href="index.php">Home</a></li>
             <li <?php if ( $site == "repository" ) { ?>class="active" <?php } ?>><a href="index.php?site=repository">Repository</a></li>
-            <li <?php if ( $site == "workspace" ) { ?>class="active" <?php } ?>><a href="index.php?site=workspace">Workspace <span class="badge"><?php echo $_SESSION['numWorkspaceModels']; ?></span></a></li>
+            <li <?php if ( $site == "workspace" || $site == "workspaceCSVViewer" ) { ?>class="active" <?php } ?>><a href="index.php?site=workspace">Workspace <span class="badge"><?php echo $_SESSION['numWorkspaceModels']; ?></span></a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tools<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
