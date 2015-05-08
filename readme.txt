@@ -94,3 +94,7 @@ apt-get install oracle-java8-installer
 
 # DEPENDENCIES
 sudo apt-get install r-base r-base-dev 
+
+#Configure RefMod-Miner (JAVA)
+cd /var/www/lib/refmod-miner
+java -jar master.jar CREATECONFIG

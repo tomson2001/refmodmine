@@ -5,8 +5,11 @@ $workspace = new WorkspaceEPML();
 $workspaceData = $workspace->getAvailableData();
 if ( $workspaceData->containsFile($file) ) {
 	
-	$type = $workspaceData->getFileType($file);
-	$description = $workspaceData->getFileDescription($file);
+	$workspaceActionConfig = new WorkspaceActionConfig();
+	$fileType = $workspaceData->getFileType($file);
+	$fileParams = $workspaceData->getFileParams($file);
+	$type = $workspaceActionConfig->getFileTypeName($fileType);
+	$description = $workspaceActionConfig->getFileTypeDescriptions($fileType, $fileParams);
 	
 ?>
 	

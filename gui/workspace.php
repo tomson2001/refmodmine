@@ -127,11 +127,16 @@ $reloadLink = "index.php?site=workspace";
 
 					<?php 
 			        if ( is_null($epc) ) {
+						$workspaceData = $workspace->getAvailableData();
+						$workspaceActionConfig = new WorkspaceActionConfig();
+						
+						$clearFiles = count($workspaceData->files) == 0 ? "" : " <small><a href=\"".$reloadLink."&action=doClearWorkspaceFiles\" title=\"clear\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></a></small>";
 					?>
-						<h2>Available Data</h2>
+						<h2>Available Data<?php echo $clearFiles; ?></h2>
 						
 						<?php
-						$workspaceData = $workspace->getAvailableData();
+						
+						
 						if ( count($workspaceData->files) == 0 ) { ?>
 						
 						<p>There are no data available at the moment. Please proceed some calculations.</p>
@@ -147,14 +152,17 @@ $reloadLink = "index.php?site=workspace";
 								<th>Options</th>
 							</tr>
 							<?php 
-							foreach ( $workspaceData->files as $wFile => $wFilename ) {  ?>
+							foreach ( $workspaceData->files as $wFile => $wFilename ) {  
+								$fileType = $workspaceData->getFileType($wFile);
+								$fileParams = $workspaceData->getFileParams($wFile); 
+								?>
 							 <tr>
-							 	<td><span class="<?php echo $workspaceData->getFileIcon($wFile); ?>" aria-hidden="true"></span></td>
-							 	<td><?php echo $workspaceData->getFileType($wFile); ?></td>
-							 	<td><?php echo $workspaceData->getFileDescription($wFile); ?></td>
+							 	<td><span class="<?php echo $workspaceActionConfig->getFileTypeIcon($fileType); ?>" aria-hidden="true"></span></td>
+							 	<td><?php echo $workspaceActionConfig->getFileTypeName($fileType); ?></td>
+							 	<td><?php echo $workspaceActionConfig->getFileTypeDescriptions($fileType, $fileParams); ?></td>
 							 	<td>
-							 		<?php if ( !is_null($workspaceData->getOpeningMethod($wFile)) ) { ?><a href="index.php?site=<?php echo $workspaceData->getOpeningMethod($wFile); ?>&file=<?php echo $wFile; ?>" title="show file" alt="show file"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a><?php } ?>
-							 		<a href="<?php echo $workspaceData->getDownloadLink($wFile); ?>" download="<?php echo $workspaceData->getDownloadFilename($wFile); ?>" title="download CSV" alt="download CSV"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></a>
+							 		<?php if ( !is_null($workspaceActionConfig->getFileTypeOpenMethod($fileType)) ) { ?><a href="index.php?site=<?php echo $workspaceActionConfig->getFileTypeOpenMethod($fileType); ?>&file=<?php echo $wFile; ?>" title="show file" alt="show file"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a><?php } ?>
+							 		<a href="<?php echo $workspaceData->getDownloadLink($wFile); ?>" download="<?php echo $workspaceData->getDownloadFilename($wFile); ?>" title="download <?php echo $workspaceActionConfig->getFileTypeExtension($fileType); ?>"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></a>
 							 		<a href="#modal_delete_<?php echo md5($wFile); ?>" role="button" title="delete" alt="delete" data-toggle="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 							 		<?php echo $workspaceData->getDeleteModalCode($wFile, $reloadLink); ?>
 							 	</td>
@@ -295,62 +303,13 @@ $reloadLink = "index.php?site=workspace";
 					  </div>
 					</div>
 		
-		<?php } else {?>
-		
-			<!-- no model selected ==> whole workspace -->
-			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-					  <div class="panel panel-default">
-					    <div class="panel-heading" role="tab" id="headingOne">
-					      <h4 class="panel-title">
-					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-					          Tools
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseOne" class="panel-collapse collapse in list-group" role="tabpanel" aria-labelledby="headingOne">
-					        <a href="<?php echo $reloadLink; ?>&action=doRMM_CLI_Metrics" class="list-group-item">Calculate Metrics</a>
-					    </div>
-					  </div>
-					  <div class="panel panel-default">
-					    <div class="panel-heading" role="tab" id="headingTwo">
-					      <h4 class="panel-title">
-					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-					          Process Model Similarity 
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseTwo" class="panel-collapse collapse list-group" role="tabpanel" aria-labelledby="headingTwo">
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=ssbocan" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo SimilarityScoreBasedOnCommonActivityNames::$literatureSource; ?>" data-placement="bottom">Common Activity Names</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=lms" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo LabelMatchingSimilarity::$literatureSource; ?>" data-placement="bottom">Label Matching Similarity</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=fbse" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo FeatureBasedSimilarityEstimation::$literatureSource; ?>" data-placement="bottom">Feature Based Similarity Estimation</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=pocnae" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo PercentageOfCommonNodesAndEdges::$literatureSource; ?>" data-placement="bottom">Common Nodes And Edges</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=geds" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo GraphEditDistanceSimilarity::$literatureSource; ?>" data-placement="bottom">Graph Edit Distance Similarity</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=amaged" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo ActivityMatchingAndGraphEditDistance::$literatureSource; ?>" data-placement="bottom">Activity Matching And Graph Edit Distance</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=cf" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo CausalFootprints::$literatureSource; ?>" data-placement="bottom">Causal Footprints</a>
-					    </div>
-					  </div>
-					  <div class="panel panel-default">
-					    <div class="panel-heading" role="tab" id="headingThree">
-					      <h4 class="panel-title">
-					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-					          Process Matching
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseThree" class="panel-collapse collapse list-group" role="tabpanel" aria-labelledby="headingTwo">
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=ssbocan" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo SimilarityScoreBasedOnCommonActivityNames::$literatureSource; ?>" data-placement="bottom">Common Activity Names</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=lms" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo LabelMatchingSimilarity::$literatureSource; ?>" data-placement="bottom">Label Matching Similarity</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=fbse" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo FeatureBasedSimilarityEstimation::$literatureSource; ?>" data-placement="bottom">Feature Based Similarity Estimation</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=pocnae" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo PercentageOfCommonNodesAndEdges::$literatureSource; ?>" data-placement="bottom">Common Nodes And Edges</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=geds" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo GraphEditDistanceSimilarity::$literatureSource; ?>" data-placement="bottom">Graph Edit Distance Similarity</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=amaged" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo ActivityMatchingAndGraphEditDistance::$literatureSource; ?>" data-placement="bottom">Activity Matching And Graph Edit Distance</a>
-					        <a href="<?php echo $reloadLink; ?>&action=doCalculateSimilarityMatrix&measure=cf" class="list-group-item" data-toggle="tooltip" title="Source: <?php echo CausalFootprints::$literatureSource; ?>" data-placement="bottom">Causal Footprints</a>
-					    </div>
-					  </div>
-					  
-					  
-					</div>
-		<?php } ?>
+		<?php 
+			} else {
+				$workspaceActionHandler = new WorkspaceActionHandler();
+				$workspaceActionMenu = $workspaceActionHandler->getActionMenu();
+				echo $workspaceActionMenu;
+			}
+			
+			?>
     </div>
 </div>

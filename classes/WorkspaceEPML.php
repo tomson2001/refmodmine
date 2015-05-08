@@ -149,6 +149,16 @@ class WorkspaceEPML {
 			$this->numSources++;
 		}
 		$this->sourceAssignments[$this->currentEpcID] = $sourceFilename;
+
+		// check EPC-Name for duplicate
+		$name = $epc->name;
+		$counter = "";
+		$epcNames = $this->getEPCNames();
+		while ( in_array($name.$counter, $epcNames) ) {
+			$counter = empty($counter) ? 1 : $counter+1;
+		}
+		$epc->name .= $counter;
+		
 		$this->epcs[$this->currentEpcID] = $epc;
 		$this->epcs[$this->currentEpcID]->id = $this->currentEpcID;
 		$this->updateIDsInEPC($this->currentEpcID);
@@ -156,6 +166,14 @@ class WorkspaceEPML {
 		$this->numModels++;
 		$this->updateSessionAdd($sourceFilename, $epc->name);
 		return true;
+	}
+	
+	private function getEPCNames() {
+		$names = array();
+		foreach ( $this->epcs as $epc ) {
+			array_push($names, $epc->name);
+		}
+		return $names;
 	}
 	
 	public function removeEPC($id) {
@@ -245,6 +263,7 @@ class WorkspaceEPML {
 			$content .= "     <source-assignment modelID=\"".$modelID."\" source=\"".$source."\" />\n";
 		}
 		$content .= "  </rmm-workspace>\n";
+		$content .= "  <directory name=\"root\">\n";
 		
 		foreach ( $this->sources as $source ) {			
 			$content .= "  <directory name=\"".$source."\">\n";
@@ -286,6 +305,7 @@ class WorkspaceEPML {
 			}
 			$content .= "  </directory>\n";
 		}
+		$content .= "  </directory>\n";
 
 		$content .= "</epml:epml>";
 		

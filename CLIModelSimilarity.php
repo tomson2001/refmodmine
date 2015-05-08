@@ -68,7 +68,7 @@ if ( file_exists($input) ) {
 
 // Check notification
 $doNotify = true;
-if ( $email == "no" ) {
+if ( empty($email) ) {
 	$doNotify = false;
 	print "  notification ... ok (notification disabled)\n";
 } else {

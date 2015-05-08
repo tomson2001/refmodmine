@@ -6,20 +6,6 @@ class WorkspaceData {
 	
 	private $filePrefix = "workspace.epml.";
 	
-	private $fileExtensions = array(
-		"metrics" => "csv",
-		"simmatrix" => "csv"
-	);
-	
-	private $fileIcons = array(
-		"metrics"   => "glyphicon glyphicon-th",
-		"simmatrix" => "glyphicon glyphicon-adjust"
-	);
-	
-	private $openingMethods = array(
-		"csv"	=> "workspaceCSVViewer"
-	);
-	
 	public function __construct($workspacePath) {
 
 		$this->path = $workspacePath;
@@ -33,43 +19,35 @@ class WorkspaceData {
 		}
 	}
 	
-	public function getFileDescription($file) {
-		$fileInfos = explode(".", $file);
-		unset($fileInfos[0]);
-		foreach ( $fileInfos as $index => $info ) {
-			$fileInfos[$index] = ucfirst($info);
-		}
-		return implode(", ", $fileInfos);
-	}
-	
 	public function getFileType($file) {
 		$fileInfos = explode(".", $file);
-		return ucfirst($fileInfos[0]);
+		return $fileInfos[0];
 	}
 	
-	public function getOpeningMethod($file) {
-		$fileExt = $this->getFileExtension($file);
-		if ( array_key_exists($fileExt, $this->openingMethods) ) return $this->openingMethods[$fileExt];
-		return null;
+	public function getFilesOfType($type) {
+		$foundFiles = array();
+		foreach ( $this->files as $file => $entry ) {
+			$fileType = $this->getFileType($file);
+			if ( $fileType == $type ) $foundFiles[$file] = $entry;
+		}
+		return $foundFiles;
 	}
 	
 	public function getDownloadLink($file) {
 		return $this->path."/".$this->files[$file];
 	}
 	
-	public function getFileIcon($file) {
-		$fileInfos = explode(".", $file);
-		return $this->fileIcons[$fileInfos[0]];
-	}
-	
 	public function getDownloadFilename($file) {
-		$filetype = $this->getFileExtension($file);
-		return str_replace(".", "_", $file).".".$filetype;
+		$fileType = $this->getFileType($file);
+		$workspaceActionConfig = new WorkspaceActionConfig();
+		$fileExtension = $workspaceActionConfig->getFileTypeExtension($fileType);
+		return str_replace(".", "_", $file).".".$fileExtension;
 	}
 	
-	public function getFileExtension($file) {
+	public function getFileParams($file) {
 		$fileInfos = explode(".", $file);
-		return $this->fileExtensions[$fileInfos[0]];
+		unset($fileInfos[0]);
+		return $fileInfos;
 	}
 	
 	public function deleteFile($file) {
@@ -81,21 +59,34 @@ class WorkspaceData {
 		return false;
 	}
 	
+	public function deleteAllFiles() {
+		foreach ( $this->files as $file => $filepath ) {
+			if ( !$this->deleteFile($file) ) return false;
+		}
+		return true; 
+	}
+	
 	public function containsFile($file) {
 		return isset($this->files[$file]);
 	}
 	
 	public function getDeleteModalCode($file, $reloadLink) {
+		$workspaceActionConfig = new WorkspaceActionConfig();
+		$fileType = $this->getFileType($file);
+		$fileParams = $this->getFileParams($file);
+		$type = $workspaceActionConfig->getFileTypeName($fileType);
+		$description = $workspaceActionConfig->getFileTypeDescriptions($fileType, $fileParams);
+		
 		return "
 		<div class=\"modal fade\" id=\"modal_delete_".md5($file)."\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
 			<div class=\"modal-dialog\">
 				<div class=\"modal-content\">
 					<div class=\"modal-header\">
 						<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
-						<h4 class=\"modal-title\" id=\"myModalLabel\">Delete ".$this->getFileType($file)." (".$this->getFileDescription($file).")</h4>
+						<h4 class=\"modal-title\" id=\"myModalLabel\">Delete ".$type." (".$description.")</h4>
 					</div>
 					<div class=\"modal-body\">
-					Do you really want to delete the ".$this->getFileType($file)." data?
+					Do you really want to delete the ".$type." data?
 					</div>
 					<div class=\"modal-footer\">
 						<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">No</button>
