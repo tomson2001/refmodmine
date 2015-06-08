@@ -325,6 +325,25 @@ abstract class AMapping {
 		return $file;
 	}
 	
+	public function exportAndreasSonntag() {
+		$content = "";
+		
+		foreach ( $this->mapping as $pair ) {
+			$id1_arr = array_keys($pair);
+			$id1 = $id1_arr[0];
+			$id2 = $pair[$id1];
+			$label1 = $this->epc1->getNodeLabel($id1);
+			$label2 = $this->epc2->getNodeLabel($id2);
+			$content .= "{".$label1."}{".$label2."}\r\n";
+		}
+		
+		$fileGenerator = new FileGenerator(trim($this->epc1->name)."_".trim($this->epc2->name).".txt", $content);
+		$fileGenerator->setFilename(trim($this->epc1->name)."_#_".trim($this->epc2->name).".txt");
+		$fileGenerator->setContent($content);
+		$file = $fileGenerator->execute();
+		return $file;
+	}
+	
 	/**
 	 * Exportiert in eine andere Darstellung als beim Contest und ist damit robuster gegen Fehler und besser lesbar
 	 * @return string

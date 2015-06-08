@@ -22,7 +22,7 @@ if ( $fileSource == "userRepo" ) {
 
 <div class="row">
     <div class="col-md-3">
-        <h2>Files</h2>
+        <h2>Collections</h2>
 	        <div class="list-group">
 	        <?php 
 	        foreach ( $repo->epmls as $filename => $numModels ) { ?>
@@ -52,7 +52,7 @@ if ( $fileSource == "userRepo" ) {
 	        <?php } ?> 
 			
 			<div class="panel panel-default">
-			  <div class="panel-heading"><b>Add files</b></div>
+			  <div class="panel-heading"><b>Add models</b></div>
 			  <div class="panel-body">
   
 			<?php

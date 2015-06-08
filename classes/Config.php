@@ -12,6 +12,7 @@ final class Config {
 	// Path and Mail Configuration
 	const WEB_PATH = "http://rmm.dfki.de/";
 	const NO_REPLY_MAIL = "no-reply@rmm.dfki.de";
+	const ABS_PATH = "/var/www";
 	const FILES_PATH = "files";
 	const WORKSPACE_PATH = "workspace";
 	const REPOSITORY_PATH = "repository";
@@ -25,6 +26,7 @@ final class Config {
 	const WORDNET_SYNONYM_LIMIT = 7; // Anzahl der zu beruecksichtigen Bedeutungen. Ersten Tests zufolge mindestens 7, MUSS < 10 sein!!!!
 	const MAX_TIME_PER_TRACE_EXTRAKTION = 360; // in Sekunden, 0=keine Beschraenkung
 	const FIX_POINT_ARITHMETIC = false; // Einstellen einer Fixpunktarithmetik: false => Ausgeschaltet, [0-x] => Fixpunkt
+	const STANFORD_POS_TAGGER_MODEL = 'english-left3words-distsim.tagger'; // german-hgc.tagger | german-fast.tagger | german-dewac.tagger | english-bidirectional-distsim.tagger
 		
 	// Logging
 	const ENABLE_ERROR_LOGGING = true;

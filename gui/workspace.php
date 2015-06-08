@@ -55,13 +55,42 @@ $reloadLink = "index.php?site=workspace";
     	<h2>Models</h2>
     		<ul class="list-group">
 			  <li class="list-group-item list-group-item-warning">
-			    <h4 class="list-group-item-heading">Workspace</h4>
+			    <h4 class="list-group-item-heading">Workspace &nbsp;<a href="#modal_share_workspace" data-toggle="modal" title="share workspace"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a></h4>
+			    
+			    <!-- SHARE WORKSPACE MODAL -->
+			    <div class="modal fade" id="modal_share_workspace" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+						<form method="post">
+							<input type="hidden" name="action" value="doShareWorkspace" />
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">Share Workspace</h4>
+							</div>
+							<div class="modal-body">
+							Share your workspace with others by sending a link.<br /><br />
+							<input type="email" class="form-control" name="email" id="email" placeholder="your.buddy@example.com"><br />
+							Your message
+							<textarea name="text" id="text" class="form-control" rows="3"></textarea>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+								<button type="submit" class="btn btn-primary">Share</button>
+							</div>
+						</form>
+						</div>
+					</div>
+				</div>
+			    <!-- END SHARE WORKSPACE MODAL -->
+			    
 			    <p class="list-group-item-text">
 			    	<b><?php echo $workspace->numModels; ?> models</b> from <b><?php echo $workspace->numSources." ".$sourcesString; ?></b><br /><br />
 			    	<a href="<?php echo $downloadPath; ?>" download="workspace.epml" class="list-group-item-warning"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> download as EPML</a>
 			    	&nbsp;<a href="<?php echo $reloadLink; ?>&action=doClearWorkspace" class="list-group-item-warning"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> clear</a>
 			    </p>
 			  </li>
+			  
+			  <!-- EMAIL NOTIFICATION -->
 			  <li class="list-group-item list-group-item-warning">
 			    <p class="list-group-item-text">
 			    	<?php 
@@ -107,6 +136,8 @@ $reloadLink = "index.php?site=workspace";
 					
 			    </p>
 			  </li>
+			  <!-- END EMAIL NOTIFICATION -->
+			  
 			</ul>
 	        <div class="list-group">
 	        <?php 
@@ -132,7 +163,61 @@ $reloadLink = "index.php?site=workspace";
 						
 						$clearFiles = count($workspaceData->files) == 0 ? "" : " <small><a href=\"".$reloadLink."&action=doClearWorkspaceFiles\" title=\"clear\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></a></small>";
 					?>
-						<h2>Available Data<?php echo $clearFiles; ?></h2>
+						<h2>Available Data
+						<?php echo $clearFiles; ?>
+						<small><a href="#modal_data_file_upload" role="button" title="upload file" data-toggle="modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></small>
+						</h2>
+						
+						<div class="modal fade" id="modal_data_file_upload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="myModalLabel">Upload data file</h4>
+									</div>
+									<form method="post" enctype="multipart/form-data" class="form-horizontal">
+										<input type="hidden" name="action" value="doUploadDataFile" />
+										
+										<div class="modal-body">
+											<div class="form-group">
+											  <label for="type" class="col-sm-2 control-label">Type</label>
+											  <div class="col-sm-10">
+											    <select name="type" id="type" class="form-control">
+										  
+									<?php 
+									$workspaceActionConfig = new WorkspaceActionConfig();
+									foreach ( $workspaceActionConfig->fileTypeInfos as $type => $infos ) {
+										if ( $infos["isUploadable"] )
+										echo "<option value=\"".$type."\">".$infos["Name"]." (".$infos["FileExtension"].")</option>";
+									}
+									?>
+												</select>
+											</div>
+										</div>
+									
+										<div class="form-group">
+										    <label for="description" class="col-sm-2 control-label">Description</label>
+										    <div class="col-sm-10">
+										      <input type="text" class="form-control" id="description" name="description" placeholder="enter description, otherwise filename is choosen">
+										    </div>
+										</div>
+										
+										<div class="form-group">
+									      <label for="file" class="col-sm-2 control-label">File</label>
+									      <div class="col-sm-10">
+									      	<input type="file" id="file" name="file">
+									      </div>
+									    </div>
+									
+									  </div>
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+										<button type="submit" class="btn btn-primary">Upload</button>
+									  </div>
+								</form>
+								</div>
+							</div>
+						</div>
 						
 						<?php
 						
@@ -184,7 +269,7 @@ $reloadLink = "index.php?site=workspace";
 					      
 			    </div>
 			    <div class="col-md-3">
-			        <h2>Details</h2>
+			        <h2>Operations</h2>
 			        
 			<?php if ( !is_null($epc) ) { 
 
@@ -230,22 +315,7 @@ $reloadLink = "index.php?site=workspace";
 					</div>
 		
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-					  <div class="panel panel-default">
-					    <div class="panel-heading" role="tab" id="headingTwo">
-					      <h4 class="panel-title">
-					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-					          Tools
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-					      <div class="panel-body">
-					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					      </div>
-					    </div>
-					  </div>
-					  					  
+			  					  
 					  <div class="panel panel-default">
 					    <div class="panel-heading" role="tab" id="headingOne">
 					      <h4 class="panel-title">
@@ -304,11 +374,12 @@ $reloadLink = "index.php?site=workspace";
 					</div>
 		
 		<?php 
-			} else {
-				$workspaceActionHandler = new WorkspaceActionHandler();
-				$workspaceActionMenu = $workspaceActionHandler->getActionMenu();
-				echo $workspaceActionMenu;
 			}
+			
+			$workspaceActionHandler = new WorkspaceActionHandler();
+			$workspaceActionMenu = $workspaceActionHandler->getActionMenu();
+			echo $workspaceActionMenu;
+			
 			
 			?>
     </div>

@@ -3,7 +3,7 @@
 ?>
 	<span class="btn btn-success fileinput-button">
         <i class="glyphicon glyphicon-plus"></i>
-        <span>upload EPMLs...</span>
+        <span>upload EPML...</span>
         <!-- The file input field used as target for the file upload widget -->
         <input id="fileupload" type="file" name="files[]" multiple>
     </span>
@@ -41,10 +41,11 @@ $(function () {
                 'width',
                 progress + '%'
             );
-            location.href='<?php echo $reloadURL; ?>';
+            if ( progress == 100 ) { 
+                location.href='<?php echo $reloadURL; ?>';
+            }
         }
     }).prop('disabled', !$.support.fileInput)
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
-    
 });
 </script>

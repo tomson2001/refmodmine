@@ -102,6 +102,7 @@ class WorkspaceActionHandler {
 		$code .= "        <div class=\"modal-body\">\n";
 		
 		// Form elements for user input
+		// @TODO check whether input data are available!
 		foreach ( $params as $paramName => $value ) {
 			
 			if ( is_null($value) ) continue;
@@ -133,6 +134,7 @@ class WorkspaceActionHandler {
 			if ( $value == "SELECT_ONE_SIMMATRIX" ) {
 				
 				$simmatrixFiles = $workspaceData->getFilesOfType("simmatrix");
+				
 				
 				$code .= "          <div class=\"form-group\">\n";
 				$code .= "            <label for=\"".$paramName."\" class=\"col-sm-4 control-label\">".$paramName."</label>\n";
@@ -210,13 +212,14 @@ class WorkspaceActionHandler {
 			$command = str_replace(array_keys($replaceFragments), $replaceFragments, $command);
 			
 			if ( $actionData["EmbedInPHP"] ) {
-				echo $command;
+				Logger::log($this->_CONST_SESSION_E_MAIL, "External call started (Embedded in PHP): ".$command, "ACCESS");
 				$command = str_replace(" ", "[]", $command);
 				$description = str_replace(" ", "[]", $actionData["Name"]);
 				$command = "php CLIExternalExecution.php command=".$command." description=".$description." sessionid=".$this->_CONST_SESSION_ID." notification=".$this->_CONST_SESSION_E_MAIL." ";
 				$command .= "> /dev/null &";
 				exec($command);	
 			} else {
+				Logger::log($this->_CONST_SESSION_E_MAIL, "External call started (Embedded in PHP): ".$command, "ACCESS");
 				$command .= "> /dev/null &";
 				exec($command);
 			}

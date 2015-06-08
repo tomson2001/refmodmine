@@ -1,0 +1,25 @@
+9f6566eb44083f974e41f999a9988e3e;Admission FU Berlin
+function;receive rejection;receive@@@VB|||rejection@@@NN;{VB}{NN}
+function;Check Application Complete;Check@@@VB|||Application@@@NN|||Complete@@@JJ;{VB}{NN}{JJ}
+function;Check if Bachelor is sufficient;Check@@@VB|||if@@@IN|||Bachelor@@@NN|||is@@@VBZ|||sufficient@@@JJ;{VB}{IN}{NN}{VBZ}{JJ}
+function;send rejection;send@@@VB|||rejection@@@NN;{VB}{NN}
+function;Document;Document@@@NNP;{NNP}
+function;Rank with other Applicants;Rank@@@NNP|||with@@@IN|||other@@@JJ|||Applicants@@@NNS;{NNP}{IN}{JJ}{NNS}
+function;Talk to Applicant;Talk@@@NN|||to@@@TO|||Applicant@@@NN;{NN}{TO}{NN}
+function;Fill out Application Form;Fill@@@VB|||out@@@RP|||Application@@@NN|||Form@@@NN;{VB}{RP}{NN}{NN}
+function;Add Certificate of Bachelor Degree;Add@@@VB|||Certificate@@@NNP|||of@@@IN|||Bachelor Degree@@@NNP;{VB}{NNP}{IN}{NNP}
+function;Set additional requirements;Set@@@VB|||additional@@@JJ|||requirements@@@NNS;{VB}{JJ}{NNS}
+function;Check Application in Time;Check@@@VB|||Application@@@NN|||in@@@IN|||Time@@@NNP;{VB}{NN}{IN}{NNP}
+function;send acceptance;send@@@VB|||acceptance@@@NN;{VB}{NN}
+function;Send Application;Send@@@VB|||Application@@@NN;{VB}{NN}
+function;receive acceptance;receive@@@VB|||acceptance@@@NN;{VB}{NN}
+function;Complete and in time?;Complete@@@JJ|||and@@@CC|||in@@@IN|||time@@@NN|||?@@@.;{JJ}{CC}{IN}{NN}{.}
+function;immatriculate;immatriculate@@@JJ;{JJ}
+function;Check if Bachelors-Grade within top 85%;Check@@@VB|||if@@@IN|||Bachelors-Grade@@@NN|||within@@@IN|||top@@@JJ|||85@@@CD|||%@@@NN;{VB}{IN}{NN}{IN}{JJ}{CD}{NN}
+function;Hand application over to Examining Board;Hand@@@VB|||application@@@NN|||over@@@IN|||to@@@TO|||Examining Board@@@NNP;{VB}{NN}{IN}{TO}{NNP}
+function;complete application;complete@@@JJ|||application@@@NN;{JJ}{NN}
+function;Receive Application;Receive@@@VB|||Application@@@NN;{VB}{NN}
+function;Add Certificate of german language;Add@@@VB|||Certificate@@@NNP|||of@@@IN|||german@@@JJ|||language@@@NN;{VB}{NNP}{IN}{JJ}{NN}
+function;Invite for Talk;Invite@@@VB|||for@@@IN|||Talk@@@NN;{VB}{IN}{NN}
+function;german?;german@@@NN|||?@@@.;{NN}{.}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}

@@ -12,25 +12,23 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li <?php if (is_null($site) || $site == "home" ) { ?>class="active" <?php } ?>><a href="index.php">Home</a></li>
-            <li <?php if ( $site == "repository" ) { ?>class="active" <?php } ?>><a href="index.php?site=repository">Repository</a></li>
+            <li <?php if ( $site == "repository" ) { ?>class="active" <?php } ?>><a href="index.php?site=repository">Model Repository</a></li>
             <li <?php if ( $site == "workspace" || $site == "workspaceCSVViewer" ) { ?>class="active" <?php } ?>><a href="index.php?site=workspace">Workspace <span class="badge"><?php echo $_SESSION['numWorkspaceModels']; ?></span></a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tools<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tools &amp; Infos<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li class="dropdown-header">Tools</li>
+                <li><a href="index.php?site=converter">AML/EPML-Converter</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li class="dropdown-header">General Information</li>
+                <li><a href="http://refmod-miner.dfki.de/cms/anwendungsfaelle/" target="_blank">Use Cases</a></li>
+                <li><a href="http://refmod-miner.dfki.de/cms/files/manual/refmod_funktionsbeschreibung.pdf" target="_blank">RefMod-Miner Manual</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li <?php if ( $site == "about" ) { ?>class="active" <?php } ?>><a href="index.php?site=about">About</a></li>
+            <li <?php if ( $site == "about" ) { ?>class="active" <?php } ?>><a href="http://bpm.dfki.de/" target="_blank">About</a></li>
             <li <?php if ( $site == "contact" ) { ?>class="active" <?php } ?>><a href="index.php?site=contact">Contact</a></li>
-            <li <?php if ( $site == "imprint" ) { ?>class="active" <?php } ?>><a href="index.php?site=imprint">Imprint</a></li>
           </ul>
         </div>
       </div>

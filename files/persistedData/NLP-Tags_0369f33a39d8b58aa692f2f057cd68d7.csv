@@ -1,0 +1,25 @@
+0369f33a39d8b58aa692f2f057cd68d7;Admission Frankfurt
+function;Average Grade is Good or better;Average@@@JJ|||Grade@@@NNP|||is@@@VBZ|||Good@@@JJ|||or@@@CC|||better@@@JJR;{JJ}{NNP}{VBZ}{JJ}{CC}{JJR}
+function;Evaluate;Evaluate@@@VB;{VB}
+function;Certificate received;Certificate@@@NN|||received@@@VBD;{NN}{VBD}
+function;Send Documents by Post;Send@@@VB|||Documents@@@NNS|||by@@@IN|||Post@@@NN;{VB}{NNS}{IN}{NN}
+function;Accepted provisionally;Accepted@@@JJ|||provisionally@@@RB;{JJ}{RB}
+function;Send Bachelor's Certificate;Send@@@VB|||Bachelor@@@NNP|||'s@@@POS|||Certificate@@@NNP;{VB}{NNP}{POS}{NNP}
+function;Apply Online;Apply@@@RB|||Online@@@NN;{RB}{NN}
+function;Documents received;Documents@@@NNS|||received@@@VBD;{NNS}{VBD}
+function;Take Oral Exam;Take@@@VB|||Oral Exam@@@NNP;{VB}{NNP}
+function;Check Documents;Check@@@VB|||Documents@@@NNS;{VB}{NNS}
+function;Sufficient CP in Mathematics;Sufficient@@@JJ|||CP@@@NN|||in@@@IN|||Mathematics@@@NNS;{JJ}{NN}{IN}{NNS}
+function;Average Grade is less than good;Average@@@JJ|||Grade@@@NNP|||is@@@VBZ|||less@@@RBR|||than@@@IN|||good@@@JJ;{JJ}{NNP}{VBZ}{RBR}{IN}{JJ}
+function;Less than 16 CP in Mathematics;Less@@@RBR|||than@@@IN|||16@@@CD|||CP@@@NN|||in@@@IN|||Mathematics@@@NNS;{RBR}{IN}{CD}{NN}{IN}{NNS}
+function;Certificate received;Certificate@@@NN|||received@@@VBD;{NN}{VBD}
+function;Rejected;Rejected@@@VBN;{VBN}
+function;Send Letter of Rejection;Send@@@VB|||Letter@@@NN|||of@@@IN|||Rejection@@@NN;{VB}{NN}{IN}{NN}
+function;Provisional Acceptance cancelled;Provisional@@@JJ|||Acceptance@@@NNP|||cancelled@@@VBD;{JJ}{NNP}{VBD}
+function;Provisional Acceptance confirmed;Provisional@@@JJ|||Acceptance@@@NNP|||confirmed@@@VBD;{JJ}{NNP}{VBD}
+function;Wait for Bachelor's Certificate;Wait@@@VB|||for@@@IN|||Bachelor@@@NNP|||'s@@@POS|||Certificate@@@NNP;{VB}{IN}{NNP}{POS}{NNP}
+function;Accepted;Accepted@@@JJ;{JJ}
+function;Send Letter of Acceptance;Send@@@VB|||Letter@@@NN|||of@@@IN|||Acceptance@@@NNP;{VB}{NN}{IN}{NNP}
+function;Check Certificate;Check@@@VB|||Certificate@@@NNP;{VB}{NNP}
+function;Send Letter of Provisional Acceptance;Send@@@VB|||Letter@@@NN|||of@@@IN|||Provisional Acceptance@@@NNP;{VB}{NN}{IN}{NNP}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}

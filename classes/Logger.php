@@ -24,7 +24,7 @@ class Logger {
 		
 		if ( !$doLog ) return null;
 
-		$data = date("Y-m-d H:i:s").";".$loglevel.";".$user.";".$msg."\n";
+		$data = date("Y-m-d H:i:s").";".$loglevel.";".$user.";".$msg."\r\n";
 		
 		$handle = fopen($logFile, "a");
 		fwrite($handle, $data);

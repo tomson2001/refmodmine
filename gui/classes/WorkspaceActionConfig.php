@@ -23,9 +23,10 @@ class WorkspaceActionConfig {
 			"FileExtension"	=> "csv",
 			"Icon"			=> "glyphicon glyphicon-th",
 			"OpenWith"		=> "workspaceCSVViewer",
+			"isUploadable"	=> true,
 			"Descriptions"	=> array(
 				"Default"		=> "Default",
-				"WI2015-Clustering" => "WI2015-Clustering" 
+				"WI2015-Clustering" => "WI2015-Clustering"
 			)
 		),
 		
@@ -34,6 +35,7 @@ class WorkspaceActionConfig {
 			"FileExtension"	=> "csv",
 			"Icon"			=> "glyphicon glyphicon-transfer",
 			"OpenWith"		=> "workspaceCSVViewer",
+			"isUploadable"	=> true,
 			"Descriptions"	=> array(
 				
 				// the PHP RMM things
@@ -73,6 +75,7 @@ class WorkspaceActionConfig {
 			"FileExtension"	=> "csv",
 			"Icon"			=> "glyphicon glyphicon-sort-by-attributes",
 			"OpenWith"		=> "workspaceCSVViewer",
+			"isUploadable"	=> true,
 			"Descriptions"	=> array(
 				"identical" 		=> "Identical Mapping"
 			)
@@ -83,6 +86,7 @@ class WorkspaceActionConfig {
 			"FileExtension"	=> "txt",
 			"Icon"			=> "glyphicon glyphicon-text-color",
 			"OpenWith"		=> null,
+			"isUploadable"	=> false,
 			"Descriptions"	=> array(
 				"default" 		=> "-"
 			)
@@ -93,6 +97,7 @@ class WorkspaceActionConfig {
 			"FileExtension"	=> "csv",
 			"Icon"			=> "glyphicon glyphicon-equalizer",
 			"OpenWith"		=> "workspaceCSVViewer",
+			"isUploadable"	=> false,
 			"Descriptions"	=> array(
 				"hierarchical" 		=> "hierarchical",
 				"PAM"				=> "PAM"
@@ -103,7 +108,8 @@ class WorkspaceActionConfig {
 			"Name"			=> "Dendogram",
 			"FileExtension"	=> "svg",
 			"Icon"			=> "glyphicon glyphicon-indent-right",
-			"OpenWith"		=> null,
+			"OpenWith"		=> "workspaceImgViewer",
+			"isUploadable"	=> true,
 			"Descriptions"	=> array(
 				"hierarchical" 		=> "hierarchical",
 				"PAM"				=> "PAM"
@@ -115,12 +121,86 @@ class WorkspaceActionConfig {
 			"FileExtension"	=> "csv",
 			"Icon"			=> "glyphicon glyphicon-list-alt",
 			"OpenWith"		=> "workspaceCSVViewer",
+			"isUploadable"	=> false,
 			"Descriptions"	=> array(
 				"German" 		=> "German",
 				"English"		=> "English",
 				"Functions"	=> "Functions",
 				"Events"	=> "Events",
 				"All"		=> "Functions, Events"
+			)
+		),
+			
+		"model"	=> array(
+			"Name"			=> "EPC",
+			"FileExtension"	=> "epml",
+			"Icon"			=> "glyphicon glyphicon-picture",
+			"OpenWith"		=> null,
+			"isUploadable"	=> false,
+			"Descriptions"	=> array(
+				"noevents" 		=> "without events",
+				"refmod"		=> "Reference model",
+				"li"			=> "approach of li"
+			)
+		),
+			
+		"behaveprofile"	=> array(
+			"Name"			=> "Behavioural Profile",
+			"FileExtension"	=> "csv",
+			"Icon"			=> "glyphicon glyphicon-road",
+			"OpenWith"		=> "workspaceCSVViewer",
+			"isUploadable"	=> false,
+			"Descriptions"	=> array(
+				"Basic" 		=> "Basic",
+				"Causal" 		=> "Causal",
+				"Tree" 			=> "Tree",
+				"Net"			=> "Net",
+				"Unfolding"		=> "Unfolding"
+			)
+		),
+			
+		"nlptags"	=> array(
+			"Name"			=> "NLP Tags",
+			"FileExtension"	=> "csv",
+			"Icon"			=> "glyphicon glyphicon-comment",
+			"OpenWith"		=> "workspaceCSVViewerHeadingTop",
+			"isUploadable"	=> false,
+			"Descriptions"	=> array(
+				"eng" 		=> "English",
+				"ger"		=> "German"
+			)
+		),
+			
+		"labels"	=> array(
+			"Name"			=> "Node Labels",
+			"FileExtension"	=> "csv",
+			"Icon"			=> "glyphicon glyphicon-th-list",
+			"OpenWith"		=> "workspaceCSVViewerHeadingTop",
+			"isUploadable"	=> false,
+			"Descriptions"	=> array(
+				"standard"	=> "Standard"
+			)
+		),
+			
+		"processlog"	=> array(
+			"Name"			=> "Process Log",
+			"FileExtension"	=> "mxml",
+			"Icon"			=> "glyphicon glyphicon-menu-hamburger",
+			"OpenWith"		=> null,
+			"isUploadable"	=> true,
+			"Descriptions"	=> array(
+		
+			)
+		),
+			
+		"matching"	=> array(
+			"Name"			=> "Matching",
+			"FileExtension"	=> "zip",
+			"Icon"			=> "glyphicon glyphicon-random",
+			"OpenWith"		=> null,
+			"isUploadable"	=> true,
+			"Descriptions"	=> array(
+				"rmm-nscm"	=> "N-Ary Semantic Cluster Matching"
 			)
 		)
 			
@@ -141,7 +221,7 @@ class WorkspaceActionConfig {
 	 *   SELECT_ONE_MAPPING
 	 *   
 	 * EmbedInPHP means that the command will be executed by a separate PHP script. This is necessary for the E-Mail notification.
-	 * An @ before the param name means, that the it will produce the form "value" indead of "paramName=value" 
+	 * An @ before the param name means, that the it will produce the form "value" instead of "paramName=value" 
 	 */
 	public $actions = array(
 		
@@ -159,9 +239,46 @@ class WorkspaceActionConfig {
 				"INPUT_DATA" 		=> "CONST_WORKSPACE_EPML",
 				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.metrics.%METRICS%", 
 				"METRICS"			=> array(
-					"Default" => "EVENTS FUNCTIONS AND_SPLITS AND_JOINS XOR_SPLITS XOR_JOINS OR_SPLITS OR_JOINS CONNECTORS NODES ARCS DIAMETER DENSITY_1 COEFFICIENT_CONNECTIVITY",
-					"WI2015-Clustering" => "NODES ARCS DENSITY_1 COEFFICIENT_CONNECTIVITY"
+					"Default" => "EVENTS FUNCTIONS AND_SPLITS AND_JOINS XOR_SPLITS XOR_JOINS OR_SPLITS OR_JOINS CONNECTORS NODES ARCS DIAMETER DENSITY_1 COEFFICIENT_OF_CONNECTIVITY",
+					"WI2015-Clustering" => "NODES ARCS DENSITY_1 COEFFICIENT_OF_CONNECTIVITY"
 				)
+			)
+		),
+		
+		"CONVERTER" => array(
+				"Name"			=> "Convert Model File",
+				"CodeBase"		=> "JAVA",
+				"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+				"EmbedInPHP"	=> true,
+				"Literature"	=> array(
+						"todo"
+				),
+				"Parameters"	=> array(
+						"CLI"				=> null,
+						"CONVERT_EPC"		=> null,
+						"INPUT_DATA" 		=> "INPUT_TEXT",
+						"OUTPUT_DATA"		=> "INPUT_TEXT",
+						"outputFormat"		=> array(
+								"AML"  => "AML",
+								"EPML" => "EPML"
+						)
+				)
+		),
+		
+		"CREATE_REFERENCE_MODEL_LI" => array(
+			"Name"			=> "Approach of Li",
+			"CodeBase"		=> "JAVA",
+			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+			"EmbedInPHP"	=> true,
+			"Literature"	=> array(
+				"Li, Li et al.: Dissertation (TODO)"
+			),
+			"Parameters"	=> array(
+				"CLI"				=> null,
+				"CREATE_REFERENCE_MODEL"	=> null,
+				"INPUT_DATA" 		=> "CONST_WORKSPACE_EPML",
+				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.model.refmod.li",
+				"METHOD"			=> "LI"
 			)
 		),
 		
@@ -181,6 +298,31 @@ class WorkspaceActionConfig {
 			)
 		),
 		
+		"CALCULATE_BEHAVIOURAL_PROFILE" => array(
+			"Name"			=> "Calculate Behavioural Profile",
+			"CodeBase"		=> "JAVA",
+			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+			"EmbedInPHP"	=> true,
+			"Literature"	=> array(
+				"todo"
+			),
+			"Parameters"	=> array(
+				"CLI"				=> null,
+				"CALCULATE_BEHAVIOURAL_PROFILE"	=> null,
+				"INPUT_DATA" 		=> "CONST_WORKSPACE_EPML",
+				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.behaveprofile.%TYPE%.%CREATOR%",
+				"TYPE"	=> array(
+					"Basic" => "BASIC",
+					"Causal" => "CAUSAL"
+				),
+				"CREATOR"	=> array(
+					"Tree" 		=> "TREE",
+					"Net"		=> "NET",
+					"Unfolding"	=> "UNFOLDING"
+				)
+			)
+		),
+		
 		"EPC_TO_TEXT" => array(
 			"Name"			=> "EPC to Text",
 			"CodeBase"		=> "JAVA",
@@ -194,6 +336,22 @@ class WorkspaceActionConfig {
 				"EPC_TO_TEXT"	=> null,
 				"INPUT_DATA" 		=> "CONST_WORKSPACE_EPML",
 				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.epctext.default",
+			)
+		),
+		
+		"REMOVE_EVENTS" => array(
+			"Name"			=> "Remove Events",
+			"CodeBase"		=> "JAVA",
+			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+			"EmbedInPHP"	=> true,
+			"Literature"	=> array(
+				"todo"
+			),
+			"Parameters"	=> array(
+				"CLI"				=> null,
+				"REMOVE_EVENTS"		=> null,
+				"INPUT" 		=> "CONST_WORKSPACE_EPML",
+				"OUTPUT"		=> "CONST_WORKSPACE_EPML.model.noevents",
 			)
 		),
 		
@@ -224,7 +382,7 @@ class WorkspaceActionConfig {
 		),
 		
 		"CALCULATE_SIMDIST" => array(
-			"Name"			=> "Calculate Similarities/Distances",
+			"Name"			=> "Further Similarities/Distances Measures",
 			"CodeBase"		=> "JAVA",
 			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
 			"EmbedInPHP"	=> true,
@@ -271,7 +429,7 @@ class WorkspaceActionConfig {
 			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
 			"EmbedInPHP"	=> true,
 			"Literature"	=> array(
-				"todo"
+				"needs a distance matrix as input"
 			),
 			"Parameters"	=> array(
 				"CLI"			=> null,
@@ -288,7 +446,7 @@ class WorkspaceActionConfig {
 				"CLUSTER_DISTANCE" => array(
 					"WARD_D"	=> "WARD_D"
 				),
-				"INPUT_TYPE"	=> "SIMILARITY_MATRIX",
+				"INPUT_TYPE"	=> "DISSIMILARITY_MATRIX",
 				"OUTPUT_DATA"	=> "CONST_WORKSPACE_EPML.cluster.%METHOD%",
 				"EVALUATION"	=> array(
 					"all"	=> "ALL"
@@ -406,6 +564,51 @@ class WorkspaceActionConfig {
 				"output"		=> "CONST_WORKSPACE_EPML.simmatrix.cf",
 				"notification"	=> "CONST_SESSION_E_MAIL"
 			)
+		),
+			
+		"NLP_TAGGING" => array(
+			"Name"			=> "NLP Tagging",
+			"CodeBase"		=> "PHP",
+			"ScriptBase"	=> "CLIModelNLPTagger.php",
+			"EmbedInPHP"	=> false,
+			"Literature" 	=> array(
+				"none"
+			),
+			"Parameters"	=> array(
+				"input"			=> "CONST_WORKSPACE_EPML",
+				"output"		=> "CONST_WORKSPACE_EPML.nlptags.eng",
+				"notification"	=> "CONST_SESSION_E_MAIL"
+			)
+		),
+		
+		"LABEL_EXTRACTION" => array(
+			"Name"			=> "Label Extraction",
+			"CodeBase"		=> "PHP",
+			"ScriptBase"	=> "CLIModelLabelExtractor.php",
+			"EmbedInPHP"	=> false,
+			"Literature" 	=> array(
+				"none"
+			),
+			"Parameters"	=> array(
+					"input"			=> "CONST_WORKSPACE_EPML",
+					"output"		=> "CONST_WORKSPACE_EPML.labels.standard",
+					"notification"	=> "CONST_SESSION_E_MAIL"
+			)
+		),
+			
+		"MATCHING_NSCM" => array(
+			"Name"			=> "N-Ary Semantic Cluster Matching",
+			"CodeBase"		=> "PHP",
+			"ScriptBase"	=> "CLINArySemanticClusterMatching.php",
+			"EmbedInPHP"	=> false,
+			"Literature" 	=> array(
+				"The Process Matching Contest 2013 - Thaler, Hake, Fettke, Loos: RefMod-Miner/NSCM"
+			),
+			"Parameters"	=> array(
+				"input"			=> "CONST_WORKSPACE_EPML",
+				"output"		=> "CONST_WORKSPACE_EPML.matching.rmm-nscm",
+				"notification"	=> "CONST_SESSION_E_MAIL"
+			)
 		)
 
 	);
@@ -413,14 +616,17 @@ class WorkspaceActionConfig {
 	// Available Functionalities operating on the whole workspace
 	public $workspaceActions = array(
 			
-		"Tools" => array(
+		"General Analysis" => array(
 			"CALCULATE_METRICS",
 			"CALCULATE_FEATURE_VECTORS",
-			"CALCULATE_SIMDIST",
-			"EXTRACT_VOCABULARY"
-			//"CLUSTER_MODELS_BASED_ON_DIST"
+			//"REMOVE_EVENTS", // is ready, but buggy, BUG reported 326
+			//"CALCULATE_BEHAVIOURAL_PROFILE" // is ready, bug not works at the moment (seems not being fully implemented)
 		),
 			
+		"Process Matching" => array(
+			"MATCHING_NSCM"
+		),	
+					
 		"Process Model Similarity" => array(
 			"CALCULATE_SIMILARITY_SSBOCAN",
 			"CALCULATE_SIMILARITY_LMS",
@@ -428,12 +634,22 @@ class WorkspaceActionConfig {
 			"CALCULATE_SIMILARITY_POCNAE",
 			"CALCULATE_SIMILARITY_GEDS",
 			"CALCULATE_SIMILARITY_AMAGED",
-			"CALCULATE_SIMILARITY_CF"
-				
+			"CALCULATE_SIMILARITY_CF",
+			"CALCULATE_SIMDIST"
 		),
 			
-		"Process Matching" => array(
+		"Process Model Clustering" => array(
+			"CLUSTER_MODELS_BASED_ON_DIST" // is ready, but buggy, BUG reported 325
+		),
 			
+		"Reference Model Mining" => array(
+			//"CREATE_REFERENCE_MODEL_LI" // returns null
+		),
+			
+		"Natural Language Processing" => array(
+			"NLP_TAGGING",
+			"LABEL_EXTRACTION"
+			//"EXTRACT_VOCABULARY" // is ready, but an buggy, BUG reported 327
 		)
 	);
 	
@@ -468,6 +684,10 @@ class WorkspaceActionConfig {
 	}
 	
 	public function getFileTypeDescriptions($fileType, $fileParams) {
+		if ( $fileParams[1] == "custom" ) {
+			unset($fileParams[1]);
+			return implode(", ", $fileParams);
+		}
 		$descriptions = array();
 		foreach ( $fileParams as $descriptionKey ) {
 			$description = $this->getFileTypeDescription($fileType, $descriptionKey);

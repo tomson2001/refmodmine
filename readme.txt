@@ -62,7 +62,10 @@ cp php.ini-production /usr/local/lib/php.ini
 pear config-set php_ini /usr/local/lib/php.ini
 pecl config-set php_ini /usr/local/lib/php.ini
 pecl install pthreads
-
+pecl install zip
+### update extension path in php.ini to somethink like /usr/local/lib/php/extensions/debug-zts-20121212/ (you need to detect the correct directory name under extensions)
+### php.ini for apache is: /etc/php5/apache2/php.ini
+### php.ini for cli is: /usr/local/lib/php.ini
 
 3. Step: Install apache
 apt-get install apache2
@@ -78,6 +81,7 @@ chown -R www-data:www-data /var/www
 chmod -R 777 /var/www/repository
 chmod -R 777 /var/www/workspace
 chmod -R 777 /var/www/files
+chmod -R 777 /var/www/log
 
 
 6. Step: Inject RefMod-Miner(Java-Version)

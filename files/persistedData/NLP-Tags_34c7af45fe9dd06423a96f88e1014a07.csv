@@ -1,0 +1,19 @@
+34c7af45fe9dd06423a96f88e1014a07;Admission TU Munich
+function;Apply Online;Apply@@@RB|||Online@@@NN;{RB}{NN}
+function;Check Documents;Check@@@VB|||Documents@@@NNS;{VB}{NNS}
+function;Documents received;Documents@@@NNS|||received@@@VBD;{NNS}{VBD}
+function;Send letter of Acceptance;Send@@@VB|||letter@@@NN|||of@@@IN|||Acceptance@@@NNP;{VB}{NN}{IN}{NNP}
+function;Send Interview Invitation;Send@@@VB|||Interview Invitation@@@NNP;{VB}{NNP}
+function;Go to Interview;Go@@@VB|||to@@@TO|||Interview@@@NNP;{VB}{TO}{NNP}
+function;Rejected;Rejected@@@VBN;{VBN}
+function;Forward Documents;Forward@@@RB|||Documents@@@NNS;{RB}{NNS}
+function;Rejected;Rejected@@@VBN;{VBN}
+function;Send Documents by Post;Send@@@VB|||Documents@@@NNS|||by@@@IN|||Post@@@NN;{VB}{NNS}{IN}{NN}
+function;Bridging Courses < 30 CP;Bridging@@@VBG|||Courses@@@NNS|||<@@@JJR|||30@@@CD|||CP@@@NN;{VBG}{NNS}{JJR}{CD}{NN}
+function;Send letter of Rejection;Send@@@VB|||letter@@@NN|||of@@@IN|||Rejection@@@NN;{VB}{NN}{IN}{NN}
+function;Check Bachelor's degree;Check@@@VB|||Bachelor@@@NNP|||'s@@@POS|||degree@@@NN;{VB}{NNP}{POS}{NN}
+function;Evaluate;Evaluate@@@VB;{VB}
+function;Conduct Interview;Conduct Interview@@@NNP;{NNP}
+function;Documents received;Documents@@@NNS|||received@@@VBD;{NNS}{VBD}
+function;Bridging Courses > 30 CP;Bridging@@@VBG|||Courses@@@NNS|||>@@@JJR|||30@@@CD|||CP@@@NN;{VBG}{NNS}{JJR}{CD}{NN}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}

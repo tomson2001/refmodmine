@@ -1,0 +1,50 @@
+c3a9cf460947e418f5ccc0aff3af7fc2;Admission Muenster
+function;not take interview;not@@@RB|||take@@@VB|||interview@@@NN;{RB}{VB}{NN}
+function;send information to application office;send@@@VB|||information@@@NN|||to@@@TO|||application@@@NN|||office@@@NN;{VB}{NN}{TO}{NN}{NN}
+function;receive acceptance;receive@@@VB|||acceptance@@@NN;{VB}{NN}
+function;check application in time EU countries;check@@@NN|||application@@@NN|||in@@@IN|||time@@@NN|||EU@@@NNP|||countries@@@NNS;{NN}{NN}{IN}{NN}{NNP}{NNS}
+function;mark applicant as qualified;mark@@@NN|||applicant@@@NN|||as@@@IN|||qualified@@@VBN;{NN}{NN}{IN}{VBN}
+function;send acceptance;send@@@VB|||acceptance@@@NN;{VB}{NN}
+function;upload letter of motivation;upload@@@NN|||letter@@@NN|||of@@@IN|||motivation@@@NN;{NN}{NN}{IN}{NN}
+function;Choose courses of studies;Choose@@@VB|||courses@@@NNS|||of@@@IN|||studies@@@NNS;{VB}{NNS}{IN}{NNS}
+function;check citizenship;check@@@NN|||citizenship@@@NN;{NN}{NN}
+function;check and evaluate application;check@@@NN|||and@@@CC|||evaluate@@@VB|||application@@@NN;{NN}{CC}{VB}{NN}
+function;mark applicant as suitable;mark@@@NN|||applicant@@@NN|||as@@@IN|||suitable@@@JJ;{NN}{NN}{IN}{JJ}
+function;receive application;receive@@@VB|||application@@@NN;{VB}{NN}
+function;upload language certificates;upload@@@NN|||language@@@NN|||certificates@@@NNS;{NN}{NN}{NNS}
+function;check application in time non-EU countries;check@@@NN|||application@@@NN|||in@@@IN|||time@@@NN|||non-EU@@@JJ|||countries@@@NNS;{NN}{NN}{IN}{NN}{JJ}{NNS}
+function;send application form;send@@@VB|||application@@@NN|||form@@@NN;{VB}{NN}{NN}
+function;reject applicant;reject@@@VBP|||applicant@@@NN;{VBP}{NN}
+function;receive application form;receive@@@VB|||application@@@NN|||form@@@NN;{VB}{NN}{NN}
+function;in time;in@@@IN|||time@@@NN;{IN}{NN}
+function;create ranking;create@@@VB|||ranking@@@NN;{VB}{NN}
+function;not meet the basic requirements;not@@@RB|||meet@@@VB|||the@@@DT|||basic@@@JJ|||requirements@@@NNS;{RB}{VB}{DT}{JJ}{NNS}
+function;update status of application;update@@@VB|||status@@@NN|||of@@@IN|||application@@@NN;{VB}{NN}{IN}{NN}
+function;upload cv;upload@@@NN|||cv@@@NN;{NN}{NN}
+function;do the interview;do@@@VB|||the@@@DT|||interview@@@NN;{VB}{DT}{NN}
+function;invite applicant for interview;invite@@@VB|||applicant@@@NN|||for@@@IN|||interview@@@NN;{VB}{NN}{IN}{NN}
+function;create transcript of applicant;create@@@VB|||transcript@@@NN|||of@@@IN|||applicant@@@NN;{VB}{NN}{IN}{NN}
+function;upload bachelor's degree / transcript of records / diploma supplement;upload@@@NN|||bachelor@@@NN|||'s@@@POS|||degree@@@NN|||/@@@:|||transcript@@@NN|||of@@@IN|||records@@@NNS|||/@@@:|||diploma@@@NN|||supplement@@@NN;{NN}{NN}{POS}{NN}{:}{NN}{IN}{NNS}{:}{NN}{NN}
+function;receive rejection;receive@@@VB|||rejection@@@NN;{VB}{NN}
+function;discuss qualification;discuss@@@VB|||qualification@@@NN;{VB}{NN}
+function;send rejection;send@@@VB|||rejection@@@NN;{VB}{NN}
+function;check application complete;check@@@NN|||application@@@NN|||complete@@@JJ;{NN}{NN}{JJ}
+function;accept applicant;accept@@@VB|||applicant@@@NN;{VB}{NN}
+function;enrollment;enrollment@@@NN;{NN}
+function;receive rejection for course of studies;receive@@@VB|||rejection@@@NN|||for@@@IN|||course@@@NN|||of@@@IN|||studies@@@NNS;{VB}{NN}{IN}{NN}{IN}{NNS}
+function;collect additional required documents;collect@@@VB|||additional@@@JJ|||required@@@VBN|||documents@@@NNS;{VB}{JJ}{VBN}{NNS}
+function;complete online interview;complete@@@JJ|||online@@@NN|||interview@@@NN;{JJ}{NN}{NN}
+function;send application to selection committee;send@@@VB|||application@@@NN|||to@@@TO|||selection@@@NN|||committee@@@NN;{VB}{NN}{TO}{NN}{NN}
+function;print out and sign application form;print@@@NN|||out@@@IN|||and@@@CC|||sign@@@VB|||application@@@NN|||form@@@NN;{NN}{IN}{CC}{VB}{NN}{NN}
+function;not in time;not@@@RB|||in@@@IN|||time@@@NN;{RB}{IN}{NN}
+function;upload course description;upload@@@NN|||course@@@NN|||description@@@NN;{NN}{NN}{NN}
+function;meet the basic requirements;meet@@@VB|||the@@@DT|||basic@@@JJ|||requirements@@@NNS;{VB}{DT}{JJ}{NNS}
+function;mark applicant as not suitable;mark@@@NN|||applicant@@@NN|||as@@@IN|||not@@@RB|||suitable@@@JJ;{NN}{NN}{IN}{RB}{JJ}
+function;reject interview;reject@@@VBP|||interview@@@NN;{VBP}{NN}
+function;mark applicant as not qualified;mark@@@NN|||applicant@@@NN|||as@@@IN|||not@@@RB|||qualified@@@VBN;{NN}{NN}{IN}{RB}{VBN}
+function;update application system;update@@@VB|||application@@@NN|||system@@@NN;{VB}{NN}{NN}
+function;check responses;check@@@NN|||responses@@@NNS;{NN}{NNS}
+function;receive and sort application;receive@@@VB|||and@@@CC|||sort@@@VB|||application@@@NN;{VB}{CC}{VB}{NN}
+function;send application form and documents;send@@@VB|||application@@@NN|||form@@@NN|||and@@@CC|||documents@@@NNS;{VB}{NN}{NN}{CC}{NNS}
+function;upload university entrance certificate;upload@@@NN|||university@@@NN|||entrance@@@NN|||certificate@@@NN;{NN}{NN}{NN}{NN}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}

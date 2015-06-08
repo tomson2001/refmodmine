@@ -1,0 +1,24 @@
+5ff243c157ba945d6c56cea68b0a7cc1;Admission Wuerzburg
+function;receive rejection;receive@@@VB|||rejection@@@NN;{VB}{NN}
+function;fill in online form of application;fill@@@NN|||in@@@IN|||online@@@JJ|||form@@@NN|||of@@@IN|||application@@@NN;{NN}{IN}{JJ}{NN}{IN}{NN}
+function;choose uni;choose@@@VB|||uni@@@NNS;{VB}{NNS}
+function;match accepted;match@@@NN|||accepted@@@VBD;{NN}{VBD}
+function;no;no@@@DT;{DT}
+function;International;International@@@NNP;{NNP}
+function;wait for response;wait@@@VB|||for@@@IN|||response@@@NN;{VB}{IN}{NN}
+function;check if has direct university entrance qualification;check@@@NN|||if@@@IN|||has@@@VBZ|||direct@@@JJ|||university@@@NN|||entrance@@@NN|||qualification@@@NN;{NN}{IN}{VBZ}{JJ}{NN}{NN}{NN}
+function;checking for completeness;checking@@@VBG|||for@@@IN|||completeness@@@NN;{VBG}{IN}{NN}
+function;send rejection;send@@@VB|||rejection@@@NN;{VB}{NN}
+function;fill in printed form of application for international students;fill@@@NN|||in@@@IN|||printed@@@VBN|||form@@@NN|||of@@@IN|||application@@@NN|||for@@@IN|||international@@@JJ|||students@@@NNS;{NN}{IN}{VBN}{NN}{IN}{NN}{IN}{JJ}{NNS}
+function;complete;complete@@@JJ;{JJ}
+function;send german application;send@@@VB|||german@@@JJ|||application@@@NN;{VB}{JJ}{NN}
+function;matriculate;matriculate@@@VB;{VB}
+function;incomplete;incomplete@@@JJ;{JJ}
+function;check for DSH;check@@@NN|||for@@@IN|||DSH@@@NN;{NN}{IN}{NN}
+function;checking for contentual match;checking@@@VBG|||for@@@IN|||contentual@@@JJ|||match@@@NN;{VBG}{IN}{JJ}{NN}
+function;receive commitment;receive@@@VB|||commitment@@@NN;{VB}{NN}
+function;send commitment;send@@@VB|||commitment@@@NN;{VB}{NN}
+function;German;German@@@JJ;{JJ}
+function;send international application;send@@@VB|||international@@@JJ|||application@@@NN;{VB}{JJ}{NN}
+function;precheck of documents;precheck@@@NN|||of@@@IN|||documents@@@NNS;{NN}{IN}{NNS}
+function;match refused;match@@@NN|||refused@@@VBD;{NN}{VBD}

@@ -1,0 +1,43 @@
+c8ef6ede74b68b98330a58c30dfaab46;Admission IIS Erlangen
+function;german?;german@@@NN|||?@@@.;{NN}{.}
+function;Applicant qualified under constraints;Applicant@@@NN|||qualified@@@VBN|||under@@@IN|||constraints@@@NNS;{NN}{VBN}{IN}{NNS}
+function;Check Application in Time;Check@@@VB|||Application@@@NN|||in@@@IN|||Time@@@NNP;{VB}{NN}{IN}{NNP}
+function;Check Application Complete;Check@@@VB|||Application@@@NN|||Complete@@@JJ;{VB}{NN}{JJ}
+function;Appoint Applicant;Appoint@@@VB|||Applicant@@@NN;{VB}{NN}
+function;Applicant qualified;Applicant@@@NN|||qualified@@@VBD;{NN}{VBD}
+function;Sum Score;Sum@@@NN|||Score@@@NN;{NN}{NN}
+function;Reject Application;Reject@@@VB|||Application@@@NN;{VB}{NN}
+function;Add Certificates of further language skills;Add@@@VB|||Certificates@@@NNS|||of@@@IN|||further@@@JJ|||language@@@NN|||skills@@@NNS;{VB}{NNS}{IN}{JJ}{NN}{NNS}
+function;Create and add english letter of Motivation;Create@@@VB|||and@@@CC|||add@@@VB|||english@@@JJ|||letter@@@NN|||of@@@IN|||Motivation@@@NN;{VB}{CC}{VB}{JJ}{NN}{IN}{NN}
+function;receive acceptance;receive@@@VB|||acceptance@@@NN;{VB}{NN}
+function;Send rejection;Send@@@VB|||rejection@@@NN;{VB}{NN}
+function;Invite Applicant for Appointment;Invite@@@VB|||Applicant@@@NN|||for@@@IN|||Appointment@@@NN;{VB}{NN}{IN}{NN}
+function;Receive Application;Receive@@@VB|||Application@@@NN;{VB}{NN}
+function;Score Bachelor;Score@@@NN|||Bachelor@@@NN;{NN}{NN}
+function;Accept Application;Accept@@@VB|||Application@@@NN;{VB}{NN}
+function;Score Qualification;Score@@@NN|||Qualification@@@NN;{NN}{NN}
+function;Applicant not qualified;Applicant@@@NN|||not@@@RB|||qualified@@@VBN;{NN}{RB}{VBN}
+function;Create and Add CV;Create@@@VB|||and@@@CC|||Add@@@VB|||CV@@@NN;{VB}{CC}{VB}{NN}
+function;Score Motivation;Score@@@NN|||Motivation@@@NN;{NN}{NN}
+function;Make Decision;Make@@@VB|||Decision@@@NN;{VB}{NN}
+function;Send Acceptance;Send@@@VB|||Acceptance@@@NNP;{VB}{NNP}
+function;Send Application;Send@@@VB|||Application@@@NN;{VB}{NN}
+function;receive rejection;receive@@@VB|||rejection@@@NN;{VB}{NN}
+function;Add Certificate of Bachelor Degree;Add@@@VB|||Certificate@@@NNP|||of@@@IN|||Bachelor Degree@@@NNP;{VB}{NNP}{IN}{NNP}
+function;Take Interview;Take@@@VB|||Interview@@@NNP;{VB}{NNP}
+function;Fill out Application Form;Fill@@@VB|||out@@@RP|||Application@@@NN|||Form@@@NN;{VB}{RP}{NN}{NN}
+function;Attach additional requirements;Attach@@@VB|||additional@@@JJ|||requirements@@@NNS;{VB}{JJ}{NNS}
+function;immatriculate;immatriculate@@@JJ;{JJ}
+function;add Certificate of english language;add@@@VB|||Certificate@@@NNP|||of@@@IN|||english@@@JJ|||language@@@NN;{VB}{NNP}{IN}{JJ}{NN}
+function;50-69 Points;50-69@@@CD|||Points@@@NNS;{CD}{NNS}
+function;Add Certificates of Qualification;Add@@@VB|||Certificates@@@NNS|||of@@@IN|||Qualification@@@NN;{VB}{NNS}{IN}{NN}
+function;less than 50 points;less@@@JJR|||than@@@IN|||50@@@CD|||points@@@NNS;{JJR}{IN}{CD}{NNS}
+function;Hand Application over to Examining Board;Hand@@@VB|||Application@@@NN|||over@@@IN|||to@@@TO|||Examining Board@@@NNP;{VB}{NN}{IN}{TO}{NNP}
+function;complete and in time?;complete@@@JJ|||and@@@CC|||in@@@IN|||time@@@NN|||?@@@.;{JJ}{CC}{IN}{NN}{.}
+function;more than 70 Points;more@@@JJR|||than@@@IN|||70@@@CD|||Points@@@NNS;{JJR}{IN}{CD}{NNS}
+function;Add Certificate of german language;Add@@@VB|||Certificate@@@NNP|||of@@@IN|||german@@@JJ|||language@@@NN;{VB}{NNP}{IN}{JJ}{NN}
+function;complete application;complete@@@JJ|||application@@@NN;{JJ}{NN}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}

@@ -38,7 +38,7 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 		foreach ( $this->epcs as $epc ) {
 			$numOfAllFuncs += count($epc->functions);
 		}
-		print("\n\nAufbau der Funktionsongologien... \n");
+		print("\n\nGenerate function ontologies... \n");
 		$progressBar = new CLIProgressbar($numOfAllFuncs, 0.1);
 		$i=0;
 		
@@ -76,9 +76,10 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 			$i++;
 			$j = $i + 1;
 		}
-		$this->exportDebug("_complete");
+		$file1 = $this->exportDebug("", "_complete");
 		$this->cleanClusters();
-		$this->exportDebug("_reduced");
+		$file2 = $this->exportDebug("", "_reduced");
+		return array($file1, $file2);
 	}
 	
 	public function mapMultiCore($reportingFolder = "") {
@@ -339,7 +340,8 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 		$fileGenerator = new FileGenerator("clusters".$filename_suffix.".txt", $output);
 		if ( !empty($folderName) ) $fileGenerator->setPath($folderName);
 		$fileGenerator->setFilename("clusters".$filename_suffix.".txt");
-		$file = $fileGenerator->execute(false);
+		$fileGenerator->setContent($output);
+		$file = $fileGenerator->execute();
 		return $file;
 	}
 

@@ -1,10 +1,13 @@
 <?php
+
+// @TODO NOT TESTED AND NOT FINISHED!
+
 $start = time();
 require 'autoloader.php';
 
-print("\n--------------------------------------------------------------------\n RefMod-Miner (PHP) - Business Process Model Similarity Measuerment \n--------------------------------------------------------------------\n");
+print("\n--------------------------------------------------------------------\n RefMod-Miner (PHP) - Business Process Model Matcher \n--------------------------------------------------------------------\n");
 
-$similarityMeasures = array(
+$algorithms = array(
 		"ssbocan" => "Similarity Score Based On Common Activity Names",
 		"lms"  	  => "Label Matching Similarity",
 		"fbse"    => "Feature Based Similarity Estimation",
@@ -16,9 +19,9 @@ $similarityMeasures = array(
 );
 
 // Hilfeanzeige auf Kommandozeile
-if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) ) {
+if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) || !isset($argv[4]) ) {
 	exit("   Please provide the following parameters:\n
-   measure=
+   algorithm=
       ssbocan       ".$similarityMeasures["ssbocan"]."
       lms           ".$similarityMeasures["lms"]."
       fbse          ".$similarityMeasures["fbse"]."
@@ -29,6 +32,9 @@ if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) ) {
       nscm          ".$similarityMeasures["nscm"]."\n
    input=           path to input epml
    output=          path to output file
+   notification=
+      no
+      [E-Mail adress]
 
    please user the correct order!
 			
@@ -37,23 +43,25 @@ ERROR: Parameters incomplete
 }
 
 // Checking Parameters
-$measure = substr($argv[1], 8, strlen($argv[1]));
-$input   = substr($argv[2], 6, strlen($argv[2]));
-$output  = substr($argv[3], 7, strlen($argv[3]));
+$algorithm = substr($argv[1], 8, strlen($argv[1]));
+$input     = substr($argv[2], 6, strlen($argv[2]));
+$output    = substr($argv[3], 7, strlen($argv[3]));
+$email     = substr($argv[4], 13, strlen($argv[4]));
 
 print("
 measure: ".$measure."
 input: ".$input."
 output: ".$output."
+notification: ".$email."
 
 checking input parameters ...
 ");
 
-// Check measure
-if ( array_key_exists($measure, $similarityMeasures) ) {
-	print "  measure ... ok\n";
+// Check algorithm
+if ( array_key_exists($algorithm, $algorithms) ) {
+	print "  algorithm ... ok\n";
 } else {
-	exit("  measure ... failed (measure does not exist)");
+	exit("  algorithm ... failed (algorithm does not exist)");
 }
 
 // Check input
@@ -61,6 +69,15 @@ if ( file_exists($input) ) {
 	print "  input ... ok\n";
 } else {
 	exit("  input ... failed (file does not exist)");
+}
+
+// Check notification
+$doNotify = true;
+if ( empty($email) ) {
+	$doNotify = false;
+	print "  notification ... ok (notification disabled)\n";
+} else {
+	print "  input ... ok (mail to ".$email.")\n";
 }
 
 // Laden der Modelldateien
@@ -80,19 +97,19 @@ $progress = 0.1;
 // Ausgabe der Informationen zum Skript-Run auf der Kommandozeile
 print("\nNumber of models: ".count($xml1->xpath("//epc"))."\n");
 print("Number of model permutations: ".$countCombinations."\n");
-print("Similarity measure: ".$similarityMeasures[$measure]."\n\n");
+print("Matching algorithm: ".$algorithms[$algorithm]."\n\n");
 
 // ReadMe.txt erzeugen
 $readme = "--------------------------------------------------------------------\r\n";
-$readme .= " RefMod-Miner (PHP) - Business Process Model Similarity Measuerment\r\n";
+$readme .= " RefMod-Miner as a Service - Business Process Model Matcher\r\n";
 $readme .= "--------------------------------------------------------------------\r\n\r\n";
 $readme .= "Log:\r\n";
-$readme .= " - Similarity Measure: ".$similarityMeasures[$measure]."\r\n";
+$readme .= " - Matching algorithm: ".$algorithms[$algorithm]."\r\n";
 $readme .= " - Model file:  ".$input." (".$modelsInFile1." models)\r\n";
 $readme .= " - Number of model permutations: ".$countCombinations."\r\n";
 $readme .= " - Start: ".date("d.m.Y H:i:s")."\r\n\r\n";
 
-print("Calculate mappings ...\n");
+print("Calculate matchings ...\n");
 
 $allFuncNodesOfModelFile1 = array();
 $allFuncNodesOfModelFile2 = array();
@@ -115,28 +132,6 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 		foreach ( $epc2->functions as $funcLabel ) {
 			$allFuncNodesOfModelFile2[$funcLabel] = true;
 		}
-
-		// Traces falls notwendig an die EPKs dranhaengen
-		if ( $measure == "lcsot") {
-			if ( is_string($traces[$nameOfEPC1]) || is_string($traces[$nameOfEPC2]) ) {
-
-				// FORTSCHRITTSANZEIGE
-				print("drop(".$nameOfEPC1.", ".$nameOfEPC2.")");
-				$countCompletedCombinations++;
-
-				if ( ($countCompletedCombinations/$countCombinations) >= $progress ) {
-					print(" ".($progress*100)."% ");
-					$progress += 0.1;
-				}
-				// ENDE DER FORTSCHRITTSANZEIGE
-
-				continue;
-			}
-			$epc1->traces = $traces[$nameOfEPC1];
-			$epc2->traces = $traces[$nameOfEPC2];
-		}
-
-		// Matrix berechnen
 
 		// Variablen-Initalisierung
 		$mapping = null;

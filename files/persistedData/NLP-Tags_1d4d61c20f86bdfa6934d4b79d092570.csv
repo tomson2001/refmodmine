@@ -1,0 +1,35 @@
+1d4d61c20f86bdfa6934d4b79d092570;Admission Hohenheim
+function;proof of uni degree provided;proof@@@NN|||of@@@IN|||uni@@@JJ|||degree@@@NN|||provided@@@VBN;{NN}{IN}{JJ}{NN}{VBN}
+function;Mark as not complete;Mark@@@NNP|||as@@@IN|||not@@@RB|||complete@@@JJ;{NNP}{IN}{RB}{JJ}
+function;receive application;receive@@@VB|||application@@@NN;{VB}{NN}
+function;Complete and send application form online;Complete@@@JJ|||and@@@CC|||send@@@VB|||application@@@NN|||form@@@NN|||online@@@NN;{JJ}{CC}{VB}{NN}{NN}{NN}
+function;checking if complete;checking@@@VBG|||if@@@IN|||complete@@@JJ;{VBG}{IN}{JJ}
+function;Final confirmation by head of university;Final@@@JJ|||confirmation@@@NN|||by@@@IN|||head@@@NN|||of@@@IN|||university@@@NN;{JJ}{NN}{IN}{NN}{IN}{NN}
+function;publishing the letters;publishing@@@VBG|||the@@@DT|||letters@@@NNS;{VBG}{DT}{NNS}
+function;Mark as complete;Mark@@@NNP|||as@@@IN|||complete@@@JJ;{NNP}{IN}{JJ}
+function;Rejection;Rejection@@@NN;{NN}
+function;Send documents to selection committee;Send@@@VB|||documents@@@NNS|||to@@@TO|||selection@@@NN|||committee@@@NN;{VB}{NNS}{TO}{NN}{NN}
+function;German applicant;German@@@JJ|||applicant@@@NN;{JJ}{NN}
+function;requirements are not met of low ranking;requirements@@@NNS|||are@@@VBP|||not@@@RB|||met@@@VBN|||of@@@IN|||low@@@JJ|||ranking@@@NN;{NNS}{VBP}{RB}{VBN}{IN}{JJ}{NN}
+function;Providing the missing documents;Providing@@@VBG|||the@@@DT|||missing@@@VBG|||documents@@@NNS;{VBG}{DT}{VBG}{NNS}
+function;proposed as rejected;proposed@@@VBN|||as@@@IN|||rejected@@@VBN;{VBN}{IN}{VBN}
+function;Print out the online application form (INT);Print@@@VB|||out@@@RP|||the@@@DT|||online@@@JJ|||application@@@NN|||form@@@NN|||-LRB-@@@-LRB-|||INT@@@NN|||-RRB-@@@-RRB-;{VB}{RP}{DT}{JJ}{NN}{NN}{-LRB-}{NN}{-RRB-}
+function;Choose Master Program;Choose@@@VB|||Master Program@@@NNP;{VB}{NNP}
+function;update the applicant status;update@@@VB|||the@@@DT|||applicant@@@NN|||status@@@NN;{VB}{DT}{NN}{NN}
+function;proposed as reserved;proposed@@@VBN|||as@@@IN|||reserved@@@VBN;{VBN}{IN}{VBN}
+function;rank application on scale of 1 to 10;rank@@@NN|||application@@@NN|||on@@@IN|||scale@@@NN|||of@@@IN|||1@@@CD|||to@@@TO|||10@@@CD;{NN}{NN}{IN}{NN}{IN}{CD}{TO}{CD}
+function;proposed as accepted;proposed@@@VBN|||as@@@IN|||accepted@@@VBN;{VBN}{IN}{VBN}
+function;Receive application number and a password;Receive@@@VB|||application@@@NN|||number@@@NN|||and@@@CC|||a@@@DT|||password@@@NN;{VB}{NN}{NN}{CC}{DT}{NN}
+function;Receiving the written applications;Receiving@@@VBG|||the@@@DT|||written@@@VBN|||applications@@@NNS;{VBG}{DT}{VBN}{NNS}
+function;Document Online Applications;Document Online@@@NNP|||Applications@@@NNS;{NNP}{NNS}
+function;assessment of application;assessment@@@NN|||of@@@IN|||application@@@NN;{NN}{IN}{NN}
+function;Waiting for response;Waiting@@@VBG|||for@@@IN|||response@@@NN;{VBG}{IN}{NN}
+function;Print out the online application form (GER);Print@@@VB|||out@@@RP|||the@@@DT|||online@@@JJ|||application@@@NN|||form@@@NN|||-LRB-@@@-LRB-|||GER@@@NN|||-RRB-@@@-RRB-;{VB}{RP}{DT}{JJ}{NN}{NN}{-LRB-}{NN}{-RRB-}
+function;Receiving acceptance letter;Receiving@@@VBG|||acceptance@@@NN|||letter@@@NN;{VBG}{NN}{NN}
+function;Allocate an application number and password to each applicant;Allocate@@@VB|||an@@@DT|||application@@@NN|||number@@@NN|||and@@@CC|||password@@@NN|||to@@@TO|||each@@@DT|||applicant@@@NN;{VB}{DT}{NN}{NN}{CC}{NN}{TO}{DT}{NN}
+function;high ranking requirements are met;high@@@JJ|||ranking@@@JJ|||requirements@@@NNS|||are@@@VBP|||met@@@VBN;{JJ}{JJ}{NNS}{VBP}{VBN}
+function;Enrollment;Enrollment@@@NN;{NN}
+function;Reservation place;Reservation@@@NN|||place@@@NN;{NN}{NN}
+function;Send all the requirements to the secretarial office for students;Send@@@VB|||all@@@PDT|||the@@@DT|||requirements@@@NNS|||to@@@TO|||the@@@DT|||secretarial@@@JJ|||office@@@NN|||for@@@IN|||students@@@NNS;{VB}{PDT}{DT}{NNS}{TO}{DT}{JJ}{NN}{IN}{NNS}
+function;International applicant;International@@@NNP|||applicant@@@NN;{NNP}{NN}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}

@@ -51,6 +51,12 @@ if ( $email == "no" ) {
 print(" done");
 
 $result = exec($command);
+if ( substr_count(strtolower($result), "error") > 0 || substr_count(strtolower($result), "not found") > 0 ) {
+	Logger::log($email, "External call failed: ".$result.", Call was: ".$command, "ERROR");
+	Logger::log($email, "External call failed: ".$result.", Call was: ".$command, "ACCESS");
+} else {
+	Logger::log($email, "External call finished: ".$result.", Call was: ".$command, "ACCESS");
+}
 
 // Berechnungdauer
 $duration = time() - $start;

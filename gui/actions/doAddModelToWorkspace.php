@@ -8,6 +8,7 @@ $modelPath = isset($_REQUEST['modelPath']) ? $_REQUEST['modelPath'] : null;
 $epc = $epml->getEPC($modelPath);
 
 $workspace = new WorkspaceEPML();
-$workspace->addEPC($epc, $epml->filename);
+$result = $workspace->addEPC($epc, $epml->filename);
+//if ( $result ) { echo "OK"; } else { echo "NICHT OK"; }
 $workspace->updateWorkspaceEPMLFile();
 ?>

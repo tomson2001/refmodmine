@@ -72,7 +72,7 @@ if ( empty($email) ) {
 	$doNotify = false;
 	print "  notification ... ok (notification disabled)\n";
 } else {
-	print "  input ... ok (mail to ".$email.")\n";
+	print "  notification ... ok (mail to ".$email.")\n";
 }
 
 // Laden der Modelldateien
@@ -215,7 +215,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 			if ( $mapping->mappingExistsTo($id) ) $allMatchedFuncNodesOfModelFile2[$label] = true;
 		}
 		
-		// Berechnung des Aehnlichkeitsmaßes
+		// Berechnung des Aehnlichkeitsmaï¿½es
 		$simMeasure = null;
 		eval("\$simMeasure = new ".str_replace(" ", "", trim($similarityMeasures[$measure]))."(\$mapping);");
 		$similarityValue = $simMeasure->calculate();
@@ -273,4 +273,6 @@ if ( $doNotify ) {
 // Ausgabe der Dateiinformationen auf der Kommandozeile
 print("\n\nDuration: ".$minutes." Min. ".$seconds." Sec.\n");
 print("Similarity matrix for ".$input." successfully created (".$uri_sim_matrix_csv.").\n\n");
+
+Logger::log($email, "CLIModelSimilarity finished: measure=".$measure." input=".$input." output=".$output, "ACCESS");
 ?>

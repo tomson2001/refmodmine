@@ -41,12 +41,14 @@ $(function () {
             });
         },
         progressall: function (e, data) {
-            var progress = parseInt(data.loaded / data.total * 100, 10);
+        	var progress = parseInt(data.loaded / data.total * 100, 10);
             $('#progress .progress-bar').css(
                 'width',
                 progress + '%'
             );
-            location.href='<?php echo $reloadLink; ?>';
+            if ( progress == 100 ) { 
+                location.href='<?php echo $reloadURL; ?>';
+            }
         }
     }).prop('disabled', !$.support.fileInput)
         .parent().addClass($.support.fileInput ? undefined : 'disabled');

@@ -2,7 +2,7 @@
 $start = time();
 require 'autoloader.php';
 
-print("\n-------------------------------------------------\n RefModMining - Label Tagger \n-------------------------------------------------\n\n");
+print("\n-------------------------------------------------\n RefModMining - Label Extraktor \n-------------------------------------------------\n\n");
 
 // Hilfeanzeige auf Kommandozeile
 if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) ) {
@@ -57,7 +57,7 @@ $modelsInFile = count($xml->xpath("//epc"));
 // print infos to console
 print("\nModel file: ".$input."\n");
 print("Number of models: ".$modelsInFile."\n\n");
-print("Start NLP tagging ...\n");
+print("Start label extraction ...\n");
 
 // initiate progress bar
 $modelCount = 0;
@@ -65,16 +65,13 @@ $progressBar = new CLIProgressbar($modelsInFile, 0.1);
 $progressBar->run($modelCount);
 
 $generatedFiles = array();
-$csvContent = "model;node-type;label;tagged-label;tag-set;high-level-tag-set;label-style";
+$csvContent = "model;node-type;label";
 
 // Analyze all nodes in all models in the file
 foreach ($xml->xpath("//epc") as $xml_epc) {
 	$epc = new EPCNLP($xml, $xml_epc["epcId"], $xml_epc["name"]);
-	$epc->loadLabelTags();
-	$epc->generateHighLevelLabelTags();
-	$epc->detectLableStyles();
 	//var_dump($epc);
-	$csvContent .= $epc->getEPMLNLPAnalysisCSVPart();
+	$csvContent .= $epc->getLabelExtractionCSVPart();
 	//$file_uri = $epc->exportNLPAnalysisCSV();
 	//array_push($generatedFiles, $file_uri);
 	$modelCount++;
@@ -92,7 +89,7 @@ $fileGenerator->setContent($csvContent);
 $uri_csv = $fileGenerator->execute(false);
 // AUSGABEDATEIEN ERSTELLT
 
-$readme  = "NLP-Tagging for model file ".$input." successfully finished.";
+$readme  = "Node label extraction for model file ".$input." successfully finished.";
 $sid = $uri_csv;
 $sid = str_replace("workspace/", "", $sid);
 $pos = strpos($sid, "/");
@@ -110,7 +107,7 @@ $readme .= "\r\n\r\nDuration: ".$minutes." Min. ".$seconds." Sec.";
 
 if ( $doNotify ) {
 	print("\n\nSending notification ... ");
-	$notificationResult = EMailNotifyer::sendCLIModelNLPTaggingNotification($email, $readme);
+	$notificationResult = EMailNotifyer::sendCLIModelLabelExtractionNotification($email, $readme);
 	if ( $notificationResult ) {
 		print("ok");
 	} else {
@@ -120,5 +117,5 @@ if ( $doNotify ) {
 
 // Ausgabe der Dateiinformationen auf der Kommandozeile
 print("\n\nDuration: ".$minutes." Min. ".$seconds." Sec.\n\n");
-Logger::log($email, "CLIModelNLPTagger finished: input=".$input." output=".$output, "ACCESS");
+Logger::log($email, "CLIModelLabelExtraction finished: input=".$input." output=".$output, "ACCESS");
 ?>

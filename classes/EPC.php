@@ -1136,7 +1136,7 @@ class EPC {
 	/**
 	 * getHash
 	 * 
-	 * calculates a hash code (md5) based on function and event label and the number of edges and connectors
+	 * calculates a hash code (md5) based on function and event label and the number of edges and connectors and the EPC name
 	 * 
 	 * @return string
 	 */
@@ -1151,7 +1151,7 @@ class EPC {
 		$xorPart = count($this->xor);
 		$andPart = count($this->and);
 		$orPart = count($this->or);
-		return md5($functionPart.$eventPart.$edgePart.$xorPart.$andPart.$orPart);
+		return md5($this->name.$functionPart.$eventPart.$edgePart.$xorPart.$andPart.$orPart);
 	}
 	
 	public function getIDsForLabel($label) {

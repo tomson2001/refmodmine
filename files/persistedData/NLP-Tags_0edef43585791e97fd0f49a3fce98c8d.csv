@@ -1,0 +1,15 @@
+0edef43585791e97fd0f49a3fce98c8d;Admission Cologne
+function;Check Documents;Check@@@VB|||Documents@@@NNS;{VB}{NNS}
+function;Send letter of rejection;Send@@@VB|||letter@@@NN|||of@@@IN|||rejection@@@NN;{VB}{NN}{IN}{NN}
+function;Keep in the Applicant pool;Keep@@@VB|||in@@@IN|||the@@@DT|||Applicant@@@NN|||pool@@@NN;{VB}{IN}{DT}{NN}{NN}
+function;Take Aptitude test;Take@@@VB|||Aptitude@@@NNP|||test@@@NN;{VB}{NNP}{NN}
+function;Apply Online;Apply@@@RB|||Online@@@NN;{RB}{NN}
+function;Acceptance;Acceptance@@@NNP;{NNP}
+function;Documents received;Documents@@@NNS|||received@@@VBD;{NNS}{VBD}
+function;Rank Students according to GPA and the test results;Rank@@@NNP|||Students@@@NNS|||according@@@VBG|||to@@@TO|||GPA@@@NN|||and@@@CC|||the@@@DT|||test@@@NN|||results@@@VBZ;{NNP}{NNS}{VBG}{TO}{NN}{CC}{DT}{NN}{VBZ}
+function;Invite to an aptitude test;Invite@@@VB|||to@@@TO|||an@@@DT|||aptitude@@@NN|||test@@@NN;{VB}{TO}{DT}{NN}{NN}
+function;Send Documents by Post;Send@@@VB|||Documents@@@NNS|||by@@@IN|||Post@@@NN;{VB}{NNS}{IN}{NN}
+function;Pay for Aptitude test;Pay@@@VB|||for@@@IN|||Aptitude@@@NNP|||test@@@NN;{VB}{IN}{NNP}{NN}
+function;Evaluate;Evaluate@@@VB;{VB}
+function;Send Online Protocol;Send@@@VB|||Online Protocol@@@NNP;{VB}{NNP}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}

@@ -1,0 +1,33 @@
+c13257b13050b41e670999fc61aafc98;Admission Potsdam
+function;receive rejection;receive@@@VB|||rejection@@@NN;{VB}{NN}
+function;rank case;rank@@@NN|||case@@@NN;{NN}{NN}
+function;Add Certificate of Bachelor Degree;Add@@@VB|||Certificate@@@NNP|||of@@@IN|||Bachelor Degree@@@NNP;{VB}{NNP}{IN}{NNP}
+function;Case of Hardship?;Case@@@NN|||of@@@IN|||Hardship@@@NN|||?@@@.;{NN}{IN}{NN}{.}
+function;Fill out Application Form;Fill@@@VB|||out@@@RP|||Application@@@NN|||Form@@@NN;{VB}{RP}{NN}{NN}
+function;complete and in time?;complete@@@JJ|||and@@@CC|||in@@@IN|||time@@@NN|||?@@@.;{JJ}{CC}{IN}{NN}{.}
+function;Set additional requirements;Set@@@VB|||additional@@@JJ|||requirements@@@NNS;{VB}{JJ}{NNS}
+function;Check Application in Time;Check@@@VB|||Application@@@NN|||in@@@IN|||Time@@@NNP;{VB}{NN}{IN}{NNP}
+function;Accept Application;Accept@@@VB|||Application@@@NN;{VB}{NN}
+function;Add Certificate of german language;Add@@@VB|||Certificate@@@NNP|||of@@@IN|||german@@@JJ|||language@@@NN;{VB}{NNP}{IN}{JJ}{NN}
+function;immatriculate;immatriculate@@@JJ;{JJ}
+function;Hand Application over to Examining Board;Hand@@@VB|||Application@@@NN|||over@@@IN|||to@@@TO|||Examining Board@@@NNP;{VB}{NN}{IN}{TO}{NNP}
+function;Sum Scores;Sum@@@NN|||Scores@@@NNS;{NN}{NNS}
+function;german?;german@@@NN|||?@@@.;{NN}{.}
+function;Receive Application;Receive@@@VB|||Application@@@NN;{VB}{NN}
+function;Attach additional Requirements;Attach@@@VB|||additional@@@JJ|||Requirements@@@NNS;{VB}{JJ}{NNS}
+function;Check if Bachelor Equivalent to Uni Potsdam;Check@@@VB|||if@@@IN|||Bachelor Equivalent@@@NNP|||to@@@TO|||Uni Potsdam@@@NNP;{VB}{IN}{NNP}{TO}{NNP}
+function;Send Application;Send@@@VB|||Application@@@NN;{VB}{NN}
+function;Check Application Complete;Check@@@VB|||Application@@@NN|||Complete@@@JJ;{VB}{NN}{JJ}
+function;receive acceptance;receive@@@VB|||acceptance@@@NN;{VB}{NN}
+function;Send rejection;Send@@@VB|||rejection@@@NN;{VB}{NN}
+function;complete application;complete@@@JJ|||application@@@NN;{JJ}{NN}
+function;Create and add letter of Motivation;Create@@@VB|||and@@@CC|||add@@@VB|||letter@@@NN|||of@@@IN|||Motivation@@@NN;{VB}{CC}{VB}{NN}{IN}{NN}
+function;Add Certificates of Qualification;Add@@@VB|||Certificates@@@NNS|||of@@@IN|||Qualification@@@NN;{VB}{NNS}{IN}{NN}
+function;Add Case-of-Hardship Certificate;Add@@@VB|||Case-of-Hardship Certificate@@@NNP;{VB}{NNP}
+function;Score Qualifications by 7(1)(b) * 34;Score@@@NN|||Qualifications@@@NNS|||by@@@IN|||7@@@CD|||-LRB-@@@-LRB-|||1@@@CD|||-RRB-@@@-RRB-|||-LRB-@@@-LRB-|||b@@@NN|||-RRB-@@@-RRB-|||*@@@SYM|||34@@@CD;{NN}{NNS}{IN}{CD}{-LRB-}{CD}{-RRB-}{-LRB-}{NN}{-RRB-}{SYM}{CD}
+function;Send Acceptance;Send@@@VB|||Acceptance@@@NNP;{VB}{NNP}
+function;Create and Add CV;Create@@@VB|||and@@@CC|||Add@@@VB|||CV@@@NN;{VB}{CC}{VB}{NN}
+function;Score Qualifiacations by 7(1)(c) * 15;Score@@@NN|||Qualifiacations@@@NNS|||by@@@IN|||7@@@CD|||-LRB-@@@-LRB-|||1@@@CD|||-RRB-@@@-RRB-|||-LRB-@@@-LRB-|||c@@@NN|||-RRB-@@@-RRB-|||*@@@SYM|||15@@@CD;{NN}{NNS}{IN}{CD}{-LRB-}{CD}{-RRB-}{-LRB-}{NN}{-RRB-}{SYM}{CD}
+function;Score Bachelors Grade by 7(1)(a) * 51;Score@@@NN|||Bachelors@@@NNS|||Grade@@@NNP|||by@@@IN|||7@@@CD|||-LRB-@@@-LRB-|||1@@@CD|||-RRB-@@@-RRB-|||-LRB-@@@-LRB-|||a@@@DT|||-RRB-@@@-RRB-|||*@@@SYM|||51@@@CD;{NN}{NNS}{NNP}{IN}{CD}{-LRB-}{CD}{-RRB-}{-LRB-}{DT}{-RRB-}{SYM}{CD}
+function;Add Recommendations;Add@@@VB|||Recommendations@@@NNS;{VB}{NNS}
+event;End Event;End@@@NN|||Event@@@NN;{NN}{NN}
