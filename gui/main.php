@@ -1,5 +1,8 @@
 <?php
+include_once 'google_analytics_tracking.php';
 $site = isset($_REQUEST['site']) ? $_REQUEST['site'] : null;
+$stats = new SiteStats();
+$stats->trackSiteVisit();
 
 include 'nav.php';
 ?>

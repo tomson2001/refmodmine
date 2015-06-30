@@ -1,8 +1,9 @@
 <?php 
-// load workspace
-$workspace = new WorkspaceEPML();
-
 $modelID = isset($_REQUEST['modelID']) ? $_REQUEST['modelID'] : null;
+
+// load workspace
+$workspace = is_null($modelID) ? new WorkspaceEPML(false) : new WorkspaceEPML(true);
+
 $epc = $workspace->getEPC($modelID);
 
 $visualizer = is_null($modelID) ? null : new EPCVisualizer($epc);
@@ -141,8 +142,8 @@ $reloadLink = "index.php?site=workspace";
 			</ul>
 	        <div class="list-group">
 	        <?php 
-	        foreach ( $workspace->epcs as $currEpcID => $currEpc ) { ?>
-	        	<a href="<?php echo $reloadLink."&modelID=".$currEpcID; ?>" class="list-group-item"><small><?php echo $currEpc->name; ?></small></a>
+	        foreach ( $workspace->modelList as $epcID => $epcName ) { ?>
+	        	<a href="<?php echo $reloadLink."&modelID=".$epcID; ?>" class="list-group-item"><small><?php echo $epcName; ?></small></a>
 	        <?php } ?>
 			</div>
 			<?php 

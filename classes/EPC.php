@@ -34,8 +34,8 @@ class EPC {
 	 */
 	public function __construct($xml, $modelID, $modelName, $format="epml") {
 		$this->xml = $xml;
-		$this->id = utf8_decode($this->convertIllegalChars($modelID));
-		$this->name = utf8_decode($this->convertIllegalChars($modelName));
+		$this->id = $this->convertIllegalChars($modelID);
+		$this->name = $this->convertIllegalChars($modelName);
 		if ( $format == "epml" ) {
 			$this->loadEPML($xml, $modelID);
 		}
@@ -68,36 +68,36 @@ class EPC {
 		// Funktionen laden
 		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/function") as $function) {
 			$index = $this->getNextID();
-			$this->functions[$index] = rtrim(ltrim(utf8_decode($this->convertIllegalChars($function->name))));
-			$this->idConversion[utf8_decode((string) $function["id"])] = $index;
+			$this->functions[$index] = rtrim(ltrim($this->convertIllegalChars($function->name)));
+			$this->idConversion[(string) $function["id"]] = $index;
 		}
 
 		// Ereignisse laden
 		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/event") as $event) {
 			$index = $this->getNextID();
-			$this->events[$index] = rtrim(ltrim(utf8_decode($this->convertIllegalChars($event->name))));
-			$this->idConversion[utf8_decode((string) $event["id"])] = $index;
+			$this->events[$index] = rtrim(ltrim($this->convertIllegalChars($event->name)));
+			$this->idConversion[(string) $event["id"]] = $index;
 		}
 
 		// XOR laden
 		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/xor") as $xor) {
 			$index = $this->getNextID();
 			$this->xor[$index] = "xor";
-			$this->idConversion[utf8_decode((string) $xor["id"])] = $index;
+			$this->idConversion[(string) $xor["id"]] = $index;
 		}
 
 		// OR laden
 		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/or") as $or) {
 			$index = $this->getNextID();
 			$this->or[$index] = "or";
-			$this->idConversion[utf8_decode((string) $or["id"])] = $index;
+			$this->idConversion[(string) $or["id"]] = $index;
 		}
 
 		// AND laden
 		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/and") as $and) {
 			$index = $this->getNextID();
 			$this->and[$index] = "and";
-			$this->idConversion[utf8_decode((string) $and["id"])] = $index;
+			$this->idConversion[(string) $and["id"]] = $index;
 		}
 
 		// Kanten laden
@@ -770,48 +770,8 @@ class EPC {
 		$content =  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 		$content .= "<epml:epml xmlns:epml=\"http://www.epml.de\"\n";
 		$content .= "  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"epml_1_draft.xsd\">\n";
-		$content .= "  <epc EpcId=\"".$this->id."\" name=\"".$this->convertIllegalChars($this->name)."\">\n";
-
-		$maxID = 0;
-
-		foreach ( $this->functions as $id => $label ) {
-			$content .= "    <function id=\"".$id."\">\n";
-			$content .= "      <name>".$this->convertIllegalChars($label);
-			if ( $print_ids ) $content .= " (".$id.")";
-			$content .= "</name>\n";
-			$content .= "    </function>\n";
-			if ( $id > $maxID ) $maxID = $id+1;
-		}
-
-		foreach ( $this->events as $id => $label ) {
-			$content .= "    <event id=\"".$id."\">\n";
-			$content .= "      <name>".$this->convertIllegalChars($label);
-			if ( $print_ids ) $content .= " (".$id.")";
-			$content .= "</name>\n";
-			$content .= "    </event>\n";
-			if ( $id > $maxID ) $maxID = $id+1;
-		}
-
-		foreach ( $this->getAllConnectors() as $id => $label ) {
-			$content .= "    <".$label." id=\"".$id."\">\n";
-			$content .= "      <name/>\n";
-			$content .= "    </".$label.">\n";
-			if ( $id > $maxID ) $maxID = $id+1;
-		}
-
-		foreach ( $this->edges as $index => $edge ) {
-			$keys = array_keys($edge);
-			$source = $keys[0];
-			$target = $edge[$source];
-				
-			$content .= "    <arc id=\"".$maxID."\">\n";
-			$content .= "      <flow source=\"".$source."\" target=\"".$target."\" />\n";
-			$content .= "    </arc>\n";
-				
-			$maxID++;
-		}
-
-		$content .= "  </epc>\n";
+		$epcCodePart = $this->getEPMLCodePart($print_ids);
+		$content .= $epcCodePart;
 		$content .= "</epml:epml>";
 
 		$fileGenerator = new FileGenerator(trim($this->name).".epml", $content);
@@ -819,16 +779,62 @@ class EPC {
 		$file = $fileGenerator->execute();
 		return $file;
 	}
+	
+	public function getEPMLCodePart($print_ids = false) {
+		$content = "  <epc epcId=\"".$this->id."\" name=\"".$this->convertIllegalChars($this->name)."\">\n";
+		
+		$maxID = 0;
+		
+		foreach ( $this->functions as $id => $label ) {
+			$content .= "    <function id=\"".$id."\">\n";
+			$content .= "      <name>".htmlspecialchars($this->convertIllegalChars($label));
+			if ( $print_ids ) $content .= " (".$id.")";
+			$content .= "</name>\n";
+			$content .= "    </function>\n";
+			if ( $id > $maxID ) $maxID = $id+1;
+		}
+		
+		foreach ( $this->events as $id => $label ) {
+			$content .= "    <event id=\"".$id."\">\n";
+			$content .= "      <name>".htmlspecialchars($this->convertIllegalChars($label));
+			if ( $print_ids ) $content .= " (".$id.")";
+			$content .= "</name>\n";
+			$content .= "    </event>\n";
+			if ( $id > $maxID ) $maxID = $id+1;
+		}
+		
+		foreach ( $this->getAllConnectors() as $id => $label ) {
+			$content .= "    <".$label." id=\"".$id."\">\n";
+			$content .= "      <name/>\n";
+			$content .= "    </".$label.">\n";
+			if ( $id > $maxID ) $maxID = $id+1;
+		}
+		
+		foreach ( $this->edges as $index => $edge ) {
+			$keys = array_keys($edge);
+			$source = $keys[0];
+			$target = $edge[$source];
+		
+			$content .= "    <arc id=\"".$maxID."\">\n";
+			$content .= "      <flow source=\"".$source."\" target=\"".$target."\" />\n";
+			$content .= "    </arc>\n";
+		
+			$maxID++;
+		}
+		
+		$content .= "  </epc>\n";
+		return $content;
+	}
 
-	public function convertIllegalChars($string) {
-		$string = str_replace("Ä", "Ae", $string);
-		$string = str_replace("ä", "ae", $string);
-		$string = str_replace("Ö", "Oe", $string);
-		$string = str_replace("ö", "oe", $string);
-		$string = str_replace("Ü", "Ue", $string);
-		$string = str_replace("ü", "ue", $string);
-		$string = str_replace("ß", "ss", $string);
-		$string = str_replace("\n", " ", $string);
+	public static function convertIllegalChars($string) {
+// 		$string = str_replace("Ã„", "Ae", $string);
+// 		$string = str_replace("Ã¤", "ae", $string);
+// 		$string = str_replace("Ã–", "Oe", $string);
+// 		$string = str_replace("Ã¶", "oe", $string);
+// 		$string = str_replace("Ãœ", "Ue", $string);
+// 		$string = str_replace("Ã¼", "ue", $string);
+// 		$string = str_replace("ÃŸ", "ss", $string);
+// 		$string = str_replace("\n", " ", $string);
 		return $string;
 	}
 

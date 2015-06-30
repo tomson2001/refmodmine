@@ -45,7 +45,11 @@ checkinstall \
 autoconf \
 subversion \
 php-pear \
-wordnet
+wordnet \
+curl \
+libcurl4-openssl-dev \
+php5-curl \
+php5-cli
 
 2. Prepare, Compile, Install PHP 5.5.5 with pthreads
 
@@ -54,7 +58,7 @@ wget http://us3.php.net/get/php-5.5.5.tar.bz2/from/de3.php.net/mirror -O php.tar
 tar xvjf php.tar.bz2
 
 cd php-5.5.5
-./configure --enable-debug --enable-maintainer-zts --enable-pthreads
+./configure --enable-debug --enable-maintainer-zts --enable-pthreads --with-curl
 make
 checkinstall
 
@@ -74,8 +78,18 @@ apt-get install libapache2-mod-php5
 # to your preference (depending on the task, that is very important!
 /etc/init.d/apache2 restart
 
+4. Step: Install mysql-server
+apt-get install mysql-server
+apt-get install php5-mysql
+apt-get install curl libcurl4-openssl-dev php5-curl php5-cli
+/etc/init.d/apache2 restart
 
-4. Step: Copy the files to the webdir
+4.1. Install PHPMyAdmin
+sudo apt-get install phpmyadmin
+# If you're using Ubuntu 7.10 (Gutsy) or later select Apache2 from the "Configuring phpmyadmin" dialog box. 
+# PHPMyAdmin is now available at: http://yourdomain/phpmyadmin
+
+5. Step: Copy the files to the webdir
 svn co https://github.com/tomson2001/refmodmine/trunk /var/www
 chown -R www-data:www-data /var/www
 chmod -R 777 /var/www/repository

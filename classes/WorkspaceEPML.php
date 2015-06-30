@@ -6,6 +6,8 @@ class WorkspaceEPML {
 	public $file;		// complete filepath e.g. workspace/workspace.epml
 	public $filename = "workspace.epml";
 	
+	public $modelList = array();
+	
 	public $sources = array();
 	public $sourceAssignments = array();
 	public $numSources = 0;
@@ -19,8 +21,8 @@ class WorkspaceEPML {
 	/**
 	 * Constructor
 	 */
-	public function __construct() {	
-		$this->init();
+	public function __construct($doLoadEPCs = true) {	
+		$this->init($doLoadEPCs);
 	}
 	
 	public function clear() {
@@ -30,7 +32,7 @@ class WorkspaceEPML {
 		//$this->init();
 	}
 		
-	private function init() {
+	private function init($doLoadEPCs = true) {
 		$this->sessionID = session_id();
 		$this->filepath = Config::WORKSPACE_PATH."/".$this->sessionID;
 		$this->file = $this->filepath."/".$this->filename;
@@ -61,8 +63,11 @@ class WorkspaceEPML {
 			$this->numSources = count($this->sources);
 			$this->numModels = count($this->sourceAssignments);
 			$_SESSION['numWorkspaceModels'] = $this->numModels;
+			foreach ($xml->xpath("//epc") as $xml_epc) {
+				$this->modelList[(string) $xml_epc["epcId"]] = htmlspecialchars($xml_epc["name"]);
+			}
 			
-			$this->loadEPCs($xml);
+			if ( $doLoadEPCs ) $this->loadEPCs($xml);
 		} else {
 			// create workspace epml file
 			$this->updateWorkspaceEPMLFile();
@@ -71,7 +76,7 @@ class WorkspaceEPML {
 	
 	private function loadEPCs($xml) {
 		foreach ($xml->xpath("//epc") as $xml_epc) {
-			$epc = new EPC($xml, $xml_epc["epcId"], $xml_epc["name"]);
+			$epc = new EPC($xml, $xml_epc["epcId"], htmlspecialchars($xml_epc["name"]));
 			$this->epcs[(string) $xml_epc["epcId"]] = $epc;
 		}
 		ksort($this->epcs);
@@ -271,7 +276,7 @@ class WorkspaceEPML {
 			$assignedEpcIDs = $this->getModelsFromSource($source);
 			foreach ( $assignedEpcIDs as $epcID ) {
 				
-				$content .= "    <epc epcId=\"".$epcID."\" name=\"".$this->epcs[$epcID]->getEPCName()."\">\n";
+				$content .= "    <epc epcId=\"".$epcID."\" name=\"".htmlspecialchars(EPC::convertIllegalChars($this->epcs[$epcID]->getEPCName()))."\">\n";
 				
 				foreach ( $this->epcs[$epcID]->functions as $id => $label ) {
 					$content .= "      <function id=\"".$id."\">\n";

@@ -25,8 +25,9 @@ class WorkspaceActionConfig {
 			"OpenWith"		=> "workspaceCSVViewer",
 			"isUploadable"	=> true,
 			"Descriptions"	=> array(
-				"Default"		=> "Default",
-				"WI2015-Clustering" => "WI2015-Clustering"
+				"Default"			=> "Default",
+				"WI2015-Clustering" => "WI2015-Clustering",
+				"Corpus-Metrics"	=> "Corpus-Metrics"
 			)
 		),
 		
@@ -166,8 +167,8 @@ class WorkspaceActionConfig {
 			"OpenWith"		=> "workspaceCSVViewerHeadingTop",
 			"isUploadable"	=> false,
 			"Descriptions"	=> array(
-				"eng" 		=> "English",
-				"ger"		=> "German"
+				"English"	=> "English",
+				"German"	=> "German"
 			)
 		),
 			
@@ -201,6 +202,46 @@ class WorkspaceActionConfig {
 			"isUploadable"	=> true,
 			"Descriptions"	=> array(
 				"rmm-nscm"	=> "N-Ary Semantic Cluster Matching"
+			)
+		),
+			
+		"models"	=> array(
+			"Name"			=> "EPCs",
+			"FileExtension"	=> "epml",
+			"Icon"			=> "glyphicon glyphicon-picture",
+			"OpenWith"		=> null,
+			"isUploadable"	=> false,
+			"Descriptions"	=> array(
+				"German-to-English" 	=> "German-to-English",
+				"German-to-French" 		=> "German-to-French",
+				"German-to-Italian" 	=> "German-to-Italian",
+				"English-to-Dutch"		=> "English-to-Dutch", 
+				"English-to-German" 	=> "English-to-German",
+				"French-to-English"		=> "French-to-English",
+				"French-to-German"		=> "French-to-German",
+				"Italian-to-German"		=> "Italian-to-German",
+				"Italian-to-English"	=> "Italian-to-English",
+				"Dutch-to-English"		=> "Dutch-to-English"
+			)
+		),
+		
+		"translationreport"	=> array(
+			"Name"			=> "Translation Report",
+			"FileExtension"	=> "csv",
+			"Icon"			=> "glyphicon glyphicon-text-color",
+			"OpenWith"		=> "workspaceCSVViewerHeadingTop",
+			"isUploadable"	=> false,
+			"Descriptions"	=> array(
+				"German-to-English" 	=> "German-to-English",
+				"German-to-French" 		=> "German-to-French",
+				"German-to-Italian" 	=> "German-to-Italian",
+				"English-to-Dutch"		=> "English-to-Dutch", 
+				"English-to-German" 	=> "English-to-German",
+				"French-to-English"		=> "French-to-English",
+				"French-to-German"		=> "French-to-German",
+				"Italian-to-German"		=> "Italian-to-German",
+				"Italian-to-English"	=> "Italian-to-English",
+				"Dutch-to-English"		=> "Dutch-to-English"
 			)
 		)
 			
@@ -240,7 +281,8 @@ class WorkspaceActionConfig {
 				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.metrics.%METRICS%", 
 				"METRICS"			=> array(
 					"Default" => "EVENTS FUNCTIONS AND_SPLITS AND_JOINS XOR_SPLITS XOR_JOINS OR_SPLITS OR_JOINS CONNECTORS NODES ARCS DIAMETER DENSITY_1 COEFFICIENT_OF_CONNECTIVITY",
-					"WI2015-Clustering" => "NODES ARCS DENSITY_1 COEFFICIENT_OF_CONNECTIVITY"
+					"WI2015-Clustering" => "start_events ARCS DENSITY_1 COEFFICIENT_OF_CONNECTIVITY",
+					"Corpus-Metrics" => "start_events internal_events end_events events functions and_splits and_joins xor_splits xor_joins or_splits or_joins connectors nodes arcs density_1 density_2 coefficient_of_connectivity coefficient_of_network_complexity cyclomatic_number avg_connector_degree max_connector_degree separability sequentiality depth mismatch heterogeneity token_splits control_flow_complexity join_complexity weighted_coupling"                
 				)
 			)
 		),
@@ -576,7 +618,8 @@ class WorkspaceActionConfig {
 			),
 			"Parameters"	=> array(
 				"input"			=> "CONST_WORKSPACE_EPML",
-				"output"		=> "CONST_WORKSPACE_EPML.nlptags.eng",
+				"output"		=> "CONST_WORKSPACE_EPML.nlptags.%language%",
+				"language"		=> array("English" => "en", "German" => "de"),
 				"notification"	=> "CONST_SESSION_E_MAIL"
 			)
 		),
@@ -607,6 +650,34 @@ class WorkspaceActionConfig {
 			"Parameters"	=> array(
 				"input"			=> "CONST_WORKSPACE_EPML",
 				"output"		=> "CONST_WORKSPACE_EPML.matching.rmm-nscm",
+				"notification"	=> "CONST_SESSION_E_MAIL"
+			)
+		),
+			
+		"MODEL_TRANSLATION" => array(
+			"Name"			=> "Model Translation",
+			"CodeBase"		=> "PHP",
+			"ScriptBase"	=> "CLIModelTranslator.php",
+			"EmbedInPHP"	=> false,
+			"Literature" 	=> array(
+				"todo"
+			),
+			"Parameters"	=> array(
+				"input"			=> "CONST_WORKSPACE_EPML",
+				"output"		=> "CONST_WORKSPACE_EPML.models.%language_combination%",
+				"reportCSV"		=> "CONST_WORKSPACE_EPML.translationreport.%language_combination%",
+				"language_combination" => array(
+					"German-to-English" 	=> "de-en",
+					"German-to-French" 		=> "de-fr",
+					"German-to-Italian" 	=> "de-fr",
+					"English-to-Dutch"		=> "en-nl", 
+					"English-to-German" 	=> "en-de",
+					"French-to-English"		=> "fr-en",
+					"French-to-German"		=> "fr-de",
+					"Italian-to-German"		=> "it-de",
+					"Italian-to-English"	=> "it-en",
+					"Dutch-to-English"		=> "nl-en"
+				),
 				"notification"	=> "CONST_SESSION_E_MAIL"
 			)
 		)
@@ -648,7 +719,8 @@ class WorkspaceActionConfig {
 			
 		"Natural Language Processing" => array(
 			"NLP_TAGGING",
-			"LABEL_EXTRACTION"
+			"LABEL_EXTRACTION",
+			"MODEL_TRANSLATION"
 			//"EXTRACT_VOCABULARY" // is ready, but an buggy, BUG reported 327
 		)
 	);

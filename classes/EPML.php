@@ -42,7 +42,7 @@ class EPML {
 	
 	private function loadEPCs($xml) {
 		foreach ($xml->xpath("//epc") as $xml_epc) {
-			$epc = new EPC($xml, $xml_epc["epcId"], $xml_epc["name"]);
+			$epc = new EPC($xml, $xml_epc["epcId"], htmlspecialchars($xml_epc["name"]));
 			$this->epcs[$epc->modelPath] = $epc;
 			if ( !array_key_exists($epc->modelPathOnly, $this->directories) ) $this->directories[$epc->modelPathOnly] = array();
 			array_push($this->directories[$epc->modelPathOnly], $epc->modelPath);

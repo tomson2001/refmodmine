@@ -86,7 +86,7 @@ class WorkspaceActionHandler {
 		$actionData = $this->config->getActionData($action);
 		$params = $actionData["Parameters"];
 		
-		$workspace = new WorkspaceEPML();
+		$workspace = new WorkspaceEPML(false);
 		$workspaceData = $workspace->getAvailableData();
 		
 		$code =  "<div class=\"modal fade\" id=\"modal_set_params_".$action."\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modal_label_set_params".$action."\" aria-hidden=\"true\">\n"; 
@@ -223,6 +223,9 @@ class WorkspaceActionHandler {
 				$command .= "> /dev/null &";
 				exec($command);
 			}
+			
+			$actionStats = new ActionStats();
+			$actionStats->trackAction($action, $this->_CONST_SESSION_ID);
 			
 			$_POST["msg"] = "<strong>\"".$actionData["Name"]."\" started. </strong> Please wait and refresh the site until the result is available. That may take a while.";
 			if ( $this->_CONST_SESSION_E_MAIL !== "no" ) $_POST["msg"] .= " However, you will also get an e-mail when the calculation has been finished.";

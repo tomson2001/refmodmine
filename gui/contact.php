@@ -1,5 +1,24 @@
 <div class="row">
 
+	<div class="col-md-6">
+
+      <div class="caption">
+        <h3>M. Sc. Tom Thaler</h3>
+        <p>
+        Institut f&uuml;r Wirtschaftsinformatik (IWi) <br />
+		at the German Research Center for Artificial Intelligence (DFKI)<br />
+		Campus D3 2<br />
+		D-66123 Saarbr&uuml;cken<br />
+		Germany</p>
+        
+        <p>Phone number: 06831 / 85 775 - 5329<br /> 
+        E-Mail: tom.thaler@dfki.de<br />
+        Web: <a href="http://www.tom-thaler.de" target="_blank">www.tom-thaler.de</a></p>
+        <p><a href="mailto: tom.thaler@dfki.de" class="btn btn-primary" role="button">send e-mail</a></p>
+      </div>
+
+  </div>
+
   <div class="col-md-6">
 
       <div class="caption">
@@ -12,26 +31,9 @@
 		Germany</p>
         
         <p>Phone number: 06831 / 85 775 - 5142<br /> 
-        E-Mail: tom.thaler@iwi.dfki.de</p>
+        E-Mail: peter.fettke@iwi.dfki.de<br />
+        Web: <a href="http://bpm.dfki.de" target="_blank">bpm.dfki.de</a></p>
         <p><a href="mailto: peter.fettke@iwi.dfki.de" class="btn btn-primary" role="button">send e-mail</a></p>
-      </div>
-
-  </div>
-  
-  <div class="col-md-6">
-
-      <div class="caption">
-        <h3>M. Sc. Tom Thaler</h3>
-        <p>
-        Institut f&uuml;r Wirtschaftsinformatik (IWi) <br />
-		at the German Research Center for Artificial Intelligence (DFKI)<br />
-		Campus D3 2<br />
-		D-66123 Saarbr&uuml;cken<br />
-		Germany</p>
-        
-        <p>Phone number: 06831 / 85 775 - 5329<br /> 
-        E-Mail: tom.thaler@dfki.de</p>
-        <p><a href="mailto: tom.thaler@dfki.de" class="btn btn-primary" role="button">send e-mail</a></p>
       </div>
 
   </div>

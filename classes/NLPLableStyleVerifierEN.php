@@ -5,7 +5,7 @@
  * @author thaler
  *
  */
-class NLPLableStyleVerifier {
+class NLPLableStyleVerifierEN {
 	
 	// Pattern of HighLevelTags => Label Style Key (see NLPHighLevelTransformator)
 	private $lableStyles = array(
@@ -31,7 +31,7 @@ class NLPLableStyleVerifier {
 		""				=> "G_PQ",				// Gateway Labeling Style: Participle-Question PQ		e.g. Invoice created?
 		""				=> "G_IFQ",				// Gateway Labeling Style: Infinitive-Question IFQ		e.g. Approve contract?
 		""				=> "G_AQ",				// Gateway Labeling Style: Adjective-Question AQ		e.g. Parts available?
-		""				=> "G_EQ",				// Gateway Labeling Style: Equation-Question EQ			e.g. Amount is greater than €200?
+		""				=> "G_EQ",				// Gateway Labeling Style: Equation-Question EQ			e.g. Amount is greater than ï¿½200?
 		""	 			=> "G_Irregular"		// Gateway Labeling Style: Irregular					e.g. Result?
 	);
 	

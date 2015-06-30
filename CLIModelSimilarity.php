@@ -108,7 +108,7 @@ print("Calculate similarity values ...\n");
 // Prepare Similarity-Matrix CSV
 $similarity_matrix_csv = "";
 foreach ($xml2->xpath("//epc") as $xml_epc2) {
-	$nameOfEPC2 = utf8_decode((string) $xml_epc2["name"]);
+	$nameOfEPC2 = (string) $xml_epc2["name"];
 	$similarity_matrix_csv .= ";".$nameOfEPC2;
 }
 $similarity_matrix_csv .= "\n";
@@ -120,7 +120,7 @@ $allMatchedFuncNodesOfModelFile1 = array();
 $allMatchedFuncNodesOfModelFile2 = array();
 
 foreach ($xml1->xpath("//epc") as $xml_epc1) {
-	$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
+	$nameOfEPC1 = (string) $xml_epc1["name"];
 	$epc1 = new EPC($xml1, $xml_epc1["epcId"], $xml_epc1["name"]);
 
 	foreach ( $epc1->functions as $funcLabel ) {
@@ -130,7 +130,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$similarity_matrix_csv .= $nameOfEPC1;
 
 	foreach ($xml2->xpath("//epc") as $xml_epc2) {
-		$nameOfEPC2 = utf8_decode((string) $xml_epc2["name"]);
+		$nameOfEPC2 = (string) $xml_epc2["name"];
 		$epc2 = new EPC($xml2, $xml_epc2["epcId"], $xml_epc2["name"]);
 
 		foreach ( $epc2->functions as $funcLabel ) {

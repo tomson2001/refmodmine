@@ -21,7 +21,7 @@ class FileGenerator {
 			$uri = $prefix ? "files/".$this->path."".$this->filePrefix."_".$this->filename : "files/".$this->path.$this->filename;
 		}
 		$handle = fopen($uri, "w");
-		fwrite($handle, $this->content);
+		fwrite($handle, "\xEF\xBB\xBF".$this->content);
 		fclose($handle);
 		return $uri;
 	}

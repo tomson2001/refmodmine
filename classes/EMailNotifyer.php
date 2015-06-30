@@ -17,6 +17,10 @@ class EMailNotifyer {
 		return self::send($to, "Label extraction finished", $readme);
 	}
 	
+	public static function sendCLIModelTranslationNotification($to, $readme) {
+		return self::send($to, "Model translation finished", $readme);
+	}
+	
 	public static function send($to, $subject, $message, $from = null) {
 		if ( is_null($from) ) $from = "RefMod-Miner as a Service <".Config::NO_REPLY_MAIL.">";
 		$header = 'From: '.$from.'' . "\r\n" .

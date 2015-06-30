@@ -41,7 +41,7 @@ $progressBar = new CLIProgressbar($numFunctionsAndEvents, 0.1);
 $styleUnknown = "";
 $styleKnown = "";
 foreach ($xml->xpath("//epc") as $xml_epc) {
-	$nameOfEPC = utf8_decode((string) $xml_epc["name"]);
+	$nameOfEPC = (string) $xml_epc["name"];
 	$epc = new EPCExt($xml, $xml_epc["name"]);
 	foreach ( $epc->functions as $label ) {
 		if ( preg_match("/^t[0-9]*$/", $label) ) { $nodeCount++; continue; }

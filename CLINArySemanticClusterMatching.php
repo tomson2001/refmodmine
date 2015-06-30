@@ -80,7 +80,7 @@ $readme .= " - Number of model pairs: ".$countCombinations;
 $generatedFiles = array();
 $naryMapping = new NAryWordstemMappingWithAntonyms();
 foreach ($xml1->xpath("//epc") as $xml_epc1) {
-	$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
+	$nameOfEPC1 = (string) $xml_epc1["name"];
 	$epc = new EPC($xml1, $xml_epc1["epcId"], $xml_epc1["name"]);
 	$naryMapping->addEPC($epc);
 }

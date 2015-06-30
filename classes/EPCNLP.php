@@ -28,9 +28,9 @@ class EPCNLP extends EPC {
 	/**
 	 * 
 	 */
-	public function loadLabelTags() {
+	public function loadLabelTags($pos_tagger_model = Config::STANFORD_POS_TAGGER_MODEL) {
 		if ( !empty($this->functionTags) || !empty($this->eventTags) ) return true;
-		if ( !$this->loadLabelTagsFromPersistedFile() ) $this->loadLabelTagsWithStanfordTagger();
+		if ( !$this->loadLabelTagsFromPersistedFile() ) $this->loadLabelTagsWithStanfordTagger($pos_tagger_model);
 		return $this->decodeTaggedLabels();
 	}
 	
@@ -66,9 +66,9 @@ class EPCNLP extends EPC {
 	/**
 	 * Tag the labels of all functions and events with the Stanford POS Tagger
 	 */
-	private function loadLabelTagsWithStanfordTagger() {
+	private function loadLabelTagsWithStanfordTagger($pos_tagger_model = Config::STANFORD_POS_TAGGER_MODEL) {
 		$tagger = new StanfordPOSTagger(Config::STANDFORD_POS_TAGGER_PATH);
-		$tagger->set_model(Config::STANFORD_POS_TAGGER_MODEL);
+		$tagger->set_model($pos_tagger_model);
 		foreach ( $this->functions as $id => $label ) {
 			if ( preg_match("/^t[0-9]*$/", $label) ) continue;
 			$taggedLabel = $tagger->array_tag($label);
@@ -148,8 +148,28 @@ class EPCNLP extends EPC {
 	 * 
 	 * @return boolean
 	 */
-	public function generateHighLevelLabelTags() {
-		$NLPHighLevelTagTransformator = new NLPHighLevelTagTransformator();
+	public function generateHighLevelLabelTags($lang="en") {
+		switch ($lang) {
+			case "de": return $this->generateHighLevelLabelTagsDE();
+			default: return $this->generateHighLevelLabelTagsEN();
+		}
+	}
+	
+	private function generateHighLevelLabelTagsEN() {
+		$NLPHighLevelTagTransformator = new NLPHighLevelTagTransformatorEN();
+		foreach ( $this->functionTags as $id => $tag ) {
+			$highLevelTag = $NLPHighLevelTagTransformator->transformTagSetString($tag);
+			$this->functionHighLevelTags[$id] = $highLevelTag;
+		}
+		foreach ( $this->eventTags as $id => $tag ) {
+			$highLevelTag = $NLPHighLevelTagTransformator->transformTagSetString($tag);
+			$this->eventHighLevelTags[$id] = $highLevelTag;
+		}
+		return true;
+	}
+	
+	private function generateHighLevelLabelTagsDE() {
+		$NLPHighLevelTagTransformator = new NLPHighLevelTagTransformatorDE();
 		foreach ( $this->functionTags as $id => $tag ) {
 			$highLevelTag = $NLPHighLevelTagTransformator->transformTagSetString($tag);
 			$this->functionHighLevelTags[$id] = $highLevelTag;
@@ -166,8 +186,28 @@ class EPCNLP extends EPC {
 	 * 
 	 * @return boolean
 	 */
-	public function detectLableStyles() {
-		$NLPLabelStyleVerifier = new NLPLableStyleVerifier();
+	public function detectLableStyles($lang="en") {
+		switch ($lang) {
+			case "de": return $this->detectLabelStylesDE();
+			default: return $this->detectLabelStylesEN();
+		}
+	}
+	
+	private function detectLabelStylesEN() {
+		$NLPLabelStyleVerifier = new NLPLableStyleVerifierEN();
+		foreach ( $this->functionHighLevelTags as $id => $highLevelTag ) {
+			$styleKey = $NLPLabelStyleVerifier->getLableStyleKey($highLevelTag);
+			$this->functionLabelStyles[$id] = $styleKey;
+		}
+		foreach ( $this->eventHighLevelTags as $id => $highLevelTag ) {
+			$styleKey = $NLPLabelStyleVerifier->getLableStyleKey($highLevelTag);
+			$this->eventLabelStyles[$id] = $styleKey;
+		}
+		return true;
+	}
+	
+	private function detectLabelStylesDE() {
+		$NLPLabelStyleVerifier = new NLPLableStyleVerifierDE();
 		foreach ( $this->functionHighLevelTags as $id => $highLevelTag ) {
 			$styleKey = $NLPLabelStyleVerifier->getLableStyleKey($highLevelTag);
 			$this->functionLabelStyles[$id] = $styleKey;
@@ -203,7 +243,11 @@ class EPCNLP extends EPC {
 	public function getEPMLNLPAnalysisCSVPart() {
 		$fileContent = "";
 		foreach ( $this->functionTags as $id => $tag ) {
-			$fileContent .= "\n".$this->name.";activity;".$this->functions[$id].";".$this->encodeTaggedLabel($this->taggedFunctions[$id]).";".$tag.";".$this->functionHighLevelTags[$id].";".$this->functionLabelStyles[$id];
+			$fileContent .= "\n".$this->name.";
+					activity;".$this->functions[$id].";
+							".$this->encodeTaggedLabel($this->taggedFunctions[$id]).";
+									".$tag.";".$this->functionHighLevelTags[$id].";
+											".$this->functionLabelStyles[$id];
 		}
 		foreach ( $this->eventTags as $id => $tag ) {
 			$fileContent .= "\n".$this->name.";event;".$this->events[$id].";".$this->encodeTaggedLabel($this->taggedEvents[$id]).";".$tag.";".$this->eventHighLevelTags[$id].";".$this->eventLabelStyles[$id];
@@ -220,6 +264,19 @@ class EPCNLP extends EPC {
 			$fileContent .= "\n".$this->name.";event;".$label;
 		}
 		return $fileContent;
+	}
+	
+	/**
+	 * Possible Language combination: de-en, en-de
+	 * 
+	 * @param unknown $languageCombination
+	 */
+	public function translate($languageCombination) {
+		$newFunctionLabels = LanguageTranslator::translate($languageCombination, $this->functions); 
+		$newEventLabels = LanguageTranslator::translate($languageCombination, $this->events);
+		if ( !is_null($newFunctionLabels) ) $this->functions = $newFunctionLabels;
+		if ( !is_null($newEventLabels) ) $this->events = $newEventLabels; 
+		return true;
 	}
 	
 }

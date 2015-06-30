@@ -2,14 +2,15 @@
 $start = time();
 require 'autoloader.php';
 
-print("\n-------------------------------------------------\n RefModMining - Label Tagger \n-------------------------------------------------\n\n");
+print("\n-------------------------------------------------\n RefModMining - Model Translator \n-------------------------------------------------\n\n");
 
 // Hilfeanzeige auf Kommandozeile
-if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) || !isset($argv[4]) ) {
+if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) ) {
 	exit("   Please provide the following parameters:\n
    input=           path to input epml
-   output=          path to output csv
-   language=        de | en
+   output=          path to output epml
+   reportCSV=       path to report CSV for the output
+   language_combination= de-en | en-de
    notification=
       no
       [E-Mail adress]
@@ -23,13 +24,15 @@ ERROR: Parameters incomplete
 // Checking Parameters
 $input   = substr($argv[1], 6,  strlen($argv[1]));
 $output   = substr($argv[2], 7,  strlen($argv[2]));
-$lang   = strtolower(substr($argv[3], 9, strlen($argv[3])));
-$email   = substr($argv[4], 13, strlen($argv[4]));
+$report   = substr($argv[3], 10,  strlen($argv[3]));
+$lang   = strtolower(substr($argv[4], 21,  strlen($argv[4])));
+$email   = substr($argv[5], 13, strlen($argv[5]));
 
 print("
 input: ".$input."
 output: ".$output."
-language: ".$lang."
+reportCSV: ".$report."
+language combination: ".$lang."
 notification: ".$email."
 
 checking input parameters ...
@@ -42,11 +45,12 @@ if ( file_exists($input) ) {
 	exit("  input ... failed (file does not exist)\n\n");
 }
 
-// Check language
-if ( $lang == "de" || $lang == "en" ) {
-	print "  language ... ok\n";
+// Check lang combination
+$possibleLangCombination = array("de-en", "en-de", "de-en", "de-fr", "de-fr", "en-nl",  "en-de", "fr-en", "fr-de", "it-de", "it-en", "nl-en");
+if ( in_array($lang, $possibleLangCombination) ) {
+	print "  language combination ... ok\n";
 } else {
-	exit("  language ... failed (language unknown)\n\n");
+	exit("  language combination ... failed (language combination not available)\n\n");
 }
 
 // Check notification
@@ -67,56 +71,57 @@ $modelsInFile = count($xml->xpath("//epc"));
 // print infos to console
 print("\nModel file: ".$input."\n");
 print("Number of models: ".$modelsInFile."\n\n");
-print("Start NLP tagging ...\n");
+print("Start translation ...\n");
 
 // initiate progress bar
 $modelCount = 0;
 $progressBar = new CLIProgressbar($modelsInFile, 0.1);
 $progressBar->run($modelCount);
 
-$generatedFiles = array();
-$csvContent = "model;node-type;label;tagged-label;tag-set;high-level-tag-set;label-style";
+$csv = "model;node-type;original_label;translation\n";
 
-// Tagging model selection
-$pos_tagger_model = "";
-switch ( $lang ) {
-	case "de": $pos_tagger_model = "german-fast.tagger"; break;
-	default: $pos_tagger_model = "english-left3words-distsim.tagger"; break;
-}
+$epml =  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+$epml .= "<epml:epml xmlns:epml=\"http://www.epml.de\"\n";
+$epml .= "  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"epml_1_draft.xsd\">\n";
 
 // Analyze all nodes in all models in the file
 foreach ($xml->xpath("//epc") as $xml_epc) {
 	$epc = new EPCNLP($xml, $xml_epc["epcId"], $xml_epc["name"]);
-	$epc->loadLabelTags($pos_tagger_model);
-	$epc->generateHighLevelLabelTags($lang);
-	$epc->detectLableStyles($lang);
-	//var_dump($epc);
-	$csvContent .= $epc->getEPMLNLPAnalysisCSVPart();
-	//$file_uri = $epc->exportNLPAnalysisCSV();
-	//array_push($generatedFiles, $file_uri);
+	$oldLabels = $epc->functions;
+	$epc->translate($lang);
+	$newLabels = $epc->functions;
+	
+	foreach ( $oldLabels as $key => $oldLabel ) {
+		$newLabel = $newLabels[$key];
+		$csv .= $epc->name.";activity;".$oldLabel.";".$newLabel."\n";
+	}
+	
+	$epml .= $epc->getEPMLCodePart();
 	$modelCount++;
 	$progressBar->run($modelCount);
 }
-print(" done");
-
-//print("\n\nGenerated files:");
-//foreach ( $generatedFiles as $uri ) print("\n   ".$uri);
 
 // ERSTELLEN DER AUSGABEDATEIEN
-$fileGenerator = new FileGenerator($output, $csvContent);
+$epml .= "</epml:epml>";
+$fileGenerator = new FileGenerator($output, $epml);
 $fileGenerator->setPathFilename($output);
-$fileGenerator->setContent($csvContent);
+$fileGenerator->setContent($epml);
+$uri_file = $fileGenerator->execute(false);
+
+$fileGenerator = new FileGenerator($report, $csv);
+$fileGenerator->setPathFilename($report);
+$fileGenerator->setContent($csv);
 $uri_csv = $fileGenerator->execute(false);
 // AUSGABEDATEIEN ERSTELLT
 
-$readme  = "NLP-Tagging for model file ".$input." successfully finished.";
-$sid = $uri_csv;
+print(" done");
+
+$readme  = "Model Translation (".$lang.") for model file ".$input." successfully finished.";
+$sid = $uri_file;
 $sid = str_replace("workspace/", "", $sid);
 $pos = strpos($sid, "/");
 $sid = $pos ? substr($sid, 0, $pos) : $sid;
 $readme .= "\n\nYour workspace: ".Config::WEB_PATH."index.php?sid=".$sid."&site=workspace";
-//$readme .= "\r\n\r\nGenerated files:";
-//$readme .= implode("\r\n   ", $generatedFiles);
 
 // Berechnungdauer
 $duration = time() - $start;
@@ -127,7 +132,7 @@ $readme .= "\r\n\r\nDuration: ".$minutes." Min. ".$seconds." Sec.";
 
 if ( $doNotify ) {
 	print("\n\nSending notification ... ");
-	$notificationResult = EMailNotifyer::sendCLIModelNLPTaggingNotification($email, $readme);
+	$notificationResult = EMailNotifyer::sendCLIModelTranslationNotification($email, $readme);
 	if ( $notificationResult ) {
 		print("ok");
 	} else {
@@ -137,5 +142,5 @@ if ( $doNotify ) {
 
 // Ausgabe der Dateiinformationen auf der Kommandozeile
 print("\n\nDuration: ".$minutes." Min. ".$seconds." Sec.\n\n");
-Logger::log($email, "CLIModelNLPTagger finished: input=".$input." output=".$output, "ACCESS");
+Logger::log($email, "CLIModelTranslator finished: input=".$input." output=".$output." lang-combination=".$lang, "ACCESS");
 ?>
