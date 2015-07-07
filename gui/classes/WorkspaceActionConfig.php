@@ -30,6 +30,28 @@ class WorkspaceActionConfig {
 				"Corpus-Metrics"	=> "Corpus-Metrics"
 			)
 		),
+			
+		"valueseries"	=> array(
+				"Name"			=> "Value Series",
+				"FileExtension"	=> "csv",
+				"Icon"			=> "glyphicon glyphicon-sort-by-attributes",
+				"OpenWith"		=> "workspaceCSVViewer",
+				"isUploadable"	=> true,
+				"Descriptions"	=> array(
+
+				)
+		),
+			
+		"matrix"	=> array(
+				"Name"			=> "Matrix",
+				"FileExtension"	=> "csv",
+				"Icon"			=> "glyphicon glyphicon-transfer",
+				"OpenWith"		=> "workspaceCSVViewer",
+				"isUploadable"	=> false,
+				"Descriptions"	=> array(
+					"correlation" => "Empirical Correlation Coefficients"
+				)
+		),
 		
 		"simmatrix"	=> array(
 			"Name"			=> "Similarity Matrix",
@@ -141,7 +163,28 @@ class WorkspaceActionConfig {
 			"Descriptions"	=> array(
 				"noevents" 		=> "without events",
 				"refmod"		=> "Reference model",
-				"li"			=> "approach of li"
+				"li"			=> "approach of li",
+				"fromPNML"		=> "transformed from petri net"
+			)
+		),
+			
+		"pnml"	=> array(
+			"Name"			=> "PetriNet",
+			"FileExtension"	=> "pnml",
+			"Icon"			=> "glyphicon glyphicon-picture",
+			"OpenWith"		=> null,
+			"isUploadable"	=> false,
+			"Descriptions"	=> array(
+			)
+		),
+			
+		"bpmn"	=> array(
+			"Name"			=> "BPMN Model",
+			"FileExtension"	=> "bpmn",
+			"Icon"			=> "glyphicon glyphicon-picture",
+			"OpenWith"		=> null,
+			"isUploadable"	=> false,
+			"Descriptions"	=> array(
 			)
 		),
 			
@@ -247,7 +290,7 @@ class WorkspaceActionConfig {
 			
 	);
 	
-	public $userDependencyParams = array("INPUT_TEXT", "SELECT_ONE_MODEL", "SELECT_ONE_METRICS", "SELECT_ONE_SIMMATRIX", "SELECT_ONE_MAPPING");
+	public $userDependencyParams = array("INPUT_TEXT", "SELECT_ONE_MODEL", "SELECT_ONE_METRICS", "SELECT_ONE_VALUE_SERIES", "SELECT_ONE_SIMMATRIX", "SELECT_ONE_MAPPING", "SELECT_ONE_PNML");
 
 	/**
 	 * Available functionalities
@@ -680,6 +723,56 @@ class WorkspaceActionConfig {
 				),
 				"notification"	=> "CONST_SESSION_E_MAIL"
 			)
+		),
+		
+		"CONVERT_PNML2EPML" => array(
+			"Name"			=> "Convert PMNL to EPML",
+			"CodeBase"		=> "PHP",
+			"ScriptBase"	=> "CLIConvertPNML2EPML.php",
+			"EmbedInPHP"	=> false,
+			"Literature" 	=> array(
+				"none"
+			),
+// 			"Parameters"	=> array(
+// 					"input"			=> "SELECT_ONE_PNML",
+// 					"output"		=> "CONST_WORKSPACE_EPML.model.%SELECT_ONE_PNML@input%.fromPNML",
+// 					"notification"	=> "CONST_SESSION_E_MAIL"
+// 			)
+			"Parameters"	=> array(
+					"input"			=> "INPUT_TEXT",
+					"output"		=> "INPUT_TEXT",
+					"notification"	=> "INPUT_TEXT"
+			)
+		),
+		
+		"CONVERT_BPMN2EPML" => array(
+			"Name"			=> "Convert BPMN to EPML",
+			"CodeBase"		=> "PHP",
+			"ScriptBase"	=> "CLIConvertBPMN2EPML.php",
+			"EmbedInPHP"	=> false,
+			"Literature" 	=> array(
+				"none"
+			),
+			"Parameters"	=> array(
+					"input"			=> "INPUT_TEXT",
+					"output"		=> "INPUT_TEXT",
+					"notification"	=> "INPUT_TEXT"
+			)
+		),
+		
+		"CORRELATION_CALCULATOR" => array(
+			"Name"			=> "Calculate Empirical Correlation",
+			"CodeBase"		=> "PHP",
+			"ScriptBase"	=> "CLICorrelationCalculator.php",
+			"EmbedInPHP"	=> false,
+			"Literature" 	=> array(
+				"Calculates the Empirical Correlation Coefficient based on value series."
+			),
+			"Parameters"	=> array(
+					"input"			=> "SELECT_ONE_VALUE_SERIES",
+					"output"		=> "CONST_WORKSPACE_EPML.matrix.correlation",
+					"notification"	=> "CONST_SESSION_E_MAIL"
+			)
 		)
 
 	);
@@ -722,6 +815,11 @@ class WorkspaceActionConfig {
 			"LABEL_EXTRACTION",
 			"MODEL_TRANSLATION"
 			//"EXTRACT_VOCABULARY" // is ready, but an buggy, BUG reported 327
+		),
+		
+		"Further Tools" => array(
+			"CORRELATION_CALCULATOR"
+			//"CONVERT_PNML2EPML"
 		)
 	);
 	
@@ -769,7 +867,9 @@ class WorkspaceActionConfig {
 	}
 	
 	public function getFileTypeDescription($fileType, $descriptionKey) {
-		if ( isset($this->fileTypeInfos[$fileType]) ) return $this->fileTypeInfos[$fileType]["Descriptions"][$descriptionKey];
+		if ( isset($this->fileTypeInfos[$fileType]) ) {
+			return isset($this->fileTypeInfos[$fileType]["Descriptions"][$descriptionKey]) ? $this->fileTypeInfos[$fileType]["Descriptions"][$descriptionKey] : $descriptionKey;
+		}
 		return null;
 	}
 	

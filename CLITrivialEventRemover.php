@@ -2,14 +2,13 @@
 $start = time();
 require 'autoloader.php';
 
-print("\n-------------------------------------------------\n RefModMining - Label Tagger \n-------------------------------------------------\n\n");
+print("\n-------------------------------------------------\n RefModMining - Trivial Event Remover \n-------------------------------------------------\n\n");
 
 // Hilfeanzeige auf Kommandozeile
-if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) || !isset($argv[4]) ) {
+if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) ) {
 	exit("   Please provide the following parameters:\n
    input=           path to input epml
-   output=          path to output csv
-   language=        de | en
+   output=          path to output epml
    notification=
       no
       [E-Mail adress]
@@ -23,13 +22,11 @@ ERROR: Parameters incomplete
 // Checking Parameters
 $input   = substr($argv[1], 6,  strlen($argv[1]));
 $output   = substr($argv[2], 7,  strlen($argv[2]));
-$lang   = strtolower(substr($argv[3], 9, strlen($argv[3])));
-$email   = substr($argv[4], 13, strlen($argv[4]));
+$email   = substr($argv[3], 13, strlen($argv[3]));
 
 print("
 input: ".$input."
 output: ".$output."
-language: ".$lang."
 notification: ".$email."
 
 checking input parameters ...
@@ -40,13 +37,6 @@ if ( file_exists($input) ) {
 	print "  input ... ok\n";
 } else {
 	exit("  input ... failed (file does not exist)\n\n");
-}
-
-// Check language
-if ( $lang == "de" || $lang == "en" ) {
-	print "  language ... ok\n";
-} else {
-	exit("  language ... failed (language unknown)\n\n");
 }
 
 // Check notification
@@ -67,7 +57,7 @@ $modelsInFile = count($xml->xpath("//epc"));
 // print infos to console
 print("\nModel file: ".$input."\n");
 print("Number of models: ".$modelsInFile."\n\n");
-print("Start NLP tagging ...\n");
+print("Start removing trivial events ...\n");
 
 // initiate progress bar
 $modelCount = 0;
@@ -75,42 +65,46 @@ $progressBar = new CLIProgressbar($modelsInFile, 0.1);
 $progressBar->run($modelCount);
 
 $generatedFiles = array();
-$csvContent = "model;node-type;id;label;tagged-label;tag-set;high-level-tag-set;label-style";
-
-// Tagging model selection
-$pos_tagger_model = "";
-switch ( $lang ) {
-	case "de": $pos_tagger_model = "german-fast.tagger"; break;
-	default: $pos_tagger_model = "english-left3words-distsim.tagger"; break;
-}
 
 // Analyze all nodes in all models in the file
 foreach ($xml->xpath("//epc") as $xml_epc) {
-	$epc = new EPCNLP($xml, $xml_epc["epcId"], $xml_epc["name"]);
-	$epc->loadLabelTags($pos_tagger_model);
-	$epc->generateHighLevelLabelTags($lang);
-	$epc->detectLableStyles($lang);
-	//var_dump($epc);
-	$csvContent .= $epc->getEPMLNLPAnalysisCSVPart();
-	//$file_uri = $epc->exportNLPAnalysisCSV();
-	//array_push($generatedFiles, $file_uri);
+	$epc = new EPC($xml, $xml_epc["epcId"], $xml_epc["name"]);
+	
+	// Remove trivial events
+	$transformer = new EPCTransformerNoEventsButEnds();
+	$epc = $transformer->transform($epc);
+	$generatedFiles[$modelCount] = $epc->exportEPML();
+	
 	$modelCount++;
 	$progressBar->run($modelCount);
 }
 print(" done");
 
-//print("\n\nGenerated files:");
-//foreach ( $generatedFiles as $uri ) print("\n   ".$uri);
+
 
 // ERSTELLEN DER AUSGABEDATEIEN
-$fileGenerator = new FileGenerator($output, $csvContent);
-$fileGenerator->setPathFilename($output);
-$fileGenerator->setContent($csvContent);
-$uri_csv = $fileGenerator->execute(false);
+// ZIP ALL FILES
+print("\n\nZip files ... ");
+$zip = new ZipArchive();
+if ( $zip->open($output, ZipArchive::CREATE) ) {
+    foreach ( $generatedFiles as $filename ) {
+		$pos = strrpos($filename, "/");
+		$file = substr($filename, $pos+21);
+		$zip->addFile($filename, $file);		
+	}
+	$zip->close();
+	foreach ( $generatedFiles as $filename ) {
+		unlink($filename);
+	}
+	print("done (#files: ".$zip->numFiles.", status".$zip->status.")");
+} else {
+	exit("\nCannot open <".$output.">. Error creating zip file.\n");
+}
+// ZIP COMPLETED
 // AUSGABEDATEIEN ERSTELLT
 
-$readme  = "NLP-Tagging for model file ".$input." successfully finished.";
-$sid = $uri_csv;
+$readme  = "Trivial events in all models of the model file ".$input." successfully removed.";
+$sid = $output;
 $sid = str_replace("workspace/", "", $sid);
 $pos = strpos($sid, "/");
 $sid = $pos ? substr($sid, 0, $pos) : $sid;
@@ -127,7 +121,7 @@ $readme .= "\r\n\r\nDuration: ".$minutes." Min. ".$seconds." Sec.";
 
 if ( $doNotify ) {
 	print("\n\nSending notification ... ");
-	$notificationResult = EMailNotifyer::sendCLIModelNLPTaggingNotification($email, $readme);
+	$notificationResult = EMailNotifyer::sendCLIModelEventRemoverNotification($email, $readme);
 	if ( $notificationResult ) {
 		print("ok");
 	} else {
@@ -137,5 +131,5 @@ if ( $doNotify ) {
 
 // Ausgabe der Dateiinformationen auf der Kommandozeile
 print("\n\nDuration: ".$minutes." Min. ".$seconds." Sec.\n\n");
-Logger::log($email, "CLIModelNLPTagger finished: input=".$input." output=".$output, "ACCESS");
+Logger::log($email, "CLITrivialEventRemover finished: input=".$input." output=".$output, "ACCESS");
 ?>

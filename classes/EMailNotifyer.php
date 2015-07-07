@@ -17,6 +17,22 @@ class EMailNotifyer {
 		return self::send($to, "Label extraction finished", $readme);
 	}
 	
+	public static function sendCLICorrelationCalculatorNotification($to, $readme) {
+		return self::send($to, "Correlation calculation finished", $readme);
+	}
+	
+	public static function sendCLIModelEventRemoverNotification($to, $readme) {
+		return self::send($to, "Removing trivial events finished", $readme);
+	}
+	
+	public static function sendCLIConvertPNML2EPMLNotification($to, $readme) {
+		return self::send($to, "PNML2EPML conversion finished", $readme);
+	}
+	
+	public static function sendCLIConvertBPMN2EPMLNotification($to, $readme) {
+		return self::send($to, "BPMN2EPML conversion finished", $readme);
+	}
+	
 	public static function sendCLIModelTranslationNotification($to, $readme) {
 		return self::send($to, "Model translation finished", $readme);
 	}

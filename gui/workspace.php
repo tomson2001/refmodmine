@@ -53,7 +53,7 @@ $reloadLink = "index.php?site=workspace";
 	
     <div class="col-md-3">
 
-    	<h2>Models</h2>
+    	<h2>Selected Models</h2>
     		<ul class="list-group">
 			  <li class="list-group-item list-group-item-warning">
 			    <h4 class="list-group-item-heading">Workspace &nbsp;<a href="#modal_share_workspace" data-toggle="modal" title="share workspace"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a></h4>

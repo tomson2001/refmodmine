@@ -53,11 +53,14 @@ final class Config {
 	// ------ END GENERAL SETTINGS -----------------------------------------------------------------------
 	
 	// Some individual Stuff
-	const MODEL_FILE_1 = "/home/toth01/refmodmine/input/epml/sim_survey/PMC_UA.epml";
-	const MODEL_FILE_2 = "/home/toth01/refmodmine/input/epml/sim_survey/PMC_UA.epml";
+	
+	const MODEL_FILE_1 = "input/Kurbel_english.epml";
+	const MODEL_FILE_2 = "input/Y-CIM_en_original.epml";
+	//const MODEL_FILE_2 = "input/SAP_ALL_EPCs_named.epml";
+	
 	const MODEL_ANALYSIS_FILE = "/home/toth01/refmodmine/input/epml/pmc/Y-CIM_en_original.epml";
 	const TRACE_EXTRACTOR_FILE = "C:/xampp/htdocs/refmodmine/input/all_examples.epml";
-	const CORR_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/empiric_values.csv";
+	const CORR_INPUT_FILE = "input/sim_vals.csv";
 	const VARIANCE_INPUT_FILE = "C:/xampp/htdocs/refmodmine/input/Analyse_SM.csv";
 }
 ?>

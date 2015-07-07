@@ -37,4 +37,5 @@ if ( is_null($outputFormat) ) {
 	$actionHandler = new WorkspaceActionHandler();
 	$actionHandler->run("CONVERTER");
 }
+sleep(1);
 ?>

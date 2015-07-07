@@ -101,6 +101,8 @@ class WorkspaceActionHandler {
 		$code .= "        </div>\n";
 		$code .= "        <div class=\"modal-body\">\n";
 		
+		$runPossible = true; // switch deciding whether all input data are available for an execution of the action
+		
 		// Form elements for user input
 		// @TODO check whether input data are available!
 		foreach ( $params as $paramName => $value ) {
@@ -134,28 +136,80 @@ class WorkspaceActionHandler {
 			if ( $value == "SELECT_ONE_SIMMATRIX" ) {
 				
 				$simmatrixFiles = $workspaceData->getFilesOfType("simmatrix");
-				
+				$disabled = empty($simmatrixFiles) ? "disabled" : "";
+				$placeHolder = empty($simmatrixFiles) ? "<option>no similarity matrix available</option>" : "";
+				if ( empty($simmatrixFiles) ) $runPossible = false;
 				
 				$code .= "          <div class=\"form-group\">\n";
 				$code .= "            <label for=\"".$paramName."\" class=\"col-sm-4 control-label\">".$paramName."</label>\n";
 				$code .= "            <div class=\"col-sm-6\">\n";
-				$code .= "              <select class=\"form-control\" name=\"".$paramName."\" id=\"".$paramName."\">\n";
+				$code .= "              <select class=\"form-control\" ".$disabled." name=\"".$paramName."\" id=\"".$paramName."\">\n";
 				foreach ( $simmatrixFiles as $file => $entry ) {
 					$fileParams = $workspaceData->getFileParams($file);
 					$description = $this->config->getFileTypeDescriptions("simmatrix", $fileParams);
-					$code .= "            <option value=\"".$workspaceData->path."/".$entry."\">".$description."</option>\n";
+					$code .= "               <option value=\"".$workspaceData->path."/".$entry."\">".$description."</option>\n";
 				}
+				$code .= "               ".$placeHolder."\n";
 				$code .= "              </select>\n";
 				$code .= "            </div>\n";
 				$code .= "          </div>\n";
 				continue;
 			}
+			
+			if ( $value == "SELECT_ONE_VALUE_SERIES" ) {
+			
+				$valueSeriesFiles = $workspaceData->getFilesOfType("valueseries");
+				$disabled = empty($valueSeriesFiles) ? "disabled" : "";
+				$placeHolder = empty($valueSeriesFiles) ? "<option>no value series available</option>" : "";
+				if ( empty($valueSeriesFiles) ) $runPossible = false;
+			
+				$code .= "          <div class=\"form-group\">\n";
+				$code .= "            <label for=\"".$paramName."\" class=\"col-sm-4 control-label\">".$paramName."</label>\n";
+				$code .= "            <div class=\"col-sm-6\">\n";
+				$code .= "              <select class=\"form-control\" ".$disabled." name=\"".$paramName."\" id=\"".$paramName."\">\n";
+				foreach ( $valueSeriesFiles as $file => $entry ) {
+					$fileParams = $workspaceData->getFileParams($file);
+					$description = $this->config->getFileTypeDescriptions("valueseries", $fileParams);
+					$code .= "               <option value=\"".$workspaceData->path."/".$entry."\">".$description."</option>\n";
+				}
+				$code .= "               ".$placeHolder."\n";
+				$code .= "              </select>\n";
+				$code .= "            </div>\n";
+				$code .= "          </div>\n";
+				continue;
+			}
+			
+			if ( $value == "SELECT_ONE_PNML" ) {
+				
+				$pnmlFiles = $workspaceData->getFilesOfType("pnml");
+				$disabled = empty($pnmlFiles) ? "disabled" : "";
+				$placeHolder = empty($pnmlFiles) ? "<option>no petri net available</option>" : "";
+				if ( empty($pnmlFiles) ) $runPossible = false;
+				
+				$code .= "          <div class=\"form-group\">\n";
+				$code .= "            <label for=\"".$paramName."\" class=\"col-sm-4 control-label\">".$paramName."</label>\n";
+				$code .= "            <div class=\"col-sm-6\">\n";
+				$code .= "              <select class=\"form-control\" ".$disabled." name=\"".$paramName."\" id=\"".$paramName."\">\n";
+				foreach ( $pnmlFiles as $file => $entry ) {
+					$fileParams = $workspaceData->getFileParams($file);
+					$description = $this->config->getFileTypeDescriptions("pnml", $fileParams);
+					$code .= "               <option value=\"".$workspaceData->path."/".$entry."\">".$description."</option>\n";
+				}
+				$code .= "               ".$placeHolder."\n";
+				$code .= "              </select>\n";
+				$code .= "            </div>\n";
+				$code .= "          </div>\n";
+				continue;
+				
+			}
 		}
+		
+		$runDisabled = $runPossible ? "" : "disabled";
 		
 		$code .= "        </div>\n";
 		$code .= "        <div class=\"modal-footer\">\n";
 		$code .= "          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>\n";
-		$code .= "          <button type=\"submit\" class=\"btn btn-primary\">Run</button>\n";
+		$code .= "          <button type=\"submit\" ".$runDisabled." class=\"btn btn-primary\">Run</button>\n";
 		$code .= "        </div>\n";
 		$code .= "      </form>\n";
 		$code .= "    </div>\n";
@@ -175,6 +229,7 @@ class WorkspaceActionHandler {
 			$this->initProcessing();
 			$actionData = $this->config->getActionData($action);
 			$params = $actionData["Parameters"];
+			//print_r($params);
 			
 			// building CLI command
 			$command  = $this->config->execCodeBases[$actionData["CodeBase"]]." ";
@@ -200,7 +255,17 @@ class WorkspaceActionHandler {
 				if ( in_array($value, $this->config->userDependencyParams) ) {
 					$paramValue = $_POST[$paramName];
 					$command .= $paramNamePart.$paramValue." ";
+					
 					$replaceFragments["%".$paramName."%"] = $paramValue;
+					
+					// Specials
+					if ( substr_count($value, "SELECT_ONE_PNML") > 0 ) {
+						$paramValue = basename($paramValue);
+						$pos = strrpos($paramValue, ".");
+						$paramValue = substr($paramValue, $pos+1);
+						$replaceFragments["%SELECT_ONE_PNML@".$paramName."%"] = $paramValue;
+					}
+					
 					continue;
 				}
 				

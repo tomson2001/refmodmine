@@ -244,13 +244,13 @@ class EPCNLP extends EPC {
 		$fileContent = "";
 		foreach ( $this->functionTags as $id => $tag ) {
 			$fileContent .= "\n".$this->name.";
-					activity;".$this->functions[$id].";
+					activity;".$id.";".$this->functions[$id].";
 							".$this->encodeTaggedLabel($this->taggedFunctions[$id]).";
 									".$tag.";".$this->functionHighLevelTags[$id].";
 											".$this->functionLabelStyles[$id];
 		}
 		foreach ( $this->eventTags as $id => $tag ) {
-			$fileContent .= "\n".$this->name.";event;".$this->events[$id].";".$this->encodeTaggedLabel($this->taggedEvents[$id]).";".$tag.";".$this->eventHighLevelTags[$id].";".$this->eventLabelStyles[$id];
+			$fileContent .= "\n".$this->name.";event;".$id.";".$this->events[$id].";".$this->encodeTaggedLabel($this->taggedEvents[$id]).";".$tag.";".$this->eventHighLevelTags[$id].";".$this->eventLabelStyles[$id];
 		}
 		return $fileContent;
 	}

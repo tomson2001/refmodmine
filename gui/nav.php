@@ -17,8 +17,10 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tools &amp; Infos<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li class="dropdown-header">Tools</li>
-                <li><a href="index.php?site=converter">AML/EPML-Converter</a></li>
+                <li class="dropdown-header">Converter</li>
+                <li><a href="index.php?site=converter">AML / EPML</a></li>
+                <li><a href="index.php?site=converter_PNML-EPC">PNML / EPML</a></li>
+                <li><a href="index.php?site=converter_BPMN-EPC">BPMN / EPML</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">General Information</li>
                 <li><a href="http://refmod-miner.dfki.de/cms/anwendungsfaelle/" target="_blank">Use Cases</a></li>

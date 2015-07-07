@@ -4,6 +4,7 @@ set_include_path(
     get_include_path() . 
     PATH_SEPARATOR . "classes" .
     PATH_SEPARATOR . "classes/framework" .
+    PATH_SEPARATOR . "classes/transformators" .
     PATH_SEPARATOR . "gui/classes"
 );
 
@@ -29,7 +30,7 @@ class Autoloader {
 	/**
 	 * Laedt eine Klasse
 	 *
-	 * Hier können unterschiedliche Konventionen berücksichtigt werden
+	 * Hier kï¿½nnen unterschiedliche Konventionen berï¿½cksichtigt werden
 	 * Aktuell wird die Funktion load verwendet und nicht diese hier
 	 *
 	 * @param String $classname Name der Klasse

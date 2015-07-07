@@ -166,7 +166,7 @@ class WorkspaceEPML {
 		
 		$this->epcs[$this->currentEpcID] = $epc;
 		$this->epcs[$this->currentEpcID]->id = $this->currentEpcID;
-		$this->updateIDsInEPC($this->currentEpcID);
+		//$this->updateIDsInEPC($this->currentEpcID);
 		$this->currentEpcID++;
 		$this->numModels++;
 		$this->updateSessionAdd($sourceFilename, $epc->name);
@@ -304,8 +304,24 @@ class WorkspaceEPML {
 					$content .= "      </arc>\n";
 				
 					$this->currentNodeID++;
-					if ( $this->currentNodeID == 21 ) echo "NOW - generate";
+					//if ( $this->currentNodeID == 21 ) echo "NOW - generate";
 				}
+				
+				foreach ( $this->epcs[$epcID]->orgUnits as $id => $label ) {
+					$content .= "    <role id=\"".$id."\" optional=\"false\">\n";
+					$content .= "      <name>".htmlspecialchars($this->epcs[$epcID]->convertIllegalChars($label));
+					$content .= "</name>\n";
+					$content .= "    </role>\n";
+				}
+				
+				foreach ( $this->epcs[$epcID]->functionOrgUnitAssignments as $funcID => $roleID ) {
+					$content .= "    <arc id=\"".$this->currentNodeID."\">\n";
+					$content .= "      <relation source=\"".$roleID."\" target=\"".$funcID."\" type=\"role\"/>\n";
+					$content .= "    </arc>\n";
+				
+					$this->currentNodeID++;
+				}
+				
 				$content .= "    </epc>\n";				
 			}
 			$content .= "  </directory>\n";

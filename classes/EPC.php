@@ -7,12 +7,17 @@ class EPC {
 	public $modelPath;
 	public $modelPathOnly;
 
+	// basic constructs
 	public $functions = array();
 	public $events = array();
 	public $edges = array();
 	public $xor = array();
 	public $or = array();
 	public $and = array();
+	
+	// further constructs
+	public $orgUnits = array();
+	public $functionOrgUnitAssignments = array();
 
 	public $traces = array();
 
@@ -38,17 +43,22 @@ class EPC {
 		$this->name = $this->convertIllegalChars($modelName);
 		if ( $format == "epml" ) {
 			$this->loadEPML($xml, $modelID);
+			$this->loadModelPath($xml, $modelID);
 		}
 		$this->cleanLabels();
 		unset($this->xml);
 		$this->internalID = $this->name."_".$this->id."_".rand();
-		$this->loadModelPath($xml, $modelID);
 		//print_r($this);
 	}
 	
 	public function loadModelPath($xml, $modelID) {
 		$path = $this->name;
-		$epc_xml = $xml->xpath("//epc[@epcId='".$modelID."']");
+		
+		$epc_xml = null;
+		foreach ( $xml->xpath("//epc") as $xml_epc ) {
+			$epc_xml = isset($xml_epc["epcId"]) ? $xml->xpath("//epc[@epcId='".$modelID."']") : $xml->xpath("//epc[@EpcId='".$modelID."']");
+		}
+			
 		$parent = $epc_xml[0]->xpath("parent::*");
 		while ( !empty($parent) ) {
 			$path = $parent[0]["name"]."/".$path;
@@ -64,51 +74,67 @@ class EPC {
 	 * @param SimpleXML $xml
 	 * @param mixed $modelID
 	 */
-	private function loadEPML($xml, $modelID) {
+	private function loadEPML($xml, $modelID, $useOriginalIDs = true) {
+		
+		$xPathEPCPart = null;
+		foreach ( $xml->xpath("//epc") as $xml_epc ) {
+			$xPathEPCPart = isset($xml_epc["epcId"]) ? "//epc[@epcId='".$modelID."']" : "//epc[@EpcId='".$modelID."']";
+		}
+		
 		// Funktionen laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/function") as $function) {
-			$index = $this->getNextID();
+		foreach ($xml->xpath($xPathEPCPart."/function") as $function) {
+			$index = $useOriginalIDs ? (string) $function["id"] : $this->getNextID();
 			$this->functions[$index] = rtrim(ltrim($this->convertIllegalChars($function->name)));
 			$this->idConversion[(string) $function["id"]] = $index;
 		}
 
 		// Ereignisse laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/event") as $event) {
-			$index = $this->getNextID();
+		foreach ($xml->xpath($xPathEPCPart."/event") as $event) {
+			$index = $useOriginalIDs ? (string) $event["id"] : $this->getNextID();
 			$this->events[$index] = rtrim(ltrim($this->convertIllegalChars($event->name)));
 			$this->idConversion[(string) $event["id"]] = $index;
 		}
 
 		// XOR laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/xor") as $xor) {
-			$index = $this->getNextID();
+		foreach ($xml->xpath($xPathEPCPart."/xor") as $xor) {
+			$index = $useOriginalIDs ? (string) $xor["id"] : $this->getNextID();
 			$this->xor[$index] = "xor";
 			$this->idConversion[(string) $xor["id"]] = $index;
 		}
 
 		// OR laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/or") as $or) {
-			$index = $this->getNextID();
+		foreach ($xml->xpath($xPathEPCPart."/or") as $or) {
+			$index = $useOriginalIDs ? (string) $or["id"] : $this->getNextID();
 			$this->or[$index] = "or";
 			$this->idConversion[(string) $or["id"]] = $index;
 		}
 
 		// AND laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/and") as $and) {
-			$index = $this->getNextID();
+		foreach ($xml->xpath($xPathEPCPart."/and") as $and) {
+			$index = $useOriginalIDs ? (string) $and["id"] : $this->getNextID();
 			$this->and[$index] = "and";
 			$this->idConversion[(string) $and["id"]] = $index;
 		}
+		
+		// OrgEinheiten laden
+		foreach ($xml->xpath($xPathEPCPart."/role") as $role) {
+			$index = $useOriginalIDs ? (string) $role["id"] : $this->getNextID();
+			$this->orgUnits[$index] = rtrim(ltrim($this->convertIllegalChars($role->name)));
+			$this->idConversion[(string) $role["id"]] = $index;
+		}
 
 		// Kanten laden
-		foreach ($xml->xpath("//epc[@epcId='".$modelID."']/arc") as $edge) {
+		foreach ($xml->xpath($xPathEPCPart."/arc") as $edge) {
 			$flow = $edge->flow;
-			//var_dump($flow['source']);
-			//echo "S: ".(string) $flow['source']." T: ".(string) $flow['target']."<br>";
-			$sourceIndex = $this->idConversion[(string) $flow['source']];
-			$targetIndex = $this->idConversion[(string) $flow['target']];
-			$edge = array($sourceIndex => $targetIndex);
-			array_push($this->edges, $edge);
+			$relation = $edge->relation;
+			if ( isset($flow['source']) && isset($flow['target']) ) {
+				$sourceIndex = $this->idConversion[(string) $flow['source']];
+				$targetIndex = $this->idConversion[(string) $flow['target']];
+				$edge = array($sourceIndex => $targetIndex);
+				array_push($this->edges, $edge);
+			} elseif ( isset($relation['source']) && isset($relation['target']) ) {
+				$this->functionOrgUnitAssignments[$this->idConversion[(string) $relation['target']]] = $this->idConversion[(string) $relation['source']];
+			}
 		}
 	}
 
@@ -358,6 +384,7 @@ class EPC {
 			}
 			if ( !is_null($edgeIndex) ) break;
 		}
+		//print("delete edge ".$edgeIndex."(".$sourceNodeID.", ".$targetNodeID.")\n");
 		unset($this->edges[$edgeIndex]);
 	}
 
@@ -817,6 +844,23 @@ class EPC {
 		
 			$content .= "    <arc id=\"".$maxID."\">\n";
 			$content .= "      <flow source=\"".$source."\" target=\"".$target."\" />\n";
+			$content .= "    </arc>\n";
+		
+			$maxID++;
+		}
+		
+		foreach ( $this->orgUnits as $id => $label ) {
+			$content .= "    <role id=\"".$id."\" optional=\"false\">\n";
+			$content .= "      <name>".htmlspecialchars($this->convertIllegalChars($label));
+			if ( $print_ids ) $content .= " (".$id.")";
+			$content .= "</name>\n";
+			$content .= "    </role>\n";
+			if ( $id > $maxID ) $maxID = $id+1;
+		}
+		
+		foreach ( $this->functionOrgUnitAssignments as $funcID => $roleID ) {	
+			$content .= "    <arc id=\"".$maxID."\">\n";
+			$content .= "      <relation source=\"".$roleID."\" target=\"".$funcID."\" type=\"role\"/>\n";
 			$content .= "    </arc>\n";
 		
 			$maxID++;

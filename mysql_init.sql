@@ -22,3 +22,7 @@ create table action_stats (
 create view view_stats_users_per_day (day, users, avg_clicks) as (
 	SELECT _date, count(ip), round(avg(clicks)) FROM site_stats GROUP BY _date
 );
+
+create view view_stats_actions_per_day (day, users, different_action_calls, action_calls) as (
+	SELECT _date, count(distinct ip), count(distinct action), count(action) FROM action_stats GROUP BY _date
+);

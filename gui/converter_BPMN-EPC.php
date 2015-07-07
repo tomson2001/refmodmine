@@ -1,11 +1,11 @@
 <?php
-$reloadLink = "index.php?site=converter&action=doConvertUploadedModelFile";
+$reloadLink = "index.php?site=converter_BPMN-EPC&action=doConvertUploadedBPMNModelFile";
 ?>
 
 <div class="jumbotron">
-	<h1>AML/EPML Converter</h1>
+	<h1>BPMN to EPC Converter</h1>
 	
-	<p>This tool converts your .<a href="http://www.mendling.com/EPML/" target="_blank">epml</a> files to .xml files (ARIS format) and vice versa. Tested with the ARIS version 7 and 9. At the moment, only EPCs with the basic constructs are supported.</p>
+	<p>This tool converts your .<a href="http://www.omg.org/spec/BPMN/" target="_blank">bpmn</a> files (BPMN) to .<a href="http://www.mendling.com/EPML/" target="_blank">epml</a> files. At the moment, only EPCs with the basic constructs are supported.</p>
 
 	<h2></h2>
 	<ol class="breadcrumb">
@@ -81,17 +81,10 @@ $reloadLink = "index.php?site=converter&action=doConvertUploadedModelFile";
 			$files = scandir ( $path );
 			// remove all entries which are no empl or xml
 			foreach ( $files as $index => $entry ) {
-				if (! (strtolower ( substr ( $entry, - 5 ) ) == ".epml" 
-					|| strtolower ( substr ( $entry, - 4 ) ) == ".xml" 
-					|| strtolower ( substr ( $entry, - 4 ) ) == ".aml")
-				) {
+				if (! (strtolower ( substr ( $entry, - 5 ) ) == ".bpmn" ) ) {
 					unset ( $files[$index] );
 				} else {
-					if ( strtolower ( substr ( $entry, - 5 ) ) == ".epml" ) {
-						$files[$index] = substr($entry, 0, -5);
-					} else {
-						$files[$index] = substr($entry, 0, -4);
-					}
+					$files[$index] = substr($entry, 0, -5);
 				}
 			}
 		}
@@ -99,15 +92,15 @@ $reloadLink = "index.php?site=converter&action=doConvertUploadedModelFile";
 		
 		if ( !empty($files) ) { ?>
 			
-			<h2>Available files <a href="index.php?site=converter"><medium><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></medium></a></h2>
+			<h2>Available files <a href="index.php?site=converter_BPMN-EPC"><medium><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></medium></a></h2>
 			
 		<?php
 		
 		foreach ( $files as $file ) { 
-			$xmlLabel = ".xml";
-			$xml = $path."/".$file.".xml";
-			$xmlDownload = "download=\"".$file.".xml\"";
-			$xmlDisabled = is_file($xml) ? "" : "disabled";
+			$bpmnLabel = ".bpmn";
+			$bpmn = $path."/".$file.".bpmn";
+			$bpmnDownload = "download=\"".$file.".bpmn\"";
+			$bpmnDisabled = is_file($bpmn) ? "" : "disabled";
 			
 			$epmlLabel = ".epml";
 			$epml = $path."/".$file.".epml";
@@ -115,23 +108,12 @@ $reloadLink = "index.php?site=converter&action=doConvertUploadedModelFile";
 			$epmlDisabled = is_file($epml) ? "" : "disabled";
 			
 			// conversion outdated, so offer to try again
-			if ( !is_file($xml) ) {
-				$filetime = filemtime($epml);
-				$currentTime = time();
-				if ( $currentTime - $filetime > 30 ) {
-					$_SESSION['uploadedFilePath'] = $epml;
-					$xml = "index.php?site=converter&action=doConvertUploadedModelFile";
-					$xmlDownload = "";
-					$xmlDisabled = "";
-					$xmlLabel = "convert to .xml";
-				}
-			}
 			if ( !is_file($epml) ) {
-				$filetime = filemtime($xml);
+				$filetime = filemtime($bpmn);
 				$currentTime = time();
 				if ( $currentTime - $filetime > 10 ) {
-					$_SESSION['uploadedFilePath'] = $xml;
-					$epml = "index.php?site=converter&action=doConvertUploadedModelFile";
+					$_SESSION['uploadedFilePath'] = $bpmn;
+					$epml = "index.php?site=converter_BPMN-EPC&action=doConvertUploadedBPMNModelFile";
 					$epmlDownload = "";
 					$epmlDisabled = "";
 					$epmlLabel = "convert to .epml";
@@ -144,9 +126,9 @@ $reloadLink = "index.php?site=converter&action=doConvertUploadedModelFile";
 			<div class="input-group">
 			  <input type="text" class="form-control" aria-label="..." value="<?php echo $file; ?>" disabled>
 			  <div class="input-group-btn">
-			    <a class="btn btn-default" role="button" <?php echo $xmlDisabled; ?> href="<?php echo $xml; ?>" <?php echo $xmlDownload; ?>><?php echo $xmlLabel; ?></a>
+			    <a class="btn btn-default" role="button" <?php echo $bpmnDisabled; ?> href="<?php echo $bpmn; ?>" <?php echo $bpmnDownload; ?>><?php echo $bpmnLabel; ?></a>
 			    <a class="btn btn-default" role="button" <?php echo $epmlDisabled; ?> href="<?php echo $epml; ?>" <?php echo $epmlDownload; ?>><?php echo $epmlLabel; ?></a>
-			    <a class="btn btn-danger" role="button" href="index.php?site=converter&action=doRemoveConverterFile&file=<?php echo $file; ?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+			    <a class="btn btn-danger" role="button" href="index.php?site=converter_BPMN-EPC&action=doRemoveConverterBPMNFile&file=<?php echo $file; ?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 			  </div>
 			</div>
 			<!-- /input-group --><br />

@@ -57,12 +57,12 @@ $naryMapping = new NAryWordstemMappingWithAntonyms();
 if ( in_array("--nary", $argv) ) {
 	foreach ($xml1->xpath("//epc") as $xml_epc1) {
 		$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
-		$epc = new EPC($xml1, $xml_epc1["name"]);
+		$epc = new EPC($xml1, $xml_epc1["epcId"], $xml_epc1["name"]);
 		$naryMapping->addEPC($epc);
 	}
 	foreach ($xml2->xpath("//epc") as $xml_epc2) {
 		$nameOfEPC2 = utf8_decode((string) $xml_epc2["name"]);
-		$epc = new EPC($xml2, $xml_epc2["name"]);
+		$epc = new EPC($xml2, $xml_epc2["epcId"], $xml_epc2["name"]);
 		$naryMapping->addEPC($epc);
 	}
 	$naryMapping->map();
@@ -71,11 +71,11 @@ if ( in_array("--nary", $argv) ) {
 
 foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$nameOfEPC1 = utf8_decode((string) $xml_epc1["name"]);
-	$epc1 = new EPC($xml1, $xml_epc1["name"]);
+	$epc1 = new EPC($xml1, $xml_epc1["epcId"], $xml_epc1["name"]);
 
 	foreach ($xml2->xpath("//epc") as $xml_epc2) {
 		$nameOfEPC2 = utf8_decode((string) $xml_epc2["name"]);
-		$epc2 = new EPC($xml2, $xml_epc2["name"]);
+		$epc2 = new EPC($xml2, $xml_epc2["epcId"], $xml_epc2["name"]);
 		
 		if ($nameOfEPC1 != $nameOfEPC2) continue;
 
@@ -106,7 +106,8 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 		$mapping->map("Greedy");
 		//$mapping->map("AllOne");
 		$mapping->deleteDummyTransitions();
-		$mapping->export();
+		$mappingFile = $mapping->export();
+		print(" ".$mappigFile."\n");
 		$matrix = $mapping->getMatrix();
 
 		// Matrix in HTML
@@ -169,6 +170,8 @@ $html_analysis .= "</body></html>";
 
 // ERSTELLEN DER AUSGABEDATEIEN
 $fileGenerator = new FileGenerator("Mapping_Analysis.csv", $analysis_csv);
+$fileGenerator->setFilename("Mapping_Analysis.csv");
+$fileGenerator->setContent($analysis_csv);
 $uri_analysis_csv = $fileGenerator->execute();
 
 $fileGenerator->setFilename("Mappings.html");
