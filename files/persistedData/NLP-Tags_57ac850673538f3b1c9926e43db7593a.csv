@@ -1,0 +1,160 @@
+57ac850673538f3b1c9926e43db7593a;Völklingen_Anmeldung
+function;wende sich an den Partner;wende@@@VVFIN|||sich@@@PRF|||an@@@APPR|||den@@@ART|||Partner@@@NN;{VVFIN}{PRF}{APPR}{ART}{NN}
+function;unterschreibe den Vordruck;unterschreibe@@@APPR|||den@@@ART|||Vordruck@@@NN;{APPR}{ART}{NN}
+function;unterscheide Art der Betriebsstätte;unterscheide@@@ADJA|||Art@@@NN|||der@@@ART|||Betriebsst@@@NN|||tte@@@VVFIN;{ADJA}{NN}{ART}{NN}{VVFIN}
+function;unterschreibe die Vordrucke;unterschreibe@@@ADJD|||die@@@ART|||Vordrucke@@@NN;{ADJD}{ART}{NN}
+function;erfasse die Gewerbeanmeldung;erfasse@@@VVFIN|||die@@@ART|||Gewerbeanmeldung@@@NN;{VVFIN}{ART}{NN}
+function;prüfe die Unterlagennotwendigkeit;pr@@@ADJD|||fe@@@VVFIN|||die@@@ART|||Unterlagennotwendigkeit@@@NN;{ADJD}{VVFIN}{ART}{NN}
+function;leite das Untersagungsverfahren an;leite@@@VVFIN|||das@@@ART|||Untersagungsverfahren@@@NN|||an@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;schicke die Bestätigung dem Kunden zu;schicke@@@VVFIN|||die@@@ART|||Best@@@NE|||tigung@@@VVFIN|||dem@@@ART|||Kunden@@@NN|||zu@@@PTKVZ;{VVFIN}{ART}{NE}{VVFIN}{ART}{NN}{PTKVZ}
+function;bezahle die Gebühr an der Kasse;bezahle@@@VVFIN|||die@@@ART|||Geb@@@NN|||hr@@@PROAV|||an@@@APPR|||der@@@ART|||Kasse@@@NN;{VVFIN}{ART}{NN}{PROAV}{APPR}{ART}{NN}
+function;schicke den Vordruck per Post zu;schicke@@@VVFIN|||den@@@ART|||Vordruck@@@NN|||per@@@APPR|||Post@@@NN|||zu@@@PTKVZ;{VVFIN}{ART}{NN}{APPR}{NN}{PTKVZ}
+function;erfasse die Daten;erfasse@@@VVFIN|||die@@@ART|||Daten@@@NN;{VVFIN}{ART}{NN}
+function;schicke Kostenbescheid dem Kunden zu;schicke@@@ADJA|||Kostenbescheid@@@NN|||dem@@@ART|||Kunden@@@NN|||zu@@@PTKVZ;{ADJA}{NN}{ART}{NN}{PTKVZ}
+function;gebe ein Exemplar dem Kunden;gebe@@@VVFIN|||ein@@@ART|||Exemplar@@@NN|||dem@@@ART|||Kunden@@@NN;{VVFIN}{ART}{NN}{ART}{NN}
+function;drucke den Vordruck online aus;drucke@@@APPR|||den@@@ART|||Vordruck@@@NN|||online@@@VVFIN|||aus@@@PTKVZ;{APPR}{ART}{NN}{VVFIN}{PTKVZ}
+function;drucke zwei Vordrucke aus;drucke@@@ADJA|||zwei@@@CARD|||Vordrucke@@@NN|||aus@@@PTKVZ;{ADJA}{CARD}{NN}{PTKVZ}
+function;unterscheide Weg der Anmeldung;unterscheide@@@ADJA|||Weg@@@NN|||der@@@ART|||Anmeldung@@@NN;{ADJA}{NN}{ART}{NN}
+function;fordere den Ausweis an;fordere@@@VVFIN|||den@@@ART|||Ausweis@@@NN|||an@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;nach bestimmter Zeit prüfe die Vollständigkeit der Unterlagen;nach@@@APPR|||bestimmter@@@ADJA|||Zeit@@@NN|||pr@@@ADJD|||fe@@@VVFIN|||die@@@ART|||Vollst@@@NN|||ndigkeit@@@VVFIN|||der@@@ART|||Unterlagen@@@NN;{APPR}{ADJA}{NN}{ADJD}{VVFIN}{ART}{NN}{VVFIN}{ART}{NN}
+function;schicke den Vordruck an die Behörde;schicke@@@VVFIN|||den@@@ART|||Vordruck@@@NN|||an@@@APPR|||die@@@ART|||Beh@@@NN|||rde@@@VVFIN;{VVFIN}{ART}{NN}{APPR}{ART}{NN}{VVFIN}
+function;teile die Meldungen mit;teile@@@VVFIN|||die@@@ART|||Meldungen@@@NN|||mit@@@APPR;{VVFIN}{ART}{NN}{APPR}
+function;besorge den Vordruck;besorge@@@VVFIN|||den@@@ART|||Vordruck@@@NN;{VVFIN}{ART}{NN}
+function;schicke die Anmeldung an die zuständigen Behörden zu;schicke@@@VVFIN|||die@@@ART|||Anmeldung@@@NN|||an@@@APPR|||die@@@ART|||zust@@@ADV|||ndigen@@@ADJA|||Beh@@@NN|||rden@@@VVINF|||zu@@@PTKVZ;{VVFIN}{ART}{NN}{APPR}{ART}{ADV}{ADJA}{NN}{VVINF}{PTKVZ}
+function;fülle den Vordruck aus;f@@@VVFIN|||lle@@@APPR|||den@@@ART|||Vordruck@@@NN|||aus@@@PTKVZ;{VVFIN}{APPR}{ART}{NN}{PTKVZ}
+function;frage Art der Tätigkeit an;frage@@@ADJA|||Art@@@NN|||der@@@ART|||T@@@NN|||tigkeit@@@VVFIN|||an@@@PTKVZ;{ADJA}{NN}{ART}{NN}{VVFIN}{PTKVZ}
+function;bewahre die Unterlagen aktenmäßig auf;bewahre@@@VVFIN|||die@@@ART|||Unterlagen@@@NN|||aktenm@@@VVFIN|||ig@@@ADJD|||auf@@@PTKVZ;{VVFIN}{ART}{NN}{VVFIN}{ADJD}{PTKVZ}
+function;kontrolliere die Vollständigkeit;kontrolliere@@@VVFIN|||die@@@ART|||Vollst@@@NN|||ndigkeit@@@ADJD;{VVFIN}{ART}{NN}{ADJD}
+function;händige den Gebührenzettel aus;h@@@FM|||ndige@@@FM|||den@@@ART|||Geb@@@NN|||hrenzettel@@@ADJD|||aus@@@PTKVZ;{FM}{FM}{ART}{NN}{ADJD}{PTKVZ}
+function;erfasse, ob es eine Betriebsstätte ist;erfasse@@@VVFIN|||,@@@$,|||ob@@@KOUS|||es@@@PPER|||eine@@@ART|||Betriebsst@@@NN|||tte@@@VVFIN|||ist@@@VAFIN;{VVFIN}{$,}{KOUS}{PPER}{ART}{NN}{VVFIN}{VAFIN}
+function;prüfe die Unterlagen;pr@@@ADJD|||fe@@@VVFIN|||die@@@ART|||Unterlagen@@@NN;{ADJD}{VVFIN}{ART}{NN}
+function;prüfe Notwendigkeit des Handelsregisterauszugs;pr@@@ADJD|||fe@@@ADJA|||Notwendigkeit@@@NN|||des@@@ART|||Handelsregisterauszugs@@@NN;{ADJD}{ADJA}{NN}{ART}{NN}
+function;gebe die notwendige Information;gebe@@@VVFIN|||die@@@ART|||notwendige@@@ADJA|||Information@@@NN;{VVFIN}{ART}{ADJA}{NN}
+function;zahle die Gebühr;zahle@@@VVFIN|||die@@@ART|||Geb@@@NN|||hr@@@XY;{VVFIN}{ART}{NN}{XY}
+function;fordere das Führungszeugnis an;fordere@@@VVFIN|||das@@@ART|||F@@@NN|||hrungszeugnis@@@NN|||an@@@PTKVZ;{VVFIN}{ART}{NN}{NN}{PTKVZ}
+function;gebe die Bankverbindung;gebe@@@VVFIN|||die@@@ART|||Bankverbindung@@@NN;{VVFIN}{ART}{NN}
+function;hole den Auszug aus dem Register;hole@@@APPR|||den@@@ART|||Auszug@@@NN|||aus@@@APPR|||dem@@@ART|||Register@@@NN;{APPR}{ART}{NN}{APPR}{ART}{NN}
+function;schicke die Bestätigung dem Kunden zurück;schicke@@@VVFIN|||die@@@ART|||Best@@@NE|||tigung@@@VVFIN|||dem@@@ART|||Kunden@@@NN|||zur@@@APPRART|||ck@@@NN;{VVFIN}{ART}{NE}{VVFIN}{ART}{NN}{APPRART}{NN}
+function;zahle das Geld;zahle@@@VVFIN|||das@@@ART|||Geld@@@NN;{VVFIN}{ART}{NN}
+function;fordere den Handelsregisterauszug an;fordere@@@VVFIN|||den@@@ART|||Handelsregisterauszug@@@NN|||an@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;prüfe die Vollständigkeit des Formulars;pr@@@ADJD|||fe@@@VVFIN|||die@@@ART|||Vollst@@@NN|||ndigkeit@@@ADJD|||des@@@ART|||Formulars@@@NN;{ADJD}{VVFIN}{ART}{NN}{ADJD}{ART}{NN}
+function;drucke die Quittung aus;drucke@@@VVFIN|||die@@@ART|||Quittung@@@NN|||aus@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;schicke den Gebührenbescheid mit;schicke@@@VVFIN|||den@@@ART|||Geb@@@NN|||hrenbescheid@@@VVFIN|||mit@@@PTKVZ;{VVFIN}{ART}{NN}{VVFIN}{PTKVZ}
+function;fordere den Kunden persönlich zu kommen;fordere@@@VVFIN|||den@@@ART|||Kunden@@@NN|||pers@@@APPRART|||nlich@@@ADJD|||zu@@@PTKZU|||kommen@@@VVINF;{VVFIN}{ART}{NN}{APPRART}{ADJD}{PTKZU}{VVINF}
+function;informiere zuständige Behörden über die Anmeldung;informiere@@@ADJA|||zust@@@ADV|||ndige@@@ADJA|||Beh@@@NN|||rden@@@VVFIN|||ber@@@ADJD|||die@@@ART|||Anmeldung@@@NN;{ADJA}{ADV}{ADJA}{NN}{VVFIN}{ADJD}{ART}{NN}
+function;fordere den Personalausweis an;fordere@@@VVFIN|||den@@@ART|||Personalausweis@@@NN|||an@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;schicke alle Originale zu;schicke@@@ADJA|||alle@@@PIDAT|||Originale@@@NN|||zu@@@PTKVZ;{ADJA}{PIDAT}{NN}{PTKVZ}
+function;erfasse die Anmeldung;erfasse@@@VVFIN|||die@@@ART|||Anmeldung@@@NN;{VVFIN}{ART}{NN}
+function;fordere die Eintragung an;fordere@@@VVFIN|||die@@@ART|||Eintragung@@@NN|||an@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;prüfe die Notwendigkeit der Eintragung in Handwerkskammer;pr@@@ADJD|||fe@@@VVFIN|||die@@@ART|||Notwendigkeit@@@NN|||der@@@ART|||Eintragung@@@NN|||in@@@APPR|||Handwerkskammer@@@NN;{ADJD}{VVFIN}{ART}{NN}{ART}{NN}{APPR}{NN}
+function;fordere Handelsregisterauszug an;fordere@@@VVFIN|||Handelsregisterauszug@@@NN|||an@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;rufe vorher an;rufe@@@VVFIN|||vorher@@@ADV|||an@@@PTKVZ;{VVFIN}{ADV}{PTKVZ}
+function;gebe Rückgeld dem Kunden ab;gebe@@@VVFIN|||R@@@NE|||ckgeld@@@NE|||dem@@@ART|||Kunden@@@NN|||ab@@@PTKVZ;{VVFIN}{NE}{NE}{ART}{NN}{PTKVZ}
+function;drucke Gewerbeanmeldung aus;drucke@@@ADJA|||Gewerbeanmeldung@@@NN|||aus@@@PTKVZ;{ADJA}{NN}{PTKVZ}
+function;schicke fehlende Unterlagen zu;schicke@@@ADJA|||fehlende@@@ADJA|||Unterlagen@@@NN|||zu@@@PTKVZ;{ADJA}{ADJA}{NN}{PTKVZ}
+function;kontrolliere die Erfassung;kontrolliere@@@VVFIN|||die@@@ART|||Erfassung@@@NN;{VVFIN}{ART}{NN}
+function;fordere Personalausweis an;fordere@@@VVFIN|||Personalausweis@@@NN|||an@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;informiere den Kunden über die Mitteilungen an  Behörden;informiere@@@VVFIN|||den@@@ART|||Kunden@@@NN|||ber@@@VVFIN|||die@@@ART|||Mitteilungen@@@NN|||an@@@APPR|||Beh@@@NE|||rden@@@VVFIN;{VVFIN}{ART}{NN}{VVFIN}{ART}{NN}{APPR}{NE}{VVFIN}
+function;erfasse die Anmeldung;erfasse@@@VVFIN|||die@@@ART|||Anmeldung@@@NN;{VVFIN}{ART}{NN}
+function;erstelle die Liste der fehlenden Unterlagen;erstelle@@@VVFIN|||die@@@ART|||Liste@@@NN|||der@@@ART|||fehlenden@@@ADJA|||Unterlagen@@@NN;{VVFIN}{ART}{NN}{ART}{ADJA}{NN}
+function;kontaktiere den Kunden per e-Mail;kontaktiere@@@VVFIN|||den@@@ART|||Kunden@@@NN|||per@@@APPR|||e-Mail@@@ADJD;{VVFIN}{ART}{NN}{APPR}{ADJD}
+function;nehme Geld ein;nehme@@@VVFIN|||Geld@@@NN|||ein@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;Kunde entscheidet, ob es das Verfahren fortgefahren soll;Kunde@@@NN|||entscheidet@@@VVFIN|||,@@@$,|||ob@@@KOUS|||es@@@PPER|||das@@@ART|||Verfahren@@@NN|||fortgefahren@@@VVINF|||soll@@@VMFIN;{NN}{VVFIN}{$,}{KOUS}{PPER}{ART}{NN}{VVINF}{VMFIN}
+function;verschicke Zahlungseinordnung an die Gemeindekasse;verschicke@@@ADJA|||Zahlungseinordnung@@@NN|||an@@@APPR|||die@@@ART|||Gemeindekasse@@@NN;{ADJA}{NN}{APPR}{ART}{NN}
+function;quittiere Quittung intern;quittiere@@@ADJA|||Quittung@@@NN|||intern@@@VVINF;{ADJA}{NN}{VVINF}
+function;prüfe Anmeldungssperre;pr@@@ADJD|||fe@@@ADJA|||Anmeldungssperre@@@NN;{ADJD}{ADJA}{NN}
+function;fordere unterschriebenes Formular an;fordere@@@VVFIN|||unterschriebenes@@@ADJA|||Formular@@@NN|||an@@@PTKVZ;{VVFIN}{ADJA}{NN}{PTKVZ}
+function;prüfe, ob eine  Erlaubnis erforderlich ist;pr@@@ADJD|||fe@@@VVFIN|||,@@@$,|||ob@@@KOUS|||eine@@@ART|||Erlaubnis@@@NN|||erforderlich@@@ADJD|||ist@@@VAFIN;{ADJD}{VVFIN}{$,}{KOUS}{ART}{NN}{ADJD}{VAFIN}
+function;fordere Eintragung in  Handwerksrolle an;fordere@@@VVFIN|||Eintragung@@@NN|||in@@@APPR|||Handwerksrolle@@@NN|||an@@@PTKVZ;{VVFIN}{NN}{APPR}{NN}{PTKVZ}
+function;Unterscheide Eingang der Anmeldung;Unterscheide@@@NN|||Eingang@@@NN|||der@@@ART|||Anmeldung@@@NN;{NN}{NN}{ART}{NN}
+function;stelle Quittung aus;stelle@@@VVFIN|||Quittung@@@NN|||aus@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;komme persönlich zur Gewerbeanmeldung;komme@@@VVFIN|||pers@@@ADJD|||nlich@@@ADJD|||zur@@@APPRART|||Gewerbeanmeldung@@@NN;{VVFIN}{ADJD}{ADJD}{APPRART}{NN}
+function;gebe Information dem Kunden;gebe@@@VVFIN|||Information@@@NN|||dem@@@ART|||Kunden@@@NN;{VVFIN}{NN}{ART}{NN}
+function;mache einen Termin aus;mache@@@VVFIN|||einen@@@ART|||Termin@@@NN|||aus@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;erfrage die Daten;erfrage@@@VVFIN|||die@@@ART|||Daten@@@NN;{VVFIN}{ART}{NN}
+function;drucke die Anmeldung aus dem Online-Server aus;drucke@@@VVFIN|||die@@@ART|||Anmeldung@@@NN|||aus@@@APPR|||dem@@@ART|||Online-Server@@@NN|||aus@@@PTKVZ;{VVFIN}{ART}{NN}{APPR}{ART}{NN}{PTKVZ}
+function;gebe Bestätigung über Gewerbeanmeldung dem Kunden;gebe@@@VVFIN|||Best@@@NE|||tigung@@@VVFIN|||ber@@@ADJD|||Gewerbeanmeldung@@@NN|||dem@@@ART|||Kunden@@@NN;{VVFIN}{NE}{VVFIN}{ADJD}{NN}{ART}{NN}
+function;erhebe Gebühr;erhebe@@@VVFIN|||Geb@@@NE|||hr@@@XY;{VVFIN}{NE}{XY}
+function;erfasse die Beschreibung des Gewerbes;erfasse@@@VVFIN|||die@@@ART|||Beschreibung@@@NN|||des@@@ART|||Gewerbes@@@NN;{VVFIN}{ART}{NN}{ART}{NN}
+function;schicke die Bestätigung dem Kunden zu;schicke@@@VVFIN|||die@@@ART|||Best@@@NE|||tigung@@@VVFIN|||dem@@@ART|||Kunden@@@NN|||zu@@@PTKVZ;{VVFIN}{ART}{NE}{VVFIN}{ART}{NN}{PTKVZ}
+function;gehe zu dem Kunden zurück;gehe@@@VVFIN|||zu@@@APPR|||dem@@@ART|||Kunden@@@NN|||zur@@@APPRART|||ck@@@NN;{VVFIN}{APPR}{ART}{NN}{APPRART}{NN}
+function;frage fehlende Unterlagen an;frage@@@ADJA|||fehlende@@@ADJA|||Unterlagen@@@NN|||an@@@PTKVZ;{ADJA}{ADJA}{NN}{PTKVZ}
+function;kontrolliere die Erfassung mit dem Kunden;kontrolliere@@@VVFIN|||die@@@ART|||Erfassung@@@NN|||mit@@@APPR|||dem@@@ART|||Kunden@@@NN;{VVFIN}{ART}{NN}{APPR}{ART}{NN}
+function;fordere Abmeldung von anderer Behörde an;fordere@@@VVFIN|||Abmeldung@@@NN|||von@@@APPR|||anderer@@@ADJA|||Beh@@@NN|||rde@@@VVFIN|||an@@@PTKVZ;{VVFIN}{NN}{APPR}{ADJA}{NN}{VVFIN}{PTKVZ}
+function;unterschreibe den Vordruck;unterschreibe@@@APPR|||den@@@ART|||Vordruck@@@NN;{APPR}{ART}{NN}
+function;trage Daten in die Sammelliste;trage@@@VVFIN|||Daten@@@NN|||in@@@APPR|||die@@@ART|||Sammelliste@@@NN;{VVFIN}{NN}{APPR}{ART}{NN}
+function;prüfe die Vollständigkeit der Anmeldung;pr@@@ADJD|||fe@@@VVFIN|||die@@@ART|||Vollst@@@NN|||ndigkeit@@@VVFIN|||der@@@ART|||Anmeldung@@@NN;{ADJD}{VVFIN}{ART}{NN}{VVFIN}{ART}{NN}
+function;erstelle Bestätigung;erstelle@@@ADJA|||Best@@@NE|||tigung@@@VVFIN;{ADJA}{NE}{VVFIN}
+function;unterrichte zuständige Behörden;unterrichte@@@ADJA|||zust@@@ADV|||ndige@@@ADJA|||Beh@@@NN|||rden@@@VVINF;{ADJA}{ADV}{ADJA}{NN}{VVINF}
+function;erteile keine Gewerbeanmeldung;erteile@@@ADJA|||keine@@@PIAT|||Gewerbeanmeldung@@@NN;{ADJA}{PIAT}{NN}
+function;fordere persönliche Erscheinung an;fordere@@@VVFIN|||pers@@@ADJD|||nliche@@@ADJA|||Erscheinung@@@NN|||an@@@PTKVZ;{VVFIN}{ADJD}{ADJA}{NN}{PTKVZ}
+function;fordere Personalausweis an;fordere@@@VVFIN|||Personalausweis@@@NN|||an@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;starte Untersagungsverfahren;starte@@@ADJA|||Untersagungsverfahren@@@NN;{ADJA}{NN}
+function;händige Bestätigung aus;h@@@FM|||ndige@@@FM|||Best@@@FM|||tigung@@@FM|||aus@@@PTKVZ;{FM}{FM}{FM}{FM}{PTKVZ}
+function;prüfe, ob es Geschäftsführer ist;pr@@@ADJD|||fe@@@VVFIN|||,@@@$,|||ob@@@KOUS|||es@@@PPER|||Gesch@@@NE|||ftsf@@@ADJD|||hrer@@@ADJD|||ist@@@VAFIN;{ADJD}{VVFIN}{$,}{KOUS}{PPER}{NE}{ADJD}{ADJD}{VAFIN}
+function;prüfen EU-Bürgerschaft;pr@@@ADJD|||fen@@@VVFIN|||EU-B@@@NE|||rgerschaft@@@ADJD;{ADJD}{VVFIN}{NE}{ADJD}
+function;fordere Bescheinigung an;fordere@@@VVFIN|||Bescheinigung@@@NN|||an@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;schicke angefertigten Antrag an das Steueramt zu;schicke@@@ADJA|||angefertigten@@@ADJA|||Antrag@@@NN|||an@@@APPR|||das@@@ART|||Steueramt@@@NN|||zu@@@PTKVZ;{ADJA}{ADJA}{NN}{APPR}{ART}{NN}{PTKVZ}
+function;schlage die Forderung nach zwei Jahre nieder;schlage@@@VVFIN|||die@@@ART|||Forderung@@@NN|||nach@@@APPR|||zwei@@@CARD|||Jahre@@@NN|||nieder@@@PTKVZ;{VVFIN}{ART}{NN}{APPR}{CARD}{NN}{PTKVZ}
+function;fordere Unterschrift an;fordere@@@VVFIN|||Unterschrift@@@NN|||an@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;erfasse alle Daten;erfasse@@@VVFIN|||alle@@@PIDAT|||Daten@@@NN;{VVFIN}{PIDAT}{NN}
+function;prüfe Handelsregisterauszug;pr@@@ADJD|||fe@@@ADJA|||Handelsregisterauszug@@@NN;{ADJD}{ADJA}{NN}
+function;unterscheide Art der Anmeldung;unterscheide@@@ADJA|||Art@@@NN|||der@@@ART|||Anmeldung@@@NN;{ADJA}{NN}{ART}{NN}
+function;schicke die Rechnung zurück;schicke@@@VVFIN|||die@@@ART|||Rechnung@@@NN|||zur@@@APPRART|||ck@@@NN;{VVFIN}{ART}{NN}{APPRART}{NN}
+function;fordere entsprechende Bescheide;fordere@@@VVFIN|||entsprechende@@@ADJA|||Bescheide@@@NN;{VVFIN}{ADJA}{NN}
+function;gebe der Gebührenbescheid dem Kunden;gebe@@@VVFIN|||der@@@ART|||Geb@@@NN|||hrenbescheid@@@VVFIN|||dem@@@ART|||Kunden@@@NN;{VVFIN}{ART}{NN}{VVFIN}{ART}{NN}
+function;kläre baurechtliche Rechte;kl@@@ADJD|||re@@@ADJA|||baurechtliche@@@ADJA|||Rechte@@@NN;{ADJD}{ADJA}{ADJA}{NN}
+function;kontaktiere den Kunden;kontaktiere@@@VVFIN|||den@@@ART|||Kunden@@@NN;{VVFIN}{ART}{NN}
+function;schicke die Unterlagen zu;schicke@@@VVFIN|||die@@@ART|||Unterlagen@@@NN|||zu@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;unterscheide Art des Gewerbes;unterscheide@@@ADJA|||Art@@@NN|||des@@@ART|||Gewerbes@@@NN;{ADJA}{NN}{ART}{NN}
+function;prüfe Vollständigkeit;pr@@@FM|||fe@@@FM|||Vollst@@@FM|||ndigkeit@@@FM;{FM}{FM}{FM}{FM}
+function;unterschreibe die beiden Exemplare;unterschreibe@@@ADJD|||die@@@ART|||beiden@@@PIDAT|||Exemplare@@@NN;{ADJD}{ART}{PIDAT}{NN}
+function;prüfe die Baurechte des Gewerbes;pr@@@ADJD|||fe@@@VVFIN|||die@@@ART|||Baurechte@@@NN|||des@@@ART|||Gewerbes@@@NN;{ADJD}{VVFIN}{ART}{NN}{ART}{NN}
+function;gebe die Gewerbebestätigung dem Kunden ab;gebe@@@VVFIN|||die@@@ART|||Gewerbebest@@@NN|||tigung@@@VVFIN|||dem@@@ART|||Kunden@@@NN|||ab@@@PTKVZ;{VVFIN}{ART}{NN}{VVFIN}{ART}{NN}{PTKVZ}
+function;stelle Siegel;stelle@@@VVFIN|||Siegel@@@NE;{VVFIN}{NE}
+function;fordere Prokura oder Vollmacht an;fordere@@@VVFIN|||Prokura@@@NE|||oder@@@KON|||Vollmacht@@@NN|||an@@@PTKVZ;{VVFIN}{NE}{KON}{NN}{PTKVZ}
+function;frage nach Art des Gewerbes;frage@@@ADJA|||nach@@@APPR|||Art@@@NN|||des@@@ART|||Gewerbes@@@NN;{ADJA}{APPR}{NN}{ART}{NN}
+function;erstelle Kostenbescheid mit PK-Nummer und Einnahmeart;erstelle@@@ADJA|||Kostenbescheid@@@NN|||mit@@@APPR|||PK-Nummer@@@NN|||und@@@KON|||Einnahmeart@@@NN;{ADJA}{NN}{APPR}{NN}{KON}{NN}
+function;fordere Unterschrift  an;fordere@@@VVFIN|||Unterschrift@@@NN|||an@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+event;Vordrucke sind unterschrieben;Vordrucke@@@NN|||sind@@@VAFIN|||unterschrieben@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Kostenbescheid ist zugeschickt;Kostenbescheid@@@NN|||ist@@@VAFIN|||zugeschickt@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Vollständigkeit ist kontrolliert;Vollst@@@ADV|||ndigkeit@@@ADJD|||ist@@@VAFIN|||kontrolliert@@@VVPP;{ADV}{ADJD}{VAFIN}{VVPP}
+event;Ausweis liegt nicht vor;Ausweis@@@NE|||liegt@@@VVFIN|||nicht@@@PTKNEG|||vor@@@PTKVZ;{NE}{VVFIN}{PTKNEG}{PTKVZ}
+event;Art der Tätigkeit ist gefragt;Art@@@NN|||der@@@ART|||T@@@NN|||tigkeit@@@ADJD|||ist@@@VAFIN|||gefragt@@@VVPP;{NN}{ART}{NN}{ADJD}{VAFIN}{VVPP}
+event;Kunde hat die Anmeldebestätigung bekommen;Kunde@@@NN|||hat@@@VAFIN|||die@@@ART|||Anmeldebest@@@NN|||tigung@@@VVFIN|||bekommen@@@VVINF;{NN}{VAFIN}{ART}{NN}{VVFIN}{VVINF}
+event;Anmeldung durch einheitlichen Ansprechpartner;Anmeldung@@@NN|||durch@@@APPR|||einheitlichen@@@ADJA|||Ansprechpartner@@@NN;{NN}{APPR}{ADJA}{NN}
+event;Handelsregisterauszug ist nicht notwendig;Handelsregisterauszug@@@NN|||ist@@@VAFIN|||nicht@@@PTKNEG|||notwendig@@@ADJD;{NN}{VAFIN}{PTKNEG}{ADJD}
+event;Personalausweiskopie ist angefordert;Personalausweiskopie@@@NN|||ist@@@VAFIN|||angefordert@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Abmeldung ist nicht vorhanden;Abmeldung@@@NN|||ist@@@VAFIN|||nicht@@@PTKNEG|||vorhanden@@@ADJD;{NN}{VAFIN}{PTKNEG}{ADJD}
+event;Mitarbeiter ist zur "Zentrallkasse" angekommen;Mitarbeiter@@@NN|||ist@@@VAFIN|||zur@@@APPRART|||"@@@$[|||Zentrallkasse@@@NN|||"@@@$[|||angekommen@@@VVPP;{NN}{VAFIN}{APPRART}{$[}{NN}{$[}{VVPP}
+event;Kunde ist gekommen;Kunde@@@NN|||ist@@@VAFIN|||gekommen@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Anmeldung ist ausgedruckt;Anmeldung@@@NN|||ist@@@VAFIN|||ausgedruckt@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Es ist Einzelunternehmen;Es@@@PPER|||ist@@@VAFIN|||Einzelunternehmen@@@NN;{PPER}{VAFIN}{NN}
+event;Betriebsanordnung ist angeordnet;Betriebsanordnung@@@NN|||ist@@@VAFIN|||angeordnet@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Unterlagen sind vollständig;Unterlagen@@@NN|||sind@@@VAFIN|||vollst@@@ADV|||ndig@@@ADJD;{NN}{VAFIN}{ADV}{ADJD}
+event;Barzahlung;Barzahlung@@@NN;{NN}
+event;Firmen sitzt ist nicht im Quierschied;Firmen@@@NN|||sitzt@@@VVFIN|||ist@@@VAFIN|||nicht@@@PTKNEG|||im@@@APPRART|||Quierschied@@@NN;{NN}{VVFIN}{VAFIN}{PTKNEG}{APPRART}{NN}
+event;Handelsregisterauszug ist angefordert;Handelsregisterauszug@@@NN|||ist@@@VAFIN|||angefordert@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Persönlich;Pers@@@NE|||nlich@@@ADJD;{NE}{ADJD}
+event;Anweisung ist ausgedruckt;Anweisung@@@NN|||ist@@@VAFIN|||ausgedruckt@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Firmensitz befindet sich im Quierschied;Firmensitz@@@NN|||befindet@@@VVFIN|||sich@@@PRF|||im@@@APPRART|||Quierschied@@@NN;{NN}{VVFIN}{PRF}{APPRART}{NN}
+event;Erfassung ist kontrolliert;Erfassung@@@NN|||ist@@@VAFIN|||kontrolliert@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Kunde hat Information bekommen;Kunde@@@NN|||hat@@@VAFIN|||Information@@@NN|||bekommen@@@VVPP;{NN}{VAFIN}{NN}{VVPP}
+event;Erlaubnis ist nicht erforderlich;Erlaubnis@@@NN|||ist@@@VAFIN|||nicht@@@PTKNEG|||erforderlich@@@ADJD;{NN}{VAFIN}{PTKNEG}{ADJD}
+event;Zahlungsanordnung ist verschickt;Zahlungsanordnung@@@NN|||ist@@@VAFIN|||verschickt@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Daten sind erfragt;Daten@@@NN|||sind@@@VAFIN|||erfragt@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Gebührenbescheid ist ausgestellt;Geb@@@NE|||hrenbescheid@@@NE|||ist@@@VAFIN|||ausgestellt@@@VVPP;{NE}{NE}{VAFIN}{VVPP}
+event;Gewerbeanmeldung ist ausgedruckt;Gewerbeanmeldung@@@NN|||ist@@@VAFIN|||ausgedruckt@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Erlaubnis ist nicht vorhanden;Erlaubnis@@@NN|||ist@@@VAFIN|||nicht@@@PTKNEG|||vorhanden@@@ADJD;{NN}{VAFIN}{PTKNEG}{ADJD}
+event;Abmeldung ist vorhanden;Abmeldung@@@NN|||ist@@@VAFIN|||vorhanden@@@ADJD;{NN}{VAFIN}{ADJD}
+event;Handelsregisterauszug ist nicht vorhanden;Handelsregisterauszug@@@NN|||ist@@@VAFIN|||nicht@@@PTKNEG|||vorhanden@@@ADJD;{NN}{VAFIN}{PTKNEG}{ADJD}
+event;Unterlagen sind per Post gekommen;Unterlagen@@@NN|||sind@@@VAFIN|||per@@@APPR|||Post@@@NN|||gekommen@@@VVPP;{NN}{VAFIN}{APPR}{NN}{VVPP}
+event;Geld ist eingenommen;Geld@@@NN|||ist@@@VAFIN|||eingenommen@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Beschreibung ist erfasst;Beschreibung@@@NN|||ist@@@VAFIN|||erfasst@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Erlaubnis ist erforderlich;Erlaubnis@@@NN|||ist@@@VAFIN|||erforderlich@@@ADJD;{NN}{VAFIN}{ADJD}
+event;Scheck;Scheck@@@NN;{NN}
+event;Zahlschein ist ausgefühlt;Zahlschein@@@NN|||ist@@@VAFIN|||ausgef@@@ADJD|||hlt@@@XY;{NN}{VAFIN}{ADJD}{XY}
+event;Kunde kommt persönlich;Kunde@@@NN|||kommt@@@VVFIN|||pers@@@ADJD|||nlich@@@ADJD;{NN}{VVFIN}{ADJD}{ADJD}
+event;Zwei Exemplare sind ausgedruckt;Zwei@@@CARD|||Exemplare@@@NN|||sind@@@VAFIN|||ausgedruckt@@@VVPP;{CARD}{NN}{VAFIN}{VVPP}
+event;Unselbständige Zweigstelle;Unselbst@@@ADV|||ndige@@@ADJA|||Zweigstelle@@@NN;{ADV}{ADJA}{NN}
+event;Unterlagen sind vollständig;Unterlagen@@@NN|||sind@@@VAFIN|||vollst@@@ADV|||ndig@@@ADJD;{NN}{VAFIN}{ADV}{ADJD}

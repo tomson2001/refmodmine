@@ -64,6 +64,8 @@ $modelName = basename($input, ".bpmn");
 $modelName = str_replace("workspace.epml.bpmn.", "", $modelName);
 $modelName = str_replace("custom.", "", $modelName);	
 $bpmn = new BPMN($xml, $modelName);
+//$bpmn->improveFunctionsWhichAreCatchEventsLabels();
+//$bpmn->handleCatchEventsAsReceiveFunktions();
 $epc = $bpmn->transform2EPC();
 $generatedFile = $epc->exportEPML();
 rename($generatedFile, $output);

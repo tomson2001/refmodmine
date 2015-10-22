@@ -41,7 +41,37 @@ class Match {
 		$numOfModel1Nodes = count($this->nodeIDsOfModel1);
 		$numOfModel2Nodes = count($this->nodeIDsOfModel2);
 		return ( $numOfModel1Nodes > 1 || $numOfModel2Nodes > 1 );
-	}	
+	}
+	
+	public function toString(EPC &$epc1, EPC &$epc2) {
+		$string = "\n  Nodes in Model 1:\n";
+		foreach ( $this->nodeIDsOfModel1 as $nodeID ) {
+			$nodeType = $epc1->getType($nodeID);
+			$label = "";
+			switch ( $nodeType ) {
+				case "function": $label = $epc1->functions[$nodeID]; break;
+				case "event": 	 $label = $epc1->events[$nodeID]; break;
+				case "xor":      $label = "xor"; break;
+				case "or":		 $label = "or"; break;
+				case "and":		 $label = "and"; break;
+			}
+			$string .= "    ".$label." (".$nodeID.")\n";
+		}
+		$string .= "  Nodes in Model 2:\n";
+		foreach ( $this->nodeIDsOfModel2 as $nodeID ) {
+			$nodeType = $epc2->getType($nodeID);
+			$label = "";
+			switch ( $nodeType ) {
+				case "function": $label = $epc2->functions[$nodeID]; break;
+				case "event": 	 $label = $epc2->events[$nodeID]; break;
+				case "xor":      $label = "xor"; break;
+				case "or":		 $label = "or"; break;
+				case "and":		 $label = "and"; break;
+			}
+			$string .= "    ".$label." (".$nodeID.")\n";
+		}
+		return $string;
+	}
 	
 }
 ?>

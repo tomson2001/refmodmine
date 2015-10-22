@@ -1,0 +1,54 @@
+a070e31216c499cdcd7ca77017691b47;Saaarbrücken_Abmeldung
+function;gebe den Grund der Abmeldung an;gebe@@@VVFIN|||den@@@ART|||Grund@@@NN|||der@@@ART|||Abmeldung@@@NN|||an@@@PTKVZ;{VVFIN}{ART}{NN}{ART}{NN}{PTKVZ}
+function;gebe die Bestätigung dem Kunden ab;gebe@@@VVFIN|||die@@@ART|||Best@@@NE|||tigung@@@VVFIN|||dem@@@ART|||Kunden@@@NN|||ab@@@PTKVZ;{VVFIN}{ART}{NE}{VVFIN}{ART}{NN}{PTKVZ}
+function;bezahle die Gebühr an der Kasse;bezahle@@@VVFIN|||die@@@ART|||Geb@@@NN|||hr@@@PROAV|||an@@@APPR|||der@@@ART|||Kasse@@@NN;{VVFIN}{ART}{NN}{PROAV}{APPR}{ART}{NN}
+function;schicke die Bestätigung dem Kunden zu;schicke@@@VVFIN|||die@@@ART|||Best@@@NE|||tigung@@@VVFIN|||dem@@@ART|||Kunden@@@NN|||zu@@@PTKVZ;{VVFIN}{ART}{NE}{VVFIN}{ART}{NN}{PTKVZ}
+function;händige den Gebührenzettel aus;h@@@FM|||ndige@@@FM|||den@@@ART|||Geb@@@NN|||hrenzettel@@@ADJD|||aus@@@PTKVZ;{FM}{FM}{ART}{NN}{ADJD}{PTKVZ}
+function;drucke die Gewerbeabmeldung aus;drucke@@@VVFIN|||die@@@ART|||Gewerbeabmeldung@@@NN|||aus@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;melde Gewerbe zum bestimmten Datum ab;melde@@@VVFIN|||Gewerbe@@@NN|||zum@@@APPRART|||bestimmten@@@ADJA|||Datum@@@NN|||ab@@@PTKVZ;{VVFIN}{NN}{APPRART}{ADJA}{NN}{PTKVZ}
+function;unterscheide Weg der Abmeldung;unterscheide@@@ADJA|||Weg@@@NN|||der@@@ART|||Abmeldung@@@NN;{ADJA}{NN}{ART}{NN}
+function;Unterschreibe die Abmeldung;Unterschreibe@@@NN|||die@@@ART|||Abmeldung@@@NN;{NN}{ART}{NN}
+function;schicke die notwendigen Unterlagen;schicke@@@VVFIN|||die@@@ART|||notwendigen@@@ADJA|||Unterlagen@@@NN;{VVFIN}{ART}{ADJA}{NN}
+function;schicke Kostenbescheid dem Kunden zu;schicke@@@ADJA|||Kostenbescheid@@@NN|||dem@@@ART|||Kunden@@@NN|||zu@@@PTKVZ;{ADJA}{NN}{ART}{NN}{PTKVZ}
+function;zahle das Geld;zahle@@@VVFIN|||das@@@ART|||Geld@@@NN;{VVFIN}{ART}{NN}
+function;gehe zur Bank, um das Geld abzuheben;gehe@@@VVFIN|||zur@@@APPRART|||Bank@@@NN|||,@@@$,|||um@@@KOUI|||das@@@ART|||Geld@@@NN|||abzuheben@@@VVINF;{VVFIN}{APPRART}{NN}{$,}{KOUI}{ART}{NN}{VVINF}
+function;unterschreibe das Formular;unterschreibe@@@ADJA|||das@@@ART|||Formular@@@NN;{ADJA}{ART}{NN}
+function;fülle das Formular aus;f@@@VVFIN|||lle@@@PPER|||das@@@ART|||Formular@@@NN|||aus@@@PTKVZ;{VVFIN}{PPER}{ART}{NN}{PTKVZ}
+function;bezahle das Geld an die Zentralkasse ein;bezahle@@@VVFIN|||das@@@ART|||Geld@@@NN|||an@@@APPR|||die@@@ART|||Zentralkasse@@@NN|||ein@@@PTKVZ;{VVFIN}{ART}{NN}{APPR}{ART}{NN}{PTKVZ}
+function;unterschreibe das Formular;unterschreibe@@@ADJA|||das@@@ART|||Formular@@@NN;{ADJA}{ART}{NN}
+function;nehme Geld ein;nehme@@@VVFIN|||Geld@@@NN|||ein@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;schicke das Formular dem Kunden zu;schicke@@@VVFIN|||das@@@ART|||Formular@@@NN|||dem@@@ART|||Kunden@@@NN|||zu@@@PTKVZ;{VVFIN}{ART}{NN}{ART}{NN}{PTKVZ}
+function;verborge Anweisung;verborge@@@ADJA|||Anweisung@@@NN;{ADJA}{NN}
+function;stelle Gebührenbescheid aus;stelle@@@VVFIN|||Geb@@@NE|||hrenbescheid@@@VVFIN|||aus@@@PTKVZ;{VVFIN}{NE}{VVFIN}{PTKVZ}
+function;gebe Rückgeld dem Kunden ab;gebe@@@VVFIN|||R@@@NE|||ckgeld@@@NE|||dem@@@ART|||Kunden@@@NN|||ab@@@PTKVZ;{VVFIN}{NE}{NE}{ART}{NN}{PTKVZ}
+function;schicke das Formular zurück;schicke@@@VVFIN|||das@@@ART|||Formular@@@NN|||zur@@@APPRART|||ck@@@NN;{VVFIN}{ART}{NN}{APPRART}{NN}
+function;stelle Quittung aus;stelle@@@VVFIN|||Quittung@@@NN|||aus@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;gehe zu dem Kunden zurück;gehe@@@VVFIN|||zu@@@APPR|||dem@@@ART|||Kunden@@@NN|||zur@@@APPRART|||ck@@@NN;{VVFIN}{APPR}{ART}{NN}{APPRART}{NN}
+function;drucke Anweisung aus;drucke@@@ADJA|||Anweisung@@@NN|||aus@@@PTKVZ;{ADJA}{NN}{PTKVZ}
+function;gehe zur "Zentrallkasse";gehe@@@VVFIN|||zur@@@APPRART|||"@@@$[|||Zentrallkasse@@@NN|||"@@@$[;{VVFIN}{APPRART}{$[}{NN}{$[}
+function;fordere Dokumente an;fordere@@@VVFIN|||Dokumente@@@NN|||an@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;prüfe, ob Abmeldebescheinigung vorliegt;pr@@@ADJD|||fe@@@VVFIN|||,@@@$,|||ob@@@KOUS|||Abmeldebescheinigung@@@NN|||vorliegt@@@VVFIN;{ADJD}{VVFIN}{$,}{KOUS}{NN}{VVFIN}
+function;hebe Unterlagen zwei Jahre auf;hebe@@@VVFIN|||Unterlagen@@@NN|||zwei@@@CARD|||Jahre@@@NN|||auf@@@PTKVZ;{VVFIN}{NN}{CARD}{NN}{PTKVZ}
+function;händige Bestätigung aus;h@@@FM|||ndige@@@FM|||Best@@@FM|||tigung@@@FM|||aus@@@PTKVZ;{FM}{FM}{FM}{FM}{PTKVZ}
+function;fordere Bescheinigung an;fordere@@@VVFIN|||Bescheinigung@@@NN|||an@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;unterrichte zuständige Behörden;unterrichte@@@ADJA|||zust@@@ADV|||ndige@@@ADJA|||Beh@@@NN|||rden@@@VVINF;{ADJA}{ADV}{ADJA}{NN}{VVINF}
+function;hefte Bescheinigung mit dem Vermerk "nicht bezahlt" ab;hefte@@@ADJA|||Bescheinigung@@@NN|||mit@@@APPR|||dem@@@ART|||Vermerk@@@NN|||"@@@$[|||nicht@@@PTKNEG|||bezahlt@@@VVPP|||"@@@$[|||ab@@@PTKVZ;{ADJA}{NN}{APPR}{ART}{NN}{$[}{PTKNEG}{VVPP}{$[}{PTKVZ}
+function;trage Daten in die Sammelliste;trage@@@VVFIN|||Daten@@@NN|||in@@@APPR|||die@@@ART|||Sammelliste@@@NN;{VVFIN}{NN}{APPR}{ART}{NN}
+function;erstelle Gebührenbescheid;erstelle@@@ADJA|||Geb@@@NN|||hrenbescheid@@@PTKVZ;{ADJA}{NN}{PTKVZ}
+function;verlange die Gebühr;verlange@@@VVFIN|||die@@@ART|||Geb@@@NN|||hr@@@XY;{VVFIN}{ART}{NN}{XY}
+function;melde das Gewerbe ab;melde@@@VVFIN|||das@@@ART|||Gewerbe@@@NN|||ab@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;erstelle Kassenkonto;erstelle@@@ADJA|||Kassenkonto@@@NN;{ADJA}{NN}
+function;verlange den Ausweis;verlange@@@VVFIN|||den@@@ART|||Ausweis@@@NN;{VVFIN}{ART}{NN}
+function;gebe dem Kunden Zahlschein;gebe@@@VVFIN|||dem@@@ART|||Kunden@@@NN|||Zahlschein@@@NN;{VVFIN}{ART}{NN}{NN}
+function;schicke das Formular zurück;schicke@@@VVFIN|||das@@@ART|||Formular@@@NN|||zur@@@APPRART|||ck@@@NN;{VVFIN}{ART}{NN}{APPRART}{NN}
+function;ordne PK-Nummer dem Kunden zu;ordne@@@ADJA|||PK-Nummer@@@NN|||dem@@@ART|||Kunden@@@NN|||zu@@@PTKVZ;{ADJA}{NN}{ART}{NN}{PTKVZ}
+function;gebe Bestätigung dem Kunden ab;gebe@@@VVFIN|||Best@@@NE|||tigung@@@VVFIN|||dem@@@ART|||Kunden@@@NN|||ab@@@PTKVZ;{VVFIN}{NE}{VVFIN}{ART}{NN}{PTKVZ}
+event;Bestätigung ist zugeschickt;Best@@@NE|||tigung@@@ADJD|||ist@@@VAFIN|||zugeschickt@@@VVPP;{NE}{ADJD}{VAFIN}{VVPP}
+event;Formular ist zurückgeschickt;Formular@@@NE|||ist@@@VAFIN|||zur@@@APPRART|||ckgeschickt@@@NN;{NE}{VAFIN}{APPRART}{NN}
+event;Gebührenbescheid ist ausgestellt;Geb@@@NE|||hrenbescheid@@@NE|||ist@@@VAFIN|||ausgestellt@@@VVPP;{NE}{NE}{VAFIN}{VVPP}
+event;Kunde hat schriftlich abgemeldet;Kunde@@@NN|||hat@@@VAFIN|||schriftlich@@@ADJD|||abgemeldet@@@VVPP;{NN}{VAFIN}{ADJD}{VVPP}
+event;Formular ist unterschrieben;Formular@@@NE|||ist@@@VAFIN|||unterschrieben@@@VVPP;{NE}{VAFIN}{VVPP}
+event;Formular ist zugeschickt;Formular@@@NE|||ist@@@VAFIN|||zugeschickt@@@VVPP;{NE}{VAFIN}{VVPP}
+event;Kunde zahlt später;Kunde@@@NN|||zahlt@@@VVFIN|||sp@@@ADJD|||ter@@@ADJD;{NN}{VVFIN}{ADJD}{ADJD}
+event;Forderung ist niedergeschlagen;Forderung@@@NN|||ist@@@VAFIN|||niedergeschlagen@@@ADJD;{NN}{VAFIN}{ADJD}
+event;Blanco-Formular ist zugeschickt;Blanco-Formular@@@NN|||ist@@@VAFIN|||zugeschickt@@@VVPP;{NN}{VAFIN}{VVPP}

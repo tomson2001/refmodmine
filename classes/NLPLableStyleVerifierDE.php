@@ -5,31 +5,12 @@
  * @author thaler
  *
  */
-class NLPLableStyleVerifierDE {
+class NLPLableStyleVerifierDE extends ANLPLabelStyleVerifier {
 	
 	// Pattern of HighLevelTags => Label Style Key (see NLPHighLevelTransformator)
-	private $lableStyles = array(
+	protected $lableStyles = array(
 
 	);
-	
-	public function __construct() {
-		
-	}
-	
-	/**
-	 * getLableStyle
-	 * 
-	 * return the labeling style based on a tag set.
-	 * 
-	 * @param  string $tagSetString tag-set-string
-	 * @return string Label Style Key
-	 */
-	public function getLableStyleKey($tagSetString) {
-		foreach ( $this->lableStyles as $pattern => $styleKey ) {
-			if ( $pattern == $tagSetString ) return $styleKey;
-		}
-		return false;
-	}
 	
 }
 ?>

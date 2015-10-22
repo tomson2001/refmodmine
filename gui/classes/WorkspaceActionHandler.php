@@ -21,8 +21,6 @@ class WorkspaceActionHandler {
 		
 		foreach ( $this->config->workspaceActions as $collapseName => $actions ) {
 			
-			if ( empty($actions) ) continue;
-			
 			$code .= "  <div class=\"panel panel-default\">\n";
 			$code .= "    <div class=\"panel-heading\" role=\"tab\" id=\"heading".$collapseNum."\">\n";
 			$code .= "      <h4 class=\"panel-title\">\n";
@@ -52,6 +50,41 @@ class WorkspaceActionHandler {
 		}
 		
 		$code .= "<div>";
+		return $code;
+	}
+	
+	public function getLatestFeaturesMenu() {
+		$this->initProcessing();
+		$code = "<div class=\"list-group\">";
+		
+		foreach ( $this->config->latestFeatures as $action ) {
+		
+			$actionData = $this->config->getActionData($action);
+			
+			// compose link components
+			$href = "index.php?site=workspace&action=doProceedWorkspaceAction&processingAction=".$action;
+			$title = implode(" | ", $actionData["Literature"]);
+			$description = $actionData["Description"];
+			$name = $actionData["Name"];
+			
+			if ( $this->isUserInputNeededForAction($action) ) {			
+				$modalCode = $this->createModalForActionLinkItem($action);
+				$href = $this->workspace->numModels == 0 && $this->config->doesActionRequiresWorkspaceModels($action) ? "index.php?site=workspace" : "#modal_set_params_".$action;
+				$active = $this->workspace->numModels == 0 && $this->config->doesActionRequiresWorkspaceModels($action) ? "" : " active";
+				$code .= "  <a href=\"".$href."\" class=\"list-group-item ".$active."\" data-toggle=\"modal\" title=\"".$title."\" data-placement=\"bottom\">\n";
+				$code .= "    <h4 class=\"list-group-item-heading\">".$name."</h4>";
+				$code .= "    <h5 class=\"list-group-item-text\">".$description."</h5>";
+				$code .= "  </a>\n".$modalCode;
+			} else {
+				$href = $this->workspace->numModels == 0 && $this->config->doesActionRequiresWorkspaceModels($action) ? "index.php?site=workspace" : $href;
+				$code .= "  <a href=\"".$href."\" class=\"list-group-item\" title=\"".$title."\">\n";
+				$code .= "    <h4 class=\"list-group-item-heading\">".$name."</h4>";
+				$code .= "    <h5 class=\"list-group-item-text\">".$description."</h5>";
+				$code .= "  </a>\n";
+			}
+		}
+		
+		$code .= "</div>";
 		return $code;
 	}
 	
@@ -92,7 +125,7 @@ class WorkspaceActionHandler {
 		$code =  "<div class=\"modal fade\" id=\"modal_set_params_".$action."\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modal_label_set_params".$action."\" aria-hidden=\"true\">\n"; 
 		$code .= "  <div class=\"modal-dialog\">\n";
 		$code .= "    <div class=\"modal-content\">\n";
-		$code .= "      <form  class=\"form-horizontal\" method=\"post\">\n";
+		$code .= "      <form  class=\"form-horizontal\" method=\"post\" action=\"index.php?site=workspace\">\n";
 		$code .= "        <input type=\"hidden\" name=\"action\" value=\"doProceedWorkspaceAction\" />\n";
 		$code .= "        <input type=\"hidden\" name=\"processingAction\" value=\"".$action."\" />\n";
 		$code .= "        <div class=\"modal-header\">\n";
@@ -100,6 +133,11 @@ class WorkspaceActionHandler {
 		$code .= "          <h4 class=\"modal-title\" id=\"modal_label_set_params".$action."\">Parameters for ".$actionData["Name"]."</h4>\n";
 		$code .= "        </div>\n";
 		$code .= "        <div class=\"modal-body\">\n";
+		
+		// Print description of action
+		if ( isset($actionData["Description"]) ) {
+			$code .= "            <p class=\"help-block\">".$actionData["Description"]."</p>\n";
+		}
 		
 		$runPossible = true; // switch deciding whether all input data are available for an execution of the action
 		
@@ -128,6 +166,11 @@ class WorkspaceActionHandler {
 				continue;
 			}
 			
+			if ( $value == "INPUT_TEXTFIELD" ) {
+				$code .= "          <textarea class=\"form-control\" name=\"".$paramName."\" rows=\"6\">".$paramName."</textarea>";
+				continue;
+			}
+			
 			if ( $value == "SELECT_ONE_METRICS" ) {
 				// TODO
 				continue;
@@ -147,6 +190,29 @@ class WorkspaceActionHandler {
 				foreach ( $simmatrixFiles as $file => $entry ) {
 					$fileParams = $workspaceData->getFileParams($file);
 					$description = $this->config->getFileTypeDescriptions("simmatrix", $fileParams);
+					$code .= "               <option value=\"".$workspaceData->path."/".$entry."\">".$description."</option>\n";
+				}
+				$code .= "               ".$placeHolder."\n";
+				$code .= "              </select>\n";
+				$code .= "            </div>\n";
+				$code .= "          </div>\n";
+				continue;
+			}
+			
+			if ( $value == "SELECT_ONE_XML_MATCHING" ) {
+			
+				$xmlMatchingFiles = $workspaceData->getFilesOfType("xmlmatching");
+				$disabled = empty($xmlMatchingFiles) ? "disabled" : "";
+				$placeHolder = empty($xmlMatchingFiles) ? "<option>no xml matching available</option>" : "";
+				if ( empty($xmlMatchingFiles) ) $runPossible = false;
+			
+				$code .= "          <div class=\"form-group\">\n";
+				$code .= "            <label for=\"".$paramName."\" class=\"col-sm-4 control-label\">".$paramName."</label>\n";
+				$code .= "            <div class=\"col-sm-6\">\n";
+				$code .= "              <select class=\"form-control\" ".$disabled." name=\"".$paramName."\" id=\"".$paramName."\">\n";
+				foreach ( $xmlMatchingFiles as $file => $entry ) {
+					$fileParams = $workspaceData->getFileParams($file);
+					$description = $this->config->getFileTypeDescriptions("xmlmatching", $fileParams);
 					$code .= "               <option value=\"".$workspaceData->path."/".$entry."\">".$description."</option>\n";
 				}
 				$code .= "               ".$placeHolder."\n";
@@ -254,7 +320,12 @@ class WorkspaceActionHandler {
 				
 				if ( in_array($value, $this->config->userDependencyParams) ) {
 					$paramValue = $_POST[$paramName];
-					$command .= $paramNamePart.$paramValue." ";
+					
+					$commandExtension = $paramNamePart.$paramValue." ";
+					//print($paramValue."\n<br>");
+					if ( substr_count($paramValue, " ") > 0 ) $commandExtension = $paramNamePart."\"".$paramValue."\" ";
+					if ( isset($actionData["ignoreParameters"]) && in_array($paramName, $actionData["ignoreParameters"]) ) $commandExtension = "";
+					$command .= $commandExtension;
 					
 					$replaceFragments["%".$paramName."%"] = $paramValue;
 					
@@ -271,6 +342,7 @@ class WorkspaceActionHandler {
 				
 				$value = str_replace("CONST_SESSION_E_MAIL", $this->_CONST_SESSION_E_MAIL, $value);
 				$value = str_replace("CONST_WORKSPACE_EPML", $this->_CONST_WORKSPACE_EPML, $value);
+								
 				$command .= $paramNamePart.$value." ";
 				$replaceFragments["%".$paramName."%"] = $value;
 			}
@@ -279,6 +351,7 @@ class WorkspaceActionHandler {
 			if ( $actionData["EmbedInPHP"] ) {
 				Logger::log($this->_CONST_SESSION_E_MAIL, "External call started (Embedded in PHP): ".$command, "ACCESS");
 				$command = str_replace(" ", "[]", $command);
+				$command = str_replace("\"", "@QUOTE@", $command);
 				$description = str_replace(" ", "[]", $actionData["Name"]);
 				$command = "php CLIExternalExecution.php command=".$command." description=".$description." sessionid=".$this->_CONST_SESSION_ID." notification=".$this->_CONST_SESSION_E_MAIL." ";
 				$command .= "> /dev/null &";

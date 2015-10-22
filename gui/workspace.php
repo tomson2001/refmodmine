@@ -166,6 +166,8 @@ $reloadLink = "index.php?site=workspace";
 					?>
 						<h2>Available Data
 						<?php echo $clearFiles; ?>
+						
+						<!-- UPLOADER -->
 						<small><a href="#modal_data_file_upload" role="button" title="upload file" data-toggle="modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></small>
 						</h2>
 						
@@ -181,7 +183,7 @@ $reloadLink = "index.php?site=workspace";
 										
 										<div class="modal-body">
 											<div class="form-group">
-											  <label for="type" class="col-sm-2 control-label">Type</label>
+											  <label for="type" class="col-sm-2 control-label">Type <a href="index.php?site=fileTypeSpecifications" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></label>
 											  <div class="col-sm-10">
 											    <select name="type" id="type" class="form-control">
 										  
@@ -219,6 +221,7 @@ $reloadLink = "index.php?site=workspace";
 								</div>
 							</div>
 						</div>
+						<!-- END UPLOADER -->
 						
 						<?php
 						
@@ -245,9 +248,16 @@ $reloadLink = "index.php?site=workspace";
 							 <tr>
 							 	<td><span class="<?php echo $workspaceActionConfig->getFileTypeIcon($fileType); ?>" aria-hidden="true"></span></td>
 							 	<td><?php echo $workspaceActionConfig->getFileTypeName($fileType); ?></td>
-							 	<td><?php echo $workspaceActionConfig->getFileTypeDescriptions($fileType, $fileParams); ?></td>
+							 	<td><?php echo $workspaceActionConfig->getFileTypeDescriptions($fileType, $fileParams); ?>
+							 		<a href="#modal_editFileDescription_<?php echo md5($wFile); ?>" role="button" title="edit" alt="edit" data-toggle="modal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+							 		<?php echo $workspaceData->getEditFileDescriptionModalCode($wFile, $reloadLink); ?>
+							 	</td>
 							 	<td>
 							 		<?php if ( !is_null($workspaceActionConfig->getFileTypeOpenMethod($fileType)) ) { ?><a href="index.php?site=<?php echo $workspaceActionConfig->getFileTypeOpenMethod($fileType); ?>&file=<?php echo $wFile; ?>" title="show file" alt="show file"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a><?php } ?>
+							 		<?php if ( in_array($fileType, array("models", "model")) ) { ?>
+							 			<a href="#modal_addModelsFromDataToWorkspace_<?php echo md5($wFile); ?>" role="button" title="add to workspace" alt="add to workspace" data-toggle="modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+							 			<?php echo $workspaceData->getAddModelsFromDataToWorkspaceModalCode($wFile, $reloadLink); ?>
+							 		<?php } ?>
 							 		<a href="<?php echo $workspaceData->getDownloadLink($wFile); ?>" download="<?php echo $workspaceData->getDownloadFilename($wFile); ?>" title="download <?php echo $workspaceActionConfig->getFileTypeExtension($fileType); ?>"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></a>
 							 		<a href="#modal_delete_<?php echo md5($wFile); ?>" role="button" title="delete" alt="delete" data-toggle="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 							 		<?php echo $workspaceData->getDeleteModalCode($wFile, $reloadLink); ?>
@@ -270,16 +280,21 @@ $reloadLink = "index.php?site=workspace";
 					      
 			    </div>
 			    <div class="col-md-3">
-			        <h2>Operations</h2>
 			        
-			<?php if ( !is_null($epc) ) { 
+			<?php if ( !is_null($epc) ) { ?>
 
+				<h2>Model Details</h2>
+
+			<?php 
         	// load data to show
         	$modelPath = $epc->modelPathOnly;
-        	$modelPath = substr($modelPath, 1);
+        	$modelPath = substr($modelPath, 6);
         	$pos = strrpos($modelPath, "/")+1;
         	$sourceFilename = substr($modelPath, $pos);
         	$file = str_replace(".epml", "", $sourceFilename);
+        	
+        	$epcHash = $epc->getHash();
+        	$editEPCNameModalCode = $workspace->getEditEPCNameModalCode($modelID);
         	
         	$sourceRepo = substr($modelPath, 0, $pos-1);
         	$sourceRepo = ( $sourceRepo == Config::REPOSITORY_PATH ) ? "repo" : "userRepo";
@@ -299,20 +314,29 @@ $reloadLink = "index.php?site=workspace";
         ?>
         		<!-- A model was selected -->
         			<div class="list-group">
-					  <a href="#" class="list-group-item">
+					  <a href="#modal_editEPCName_<?php echo $epcHash; ?>" data-toggle="modal" class="list-group-item">
 					    <p class="list-group-item-text">Model</p>
 					    <h4 class="list-group-item-heading"><?php echo $epc->name; ?></h4>
-					    <p class="list-group-item-text"><?php echo $modelPath; ?></p>
+					    <?php if ( file_exists($modelPath) ) { ?><p class="list-group-item-text"><?php echo $modelPath; ?></p><?php } ?>
 					  </a>
+					  <?php echo $editEPCNameModalCode; ?>
+					  
+					  <a href="index.php?site=workspace" class="list-group-item list-group-item-info">
+					    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> show operations</h4>
+					  </a>
+					  
 					  <a href="index.php?site=workspace&epcID=<?php echo $epc->id; ?>&action=doRemoveModelFromWorkspace" class="list-group-item list-group-item-danger">
 					    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> remove from workspace</h4>
 					  </a>
+					  
+					  <?php if ( file_exists($modelPath) ) { ?>
 					  <a href="index.php?site=modelBrowser&file=<?php echo $file; ?>&source=<?php echo $sourceRepo;?>" class="list-group-item">
 					    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> browse source file</h4>
 					  </a>
 					  <a href="<?php echo $modelPath; ?>" download="<?php echo $sourceFilename; ?>" class="list-group-item">
 					    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> download source file</h4>
 					  </a>	  
+					  <?php } ?>
 					</div>
 		
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -375,11 +399,17 @@ $reloadLink = "index.php?site=workspace";
 					</div>
 		
 		<?php 
-			}
+			} else { ?>
 			
-			$workspaceActionHandler = new WorkspaceActionHandler();
-			$workspaceActionMenu = $workspaceActionHandler->getActionMenu();
-			echo $workspaceActionMenu;
+			<h2>Operations</h2>
+			
+			<?php 
+						
+				$workspaceActionHandler = new WorkspaceActionHandler();
+				$workspaceActionMenu = $workspaceActionHandler->getActionMenu();
+				echo $workspaceActionMenu;
+			
+			}
 			
 			
 			?>

@@ -81,7 +81,7 @@ class UploadHandler
             // Defines which files can be displayed inline when downloaded:
             'inline_file_types' => '/\.(gif|jpe?g|png)$/i',
             // Defines which files (based on their names) are accepted for upload:
-            'accept_file_types' => '/.+.(aml|xml|csv|epml|mxml|svg|txt|pnml|bpmn)$/i',
+            'accept_file_types' => '/.+.(aml|xml|csv|epml|mxml|svg|txt|pnml|bpmn|rdf)$/i',
             // The php.ini settings upload_max_filesize and post_max_size
             // take precedence over the following max_file_size setting:
             'max_file_size' => null,

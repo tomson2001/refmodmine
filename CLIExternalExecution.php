@@ -26,12 +26,13 @@ ERROR: Parameters incomplete
 
 // Checking Parameters
 $command = str_replace("[]", " ", substr($argv[1], 8,  strlen($argv[1])));
+$command = str_replace("@QUOTE@", "\"", $command);
 $description = str_replace("[]", " ", substr($argv[2], 12,  strlen($argv[2])));
 $sessionid = substr($argv[3], 10, strlen($argv[3]));
 $email   = substr($argv[4], 13, strlen($argv[4]));
 
 print("
-command: ".$measure."
+command: ".$command."
 description: ".$description."
 sessionid: ".$sessionid."
 notification: ".$email."

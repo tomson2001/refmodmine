@@ -96,8 +96,17 @@ for ( $i=0; $i<$modelsInFile1; $i++ ) {
 		$mapping = $naryMapping->extractBinaryMapping($naryMapping->epcs[$i], $naryMapping->epcs[$j]);
 		$mapping->map("Greedy");
 		$mapping->deleteDummyTransitions();
-		$file = $mapping->export();
+		
 		//$file = $mapping->exportAndreasSonntag();
+		//$file = $mapping->export();
+		//array_push($generatedFiles, $file);
+		
+		$genericMapping = $mapping->convertToGenericMapping();
+		
+		$file = $genericMapping->exportTXT_BPMContest2013($naryMapping->epcs[$i], $naryMapping->epcs[$j]);
+		array_push($generatedFiles, $file);
+		
+		$file = $genericMapping->exportRDF_BPMContest2015();
 		array_push($generatedFiles, $file);
 		
 		// FORTSCHRITTSANZEIGE
@@ -140,7 +149,8 @@ if ( $zip->open($output, ZipArchive::CREATE) ) {
 	foreach ( $generatedFiles as $filename ) {
 		unlink($filename);
 	}
-	print("done (#files: ".$zip->numFiles.", status".$zip->status.")");
+	$numFiles = count($generatedFiles);
+	print("done (#files: ".$numFiles.", status".$zip->status.")");
 } else {
 	exit("\nCannot open <".$output.">. Error creating zip file.\n");
 }

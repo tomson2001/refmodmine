@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8" />
+		<title></title>    
+		<style type="text/css">
+		@page { margin: 2cm }
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+		}													
+	 
+		p {
+			text-align: justify;
+			margin-bottom: 0.21cm 
+
+		}
+		code, pre {
+			display: block;
+			background: #e6e6e6; 
+			border: 1px solid #000000;
+			margin-bottom: 0.2cm; 
+			margin-top: 0.2cm; 
+			padding: 0.25cm; 
+			text-align: left;
+			font-family: "Courier New", Courier, monospace;
+		}
+		h1 {
+			text-align: center;
+			font-size: 20px;
+		}
+		p.subheading {margin-bottom: 0cm; text-align: center;}
+		</style>
+</head>
+	<body lang="en-US" dir="ltr" xml:lang="en-US">
+		<h1>
+			iTranslate4.eu PHP Sample Application
+		</h1>
+		<p class="subheading">
+			Setup and usage instructions
+		</p>
+		<p >
+			<br />
+		</p>
+		<h2>
+			About the Sample Application
+		</h2>
+		<p>
+			This sample application consist of 2 components.
+		</p>
+		<ol>
+			<li>
+					The <u>library</u> that is responsible for the communication with the ITRanslate.eu servers
+			</li>
+			<li>
+					A <u>code sample</u> that demonstrates a simple way to use the library
+			</li>
+		</ol>
+		<p>
+			These are located in the Itranslate and sample folders respectively.
+		</p>
+		<h3>
+			The library
+		</h3>
+		<p>
+			The library communicates with the translation services of iTranslate4.eu providing a simply embeddable solution for anyone who wants to translate phrases, paragraphs or entire documents with
+			PHP.
+		</p>
+		<h3>
+			The code sample
+		</h3>
+		<p>
+			The code sample (in the sample folder) demonstrates how to embed the library into a simple website and explains the steps necessary to configure and use the library. Please consult the
+			index.php file for detailed description.
+		</p>
+		<h2>
+			Prerequisites
+		</h2>
+		<p >
+			The following are prerequisites for the sample application:
+		</p>
+		<ul>
+			<li>
+					Working PHP 5.3+ installation
+			</li>
+			<li>
+					Curl extension for PHP
+				<ul>
+					<li>
+							Following configuration option in php.ini
+						<code>
+							extension=php_curl.so
+						</code>
+					</li>
+				</ul>
+			</li>
+			<li>
+					Some knowledge of PHP
+			</li>
+			<li>
+					A valid API Key for the Itranslate.eu service
+			</li>
+		</ul>
+		<h2>
+			Installation of the PHP Sample
+		</h2>
+		<p >
+			Please follow these step to redy the sample for use:
+		</p>
+		<ol>
+			<li>
+					Download the latest version of it from ITRanslate4.eu website
+			</li>
+			<li>
+					Extract the archive to any folder to which the webserver has got read access<br />
+					Example command on a linux machine:
+				<code>
+					unzip iTranslate4eu-php.zip /home/mywebsite.org/www
+				</code>
+			</li>
+			<li>
+					Copy the sample_api_settings.php file to api_settings.php
+			</li>
+			<li>
+					Edit the api_settings.php file and input your API Key and your cache folder so that the configuration file contains the following array definition:
+				<code>
+					$apiSettings = array(<br />
+					'apiKey' =&gt; 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',<br />
+					'cacheFolder' =&gt; 'cache'<br />
+					);
+				</code>
+			</li>
+			<li>
+					Verify your sample is working by navigating your browser to:
+				<code>
+					http://yourhostname/iTranslateFolder/sample
+				</code>
+			</li>
+		</ol>
+
+
+
+		<h2>
+			Code Sample Components Explained
+		</h2>
+		<p>
+			The code sample consts of several parts
+		</p>
+		<ol>
+			<li>
+					<b>index.php:</b> this is PHP code, which handles the initialization of the library, translation requests, and the generation of HTML code to be sent beck to the browser
+					<!-- written by Daniel Varga -->
+			</li>
+			<li>
+					<b>html_code.php:</b> this file contains all the HTML markup that is sent to the browser
+			</li>
+			<li>
+					<b>resources folder:</b> this folder includes file that are needed for styling the sample code
+			</li>
+			<li>
+					<b>cache folder:</b> some of the library function calls are recommended to be cached. These temprary cache files are being saved to this folder.
+			</li>
+			<li>
+					<b>api_settings.php</b>: the configuration file that stores your API key and tells the sample code where the cache folder is
+			</li>
+		</ol>
+		<p>
+			Note: How exactly the code sample works is explained in the files themselves in the form of inline comments.
+		</p>
+		<p>
+			The code sample contains simple functions that should be easy to adopt to any website and thus provides an almost "copy-paste" solution to those who want to use an out of box solution. Even
+			though this works in most situations, it is recommended to read this entire document as it contains pieces of advice regarding security and speed.
+		</p>
+
+
+
+		<h2>
+			Using the Library
+		</h2>
+		<p>
+			If - for some reason - the code sample does not provide you with a flexible enough solution to your needs, the library can be used to create a highly customized application for PHP that
+			communicates with the ITRanslate.eu servers.
+		</p>
+		<p>
+			To get started one only needs to include the required PHP file:
+		</p>
+		<code>
+			require_once '/path/to/ITrsnalteLib/iTranslate.php'
+		</code>
+		<p>
+			The library has got only one configuration option, which is a valid API key. That API Key will be used in all the requests made by the library to the iTranslate servers.
+		</p>
+		<code>
+			// Get an instance of the library - the parameter to this function tells<br />
+			// where the library is located<br />
+			$api = iTranslate::getInstance("../");<br />
+			// set the API key<br />
+			$api-&gt;setApiKey("xxxxxxxxxxxx");
+		</code>
+		<p>
+			The library uses a Singleton Pattern meaning that once the API Key has been configured, it is not necessary to set and reset it again. To access Itranslate services anywhere in the code after
+			the API Key has been configured, one can use the following line:      
+		</p>
+		<code>
+			$api = iTranslate::getInstance();
+		</code>
+		
+
+<h3>Translating text</h3>
+	<p>In order to translate some text you need to initialize the library with the method calls written in the previous section. Then you will be able to call the</p>
+<code>$objTranslation = $api->translate();</code>
+<p>method to translate the text.</p>
+	<p>An example to such call could look like this:</p>
+<pre>$objTranslation = $api->translate(“en”, “de”,
+    array(“I need to be translated to German”) );</pre>
+	<p>For a complete list of parameters required and optional parameters, take a look at the API Functions section.</p>
+
+<h2>API Functions</h2>
+<h3>getLanguages</h3>
+<p>This function provides information about available source and target languages. These languages are valid options as src and trg parameters in Translate function. </p>
+<code>$objAvailableLanguages = $api->getLanguages();</code>
+<em>Return value:</em>
+<ul>
+	<li>Type: iTranslate_Response_Languages</li>
+	<li>Defined in file: iTranslate/Response/Languages.php</li>
+	<li>Example output:<br/><pre>
+object(iTranslate_Response_Languages)#4 (3) {
+  ["src"]=>
+  array(1) {
+    [0]=>
+    string(2) "ar"
+  }
+  ["trg"]=>
+  array(1) {
+    [0]=>
+    string(2) "en"   
+  }
+  ["exclude"]=>
+  array(1) {
+    [0]=>
+    string(5) "ar,nn"    
+  }
+}</pre></li>
+</ul>
+
+<h3>getRoutes</h3>
+<p>This function provides information about the available alternative translations returning the translation route list for a given language pair. This list consists of route IDs which are valid options as rid parameter in Translate function. </p>
+<pre>$arrRoutes = $api->getRoutes(“en”, “de”);</pre>
+<em>Return value:</em>
+<ol>
+	<li>Type: array</li>
+	<li>Example output:<br /><pre>
+Array(1) {
+  [0]=>
+  string(6) "lin.ts"
+}</pre></li>	
+</ol>
+
+<h3>getProviders</h3>
+<p>This function tells the full name of the different machine translation providers (companies) which take part in the iTranslate4 service. </p>
+<pre>$arrProviders = $api->getProviders();</pre>
+<em>Return value:</em>
+<ol>
+	<li>Type: array</li>
+	<li>Example output:<br />
+<pre>Array(1) {
+  ["lin.ts"]=>
+  string(8) "Lingenio"
+}</pre></li>
+</ol>
+
+<h3>translate</h3>
+<p>The Translate function allows the client to send a block of text to the iTranslate4 server for translation using the specified language settings. </p>
+
+<pre>$objTranslation = $api->translate(“en”, “de”, 
+    array(“First text to translate.”, 
+          “Second text block to translate”) );</pre>
+<em>Parameters:</em>
+<ol>
+	<li>[REQUIRED] Source Language</li>
+	<li>[REQUIRED] Target Language</li>
+	<li>[REQUIRED] Text to translate – can be a string or an array of strings</li>
+	<li>[OPTIONAL] Minimum translations<br />
+Default: 1</li>
+	<li>[OPTIONAL] Maximum translations (Alternative translations)<br />
+Default: 1</li>
+	<li>[OPTIONAL] Timeout<br />
+Default: 20 seconds</li>
+	<li>[OPTIONAL] Domain of text<br />
+Default: iTranslate_Translate_Domain::DOM_GENERAL</li>
+	<li>[OPTIONAL] Routes to take for translation<br />
+Default: null</li>
+</ol>
+<em>Return value:</em>
+<ol>
+	<li>Type: iTranslate_Response_Translations</li>
+	<li>Defined in file: iTranslate/Response/Translations.php</li>
+	<li>Example output:
+<pre>object(iTranslate_Response_Translations)#19 (1) {
+  ["dat"]=>
+  array(2) {
+    [0]=>
+    object(iTranslate_Response_Translation_Object)#20 (4) {
+      ["rid"]=>
+      string(6) "lin.ts"
+      ["text"]=>
+      array(1) {
+        [0]=>
+        string(68) "Ich möchte diese Probeschnur von Englisch nach Deutsch übersetzen."
+      }
+      ["err"]=>
+      NULL
+      ["length"]=>
+      int(66)
+    }    
+  }
+}</pre></li>
+</ol>
+
+		<h3>
+			Communication diagram
+		</h3>
+		<p>
+			<img src="lib_php_doc_current_html_7abdf36e.jpg" name="graphics1" align="left" width="379" height="281" border="0" alt="" id="graphics1" /><br clear="left" />
+			The following simplified diagram displays how an average translation request could look like
+		</p>
+		<h3>
+			Security considerations
+		</h3>
+		<p>
+			By placing the library settings file (api_settings.php) into a folder that is publicly readable you might provide the entire world with your api key which should be kept secret.
+		</p>
+		<h3>
+			Speed considerations
+		</h3>
+		<p>
+			Some of the API calls are cachable, not all requests need to be made for every translation. To increase page load times and decrease strain on the server, it is recommended to cache the
+			following functions:
+		</p>
+		<ul>
+			<li>
+					iTranslate::getRoutes()
+			</li>
+			<li>
+					iTranslate::getLanguages()
+			</li>
+			<li>
+					iTranslate::getProviders()
+			</li>
+		</ul>
+		<p>
+			The sample application contains a simple file based caching mechanism. It was included in the sample to provide a simple solution to the users, however using APC, Memcached or other caching
+			mechanisms might provide higher performance or conviniance.
+		</p>
+	</body>  
+</html>

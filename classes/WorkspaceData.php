@@ -98,5 +98,66 @@ class WorkspaceData {
 		";
 	}
 	
+	public function getAddModelsFromDataToWorkspaceModalCode($file, $reloadLink) {
+		$workspaceActionConfig = new WorkspaceActionConfig();
+		$fileType = $this->getFileType($file);
+		$fileParams = $this->getFileParams($file);
+		$type = $workspaceActionConfig->getFileTypeName($fileType);
+		$description = $workspaceActionConfig->getFileTypeDescriptions($fileType, $fileParams);
+	
+		return "
+		<div class=\"modal fade\" id=\"modal_addModelsFromDataToWorkspace_".md5($file)."\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+			<div class=\"modal-dialog\">
+				<div class=\"modal-content\">
+					<div class=\"modal-header\">
+						<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+						<h4 class=\"modal-title\" id=\"myModalLabel\">Add ".$type." (".$description.") to workspace models</h4>
+					</div>
+					<div class=\"modal-body\">
+						How to handle the models with regard to the current workspace models?
+					</div>
+					<div class=\"modal-footer\">
+						<button type=\"button\" class=\"btn btn-primary\" onClick=\"window.location.href='".$reloadLink."&action=doAddModelsFromDataToWorkspace&file=".$file."&mode=add'\">Add</button>
+						<button type=\"button\" class=\"btn btn-warning\" onClick=\"window.location.href='".$reloadLink."&action=doAddModelsFromDataToWorkspace&file=".$file."&mode=replace'\">Replace</button>
+						<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		";
+	}
+	
+	public function getEditFileDescriptionModalCode($file, $reloadLink) {
+		$workspaceActionConfig = new WorkspaceActionConfig();
+		$fileType = $this->getFileType($file);
+		$fileParams = $this->getFileParams($file);
+		$type = $workspaceActionConfig->getFileTypeName($fileType);
+		$description = $workspaceActionConfig->getFileTypeDescriptions($fileType, $fileParams);
+	
+		return "
+		<div class=\"modal fade\" id=\"modal_editFileDescription_".md5($file)."\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+			<div class=\"modal-dialog\">
+				<div class=\"modal-content\">
+					<form  class=\"form-horizontal\" method=\"post\">
+						<input type=\"hidden\" name=\"action\" value=\"doEditFileDescription\" />
+						<input type=\"hidden\" name=\"file\" value=\"".$file."\" />
+						<div class=\"modal-header\">
+							<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+							<h4 class=\"modal-title\" id=\"myModalLabel\">Edit description of ".$type." (".$description.")</h4>
+						</div>
+						<div class=\"modal-body\">
+							<input type=\"text\" class=\"form-control\" name=\"description\" placeholder=\"".$description."\">
+						</div>
+						<div class=\"modal-footer\">
+							<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>
+							 <button type=\"submit\" class=\"btn btn-primary\">Save</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		";
+	}
+	
 }
 ?>

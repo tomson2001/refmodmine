@@ -22,6 +22,9 @@
                 <li><a href="index.php?site=converter_PNML-EPC">PNML / EPML</a></li>
                 <li><a href="index.php?site=converter_BPMN-EPC">BPMN / EPML</a></li>
                 <li class="divider"></li>
+                <li class="dropdown-header">Tool Information</li>
+                <li><a href="index.php?site=fileTypeSpecifications">File Type Specifications</a></li>
+                <li class="divider"></li>
                 <li class="dropdown-header">General Information</li>
                 <li><a href="http://refmod-miner.dfki.de/cms/anwendungsfaelle/" target="_blank">Use Cases</a></li>
                 <li><a href="http://refmod-miner.dfki.de/cms/files/manual/refmod_funktionsbeschreibung.pdf" target="_blank">RefMod-Miner Manual</a></li>

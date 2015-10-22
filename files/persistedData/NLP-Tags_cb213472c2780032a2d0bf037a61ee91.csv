@@ -1,0 +1,95 @@
+cb213472c2780032a2d0bf037a61ee91;Losheim_Ummeldung
+function;rufe den Betrieb auf;rufe@@@VVFIN|||den@@@ART|||Betrieb@@@NN|||auf@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;definiere den Grund der Ummeldung;definiere@@@VVFIN|||den@@@ART|||Grund@@@NN|||der@@@ART|||Ummeldung@@@NN;{VVFIN}{ART}{NN}{ART}{NN}
+function;erfasse die Ummeldung;erfasse@@@VVFIN|||die@@@ART|||Ummeldung@@@NN;{VVFIN}{ART}{NN}
+function;schicke die Bestätigung dem Kunden zu;schicke@@@VVFIN|||die@@@ART|||Best@@@NE|||tigung@@@VVFIN|||dem@@@ART|||Kunden@@@NN|||zu@@@PTKVZ;{VVFIN}{ART}{NE}{VVFIN}{ART}{NN}{PTKVZ}
+function;unterscheide Weg der Ummeldung;unterscheide@@@ADJA|||Weg@@@NN|||der@@@ART|||Ummeldung@@@NN;{ADJA}{NN}{ART}{NN}
+function;gebe die Bestätigung dem Kunden ab;gebe@@@VVFIN|||die@@@ART|||Best@@@NE|||tigung@@@VVFIN|||dem@@@ART|||Kunden@@@NN|||ab@@@PTKVZ;{VVFIN}{ART}{NE}{VVFIN}{ART}{NN}{PTKVZ}
+function;schicke notwendige Unterlagen und  Ummeldungs- formular;schicke@@@ADJA|||notwendige@@@ADJA|||Unterlagen@@@NN|||und@@@KON|||Ummeldungs@@@NN|||-@@@$[|||formular@@@ADJD;{ADJA}{ADJA}{NN}{KON}{NN}{$[}{ADJD}
+function;händige den Gebührenzettel aus;h@@@FM|||ndige@@@FM|||den@@@ART|||Geb@@@NN|||hrenzettel@@@ADJD|||aus@@@PTKVZ;{FM}{FM}{ART}{NN}{ADJD}{PTKVZ}
+function;schicke Kostenbescheid dem Kunden zu;schicke@@@ADJA|||Kostenbescheid@@@NN|||dem@@@ART|||Kunden@@@NN|||zu@@@PTKVZ;{ADJA}{NN}{ART}{NN}{PTKVZ}
+function;bezahle die Gebühr an der Kasse;bezahle@@@VVFIN|||die@@@ART|||Geb@@@NN|||hr@@@PROAV|||an@@@APPR|||der@@@ART|||Kasse@@@NN;{VVFIN}{ART}{NN}{PROAV}{APPR}{ART}{NN}
+function;drucke die Ummeldung aus;drucke@@@VVFIN|||die@@@ART|||Ummeldung@@@NN|||aus@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;unterschreibe die Ummeldung;unterschreibe@@@ADJD|||die@@@ART|||Ummeldung@@@NN;{ADJD}{ART}{NN}
+function;gebe die Bestätigung ab;gebe@@@VVFIN|||die@@@ART|||Best@@@NE|||tigung@@@VVFIN|||ab@@@PTKVZ;{VVFIN}{ART}{NE}{VVFIN}{PTKVZ}
+function;gebe die Bankverbindung;gebe@@@VVFIN|||die@@@ART|||Bankverbindung@@@NN;{VVFIN}{ART}{NN}
+function;frage, ob die Verlegung innerhalb der Stadt ist;frage@@@ADJA|||,@@@$,|||ob@@@KOUS|||die@@@ART|||Verlegung@@@NN|||innerhalb@@@APPR|||der@@@ART|||Stadt@@@NN|||ist@@@VAFIN;{ADJA}{$,}{KOUS}{ART}{NN}{APPR}{ART}{NN}{VAFIN}
+function;starte die Abmeldung;starte@@@VVFIN|||die@@@ART|||Abmeldung@@@NN;{VVFIN}{ART}{NN}
+function;erfasse die Ummeldung;erfasse@@@VVFIN|||die@@@ART|||Ummeldung@@@NN;{VVFIN}{ART}{NN}
+function;zahle die Gebühr;zahle@@@VVFIN|||die@@@ART|||Geb@@@NN|||hr@@@XY;{VVFIN}{ART}{NN}{XY}
+function;unterschreibe die Ummeldung;unterschreibe@@@ADJD|||die@@@ART|||Ummeldung@@@NN;{ADJD}{ART}{NN}
+function;gehe zur Bank, um das Geld abzuheben;gehe@@@VVFIN|||zur@@@APPRART|||Bank@@@NN|||,@@@$,|||um@@@KOUI|||das@@@ART|||Geld@@@NN|||abzuheben@@@VVINF;{VVFIN}{APPRART}{NN}{$,}{KOUI}{ART}{NN}{VVINF}
+function;gebe Information;gebe@@@VVFIN|||Information@@@NN;{VVFIN}{NN}
+function;prüfe Vertrauenswürdigkeit der Person;pr@@@ADJD|||fe@@@ADJA|||Vertrauensw@@@NN|||rdigkeit@@@VVFIN|||der@@@ART|||Person@@@NN;{ADJD}{ADJA}{NN}{VVFIN}{ART}{NN}
+function;verlege die Ummeldung an einen anderen Termin;verlege@@@VVFIN|||die@@@ART|||Ummeldung@@@NN|||an@@@APPR|||einen@@@ART|||anderen@@@ADJA|||Termin@@@NN;{VVFIN}{ART}{NN}{APPR}{ART}{ADJA}{NN}
+function;fülle Formular aus;f@@@VVFIN|||lle@@@ADJA|||Formular@@@NN|||aus@@@PTKVZ;{VVFIN}{ADJA}{NN}{PTKVZ}
+function;Betriebsschließung anordnen;Betriebsschlie@@@NN|||ung@@@ADJD|||anordnen@@@VVINF;{NN}{ADJD}{VVINF}
+function;gehe zur "Zentrallkasse";gehe@@@VVFIN|||zur@@@APPRART|||"@@@$[|||Zentrallkasse@@@NN|||"@@@$[;{VVFIN}{APPRART}{$[}{NN}{$[}
+function;frage den Grund der Ummeldung;frage@@@VVFIN|||den@@@ART|||Grund@@@NN|||der@@@ART|||Ummeldung@@@NN;{VVFIN}{ART}{NN}{ART}{NN}
+function;prüfe die Zugehörigkeit zur Quierschiedsgemeinde;pr@@@ADJD|||fe@@@VVFIN|||die@@@ART|||Zugeh@@@NN|||rigkeit@@@VVFIN|||zur@@@APPRART|||Quierschiedsgemeinde@@@NN;{ADJD}{VVFIN}{ART}{NN}{VVFIN}{APPRART}{NN}
+function;prüfe die Ummeldung;pr@@@ADJD|||fe@@@VVFIN|||die@@@ART|||Ummeldung@@@NN;{ADJD}{VVFIN}{ART}{NN}
+function;gebe Rückgeld dem Kunden ab;gebe@@@VVFIN|||R@@@NE|||ckgeld@@@NE|||dem@@@ART|||Kunden@@@NN|||ab@@@PTKVZ;{VVFIN}{NE}{NE}{ART}{NN}{PTKVZ}
+function;starte die Abmeldung;starte@@@VVFIN|||die@@@ART|||Abmeldung@@@NN;{VVFIN}{ART}{NN}
+function;fordere benötigte Unterlagen an;fordere@@@VVFIN|||ben@@@ADV|||tigte@@@ADJA|||Unterlagen@@@NN|||an@@@PTKVZ;{VVFIN}{ADV}{ADJA}{NN}{PTKVZ}
+function;drucke Anweisung aus;drucke@@@ADJA|||Anweisung@@@NN|||aus@@@PTKVZ;{ADJA}{NN}{PTKVZ}
+function;gehe zu dem Kunden zurück;gehe@@@VVFIN|||zu@@@APPR|||dem@@@ART|||Kunden@@@NN|||zur@@@APPRART|||ck@@@NN;{VVFIN}{APPR}{ART}{NN}{APPRART}{NN}
+function;bezahle das Geld an die Zentralkasse ein;bezahle@@@VVFIN|||das@@@ART|||Geld@@@NN|||an@@@APPR|||die@@@ART|||Zentralkasse@@@NN|||ein@@@PTKVZ;{VVFIN}{ART}{NN}{APPR}{ART}{NN}{PTKVZ}
+function;verschicke Zahlungseinordnung an die Gemeindekasse;verschicke@@@ADJA|||Zahlungseinordnung@@@NN|||an@@@APPR|||die@@@ART|||Gemeindekasse@@@NN;{ADJA}{NN}{APPR}{ART}{NN}
+function;stelle Quittung aus;stelle@@@VVFIN|||Quittung@@@NN|||aus@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;verändere das Objekt aus der Gewerbesteuer;ver@@@ADJA|||ndere@@@VVFIN|||das@@@ART|||Objekt@@@NN|||aus@@@APPR|||der@@@ART|||Gewerbesteuer@@@NN;{ADJA}{VVFIN}{ART}{NN}{APPR}{ART}{NN}
+function;wickle Zahlgeschäft ab;wickle@@@ADJA|||Zahlgesch@@@NN|||ft@@@XY|||ab@@@PTKVZ;{ADJA}{NN}{XY}{PTKVZ}
+function;trage Daten in die Sammelliste;trage@@@VVFIN|||Daten@@@NN|||in@@@APPR|||die@@@ART|||Sammelliste@@@NN;{VVFIN}{NN}{APPR}{ART}{NN}
+function;hebe Unterlagen zwei Jahre auf;hebe@@@VVFIN|||Unterlagen@@@NN|||zwei@@@CARD|||Jahre@@@NN|||auf@@@PTKVZ;{VVFIN}{NN}{CARD}{NN}{PTKVZ}
+function;händige Bestätigung aus;h@@@FM|||ndige@@@FM|||Best@@@FM|||tigung@@@FM|||aus@@@PTKVZ;{FM}{FM}{FM}{FM}{PTKVZ}
+function;erstelle Bestätigung;erstelle@@@ADJA|||Best@@@NE|||tigung@@@VVFIN;{ADJA}{NE}{VVFIN}
+function;fordere Unterschrift an;fordere@@@VVFIN|||Unterschrift@@@NN|||an@@@PTKVZ;{VVFIN}{NN}{PTKVZ}
+function;prüfe Grund der Ummeldung;pr@@@ADJD|||fe@@@ADJA|||Grund@@@NN|||der@@@ART|||Ummeldung@@@NN;{ADJD}{ADJA}{NN}{ART}{NN}
+function;hefte Bescheinigung mit dem Vermerk "nicht bezahlt" ab;hefte@@@ADJA|||Bescheinigung@@@NN|||mit@@@APPR|||dem@@@ART|||Vermerk@@@NN|||"@@@$[|||nicht@@@PTKNEG|||bezahlt@@@VVPP|||"@@@$[|||ab@@@PTKVZ;{ADJA}{NN}{APPR}{ART}{NN}{$[}{PTKNEG}{VVPP}{$[}{PTKVZ}
+function;drucke das Formular aus;drucke@@@VVFIN|||das@@@ART|||Formular@@@NN|||aus@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;melde das Gewerbe um;melde@@@VVFIN|||das@@@ART|||Gewerbe@@@NN|||um@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;frage nach Art der Ummeldung;frage@@@ADJA|||nach@@@APPR|||Art@@@NN|||der@@@ART|||Ummeldung@@@NN;{ADJA}{APPR}{NN}{ART}{NN}
+function;verlange Gebühr;verlange@@@VVFIN|||Geb@@@NE|||hr@@@XY;{VVFIN}{NE}{XY}
+function;schicke die Rechnung zurück;schicke@@@VVFIN|||die@@@ART|||Rechnung@@@NN|||zur@@@APPRART|||ck@@@NN;{VVFIN}{ART}{NN}{APPRART}{NN}
+function;Prüfe Geschäftsführerunterschrift;Pr@@@NN|||fe@@@VVFIN|||Gesch@@@NE|||ftsf@@@VVFIN|||hrerunterschrift@@@NN;{NN}{VVFIN}{NE}{VVFIN}{NN}
+function;verlange die Unterschrift;verlange@@@VVFIN|||die@@@ART|||Unterschrift@@@NN;{VVFIN}{ART}{NN}
+function;stelle Gebühr in Rechnung;stelle@@@VVFIN|||Geb@@@NE|||hr@@@VAFIN|||in@@@APPR|||Rechnung@@@NN;{VVFIN}{NE}{VAFIN}{APPR}{NN}
+function;prüfe Handelsregisterauszug;pr@@@ADJD|||fe@@@ADJA|||Handelsregisterauszug@@@NN;{ADJD}{ADJA}{NN}
+function;schreibe Firma an;schreibe@@@ADJA|||Firma@@@NN|||an@@@PTKVZ;{ADJA}{NN}{PTKVZ}
+function;rufe den Chef an;rufe@@@VVFIN|||den@@@ART|||Chef@@@NN|||an@@@PTKVZ;{VVFIN}{ART}{NN}{PTKVZ}
+function;unterscheide Art der Ummeldung;unterscheide@@@ADJA|||Art@@@NN|||der@@@ART|||Ummeldung@@@NN;{ADJA}{NN}{ART}{NN}
+function;begleiche die Rechnung;begleiche@@@VVFIN|||die@@@ART|||Rechnung@@@NN;{VVFIN}{ART}{NN}
+function;prüfe tatsächliche Wohnort;pr@@@ADJD|||fe@@@ADJA|||tats@@@NN|||chliche@@@ADJA|||Wohnort@@@NN;{ADJD}{ADJA}{NN}{ADJA}{NN}
+function;starte Abmeldung;starte@@@ADJA|||Abmeldung@@@NN;{ADJA}{NN}
+function;unterschreibe die Empfangsbescheinigung;unterschreibe@@@ADJD|||die@@@ART|||Empfangsbescheinigung@@@NN;{ADJD}{ART}{NN}
+function;prüfe Erlaubnisfreiheit der Tätigkeit;pr@@@ADJD|||fe@@@ADJA|||Erlaubnisfreiheit@@@NN|||der@@@ART|||T@@@NN|||tigkeit@@@ADJD;{ADJD}{ADJA}{NN}{ART}{NN}{ADJD}
+function;starte Abmeldung;starte@@@ADJA|||Abmeldung@@@NN;{ADJA}{NN}
+function;schicke Zahlschein dem Kunden zu;schicke@@@ADJA|||Zahlschein@@@NN|||dem@@@ART|||Kunden@@@NN|||zu@@@PTKVZ;{ADJA}{NN}{ART}{NN}{PTKVZ}
+function;erfasse die Ummeldung;erfasse@@@VVFIN|||die@@@ART|||Ummeldung@@@NN;{VVFIN}{ART}{NN}
+function;unterschreibe das Formular;unterschreibe@@@ADJA|||das@@@ART|||Formular@@@NN;{ADJA}{ART}{NN}
+function;prüfe, ob Kunde eine PK-Nummer hat;pr@@@ADJD|||fe@@@VVFIN|||,@@@$,|||ob@@@KOUS|||Kunde@@@NN|||eine@@@ART|||PK-Nummer@@@NN|||hat@@@VAFIN;{ADJD}{VVFIN}{$,}{KOUS}{NN}{ART}{NN}{VAFIN}
+function;fordere ausgefühltes unterzeichnetes Formular zurück;fordere@@@VVFIN|||ausgef@@@ADJD|||hltes@@@ADJA|||unterzeichnetes@@@ADJA|||Formular@@@NN|||zur@@@APPRART|||ck@@@NN;{VVFIN}{ADJD}{ADJA}{ADJA}{NN}{APPRART}{NN}
+event;Zahlungsanordnung ist verschickt;Zahlungsanordnung@@@NN|||ist@@@VAFIN|||verschickt@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Gebührenbescheid ist ausgestellt;Geb@@@NE|||hrenbescheid@@@NE|||ist@@@VAFIN|||ausgestellt@@@VVPP;{NE}{NE}{VAFIN}{VVPP}
+event;Zahlung auf Rechnung;Zahlung@@@NN|||auf@@@APPR|||Rechnung@@@NN;{NN}{APPR}{NN}
+event;Ummeldung nicht fortfahren;Ummeldung@@@NN|||nicht@@@PTKNEG|||fortfahren@@@VVPP;{NN}{PTKNEG}{VVPP}
+event;Ummeldung nach Kundenwusch fortfahren;Ummeldung@@@NN|||nach@@@APPR|||Kundenwusch@@@NE|||fortfahren@@@VVPP;{NN}{APPR}{NE}{VVPP}
+event;Barzahlung;Barzahlung@@@NN;{NN}
+event;Vertrauenswürdigkeit ist geprüft;Vertrauensw@@@NE|||rdigkeit@@@ADJD|||ist@@@VAFIN|||gepr@@@ADJD|||ft@@@XY;{NE}{ADJD}{VAFIN}{ADJD}{XY}
+event;außerhalb der Quierschied;au@@@ADV|||erhalb@@@VVFIN|||der@@@ART|||Quierschied@@@NN;{ADV}{VVFIN}{ART}{NN}
+event;Objekt ist verändert;Objekt@@@NN|||ist@@@VAFIN|||ver@@@ADJA|||ndert@@@VVFIN;{NN}{VAFIN}{ADJA}{VVFIN}
+event;Rechnungszahlung;Rechnungszahlung@@@NN;{NN}
+event;Kunde kommt persönlich;Kunde@@@NN|||kommt@@@VVFIN|||pers@@@ADJD|||nlich@@@ADJD;{NN}{VVFIN}{ADJD}{ADJD}
+event;Rechnung ist beglichen;Rechnung@@@NN|||ist@@@VAFIN|||beglichen@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Unterlagen sind nicht vorhanden;Unterlagen@@@NN|||sind@@@VAFIN|||nicht@@@PTKNEG|||vorhanden@@@ADJD;{NN}{VAFIN}{PTKNEG}{ADJD}
+event;den Chef ist angerufen;den@@@ART|||Chef@@@NN|||ist@@@VAFIN|||angerufen@@@VVPP;{ART}{NN}{VAFIN}{VVPP}
+event;Abmeldung ist gestartet;Abmeldung@@@NN|||ist@@@VAFIN|||gestartet@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Geschäftsführerunterschrift ist geprüft;Gesch@@@NE|||ftsf@@@VVFIN|||hrerunterschrift@@@ADJD|||ist@@@VAFIN|||gepr@@@ADJD|||ft@@@XY;{NE}{VVFIN}{ADJD}{VAFIN}{ADJD}{XY}
+event;Unterlagen sind nicht in Ordnung;Unterlagen@@@NN|||sind@@@VAFIN|||nicht@@@PTKNEG|||in@@@APPR|||Ordnung@@@NN;{NN}{VAFIN}{PTKNEG}{APPR}{NN}
+event;Ummeldung per Post;Ummeldung@@@NN|||per@@@APPR|||Post@@@NN;{NN}{APPR}{NN}
+event;Gebührenbescheid ist dem Kunden zugeschickt;Geb@@@NE|||hrenbescheid@@@NE|||ist@@@VAFIN|||dem@@@ART|||Kunden@@@NN|||zugeschickt@@@VVPP;{NE}{NE}{VAFIN}{ART}{NN}{VVPP}
+event;Formular ist ausgedruckt;Formular@@@NE|||ist@@@VAFIN|||ausgedruckt@@@VVPP;{NE}{VAFIN}{VVPP}
+event;Ausweis liegt vor;Ausweis@@@NE|||liegt@@@VVFIN|||vor@@@PTKVZ;{NE}{VVFIN}{PTKVZ}
+event;Kassenkonto ist erstellt;Kassenkonto@@@NN|||ist@@@VAFIN|||erstellt@@@VVPP;{NN}{VAFIN}{VVPP}
+event;Name stimmt nicht überein;Name@@@NN|||stimmt@@@VVFIN|||nicht@@@PTKNEG|||berein@@@PTKVZ;{NN}{VVFIN}{PTKNEG}{PTKVZ}
+event;Handelsregisterauszug ist vorhanden;Handelsregisterauszug@@@NN|||ist@@@VAFIN|||vorhanden@@@ADJD;{NN}{VAFIN}{ADJD}
+event;Ummeldeprozess ist beendet;Ummeldeprozess@@@NE|||ist@@@VAFIN|||beendet@@@VVPP;{NE}{VAFIN}{VVPP}

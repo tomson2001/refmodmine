@@ -226,7 +226,7 @@ class WorkspaceEPML {
 		$_SESSION['numWorkspaceModels']--;
 		$modelsInWorkspace = $_SESSION["modelsInWorkspace"];
 		$flipped = array_flip($modelsInWorkspace);
-		$index = $flipped[$sourceFilename."/".$modelName];
+		$index = (int) $flipped[$sourceFilename."/".$modelName];
 		unset($modelsInWorkspace[$index]);
 		$_SESSION["modelsInWorkspace"] = $modelsInWorkspace;
 	}
@@ -338,6 +338,36 @@ class WorkspaceEPML {
 	
 	public function getAvailableData() {
 		return new WorkspaceData($this->filepath);
+	}
+	
+	public function getEditEPCNameModalCode($epcID) {
+		
+		$epcName = $this->epcs[$epcID]->getEPCName();
+		$epcHash = $this->epcs[$epcID]->getHash();
+	
+		return "
+		<div class=\"modal fade\" id=\"modal_editEPCName_".$epcHash."\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+			<div class=\"modal-dialog\">
+				<div class=\"modal-content\">
+					<form  class=\"form-horizontal\" method=\"post\">
+						<input type=\"hidden\" name=\"action\" value=\"doEditEPCName\" />
+						<input type=\"hidden\" name=\"epcID\" value=\"".$epcID."\" />
+						<div class=\"modal-header\">
+							<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+							<h4 class=\"modal-title\" id=\"myModalLabel\">Edit name of EPC \"".$epcName."\"</h4>
+						</div>
+						<div class=\"modal-body\">
+							<input type=\"text\" class=\"form-control\" name=\"epcName\" value=\"".$epcName."\">
+						</div>
+						<div class=\"modal-footer\">
+							<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>
+							 <button type=\"submit\" class=\"btn btn-primary\">Save</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		";
 	}
 	
 }

@@ -33,6 +33,10 @@ class EMailNotifyer {
 		return self::send($to, "BPMN2EPML conversion finished", $readme);
 	}
 	
+	public static function sendCLIConvertEPML2BPMNNotification($to, $readme) {
+		return self::send($to, "EPML2BPMN conversion finished", $readme);
+	}
+	
 	public static function sendCLIModelTranslationNotification($to, $readme) {
 		return self::send($to, "Model translation finished", $readme);
 	}

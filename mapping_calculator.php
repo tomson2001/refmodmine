@@ -77,7 +77,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 		$nameOfEPC2 = utf8_decode((string) $xml_epc2["name"]);
 		$epc2 = new EPC($xml2, $xml_epc2["epcId"], $xml_epc2["name"]);
 		
-		if ($nameOfEPC1 != $nameOfEPC2) continue;
+		if ($nameOfEPC1 == $nameOfEPC2) continue;
 
 		$html_analysis .= "<h3>".$nameOfEPC1." <=> ".$nameOfEPC2."</h3>";
 
@@ -86,7 +86,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 
 		// Auswahl des Mappings
 		$mapping = null;
-		if ( in_array("--nscm", $argv) ) {
+		if ( in_array("--nary", $argv) ) {
 			$mapping = $naryMapping->extractBinaryMapping($epc1, $epc2);
 		} else {
 			//$mapping = new LevenshteinWithStructuralMapping($epc1, $epc2);
@@ -107,7 +107,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 		//$mapping->map("AllOne");
 		$mapping->deleteDummyTransitions();
 		$mappingFile = $mapping->export();
-		print(" ".$mappigFile."\n");
+		print(" - ".$mappingFile."\n");
 		$matrix = $mapping->getMatrix();
 
 		// Matrix in HTML

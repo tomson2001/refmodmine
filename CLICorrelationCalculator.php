@@ -33,6 +33,15 @@ $similarityMeasures = array(
 		"tswf"		=> "terminology similarity with frequencies",
 		"reihe1"    => "reihe1",
 		"reihe2"    => "reihe2",
+		"series1"	=> "series1",
+		"series2"	=> "series2",
+		"series3"	=> "series3",
+		"series4"	=> "series4",
+		"series5"	=> "series5",
+		"series6"	=> "series6",
+		"series7"	=> "series7",
+		"series8"	=> "series8",
+		"series9"	=> "series9",
 		"time"		=> "time",
 		"traces"    => "traces"
 );

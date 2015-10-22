@@ -8,7 +8,7 @@ print("\n-------------------------------------------------\n RefModMining - Scan
 if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) ) {
 	exit("   Please provide the following parameters:\n
    input=           the directory path to scan
-   output=           the directory path to scan
+   output=          the filename of the ouput csv
    notification=
       no
       [E-Mail adress]

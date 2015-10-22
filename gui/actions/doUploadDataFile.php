@@ -23,11 +23,20 @@ if ( is_null($type) || is_null($description) || is_null($fileTmp) ) {
 			if ( empty($description) ) $description = $fileWithoutExtension;
 			$description = str_replace(" ", "_", $description);
 			$description = str_replace(".", "_", $description);
-			$filename = $workspacePath."/".$sessionID."/workspace.epml.".$type.".custom.".$description;
+			$suffix = $type.".custom.".$description;
+			$filename = $workspacePath."/".$sessionID."/workspace.epml.".$suffix;
 			move_uploaded_file($fileTmp, $filename);
 			$_POST["msg"] = "<strong>Done. </strong> File successfully uploaded.";
 			$_POST["msgType"] = "success";
 			Logger::log($email, "Data file uploaded to workspace: ".$filename, "ACCESS");
+			
+			if ( !is_null($workspaceActionConfig->fileTypeInfos[$type]["uploadAction"]) ) {
+				$_POST["uploadedFilename"] = $filename;
+				$_POST["uploadedFiletype"] = $type;
+				$_POST["uploadedFileSuffix"] = $suffix;
+				callAction($workspaceActionConfig->fileTypeInfos[$type]["uploadAction"]);
+			}
+			
 		} else {
 			$_POST["msg"] = "<strong>Error. </strong> Your type selection does not match the uploaded file extension  (selected: ".$type." [".$workspaceActionConfig->fileTypeInfos[$type]["FileExtension"]."], file: ".$_FILES['file']['name'].").";
 			$_POST["msgType"] = "danger";

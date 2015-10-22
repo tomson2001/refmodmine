@@ -25,10 +25,10 @@ class SiteStats extends FWTableRow {
 	}
 	
 	private function updateEmailForDayIP($day, $ip, $email) {
-		$sql = "UPDATE stats SET email='".$email."' WHERE _date='".$day."' AND ip='".$ip."'";
+		$sql = "UPDATE site_stats SET email='".$email."' WHERE _date='".$day."' AND ip='".$ip."'";
 		$affected =& FWDatabase::exec($sql);
 		if ( PEAR::isError($affected) ) {
-			Logger::log($_SESSION['email'], 'Stats->updateEmailForDayIP failed: '.$sql." - Message: ".$affected->getMessage(), "ERROR");
+			Logger::log($_SESSION['email'], 'SiteStats->updateEmailForDayIP failed: '.$sql." - Message: ".$affected->getMessage(), "ERROR");
 			return false;
 		}
 		return true;

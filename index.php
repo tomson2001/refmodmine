@@ -56,7 +56,7 @@ $msg = null;
 <html lang="en">
 <head>
   	<meta charset="UTF-8">
-  	<title>RefModMining</title>
+  	<title>RefMod-Miner as a Service</title>
   	<META name="description" content="RefMod-Miner as a Service">
 	<META name="keywords"  content="RefMod-Miner, rmmaas, refmodminer, Referenzmodellierung, BPM, Business Process Management, NLP, Natural Language Processing, Process Matching, EPC, Process Clustering, Process Model Similarity, Tom Thaler">
 	<META name="author" content="Tom Thaler">

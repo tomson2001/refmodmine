@@ -1,0 +1,165 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#translateForm {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 11px;
+}
+.chooselanguage {
+    width: 64px;
+    padding: 0 5px;
+    font-size: 11px;
+    text-align: left;
+    line-height: 16px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gradientBackground {
+    background-color:  #e5e5e5;
+}
+
+.languageDropDown {
+    z-index: 10;
+    font-size: 11px;
+    line-height: 16px;
+    overflow-y: scroll;
+    background: #ffffff;
+    position: absolute;    
+    display:none;
+    border-radius: 3px;
+}
+
+.translateButton {
+    border: 0;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    background: transparent;
+    padding: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.size234x60 {
+    width: 236px;
+    height: 60px;
+}
+
+.size468x60 {
+    width: 468px;
+    height: 60px;
+}
+.size180x150 {
+    width: 180px;
+    height: 150px;
+}
+
+textarea{
+    resize: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.size234x60 .langSelectors {
+    display: block;
+    height: 22px;
+    width: 234px;
+    margin: 0;
+}
+
+.size234x60 .arrowtwo {
+    float: left;
+    vertical-align: middle;
+    height: 18px;
+    width: 12px;
+    margin: 5px 0px 0px 0px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.size234x60 .chooselanguage {
+    float: right;
+    height: 18px;
+    margin: 5px 70px 0px 0px;
+    vertical-align: middle;
+}
+
+.size234x60 .languageDropDown{
+    height: 54px;
+    width: 236px; 
+    top: 3px;
+    left: 3px;
+}
+
+.size234x60 .languageDropDown .languageItems{
+    float: left;
+    width: 68px;
+    margin: 0px 2px 0px 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.size234x60 .languageDropDown .languageItems:hover{
+    background: #999;
+    color: #fff;
+}
+
+.size234x60 .chooselanguage:first-child {
+    margin: 5px 0px 0px 4px;
+    float: left;
+}
+
+.size234x60 .transText{
+    float: left;
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    width: 158px;
+    height: 28px;
+    margin: 2px 0px 0px 4px;
+}
+
+.size234x60 div.transText{
+    margin: 2px;
+    padding: 1px 1px 1px 1px;
+}
+.size234x60 .translateButton{
+    height: 30px;
+    width: 64px;
+    margin: 3px 0px 0px 2px;
+    float: left;
+    line-height: 30px;
+}
+
+.size234x60 .boxContainer{
+    background: url(itr_translatorbox_234x60.png);
+    width: 234px;
+    height: 60px;
+}
+
+.size234x60 .transTrans {
+    border-radius: 4px; 
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -o-border-radius: 4px;
+    border: 1px solid #dddddd; 
+    background-color: white; 
+    margin: 4px 4px; 
+    width: 225px; 
+    height: 30px;
+}
+.size234x60 .logoLink{
+    cursor: pointer;
+    position: absolute;        
+    width: 60px;
+    height: 22px;
+    left: 170px;
+}

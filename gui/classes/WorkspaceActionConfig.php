@@ -23,12 +23,14 @@ class WorkspaceActionConfig {
 			"FileExtension"	=> "csv",
 			"Icon"			=> "glyphicon glyphicon-th",
 			"OpenWith"		=> "workspaceCSVViewer",
-			"isUploadable"	=> true,
+			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"Default"			=> "Default",
 				"WI2015-Clustering" => "WI2015-Clustering",
 				"Corpus-Metrics"	=> "Corpus-Metrics"
-			)
+			),
+			"Specification" => ""
 		),
 			
 		"valueseries"	=> array(
@@ -37,9 +39,18 @@ class WorkspaceActionConfig {
 				"Icon"			=> "glyphicon glyphicon-sort-by-attributes",
 				"OpenWith"		=> "workspaceCSVViewer",
 				"isUploadable"	=> true,
+				"uploadAction"	=> null,
 				"Descriptions"	=> array(
 
-				)
+				),
+				"Specification" => "The value series (csv) contains up to 9 different numeric value series in a vertical representations. The column 
+									headers should be \"series1\", \"series2\" ... up to \"series9\". The numeric values are in the following rows
+									(e.g. 15.3). The cell delimiter is semicolon. The row delimiter is \\n. An example would be:<br /><br />
+								<table border=\"1\" cellpadding=\"2\" cellspacing=\"2\"><tr><td>series1</td><td>series2</td><td>series3</td></tr>
+								<tr><td>1.23</td><td>15.6</td><td>1.5</td></tr>
+								<tr><td>5.84</td><td>2.75</td><td>1.89</td></tr>
+								<tr><td>70.53</td><td>135.5</td><td>5.3</td></tr>
+								</table>"
 		),
 			
 		"matrix"	=> array(
@@ -48,9 +59,11 @@ class WorkspaceActionConfig {
 				"Icon"			=> "glyphicon glyphicon-transfer",
 				"OpenWith"		=> "workspaceCSVViewer",
 				"isUploadable"	=> false,
+				"uploadAction"	=> null,
 				"Descriptions"	=> array(
 					"correlation" => "Empirical Correlation Coefficients"
-				)
+				),
+				"Specification" => ""
 		),
 		
 		"simmatrix"	=> array(
@@ -59,6 +72,7 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-transfer",
 			"OpenWith"		=> "workspaceCSVViewer",
 			"isUploadable"	=> true,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				
 				// the PHP RMM things
@@ -90,7 +104,15 @@ class WorkspaceActionConfig {
 				"row" 									=> "row headings only",
 				"column" 								=> "column headings only",
 				"off" 									=> "without headings",
-			)
+			),
+			"Specification" => "A Similarity Matrix (csv) contains similarity values between 0 and 100 between process models. The row and column
+								headers contain the model names. Thus, the first column of the first row is empty. The cell delimiter is a semicolon. 
+								An example would be:<br /><br />
+								<table border=\"1\" cellpadding=\"2\" cellspacing=\"2\"><tr><td></td><td>Model A</td><td>Model B</td><td>Model C</td></tr>
+								<tr><td>Model A</td><td>100</td><td>15.3</td><td>70.6</td></tr>
+								<tr><td>Model B</td><td>15.3</td><td>100</td><td>50.89</td></tr>
+								<tr><td>Model C</td><td>70.6</td><td>50.89</td><td>100</td></tr>
+								</table>"
 		),
 		
 		"featurevectors"	=> array(
@@ -99,9 +121,18 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-sort-by-attributes",
 			"OpenWith"		=> "workspaceCSVViewer",
 			"isUploadable"	=> true,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"identical" 		=> "Identical Mapping"
-			)
+			),
+			"Specification" => "The feature vectors csv describes the occurence of activity nodes in particular models. The row header contains all 
+								activity labels of all models, the column header contains the models. The values are either 0 (activity is not the model)
+								or 1 (activity is in the model). Line delimiter is \\n and cell delimiter is semicolon. An example would be:<br /><br />
+								<table border=\"1\" cellpadding=\"2\" cellspacing=\"2\"><tr><td></td><td>Node 1</td><td>Node 2</td><td>Node 3</td></tr>
+								<tr><td>Model A</td><td>1</td><td>0</td><td>1</td></tr>
+								<tr><td>Model B</td><td>1</td><td>1</td><td>1</td></tr>
+								<tr><td>Model C</td><td>0</td><td>1</td><td>1</td></tr>
+								</table>"
 		),
 		
 		"epctext"	=> array(
@@ -110,9 +141,11 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-text-color",
 			"OpenWith"		=> null,
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"default" 		=> "-"
-			)
+			),
+			"Specification" => ""
 		),
 		
 		"cluster"	=> array(
@@ -121,10 +154,12 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-equalizer",
 			"OpenWith"		=> "workspaceCSVViewer",
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"hierarchical" 		=> "hierarchical",
 				"PAM"				=> "PAM"
-			)
+			),
+			"Specification" => ""
 		),
 		
 		"dendogram"	=> array(
@@ -132,11 +167,13 @@ class WorkspaceActionConfig {
 			"FileExtension"	=> "svg",
 			"Icon"			=> "glyphicon glyphicon-indent-right",
 			"OpenWith"		=> "workspaceImgViewer",
-			"isUploadable"	=> true,
+			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"hierarchical" 		=> "hierarchical",
 				"PAM"				=> "PAM"
-			)
+			),
+			"Specification" => ""
 		),
 		
 		"vocabulary"	=> array(
@@ -145,13 +182,15 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-list-alt",
 			"OpenWith"		=> "workspaceCSVViewer",
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"German" 		=> "German",
 				"English"		=> "English",
 				"Functions"	=> "Functions",
 				"Events"	=> "Events",
 				"All"		=> "Functions, Events"
-			)
+			),
+			"Specification" => ""
 		),
 			
 		"model"	=> array(
@@ -160,12 +199,16 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-picture",
 			"OpenWith"		=> null,
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"noevents" 		=> "without events",
 				"refmod"		=> "Reference model",
 				"li"			=> "approach of li",
-				"fromPNML"		=> "transformed from petri net"
-			)
+				"fromPNML"		=> "transformed from petri net",
+				"fromText"		=> "mined from textual description",
+				"epml"			=> "",
+			),
+			"Specification" => ""
 		),
 			
 		"pnml"	=> array(
@@ -174,6 +217,7 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-picture",
 			"OpenWith"		=> null,
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 			)
 		),
@@ -184,8 +228,12 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-picture",
 			"OpenWith"		=> null,
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
-			)
+				"fromText"				=> "mined from text",
+				"bpmn"		=> ""
+			),
+			"Specification" => ""
 		),
 			
 		"behaveprofile"	=> array(
@@ -194,13 +242,15 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-road",
 			"OpenWith"		=> "workspaceCSVViewer",
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"Basic" 		=> "Basic",
 				"Causal" 		=> "Causal",
 				"Tree" 			=> "Tree",
 				"Net"			=> "Net",
 				"Unfolding"		=> "Unfolding"
-			)
+			),
+			"Specification" => ""
 		),
 			
 		"nlptags"	=> array(
@@ -209,10 +259,12 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-comment",
 			"OpenWith"		=> "workspaceCSVViewerHeadingTop",
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"English"	=> "English",
 				"German"	=> "German"
-			)
+			),
+			"Specification" => ""
 		),
 			
 		"labels"	=> array(
@@ -221,6 +273,7 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-th-list",
 			"OpenWith"		=> "workspaceCSVViewerHeadingTop",
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"standard"	=> "Standard"
 			)
@@ -232,9 +285,12 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-menu-hamburger",
 			"OpenWith"		=> null,
 			"isUploadable"	=> true,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 		
-			)
+			),
+			"Specification" => "The MXML format is used for describing process logs. Details and the specification of the format can be 
+								found here: <a href=\"http://www.processmining.org/logs/mxml\" target=\"_blank\">http://www.processmining.org/logs/mxml</a>"
 		),
 			
 		"matching"	=> array(
@@ -242,10 +298,116 @@ class WorkspaceActionConfig {
 			"FileExtension"	=> "zip",
 			"Icon"			=> "glyphicon glyphicon-random",
 			"OpenWith"		=> null,
-			"isUploadable"	=> true,
+			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
-				"rmm-nscm"	=> "N-Ary Semantic Cluster Matching"
-			)
+				"rmm-nscm"		=> "N-Ary Semantic Cluster Matching (PMMC2013)",
+				"rmm-nhcm"		=> "N-Ary Homogeneity-based Cluster Matching (PMMC2015)",
+				"rmm-map2015"	=> "Matching (PMC2015)"
+			),
+			"Specification" => ""
+		),
+			
+		"rdfmatching"	=> array(
+			"Name"			=> "Matching",
+			"FileExtension"	=> "rdf",
+			"Icon"			=> "glyphicon glyphicon-random",
+			"OpenWith"		=> null,
+			"isUploadable"	=> true,
+			"uploadAction"	=> "doConvertUploadedRDFMatchingToXMLMatching",
+			"Descriptions"	=> array(
+				"rmm-nscm"		=> "N-Ary Semantic Cluster Matching (PMMC2013)",
+				"rmm-nhcm"		=> "N-Ary Homogeneity-based Cluster Matching (PMMC2015)",
+				"rmm-map2015"	=> "Matching (PMC2015)"
+			),
+			"Specification" => "Details on the rdf format used for process matching can found on the site of the Process Matching Contest 2015: 
+								<a href=\"https://ai.wu.ac.at/emisa2015/contest.php\" target=\"_blank\">https://ai.wu.ac.at/emisa2015/contest.php</a>"
+		),
+			
+		"xmlmatching"	=> array(
+			"Name"			=> "Matching",
+			"FileExtension"	=> "xml",
+			"Icon"			=> "glyphicon glyphicon-random",
+			"OpenWith"		=> null,
+			"isUploadable"	=> true,
+			"uploadAction"	=> null,
+			"Descriptions"	=> array(
+				"rmm-nscm"		=> "N-Ary Semantic Cluster Matching (PMMC2013)",
+				"rmm-nhcm"		=> "N-Ary Homogeneity-based Cluster Matching (PMMC2015)",
+				"rmm-map2015"	=> "Matching (PMC2015)"
+			),
+			"Specification" => "The datatype xml represents a matching between models. The XML format for saving matchings allows persisting single 
+								or multiple matchings of arbitrary arity and complexity. The xml document is structured as follows:<br><br>
+								&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;<br>
+								  &nbsp;&nbsp;&lt;matchings&gt;<br>
+								    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;matching&gt;&lt;/matching&gt;<br>
+								    &nbsp;&nbsp;&lt;/matching&gt;<br>
+								    &nbsp;&nbsp;. . .<br>
+								  &lt;/matchings&gt;<br><br>
+								Each document has a root element called \"matchings\2. The children of this root element are matching
+								elements. The root element has only elements of type matching as children. A matching element is
+								structured as follows:<br><br>
+								&lt;matching name=\"my_matching\"&gt;<br>
+								&nbsp;&nbsp;&lt;epcs&gt;<br>
+								&nbsp;&nbsp;. . .<br>
+								&nbsp;&nbsp;&lt;/epcs&gt;<br>
+								&nbsp;&nbsp;&lt;matches&gt;<br>
+								&nbsp;&nbsp;. . .<br>
+								&nbsp;&nbsp;&lt;/matches&gt;<br>
+								&lt;/matching&gt;<br><br>
+								A matching element has a name attribute. The name attribute is expected to contain an arbitrary
+								valid string value (see XML specication http://www.w3.org/TR/REC-xml/). A matching element
+								has two children &lt;epcs&gt; and &lt;matches&gt;. The &lt;epcs&gt; element can contain several &lt;epc&gt; elements
+								representing the models involved in a matching. An &lt;epc&gt; element has an attribute epcDescription
+								that represents a specic model. The &lt;epcs&gt; element is structured as follows:&lt;br&gt;&lt;br&gt;<br>
+								&lt;epcs&gt;<br>
+								&nbsp;&nbsp;&lt;epc epcDescription=\"MODEL_A\" /&gt;<br>
+								&nbsp;&nbsp;&lt;epc epcDescription=\"MODEL_B\" /&gt;<br>
+								&nbsp;&nbsp;. . .<br>
+								&lt;/epcs&gt;<br><br>
+								The &lt;matches&gt; element contains several &lt;match&gt; elements representing a matching's matches. The
+								elements are structured es follows:<br><br>
+								&lt;match refEpc=EPK_A value=\"0.5\" status=\"OPEN\" interpretation=\"SPECIALISATION\"&gt;<br>
+								&nbsp;&nbsp;&lt;relationalProperties&gt; &lt;property name=\"NON_SYMMETRIC\"/&gt;<br>
+								&nbsp;&nbsp;. . .<br>
+								&nbsp;&nbsp;&lt;/relationalProperties&gt;<br>
+								&nbsp;&nbsp;&lt;node nodeDescription=\"Antrag prüfen\" epcDescription=\"EPK_A&gt;<br>
+								&nbsp;&nbsp;&lt;node nodeDescription=\"Antrag technisch prüfen\" epcDescription=\"EPK_B&gt;<br>
+								&nbsp;&nbsp;&lt;node nodeDescription=\"Antrag kaufmännisch prüfen\" epcDescription=\"EPK_B/&gt;<br>
+								&nbsp;&nbsp;. . .<br>
+								&lt;/match&gt;<br><br>
+								A &lt;match&gt; element has four optional attributes. The attribute 'refEpc' references an epc specied in
+								an &lt;epc&gt; element. 'refEpc' is expected to describe a string value that matches an epcDescription value
+								of an &lt;epc&gt; element. This attribute is used to represent 1:N matches. The attribute 'value' describes
+								a value that can be assigned to a match. 'value' is expected to describe a double value as dened
+								in the section for primitive datatypes. This attribute is used to assign a similarity value to a match.
+								The attribute 'status' describes the state of a match. A match can be either open or closed. Hence
+								the attribute 'status' expects the string value 'OPEN' or 'CLOSED'. The attribute 'interpretation'
+								describes the semantic relation between the nodes. Supported interpretation values can be found in
+								the description of the command 'MATCH'. The &lt;match&gt; element contains several &lt;node&gt; elements
+								that describe the nodes involved in a match. Each &lt;node&gt; element has an attribute 'nodeDescription'
+								that is expected to contain the nodes label/description and an attribute 'epcDescription' which is
+								expected to describe a string value that matches an epcDescription value of an &lt;epc&gt; element.<br><br>
+								Example:<br><br>
+								&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;<br>
+								&lt;matchings&gt;<br>
+								&nbsp;&nbsp;&lt;matching name=\"myMatching\"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;epcs&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;epc epcDescription=\"EPK_A\" /&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;epc epcDescription=\"EPK_B\" /&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/epcs&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;matches&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;match refEpc=EPK_A value=\"0.5\" status=\"OPEN\" interpretation=\"SPECIALISATION\"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;relationalProperties&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name=\"NON_SYMMETRIC\"/&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relationalProperties&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;node nodeDescription=\"Antrag prüfen\" epcDescription=\"EPK_A&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;node nodeDescription=\"Antrag technisch prüfen\" epcDescription=\"EPK_B&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;node nodeDescription=\"Antrag kaufmännisch prüfen\" epcDescription=\"EPK_B/&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/match&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/matches&gt;<br>
+								&nbsp;&nbsp;&lt;/matching&gt;<br>
+								&lt;/matchings&gt;"
 		),
 			
 		"models"	=> array(
@@ -254,6 +416,7 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-picture",
 			"OpenWith"		=> null,
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"German-to-English" 	=> "German-to-English",
 				"German-to-French" 		=> "German-to-French",
@@ -264,8 +427,10 @@ class WorkspaceActionConfig {
 				"French-to-German"		=> "French-to-German",
 				"Italian-to-German"		=> "Italian-to-German",
 				"Italian-to-English"	=> "Italian-to-English",
-				"Dutch-to-English"		=> "Dutch-to-English"
-			)
+				"Dutch-to-English"		=> "Dutch-to-English",
+				"fromText"				=> "mined from text"
+			),
+			"Specification" => ""
 		),
 		
 		"translationreport"	=> array(
@@ -274,6 +439,7 @@ class WorkspaceActionConfig {
 			"Icon"			=> "glyphicon glyphicon-text-color",
 			"OpenWith"		=> "workspaceCSVViewerHeadingTop",
 			"isUploadable"	=> false,
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"German-to-English" 	=> "German-to-English",
 				"German-to-French" 		=> "German-to-French",
@@ -285,12 +451,13 @@ class WorkspaceActionConfig {
 				"Italian-to-German"		=> "Italian-to-German",
 				"Italian-to-English"	=> "Italian-to-English",
 				"Dutch-to-English"		=> "Dutch-to-English"
-			)
+			),
+			"Specification" => ""
 		)
 			
 	);
 	
-	public $userDependencyParams = array("INPUT_TEXT", "SELECT_ONE_MODEL", "SELECT_ONE_METRICS", "SELECT_ONE_VALUE_SERIES", "SELECT_ONE_SIMMATRIX", "SELECT_ONE_MAPPING", "SELECT_ONE_PNML");
+	public $userDependencyParams = array("INPUT_TEXT", "INPUT_TEXTFIELD", "SELECT_ONE_MODEL", "SELECT_ONE_METRICS", "SELECT_ONE_VALUE_SERIES", "SELECT_ONE_SIMMATRIX", "SELECT_ONE_XML_MATCHING", "SELECT_ONE_PNML");
 
 	/**
 	 * Available functionalities
@@ -299,6 +466,7 @@ class WorkspaceActionConfig {
 	 *   CONST_SESSION_E_MAIL
 	 *   CONST_WORKSPACE_EPML
 	 *   INPUT_TEXT
+	 *   INPUT_TEXTFIELD
 	 *   SELECT_ONE_MODEL
 	 *   SELECT_ONE_METRICS
 	 *   SELECT_ONE_SIMMATRIX
@@ -437,6 +605,24 @@ class WorkspaceActionConfig {
 				"REMOVE_EVENTS"		=> null,
 				"INPUT" 		=> "CONST_WORKSPACE_EPML",
 				"OUTPUT"		=> "CONST_WORKSPACE_EPML.model.noevents",
+			)
+		),
+		
+		"CONVERT_MATCHING" => array(
+			"Name"			=> "Convert Matching from RDF to XML format",
+			"CodeBase"		=> "JAVA",
+			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+			"EmbedInPHP"	=> true,
+			"Literature"	=> array(
+					"RDF specification: https://ai.wu.ac.at/emisa2015/contest.php"
+			),
+			"Parameters"	=> array(
+				"CLI"				=> null,
+				"CONVERT_MATCHING"		=> null,
+				"matchings" 	=> "INPUT_TEXT",
+				"model_set"		=> "CONST_WORKSPACE_EPML",
+				"output_file" => "INPUT_TEXT",
+				"format"	=> "xml"
 			)
 		),
 		
@@ -683,18 +869,49 @@ class WorkspaceActionConfig {
 		),
 			
 		"MATCHING_NSCM" => array(
-			"Name"			=> "N-Ary Semantic Cluster Matching",
+			"Name"			=> "RefMod-Mine/NSCM",
 			"CodeBase"		=> "PHP",
 			"ScriptBase"	=> "CLINArySemanticClusterMatching.php",
 			"EmbedInPHP"	=> false,
 			"Literature" 	=> array(
-				"The Process Matching Contest 2013 - Thaler, Hake, Fettke, Loos: RefMod-Miner/NSCM"
+				"The Process Model Matching Contest 2013 - Thaler, Hake, Fettke, Loos: RefMod-Miner/NSCM (N-Ary Semantic Cluster Matching)"
 			),
 			"Parameters"	=> array(
 				"input"			=> "CONST_WORKSPACE_EPML",
 				"output"		=> "CONST_WORKSPACE_EPML.matching.rmm-nscm",
 				"notification"	=> "CONST_SESSION_E_MAIL"
 			)
+		),
+			
+		"MATCHING_NHCM" => array(
+			"Name"			=> "RefMod-Mine/NHCM",
+			"CodeBase"		=> "PHP",
+			"ScriptBase"	=> "CLINAryHomogeneityBasedClusterMatching.php",
+			"EmbedInPHP"	=> false,
+			"Literature" 	=> array(
+				"The Process Model Matching Contest 2015 - Thaler, Hake, Dadashnia, Niesen, Sonntag, Fettke, Loos: RefMod-Mine/NHCM (N-Ary Homogeneity-based Cluster Matching)"
+			),
+			"Description"	=> "Business Process Model Matching: Identification of correspondences between nodes of business process models.",
+			"Parameters"	=> array(
+				"input"			=> "CONST_WORKSPACE_EPML",
+				"output"		=> "CONST_WORKSPACE_EPML.matching.rmm-nhcm",
+				"notification"	=> "CONST_SESSION_E_MAIL"
+			)
+		),
+		
+		"MATCHING_2015" => array(
+				"Name"			=> "Matcher 2015",
+				"CodeBase"		=> "PHP",
+				"ScriptBase"	=> "CLIMatcher2015.php",
+				"EmbedInPHP"	=> false,
+				"Literature" 	=> array(
+						"n/a"
+				),
+				"Parameters"	=> array(
+						"input"			=> "CONST_WORKSPACE_EPML",
+						"output"		=> "CONST_WORKSPACE_EPML.matching.rmm-nscm2015",
+						"notification"	=> "CONST_SESSION_E_MAIL"
+				)
 		),
 			
 		"MODEL_TRANSLATION" => array(
@@ -705,6 +922,7 @@ class WorkspaceActionConfig {
 			"Literature" 	=> array(
 				"todo"
 			),
+			"Description"	=> "Language translations of process models between several available languages as e.g. EN, DE, NL, IT, FR.",
 			"Parameters"	=> array(
 				"input"			=> "CONST_WORKSPACE_EPML",
 				"output"		=> "CONST_WORKSPACE_EPML.models.%language_combination%",
@@ -773,6 +991,39 @@ class WorkspaceActionConfig {
 					"output"		=> "CONST_WORKSPACE_EPML.matrix.correlation",
 					"notification"	=> "CONST_SESSION_E_MAIL"
 			)
+		),
+		
+		"TEXT2EPC_MINER" => array(
+			"Name"			=> "Text to EPC Miner -BETA-",
+			"CodeBase"		=> "JAVA",
+			"ScriptBase"	=> Config::TEXT2MODEL_JAVA_PATH_WITH_FILENAME,
+			"EmbedInPHP"	=> true,
+			"Literature" 	=> array(
+				"Based on: Friedrich, F.; Mendling, J.; Puhlmann, F.: Process Model Generation from Natural Language Text, In: (CAiSE'11) Advanced Information Systems Engineering, Vol. 6741, Lecture Notes in Computer Science, pp. 482-496."
+			),
+			"Description"	=> "Converting a natural language text describing a business process to an EPC.",
+			"Parameters"	=> array(
+					"input_type"	=> "text",
+					"input"			=> "INPUT_TEXTFIELD",
+					"output"		=> "CONST_WORKSPACE_EPML.model.fromText.epml"
+			),
+			"ignoreParameters" => array()
+		),
+		
+		"TEXT2BPMN_MINER" => array(
+			"Name"			=> "Text to BPMN Miner -BETA-",
+			"CodeBase"		=> "JAVA",
+			"ScriptBase"	=> Config::TEXT2MODEL_JAVA_PATH_WITH_FILENAME,
+			"EmbedInPHP"	=> true,
+			"Literature" 	=> array(
+				"Based on: Friedrich, F.; Mendling, J.; Puhlmann, F.: Process Model Generation from Natural Language Text, In: (CAiSE'11) Advanced Information Systems Engineering, Vol. 6741, Lecture Notes in Computer Science, pp. 482-496."
+			),
+			"Description"	=> "Converting a natural language text describing a business process to a BPMN model.",
+			"Parameters"	=> array(
+				"input_type"	=> "text",
+				"input"			=> "INPUT_TEXTFIELD",
+				"output"		=> "CONST_WORKSPACE_EPML.bpmn.fromText.bpmn"
+			)
 		)
 
 	);
@@ -787,8 +1038,10 @@ class WorkspaceActionConfig {
 			//"CALCULATE_BEHAVIOURAL_PROFILE" // is ready, bug not works at the moment (seems not being fully implemented)
 		),
 			
-		"Process Matching" => array(
-			"MATCHING_NSCM"
+		"Process Model Matching" => array(
+			"MATCHING_NSCM",
+			"MATCHING_NHCM"
+			//"MATCHING_2015"
 		),	
 					
 		"Process Model Similarity" => array(
@@ -806,8 +1059,10 @@ class WorkspaceActionConfig {
 			"CLUSTER_MODELS_BASED_ON_DIST" // is ready, but buggy, BUG reported 325
 		),
 			
-		"Reference Model Mining" => array(
+		"Process Model Mining" => array(
 			//"CREATE_REFERENCE_MODEL_LI" // returns null
+			"TEXT2EPC_MINER",
+			"TEXT2BPMN_MINER"
 		),
 			
 		"Natural Language Processing" => array(
@@ -821,6 +1076,12 @@ class WorkspaceActionConfig {
 			"CORRELATION_CALCULATOR"
 			//"CONVERT_PNML2EPML"
 		)
+	);
+	
+	public $latestFeatures = array(
+		"TEXT2EPC_MINER",
+		"MATCHING_NHCM",
+		"MODEL_TRANSLATION"
 	);
 	
 	
@@ -871,6 +1132,13 @@ class WorkspaceActionConfig {
 			return isset($this->fileTypeInfos[$fileType]["Descriptions"][$descriptionKey]) ? $this->fileTypeInfos[$fileType]["Descriptions"][$descriptionKey] : $descriptionKey;
 		}
 		return null;
+	}
+	
+	public function doesActionRequiresWorkspaceModels($actionName) {
+		foreach ( $this->actions[$actionName]["Parameters"] as $paramName => $paramValue ) {
+			if ( $paramValue == "CONST_WORKSPACE_EPML" ) return true;
+		}
+		return false;
 	}
 	
 }

@@ -62,6 +62,7 @@ class NodeCluster {
 	 * Entfernt alle Funktionsknoten aus dem Cluster, welche wahrscheinlich Ereignisse repraesentieren
 	 */
 	public function removePossibleEvents() {
+		return array();
 		$possibleEvents = array();
 		foreach ( $this->nodes as $index => $node ) {
 			if ( $node->couldBeEvent() ) {

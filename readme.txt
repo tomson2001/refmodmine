@@ -58,13 +58,14 @@ wget http://us3.php.net/get/php-5.5.5.tar.bz2/from/de3.php.net/mirror -O php.tar
 tar xvjf php.tar.bz2
 
 cd php-5.5.5
-./configure --enable-debug --enable-maintainer-zts --enable-pthreads --with-curl
+./configure --enable-debug --enable-maintainer-zts --enable-pthreads --with-curl --with-zlib-dir --with-gd --enable-zip --with-bz2 --with-jpeg-dir=/usr --with-jpeg-dir=/usr --enable-calendar --enable-calendar
 make
 checkinstall
 
 cp php.ini-production /usr/local/lib/php.ini
 pear config-set php_ini /usr/local/lib/php.ini
 pecl config-set php_ini /usr/local/lib/php.ini
+pecl config-set bin_dir /usr/local/bin/
 pecl install pthreads
 pecl install zip
 ### update extension path in php.ini to somethink like /usr/local/lib/php/extensions/debug-zts-20121212/ (you need to detect the correct directory name under extensions)

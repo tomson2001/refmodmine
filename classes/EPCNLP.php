@@ -11,19 +11,23 @@
  */
 class EPCNLP extends EPC {
 	
-	// functions and events with its tags
+	// functions and events with its pos tags
 	public $taggedFunctions = array();
 	public $taggedEvents = array();
 	
-	// Tag sets clean
+	// pos Tag sets clean
 	public $functionTags = array();
 	public $eventTags = array();
 	
+	// Additional POS Tags
 	public $functionHighLevelTags = array();
 	public $eventHighLevelTags = array();
 	
 	public $functionLabelStyles = array();
 	public $eventLabelStyles = array();
+	
+	// Content Tags
+	public $tags = null;
 	
 	/**
 	 * 
@@ -277,6 +281,25 @@ class EPCNLP extends EPC {
 		if ( !is_null($newFunctionLabels) ) $this->functions = $newFunctionLabels;
 		if ( !is_null($newEventLabels) ) $this->events = $newEventLabels; 
 		return true;
+	}
+	
+	/**
+	 * Extracts the text of all labels to a unstructured text
+	 * 
+	 * @return string
+	 */
+	public function toText() {
+		$text = "";
+		foreach ( $this->events as $label ) $text .= $label.". ";
+		foreach ( $this->functions as $label ) $text .= $label.". ";
+		foreach ( $this->orgUnits as $label ) $text .= $label.". ";
+		return $text;
+	}
+	
+	public function tagOpenCalais() {
+		$tagger = new OpenCalais(Config::OPEN_CALAIS_API_KEY);
+		$this->tags = $tagger->getEntities($this->toText());
+		return $this->tags;
 	}
 	
 }

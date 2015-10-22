@@ -28,8 +28,27 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 
 		return $paramSet;
 	}
+	
+	public function sortEPCsByName() {
+		$names = array();
+		foreach ( $this->epcs as $epc ) {
+			array_push($names, strtolower((string) $epc->name));
+		}
+		sort($names, SORT_STRING);
+		print_r($names);
+		$epcs = array();
+		foreach ( $names as $index => $name ) {
+			foreach ( $this->epcs as $epc ) {
+				if ( strtolower((string) $epc->name) == $name ) {
+					$epcs[$index] = $epc;
+					continue;
+				}
+			}
+		}
+		$this->epcs = $epcs;
+	}
 
-	public function map() {
+	public function map($includeEvents = false) {
 		
 		/**
 		 * Funktionsontologien bauen und alles in ein Array schreiben
@@ -76,6 +95,169 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 			$i++;
 			$j = $i + 1;
 		}
+		
+		if ( $includeEvents ) {
+			/**
+			 * Eventontologien bauen und alles in ein Array schreiben
+			 */
+			$numOfAllEvents = 0;
+			foreach ( $this->epcs as $epc ) {
+				$numOfAllEvents += count($epc->events);
+			}
+			print("\n\nGenerate event ontologies... \n");
+			$progressBar = new CLIProgressbar($numOfAllEvents, 0.1);
+			$i=0;
+			
+			$allEvents = array();
+			foreach ( $this->epcs as $epc ) {
+				foreach ( $epc->events as $id => $label ) {
+					array_push($allEvents, new FunctionOntologyWithSynonyms($epc, $id, $label));
+					$i++;
+					$progressBar->run($i);
+				}
+			}
+			print("\ndone");
+			
+			/**
+			 * Clusterbildung durch Vergleich aller Eventpaare
+			*/
+			$i = 0;
+			$j = 1;
+			//$numOfAllFuncs = count($allFunctions);
+			while ( $i < $numOfAllEvents ) {
+				$node1 = $allEvents[$i];
+				while ( $j < $numOfAllEvents ) {
+					//print(".".$i."-".$j.".");
+					$node2 = $allEvents[$j];
+					// Similarity nur dann berechnen, wenn es sich um Knoten aus verschiedenen EPKs handelt
+					if ( $node1->epc->name != $node2->epc->name ) {
+						$nodeSimilarity = $this->compare($node1, $node2);
+						//print("\n ".$node1->label." <=> ".$node2->label." | ".$nodeSimilarity);
+						if ( $nodeSimilarity >= $this->threshold_ontology_quote ) {
+							if ( $node1->label != "start" &&  $node2->label != "start" && $node1->label != "end" &&  $node2->label != "end" )
+							$this->cluster($node1, $node2);
+						}
+					}
+					$j++;
+				}
+				$i++;
+				$j = $i + 1;
+			}
+		}
+		
+		$file1 = $this->exportDebug("", "_complete");
+		$this->cleanClusters();
+		$file2 = $this->exportDebug("", "_reduced");
+		return array($file1, $file2);
+	}
+	
+	public function map2015($includeEvents = false) {
+	
+		/**
+		 * Funktionsontologien bauen und alles in ein Array schreiben
+		 */
+		$numOfAllFuncs = 0;
+		foreach ( $this->epcs as $epc ) {
+			$numOfAllFuncs += count($epc->functions);
+		}
+		print("\n\nGenerate function ontologies... \n");
+		$progressBar = new CLIProgressbar($numOfAllFuncs, 0.1);
+		$i=0;
+	
+		$allFunctions = array();
+		foreach ( $this->epcs as $epc ) {
+			foreach ( $epc->functions as $id => $label ) {
+				array_push($allFunctions, new FunctionOntologyWithSynonyms($epc, $id, $label));
+				$i++;
+				$progressBar->run($i);
+			}
+		}
+		print("\ndone");
+	
+		/**
+		 * Clusterbildung durch Vergleich aller Funktionspaare
+		*/
+		
+		print("\n\nProceed cluster mapping ... \n");
+		$numNodePairs = (($numOfAllFuncs * $numOfAllFuncs) - $numOfAllFuncs ) / 2;
+		$progressBar = new CLIProgressbar($numNodePairs, 0.1);
+		$compareCounter = 0;
+		
+		$i = 0;
+		$j = 1;
+		//$numOfAllFuncs = count($allFunctions);
+		while ( $i < $numOfAllFuncs ) {
+			$node1 = $allFunctions[$i];
+			while ( $j < $numOfAllFuncs ) {
+				//print(".".$i."-".$j.".");
+				$node2 = $allFunctions[$j];
+				// Similarity nur dann berechnen, wenn es sich um Knoten aus verschiedenen EPKs handelt
+				if ( $node1->epc->name != $node2->epc->name ) {
+					$nodeSimilarity = $this->compare2015($node1, $node2);
+					//print("\n ".$node1->label." <=> ".$node2->label." | ".$nodeSimilarity);
+					if ( $nodeSimilarity >= $this->threshold_ontology_quote ) {
+						$this->cluster($node1, $node2);
+					}
+				}
+				$j++;
+				
+				$compareCounter++;
+				$progressBar->run($compareCounter);
+			}
+			$i++;
+			$j = $i + 1;
+		}
+		print("\ndone");
+	
+		if ( $includeEvents ) {
+			/**
+			 * Eventontologien bauen und alles in ein Array schreiben
+			 */
+			$numOfAllEvents = 0;
+			foreach ( $this->epcs as $epc ) {
+				$numOfAllEvents += count($epc->events);
+			}
+			print("\n\nGenerate event ontologies... \n");
+			$progressBar = new CLIProgressbar($numOfAllEvents, 0.1);
+			$i=0;
+				
+			$allEvents = array();
+			foreach ( $this->epcs as $epc ) {
+				foreach ( $epc->events as $id => $label ) {
+					array_push($allEvents, new FunctionOntologyWithSynonyms($epc, $id, $label));
+					$i++;
+					$progressBar->run($i);
+				}
+			}
+			print("\ndone");
+				
+			/**
+			 * Clusterbildung durch Vergleich aller Eventpaare
+			*/
+			$i = 0;
+			$j = 1;
+			//$numOfAllFuncs = count($allFunctions);
+			while ( $i < $numOfAllEvents ) {
+				$node1 = $allEvents[$i];
+				while ( $j < $numOfAllEvents ) {
+					//print(".".$i."-".$j.".");
+					$node2 = $allEvents[$j];
+					// Similarity nur dann berechnen, wenn es sich um Knoten aus verschiedenen EPKs handelt
+					if ( $node1->epc->name != $node2->epc->name ) {
+						$nodeSimilarity = $this->compare($node1, $node2);
+						//print("\n ".$node1->label." <=> ".$node2->label." | ".$nodeSimilarity);
+						if ( $nodeSimilarity >= $this->threshold_ontology_quote ) {
+							if ( $node1->label != "start" &&  $node2->label != "start" && $node1->label != "end" &&  $node2->label != "end" )
+								$this->cluster($node1, $node2);
+						}
+					}
+					$j++;
+				}
+				$i++;
+				$j = $i + 1;
+			}
+		}
+	
 		$file1 = $this->exportDebug("", "_complete");
 		$this->cleanClusters();
 		$file2 = $this->exportDebug("", "_reduced");
@@ -215,6 +397,47 @@ class NAryWordstemMappingWithAntonyms extends ANAryMapping implements INAryMappi
 		$stemSimilarity = round((2*$countWordstemMappings / ($countWordstemsOfLabel1 + $countWordstemsOfLabel2))*100, 2);
 		return $stemSimilarity;
 
+	}
+	
+	private function compare2015(FunctionOntologyWithSynonyms $node1, FunctionOntologyWithSynonyms $node2) {
+	
+		if ( $node1->label == $node2->label ) return 100;
+	
+		// Dummy-Transitionen nicht matchen
+		if ( preg_match("/^t[0-9]*$/", $node1->label) || preg_match("/^t[0-9]*$/", $node2->label) ) return 0;
+	
+		// Wenn ein Label die Verneinung des anderen Labels ist, dann nicht matchen
+		if ( $this->areAntonyms($node1, $node2) ) return 0;
+			
+		/**
+		 * Aehnlichkeit ueber Porter-Stems bestimmen
+		 */
+	
+		$countWordstemsOfLabel1 = count($node1->wordstems);
+		$countWordstemsOfLabel2 = count($node2->wordstems);
+		if ( $countWordstemsOfLabel1 > $countWordstemsOfLabel2 ) {
+			// Label1 muss immer dasjenigen mit der geringeren Anzahl an Komponenten (Woertern) sein
+			$node_temp = $node1;
+			$node1 = $node2;
+			$node2 = $node_temp;
+		}
+		$countWordstemMappings = 0;
+		foreach ( $node1->wordstems as $wordstem1 ) {
+			foreach ( $node2->wordstems as $wordstem2 ) {
+				if ( $wordstem1 == $wordstem2 ) {
+					$countWordstemMappings++;
+					break;
+				}
+			}
+		}
+	
+		$stemSimilarity = round((2*$countWordstemMappings / ($countWordstemsOfLabel1 + $countWordstemsOfLabel2))*100, 2);
+		return $stemSimilarity;
+	
+	}
+	
+	public function removeAntonymsOfBinaryGenericMapping(GenericMapping $mapping) {
+		
 	}
 	
 	/**

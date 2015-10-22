@@ -39,6 +39,9 @@ class WordNet {
 	public $noun_verbs = null;
 	public $ants_noun = null;
 	public $ants_verb = null;
+	
+	private $antonymFunctionLabels = null;
+	private $nonAntonymFunctionLabels = null;
 
 	private $ext_deri = array(
 		"assess" => "assessment"
@@ -97,6 +100,23 @@ class WordNet {
 			if ( !in_array($ant, $ants) ) array_push($ants, $ant);
 		}
 		return $ants;
+	}
+	
+	/**
+	 * Ermittelt die Stammform eines Worted
+	 * 
+	 * @param unknown $word
+	 */
+	public static function getBaseFormOfVerb($word) {
+		$cli_output = shell_exec(Config::WORDNET_EXE." ".$word." -synsv");
+		$baseForm = self::extractBaseForm($cli_output);
+		return $baseForm;
+	}
+	
+	public static function getBaseFormOfNoun($word) {
+		$cli_output = shell_exec(Config::WORDNET_EXE." ".$word." -synsn");
+		$baseForm = self::extractBaseForm($cli_output);
+		return $baseForm;
 	}
 
 	public static function getSynonyms($word) {
@@ -187,6 +207,24 @@ class WordNet {
 
 		return $arr3;
 	}
+	
+	/**
+	 * Extrahiert die Grundform eines Wortes aus dem Ergebnis des Kommandozeilenaufrufs
+	 *
+	 * @param string $cli_output
+	 * @param bool $extractSyns liest die Stammform aus
+	 * @return array
+	 */
+	private static function extractBaseForm($cli_output) {
+		// Array erstellen mit einzelnen Bedeutungen
+		$arr1 = explode("Sense ", $cli_output);
+	
+		if ( empty($arr1[0]) ) return null;
+		// Extraktion des Stammwortes
+		$strrpos = strrpos($arr1[0], " of ");
+		$word = trim(preg_replace("/\r|\n/s", "", substr($arr1[0], $strrpos+4)));
+		return $word;
+	}
 
 	/**
 	 * Extrahiert die Synonyme aus dem Ergebnis des Kommandozeilenaufrufs
@@ -219,13 +257,16 @@ class WordNet {
 		//print_r($arr2);
 		// extraktion der Synonyme
 		$synonyms = array($word);
+		$i = 0;
 		foreach ( $arr2 as $syn_sense_string ) {
 			$syn_sense_array = explode(", ", $syn_sense_string);
 			foreach ( $syn_sense_array as $synonym ) {
 				$synonym = ltrim(rtrim(preg_replace("/\r|\n/s", "", $synonym)));
 				// Synonym nur hinzufuegen, wenn es aus genau einem Wort besteht
-				if ( !substr_count($synonym, " ") && !in_array($synonym, $synonyms) ) array_push($synonyms, $synonym);
-
+				if ( !substr_count($synonym, " ") && !in_array($synonym, $synonyms) && $i <= Config::WORDNET_SYNONYM_LIMIT ) {
+					array_push($synonyms, $synonym);
+					$i++;
+				}
 			}
 		}
 		if ( in_array("accept", $synonyms) ) {
@@ -302,6 +343,77 @@ class WordNet {
 			return substr($cli_output, $stopBefore, $stopAfter-$stopBefore);
 		}
 		return "";
+	}
+	
+	public static function checkIfVerbsAreSynonym($word1, $word2) {
+		$synsForWord1 = self::getVerbSynonyms($word1);
+		$synsForWord2 = self::getVerbSynonyms($word2);
+		//print_r($synsForWord1);
+		//print_r($synsForWord2);
+		foreach ( $synsForWord1 as $currWord ) {
+			if ( in_array($currWord, $synsForWord2) ) return true;
+		}
+		
+		$furtherSyns = array(
+			array("word1" => "create", "word2" => "process"),
+			array("word1" => "deliver", "word2" => "return"),
+			array("word1" => "sign", "word2" => "process"),
+			array("word1" => "check", "word2" => "investigate")
+		);
+		
+		$base1 = self::getBaseFormOfVerb($word1);
+		$base2 = self::getBaseFormOfVerb($word2);
+		
+		if ( $base1 == $base2 ) return true;
+		
+		foreach ( $furtherSyns as $pair ) {
+			if ( $pair["word1"] == $base1 && $pair["word2"] == $base2 ) return true;
+			if ( $pair["word1"] == $base2 && $pair["word2"] == $base1 ) return true;
+		}
+		
+		return false;
+	}
+	
+	public static function checkIfNounsAreSynonym($word1, $word2) {
+		$synsForWord1 = self::getNounSynonyms($word1);
+		$synsForWord2 = self::getNounSynonyms($word2);
+		//print_r($synsForWord1);
+		//print_r($synsForWord2);
+		foreach ( $synsForWord1 as $currWord ) {
+			if ( in_array($currWord, $synsForWord2) ) return true;
+		}
+		return false;
+	}
+	
+	public static function checkIfVerbsAreAntonyms($word1, $word2) {
+		// TODO
+		$antonyms = array(
+			array("word1" => "send", "word2" => "receive")
+		);
+		
+		$word1 = strtolower($word1);
+		$word2 = strtolower($word2);
+		
+		// try it on the given words for performance reasons
+		foreach ( $antonyms as $pair ) {
+			if ( $pair["word1"] == $word1 && $pair["word2"] == $word2 ) return true;
+			if ( $pair["word1"] == $word2 && $pair["word2"] == $word1 ) return true;
+		}		
+		
+		$word1 = self::getBaseFormOfVerb($word1);
+		if ( is_null($word1) ) return false;
+		$word2 = self::getBaseFormOfVerb($word2);
+		if ( is_null($word2) ) return false;
+		
+		//print(" Basic form of word1: ".$word1."\n");
+		//print(" Basic form of word2: ".$word2."\n");
+		
+		foreach ( $antonyms as $pair ) {
+			if ( $pair["word1"] == $word1 && $pair["word2"] == $word2 ) return true;
+			if ( $pair["word1"] == $word2 && $pair["word2"] == $word1 ) return true;
+		}
+		
+		return false;
 	}
 
 }

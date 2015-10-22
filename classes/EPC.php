@@ -128,6 +128,7 @@ class EPC {
 			$flow = $edge->flow;
 			$relation = $edge->relation;
 			if ( isset($flow['source']) && isset($flow['target']) ) {
+				if ( !isset($this->idConversion[(string) $flow['source']]) || !isset($this->idConversion[(string) $flow['target']]) ) continue;
 				$sourceIndex = $this->idConversion[(string) $flow['source']];
 				$targetIndex = $this->idConversion[(string) $flow['target']];
 				$edge = array($sourceIndex => $targetIndex);
@@ -171,7 +172,11 @@ class EPC {
 			return false;
 		}
 	}
-
+	
+	public function getOrganizationUnit($nodeID) {
+		return isset($this->functionOrgUnitAssignments[$nodeID]) ? $this->functionOrgUnitAssignments[$nodeID] : null;
+	}
+	
 	public function isFunction($nodeID) {
 		$nodeID = (string) $nodeID;
 		return array_key_exists($nodeID, $this->functions);
@@ -878,7 +883,9 @@ class EPC {
 // 		$string = str_replace("Ü", "Ue", $string);
 // 		$string = str_replace("ü", "ue", $string);
 // 		$string = str_replace("ß", "ss", $string);
-// 		$string = str_replace("\n", " ", $string);
+ 		$string = str_replace("\r\n", " ", $string);
+ 		$string = str_replace("\r", " ", $string);
+ 		$string = str_replace("\n", " ", $string);
 		return $string;
 	}
 
@@ -1215,8 +1222,88 @@ class EPC {
 		return $result;
 	}
 	
-	public function getEPCName(){
+	public function getEPCName() {
 		return $this->convertIllegalChars($this->name);
+	}
+	
+	public function transformToBPMN() {
+		$bpmn = new BPMN(null, $this->name, null);
+		
+		$participantID = $bpmn->getNextID();
+		$bpmn->participants[$participantID] = $this->name;
+		$bpmn->processParticipantAssignments[md5($this->name)] = $participantID;
+		
+		foreach ( $this->events as $id => $label ) {
+			$bpmn->events[$id] = $label;
+			
+			$preds = $this->getPredecessor($id);
+			$succs = $this->getSuccessor($id);
+			if ( empty($preds) ) { array_push($bpmn->startEvents, $id); }
+			elseif ( empty($succs) ) { array_push($bpmn->endEvents, $id); }
+			else { array_push($bpmn->events, $id); }
+			
+			array_push($bpmn->reservedIDs, $id);
+		}
+		
+		foreach ( $this->functions as $id => $label ) {
+			$bpmn->activities[$id] = $label;
+			array_push($bpmn->reservedIDs, $id);
+		}
+		
+		foreach ( $this->xor as $id => $label ) {
+			$bpmn->gateways[$id] = "";
+			array_push($bpmn->exclusiveGateways, $id);
+			array_push($bpmn->reservedIDs, $id);
+		}
+		
+		foreach ( $this->or as $id => $label ) {
+			$bpmn->gateways[$id] = "";
+			array_push($bpmn->eventBasedGateways, $id);
+			array_push($bpmn->reservedIDs, $id);
+		}
+		
+		foreach ( $this->and as $id => $label ) {
+			$bpmn->gateways[$id] = "";
+			array_push($bpmn->parallelGateways, $id);
+			array_push($bpmn->reservedIDs, $id);
+		}
+		
+		foreach ( $this->edges as $dummy => $edge ) {
+			foreach ( $edge as $source => $target ) {
+				$arcID = $bpmn->getNextID();
+				$bpmn->arcs[$arcID] = array("source" => $source, "target" => $target, "label" => "");
+				array_push($bpmn->seqFlows, $arcID);
+				array_push($bpmn->reservedIDs, $arcID);
+			}
+		}
+		
+		foreach ( $this->orgUnits as $id => $label ) {
+			$bpmn->lanes[$id] = $label;
+			array_push($bpmn->reservedIDs, $id);
+			$bpmn->laneParticipantAssignments[$id] = $participantID;
+		}
+		
+		foreach ( $this->functionOrgUnitAssignments as $funcID => $orgUnitID ) {
+			$bpmn->nodeLaneAssignments[$funcID] = $orgUnitID;
+		}
+		
+		// Add lane for not assigned nodes
+		$nodesWithoutLane = array();
+		$allNodes = $this->getAllNodes();
+		foreach ( $allNodes as $id => $label ) {
+			if ( !array_key_exists($id, $bpmn->nodeLaneAssignments) ) array_push($nodesWithoutLane, $id);
+		}
+		if ( !empty($nodesWithoutLane) ) {
+			$laneID = $bpmn->getNextID();
+			$bpmn->lanes[$laneID] = "unknown lane";
+			$bpmn->laneParticipantAssignments[$laneID] = $participantID;
+			
+			foreach ( $nodesWithoutLane as $nodeID ) {
+				$bpmn->nodeLaneAssignments[$nodeID] = $laneID;
+			}
+		}
+		
+		return $bpmn;
 	}
 
 }
