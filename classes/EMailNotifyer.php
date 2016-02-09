@@ -17,6 +17,10 @@ class EMailNotifyer {
 		return self::send($to, "Label extraction finished", $readme);
 	}
 	
+	public static function sendCLILogFeatureVectorsNotification($to, $readme) {
+		return self::send($to, "Feature Vector extraction (Log) finished", $readme);
+	}
+	
 	public static function sendCLICorrelationCalculatorNotification($to, $readme) {
 		return self::send($to, "Correlation calculation finished", $readme);
 	}
@@ -61,6 +65,17 @@ class EMailNotifyer {
 		return self::send($to, "RMMaaS-Workspace shared", $msg); 
 	}
 	
+	public static function sendAdminNotificationModelsUploaded($filename) {
+		if ( !is_null(Config::DO_NOTIFY_ON_MODEL_UPLOADS) ) {
+			return self::send(Config::DO_NOTIFY_ON_MODEL_UPLOADS, "New models uploaded", $filename);
+		}
+	}
+	
+	public static function sendAdminNotificationModelsAddedToGlobalRepository($filename) {
+		if ( !is_null(Config::DO_NOTIFY_ON_MODEL_ADDED_TO_GLOBAL_RESPOSITORY) ) {
+			return self::send(Config::DO_NOTIFY_ON_MODEL_ADDED_TO_GLOBAL_RESPOSITORY, "User added models to global respository", $filename);
+		}
+	}
 	
 }
 ?>

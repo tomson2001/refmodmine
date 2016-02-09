@@ -3,9 +3,32 @@
 set_include_path(
     get_include_path() . 
     PATH_SEPARATOR . "classes" .
+    PATH_SEPARATOR . "classes/extensions" .
     PATH_SEPARATOR . "classes/framework" .
     PATH_SEPARATOR . "classes/transformators" .
-    PATH_SEPARATOR . "gui/classes"
+    PATH_SEPARATOR . "gui/classes" .
+    PATH_SEPARATOR . "lib/AutomaticKeywordGenerator" .
+    PATH_SEPARATOR . "lib/PHP-OpenCalais" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Analysis" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Classifiers" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Clustering" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Clustering/CentroidFactories" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Clustering/MergeStrategies" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Documents" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Exceptions" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/FeatureFactories" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Models" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Optimizers" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Random" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Random/Distributions" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Random/Generators" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Similarity" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Stemmers" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Tokenizers" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Utils" .
+    PATH_SEPARATOR . "lib/PHP-NLP-Tools/src/NlpTools/Utils/Normalizers"
 );
 
 /**
@@ -43,6 +66,8 @@ class Autoloader {
 			$path = empty($path) ? $path : $path."/";
 			$possibleIncludes[] = $path.$classname.".php";	// Standard
 			$possibleIncludes[] = $path.str_replace('_', '/', $classname).".php";	// Konvention bei einigen Pear-Paketen
+			$possibleIncludes[] = $path.str_replace('\\', '/', $classname).".php";	// Namespaces
+			//print_r($possibleIncludes);
 			$possibleIncludes[] = $path.$classname.".class.php";	// Konvention bei Smarty
 			foreach ( $possibleIncludes as $possibleInclude ) {
 				if ( file_exists($possibleInclude) ) {
@@ -50,12 +75,20 @@ class Autoloader {
 					break;
 				}
 			}
-			if ( $includeFile ) {
-				include $includeFile;
-				break;
-			}
+			//print_r($possibleIncludes);
 		}
-		if ( $includeFile === false ) exit('Class '.$classname.' could not be loaded. No such file or directory. See /setup/autoloader.php for more information.');
+		if ( $includeFile === false ) {
+
+// 			if ( substr_count($classname, "\\") > 0 ) {
+// 				$pos = strrpos($classname, "\\");
+// 				$newClassname = substr($classname, $pos+1);
+// 			//	print("try ".$newClassname."\n");
+// 				self::complexLoad($newClassname);
+// 			} else {
+				exit('Class '.$classname.' could not be loaded. No such file or directory. See autoloader.php for more information.');
+// 			}
+		}
+		include $includeFile;
 	}
 
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Slider for Bootstrap Examples Page</title>
+
+    <!-- core CSS -->
+    <link href="dependencies/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-slider.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+
+      	<div class='slider-example'>
+      		
+      			<input id="ex6" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="0.1" data-slider-value="80"/>
+      			<span id="ex6CurrentSliderValLabel">Current Slider Value: <span id="ex6SliderVal">80</span></span>
+      		
+      	</div>
+
+
+
+    <!-- core JavaScript
+    ================================================== -->
+    <script type='text/javascript' src="dependencies/js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap-slider.js"></script>
+    <script type='text/javascript'>
+    	$(document).ready(function() {
+			/* Example 6 */
+			$("#ex6").slider();
+			$("#ex6").on('slide', function(slideEvt) {
+				$("#ex6SliderVal").text(slideEvt.value);
+			});
+		});
+    </script>
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>

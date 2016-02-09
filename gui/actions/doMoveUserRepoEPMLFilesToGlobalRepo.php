@@ -7,4 +7,6 @@ if ( is_dir($path) ) $files = scandir($path);
 foreach ( $files as $file ) {
 	if ( substr($file, -5) == ".epml" ) rename($path."/".$file, Config::REPOSITORY_PATH.'/'.$file);
 }
+
+EMailNotifyer::sendAdminNotificationModelsAddedToGlobalRepository(implode(", ", $files));
 ?>

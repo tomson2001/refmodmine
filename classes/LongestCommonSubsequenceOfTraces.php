@@ -106,7 +106,7 @@ class LongestCommonSubsequenceOfTraces implements ISimilarityMeasure {
 	 *
 	 * @return array "Longest Common Subsequence"
 	 */
-	private function longestCommonSubsequence(array $trace1, array $trace2)
+	public static function longestCommonSubsequence(array $trace1, array $trace2)
 	{
 		$m = count($trace1);
 		$n = count($trace2);

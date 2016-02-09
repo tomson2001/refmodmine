@@ -1066,5 +1066,41 @@ class NLP {
 		fclose($fileHandler);
 	}
 	
+	public static function generateSpellingCorrectionRecommendation($string, $language="en") {
+	    // Suggests possible words in case of misspelling
+	    $config_dic = pspell_config_create($language);
+	
+	    // Ignore words under 3 characters
+	    pspell_config_ignore($config_dic, 3);
+	
+	    // Configure the dictionary
+	    pspell_config_mode($config_dic, PSPELL_FAST);
+	    $dictionary = pspell_new_config($config_dic);
+	
+	    // To find out if a replacement has been suggested
+	    $replacement_suggest = false;
+	
+	    $string = explode(' ', trim(str_replace(',', ' ', $string)));
+	    foreach ($string as $key => $value) {
+	    	if ( Tools::endsWith($value, ".") ) continue;
+	        if(!pspell_check($dictionary, $value)) {
+	            $suggestion = pspell_suggest($dictionary, $value);
+	
+	            // Suggestions are case sensitive. Grab the first one.
+	            if(strtolower($suggestion [0]) != strtolower($value)) {
+	                $string [$key] = $suggestion [0];
+	                $replacement_suggest = true;
+	            }
+	        }
+	    }
+	
+	    if ($replacement_suggest) {
+	        // We have a suggestion, so we return to the data.
+	        return implode(' ', $string);
+	    } else {
+	        return null;
+	    }
+	}
+	
 }
 ?>

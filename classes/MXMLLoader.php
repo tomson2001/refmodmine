@@ -27,12 +27,24 @@ class MXMLLoader {
 		$this->aggregate = $aggregate;
 	}
 	
+	public function addLoadMXML($filename, $xml) {
+		$this->xml = $xml;
+		$this->filename = $filename;
+		$this->load();
+	}
+	
 	/**
 	 * Erzeugt ein ProcessLog aus einer MXML-Datei
 	 * @return number
 	 */
 	public function load() {
+		
+		print("\nLoad ".$this->filename." ... \n");
+		$containedProcessInstances = count($this->xml->xpath("//ProcessInstance"));
+		$progressBar = new CLIProgressbar($containedProcessInstances, 0.1);
+		
 		$loadedTraces = 0;
+		
 		foreach ($this->xml->xpath("//ProcessInstance") as $xml_trace) {
 			$id = utf8_decode((string) $xml_trace["id"]);
 			
@@ -51,22 +63,24 @@ class MXMLLoader {
 			}
 
 			if ( $this->aggregate ) $trace->makeEntriesRepresentative();
-			$this->processLog->addTrace($trace);
+			$this->processLog->addTrace($trace, $this->filename);
 			$loadedTraces++;
+			$progressBar->run($loadedTraces);
 		}
 		return $this->processLog;
 	}
 	
 	public function convertIllegalChars($string) {
-		$string = str_replace("Ä", "Ae", $string);
-		$string = str_replace("ä", "ae", $string);
-		$string = str_replace("Ö", "Oe", $string);
-		$string = str_replace("ö", "oe", $string);
-		$string = str_replace("Ü", "Ue", $string);
-		$string = str_replace("ü", "ue", $string);
-		$string = str_replace("ß", "ss", $string);
+		$string = str_replace("ï¿½", "Ae", $string);
+		$string = str_replace("ï¿½", "ae", $string);
+		$string = str_replace("ï¿½", "Oe", $string);
+		$string = str_replace("ï¿½", "oe", $string);
+		$string = str_replace("ï¿½", "Ue", $string);
+		$string = str_replace("ï¿½", "ue", $string);
+		$string = str_replace("ï¿½", "ss", $string);
 		$string = str_replace("\n", " ", $string);
 		return $string;
 	}
+
 }
 ?>

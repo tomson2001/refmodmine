@@ -1,0 +1,76 @@
+﻿General Parameters
+
+Input file;workspace/f6b3u3k4k39nssjrm2bfa9g6j4/workspace.epml
+Sample Solution;MoHoL Sample Solution
+Output file;workspace/f6b3u3k4k39nssjrm2bfa9g6j4/workspace.epml.examresults.maxpoints-20
+Notification E-Mail;no
+
+Configuration Parameters
+
+Error types;1, 2, 3, 6
+Warning types;4, 5
+Max. points;20
+Weight of syntax;2
+Weight of functioin recall;2
+Weight of behavioural f-measure;0
+Max. syntax errors;5
+Metrics;workspace/f6b3u3k4k39nssjrm2bfa9g6j4/workspace.epml.metrics.MoHoL
+
+
+Results
+
+;MoHoL Sample Solution;MoHoL Solution 01;MoHoL Solution 02;MoHoL Solution 03;MoHoL Solution 04;MoHoL Solution 05;MoHoL Solution 06;MoHoL Solution 07;MoHoL Solution 08;MoHoL Solution 09;MoHoL Solution 10
+#Syntax Errors;0;0;0;2;0;2;0;0;0;0;2
+#Syntax Warnings;0;6;2;0;0;0;0;0;0;0;2
+Activity Recall;;1;1;1;1;0,8;0,4;1;0,8;1;1
+Behavioral Precision;;-;-;-;-;-;-;-;-;-;-
+Behavioral Recall;;-;-;-;-;-;-;-;-;-;-
+Behavioral F-Measure;;-;-;-;-;-;-;-;-;-;-
+Cheat attempt;no;no;no;no;no;no;no;no;no;no;no
+OVERALL SCORE;;20;20;16;20;14;14;20;18;20;16
+
+Detailed results
+;MoHoL Sample Solution;MoHoL Solution 01;MoHoL Solution 02;MoHoL Solution 03;MoHoL Solution 04;MoHoL Solution 05;MoHoL Solution 06;MoHoL Solution 07;MoHoL Solution 08;MoHoL Solution 09;MoHoL Solution 10
+#Syntax Errors;"";"";"";"Function 'Create offer' has not exactly one incoming edge.
+Function 'Create rejection' has not exactly one incoming edge.
+";"";"Function 'Create rejection' has not exactly one incoming edge.
+Function 'Inform customer' has not exactly one outgoing edge.
+";"";"";"";"";"Function 'Inform customer subsequently' has not exactly one outgoing edge.
+Function 'Check feasibility' has not exactly one incoming edge.
+"
+#Syntax Warnings;"";"Event 'Customer informed' occurs more than once.
+Event 'Offer created' occurs more than once.
+Event 'Rejection created' occurs more than once.
+Function 'Inform Customer' occurs more than once.
+Function 'Create offer' occurs more than once.
+Function 'Create rejection' occurs more than once.
+";"Event 'Customer informed' occurs more than once.
+Function 'Inform customer' occurs more than once.
+";"";"";"";"";"";"";"";"Function 'Create offer' is followed by another function.
+Function 'Create rejection' is followed by another function.
+"
+Spelling corrections;"'Check feasability' replaced by 'Check feasibility'";"'Check feasability' replaced by 'Check feasibility'";"'Check feasability' replaced by 'Check feasibility'";"";"";"'Inquiry receivt' replaced by 'Inquiry received'";"";"";"";"";""
+Unassigned activities;"";"";"";"";"";"Result leading", "Result giving";"Create rejection + inform customer", "Create offer + inform c.";"";"Record inquiry in system";"";""
+Missing activities;"";"";"";"";"";"Create offer";"Inform customer", "Create rejection", "Create offer";"";"Inform customer";"";""
+Cheat attempts;"";"";"";"";"";"";"";"";"";"";""
+
+Model understandability
+
+Remark: Effects on the understandability in comparison to the sample solution are presented in the brackets.
+
+;MoHoL Sample Solution;MoHoL Solution 01;MoHoL Solution 02;MoHoL Solution 03;MoHoL Solution 04;MoHoL Solution 05;MoHoL Solution 06;MoHoL Solution 07;MoHoL Solution 08;MoHoL Solution 09;MoHoL Solution 10
+#arcs;21;25 (-);21;19 (+);21;18 (+);17 (+);21;20 (+);21;17 (+)
+density;0,061;0,038 (+);0,055 (+);0,07 (-);0,061;0,059 (+);0,071 (-);0,061;0,065 (-);0,061;0,081 (-)
+sequentiality;0,238;0,72 (+);0,381 (+);0,158 (-);0,238;0,333 (+);0,235 (-);0,238;0,2 (-);0,238;0,059 (-)
+average connector degree;3,2;3,5 (-);3,25 (-);3,333 (+);3,2;3,333 (-);3,25 (+);3,2;3,2 (+);3,2;3,2 (+)
+depth;2;0 (+);1 (+);2;2;1 (+);1 (+);2;2;2;2
+#nodes after split connectors;5;5;5;5;5;7 (-);5;5;5;5;5
+#connectors;5;2 (+);4 (+);3 (+);5;3 (+);4 (+);5;5;5;5
+#OR connectors;0;0;0;0;2 (-);0;2 (-);4 (-);0;0;0
+gateway heterogeneity;1;1;1;1;2 (-);2 (-);2 (-);2 (-);2 (-);1;1
+control flow complexity;5;5;5;5;5;6 (-);5;10 (-);4 (+);5;5
+diameter;12;10 (+);11 (+);11 (+);12;12;9 (+);12;12;12;9 (+)
+#connector connected nodes;16;7 (+);13 (+);10 (+);16;10 (+);13 (+);16;16;16;16
+cross connectivity;0,05;0,083 (-);0,066 (-);0,097 (-);0,056 (-);0,107 (-);0,06 (-);0,062 (-);0,088 (-);0,05;0,045 (+)
+coefficient of connectivity;1,105;0,962 (+);1,05 (+);1,118 (-);1,105;1 (+);1,063 (+);1,105;1,111 (-);1,105;1,133 (-)
+start and end events;2;5 (-);3 (-);2;2;4 (-);3 (-);2;2;2;0 (+)

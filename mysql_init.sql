@@ -26,3 +26,16 @@ create view view_stats_users_per_day (day, users, avg_clicks) as (
 create view view_stats_actions_per_day (day, users, different_action_calls, action_calls) as (
 	SELECT _date, count(distinct ip), count(distinct action), count(action) FROM action_stats GROUP BY _date
 );
+
+create table action_log (
+	id varchar(32) NOT NULL,
+	start_pot datetime NOT NULL,
+	end_pot datetime,
+	duration_sec INTEGER,
+	ip varchar(15) NOT NULL,
+	email varchar(155),
+	action varchar(55) NOT NULL,
+	command varchar(2048) NOT NULL,
+	session_id varchar(55) NOT NULL,
+	PRIMARY KEY (id)
+);

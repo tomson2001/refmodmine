@@ -1,7 +1,7 @@
 <div class="row">
 
 	<div class="col-md-6">
-
+	
       <div class="caption">
         <h3>M. Sc. Tom Thaler</h3>
         <p>

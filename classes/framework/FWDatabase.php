@@ -12,7 +12,13 @@ class FWDatabase {
 	public static function __callStatic($name, $arguments) {
 		global $db;
 		if ( $name == 'query' || $name == 'exec' ) {
-			if ( Config::ENABLE_DB_QUERY_LOGGING ) Logger::log($_SESSION['email'], $arguments[0], "ACCESS");
+			if ( Config::ENABLE_DB_QUERY_LOGGING ) {
+				if ( isset($_SESSION['email']) ) {
+					Logger::log($_SESSION['email'], $arguments[0], "ACCESS");
+				} else {
+					Logger::log("anonym", $arguments[0], "ACCESS");
+				}
+			}
 		}
 		switch (count($arguments)) {
 			case 1: return $db->$name($arguments[0]);

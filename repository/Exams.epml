@@ -1,0 +1,1929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <directory name="Root">
+    <directory name="Exams">
+      <epc epcId="1" name="Sample_Solution">
+        <function id="1">
+          <name>noting match with requirements</name>
+        </function>
+        <event id="2">
+          <name>BTA completed</name>
+        </event>
+        <function id="3">
+          <name>noting of employee and trip period</name>
+        </function>
+        <event id="4">
+          <name>company car booked</name>
+        </event>
+        <event id="5">
+          <name>BTA in accordance with requirements</name>
+        </event>
+        <function id="6">
+          <name>informing employee</name>
+        </function>
+        <event id="7">
+          <name>BTA not in accordance with requirements</name>
+        </event>
+        <xor id="8">
+          <name>x</name>
+        </xor>
+        <function id="9">
+          <name>fill BTA</name>
+        </function>
+        <xor id="10">
+          <name>x</name>
+        </xor>
+        <function id="11">
+          <name>accounting for BT</name>
+        </function>
+        <event id="12">
+          <name>BTA handed in</name>
+        </event>
+        <event id="13">
+          <name>BT approved</name>
+        </event>
+        <event id="14">
+          <name>match noted</name>
+        </event>
+        <event id="15">
+          <name>BT not rejected</name>
+        </event>
+        <function id="16">
+          <name>checking availability of company car</name>
+        </function>
+        <event id="17">
+          <name>BTA required</name>
+        </event>
+        <function id="18">
+          <name>handing in at the manager's office</name>
+        </function>
+        <and id="19">
+          <name>∧</name>
+        </and>
+        <function id="20">
+          <name>reviewing decision</name>
+        </function>
+        <function id="21">
+          <name>booking rental car</name>
+        </function>
+        <event id="22">
+          <name>company car not available</name>
+        </event>
+        <xor id="23">
+          <name>x</name>
+        </xor>
+        <or id="24">
+          <name>∨</name>
+        </or>
+        <xor id="25">
+          <name>x</name>
+        </xor>
+        <xor id="26">
+          <name>x</name>
+        </xor>
+        <event id="27">
+          <name>BT rejected</name>
+        </event>
+        <event id="28">
+          <name>date of BT reached</name>
+        </event>
+        <xor id="29">
+          <name>x</name>
+        </xor>
+        <event id="30">
+          <name>rental car booked</name>
+        </event>
+        <event id="31">
+          <name>company car available</name>
+        </event>
+        <event id="32">
+          <name>BT rejected</name>
+        </event>
+        <xor id="33">
+          <name>x</name>
+        </xor>
+        <function id="34">
+          <name>revising BTA</name>
+        </function>
+        <function id="35">
+          <name>booking company car</name>
+        </function>
+        <function id="36">
+          <name>reviewing BTA</name>
+        </function>
+        <event id="37">
+          <name>BT accounted</name>
+        </event>
+        <event id="38">
+          <name>BT realized</name>
+        </event>
+        <event id="39">
+          <name>BTA approved</name>
+        </event>
+        <xor id="40">
+          <name>x</name>
+        </xor>
+        <function id="41">
+          <name>handing in BTA</name>
+        </function>
+        <function id="42">
+          <name>realizing BT</name>
+        </function>
+        <event id="43">
+          <name>BTA rejected</name>
+        </event>
+        <event id="44">
+          <name>BT registered</name>
+        </event>
+        <arc id="1014">
+          <flow source="1" target="14" />
+        </arc>
+        <arc id="2041">
+          <flow source="2" target="41" />
+        </arc>
+        <arc id="3044">
+          <flow source="3" target="44" />
+        </arc>
+        <arc id="4040">
+          <flow source="4" target="40" />
+        </arc>
+        <arc id="5025">
+          <flow source="5" target="25" />
+        </arc>
+        <arc id="6010">
+          <flow source="6" target="10" />
+        </arc>
+        <arc id="7025">
+          <flow source="7" target="25" />
+        </arc>
+        <arc id="806">
+          <flow source="8" target="6" />
+        </arc>
+        <arc id="9024">
+          <flow source="9" target="24" />
+        </arc>
+        <arc id="10032">
+          <flow source="10" target="32" />
+        </arc>
+        <arc id="10013">
+          <flow source="10" target="13" />
+        </arc>
+        <arc id="11037">
+          <flow source="11" target="37" />
+        </arc>
+        <arc id="12036">
+          <flow source="12" target="36" />
+        </arc>
+        <arc id="13016">
+          <flow source="13" target="16" />
+        </arc>
+        <arc id="14018">
+          <flow source="14" target="18" />
+        </arc>
+        <arc id="15034">
+          <flow source="15" target="34" />
+        </arc>
+        <arc id="16023">
+          <flow source="16" target="23" />
+        </arc>
+        <arc id="1709">
+          <flow source="17" target="9" />
+        </arc>
+        <arc id="18029">
+          <flow source="18" target="29" />
+        </arc>
+        <arc id="19042">
+          <flow source="19" target="42" />
+        </arc>
+        <arc id="20033">
+          <flow source="20" target="33" />
+        </arc>
+        <arc id="21030">
+          <flow source="21" target="30" />
+        </arc>
+        <arc id="22021">
+          <flow source="22" target="21" />
+        </arc>
+        <arc id="23031">
+          <flow source="23" target="31" />
+        </arc>
+        <arc id="23022">
+          <flow source="23" target="22" />
+        </arc>
+        <arc id="2402">
+          <flow source="24" target="2" />
+        </arc>
+        <arc id="2501">
+          <flow source="25" target="1" />
+        </arc>
+        <arc id="2607">
+          <flow source="26" target="7" />
+        </arc>
+        <arc id="2605">
+          <flow source="26" target="5" />
+        </arc>
+        <arc id="28019">
+          <flow source="28" target="19" />
+        </arc>
+        <arc id="29039">
+          <flow source="29" target="39" />
+        </arc>
+        <arc id="29043">
+          <flow source="29" target="43" />
+        </arc>
+        <arc id="30040">
+          <flow source="30" target="40" />
+        </arc>
+        <arc id="31035">
+          <flow source="31" target="35" />
+        </arc>
+        <arc id="32020">
+          <flow source="32" target="20" />
+        </arc>
+        <arc id="33015">
+          <flow source="33" target="15" />
+        </arc>
+        <arc id="33027">
+          <flow source="33" target="27" />
+        </arc>
+        <arc id="34024">
+          <flow source="34" target="24" />
+        </arc>
+        <arc id="3504">
+          <flow source="35" target="4" />
+        </arc>
+        <arc id="36026">
+          <flow source="36" target="26" />
+        </arc>
+        <arc id="38011">
+          <flow source="38" target="11" />
+        </arc>
+        <arc id="3903">
+          <flow source="39" target="3" />
+        </arc>
+        <arc id="40019">
+          <flow source="40" target="19" />
+        </arc>
+        <arc id="41012">
+          <flow source="41" target="12" />
+        </arc>
+        <arc id="42038">
+          <flow source="42" target="38" />
+        </arc>
+        <arc id="4308">
+          <flow source="43" target="8" />
+        </arc>
+        <arc id="4408">
+          <flow source="44" target="8" />
+        </arc>
+      </epc>
+      <epc epcId="2" name="Solution_1">
+        <event id="1">
+          <name>Car is needed</name>
+        </event>
+        <event id="2">
+          <name>Application approved</name>
+        </event>
+        <event id="3">
+          <name>Application not approved</name>
+        </event>
+        <function id="4">
+          <name>Make application for business trip</name>
+        </function>
+        <function id="5">
+          <name>Book car</name>
+        </function>
+        <function id="6">
+          <name>Send approved application to initiator's post box</name>
+        </function>
+        <xor id="7">
+          <name>x</name>
+        </xor>
+        <function id="8">
+          <name>Business trip realized</name>
+        </function>
+        <function id="9">
+          <name>Ask whether company car is available</name>
+        </function>
+        <function id="10">
+          <name>Check whether to discard trip</name>
+        </function>
+        <xor id="11">
+          <name>x</name>
+        </xor>
+        <function id="12">
+          <name>Accounting takes place</name>
+        </function>
+        <event id="13">
+          <name>Company car not available</name>
+        </event>
+        <function id="14">
+          <name>Order a rental car</name>
+        </function>
+        <xor id="15">
+          <name>x</name>
+        </xor>
+        <event id="16">
+          <name>Company car available</name>
+        </event>
+        <function id="17">
+          <name>Submit application for approval</name>
+        </function>
+        <function id="18">
+          <name>Integrate into another business trip</name>
+        </function>
+        <event id="19">
+          <name>Business trip necessary</name>
+        </event>
+        <arc id="109">
+          <flow source="1" target="9" />
+        </arc>
+        <arc id="206">
+          <flow source="2" target="6" />
+        </arc>
+        <arc id="3010">
+          <flow source="3" target="10" />
+        </arc>
+        <arc id="4017">
+          <flow source="4" target="17" />
+        </arc>
+        <arc id="508">
+          <flow source="5" target="8" />
+        </arc>
+        <arc id="601">
+          <flow source="6" target="1" />
+        </arc>
+        <arc id="702">
+          <flow source="7" target="2" />
+        </arc>
+        <arc id="703">
+          <flow source="7" target="3" />
+        </arc>
+        <arc id="8012">
+          <flow source="8" target="12" />
+        </arc>
+        <arc id="9015">
+          <flow source="9" target="15" />
+        </arc>
+        <arc id="10011">
+          <flow source="10" target="11" />
+        </arc>
+        <arc id="11017">
+          <flow source="11" target="17" />
+        </arc>
+        <arc id="11018">
+          <flow source="11" target="18" />
+        </arc>
+        <arc id="13014">
+          <flow source="13" target="14" />
+        </arc>
+        <arc id="1408">
+          <flow source="14" target="8" />
+        </arc>
+        <arc id="15016">
+          <flow source="15" target="16" />
+        </arc>
+        <arc id="15013">
+          <flow source="15" target="13" />
+        </arc>
+        <arc id="1605">
+          <flow source="16" target="5" />
+        </arc>
+        <arc id="1707">
+          <flow source="17" target="7" />
+        </arc>
+        <arc id="1904">
+          <flow source="19" target="4" />
+        </arc>
+      </epc>
+      <epc epcId="3" name="Solution_2">
+        <function id="1">
+          <name>Ordering rental car</name>
+        </function>
+        <event id="2">
+          <name>Business Trip Application</name>
+        </event>
+        <function id="3">
+          <name>Hand in request with note</name>
+        </function>
+        <event id="4">
+          <name>Company car booked</name>
+        </event>
+        <event id="5">
+          <name>Business Trip Accounted</name>
+        </event>
+        <event id="6">
+          <name>Request Approved</name>
+        </event>
+        <function id="7">
+          <name>Asking company car availability</name>
+        </function>
+        <function id="8">
+          <name>Realizing Business Trip</name>
+        </function>
+        <function id="9">
+          <name>Fill Business Trip Application</name>
+        </function>
+        <function id="10">
+          <name>Booking company car</name>
+        </function>
+        <xor id="11">
+          <name>x</name>
+        </xor>
+        <event id="12">
+          <name>Decision not convincing</name>
+        </event>
+        <function id="13">
+          <name>Resending Application</name>
+        </function>
+        <event id="14">
+          <name>Request Rejected</name>
+        </event>
+        <xor id="15">
+          <name>x</name>
+        </xor>
+        <function id="16">
+          <name>Making note of employee &amp; period of trip</name>
+        </function>
+        <event id="17">
+          <name>Notes Made</name>
+        </event>
+        <or id="18">
+          <name>∨</name>
+        </or>
+        <event id="19">
+          <name>Application Filled</name>
+        </event>
+        <event id="20">
+          <name>Note Made</name>
+        </event>
+        <event id="21">
+          <name>Request Approved</name>
+        </event>
+        <event id="22">
+          <name>Company car not available</name>
+        </event>
+        <event id="23">
+          <name>Request Rejected</name>
+        </event>
+        <function id="24">
+          <name>Checking Application</name>
+        </function>
+        <function id="25">
+          <name>Accounting for Business Trip</name>
+        </function>
+        <event id="26">
+          <name>Application not accord. to requirements</name>
+        </event>
+        <event id="27">
+          <name>Company car available</name>
+        </event>
+        <xor id="28">
+          <name>x</name>
+        </xor>
+        <function id="29">
+          <name>Informing Employee</name>
+        </function>
+        <function id="30">
+          <name>Making notes accordingly</name>
+        </function>
+        <event id="31">
+          <name>Rental car ordered</name>
+        </event>
+        <function id="32">
+          <name>Hand in Application</name>
+        </function>
+        <event id="33">
+          <name>Application Handed in</name>
+        </event>
+        <event id="34">
+          <name>Discard the trip</name>
+        </event>
+        <event id="35">
+          <name>Business Trip Realized</name>
+        </event>
+        <xor id="36">
+          <name>x</name>
+        </xor>
+        <xor id="37">
+          <name>x</name>
+        </xor>
+        <function id="38">
+          <name>Checking the decision</name>
+        </function>
+        <event id="39">
+          <name>Application accord. to requirements</name>
+        </event>
+        <arc id="1031">
+          <flow source="1" target="31" />
+        </arc>
+        <arc id="209">
+          <flow source="2" target="9" />
+        </arc>
+        <arc id="3015">
+          <flow source="3" target="15" />
+        </arc>
+        <arc id="408">
+          <flow source="4" target="8" />
+        </arc>
+        <arc id="607">
+          <flow source="6" target="7" />
+        </arc>
+        <arc id="7028">
+          <flow source="7" target="28" />
+        </arc>
+        <arc id="8035">
+          <flow source="8" target="35" />
+        </arc>
+        <arc id="9018">
+          <flow source="9" target="18" />
+        </arc>
+        <arc id="1004">
+          <flow source="10" target="4" />
+        </arc>
+        <arc id="11039">
+          <flow source="11" target="39" />
+        </arc>
+        <arc id="11026">
+          <flow source="11" target="26" />
+        </arc>
+        <arc id="12013">
+          <flow source="12" target="13" />
+        </arc>
+        <arc id="13018">
+          <flow source="13" target="18" />
+        </arc>
+        <arc id="14038">
+          <flow source="14" target="38" />
+        </arc>
+        <arc id="15021">
+          <flow source="15" target="21" />
+        </arc>
+        <arc id="15023">
+          <flow source="15" target="23" />
+        </arc>
+        <arc id="16020">
+          <flow source="16" target="20" />
+        </arc>
+        <arc id="1703">
+          <flow source="17" target="3" />
+        </arc>
+        <arc id="18019">
+          <flow source="18" target="19" />
+        </arc>
+        <arc id="19032">
+          <flow source="19" target="32" />
+        </arc>
+        <arc id="20029">
+          <flow source="20" target="29" />
+        </arc>
+        <arc id="21016">
+          <flow source="21" target="16" />
+        </arc>
+        <arc id="2201">
+          <flow source="22" target="1" />
+        </arc>
+        <arc id="23029">
+          <flow source="23" target="29" />
+        </arc>
+        <arc id="24011">
+          <flow source="24" target="11" />
+        </arc>
+        <arc id="2505">
+          <flow source="25" target="5" />
+        </arc>
+        <arc id="26030">
+          <flow source="26" target="30" />
+        </arc>
+        <arc id="27010">
+          <flow source="27" target="10" />
+        </arc>
+        <arc id="28022">
+          <flow source="28" target="22" />
+        </arc>
+        <arc id="28027">
+          <flow source="28" target="27" />
+        </arc>
+        <arc id="29036">
+          <flow source="29" target="36" />
+        </arc>
+        <arc id="30017">
+          <flow source="30" target="17" />
+        </arc>
+        <arc id="3108">
+          <flow source="31" target="8" />
+        </arc>
+        <arc id="32033">
+          <flow source="32" target="33" />
+        </arc>
+        <arc id="33024">
+          <flow source="33" target="24" />
+        </arc>
+        <arc id="35025">
+          <flow source="35" target="25" />
+        </arc>
+        <arc id="36014">
+          <flow source="36" target="14" />
+        </arc>
+        <arc id="3606">
+          <flow source="36" target="6" />
+        </arc>
+        <arc id="37034">
+          <flow source="37" target="34" />
+        </arc>
+        <arc id="37012">
+          <flow source="37" target="12" />
+        </arc>
+        <arc id="38037">
+          <flow source="38" target="37" />
+        </arc>
+        <arc id="39030">
+          <flow source="39" target="30" />
+        </arc>
+      </epc>
+      <epc epcId="4" name="Solution_3">
+        <function id="1">
+          <name>Action took</name>
+        </function>
+        <function id="2">
+          <name>Integrate with oder</name>
+        </function>
+        <function id="3">
+          <name>Checked note</name>
+        </function>
+        <function id="4">
+          <name>Done reasoning</name>
+        </function>
+        <function id="5">
+          <name>File prepared</name>
+        </function>
+        <event id="6">
+          <name>Request placed to secretary</name>
+        </event>
+        <event id="7">
+          <name>Rejected trip</name>
+        </event>
+        <or id="8">
+          <name>∨</name>
+        </or>
+        <function id="9">
+          <name>Car booked</name>
+        </function>
+        <or id="10">
+          <name>∨</name>
+        </or>
+        <event id="11">
+          <name>Not available car</name>
+        </event>
+        <event id="12">
+          <name>Accepted trip</name>
+        </event>
+        <event id="13">
+          <name>Trip reasoned</name>
+        </event>
+        <event id="14">
+          <name>Business trip received</name>
+        </event>
+        <event id="15">
+          <name>Note to manager sent</name>
+        </event>
+        <event id="16">
+          <name>Trip discarded</name>
+        </event>
+        <or id="17">
+          <name>∨</name>
+        </or>
+        <xor id="18">
+          <name>x</name>
+        </xor>
+        <xor id="19">
+          <name>x</name>
+        </xor>
+        <event id="20">
+          <name>Accepted Email</name>
+        </event>
+        <event id="21">
+          <name>Request handed again</name>
+        </event>
+        <function id="22">
+          <name>Trip checked</name>
+        </function>
+        <function id="23">
+          <name>Car checked</name>
+        </function>
+        <event id="24">
+          <name>Rejected email</name>
+        </event>
+        <event id="25">
+          <name>Accounting realized</name>
+        </event>
+        <function id="26">
+          <name>No file prepared</name>
+        </function>
+        <or id="27">
+          <name>∨</name>
+        </or>
+        <function id="28">
+          <name>Checked request</name>
+        </function>
+        <event id="29">
+          <name>Email sent</name>
+        </event>
+        <xor id="30">
+          <name>x</name>
+        </xor>
+        <function id="31">
+          <name>Handed to secretary office</name>
+        </function>
+        <function id="32">
+          <name>Checked email</name>
+        </function>
+        <function id="33">
+          <name>Rental car ordered</name>
+        </function>
+        <xor id="34">
+          <name>x</name>
+        </xor>
+        <event id="35">
+          <name>Done decision</name>
+        </event>
+        <event id="36">
+          <name>Available car</name>
+        </event>
+        <arc id="2027">
+          <flow source="2" target="27" />
+        </arc>
+        <arc id="3018">
+          <flow source="3" target="18" />
+        </arc>
+        <arc id="4027">
+          <flow source="4" target="27" />
+        </arc>
+        <arc id="5034">
+          <flow source="5" target="34" />
+        </arc>
+        <arc id="6028">
+          <flow source="6" target="28" />
+        </arc>
+        <arc id="7026">
+          <flow source="7" target="26" />
+        </arc>
+        <arc id="8011">
+          <flow source="8" target="11" />
+        </arc>
+        <arc id="8036">
+          <flow source="8" target="36" />
+        </arc>
+        <arc id="9017">
+          <flow source="9" target="17" />
+        </arc>
+        <arc id="10016">
+          <flow source="10" target="16" />
+        </arc>
+        <arc id="10013">
+          <flow source="10" target="13" />
+        </arc>
+        <arc id="11033">
+          <flow source="11" target="33" />
+        </arc>
+        <arc id="1205">
+          <flow source="12" target="5" />
+        </arc>
+        <arc id="1304">
+          <flow source="13" target="4" />
+        </arc>
+        <arc id="14031">
+          <flow source="14" target="31" />
+        </arc>
+        <arc id="1503">
+          <flow source="15" target="3" />
+        </arc>
+        <arc id="1602">
+          <flow source="16" target="2" />
+        </arc>
+        <arc id="17025">
+          <flow source="17" target="25" />
+        </arc>
+        <arc id="18012">
+          <flow source="18" target="12" />
+        </arc>
+        <arc id="1807">
+          <flow source="18" target="7" />
+        </arc>
+        <arc id="1901">
+          <flow source="19" target="1" />
+        </arc>
+        <arc id="20023">
+          <flow source="20" target="23" />
+        </arc>
+        <arc id="21019">
+          <flow source="21" target="19" />
+        </arc>
+        <arc id="22010">
+          <flow source="22" target="10" />
+        </arc>
+        <arc id="2308">
+          <flow source="23" target="8" />
+        </arc>
+        <arc id="24022">
+          <flow source="24" target="22" />
+        </arc>
+        <arc id="25019">
+          <flow source="25" target="19" />
+        </arc>
+        <arc id="26034">
+          <flow source="26" target="34" />
+        </arc>
+        <arc id="27021">
+          <flow source="27" target="21" />
+        </arc>
+        <arc id="28015">
+          <flow source="28" target="15" />
+        </arc>
+        <arc id="29032">
+          <flow source="29" target="32" />
+        </arc>
+        <arc id="30020">
+          <flow source="30" target="20" />
+        </arc>
+        <arc id="30024">
+          <flow source="30" target="24" />
+        </arc>
+        <arc id="3106">
+          <flow source="31" target="6" />
+        </arc>
+        <arc id="32030">
+          <flow source="32" target="30" />
+        </arc>
+        <arc id="33017">
+          <flow source="33" target="17" />
+        </arc>
+        <arc id="34029">
+          <flow source="34" target="29" />
+        </arc>
+        <arc id="3609">
+          <flow source="36" target="9" />
+        </arc>
+      </epc>
+      <epc epcId="5" name="Solution_4">
+        <function id="1">
+          <name>Fill Application</name>
+        </function>
+        <event id="2">
+          <name>Application matches requirements</name>
+        </event>
+        <event id="3">
+          <name>Trip accounted</name>
+        </event>
+        <function id="4">
+          <name>Booking rental car</name>
+        </function>
+        <xor id="5">
+          <name>x</name>
+        </xor>
+        <event id="6">
+          <name>Business Trip Application Required</name>
+        </event>
+        <event id="7">
+          <name>Car available</name>
+        </event>
+        <xor id="8">
+          <name>x</name>
+        </xor>
+        <function id="9">
+          <name>Noting employee and trip period</name>
+        </function>
+        <xor id="10">
+          <name>x</name>
+        </xor>
+        <event id="11">
+          <name>Car available</name>
+        </event>
+        <xor id="12">
+          <name>x</name>
+        </xor>
+        <event id="13">
+          <name>Application given</name>
+        </event>
+        <function id="14">
+          <name>Realize Trip</name>
+        </function>
+        <function id="15">
+          <name>Review decision</name>
+        </function>
+        <function id="16">
+          <name>Inform employee</name>
+        </function>
+        <event id="17">
+          <name>Rejected</name>
+        </event>
+        <function id="18">
+          <name>Handing application</name>
+        </function>
+        <event id="19">
+          <name>Rejected</name>
+        </event>
+        <event id="20">
+          <name>Rental car booked</name>
+        </event>
+        <event id="21">
+          <name>Realized Trip</name>
+        </event>
+        <event id="22">
+          <name>company car booked</name>
+        </event>
+        <event id="23">
+          <name>Trip rejected</name>
+        </event>
+        <event id="24">
+          <name>Application completed</name>
+        </event>
+        <event id="25">
+          <name>Trip approved</name>
+        </event>
+        <event id="26">
+          <name>Trip registered</name>
+        </event>
+        <or id="27">
+          <name>∨</name>
+        </or>
+        <function id="28">
+          <name>Application sent to manager</name>
+        </function>
+        <function id="29">
+          <name>Check availability of car</name>
+        </function>
+        <function id="30">
+          <name>Revise application</name>
+        </function>
+        <event id="31">
+          <name>Approved</name>
+        </event>
+        <event id="32">
+          <name>Approved</name>
+        </event>
+        <xor id="33">
+          <name>x</name>
+        </xor>
+        <event id="34">
+          <name>Application doesn't match requirements</name>
+        </event>
+        <xor id="35">
+          <name>x</name>
+        </xor>
+        <event id="36">
+          <name>Noted</name>
+        </event>
+        <xor id="37">
+          <name>x</name>
+        </xor>
+        <and id="38">
+          <name>∧</name>
+        </and>
+        <function id="39">
+          <name>Accounting for Trip</name>
+        </function>
+        <function id="40">
+          <name>Review of application</name>
+        </function>
+        <function id="41">
+          <name>Match noting</name>
+        </function>
+        <event id="42">
+          <name>Car not available</name>
+        </event>
+        <function id="43">
+          <name>Booking Company Car</name>
+        </function>
+        <arc id="1027">
+          <flow source="1" target="27" />
+        </arc>
+        <arc id="205">
+          <flow source="2" target="5" />
+        </arc>
+        <arc id="4020">
+          <flow source="4" target="20" />
+        </arc>
+        <arc id="5041">
+          <flow source="5" target="41" />
+        </arc>
+        <arc id="601">
+          <flow source="6" target="1" />
+        </arc>
+        <arc id="7043">
+          <flow source="7" target="43" />
+        </arc>
+        <arc id="8032">
+          <flow source="8" target="32" />
+        </arc>
+        <arc id="8019">
+          <flow source="8" target="19" />
+        </arc>
+        <arc id="9026">
+          <flow source="9" target="26" />
+        </arc>
+        <arc id="1007">
+          <flow source="10" target="7" />
+        </arc>
+        <arc id="10042">
+          <flow source="10" target="42" />
+        </arc>
+        <arc id="11038">
+          <flow source="11" target="38" />
+        </arc>
+        <arc id="12038">
+          <flow source="12" target="38" />
+        </arc>
+        <arc id="13040">
+          <flow source="13" target="40" />
+        </arc>
+        <arc id="14021">
+          <flow source="14" target="21" />
+        </arc>
+        <arc id="15033">
+          <flow source="15" target="33" />
+        </arc>
+        <arc id="16017">
+          <flow source="16" target="17" />
+        </arc>
+        <arc id="16031">
+          <flow source="16" target="31" />
+        </arc>
+        <arc id="17015">
+          <flow source="17" target="15" />
+        </arc>
+        <arc id="18013">
+          <flow source="18" target="13" />
+        </arc>
+        <arc id="19035">
+          <flow source="19" target="35" />
+        </arc>
+        <arc id="20012">
+          <flow source="20" target="12" />
+        </arc>
+        <arc id="21039">
+          <flow source="21" target="39" />
+        </arc>
+        <arc id="22012">
+          <flow source="22" target="12" />
+        </arc>
+        <arc id="23030">
+          <flow source="23" target="30" />
+        </arc>
+        <arc id="24018">
+          <flow source="24" target="18" />
+        </arc>
+        <arc id="26035">
+          <flow source="26" target="35" />
+        </arc>
+        <arc id="27024">
+          <flow source="27" target="24" />
+        </arc>
+        <arc id="2808">
+          <flow source="28" target="8" />
+        </arc>
+        <arc id="29010">
+          <flow source="29" target="10" />
+        </arc>
+        <arc id="31029">
+          <flow source="31" target="29" />
+        </arc>
+        <arc id="3209">
+          <flow source="32" target="9" />
+        </arc>
+        <arc id="33023">
+          <flow source="33" target="23" />
+        </arc>
+        <arc id="33025">
+          <flow source="33" target="25" />
+        </arc>
+        <arc id="3405">
+          <flow source="34" target="5" />
+        </arc>
+        <arc id="35016">
+          <flow source="35" target="16" />
+        </arc>
+        <arc id="36028">
+          <flow source="36" target="28" />
+        </arc>
+        <arc id="37034">
+          <flow source="37" target="34" />
+        </arc>
+        <arc id="3702">
+          <flow source="37" target="2" />
+        </arc>
+        <arc id="38014">
+          <flow source="38" target="14" />
+        </arc>
+        <arc id="3903">
+          <flow source="39" target="3" />
+        </arc>
+        <arc id="40037">
+          <flow source="40" target="37" />
+        </arc>
+        <arc id="41036">
+          <flow source="41" target="36" />
+        </arc>
+        <arc id="4204">
+          <flow source="42" target="4" />
+        </arc>
+        <arc id="43022">
+          <flow source="43" target="22" />
+        </arc>
+      </epc>
+      <epc epcId="6" name="Solution_5">
+        <xor id="1">
+          <name>x</name>
+        </xor>
+        <function id="2">
+          <name>checking the trip app again</name>
+        </function>
+        <xor id="3">
+          <name>x</name>
+        </xor>
+        <function id="4">
+          <name>Analyzing the app</name>
+        </function>
+        <function id="5">
+          <name>Checking car's availability</name>
+        </function>
+        <function id="6">
+          <name>Accounting taking place</name>
+        </function>
+        <function id="7">
+          <name>Handing in application</name>
+        </function>
+        <event id="8">
+          <name>Application for trip needed</name>
+        </event>
+        <event id="9">
+          <name>Trip descarded</name>
+        </event>
+        <function id="10">
+          <name>Checking Application</name>
+        </function>
+        <xor id="11">
+          <name>x</name>
+        </xor>
+        <event id="12">
+          <name>Not according to requirements</name>
+        </event>
+        <function id="13">
+          <name>Booking co's car</name>
+        </function>
+        <and id="14">
+          <name>∧</name>
+        </and>
+        <event id="15">
+          <name>App rejected</name>
+        </event>
+        <event id="16">
+          <name>Car is available</name>
+        </event>
+        <event id="17">
+          <name>Booked Co's car</name>
+        </event>
+        <event id="18">
+          <name>Booked rental car</name>
+        </event>
+        <xor id="19">
+          <name>x</name>
+        </xor>
+        <xor id="20">
+          <name>x</name>
+        </xor>
+        <event id="21">
+          <name>application handed over</name>
+        </event>
+        <event id="22">
+          <name>Car is not available</name>
+        </event>
+        <event id="23">
+          <name>According to requirements</name>
+        </event>
+        <event id="24">
+          <name>Requirements matched</name>
+        </event>
+        <function id="25">
+          <name>Handing in the note at manager's office</name>
+        </function>
+        <event id="26">
+          <name>Expiry of trip reached</name>
+        </event>
+        <event id="27">
+          <name>Trip not descarded</name>
+        </event>
+        <event id="28">
+          <name>B-Trip is entered in record</name>
+        </event>
+        <event id="29">
+          <name>Application made</name>
+        </event>
+        <event id="30">
+          <name>Trip rejected</name>
+        </event>
+        <xor id="31">
+          <name>x</name>
+        </xor>
+        <function id="32">
+          <name>Making note of employee</name>
+        </function>
+        <function id="33">
+          <name>Booking rental car</name>
+        </function>
+        <function id="34">
+          <name>Realizing the trip</name>
+        </function>
+        <event id="35">
+          <name>App Accepted</name>
+        </event>
+        <function id="36">
+          <name>Integrate it later</name>
+        </function>
+        <event id="37">
+          <name>Trip approved</name>
+        </event>
+        <xor id="38">
+          <name>x</name>
+        </xor>
+        <function id="39">
+          <name>Making Application for trip</name>
+        </function>
+        <function id="40">
+          <name>Notifying Employee</name>
+        </function>
+        <event id="41">
+          <name>Accounting done</name>
+        </event>
+        <event id="42">
+          <name>Trip realized</name>
+        </event>
+        <xor id="43">
+          <name>x</name>
+        </xor>
+        <arc id="1037">
+          <flow source="1" target="37" />
+        </arc>
+        <arc id="1030">
+          <flow source="1" target="30" />
+        </arc>
+        <arc id="2038">
+          <flow source="2" target="38" />
+        </arc>
+        <arc id="3012">
+          <flow source="3" target="12" />
+        </arc>
+        <arc id="3023">
+          <flow source="3" target="23" />
+        </arc>
+        <arc id="4024">
+          <flow source="4" target="24" />
+        </arc>
+        <arc id="5019">
+          <flow source="5" target="19" />
+        </arc>
+        <arc id="6041">
+          <flow source="6" target="41" />
+        </arc>
+        <arc id="7021">
+          <flow source="7" target="21" />
+        </arc>
+        <arc id="8039">
+          <flow source="8" target="39" />
+        </arc>
+        <arc id="1003">
+          <flow source="10" target="3" />
+        </arc>
+        <arc id="1104">
+          <flow source="11" target="4" />
+        </arc>
+        <arc id="12011">
+          <flow source="12" target="11" />
+        </arc>
+        <arc id="13017">
+          <flow source="13" target="17" />
+        </arc>
+        <arc id="14034">
+          <flow source="14" target="34" />
+        </arc>
+        <arc id="15043">
+          <flow source="15" target="43" />
+        </arc>
+        <arc id="16013">
+          <flow source="16" target="13" />
+        </arc>
+        <arc id="17031">
+          <flow source="17" target="31" />
+        </arc>
+        <arc id="18031">
+          <flow source="18" target="31" />
+        </arc>
+        <arc id="19022">
+          <flow source="19" target="22" />
+        </arc>
+        <arc id="19016">
+          <flow source="19" target="16" />
+        </arc>
+        <arc id="20015">
+          <flow source="20" target="15" />
+        </arc>
+        <arc id="20035">
+          <flow source="20" target="35" />
+        </arc>
+        <arc id="21010">
+          <flow source="21" target="10" />
+        </arc>
+        <arc id="22033">
+          <flow source="22" target="33" />
+        </arc>
+        <arc id="23011">
+          <flow source="23" target="11" />
+        </arc>
+        <arc id="24025">
+          <flow source="24" target="25" />
+        </arc>
+        <arc id="25020">
+          <flow source="25" target="20" />
+        </arc>
+        <arc id="26014">
+          <flow source="26" target="14" />
+        </arc>
+        <arc id="27036">
+          <flow source="27" target="36" />
+        </arc>
+        <arc id="28043">
+          <flow source="28" target="43" />
+        </arc>
+        <arc id="2907">
+          <flow source="29" target="7" />
+        </arc>
+        <arc id="3002">
+          <flow source="30" target="2" />
+        </arc>
+        <arc id="31014">
+          <flow source="31" target="14" />
+        </arc>
+        <arc id="32028">
+          <flow source="32" target="28" />
+        </arc>
+        <arc id="33018">
+          <flow source="33" target="18" />
+        </arc>
+        <arc id="34042">
+          <flow source="34" target="42" />
+        </arc>
+        <arc id="35032">
+          <flow source="35" target="32" />
+        </arc>
+        <arc id="3705">
+          <flow source="37" target="5" />
+        </arc>
+        <arc id="38027">
+          <flow source="38" target="27" />
+        </arc>
+        <arc id="3809">
+          <flow source="38" target="9" />
+        </arc>
+        <arc id="39029">
+          <flow source="39" target="29" />
+        </arc>
+        <arc id="4001">
+          <flow source="40" target="1" />
+        </arc>
+        <arc id="4206">
+          <flow source="42" target="6" />
+        </arc>
+        <arc id="43040">
+          <flow source="43" target="40" />
+        </arc>
+      </epc>
+      <epc epcId="7" name="Solution_6">
+        <event id="1">
+          <name>Application registered</name>
+        </event>
+        <function id="2">
+          <name>Application filling</name>
+        </function>
+        <event id="3">
+          <name>Business trip accounted</name>
+        </event>
+        <function id="4">
+          <name>Handing in for approval</name>
+        </function>
+        <event id="5">
+          <name>Application accepted</name>
+        </event>
+        <function id="6">
+          <name>Realizing business trip</name>
+        </function>
+        <xor id="7">
+          <name>x</name>
+        </xor>
+        <event id="8">
+          <name>Car not available</name>
+        </event>
+        <xor id="9">
+          <name>x</name>
+        </xor>
+        <event id="10">
+          <name>Application as not per the requirements</name>
+        </event>
+        <event id="11">
+          <name>Matched requiremets noted</name>
+        </event>
+        <event id="12">
+          <name>Rental car booked</name>
+        </event>
+        <xor id="13">
+          <name>x</name>
+        </xor>
+        <event id="14">
+          <name>Application handed in</name>
+        </event>
+        <xor id="15">
+          <name>x</name>
+        </xor>
+        <function id="16">
+          <name>Checking for discard or integration</name>
+        </function>
+        <and id="17">
+          <name>∧</name>
+        </and>
+        <function id="18">
+          <name>Informing Employee</name>
+        </function>
+        <event id="19">
+          <name>Application rejected</name>
+        </event>
+        <xor id="20">
+          <name>x</name>
+        </xor>
+        <event id="21">
+          <name>Business trip approved</name>
+        </event>
+        <event id="22">
+          <name>Business trip realized</name>
+        </event>
+        <event id="23">
+          <name>Business trip not approved</name>
+        </event>
+        <event id="24">
+          <name>Company car booked</name>
+        </event>
+        <function id="25">
+          <name>Accounting for business trip takes place</name>
+        </function>
+        <function id="26">
+          <name>Checking car availability</name>
+        </function>
+        <function id="27">
+          <name>Making a note of employee and period of trip</name>
+        </function>
+        <function id="28">
+          <name>Handing in at Managers office</name>
+        </function>
+        <function id="29">
+          <name>Application filling</name>
+        </function>
+        <xor id="30">
+          <name>x</name>
+        </xor>
+        <xor id="31">
+          <name>x</name>
+        </xor>
+        <function id="32">
+          <name>Order Rental car</name>
+        </function>
+        <function id="33">
+          <name>Reviewing the business trip application</name>
+        </function>
+        <event id="34">
+          <name>Business trip discarted</name>
+        </event>
+        <event id="35">
+          <name>Application as per the requirements</name>
+        </event>
+        <event id="36">
+          <name>Date of business trip reached</name>
+        </event>
+        <function id="37">
+          <name>Book the company car</name>
+        </function>
+        <event id="38">
+          <name>Application filled</name>
+        </event>
+        <event id="39">
+          <name>Business Trip application need</name>
+        </event>
+        <xor id="40">
+          <name>x</name>
+        </xor>
+        <xor id="41">
+          <name>x</name>
+        </xor>
+        <event id="42">
+          <name>Car available</name>
+        </event>
+        <function id="43">
+          <name>Matching the requirements</name>
+        </function>
+        <arc id="1020">
+          <flow source="1" target="20" />
+        </arc>
+        <arc id="2017">
+          <flow source="2" target="17" />
+        </arc>
+        <arc id="4014">
+          <flow source="4" target="14" />
+        </arc>
+        <arc id="5027">
+          <flow source="5" target="27" />
+        </arc>
+        <arc id="6022">
+          <flow source="6" target="22" />
+        </arc>
+        <arc id="7021">
+          <flow source="7" target="21" />
+        </arc>
+        <arc id="7023">
+          <flow source="7" target="23" />
+        </arc>
+        <arc id="8032">
+          <flow source="8" target="32" />
+        </arc>
+        <arc id="9043">
+          <flow source="9" target="43" />
+        </arc>
+        <arc id="1009">
+          <flow source="10" target="9" />
+        </arc>
+        <arc id="11028">
+          <flow source="11" target="28" />
+        </arc>
+        <arc id="12040">
+          <flow source="12" target="40" />
+        </arc>
+        <arc id="13019">
+          <flow source="13" target="19" />
+        </arc>
+        <arc id="1305">
+          <flow source="13" target="5" />
+        </arc>
+        <arc id="14029">
+          <flow source="14" target="29" />
+        </arc>
+        <arc id="1506">
+          <flow source="15" target="6" />
+        </arc>
+        <arc id="16034">
+          <flow source="16" target="34" />
+        </arc>
+        <arc id="17038">
+          <flow source="17" target="38" />
+        </arc>
+        <arc id="1807">
+          <flow source="18" target="7" />
+        </arc>
+        <arc id="19020">
+          <flow source="19" target="20" />
+        </arc>
+        <arc id="20018">
+          <flow source="20" target="18" />
+        </arc>
+        <arc id="21026">
+          <flow source="21" target="26" />
+        </arc>
+        <arc id="22025">
+          <flow source="22" target="25" />
+        </arc>
+        <arc id="23041">
+          <flow source="23" target="41" />
+        </arc>
+        <arc id="24040">
+          <flow source="24" target="40" />
+        </arc>
+        <arc id="2503">
+          <flow source="25" target="3" />
+        </arc>
+        <arc id="26030">
+          <flow source="26" target="30" />
+        </arc>
+        <arc id="2701">
+          <flow source="27" target="1" />
+        </arc>
+        <arc id="28013">
+          <flow source="28" target="13" />
+        </arc>
+        <arc id="29031">
+          <flow source="29" target="31" />
+        </arc>
+        <arc id="3008">
+          <flow source="30" target="8" />
+        </arc>
+        <arc id="30042">
+          <flow source="30" target="42" />
+        </arc>
+        <arc id="31010">
+          <flow source="31" target="10" />
+        </arc>
+        <arc id="31035">
+          <flow source="31" target="35" />
+        </arc>
+        <arc id="32012">
+          <flow source="32" target="12" />
+        </arc>
+        <arc id="33017">
+          <flow source="33" target="17" />
+        </arc>
+        <arc id="3509">
+          <flow source="35" target="9" />
+        </arc>
+        <arc id="36015">
+          <flow source="36" target="15" />
+        </arc>
+        <arc id="37024">
+          <flow source="37" target="24" />
+        </arc>
+        <arc id="3804">
+          <flow source="38" target="4" />
+        </arc>
+        <arc id="3902">
+          <flow source="39" target="2" />
+        </arc>
+        <arc id="40015">
+          <flow source="40" target="15" />
+        </arc>
+        <arc id="41016">
+          <flow source="41" target="16" />
+        </arc>
+        <arc id="41033">
+          <flow source="41" target="33" />
+        </arc>
+        <arc id="42037">
+          <flow source="42" target="37" />
+        </arc>
+        <arc id="43011">
+          <flow source="43" target="11" />
+        </arc>
+      </epc>
+      <epc epcId="8" name="Solution_7">
+        <xor id="1">
+          <name>x</name>
+        </xor>
+        <function id="2">
+          <name>Informing employee</name>
+        </function>
+        <event id="3">
+          <name>Business trip application accordance with requirements</name>
+        </event>
+        <function id="4">
+          <name>Booking rental car</name>
+        </function>
+        <function id="5">
+          <name>Entering the name and the trip period</name>
+        </function>
+        <event id="6">
+          <name>Company car available</name>
+        </event>
+        <function id="7">
+          <name>Checking availability of company car</name>
+        </function>
+        <function id="8">
+          <name>Handling in the Business trip</name>
+        </function>
+        <event id="9">
+          <name>Matches noted</name>
+        </event>
+        <event id="10">
+          <name>Rental car booked</name>
+        </event>
+        <function id="11">
+          <name>Reviewing business trip application</name>
+        </function>
+        <xor id="12">
+          <name>x</name>
+        </xor>
+        <event id="13">
+          <name>Business trip accounted</name>
+        </event>
+        <event id="14">
+          <name>Business trip application is rejected</name>
+        </event>
+        <function id="15">
+          <name>Reviewing business trip application</name>
+        </function>
+        <event id="16">
+          <name>Business trip realized</name>
+        </event>
+        <function id="17">
+          <name>Handling at the managers office</name>
+        </function>
+        <event id="18">
+          <name>Business trip application not in accordance with requirements</name>
+        </event>
+        <event id="19">
+          <name>Business trip application completed</name>
+        </event>
+        <xor id="20">
+          <name>x</name>
+        </xor>
+        <function id="21">
+          <name>Booking company car</name>
+        </function>
+        <event id="22">
+          <name>Business trip rejected</name>
+        </event>
+        <event id="23">
+          <name>Business trip still rejected</name>
+        </event>
+        <function id="24">
+          <name>Reviewing decision</name>
+        </function>
+        <xor id="25">
+          <name>x</name>
+        </xor>
+        <event id="26">
+          <name>Business travel application required</name>
+        </event>
+        <event id="27">
+          <name>Business trip application handled in</name>
+        </event>
+        <event id="28">
+          <name>Business trip not rejected</name>
+        </event>
+        <or id="29">
+          <name>∨</name>
+        </or>
+        <function id="30">
+          <name>No matches with the requirements</name>
+        </function>
+        <xor id="31">
+          <name>x</name>
+        </xor>
+        <event id="32">
+          <name>Business trip application is approved</name>
+        </event>
+        <event id="33">
+          <name>Business trip approved</name>
+        </event>
+        <xor id="34">
+          <name>x</name>
+        </xor>
+        <event id="35">
+          <name>Company car not available</name>
+        </event>
+        <event id="36">
+          <name>Company car booked</name>
+        </event>
+        <event id="37">
+          <name>Business trip registered</name>
+        </event>
+        <function id="38">
+          <name>Fill Business trip application</name>
+        </function>
+        <xor id="39">
+          <name>x</name>
+        </xor>
+        <xor id="40">
+          <name>x</name>
+        </xor>
+        <function id="41">
+          <name>Accounting for business trip</name>
+        </function>
+        <arc id="102">
+          <flow source="1" target="2" />
+        </arc>
+        <arc id="2020">
+          <flow source="2" target="20" />
+        </arc>
+        <arc id="3040">
+          <flow source="3" target="40" />
+        </arc>
+        <arc id="4010">
+          <flow source="4" target="10" />
+        </arc>
+        <arc id="5037">
+          <flow source="5" target="37" />
+        </arc>
+        <arc id="6021">
+          <flow source="6" target="21" />
+        </arc>
+        <arc id="7034">
+          <flow source="7" target="34" />
+        </arc>
+        <arc id="8027">
+          <flow source="8" target="27" />
+        </arc>
+        <arc id="9017">
+          <flow source="9" target="17" />
+        </arc>
+        <arc id="10025">
+          <flow source="10" target="25" />
+        </arc>
+        <arc id="11029">
+          <flow source="11" target="29" />
+        </arc>
+        <arc id="12014">
+          <flow source="12" target="14" />
+        </arc>
+        <arc id="12032">
+          <flow source="12" target="32" />
+        </arc>
+        <arc id="1401">
+          <flow source="14" target="1" />
+        </arc>
+        <arc id="15039">
+          <flow source="15" target="39" />
+        </arc>
+        <arc id="16041">
+          <flow source="16" target="41" />
+        </arc>
+        <arc id="17012">
+          <flow source="17" target="12" />
+        </arc>
+        <arc id="18040">
+          <flow source="18" target="40" />
+        </arc>
+        <arc id="1908">
+          <flow source="19" target="8" />
+        </arc>
+        <arc id="20033">
+          <flow source="20" target="33" />
+        </arc>
+        <arc id="20022">
+          <flow source="20" target="22" />
+        </arc>
+        <arc id="21036">
+          <flow source="21" target="36" />
+        </arc>
+        <arc id="22024">
+          <flow source="22" target="24" />
+        </arc>
+        <arc id="24031">
+          <flow source="24" target="31" />
+        </arc>
+        <arc id="25016">
+          <flow source="25" target="16" />
+        </arc>
+        <arc id="26038">
+          <flow source="26" target="38" />
+        </arc>
+        <arc id="27015">
+          <flow source="27" target="15" />
+        </arc>
+        <arc id="28011">
+          <flow source="28" target="11" />
+        </arc>
+        <arc id="29019">
+          <flow source="29" target="19" />
+        </arc>
+        <arc id="3009">
+          <flow source="30" target="9" />
+        </arc>
+        <arc id="31028">
+          <flow source="31" target="28" />
+        </arc>
+        <arc id="31023">
+          <flow source="31" target="23" />
+        </arc>
+        <arc id="3205">
+          <flow source="32" target="5" />
+        </arc>
+        <arc id="3307">
+          <flow source="33" target="7" />
+        </arc>
+        <arc id="34035">
+          <flow source="34" target="35" />
+        </arc>
+        <arc id="3406">
+          <flow source="34" target="6" />
+        </arc>
+        <arc id="3504">
+          <flow source="35" target="4" />
+        </arc>
+        <arc id="36025">
+          <flow source="36" target="25" />
+        </arc>
+        <arc id="3701">
+          <flow source="37" target="1" />
+        </arc>
+        <arc id="38029">
+          <flow source="38" target="29" />
+        </arc>
+        <arc id="3903">
+          <flow source="39" target="3" />
+        </arc>
+        <arc id="39018">
+          <flow source="39" target="18" />
+        </arc>
+        <arc id="40030">
+          <flow source="40" target="30" />
+        </arc>
+        <arc id="41013">
+          <flow source="41" target="13" />
+        </arc>
+      </epc>
+    </directory>
+  </directory>
+</epml:epml>
+

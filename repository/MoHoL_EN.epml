@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <directory name="Root">
+    <directory name="EN">
+      <epc epcId="1" name="MoHoL Sample Solution">
+        <event id="1">
+          <name>Clarification positive</name>
+        </event>
+        <event id="2">
+          <name>Inquiry received</name>
+        </event>
+        <function id="3">
+          <name>Inform customer</name>
+        </function>
+        <event id="4">
+          <name>Customer informed</name>
+        </event>
+        <function id="5">
+          <name>Bring about clarification</name>
+        </function>
+        <event id="6">
+          <name>Inquiry feasible</name>
+        </event>
+        <function id="7">
+          <name>Create rejection</name>
+        </function>
+        <xor id="8">
+          <name>x</name>
+        </xor>
+        <xor id="9">
+          <name>x</name>
+        </xor>
+        <event id="10">
+          <name>Rejection created</name>
+        </event>
+        <event id="11">
+          <name>Inquiry not feasible</name>
+        </event>
+        <event id="12">
+          <name>Inquiry possibly feasible</name>
+        </event>
+        <xor id="13">
+          <name>x</name>
+        </xor>
+        <function id="14">
+          <name>Create offer</name>
+        </function>
+        <event id="15">
+          <name>Offer created</name>
+        </event>
+        <event id="16">
+          <name>Clarification negative</name>
+        </event>
+        <function id="17">
+          <name>Check feasability</name>
+        </function>
+        <xor id="18">
+          <name>x</name>
+        </xor>
+        <xor id="19">
+          <name>x</name>
+        </xor>
+        <arc id="1019">
+          <flow source="1" target="19" />
+        </arc>
+        <arc id="2017">
+          <flow source="2" target="17" />
+        </arc>
+        <arc id="304">
+          <flow source="3" target="4" />
+        </arc>
+        <arc id="508">
+          <flow source="5" target="8" />
+        </arc>
+        <arc id="6019">
+          <flow source="6" target="19" />
+        </arc>
+        <arc id="7010">
+          <flow source="7" target="10" />
+        </arc>
+        <arc id="801">
+          <flow source="8" target="1" />
+        </arc>
+        <arc id="8016">
+          <flow source="8" target="16" />
+        </arc>
+        <arc id="9012">
+          <flow source="9" target="12" />
+        </arc>
+        <arc id="9011">
+          <flow source="9" target="11" />
+        </arc>
+        <arc id="906">
+          <flow source="9" target="6" />
+        </arc>
+        <arc id="10013">
+          <flow source="10" target="13" />
+        </arc>
+        <arc id="11018">
+          <flow source="11" target="18" />
+        </arc>
+        <arc id="1205">
+          <flow source="12" target="5" />
+        </arc>
+        <arc id="1303">
+          <flow source="13" target="3" />
+        </arc>
+        <arc id="14015">
+          <flow source="14" target="15" />
+        </arc>
+        <arc id="15013">
+          <flow source="15" target="13" />
+        </arc>
+        <arc id="16018">
+          <flow source="16" target="18" />
+        </arc>
+        <arc id="1709">
+          <flow source="17" target="9" />
+        </arc>
+        <arc id="1807">
+          <flow source="18" target="7" />
+        </arc>
+        <arc id="19014">
+          <flow source="19" target="14" />
+        </arc>
+      </epc>
+      <epc epcId="2" name="MoHoL Solution 01">
+        <function id="1">
+          <name>Create rejection</name>
+        </function>
+        <event id="2">
+          <name>Customer informed</name>
+        </event>
+        <event id="3">
+          <name>Offer created</name>
+        </event>
+        <event id="4">
+          <name>Rejection created</name>
+        </event>
+        <event id="5">
+          <name>Inquiry not feasible</name>
+        </event>
+        <event id="6">
+          <name>Inquiry feasible</name>
+        </event>
+        <event id="7">
+          <name>Customer informed</name>
+        </event>
+        <event id="8">
+          <name>Inquiry received</name>
+        </event>
+        <function id="9">
+          <name>Check feasability</name>
+        </function>
+        <function id="10">
+          <name>Create offer</name>
+        </function>
+        <event id="11">
+          <name>Inquiry possibly feasible</name>
+        </event>
+        <function id="12">
+          <name>Inform Customer</name>
+        </function>
+        <function id="13">
+          <name>Inform Customer</name>
+        </function>
+        <event id="14">
+          <name>Offer created</name>
+        </event>
+        <function id="15">
+          <name>Create offer</name>
+        </function>
+        <function id="16">
+          <name>Create rejection</name>
+        </function>
+        <event id="17">
+          <name>Clarification negative</name>
+        </event>
+        <function id="18">
+          <name>Inform Customer</name>
+        </function>
+        <event id="19">
+          <name>Customer informed</name>
+        </event>
+        <function id="20">
+          <name>Inform customer</name>
+        </function>
+        <event id="21">
+          <name>Customer informed</name>
+        </event>
+        <xor id="22">
+          <name>x</name>
+        </xor>
+        <function id="23">
+          <name>Bring about clarification</name>
+        </function>
+        <event id="24">
+          <name>Rejection created</name>
+        </event>
+        <event id="25">
+          <name>Clarification positive</name>
+        </event>
+        <xor id="26">
+          <name>x</name>
+        </xor>
+        <arc id="104">
+          <flow source="1" target="4" />
+        </arc>
+        <arc id="3018">
+          <flow source="3" target="18" />
+        </arc>
+        <arc id="4013">
+          <flow source="4" target="13" />
+        </arc>
+        <arc id="5016">
+          <flow source="5" target="16" />
+        </arc>
+        <arc id="6010">
+          <flow source="6" target="10" />
+        </arc>
+        <arc id="809">
+          <flow source="8" target="9" />
+        </arc>
+        <arc id="9026">
+          <flow source="9" target="26" />
+        </arc>
+        <arc id="10014">
+          <flow source="10" target="14" />
+        </arc>
+        <arc id="11023">
+          <flow source="11" target="23" />
+        </arc>
+        <arc id="12019">
+          <flow source="12" target="19" />
+        </arc>
+        <arc id="1307">
+          <flow source="13" target="7" />
+        </arc>
+        <arc id="14012">
+          <flow source="14" target="12" />
+        </arc>
+        <arc id="1503">
+          <flow source="15" target="3" />
+        </arc>
+        <arc id="16024">
+          <flow source="16" target="24" />
+        </arc>
+        <arc id="1701">
+          <flow source="17" target="1" />
+        </arc>
+        <arc id="18021">
+          <flow source="18" target="21" />
+        </arc>
+        <arc id="2002">
+          <flow source="20" target="2" />
+        </arc>
+        <arc id="22025">
+          <flow source="22" target="25" />
+        </arc>
+        <arc id="22017">
+          <flow source="22" target="17" />
+        </arc>
+        <arc id="23022">
+          <flow source="23" target="22" />
+        </arc>
+        <arc id="24020">
+          <flow source="24" target="20" />
+        </arc>
+        <arc id="25015">
+          <flow source="25" target="15" />
+        </arc>
+        <arc id="26011">
+          <flow source="26" target="11" />
+        </arc>
+        <arc id="2605">
+          <flow source="26" target="5" />
+        </arc>
+        <arc id="2606">
+          <flow source="26" target="6" />
+        </arc>
+      </epc>
+      <epc epcId="3" name="MoHoL Solution 02">
+        <xor id="1">
+          <name>x</name>
+        </xor>
+        <xor id="2">
+          <name>x</name>
+        </xor>
+        <event id="3">
+          <name>Clarification positive</name>
+        </event>
+        <xor id="4">
+          <name>x</name>
+        </xor>
+        <function id="5">
+          <name>Inform customer</name>
+        </function>
+        <function id="6">
+          <name>Create offer</name>
+        </function>
+        <event id="7">
+          <name>Customer informed</name>
+        </event>
+        <event id="8">
+          <name>Rejection created</name>
+        </event>
+        <function id="9">
+          <name>Check feasability</name>
+        </function>
+        <event id="10">
+          <name>Clarification negative</name>
+        </event>
+        <function id="11">
+          <name>Bring about clarification</name>
+        </function>
+        <event id="12">
+          <name>Offer created</name>
+        </event>
+        <event id="13">
+          <name>Inquiry not feasible</name>
+        </event>
+        <event id="14">
+          <name>Inquiry possibly feasible</name>
+        </event>
+        <xor id="15">
+          <name>x</name>
+        </xor>
+        <event id="16">
+          <name>Inquiry received</name>
+        </event>
+        <event id="17">
+          <name>Inquiry feasible</name>
+        </event>
+        <function id="18">
+          <name>Inform customer</name>
+        </function>
+        <event id="19">
+          <name>Customer informed</name>
+        </event>
+        <function id="20">
+          <name>Create rejection</name>
+        </function>
+        <arc id="1013">
+          <flow source="1" target="13" />
+        </arc>
+        <arc id="1014">
+          <flow source="1" target="14" />
+        </arc>
+        <arc id="1017">
+          <flow source="1" target="17" />
+        </arc>
+        <arc id="2020">
+          <flow source="2" target="20" />
+        </arc>
+        <arc id="3015">
+          <flow source="3" target="15" />
+        </arc>
+        <arc id="4010">
+          <flow source="4" target="10" />
+        </arc>
+        <arc id="403">
+          <flow source="4" target="3" />
+        </arc>
+        <arc id="507">
+          <flow source="5" target="7" />
+        </arc>
+        <arc id="6012">
+          <flow source="6" target="12" />
+        </arc>
+        <arc id="805">
+          <flow source="8" target="5" />
+        </arc>
+        <arc id="901">
+          <flow source="9" target="1" />
+        </arc>
+        <arc id="1002">
+          <flow source="10" target="2" />
+        </arc>
+        <arc id="1104">
+          <flow source="11" target="4" />
+        </arc>
+        <arc id="12018">
+          <flow source="12" target="18" />
+        </arc>
+        <arc id="1302">
+          <flow source="13" target="2" />
+        </arc>
+        <arc id="14011">
+          <flow source="14" target="11" />
+        </arc>
+        <arc id="1506">
+          <flow source="15" target="6" />
+        </arc>
+        <arc id="1609">
+          <flow source="16" target="9" />
+        </arc>
+        <arc id="17015">
+          <flow source="17" target="15" />
+        </arc>
+        <arc id="18019">
+          <flow source="18" target="19" />
+        </arc>
+        <arc id="2008">
+          <flow source="20" target="8" />
+        </arc>
+      </epc>
+      <epc epcId="4" name="MoHoL Solution 03">
+        <xor id="1">
+          <name>x</name>
+        </xor>
+        <function id="2">
+          <name>Check feasibility</name>
+        </function>
+        <function id="3">
+          <name>Inform customer</name>
+        </function>
+        <xor id="4">
+          <name>x</name>
+        </xor>
+        <function id="5">
+          <name>Create offer</name>
+        </function>
+        <event id="6">
+          <name>Inquiry possibly feasible</name>
+        </event>
+        <xor id="7">
+          <name>x</name>
+        </xor>
+        <event id="8">
+          <name>Offer created</name>
+        </event>
+        <event id="9">
+          <name>Inquiry not feasible</name>
+        </event>
+        <event id="10">
+          <name>Inquiry received</name>
+        </event>
+        <event id="11">
+          <name>Rejection created</name>
+        </event>
+        <event id="12">
+          <name>Inquiry feasible</name>
+        </event>
+        <function id="13">
+          <name>Create rejection</name>
+        </function>
+        <event id="14">
+          <name>Clarification negative</name>
+        </event>
+        <event id="15">
+          <name>Customer informed</name>
+        </event>
+        <event id="16">
+          <name>Clarification positive</name>
+        </event>
+        <function id="17">
+          <name>Bring about clarification</name>
+        </function>
+        <arc id="1014">
+          <flow source="1" target="14" />
+        </arc>
+        <arc id="1016">
+          <flow source="1" target="16" />
+        </arc>
+        <arc id="207">
+          <flow source="2" target="7" />
+        </arc>
+        <arc id="3015">
+          <flow source="3" target="15" />
+        </arc>
+        <arc id="403">
+          <flow source="4" target="3" />
+        </arc>
+        <arc id="508">
+          <flow source="5" target="8" />
+        </arc>
+        <arc id="6017">
+          <flow source="6" target="17" />
+        </arc>
+        <arc id="709">
+          <flow source="7" target="9" />
+        </arc>
+        <arc id="7012">
+          <flow source="7" target="12" />
+        </arc>
+        <arc id="706">
+          <flow source="7" target="6" />
+        </arc>
+        <arc id="804">
+          <flow source="8" target="4" />
+        </arc>
+        <arc id="9013">
+          <flow source="9" target="13" />
+        </arc>
+        <arc id="1002">
+          <flow source="10" target="2" />
+        </arc>
+        <arc id="1104">
+          <flow source="11" target="4" />
+        </arc>
+        <arc id="1205">
+          <flow source="12" target="5" />
+        </arc>
+        <arc id="13011">
+          <flow source="13" target="11" />
+        </arc>
+        <arc id="14013">
+          <flow source="14" target="13" />
+        </arc>
+        <arc id="1605">
+          <flow source="16" target="5" />
+        </arc>
+        <arc id="1701">
+          <flow source="17" target="1" />
+        </arc>
+      </epc>
+      <epc epcId="5" name="MoHoL Solution 04">
+        <event id="1">
+          <name>Inquiry not feasible</name>
+        </event>
+        <function id="2">
+          <name>Create rejection</name>
+        </function>
+        <event id="3">
+          <name>Inquiry received</name>
+        </event>
+        <event id="4">
+          <name>Clarification negative</name>
+        </event>
+        <xor id="5">
+          <name>x</name>
+        </xor>
+        <event id="6">
+          <name>Inquiry possibly feasible</name>
+        </event>
+        <xor id="7">
+          <name>x</name>
+        </xor>
+        <function id="8">
+          <name>Inform customer</name>
+        </function>
+        <function id="9">
+          <name>Check feasibility</name>
+        </function>
+        <function id="10">
+          <name>Bring about clarification</name>
+        </function>
+        <function id="11">
+          <name>Create offer</name>
+        </function>
+        <or id="12">
+          <name>∨</name>
+        </or>
+        <event id="13">
+          <name>Clarification positive</name>
+        </event>
+        <event id="14">
+          <name>Customer informed</name>
+        </event>
+        <event id="15">
+          <name>Offer created</name>
+        </event>
+        <event id="16">
+          <name>Inquiry feasible</name>
+        </event>
+        <or id="17">
+          <name>∨</name>
+        </or>
+        <event id="18">
+          <name>Rejection created</name>
+        </event>
+        <xor id="19">
+          <name>x</name>
+        </xor>
+        <arc id="1017">
+          <flow source="1" target="17" />
+        </arc>
+        <arc id="2018">
+          <flow source="2" target="18" />
+        </arc>
+        <arc id="309">
+          <flow source="3" target="9" />
+        </arc>
+        <arc id="4017">
+          <flow source="4" target="17" />
+        </arc>
+        <arc id="508">
+          <flow source="5" target="8" />
+        </arc>
+        <arc id="6010">
+          <flow source="6" target="10" />
+        </arc>
+        <arc id="706">
+          <flow source="7" target="6" />
+        </arc>
+        <arc id="7016">
+          <flow source="7" target="16" />
+        </arc>
+        <arc id="701">
+          <flow source="7" target="1" />
+        </arc>
+        <arc id="8014">
+          <flow source="8" target="14" />
+        </arc>
+        <arc id="907">
+          <flow source="9" target="7" />
+        </arc>
+        <arc id="10019">
+          <flow source="10" target="19" />
+        </arc>
+        <arc id="11015">
+          <flow source="11" target="15" />
+        </arc>
+        <arc id="12011">
+          <flow source="12" target="11" />
+        </arc>
+        <arc id="13012">
+          <flow source="13" target="12" />
+        </arc>
+        <arc id="1505">
+          <flow source="15" target="5" />
+        </arc>
+        <arc id="16012">
+          <flow source="16" target="12" />
+        </arc>
+        <arc id="1702">
+          <flow source="17" target="2" />
+        </arc>
+        <arc id="1805">
+          <flow source="18" target="5" />
+        </arc>
+        <arc id="1904">
+          <flow source="19" target="4" />
+        </arc>
+        <arc id="19013">
+          <flow source="19" target="13" />
+        </arc>
+      </epc>
+      <epc epcId="6" name="MoHoL Solution 05">
+        <event id="1">
+          <name>feasible</name>
+        </event>
+        <event id="2">
+          <name>negative</name>
+        </event>
+        <function id="3">
+          <name>Bring about clarification</name>
+        </function>
+        <event id="4">
+          <name>Clarification brought about</name>
+        </event>
+        <function id="5">
+          <name>Create rejection</name>
+        </function>
+        <xor id="6">
+          <name>x</name>
+        </xor>
+        <event id="7">
+          <name>Rejection created</name>
+        </event>
+        <event id="8">
+          <name>Feasibility checked</name>
+        </event>
+        <function id="9">
+          <name>Result leading</name>
+        </function>
+        <function id="10">
+          <name>Inform customer</name>
+        </function>
+        <and id="11">
+          <name>∧</name>
+        </and>
+        <xor id="12">
+          <name>x</name>
+        </xor>
+        <event id="13">
+          <name>Inquiry receivt</name>
+        </event>
+        <event id="14">
+          <name>not feasible</name>
+        </event>
+        <function id="15">
+          <name>Result giving</name>
+        </function>
+        <event id="16">
+          <name>possibly feasible</name>
+        </event>
+        <event id="17">
+          <name>positive</name>
+        </event>
+        <function id="18">
+          <name>Check to feasibility</name>
+        </function>
+        <arc id="205">
+          <flow source="2" target="5" />
+        </arc>
+        <arc id="304">
+          <flow source="3" target="4" />
+        </arc>
+        <arc id="4015">
+          <flow source="4" target="15" />
+        </arc>
+        <arc id="507">
+          <flow source="5" target="7" />
+        </arc>
+        <arc id="601">
+          <flow source="6" target="1" />
+        </arc>
+        <arc id="6016">
+          <flow source="6" target="16" />
+        </arc>
+        <arc id="6014">
+          <flow source="6" target="14" />
+        </arc>
+        <arc id="809">
+          <flow source="8" target="9" />
+        </arc>
+        <arc id="906">
+          <flow source="9" target="6" />
+        </arc>
+        <arc id="1105">
+          <flow source="11" target="5" />
+        </arc>
+        <arc id="11010">
+          <flow source="11" target="10" />
+        </arc>
+        <arc id="1202">
+          <flow source="12" target="2" />
+        </arc>
+        <arc id="12017">
+          <flow source="12" target="17" />
+        </arc>
+        <arc id="13018">
+          <flow source="13" target="18" />
+        </arc>
+        <arc id="14011">
+          <flow source="14" target="11" />
+        </arc>
+        <arc id="15012">
+          <flow source="15" target="12" />
+        </arc>
+        <arc id="1603">
+          <flow source="16" target="3" />
+        </arc>
+        <arc id="1808">
+          <flow source="18" target="8" />
+        </arc>
+      </epc>
+      <epc epcId="7" name="MoHoL Solution 06">
+        <event id="1">
+          <name>I. feasible</name>
+        </event>
+        <event id="2">
+          <name>Customer rejected</name>
+        </event>
+        <event id="3">
+          <name>R. positive</name>
+        </event>
+        <event id="4">
+          <name>Inquiry is present</name>
+        </event>
+        <function id="5">
+          <name>Bring about clarification</name>
+        </function>
+        <event id="6">
+          <name>I. possibly Feasible</name>
+        </event>
+        <event id="7">
+          <name>I. not feasible</name>
+        </event>
+        <xor id="8">
+          <name>x</name>
+        </xor>
+        <event id="9">
+          <name>R. negative</name>
+        </event>
+        <function id="10">
+          <name>Create rejection + inform customer</name>
+        </function>
+        <function id="11">
+          <name>Check feasibility</name>
+        </function>
+        <function id="12">
+          <name>Create offer + inform c.</name>
+        </function>
+        <or id="13">
+          <name>∨</name>
+        </or>
+        <xor id="14">
+          <name>x</name>
+        </xor>
+        <or id="15">
+          <name>∨</name>
+        </or>
+        <event id="16">
+          <name>Customer accepted + informed</name>
+        </event>
+        <arc id="1013">
+          <flow source="1" target="13" />
+        </arc>
+        <arc id="3013">
+          <flow source="3" target="13" />
+        </arc>
+        <arc id="4011">
+          <flow source="4" target="11" />
+        </arc>
+        <arc id="508">
+          <flow source="5" target="8" />
+        </arc>
+        <arc id="605">
+          <flow source="6" target="5" />
+        </arc>
+        <arc id="7015">
+          <flow source="7" target="15" />
+        </arc>
+        <arc id="803">
+          <flow source="8" target="3" />
+        </arc>
+        <arc id="809">
+          <flow source="8" target="9" />
+        </arc>
+        <arc id="9015">
+          <flow source="9" target="15" />
+        </arc>
+        <arc id="1002">
+          <flow source="10" target="2" />
+        </arc>
+        <arc id="11014">
+          <flow source="11" target="14" />
+        </arc>
+        <arc id="12016">
+          <flow source="12" target="16" />
+        </arc>
+        <arc id="13012">
+          <flow source="13" target="12" />
+        </arc>
+        <arc id="1407">
+          <flow source="14" target="7" />
+        </arc>
+        <arc id="1401">
+          <flow source="14" target="1" />
+        </arc>
+        <arc id="1406">
+          <flow source="14" target="6" />
+        </arc>
+        <arc id="15010">
+          <flow source="15" target="10" />
+        </arc>
+      </epc>
+      <epc epcId="8" name="MoHoL Solution 07">
+        <event id="1">
+          <name>Inquiry received</name>
+        </event>
+        <function id="2">
+          <name>Create offer</name>
+        </function>
+        <or id="3">
+          <name>∨</name>
+        </or>
+        <or id="4">
+          <name>∨</name>
+        </or>
+        <function id="5">
+          <name>Bring about clarification</name>
+        </function>
+        <event id="6">
+          <name>Customer informed</name>
+        </event>
+        <event id="7">
+          <name>Inquiry feasible</name>
+        </event>
+        <or id="8">
+          <name>∨</name>
+        </or>
+        <xor id="9">
+          <name>x</name>
+        </xor>
+        <event id="10">
+          <name>Clarification negative</name>
+        </event>
+        <or id="11">
+          <name>∨</name>
+        </or>
+        <function id="12">
+          <name>Inform customer</name>
+        </function>
+        <event id="13">
+          <name>Offer created</name>
+        </event>
+        <event id="14">
+          <name>Clarification positive</name>
+        </event>
+        <event id="15">
+          <name>Inquiry not feasible</name>
+        </event>
+        <event id="16">
+          <name>Inquiry possibly feasible</name>
+        </event>
+        <function id="17">
+          <name>Check feasibility</name>
+        </function>
+        <function id="18">
+          <name>Create rejection</name>
+        </function>
+        <event id="19">
+          <name>Rejection created</name>
+        </event>
+        <arc id="1017">
+          <flow source="1" target="17" />
+        </arc>
+        <arc id="2013">
+          <flow source="2" target="13" />
+        </arc>
+        <arc id="3015">
+          <flow source="3" target="15" />
+        </arc>
+        <arc id="3016">
+          <flow source="3" target="16" />
+        </arc>
+        <arc id="307">
+          <flow source="3" target="7" />
+        </arc>
+        <arc id="4018">
+          <flow source="4" target="18" />
+        </arc>
+        <arc id="508">
+          <flow source="5" target="8" />
+        </arc>
+        <arc id="7011">
+          <flow source="7" target="11" />
+        </arc>
+        <arc id="8010">
+          <flow source="8" target="10" />
+        </arc>
+        <arc id="8014">
+          <flow source="8" target="14" />
+        </arc>
+        <arc id="9012">
+          <flow source="9" target="12" />
+        </arc>
+        <arc id="1004">
+          <flow source="10" target="4" />
+        </arc>
+        <arc id="1102">
+          <flow source="11" target="2" />
+        </arc>
+        <arc id="1206">
+          <flow source="12" target="6" />
+        </arc>
+        <arc id="1309">
+          <flow source="13" target="9" />
+        </arc>
+        <arc id="14011">
+          <flow source="14" target="11" />
+        </arc>
+        <arc id="1504">
+          <flow source="15" target="4" />
+        </arc>
+        <arc id="1605">
+          <flow source="16" target="5" />
+        </arc>
+        <arc id="1703">
+          <flow source="17" target="3" />
+        </arc>
+        <arc id="18019">
+          <flow source="18" target="19" />
+        </arc>
+        <arc id="1909">
+          <flow source="19" target="9" />
+        </arc>
+      </epc>
+      <epc epcId="9" name="MoHoL Solution 08">
+        <function id="1">
+          <name>Bring about clarification</name>
+        </function>
+        <xor id="2">
+          <name>x</name>
+        </xor>
+        <event id="3">
+          <name>Clarification positive</name>
+        </event>
+        <event id="4">
+          <name>Customer informed</name>
+        </event>
+        <event id="5">
+          <name>Inquiry possibly feasible</name>
+        </event>
+        <function id="6">
+          <name>Create offer</name>
+        </function>
+        <and id="7">
+          <name>∧</name>
+        </and>
+        <event id="8">
+          <name>Inquiry feasible</name>
+        </event>
+        <xor id="9">
+          <name>x</name>
+        </xor>
+        <xor id="10">
+          <name>x</name>
+        </xor>
+        <event id="11">
+          <name>Inquiry received</name>
+        </event>
+        <event id="12">
+          <name>Clarification negative</name>
+        </event>
+        <function id="13">
+          <name>Create rejection</name>
+        </function>
+        <function id="14">
+          <name>Check feasibility</name>
+        </function>
+        <event id="15">
+          <name>Inquiry not feasible</name>
+        </event>
+        <event id="16">
+          <name>Customer inquired</name>
+        </event>
+        <function id="17">
+          <name>Record inquiry in system</name>
+        </function>
+        <xor id="18">
+          <name>x</name>
+        </xor>
+        <arc id="107">
+          <flow source="1" target="7" />
+        </arc>
+        <arc id="2013">
+          <flow source="2" target="13" />
+        </arc>
+        <arc id="3018">
+          <flow source="3" target="18" />
+        </arc>
+        <arc id="501">
+          <flow source="5" target="1" />
+        </arc>
+        <arc id="609">
+          <flow source="6" target="9" />
+        </arc>
+        <arc id="7012">
+          <flow source="7" target="12" />
+        </arc>
+        <arc id="703">
+          <flow source="7" target="3" />
+        </arc>
+        <arc id="8018">
+          <flow source="8" target="18" />
+        </arc>
+        <arc id="904">
+          <flow source="9" target="4" />
+        </arc>
+        <arc id="1008">
+          <flow source="10" target="8" />
+        </arc>
+        <arc id="1005">
+          <flow source="10" target="5" />
+        </arc>
+        <arc id="10015">
+          <flow source="10" target="15" />
+        </arc>
+        <arc id="11014">
+          <flow source="11" target="14" />
+        </arc>
+        <arc id="1202">
+          <flow source="12" target="2" />
+        </arc>
+        <arc id="1309">
+          <flow source="13" target="9" />
+        </arc>
+        <arc id="14010">
+          <flow source="14" target="10" />
+        </arc>
+        <arc id="1502">
+          <flow source="15" target="2" />
+        </arc>
+        <arc id="16017">
+          <flow source="16" target="17" />
+        </arc>
+        <arc id="17011">
+          <flow source="17" target="11" />
+        </arc>
+        <arc id="1806">
+          <flow source="18" target="6" />
+        </arc>
+      </epc>
+      <epc epcId="10" name="MoHoL Solution 09">
+        <xor id="1">
+          <name>x</name>
+        </xor>
+        <xor id="2">
+          <name>x</name>
+        </xor>
+        <event id="3">
+          <name>I. poss. feasible</name>
+        </event>
+        <xor id="4">
+          <name>x</name>
+        </xor>
+        <function id="5">
+          <name>Bring about a clarification</name>
+        </function>
+        <function id="6">
+          <name>Inform customer</name>
+        </function>
+        <event id="7">
+          <name>negative</name>
+        </event>
+        <event id="8">
+          <name>Created offer</name>
+        </event>
+        <function id="9">
+          <name>Feasibility check</name>
+        </function>
+        <event id="10">
+          <name>pos.</name>
+        </event>
+        <event id="11">
+          <name>Rejection created</name>
+        </event>
+        <function id="12">
+          <name>Reject</name>
+        </function>
+        <event id="13">
+          <name>Customer information</name>
+        </event>
+        <event id="14">
+          <name>Received inquiry</name>
+        </event>
+        <function id="15">
+          <name>Creation of offer</name>
+        </function>
+        <event id="16">
+          <name>Inquiry feasible</name>
+        </event>
+        <xor id="17">
+          <name>x</name>
+        </xor>
+        <event id="18">
+          <name>I. not feasible</name>
+        </event>
+        <xor id="19">
+          <name>x</name>
+        </xor>
+        <arc id="107">
+          <flow source="1" target="7" />
+        </arc>
+        <arc id="1010">
+          <flow source="1" target="10" />
+        </arc>
+        <arc id="2012">
+          <flow source="2" target="12" />
+        </arc>
+        <arc id="305">
+          <flow source="3" target="5" />
+        </arc>
+        <arc id="406">
+          <flow source="4" target="6" />
+        </arc>
+        <arc id="501">
+          <flow source="5" target="1" />
+        </arc>
+        <arc id="6013">
+          <flow source="6" target="13" />
+        </arc>
+        <arc id="702">
+          <flow source="7" target="2" />
+        </arc>
+        <arc id="804">
+          <flow source="8" target="4" />
+        </arc>
+        <arc id="9017">
+          <flow source="9" target="17" />
+        </arc>
+        <arc id="10019">
+          <flow source="10" target="19" />
+        </arc>
+        <arc id="1104">
+          <flow source="11" target="4" />
+        </arc>
+        <arc id="12011">
+          <flow source="12" target="11" />
+        </arc>
+        <arc id="1409">
+          <flow source="14" target="9" />
+        </arc>
+        <arc id="1508">
+          <flow source="15" target="8" />
+        </arc>
+        <arc id="16019">
+          <flow source="16" target="19" />
+        </arc>
+        <arc id="1703">
+          <flow source="17" target="3" />
+        </arc>
+        <arc id="17016">
+          <flow source="17" target="16" />
+        </arc>
+        <arc id="17018">
+          <flow source="17" target="18" />
+        </arc>
+        <arc id="1802">
+          <flow source="18" target="2" />
+        </arc>
+        <arc id="19015">
+          <flow source="19" target="15" />
+        </arc>
+      </epc>
+      <epc epcId="11" name="MoHoL Solution 10">
+        <xor id="1">
+          <name>x</name>
+        </xor>
+        <function id="2">
+          <name>Create offer</name>
+        </function>
+        <xor id="3">
+          <name>x</name>
+        </xor>
+        <function id="4">
+          <name>Inform customer subsequently</name>
+        </function>
+        <event id="5">
+          <name>Inquiry possibly feasible</name>
+        </event>
+        <event id="6">
+          <name>Clarification positive</name>
+        </event>
+        <event id="7">
+          <name>Inquiry not feasible</name>
+        </event>
+        <xor id="8">
+          <name>x</name>
+        </xor>
+        <function id="9">
+          <name>Bring about clarification</name>
+        </function>
+        <event id="10">
+          <name>Clarification negative</name>
+        </event>
+        <xor id="11">
+          <name>x</name>
+        </xor>
+        <xor id="12">
+          <name>x</name>
+        </xor>
+        <event id="13">
+          <name>Inquiry feasible</name>
+        </event>
+        <function id="14">
+          <name>Check feasibility</name>
+        </function>
+        <function id="15">
+          <name>Create rejection</name>
+        </function>
+        <arc id="107">
+          <flow source="1" target="7" />
+        </arc>
+        <arc id="105">
+          <flow source="1" target="5" />
+        </arc>
+        <arc id="1013">
+          <flow source="1" target="13" />
+        </arc>
+        <arc id="208">
+          <flow source="2" target="8" />
+        </arc>
+        <arc id="306">
+          <flow source="3" target="6" />
+        </arc>
+        <arc id="3010">
+          <flow source="3" target="10" />
+        </arc>
+        <arc id="509">
+          <flow source="5" target="9" />
+        </arc>
+        <arc id="6012">
+          <flow source="6" target="12" />
+        </arc>
+        <arc id="7011">
+          <flow source="7" target="11" />
+        </arc>
+        <arc id="804">
+          <flow source="8" target="4" />
+        </arc>
+        <arc id="903">
+          <flow source="9" target="3" />
+        </arc>
+        <arc id="10011">
+          <flow source="10" target="11" />
+        </arc>
+        <arc id="11015">
+          <flow source="11" target="15" />
+        </arc>
+        <arc id="1202">
+          <flow source="12" target="2" />
+        </arc>
+        <arc id="13012">
+          <flow source="13" target="12" />
+        </arc>
+        <arc id="1401">
+          <flow source="14" target="1" />
+        </arc>
+        <arc id="1508">
+          <flow source="15" target="8" />
+        </arc>
+      </epc>
+    </directory>
+  </directory>
+</epml:epml>
+

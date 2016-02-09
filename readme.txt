@@ -49,7 +49,13 @@ wordnet \
 curl \
 libcurl4-openssl-dev \
 php5-curl \
-php5-cli
+php5-cli \
+libpspell-dev \
+php5-pspell \
+aspell-en \
+libaspell15 \
+libaspell-dev \
+
 
 2. Prepare, Compile, Install PHP 5.5.5 with pthreads
 
@@ -58,7 +64,7 @@ wget http://us3.php.net/get/php-5.5.5.tar.bz2/from/de3.php.net/mirror -O php.tar
 tar xvjf php.tar.bz2
 
 cd php-5.5.5
-./configure --enable-debug --enable-maintainer-zts --enable-pthreads --with-curl --with-zlib-dir --with-gd --enable-zip --with-bz2 --with-jpeg-dir=/usr --with-jpeg-dir=/usr --enable-calendar --enable-calendar
+./configure --enable-debug --enable-maintainer-zts --enable-pthreads --with-curl --with-zlib-dir --with-gd --enable-zip --with-bz2 --with-jpeg-dir=/usr --with-jpeg-dir=/usr --enable-calendar --enable-calendar --with-mysql --with-mysqli --with-pdo-mysql --with-pdo-sqlite --enable-soap --enable-sockets --enable-sqlite-utf8 --with-xmlrpc --with-xsl --with-pear --with-pspell=/usr
 make
 checkinstall
 

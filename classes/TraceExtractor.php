@@ -54,7 +54,7 @@ class TraceExtractor {
 	 * @param bool $doEPCExport Soll die reduzierte EPK exportiert werden?
 	 * @param bool $max_execution_time Zeit, die die Trace-Extraktion maximal dauern darf, bevor abgebrochen wird... in Sekunden!
 	 */
-	public function __construct(EPC $epc, $doEPCExport = false, $max_execution_time = 0) {
+	public function __construct(EPC $epc, $doEPCExport = false, $max_execution_time = 20) {
 		$transformer = new EPCTransformerNoEventsButEnds();
 		$epc = $transformer->transform($epc);
 		if ( $doEPCExport )	$epc->exportEPML();

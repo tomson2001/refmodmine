@@ -6,7 +6,7 @@ print("\n--------------------------------------------------------------------\n 
 
 
 // Hilfeanzeige auf Kommandozeile
-if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) || !isset($argv[4]) ) {
+if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) || !isset($argv[4]) || !isset($argv[5]) ) {
 	exit("   Please provide the following parameters:\n
    command=         command to execute with ||| instead of whitespace
    description=     description with ||| instead of whitespace
@@ -17,6 +17,10 @@ if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) || !isset($argv[4]
    notification=
       no
       [E-Mail adress]
+			
+   checksum=
+      no (no DB logging)
+      checksum (for DB Logging in ActionLog)
 
    please use the correct order!
 			
@@ -30,12 +34,14 @@ $command = str_replace("@QUOTE@", "\"", $command);
 $description = str_replace("[]", " ", substr($argv[2], 12,  strlen($argv[2])));
 $sessionid = substr($argv[3], 10, strlen($argv[3]));
 $email   = substr($argv[4], 13, strlen($argv[4]));
+$checksum   = substr($argv[5], 9, strlen($argv[5]));
 
 print("
 command: ".$command."
 description: ".$description."
 sessionid: ".$sessionid."
 notification: ".$email."
+checksum: ".$checksum."
 
 checking notification parameter ...
 ");
@@ -47,6 +53,20 @@ if ( $email == "no" ) {
 	print "  notification ... ok (notification disabled)\n";
 } else {
 	print "  notification ... ok (mail to ".$email.")\n";
+}
+
+print(" done");
+
+print("\n\nchecking notification parameter ...
+");
+
+// Check Logging
+$doLog = true;
+if ( $checksum == "no" ) {
+	$doLog = false;
+	print "  logging ... disabled\n";
+} else {
+	print "  logging ... ok (".$checksum.")\n";
 }
 
 print(" done");
@@ -78,6 +98,34 @@ if ( $doNotify ) {
 	} else {
 		print("error");
 	}
+}
+
+if ( $doLog ) {
+	// DATABASE CONNECTION
+	$mdb2_dsn = array(
+			'phptype'  => Config::DB_TYPE,
+			'username' => Config::DB_USER,
+			'password' => Config::DB_PASS,
+			'hostspec' => Config::DB_HOST,
+			'database' => Config::DB_DATABASE
+	);
+	
+	$mdb2_options = array(
+			'debug' => 2
+	);
+	
+	$db = &MDB2::connect($mdb2_dsn, $mdb2_options);
+	
+	// ERROR HANDLING
+	if (PEAR::isError($db)) {
+		Logger::log("System", "CLIExternalExecution.php: Error connecting to database: ".$db->getMessage(), "ACCESS");
+		Logger::log("System", "CLIExternalExecution.php: Error connecting to database: ".$db->getMessage(), "ERROR");
+		die($db->getMessage());
+	}
+	// DATABASE CONNECTED
+	
+	$log = new ActionLog($checksum);
+	$log->setEndPot();
 }
 
 // Ausgabe der Dateiinformationen auf der Kommandozeile

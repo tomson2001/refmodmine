@@ -29,8 +29,12 @@ class EPC {
 	public $correctStandAndEndFunctions = false;
 
 	public $warnings = array();
+	
+	public $spellingCorrections = array();
 
 	public $internalID;
+	
+	public $metrics = array();
 
 	/**
 	 * SimpleXMLElement aus einer EPML-File
@@ -173,6 +177,15 @@ class EPC {
 		}
 	}
 	
+	public function getLabel($nodeID) {
+		$type = $this->getType($nodeID);
+		switch ( $type ) {
+			case "function": return $this->functions[$nodeID];
+			case "event": 	 return $this->events[$nodeID];
+			default: return $type;
+		}
+	}
+	
 	public function getOrganizationUnit($nodeID) {
 		return isset($this->functionOrgUnitAssignments[$nodeID]) ? $this->functionOrgUnitAssignments[$nodeID] : null;
 	}
@@ -180,6 +193,15 @@ class EPC {
 	public function isFunction($nodeID) {
 		$nodeID = (string) $nodeID;
 		return array_key_exists($nodeID, $this->functions);
+	}
+	
+	public function getNumDifferentFunctionLabels() {
+		$differentLabels = array();
+		foreach ( $this->functions as $nodeID => $label ) {
+			if ( in_array($label, $differentLabels) ) continue;
+			array_push($differentLabels, $label);
+		}
+		return count($differentLabels);
 	}
 
 	public function isEvent($nodeID) {
@@ -201,6 +223,30 @@ class EPC {
 				array_push($successors, $edge[$nodeID]);
 			}
 		}
+		return $successors;
+	}
+	
+	/** 
+	 * Returns an array of the successors IDs, where connectors are skipped. This is 
+	 * especially for the determinatioin of an alternating function-event-style.
+	 * 
+	 * @param int $nodeID
+	 * @return array
+	 */
+	public function getSuccessorsSkipConnectors($nodeID) {
+		$successors = $this->getSuccessor($nodeID);
+		
+		// Recursion if one of the successors is a connector
+		foreach ( $successors as $index => $succID ) {
+			if ( $this->isConnector($succID) ) {
+				unset($successors[$index]);
+				$succSuccs = $this->getSuccessorsSkipConnectors($succID);
+				foreach ( $succSuccs as $succSuccID ) {
+					array_push($successors, $succSuccID);
+				}
+			}
+		}
+		
 		return $successors;
 	}
 
@@ -288,6 +334,7 @@ class EPC {
 
 	/**
 	 * Die IDs der Funktionen in der EPK werden auf die IDs einer gemappten EPK gesetzt
+	 * Im Mapping ist diese EPK die zweite und die gemappte die erste
 	 *
 	 * @param IMapping $mapping
 	 */
@@ -324,6 +371,54 @@ class EPC {
 					$mappedFunctionID = $mapping->mappingExistsTo($funcID);
 					if ( $mappedFunctionID && $mappedFunctionID != $funcID ) {
 							
+						// FunctionID in trace aendern
+						$this->traces[$traceIndex][$funcIndex] = $mappedFunctionID;
+							
+					}
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Die IDs der Funktionen in der EPK werden auf die IDs einer gemappten EPK gesetzt
+	 * Im Mapping ist diese EPK die erste und die gemappte die zweite
+	 *
+	 * @param IMapping $mapping
+	 */
+	public function assignFunctionMapping2(IMapping $mapping) {
+		// Func-IDs in der EPK aendern
+		foreach ($this->functions as $id => $label) {
+			$mappedFunctionID = $mapping->mappingExistsFrom($id);
+			if ( $mappedFunctionID && $mappedFunctionID != $id ) {
+	
+				// FunctionID in $functions aendern
+				$this->functions[$mappedFunctionID] = $label;
+				unset($this->functions[$id]);
+	
+				// FunctionID in $edges aendern
+				foreach ( $this->edges as $index => $edge ) {
+					foreach ( $edge as $sourceNodeID => $targetNodeID ) {
+						if ( $id == $sourceNodeID ) {
+							$newEdge = array($mappedFunctionID => $targetNodeID);
+							$this->edges[$index] = $newEdge;
+						}
+						if ( $id == $targetNodeID) {
+							$newEdge = array($sourceNodeID => $mappedFunctionID);
+							$this->edges[$index] = $newEdge;
+						}
+					}
+				}
+			}
+		}
+	
+		// Func-IDs in den Traces aendern
+		if ( is_array($this->traces) ) {
+			foreach ( $this->traces as $traceIndex => $trace ) {
+				foreach ( $trace as $funcIndex => $funcID ) {
+					$mappedFunctionID = $mapping->mappingExistsFrom($funcID);
+					if ( $mappedFunctionID && $mappedFunctionID != $funcID ) {
+						//print ("\nreplace ".$funcID." by ".$mappedFunctionID);
 						// FunctionID in trace aendern
 						$this->traces[$traceIndex][$funcIndex] = $mappedFunctionID;
 							
@@ -486,6 +581,12 @@ class EPC {
 	public function isEndNode($nodeID) {
 		$endNodes = $this->getAllEndNodes();
 		if ( array_key_exists($nodeID, $endNodes) ) return true;
+		return false;
+	}
+	
+	public function isStartNode($nodeID) {
+		$startNodes = $this->getAllStartNodes();
+		if ( array_key_exists($nodeID, $startNodes) ) return true;
 		return false;
 	}
 
@@ -1099,6 +1200,129 @@ class EPC {
 
 		return true;
 	}
+	
+	/**
+	 * return all syntax error as text within an array
+	 * 
+	 * Types
+	 * 	1	Missing start and end events
+	 *  2	activities have exactly one in-coming and exactly one outgoing edge
+	 *  3	events have at least one in-coming and at least one outgoing edge
+	 *  4	alternating events and activities
+	 *  5	labels should be unique (each label occurs exactly once)
+	 *  6   connectors are either split (one imcoming, more than one outgoing edges) or join (more than one incoming, one outgoing edges) connectors 
+	 * 
+	 * @return array
+	 */
+	public function getSyntaxErrors($errorTypes=array(1,2,3,6), $warningTypes=array(4,5)) {
+		$issues = array();
+		
+		// Es existiert mind. ein Start und Endereignis
+		if ( count($this->getAllStartNodes()) == 0 ) {
+			if ( in_array(1, $errorTypes) ) array_push($issues, "Error: Start event missing.");
+			if ( in_array(1, $warningTypes) ) array_push($issues, "Warning: Start event missing.");
+		}
+		if ( count($this->getAllEndNodes()) == 0 ) {
+			if ( in_array(1, $errorTypes) ) array_push($issues, "Error: End event missing.");
+			if ( in_array(1, $warningTypes) ) array_push($issues, "Warning: End event missing.");
+		}
+		
+		// Ereignis haben max. eine eingehende und ausgehende Kante und sollten nur einmal modelliert werden
+		$eventLabels = array();
+		foreach ( $this->events as $eventID => $label ) {
+			// check incoming and outgoing edges
+			if ( count($this->getPredecessor($eventID)) > 1 ) {
+				if ( in_array(3, $errorTypes) ) array_push($issues, "Error: Event \"".$label."\" has more than one incoming edge.");
+				if ( in_array(3, $warningTypes) ) array_push($issues, "Warning: Event \"".$label."\" has more than one incoming edge.");
+			}
+			if ( count($this->getSuccessor($eventID)) > 1 ) {
+				if ( in_array(3, $errorTypes) ) array_push($issues, "Error: Event \"".$label."\" has more than one outgoing edge.");
+				if ( in_array(3, $warningTypes) ) array_push($issues, "Warning: Event \"".$label."\" has more than one outgoing edge.");
+			}
+			
+			// check whether the labels are unique
+			if ( !in_array($label, $eventLabels) ) {
+				array_push($eventLabels, $label);
+			} else {
+				if ( in_array(5, $errorTypes) ) {
+					$error = "Error: Event \"".$label."\" occurs more than once.";
+					if ( !in_array($error, $issues) ) array_push($issues, $error);
+				}
+				if ( in_array(5, $warningTypes) ) {
+					$error = "Warning: Event \"".$label."\" occurs more than once.";
+					if ( !in_array($error, $issues) ) array_push($issues, $error);
+				}
+			}
+			
+			// check event-function alternation
+			$successors = $this->getSuccessorsSkipConnectors($eventID);
+			foreach ( $successors as $succID ) {
+				if ( $this->isEvent($succID) ) {
+					if ( in_array(4, $errorTypes) ) array_push($issues, "Error: Event \"".$label."\" is followed by another event.");
+					if ( in_array(4, $warningTypes) ) array_push($issues, "Warning: Event \"".$label."\" is followed by another event.");
+				}
+			}
+		}
+		
+		// Funktion haben genau eine eingehende und ausgehende Kante und sollten nur einmal modelliert werden
+		$funcLabels = array();
+		foreach ( $this->functions as $funcID => $label ) {
+			// check incoming and outgoing edges
+			if ( count($this->getPredecessor($funcID)) != 1 ) {
+				if ( in_array(2, $errorTypes) ) array_push($issues, "Error: Function \"".$label."\" has not exactly one incoming edge.");
+				if ( in_array(2, $warningTypes) ) array_push($issues, "Warning: Function \"".$label."\" has not exactly one incoming edge.");
+			}
+			if ( count($this->getSuccessor($funcID)) != 1 ) {
+				if ( in_array(2, $errorTypes) ) array_push($issues, "Error: Function \"".$label."\" has not exactly one outgoing edge.");
+				if ( in_array(2, $warningTypes) ) array_push($issues, "Warning: Function \"".$label."\" has not exactly one outgoing edge.");
+			}
+			
+			// check whether the labels are unique
+			if ( !in_array($label, $funcLabels) ) { 
+				array_push($funcLabels, $label);
+			} else {
+				if ( in_array(5, $errorTypes) ) {
+					$error = "Error: Function \"".$label."\" occurs more than once.";
+					if ( !in_array($error, $issues) ) array_push($issues, $error);
+				}
+				if ( in_array(5, $warningTypes) ) {
+					$error = "Warning: Function \"".$label."\" occurs more than once.";
+					if ( !in_array($error, $issues) ) array_push($issues, $error);
+				}
+			}
+			
+			// check event-function alternation
+			$successors = $this->getSuccessorsSkipConnectors($funcID);
+			foreach ( $successors as $succID ) {
+				if ( $this->isFunction($succID) ) {
+					if ( in_array(4, $errorTypes) ) array_push($issues, "Error: Function \"".$label."\" is followed by another function.");
+					if ( in_array(4, $warningTypes) ) array_push($issues, "Warning: Function \"".$label."\" is followed by another function.");
+				}
+			}
+		}
+		
+		// Konnektoren haben genau eine eigehende und mehrere ausgehende Kanten (Split-Konnektor) oder mehrere eingehende und genau eine ausgehende Kante (Join-Konnektor).
+		$connectors = $this->getAllConnectors();
+		foreach ( $connectors as $connID => $type ) {
+			// check incoming and outgoing edges
+			$reported = false;
+			if ( count($this->getPredecessor($connID)) == 0 || count($this->getSuccessor($connID)) == 0 ) { 
+				if ( in_array(6, $errorTypes) ) array_push($issues, "Error: Missing incoming and outgoing edges for ".$type."-connector.");
+				if ( in_array(6, $warningTypes) ) array_push($issues, "Warning: Missing incoming and outgoing edges for ".$type."-connector.");
+				$reported = true; 
+			}
+			if ( count($this->getPredecessor($connID)) <= 1 && count($this->getSuccessor($connID)) <= 1 && !$reported ) {
+				if ( in_array(6, $errorTypes) ) array_push($issues, "Error: Missing incoming or outgoing edges for ".$type."-connector.");
+				if ( in_array(6, $warningTypes) ) array_push($issues, "Warning: Missing incoming or outgoing edges for ".$type."-connector.");
+			}
+			if ( count($this->getPredecessor($connID)) > 1 && count($this->getSuccessor($connID)) > 1 ) {
+				if ( in_array(6, $errorTypes) ) array_push($issues, "Error: ".$type."-connectors is split and join connector at the same time.");
+				if ( in_array(6, $warningTypes) ) array_push($issues, "Warning: ".$type."-connectors is split and join connector at the same time.");
+			}
+		}
+		
+		return $issues;
+	}
 
 	private function getNextID() {
 		return count($this->idConversion);
@@ -1305,6 +1529,25 @@ class EPC {
 		
 		return $bpmn;
 	}
-
+	
+	public function autocorrectSpelling() {
+		foreach ( $this->functions as $id => $label ) {
+			$suggestion_spell = NLP::generateSpellingCorrectionRecommendation($label);
+			if ($suggestion_spell) {
+				$this->functions[$id] = $suggestion_spell;
+				array_push($this->spellingCorrections, "'".$label."' replaced by '".$suggestion_spell."'");
+			}
+		}
+		
+		foreach ( $this->events as $id => $label ) {
+			$suggestion_spell = NLP::generateSpellingCorrectionRecommendation($label);
+			if ($suggestion_spell) {
+				$this->events[$id] = $suggestion_spell;
+				array_push($this->spellingCorrections, "'".$label."' replaced by '".$suggestion_spell."'");
+			}
+		}
+		
+		return $this->spellingCorrections;
+	}
 }
 ?>

@@ -33,6 +33,19 @@ class WorkspaceActionConfig {
 			"Specification" => ""
 		),
 			
+		"examresults"	=> array(
+			"Name"			=> "Exam Results",
+			"FileExtension"	=> "csv",
+			"Icon"			=> "glyphicon glyphicon-education",
+			"OpenWith"		=> "workspaceCSVViewer",
+			"isUploadable"	=> false,
+			"uploadAction"	=> null,
+			"Descriptions"	=> array(
+				
+			),
+			"Specification" => ""
+		),
+			
 		"valueseries"	=> array(
 				"Name"			=> "Value Series",
 				"FileExtension"	=> "csv",
@@ -134,6 +147,29 @@ class WorkspaceActionConfig {
 								<tr><td>Model C</td><td>0</td><td>1</td><td>1</td></tr>
 								</table>"
 		),
+			
+		"logfeaturevectors"	=> array(
+			"Name"			=> "Log Feature Vectors",
+			"FileExtension"	=> "csv",
+			"Icon"			=> "glyphicon glyphicon-sort-by-attributes",
+			"OpenWith"		=> "workspaceCSVViewer",
+			"isUploadable"	=> true,
+			"uploadAction"	=> null,
+			"Descriptions"	=> array(
+				"yes"	=> "aggregated",
+				"no"	=> ""
+			),
+			"Specification" => "The feature vectors csv describes the occurence of an activity (resp. events) in particular traces. The row header contains all
+					activity labels of all models, the column header contains the models. The values are either 0 (activity is not the trace)
+					or 1 (activity is in the trace). Alternatively, the number of occurences can be counted. Additionally, if more than one log is selected as input,
+					the source file for each trace can be optionally presented in the first column. Line delimiter is \\n and cell delimiter is semicolon. An example would be:<br /><br />
+					<table border=\"1\" cellpadding=\"2\" cellspacing=\"2\">
+					<tr><td></td><td></td><td>Event 1</td><td>Event 2</td><td>Event 3</td></tr>
+					<tr><td>(file 1)</td><td>Trace A</td><td>1</td><td>0</td><td>1</td></tr>
+					<tr><td>(file 1)</td><td>Trace B</td><td>1</td><td>1</td><td>1</td></tr>
+					<tr><td>(file 2)</td><td>Trace C</td><td>0</td><td>1</td><td>1</td></tr>
+					</table>"
+		),
 		
 		"epctext"	=> array(
 			"Name"			=> "EPC-Text",
@@ -206,7 +242,8 @@ class WorkspaceActionConfig {
 				"li"			=> "approach of li",
 				"fromPNML"		=> "transformed from petri net",
 				"fromText"		=> "mined from textual description",
-				"epml"			=> "",
+				"epml"			=> "epml",
+				"rmm-1"			=> "RMM-1"
 			),
 			"Specification" => ""
 		),
@@ -303,7 +340,10 @@ class WorkspaceActionConfig {
 			"Descriptions"	=> array(
 				"rmm-nscm"		=> "N-Ary Semantic Cluster Matching (PMMC2013)",
 				"rmm-nhcm"		=> "N-Ary Homogeneity-based Cluster Matching (PMMC2015)",
-				"rmm-map2015"	=> "Matching (PMC2015)"
+				"rmm-map2015"	=> "Matching (PMC2015)",
+				"rmm-nlm"		=> "Natural Language Matcher (PMMC2015)",
+				"de"			=> "German",
+				"en"			=> "English"
 			),
 			"Specification" => ""
 		),
@@ -334,7 +374,12 @@ class WorkspaceActionConfig {
 			"Descriptions"	=> array(
 				"rmm-nscm"		=> "N-Ary Semantic Cluster Matching (PMMC2013)",
 				"rmm-nhcm"		=> "N-Ary Homogeneity-based Cluster Matching (PMMC2015)",
-				"rmm-map2015"	=> "Matching (PMC2015)"
+				"rmm-map2015"	=> "Matching (PMC2015)",
+				"rmm-nlm"		=> "Natural Language Matcher (PMMC2015)",
+				"de"			=> "German",
+				"en"			=> "English",
+				"xml"			=> "xml",
+				"syntactic-greedy" => "Syntactic Greedy"
 			),
 			"Specification" => "The datatype xml represents a matching between models. The XML format for saving matchings allows persisting single 
 								or multiple matchings of arbitrary arity and complexity. The xml document is structured as follows:<br><br>
@@ -457,7 +502,8 @@ class WorkspaceActionConfig {
 			
 	);
 	
-	public $userDependencyParams = array("INPUT_TEXT", "INPUT_TEXTFIELD", "SELECT_ONE_MODEL", "SELECT_ONE_METRICS", "SELECT_ONE_VALUE_SERIES", "SELECT_ONE_SIMMATRIX", "SELECT_ONE_XML_MATCHING", "SELECT_ONE_PNML");
+	// Special: INPUT_SLIDER|MIN|MAX|STEP|DEFAULT
+	public $userDependencyParams = array("INPUT_TEXT", "INPUT_TEXTFIELD", "INPUT_BOOL", "INPUT_SLIDER", "SELECT_ONE_MODEL", "SELECT_ONE_METRICS", "SELECT_ONE_METRICS_OPTIONAL", "SELECT_ONE_VALUE_SERIES", "SELECT_ONE_SIMMATRIX", "SELECT_ONE_XML_MATCHING", "SELECT_ONE_XML_MATCHING_OPTIONAL", "SELECT_ONE_PNML", "SELECT_ONE_PROCESSLOG", "SELECT_MULTIPLE_PROCESSLOG");
 
 	/**
 	 * Available functionalities
@@ -488,12 +534,13 @@ class WorkspaceActionConfig {
 			"Parameters"	=> array(
 				"CLI"				=> null,
 				"CALCULATE_METRICS"	=> null,
-				"INPUT_DATA" 		=> "CONST_WORKSPACE_EPML",
-				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.metrics.%METRICS%", 
-				"METRICS"			=> array(
+				"model_set" 		=> "CONST_WORKSPACE_EPML",
+				"metrics_result"		=> "CONST_WORKSPACE_EPML.metrics.%metrics%", 
+				"metrics"			=> array(
 					"Default" => "EVENTS FUNCTIONS AND_SPLITS AND_JOINS XOR_SPLITS XOR_JOINS OR_SPLITS OR_JOINS CONNECTORS NODES ARCS DIAMETER DENSITY_1 COEFFICIENT_OF_CONNECTIVITY",
 					"WI2015-Clustering" => "start_events ARCS DENSITY_1 COEFFICIENT_OF_CONNECTIVITY",
-					"Corpus-Metrics" => "start_events internal_events end_events events functions and_splits and_joins xor_splits xor_joins or_splits or_joins connectors nodes arcs density_1 density_2 coefficient_of_connectivity coefficient_of_network_complexity cyclomatic_number avg_connector_degree max_connector_degree separability sequentiality depth mismatch heterogeneity token_splits control_flow_complexity join_complexity weighted_coupling"                
+					"Corpus-Metrics" => "start_events internal_events end_events events functions and_splits and_joins xor_splits xor_joins or_splits or_joins connectors nodes arcs density_1 density_2 coefficient_of_connectivity coefficient_of_network_complexity cyclomatic_number avg_connector_degree max_connector_degree separability sequentiality depth mismatch heterogeneity token_splits control_flow_complexity join_complexity weighted_coupling",
+					"MoHoL" => "density_1 sequentiality avg_connector_degree depth connectors or_splits or_joins control_flow_complexity diameter separability cross_connectivity start_events end_events arcs coefficient_of_connectivity"                
 				)
 			)
 		),
@@ -527,12 +574,64 @@ class WorkspaceActionConfig {
 				"Li, Li et al.: Dissertation (TODO)"
 			),
 			"Parameters"	=> array(
-				"CLI"				=> null,
+				"CLI"						=> null,
 				"CREATE_REFERENCE_MODEL"	=> null,
-				"INPUT_DATA" 		=> "CONST_WORKSPACE_EPML",
-				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.model.refmod.li",
-				"METHOD"			=> "LI"
+				"model_set" 				=> "CONST_WORKSPACE_EPML",
+				"reference_model"			=> "CONST_WORKSPACE_EPML.model.refmod.li",
+				"LI"						=> null
 			)
+		),
+		
+		"CREATE_REFERENCE_MODEL_RMM-1" => array(
+				"Name"			=> "RMM-1 - Graph-Based",
+				"CodeBase"		=> "JAVA",
+				"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+				"EmbedInPHP"	=> true,
+				"Literature"	=> array(
+						"J.R. Rehse, P. Fettke, P.Loos: A graph-theoretic method for the inductive development of reference process models, In: Software and Systems Modeling, September 2015, Springer."
+				),
+				"Description"	=> "The RMM-1 approach identifies frequent common subgraphs among the input models and merges them into a new model. 
+									Alpha species the abstraction parameter required for RMM-1. If no_labels is set, labels are ignored when compute frequent common subgraphs.
+									If not_unique is set, node identifiers are not re-assigned, so they might not be unique. If xor_not_connected is set, subgraphs that are never appear jointly
+									in an input model, are not connected by an XOR-connector in the resulting reference model.",
+				"ShortDescription" => "Graph-based reference model mining.",
+				"Parameters"	=> array(
+					"CLI"						=> null,
+					"CREATE_REFERENCE_MODEL"	=> null,
+					"model_set" 				=> "CONST_WORKSPACE_EPML",
+					"reference_model"			=> "CONST_WORKSPACE_EPML.model.refmod.rmm-1.epml",
+					"RMM_1"						=> null,
+					"matching"					=> "SELECT_ONE_XML_MATCHING_OPTIONAL",
+					"alpha"						=> "INPUT_SLIDER|0|100|1|80",
+					"no-labels"					=> "INPUT_BOOL|OFF",
+					"not_unique"				=> "INPUT_BOOL|OFF",
+					"xor_not_connected"			=> "INPUT_BOOL|OFF"
+				)
+		),
+		
+		"CREATE_REFERENCE_MODEL_RMM-2" => array(
+				"Name"			=> "RMM-2 - Execution-Semantic",
+				"CodeBase"		=> "JAVA",
+				"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+				"EmbedInPHP"	=> true,
+				"Literature"	=> array(
+						"todo"
+				),
+				"Description"	=> "The RMM-2 approach identifies similarities between input models based on their execution semantics instead of their graph structure. Common execution traces are merged into a new reference model by means of an adapted alpha-algorithm.
+									It is specified by three parameters, noise, frequency, and high_abstraction. noise gives a threshold for the percentage of a certain order relation between nodes to be represented in the reference model. frequency specifies a threshold 
+									that is required for the relative frequency of nodes to be included in the reference model. high_abstraction defines whether models of differing degrees of abstraction are resolved to a higher or lower degree of abstraction.",
+				"ShortDescription"	=> "Execution-Semantic based reference model mining.",
+				"Parameters"	=> array(
+						"CLI"						=> null,
+						"CREATE_REFERENCE_MODEL"	=> null,
+						"model_set" 				=> "CONST_WORKSPACE_EPML",
+						"reference_model"			=> "CONST_WORKSPACE_EPML.model.refmod.rmm-2.epml",
+						"RMM_2"						=> null,
+						"matching"					=> "SELECT_ONE_XML_MATCHING_OPTIONAL",
+						"noise"						=> "INPUT_SLIDER|0|1|0.01|0.1",
+						"frequency"					=> "INPUT_SLIDER|0|1|0.01|0.1",
+						"high_abstraction"			=> "INPUT_BOOL|ON"
+				)
 		),
 		
 		"CALCULATE_FEATURE_VECTORS" => array(
@@ -546,10 +645,38 @@ class WorkspaceActionConfig {
 			"Parameters"	=> array(
 				"CLI"				=> null,
 				"CALCULATE_FEATURE_VECTORS"	=> null,
-				"INPUT_DATA" 		=> "CONST_WORKSPACE_EPML",
-				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.featurevectors.identical",
+				"model_set" 		=> "CONST_WORKSPACE_EPML",
+				"feature_vectors"	=> "CONST_WORKSPACE_EPML.featurevectors.identical",
 			)
 		),
+		
+		"CALCULATE_LOG_FEATURE_VECTORS" => array(
+				"Name"			=> "Calculate Log Feature Vectors",
+				"CodeBase"		=> "PHP",
+				"ScriptBase"	=> "CLILogFeatureVectors.php",
+				"EmbedInPHP"	=> false,
+				"Literature" 	=> array(
+				),
+				"Description"	=> "Calculates the feature vectors of the traces in a process log. The events serve as the features. The parameters are defined as follows:
+									<ul>
+									<li><strong>input:</strong> The input log file(s).</li>
+									<li><strong>description:</strong> Free text describing the output.</li>			
+									<li><strong>aggregate:</strong> Duplicate traces are removed.</li>
+									<li><strong>with_event_counter:</strong> The number of each event occuring in a trace is counted.</li>
+									<li><strong>with_file_assignment:</strong> Adds a column showing the source log file (senseful, if more than one log file is selected as input).</li>
+									</ul>
+									<strong>Hint: </strong>Approximate calculating time is 1-2 minutes for 400 process instances in the log (depending on the overall number of traces and the number of input log files).",
+				"Parameters"	=> array(
+					"input"			=> "SELECT_MULTIPLE_PROCESSLOG",
+					"output"		=> "CONST_WORKSPACE_EPML.logfeaturevectors.custom.%description%",
+					"notification"	=> "CONST_SESSION_E_MAIL",
+					"description"	=> "INPUT_TEXT",
+					"aggregate"		=> "INPUT_BOOL|ON",
+					"with_event_counter" => "INPUT_BOOL|ON",
+					"with_file_assignment" => "INPUT_BOOL|OFF"
+				)
+		),
+			
 		
 		"CALCULATE_BEHAVIOURAL_PROFILE" => array(
 			"Name"			=> "Calculate Behavioural Profile",
@@ -586,25 +713,9 @@ class WorkspaceActionConfig {
 			),
 			"Parameters"	=> array(
 				"CLI"				=> null,
-				"EPC_TO_TEXT"	=> null,
+				"MODEL_TO_TEXT"	=> null,
 				"INPUT_DATA" 		=> "CONST_WORKSPACE_EPML",
 				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.epctext.default",
-			)
-		),
-		
-		"REMOVE_EVENTS" => array(
-			"Name"			=> "Remove Events",
-			"CodeBase"		=> "JAVA",
-			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
-			"EmbedInPHP"	=> true,
-			"Literature"	=> array(
-				"todo"
-			),
-			"Parameters"	=> array(
-				"CLI"				=> null,
-				"REMOVE_EVENTS"		=> null,
-				"INPUT" 		=> "CONST_WORKSPACE_EPML",
-				"OUTPUT"		=> "CONST_WORKSPACE_EPML.model.noevents",
 			)
 		),
 		
@@ -620,7 +731,7 @@ class WorkspaceActionConfig {
 				"CLI"				=> null,
 				"CONVERT_MATCHING"		=> null,
 				"matchings" 	=> "INPUT_TEXT",
-				"model_set"		=> "CONST_WORKSPACE_EPML",
+				"model_set"		=> "INPUT_TEXT",
 				"output_file" => "INPUT_TEXT",
 				"format"	=> "xml"
 			)
@@ -637,18 +748,18 @@ class WorkspaceActionConfig {
 			"Parameters"	=> array(
 				"CLI"			=> null,
 				"EXTRACT_VOCABULARY"	=> null,
-				"EPCS" 		=> "CONST_WORKSPACE_EPML",
-				"@NODES"			=> array(
+				"model_set" 		=> "CONST_WORKSPACE_EPML",
+				"@node_filter"			=> array(
 					"All"		=> "ALL",
 					"Events"	=> "EVENTS",
 					"Functions"	=> "FUNCTIONS"
 					
 				),
-				"@LANGUAGE"		=> array(
-					"English"	=> "ENG",
-					"German"	=> "GER"
+				"@language"		=> array(
+					"English"	=> "en",
+					"German"	=> "de"
 				),
-				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.vocabulary.%@NODES%.%@LANGUAGE%"
+				"vocabulary"		=> "CONST_WORKSPACE_EPML.vocabulary.%@node_filter%.%@language%"
 			)
 		),
 		
@@ -663,7 +774,7 @@ class WorkspaceActionConfig {
 			"Parameters"	=> array(
 				"CLI"				=> null,
 				"CALCULATE_SIMILARITY"	=> null,
-				"INPUT_DATA" 		=> "CONST_WORKSPACE_EPML",
+				"model_set" 		=> "CONST_WORKSPACE_EPML",
 				//"MAPPING"			=> "SELECT_ONE_MAPPING",
 				"SIMILARITY_MEASURES" => array(
 					"Percentage-of-common-nodes" 			=> "Percentage_of_common_nodes",
@@ -679,48 +790,42 @@ class WorkspaceActionConfig {
 					"Fragment-Sim-Size" 					=> "Fragment_Sim_Size",
 					"All" => "ALL"
 				),
-				"GROUP_BY"			=> "SIMILARITY_MEASURE", 
+				"GROUP_BY"			=> "similarity_measure", 
 				"MEASURE_TYPE"		=> array(
-					"Similarity"		=> "SIMILARITY",
-					"Distance"			=> "DISTANCE"
+					"Similarity"		=> "similarity",
+					"Distance"			=> "distance"
 				),
 				"VARIABLE_NAMES"	=> array(
-					"both" => "BOTH",
-					"row" => "ROW",
-					"column" => "COLUMN",
-					"off" => "OFF",
+					"both" => "both",
+					"row" => "row",
+					"column" => "column",
+					"off" => "off",
 				),
-				"OUTPUT_DATA"		=> "CONST_WORKSPACE_EPML.simmatrix.%SIMILARITY_MEASURES%.%MEASURE_TYPE%.%VARIABLE_NAMES%"
+				"matrix"		=> "CONST_WORKSPACE_EPML.simmatrix.%SIMILARITY_MEASURES%.%MEASURE_TYPE%.%VARIABLE_NAMES%"
 			)
 		),
 		
 		"CLUSTER_MODELS_BASED_ON_DIST" => array(
-			"Name"			=> "Cluster Models based on Distance Matrix",
+			"Name"			=> "Cluster models based on similarity matrix",
 			"CodeBase"		=> "JAVA",
 			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
 			"EmbedInPHP"	=> true,
 			"Literature"	=> array(
-				"needs a distance matrix as input"
+				"needs a similarity matrix as input"
 			),
 			"Parameters"	=> array(
 				"CLI"			=> null,
 				"CLUSTER_MODELS"	=> null,
-				"INPUT_DATA" 	=> "SELECT_ONE_SIMMATRIX",
-				"METHOD"		=> array(
-					"hierarchical"	=> "HCLUST",
-					"PAM"			=> "PAM"
-				),
-				"DENDROGRAM"		=> "CONST_WORKSPACE_EPML.dendogram.%METHOD%",
-				"SIZE"			=> array(
-					"Auto" => "AUTO", "1", "2" => "2", "3" => "3", "4" => "4", "5" => "5", "6" => "6", "7" => "7", "8" => "8", "9" => "9", "10" => "10"  
-				),
+				"matrix" 	=> "SELECT_ONE_SIMMATRIX",
+				"HCLUST"	=> null,
+				"dendrogram"		=> "CONST_WORKSPACE_EPML.dendogram.HCLUST",
 				"CLUSTER_DISTANCE" => array(
-					"WARD_D"	=> "WARD_D"
+					"WARD_D"	=> "ward_d"
 				),
-				"INPUT_TYPE"	=> "DISSIMILARITY_MATRIX",
-				"OUTPUT_DATA"	=> "CONST_WORKSPACE_EPML.cluster.%METHOD%",
+				"INPUT_TYPE"	=> "similarity_matrix",
+				"cluster_result"	=> "CONST_WORKSPACE_EPML.cluster.HCLUST",
 				"EVALUATION"	=> array(
-					"all"	=> "ALL"
+					"all"	=> "all"
 				)
 			)
 		),
@@ -836,6 +941,70 @@ class WorkspaceActionConfig {
 				"notification"	=> "CONST_SESSION_E_MAIL"
 			)
 		),
+		
+		"CHECK_MODELING_EXAMS" => array(
+			"Name"			=> "Check Modeling Exams",
+			"CodeBase"		=> "PHP",
+			"ScriptBase"	=> "CLICheckModelExams.php",
+			"EmbedInPHP"	=> false,
+			"Description"	=> "Automatical scoring of process modeling exercises or exams. 
+					Therefore, three different aspects are analyzed: (1) the syntax, (2) the activity recall and (3) the possible behaviour.
+					The syntax rules, which should be checked can be configured. The activity recall quantifies how many of the expected 
+					activities are modelled in the 'student' solution. For the possible behaviour, all possible instances for each process model
+					are calculated and compared to the possible traces of the sample solution. The f-measure (weighted average of precision and 
+					recall) serves as the quantification of the behavioural fitness, whereby also subsequences are taken into account.<br><br>
+					<strong>sample_solution:</strong> the sample solution which serves as a reference for the scoring<br>
+					<strong>error and warning types:</strong>
+					<ul>
+						<li><i>start and end events:</i> An EPC must have at least one start event and at least one end event.</li>
+						<li><i>activity syntax:</i> An activity has exactely one incoming and outgoing edge.</li>
+						<li><i>event syntax:</i> An event has max. one incoming and max. one outgoing edge.</li>
+						<li><i>connector syntax:</i> A connector can be clearly characterized as a split or joind connector.</li>
+						<li><i>event activity alternatioin:</i> Event and activity do alternate.</li>
+						<li><i>unique labels:</i> Each label can occur only once in a model.</li>
+					</ul>
+					<strong>max_point:</strong> The maximum points to reach.<br>
+					<strong>weight_syntax/_functions_/behaviour:</strong> The weighting of the scoring aspects.<br>
+					<strong>max_syntax_errors:</strong> If that amount of syntax errors is reached, the syntax part is scored with zero points.<br>
+					<strong>metrics:</strong> A CSV file containing the following metrics for each model: density_1 sequentiality avg_connector_degree depth connectors or_splits or_joins control_flow_complexity diameter separability cross_connectivity start_events end_events arcs coefficient_of_connectivity",
+			"Literature" 	=> array(
+				"Workshop \"Modellierung in der Hochschullehre\" at the conference \"Modellierung 2016\""
+			),
+			"Parameters"	=> array(
+				"input"				=> "CONST_WORKSPACE_EPML",
+				"sample_solution"	=> "SELECT_ONE_MODEL",
+				"output"			=> "CONST_WORKSPACE_EPML.examresults.maxpoints-%max_points%",
+				"notification"		=> "CONST_SESSION_E_MAIL",
+				"error_types"		=> array(
+					"PARAM_OPTION_MULTISELECT"	=> true,
+					"PARAM_OPTION_DEFAULTS"		=> array(1,2,3,6),
+					"PARAM_OPTION_CALL_SEPARATOR"		=> ",",
+					"1"	=> "start and end events",
+					"2"	=> "activity syntax",
+					"3"	=> "event syntax",
+					"6"	=> "connector syntax",
+					"4"	=> "event activity alternation",
+					"5"	=> "unique labels"
+				),
+				"warning_types"		=> array(
+					"PARAM_OPTION_MULTISELECT"	=> true,
+					"PARAM_OPTION_DEFAULTS"		=> array(4,5),
+					"PARAM_OPTION_CALL_SEPARATOR"		=> ",",
+					"1"	=> "start and end events",
+					"2"	=> "activity syntax",
+					"3"	=> "event syntax",
+					"6"	=> "connector syntax",
+					"4"	=> "event activity alternation",
+					"5"	=> "unique labels"
+				),
+				"max_points"		=> "INPUT_SLIDER|0|100|1|20",
+				"weight_syntax"		=> "INPUT_SLIDER|0|5|1|2",
+				"weight_functions"	=> "INPUT_SLIDER|0|5|1|2",
+				"weight_behaviour"	=> "INPUT_SLIDER|0|5|1|1",
+				"max_syntax_error"	=> "INPUT_SLIDER|0|20|1|5",
+				"metrics"			=> "SELECT_ONE_METRICS_OPTIONAL"
+			)
+		),
 			
 		"NLP_TAGGING" => array(
 			"Name"			=> "NLP Tagging",
@@ -878,7 +1047,8 @@ class WorkspaceActionConfig {
 			),
 			"Parameters"	=> array(
 				"input"			=> "CONST_WORKSPACE_EPML",
-				"output"		=> "CONST_WORKSPACE_EPML.matching.rmm-nscm",
+				"output"		=> "CONST_WORKSPACE_EPML.xmlmatching.rmm-nscm",
+				"format"		=> "xml",
 				"notification"	=> "CONST_SESSION_E_MAIL"
 			)
 		),
@@ -892,11 +1062,58 @@ class WorkspaceActionConfig {
 				"The Process Model Matching Contest 2015 - Thaler, Hake, Dadashnia, Niesen, Sonntag, Fettke, Loos: RefMod-Mine/NHCM (N-Ary Homogeneity-based Cluster Matching)"
 			),
 			"Description"	=> "Business Process Model Matching: Identification of correspondences between nodes of business process models.",
+			"ShortDescription"	=> "Business Process Model Matching: Identification of correspondences between nodes of business process models.",
 			"Parameters"	=> array(
 				"input"			=> "CONST_WORKSPACE_EPML",
 				"output"		=> "CONST_WORKSPACE_EPML.matching.rmm-nhcm",
+				"format"		=> "zip",
 				"notification"	=> "CONST_SESSION_E_MAIL"
 			)
+		),
+		
+		"MATCHING_GREEDY" => array(
+				"Name"			=> "Syntactic Greedy",
+				"CodeBase"		=> "JAVA",
+				"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+				"EmbedInPHP"	=> true,
+				"Literature"	=> array(
+						"Syntactical Greedy Matching"
+				),
+				"Description"	=> "Business Process Model Matching based on the levenshtein similarity and the greedy algorithm. Thus, it is language independent.",
+				"ShortDescription"	=> "Business Process Model Matching based on syntax analysis. Thus, it is language independent.",
+				"Parameters"	=> array(
+						"CLI"			=> null,
+						"MATCH"			=> null,
+						"model_set" 	=> "CONST_WORKSPACE_EPML",
+						"matching"		=> "CONST_WORKSPACE_EPML.xmlmatching.syntactic-greedy.%threshold%.xml",
+						"event"			=> "INPUT_BOOL|OFF",
+						"function"		=> "INPUT_BOOL|ON",
+						"connector"		=> "INPUT_BOOL|OFF",
+						"GREEDY"		=> null,
+						"syntactic"		=> null,
+						"threshold"		=> "INPUT_SLIDER|0|1|0.01|0.6"
+				)
+		),
+		
+		"MATCHING_NLM" => array(
+				"Name"			=> "RefMod-Mine/NLM",
+				"CodeBase"		=> "JAVA",
+				"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+				"EmbedInPHP"	=> true,
+				"Literature"	=> array(
+						"The Process Model Matching Contest 2015 - Hake, Thaler, Dadashnia, Niesen, Sonntag, Fettke, Loos: RefMod-Mine/NLM (Natural Language Matcher)"
+				),
+				"Description"	=> "Business Process Model Matching: Identification of correspondences within English and German process models.",
+				"ShortDescription"	=> "Business Process Model Matching: Identification of correspondences within English and German process models.",
+				"Parameters"	=> array(
+						"CLI"			=> null,
+						"MATCH"			=> null,
+						"model_set" 	=> "CONST_WORKSPACE_EPML",
+						"matching"		=> "CONST_WORKSPACE_EPML.xmlmatching.rmm-nlm.%language%.xml",
+						"function"		=> null,
+						"NLM" 			=> null,
+						"language"		=> array("English" => "en", "German" => "de")
+				)
 		),
 		
 		"MATCHING_2015" => array(
@@ -923,6 +1140,7 @@ class WorkspaceActionConfig {
 				"todo"
 			),
 			"Description"	=> "Language translations of process models between several available languages as e.g. EN, DE, NL, IT, FR.",
+			"ShortDescription"	=> "Language translations of process models between several available languages as e.g. EN, DE, NL, IT, FR.",
 			"Parameters"	=> array(
 				"input"			=> "CONST_WORKSPACE_EPML",
 				"output"		=> "CONST_WORKSPACE_EPML.models.%language_combination%",
@@ -1002,6 +1220,7 @@ class WorkspaceActionConfig {
 				"Based on: Friedrich, F.; Mendling, J.; Puhlmann, F.: Process Model Generation from Natural Language Text, In: (CAiSE'11) Advanced Information Systems Engineering, Vol. 6741, Lecture Notes in Computer Science, pp. 482-496."
 			),
 			"Description"	=> "Converting a natural language text describing a business process to an EPC.",
+			"ShortDescription"	=> "Converting a natural language text describing a business process to an EPC.",
 			"Parameters"	=> array(
 					"input_type"	=> "text",
 					"input"			=> "INPUT_TEXTFIELD",
@@ -1039,19 +1258,21 @@ class WorkspaceActionConfig {
 		),
 			
 		"Process Model Matching" => array(
+			"MATCHING_GREEDY",
 			"MATCHING_NSCM",
-			"MATCHING_NHCM"
+			"MATCHING_NHCM",
+			"MATCHING_NLM"
 			//"MATCHING_2015"
 		),	
 					
 		"Process Model Similarity" => array(
-			"CALCULATE_SIMILARITY_SSBOCAN",
+			//"CALCULATE_SIMILARITY_SSBOCAN",
 			"CALCULATE_SIMILARITY_LMS",
 			"CALCULATE_SIMILARITY_FBSE",
-			"CALCULATE_SIMILARITY_POCNAE",
-			"CALCULATE_SIMILARITY_GEDS",
+			//"CALCULATE_SIMILARITY_POCNAE",
+			//"CALCULATE_SIMILARITY_GEDS",
 			"CALCULATE_SIMILARITY_AMAGED",
-			"CALCULATE_SIMILARITY_CF",
+			//"CALCULATE_SIMILARITY_CF",
 			"CALCULATE_SIMDIST"
 		),
 			
@@ -1061,6 +1282,8 @@ class WorkspaceActionConfig {
 			
 		"Process Model Mining" => array(
 			//"CREATE_REFERENCE_MODEL_LI" // returns null
+			"CREATE_REFERENCE_MODEL_RMM-1",
+			"CREATE_REFERENCE_MODEL_RMM-2",
 			"TEXT2EPC_MINER",
 			"TEXT2BPMN_MINER"
 		),
@@ -1072,13 +1295,20 @@ class WorkspaceActionConfig {
 			//"EXTRACT_VOCABULARY" // is ready, but an buggy, BUG reported 327
 		),
 		
+		"Log Analysis" => array(
+			"CALCULATE_LOG_FEATURE_VECTORS"
+		),
+		
 		"Further Tools" => array(
+			"CHECK_MODELING_EXAMS",
 			"CORRELATION_CALCULATOR"
 			//"CONVERT_PNML2EPML"
 		)
 	);
 	
 	public $latestFeatures = array(
+		"CREATE_REFERENCE_MODEL_RMM-2",
+		"MATCHING_NLM",
 		"TEXT2EPC_MINER",
 		"MATCHING_NHCM",
 		"MODEL_TRANSLATION"
@@ -1115,7 +1345,7 @@ class WorkspaceActionConfig {
 	}
 	
 	public function getFileTypeDescriptions($fileType, $fileParams) {
-		if ( $fileParams[1] == "custom" ) {
+		if ( isset($fileParams[1]) && $fileParams[1] == "custom" ) {
 			unset($fileParams[1]);
 			return implode(", ", $fileParams);
 		}

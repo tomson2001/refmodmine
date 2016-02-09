@@ -244,6 +244,24 @@ class NAryWordstemMappingWithAntonyms2015 extends ANAryMapping implements INAryM
 		print ("\ndone") ;
 	}
 	
+	public function autocorrectSpelling() {
+		print ("\n\nProceed autocorrection of spelling in node labels ...") ;
+		
+		$correctionResults = array();
+		foreach ( $this->epcs as $index => $epc ) {
+			$corrections = $this->epcs[$index]->autocorrectSpelling();
+			foreach ( $corrections  as $correction ) {
+				array_push($correctionResults, "\n  ".$correction." (".$epc->name.")");
+			}
+		}
+		
+		print(implode("", $correctionResults));
+		
+		print ("\ndone\n") ;
+		
+		return $correctionResults;
+	}
+	
 	public function map2015($includeEvents = false) {
 		
 		$hDegree = $this->getHarmonizationDegree();
@@ -294,9 +312,9 @@ class NAryWordstemMappingWithAntonyms2015 extends ANAryMapping implements INAryM
 				if ($node1->epc->name != $node2->epc->name) {
 					$nodeSimilarity = $this->compare2015 ( $node1, $node2 );
 					
-					if (($node1->label == "Check prename" && $node2->label == "Decide first name") || ($node2->label == "Check prename" && $node1->label == "Decide first name")) {
-						print ("\n" . $node1->label . " -> " . $node2->label . ": " . $nodeSimilarity . "\n") ;
-					}
+// 					if (($node1->label == "Check prename" && $node2->label == "Decide first name") || ($node2->label == "Check prename" && $node1->label == "Decide first name")) {
+// 						print ("\n" . $node1->label . " -> " . $node2->label . ": " . $nodeSimilarity . "\n") ;
+// 					}
 					
 					// print("\n ".$node1->label." <=> ".$node2->label." | ".$nodeSimilarity);
 					if ($nodeSimilarity >= $this->threshold_ontology_quote) {
