@@ -9,6 +9,10 @@ class EMailNotifyer {
 		return self::send($to, "Your process matching results (NSCM)", $readme);
 	}
 	
+	public static function sendCLIEPMLSplitMNotification($to, $readme) {
+		return self::send($to, "EPML successfully splitted", $readme);
+	}
+	
 	public static function sendCLIModelNLPTaggingNotification($to, $readme) {
 		return self::send($to, "NLP-Tagging finished", $readme);
 	}
@@ -31,6 +35,10 @@ class EMailNotifyer {
 	
 	public static function sendCLIConvertPNML2EPMLNotification($to, $readme) {
 		return self::send($to, "PNML2EPML conversion finished", $readme);
+	}
+	
+	public static function sendCLIConvertEPML2PNMLNotification($to, $readme) {
+		return self::send($to, "EPML2PNML conversion finished", $readme);
 	}
 	
 	public static function sendCLIConvertBPMN2EPMLNotification($to, $readme) {

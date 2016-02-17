@@ -546,7 +546,7 @@ class WorkspaceActionConfig {
 		),
 		
 		"CONVERTER" => array(
-				"Name"			=> "Convert Model File",
+				"Name"			=> "AML-EPML Converter",
 				"CodeBase"		=> "JAVA",
 				"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
 				"EmbedInPHP"	=> true,
@@ -1169,11 +1169,6 @@ class WorkspaceActionConfig {
 			"Literature" 	=> array(
 				"none"
 			),
-// 			"Parameters"	=> array(
-// 					"input"			=> "SELECT_ONE_PNML",
-// 					"output"		=> "CONST_WORKSPACE_EPML.model.%SELECT_ONE_PNML@input%.fromPNML",
-// 					"notification"	=> "CONST_SESSION_E_MAIL"
-// 			)
 			"Parameters"	=> array(
 					"input"			=> "INPUT_TEXT",
 					"output"		=> "INPUT_TEXT",
@@ -1181,10 +1176,40 @@ class WorkspaceActionConfig {
 			)
 		),
 		
+		"CONVERT_EPML2PNML" => array(
+				"Name"			=> "Convert EPML to PNML",
+				"CodeBase"		=> "PHP",
+				"ScriptBase"	=> "CLIConvertEPML2PNML.php",
+				"EmbedInPHP"	=> false,
+				"Literature" 	=> array(
+						"none"
+				),
+				"Parameters"	=> array(
+						"input"			=> "INPUT_TEXT",
+						"output"		=> "INPUT_TEXT",
+						"notification"	=> "INPUT_TEXT"
+				)
+		),
+		
 		"CONVERT_BPMN2EPML" => array(
 			"Name"			=> "Convert BPMN to EPML",
 			"CodeBase"		=> "PHP",
 			"ScriptBase"	=> "CLIConvertBPMN2EPML.php",
+			"EmbedInPHP"	=> false,
+			"Literature" 	=> array(
+				"none"
+			),
+			"Parameters"	=> array(
+					"input"			=> "INPUT_TEXT",
+					"output"		=> "INPUT_TEXT",
+					"notification"	=> "INPUT_TEXT"
+			)
+		),
+		
+		"SPLIT_EPML" => array(
+			"Name"			=> "EPML Splitter",
+			"CodeBase"		=> "PHP",
+			"ScriptBase"	=> "CLISplitAndZipEPMLFile.php",
 			"EmbedInPHP"	=> false,
 			"Literature" 	=> array(
 				"none"

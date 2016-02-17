@@ -1,11 +1,11 @@
 <?php
-$reloadLink = "index.php?site=converter_PNML-EPC&action=doConvertUploadedPNML-EPMLFile";
+$reloadLink = "index.php?site=EPML_splitter&action=doSplitAndZipUploadedEPMLFile";
 ?>
 
 <div class="jumbotron">
-	<h1>PNML/EPC Converter</h1>
+	<h1>EPML Splitter</h1>
 	
-	<p>This tool converts your .<a href="http://www.pnml.org" target="_blank">pnml</a> files (PetriNet) to .<a href="http://www.mendling.com/EPML/" target="_blank">epml</a> files and vice versa. At the moment, only EPCs with the basic constructs are supported. If your .epml file contains more than one model, a zip file containing single .pnml files is being created.</p>
+	<p>This tool generates a single <a href="http://www.mendling.com/EPML/" target="_blank">EPML</a> file for each model in a given <a href="http://www.mendling.com/EPML/" target="_blank">EPML</a> file and zips it. At the moment, only EPCs with the basic constructs are supported.</p>
 
 	<h2></h2>
 	<ol class="breadcrumb">
@@ -79,9 +79,9 @@ $reloadLink = "index.php?site=converter_PNML-EPC&action=doConvertUploadedPNML-EP
 		// getting files
 		if (is_dir ( $path )) {
 			$files = scandir ( $path );
-			// remove all entries which are no empl or pnml (pnml-zips)
+			// remove all entries which are no empl
 			foreach ( $files as $index => $entry ) {
-				if ( ! ((strtolower(substr($entry, -5)) == ".pnml" ) || (strtolower(substr($entry, -5)) == ".epml" ) ) ) {
+				if (! (strtolower ( substr ( $entry, - 5 ) ) == ".epml" ) ) {
 					unset ( $files[$index] );
 				} else {
 					$files[$index] = substr($entry, 0, -5);
@@ -92,22 +92,15 @@ $reloadLink = "index.php?site=converter_PNML-EPC&action=doConvertUploadedPNML-EP
 		
 		if ( !empty($files) ) { ?>
 			
-			<h2>Available files <a href="index.php?site=converter_PNML-EPC"><medium><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></medium></a></h2>
+			<h2>Available files <a href="index.php?site=EPML_splitter"><medium><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></medium></a></h2>
 			
 		<?php
 		
 		foreach ( $files as $file ) { 
-			$pnmlLabel = ".pnml";
-			$pnml = $path."/".$file.".pnml";
-			$pnmlDownload = "download=\"".$file.".pnml\"";
-			$pnmlDisabled = is_file($pnml) ? "" : "disabled";
-			
-			if ( !is_file($pnml) ) {
-				$pnmlLabel = ".zip (PNMLs)";
-				$pnml = $path."/".$file."_pnml.zip";
-				$pnmlDownload = "download=\"".$file."_pnml.zip\"";
-				$pnmlDisabled = is_file($pnml) ? "" : "disabled";
-			}
+			$zipLabel = ".zip";
+			$zip = $path."/".$file.".zip";
+			$zipDownload = "download=\"".$file.".zip\"";
+			$zipDisabled = is_file($zip) ? "" : "disabled";
 			
 			$epmlLabel = ".epml";
 			$epml = $path."/".$file.".epml";
@@ -115,28 +108,15 @@ $reloadLink = "index.php?site=converter_PNML-EPC&action=doConvertUploadedPNML-EP
 			$epmlDisabled = is_file($epml) ? "" : "disabled";
 			
 			// conversion outdated, so offer to try again
-			if ( !is_file($epml) ) {
-				$filetime = filemtime($pnml);
-				$currentTime = time();
-				if ( $currentTime - $filetime > 10 ) {
-					$_SESSION['uploadedFilePath'] = $pnml;
-					$epml = "index.php?site=converter_PNML-EPC&action=doConvertUploadedPNML-EPMLFile";
-					$epmlDownload = "";
-					$epmlDisabled = "";
-					$epmlLabel = "convert to .epml";
-				}
-			}
-			
-			// conversion outdated, so offer to try again
-			if ( !is_file($pnml) ) {
+			if ( !is_file($zip) ) {
 				$filetime = filemtime($epml);
 				$currentTime = time();
 				if ( $currentTime - $filetime > 10 ) {
 					$_SESSION['uploadedFilePath'] = $epml;
-					$pnml = "index.php?site=converter_PNML-EPC&action=doConvertUploadedPNML-EPMLFile";
-					$pnmlDownload = "";
-					$pnmlDisabled = "";
-					$pnmlLabel = "convert to .pnml";
+					$zip = "index.php?site=EPML_splitter&action=doSplitAndZipUploadedEPMLFile";
+					$zipDownload = "";
+					$zipDisabled = "";
+					$zipLabel = "split and zip";
 				}
 			}
 			
@@ -146,9 +126,9 @@ $reloadLink = "index.php?site=converter_PNML-EPC&action=doConvertUploadedPNML-EP
 			<div class="input-group">
 			  <input type="text" class="form-control" aria-label="..." value="<?php echo $file; ?>" disabled>
 			  <div class="input-group-btn">
-			    <a class="btn btn-default" role="button" <?php echo $pnmlDisabled; ?> href="<?php echo $pnml; ?>" <?php echo $pnmlDownload; ?>><?php echo $pnmlLabel; ?></a>
 			    <a class="btn btn-default" role="button" <?php echo $epmlDisabled; ?> href="<?php echo $epml; ?>" <?php echo $epmlDownload; ?>><?php echo $epmlLabel; ?></a>
-			    <a class="btn btn-danger" role="button" href="index.php?site=converter_PNML-EPC&action=doRemoveConverterPNMLFile&file=<?php echo $file; ?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+			    <a class="btn btn-default" role="button" <?php echo $zipDisabled; ?> href="<?php echo $zip; ?>" <?php echo $zipDownload; ?>><?php echo $zipLabel; ?></a>
+			    <a class="btn btn-danger" role="button" href="index.php?site=EPML_splitter&action=doRemoveEPMLSplitFile&file=<?php echo $file; ?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 			  </div>
 			</div>
 			<!-- /input-group --><br />

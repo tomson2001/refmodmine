@@ -33,6 +33,7 @@ class EPC {
 	public $spellingCorrections = array();
 
 	public $internalID;
+	public $internalReservedID = 1;
 	
 	public $metrics = array();
 
@@ -637,10 +638,10 @@ class EPC {
 	 * Ermittelt eine nicht in der EPK belegte KnotenID
 	 * @return int
 	 */
-	public function getFreeNodeID() {
-		$allNodes = $this->getAllNodes();
-		return max(array_keys($allNodes)) + 1;
-	}
+// 	public function getFreeNodeID() {
+// 		$allNodes = $this->getAllNodes();
+// 		return max(array_keys($allNodes)) + 1;
+// 	}
 
 	/**
 	 * Prueft die EPK hinsichtlich der AND-soundness.
@@ -1530,6 +1531,134 @@ class EPC {
 		return $bpmn;
 	}
 	
+	public function transformToPetriNet() {
+		$pn = new PetriNet(null, $this->id, $this->name);
+		$ignoreToArcs = array();
+		$ignoreFromArcs = array();
+	
+		foreach ( $this->events as $id => $label ) {
+			$pn->places[$id] = $label;
+		}
+	
+		foreach ( $this->functions as $id => $label ) {
+			$pn->transitions[$id] = $label;
+		}
+		
+		foreach ( $this->and as $id => $label ) {		
+			$pn->transitions[$id] = "IT_AND_".$id;
+		}
+	
+		foreach ( $this->xor as $id => $label ) {
+			$pn->places[$id] = "IP_XOR_".$id;
+		}
+		
+		foreach ( $this->or as $id => $label ) {
+			$pn->places[$id] = "IP_OR_".$id;
+			
+			$preds = $this->getPredecessor($id);
+			$numPreds = count($preds);
+			$succs = $this->getSuccessor($id);
+			$numSuccs = count($succs);
+			
+			if ( $numPreds > 1 ) {
+				array_push($ignoreToArcs, $id);
+				
+				// build entry places
+				$fromReplacements = array();
+				foreach ( $preds as $i => $pred) {
+					$freeID = $this->getFreeNodeID();
+					$pn->places[(string) $freeID] = "IP_OR_".$id."_1_".$i."_from_".$pred;
+					$newArc = array("source" => (string) $pred, "target" => (string) $freeID);
+					array_push($pn->arcs, $newArc);
+					$fromReplacements[$pred] = $freeID;
+				}
+				
+				// only one of the incoming paths is executed
+				foreach ( $preds as $i => $pred) {
+					$freeID = $this->getFreeNodeID();
+					$pn->transitions[(string) $freeID] = "IT_OR_".$id."_1_".$i;
+					$newArc = array("source" => (string) $fromReplacements[$pred], "target" => (string) $freeID);
+					array_push($pn->arcs, $newArc);
+					$newArc = array("source" => (string) $freeID, "target" => (string) $id);
+					array_push($pn->arcs, $newArc);
+				}
+				
+				// more than one of the incoming paths are executed
+				for ( $i=2; $i<=$numPreds; $i++ ) {
+					$permutations = StateExtractor::getSplitORPermutations($preds, $i);
+					foreach ( $permutations as $index => $permutation ) {
+						$showIndex = $index + 1;
+						$freeID = $this->getFreeNodeID();
+						$pn->transitions[(string) $freeID] = "IT_OR_".$id."_".$i."_".$showIndex;
+						foreach ( $permutation as $pred ) {
+							$newArc = array("source" => (string) $fromReplacements[$pred], "target" => (string) $freeID);
+							array_push($pn->arcs, $newArc);
+							$newArc = array("source" => (string) $freeID, "target" => (string) $id);
+							array_push($pn->arcs, $newArc);
+						}
+					}
+				}
+			}
+			
+			if ( $numSuccs > 1 ) {
+
+				array_push($ignoreFromArcs, $id);
+				
+				// build entry places
+				$targetReplacements = array();
+				foreach ( $succs as $i => $succ) {
+					$freeID = $this->getFreeNodeID();
+					$pn->places[(string) $freeID] = "IP_OR_".$id."_1_".$i."_to_".$succ;
+					$newArc = array("source" => (string) $freeID, "target" => (string) $succ);
+					array_push($pn->arcs, $newArc);
+					$targetReplacements[$succ] = $freeID;
+				}
+				
+				// only one of the following paths is executed
+				foreach ( $succs as $i => $succ) {
+					$freeID = $this->getFreeNodeID();
+					$pn->transitions[(string) $freeID] = "IT_OR_".$id."_1_".$i;
+					$newArc = array("source" => (string) $freeID, "target" => (string) $targetReplacements[$succ]);
+					array_push($pn->arcs, $newArc);
+					$newArc = array("source" => (string) $id, "target" => (string) $freeID);
+					array_push($pn->arcs, $newArc);
+				}
+				
+				// more than one of the following paths are executed
+				for ( $i=2; $i<=$numSuccs; $i++ ) {
+					$permutations = StateExtractor::getSplitORPermutations($succs, $i);
+					foreach ( $permutations as $index => $permutation ) {
+						$showIndex = $index + 1;
+						$freeID = $this->getFreeNodeID();
+						$pn->transitions[(string) $freeID] = "IT_OR_".$id."_".$i."_".$showIndex;
+						foreach ( $permutation as $succ ) {
+							$newArc = array("source" => (string) $freeID, "target" => (string) $targetReplacements[$succ]);
+							array_push($pn->arcs, $newArc);
+							$newArc = array("source" => (string) $id, "target" => (string) $freeID);
+							array_push($pn->arcs, $newArc);
+						}
+					}
+				}
+			}
+		}
+	
+		foreach ( $this->edges as $index => $edge ) {
+			$sourceIDs = array_keys($edge);
+			$sourceID = $sourceIDs[0];
+			$targetID = $edge[$sourceID];
+			 
+			if ( in_array($sourceID, $ignoreFromArcs) ) continue;
+			if ( in_array($targetID, $ignoreToArcs) ) continue;
+			
+			$newArc = array("source" => (string) $sourceID, "target" => (string) $targetID);
+			array_push($pn->arcs, $newArc);
+		}
+		
+		$pn->postProcessEPC2PetriNet();
+		
+		return $pn;
+	}
+	
 	public function autocorrectSpelling() {
 		foreach ( $this->functions as $id => $label ) {
 			$suggestion_spell = NLP::generateSpellingCorrectionRecommendation($label);
@@ -1549,5 +1678,20 @@ class EPC {
 		
 		return $this->spellingCorrections;
 	}
+	
+	public function isNodeIDAssigned($id) {
+		if ( isset($this->events[$id]) ) return true;
+		if ( isset($this->functions[$id]) ) return true;
+		if ( isset($this->edges[$id]) ) return true;
+		if ( isset($this->orgUnits[$id]) ) return true;
+		if ( isset($this->xor[$id]) ) return true;
+		if ( isset($this->or[$id]) ) return true;
+		if ( isset($this->and[$id]) ) return true;
+	}
+	
+ 	public function getFreeNodeID() {
+ 		while ( $this->isNodeIDAssigned($this->internalReservedID) ) $this->internalReservedID++;
+ 		return $this->internalReservedID++;
+ 	}
 }
 ?>

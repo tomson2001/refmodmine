@@ -22,6 +22,9 @@
                 <li><a href="index.php?site=converter_PNML-EPC">PNML / EPML</a></li>
                 <li><a href="index.php?site=converter_BPMN-EPC">BPMN / EPML</a></li>
                 <li class="divider"></li>
+                <li class="dropdown-header">Miscellaneous</li>
+                <li><a href="index.php?site=EPML_splitter">EPML Splitter</a></li>
+                <li class="divider"></li>
                 <li class="dropdown-header">Tool Information</li>
                 <li><a href="index.php?site=fileTypeSpecifications">File Type Specifications</a></li>
                 <li class="divider"></li>

@@ -1338,7 +1338,7 @@ class StateExtractor {
 	 *
 	 * @return array von arrays der moeglichen Nachfolgeknoten
 	 */
-	private function getSplitORPermutations($nodes, $length) {
+	public static function getSplitORPermutations($nodes, $length) {
 		$countNodes = count($nodes);
 		if ( $countNodes < $length ) {
 			return false;
@@ -1358,7 +1358,7 @@ class StateExtractor {
 				for ( $j=$startIndex; $j<=$i; $j++) {
 					unset($nodeSubset[$j]);
 				}
-				$possibleSubPermutations = $this->getSplitORPermutations($nodeSubset, $length-1);
+				$possibleSubPermutations = self::getSplitORPermutations($nodeSubset, $length-1);
 				foreach ( $possibleSubPermutations as $subPermutation ) {
 					$permutation = array($nodes[$i]);
 					foreach ( $subPermutation as $node ) {
