@@ -22,16 +22,17 @@ $algorithms = array(
 if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) || !isset($argv[4]) ) {
 	exit("   Please provide the following parameters:\n
    algorithm=
-      ssbocan       ".$similarityMeasures["ssbocan"]."
-      lms           ".$similarityMeasures["lms"]."
-      fbse          ".$similarityMeasures["fbse"]."
-      pocnae        ".$similarityMeasures["pocnae"]."
-      geds          ".$similarityMeasures["geds"]."
-      amaged        ".$similarityMeasures["amaged"]."
-      cf            ".$similarityMeasures["cf"]."
-      nscm          ".$similarityMeasures["nscm"]."\n
+      ssbocan       ".$algorithms["ssbocan"]."
+      lms           ".$algorithms["lms"]."
+      fbse          ".$algorithms["fbse"]."
+      pocnae        ".$algorithms["pocnae"]."
+      geds          ".$algorithms["geds"]."
+      amaged        ".$algorithms["amaged"]."
+      cf            ".$algorithms["cf"]."
+      nscm          ".$algorithms["nscm"]."\n
    input=           path to input epml
    output=          path to output file
+   format=          zip (including rdf and txt matchings) | xml (rmm)
    notification=
       no
       [E-Mail adress]
@@ -43,15 +44,17 @@ ERROR: Parameters incomplete
 }
 
 // Checking Parameters
-$algorithm = substr($argv[1], 8, strlen($argv[1]));
+$algorithm = substr($argv[1], 10, strlen($argv[1]));
 $input     = substr($argv[2], 6, strlen($argv[2]));
 $output    = substr($argv[3], 7, strlen($argv[3]));
-$email     = substr($argv[4], 13, strlen($argv[4]));
+$format    = substr($argv[4], 7,  strlen($argv[4]));
+$email     = substr($argv[5], 13, strlen($argv[5]));
 
 print("
-measure: ".$measure."
+measure: ".$algorithm."
 input: ".$input."
 output: ".$output."
+format: ".$format."
 notification: ".$email."
 
 checking input parameters ...
@@ -83,61 +86,56 @@ if ( empty($email) ) {
 // Laden der Modelldateien
 $content_file_1 = file_get_contents($input);
 $xml1 = new SimpleXMLElement($content_file_1);
-$content_file_2 = file_get_contents($input);
-$xml2 = new SimpleXMLElement($content_file_2);
 
 // Vorbereitung der Forschrittsanzeige
 $modelsInFile1 = count($xml1->xpath("//epc"));
-$modelsInFile2 = count($xml2->xpath("//epc"));
-$numOfAllModels = $modelsInFile1 + $modelsInFile2;
-$countCombinations = $modelsInFile1 * $modelsInFile2;
-$countCompletedCombinations = 0;
-$progress = 0.1;
+$numOfAllModels = $modelsInFile1;
+$countCombinations = (($modelsInFile1 * $modelsInFile1)/2)-($modelsInFile1/2);
 
 // Ausgabe der Informationen zum Skript-Run auf der Kommandozeile
 print("\nNumber of models: ".count($xml1->xpath("//epc"))."\n");
-print("Number of model permutations: ".$countCombinations."\n");
-print("Matching algorithm: ".$algorithms[$algorithm]."\n\n");
+print("Number of model permutations: ".$countCombinations);
 
 // ReadMe.txt erzeugen
-$readme = "--------------------------------------------------------------------\r\n";
-$readme .= " RefMod-Miner as a Service - Business Process Model Matcher\r\n";
-$readme .= "--------------------------------------------------------------------\r\n\r\n";
+$readme = "--------------------------------------------------------------------------\r\n";
+$readme .= " RMMaaS - Process Model Matcher\r\n";
+$readme .= "--------------------------------------------------------------------------\r\n\r\n";
 $readme .= "Log:\r\n";
-$readme .= " - Matching algorithm: ".$algorithms[$algorithm]."\r\n";
 $readme .= " - Model file:  ".$input." (".$modelsInFile1." models)\r\n";
-$readme .= " - Number of model permutations: ".$countCombinations."\r\n";
-$readme .= " - Start: ".date("d.m.Y H:i:s")."\r\n\r\n";
+$readme .= " - Number of model pairs: ".$countCombinations."\r\n";
+$readme .= " - Matcher of similarity measure: ".$algorithms[$algorithm];
 
-print("Calculate matchings ...\n");
+$generatedFiles = array();
+$generatedRDFs = array();
 
-$allFuncNodesOfModelFile1 = array();
-$allFuncNodesOfModelFile2 = array();
+print("\n\nCalculate matchings ...\n");
 
-$allMatchedFuncNodesOfModelFile1 = array();
-$allMatchedFuncNodesOfModelFile2 = array();
+$i = 0;
+$j = 0;
+
+// Vorbereitung der Forschrittsanzeige
+$max = $countCombinations;
+$modelCounter = 0;
+$progressBar = new CLIProgressbar($max, 0.1);
 
 foreach ($xml1->xpath("//epc") as $xml_epc1) {
+	
+	$i++;
 	$nameOfEPC1 = (string) $xml_epc1["name"];
 	$epc1 = new EPC($xml1, $xml_epc1["epcId"], $xml_epc1["name"]);
 
-	foreach ( $epc1->functions as $funcLabel ) {
-		$allFuncNodesOfModelFile1[$funcLabel] = true;
-	}
-
-	foreach ($xml2->xpath("//epc") as $xml_epc2) {
+	foreach ($xml1->xpath("//epc") as $xml_epc2) {
+		
+		$j++;
+		if ( $j < $i ) continue;
 		$nameOfEPC2 = (string) $xml_epc2["name"];
-		$epc2 = new EPC($xml2, $xml_epc2["epcId"], $xml_epc2["name"]);
-
-		foreach ( $epc2->functions as $funcLabel ) {
-			$allFuncNodesOfModelFile2[$funcLabel] = true;
-		}
+		$epc2 = new EPC($xml1, $xml_epc2["epcId"], $xml_epc2["name"]);
 
 		// Variablen-Initalisierung
 		$mapping = null;
 
 		// Auswahl der Mappings fuer die entsprechenden Aehnlichkeitsmasse
-		switch ( $measure ) {
+		switch ( $algorithm ) {
 
 			// Funktionen ueber Levenshtein, Konnektoren ueber Ein- und Ausgehende Kanten
 			case "fbse":
@@ -158,6 +156,11 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 			case "amaged":
 				$mapping = new LevenshteinWithContextMapping($epc1, $epc2);
 				break;
+				
+			case "lms":
+				$mapping = new LevenshteinMapping($epc1, $epc2);
+				$mapping->setParams(array('threshold_levenshtein' => 100));
+				break;
 
 				// kein Mapping
 			case "ts":
@@ -176,30 +179,24 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 		 * Angabe des Algorithmus, der fuer das Mapping verwendet werden soll: "Greedy", "Simple"
 		 */
 		$mapping->map("Greedy");
+		$mapping->deleteDummyTransitions();
+		$genericMapping = $mapping->convertToGenericMapping();
 
-		$matchedFuncs = count($mapping->mapping);
-		$matrix = $mapping->getMatrix();
-
-		// Schreiben der insgesamt gematchten Funktionen
-		foreach ( $epc1->functions as $id => $label ) {
-			if ( $mapping->mappingExistsFrom($id) ) $allMatchedFuncNodesOfModelFile1[$label] = true;
-		}
-
-		foreach ( $epc2->functions as $id => $label ) {
-			if ( $mapping->mappingExistsTo($id) ) $allMatchedFuncNodesOfModelFile2[$label] = true;
-		}
-
+		$file = $genericMapping->exportTXT_BPMContest2013($epc1, $epc2);
+		array_push($generatedFiles, $file);
+		
+		$file = $genericMapping->exportRDF_BPMContest2015();
+		array_push($generatedFiles, $file);
+		array_push($generatedRDFs, $file);
+		
 		// FORTSCHRITTSANZEIGE
-		print(".");
-		$countCompletedCombinations++;
-
-		if ( ($countCompletedCombinations/$countCombinations) >= $progress ) {
-			print(" ".($progress*100)."% ");
-			$progress += 0.1;
-		}
+		$modelCounter++;
+		$progressBar->run($modelCounter);
 		// ENDE DER FORTSCHRITTSANZEIGE
 
 	}
+	
+	$j = 0;
 
 }
 print(" done");
@@ -209,29 +206,76 @@ $duration = time() - $start;
 $seconds = $duration % 60;
 $minutes = floor($duration / 60);
 
-$readme .= "\nFunctions in model file: ".count($allFuncNodesOfModelFile1)."\r\n";
-$readme .= "\nMatched Functions in model file: ".count($allMatchedFuncNodesOfModelFile1)."\r\n";
-
-$readme .= "\nEnd: ".date("d.m.Y H:i:s")."\r\n";
+$readme .= "\r\n\r\nEnd: ".date("d.m.Y H:i:s")."\r\n";
 $readme .= "Duration: ".$minutes." Min. ".$seconds." Sec.";
-
-// ERSTELLEN DER AUSGABEDATEIEN
-$fileGenerator = new FileGenerator("Mapping_Analysis.csv", $analysis_csv);
+$fileGenerator = new FileGenerator("ReadMe.txt", $readme);
 $fileGenerator->setFilename("ReadMe.txt");
 $fileGenerator->setContent($readme);
-$uri_readme_txt = $fileGenerator->execute(false);
+$uri_readme_txt = $fileGenerator->execute();
+array_push($generatedFiles, $uri_readme_txt);
 // AUSGABEDATEIEN ERSTELLT
 
-// Ausgabe der Dateiinformationen auf der Kommandozeile
-print("\n\nAnalysedateien wurden erfolgreich erstellt:\n\n");
-print("ReadMe: ".$uri_readme_txt."\n\n");
+if ( $format == "zip" ) {
 
-print("HTML mit Mappings: ".$uri_html_analysis."\n");
-print("CSV mit Analyseergebnissen: ".$uri_analysis_csv."\n");
+	// ZIP ALL FILES
+	print("\n\nZip files ... ");
+	$zip = new ZipArchive();
+	if ( $zip->open($output, ZipArchive::CREATE) ) {
+	    foreach ( $generatedFiles as $filename ) {
+			$pos = strrpos($filename, "/");
+			$file = substr($filename, $pos+21);
+			$zip->addFile($filename, $file);		
+		}
+		$zip->close();
+		foreach ( $generatedFiles as $filename ) {
+			unlink($filename);
+		}
+		$numFiles = count($generatedFiles);
+		print("done (#files: ".$numFiles.", status".$zip->status.")");
+	} else {
+		exit("\nCannot open <".$output.">. Error creating zip file.\n");
+	}
+	// ZIP COMPLETED
 
-print("Dauer: ".$minutes." Min. ".$seconds." Sek.\n\n");
+} elseif ( $format == "xml" ) {
+	
+	// CREATE XML from single RDFs by RefMod-Miner Matching Converter
+	print("\n\nCreating aggregated matching XML file . ");
+	
+	$_POST["matchings"] = implode(",", $generatedRDFs);
+	$_POST["model_set"] = $input;
+	$_POST["output_file"] = $output;
+	$actionHandler = new WorkspaceActionHandler();
+	$actionHandler->run("CONVERT_MATCHING");
+		
+	foreach ( $generatedFiles as $filename ) {
+		unlink($filename);
+	}
+	
+ 	sleep(1); print("."); sleep(1); print("."); sleep(1);
+	
+	print(" done");
+}
 
+// Extract session ID from uri
+$sid = $output;
+$sid = str_replace("workspace/", "", $sid);
+$pos = strpos($sid, "/");
+$sid = $pos ? substr($sid, 0, $pos) : $sid;
+$readme .= "Your workspace: ".Config::WEB_PATH."index.php?sid=".$sid."&site=workspace";
 
+if ( $doNotify ) {
+	print("\n\nSending notification ... ");
+	$notificationResult = EMailNotifyer::sendCLIModelMatcherNotification($email, $readme);
+	if ( $notificationResult ) {
+		print("ok");
+	} else {
+		print("error");
+	}
+}
 
+print("\n\nDuration: ".$minutes." Min. ".$seconds." Sec.\n");
+print("Process Model Matching finished successfully.\n");
 
+Logger::log($email, "CLIModelMatcher finished: algorithm=".$algorithm." input=".$input." output=".$output." format=".$format, "ACCESS");
 ?>

@@ -5,7 +5,18 @@ set_include_path(
     PATH_SEPARATOR . "classes" .
     PATH_SEPARATOR . "classes/extensions" .
     PATH_SEPARATOR . "classes/framework" .
+    PATH_SEPARATOR . "classes/logging" .
     PATH_SEPARATOR . "classes/transformators" .
+    PATH_SEPARATOR . "classes/miscellaneous" .
+    PATH_SEPARATOR . "classes/nlp" .
+    PATH_SEPARATOR . "classes/process-model" .
+    PATH_SEPARATOR . "classes/process-model-behavior" .
+    PATH_SEPARATOR . "classes/process-model-mapping" .
+    PATH_SEPARATOR . "classes/process-model-similarity" .
+    PATH_SEPARATOR . "classes/process-model-tools" .
+    PATH_SEPARATOR . "classes/process-trace" .
+    PATH_SEPARATOR . "classes/tools" .
+    PATH_SEPARATOR . "classes/workspace" .
     PATH_SEPARATOR . "gui/classes" .
     PATH_SEPARATOR . "lib/AutomaticKeywordGenerator" .
     PATH_SEPARATOR . "lib/PHP-OpenCalais" .

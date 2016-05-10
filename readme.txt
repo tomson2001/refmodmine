@@ -123,3 +123,8 @@ sudo apt-get install r-base r-base-dev
 #Configure RefMod-Miner (JAVA)
 cd /var/www/lib/refmod-miner
 java -jar master.jar CREATECONFIG
+
+7. Step: Install CronJob for monthly system cleanup
+crontab -e
+# add the following line to the end of the file
+0 0 1 * * php -f /var/www/system/CLI_Cleanup.php

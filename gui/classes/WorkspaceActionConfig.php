@@ -41,7 +41,7 @@ class WorkspaceActionConfig {
 			"isUploadable"	=> false,
 			"uploadAction"	=> null,
 			"Descriptions"	=> array(
-				
+				"delfi"			=> "DeLFI 2016 schema"
 			),
 			"Specification" => ""
 		),
@@ -358,7 +358,9 @@ class WorkspaceActionConfig {
 			"Descriptions"	=> array(
 				"rmm-nscm"		=> "N-Ary Semantic Cluster Matching (PMMC2013)",
 				"rmm-nhcm"		=> "N-Ary Homogeneity-based Cluster Matching (PMMC2015)",
-				"rmm-map2015"	=> "Matching (PMC2015)"
+				"rmm-map2015"	=> "Matching (PMC2015)",
+				"rmm-nlm"		=> "Natural Language Matcher (PMMC2015)",
+				"rmm-esgm"		=> "Extended Semantic Greedy Matcher (PMMC2013)"
 			),
 			"Specification" => "Details on the rdf format used for process matching can found on the site of the Process Matching Contest 2015: 
 								<a href=\"https://ai.wu.ac.at/emisa2015/contest.php\" target=\"_blank\">https://ai.wu.ac.at/emisa2015/contest.php</a>"
@@ -376,8 +378,11 @@ class WorkspaceActionConfig {
 				"rmm-nhcm"		=> "N-Ary Homogeneity-based Cluster Matching (PMMC2015)",
 				"rmm-map2015"	=> "Matching (PMC2015)",
 				"rmm-nlm"		=> "Natural Language Matcher (PMMC2015)",
+				"rmm-esgm"		=> "Extended Semantic Greedy Matcher (PMMC2013)",
 				"de"			=> "German",
 				"en"			=> "English",
+				"GERMANET"		=> "German",
+				"WORDNET"		=> "English",
 				"xml"			=> "xml",
 				"syntactic-greedy" => "Syntactic Greedy"
 			),
@@ -830,6 +835,28 @@ class WorkspaceActionConfig {
 			)
 		),
 		
+		"EXTRACT_STRUCTURAL_PATTERNS" => array(
+				"Name"			=> "Structural Pattern Miner",
+				"CodeBase"		=> "JAVA",
+				"ScriptBase"	=> "/var/www/lib/refmod-miner/patterns_2016-03-07.jar",
+				"EmbedInPHP"	=> true,
+				"Literature"	=> array(
+						"coming soon"
+				),
+				"ShortDescription" => "Extracts structural patterns of an arbitrary number of mobels using the RPST decomposition.",
+				"Description"	=> "Extracts structural patterns of an arbitrary number of mobels using the RPST decomposition (Refined Process Structure Tree). Uses the following parameters:<br>
+					<ul>
+						<li><i>support:</i> Percentage determine how often (at least) a pattern must occur over all models..</li>
+					</ul>",
+				"Parameters"	=> array(
+						"CLI"			=> null,
+						"EXTRACT_STRUCTURAL_PATTERNS"	=> null,
+						"model_set" 	=> "CONST_WORKSPACE_EPML",
+						"support"	=> "INPUT_SLIDER|0|1|0.01|0.25",
+						"result"	=> "CONST_WORKSPACE_EPML.model.patterns.epml"
+				)
+		),
+		
 		"CALCULATE_SIMILARITY_SSBOCAN" => array(
 			"Name"			=> "Common Activity Names",
 			"CodeBase"		=> "PHP",
@@ -1005,6 +1032,21 @@ class WorkspaceActionConfig {
 				"metrics"			=> "SELECT_ONE_METRICS_OPTIONAL"
 			)
 		),
+		
+		"CHECK_MODELING_EXAMS_DELFI" => array(
+				"Name"			=> "Check Modeling Exams (DeLFI 2016)",
+				"CodeBase"		=> "PHP",
+				"ScriptBase"	=> "CLICheckModelExams_DeLFI.php",
+				"EmbedInPHP"	=> false,
+				"Description"	=> "",
+				"Literature" 	=> array(),
+				"Parameters"	=> array(
+						"input"				=> "CONST_WORKSPACE_EPML",
+						"sample_solution"	=> "SELECT_ONE_MODEL",
+						"output"			=> "CONST_WORKSPACE_EPML.examresults.delfi",
+						"notification"		=> "CONST_SESSION_E_MAIL",
+				)
+		),
 			
 		"NLP_TAGGING" => array(
 			"Name"			=> "NLP Tagging",
@@ -1113,6 +1155,29 @@ class WorkspaceActionConfig {
 						"function"		=> null,
 						"NLM" 			=> null,
 						"language"		=> array("English" => "en", "German" => "de")
+				)
+		),
+		
+		"MATCHING_ESGM" => array(
+				"Name"			=> "RefMod-Mine/ESGM",
+				"CodeBase"		=> "JAVA",
+				"ScriptBase"	=> "/var/www/lib/refmod-miner/esgm.jar",
+				"EmbedInPHP"	=> true,
+				"Literature"	=> array(
+						"The Process Model Matching Contest 2013 - Hake, Thaler, Fettke, Loos: RefMod-Mine/ESGM (Extended Semantic Greedy Matcher)"
+				),
+				"Description"	=> "Business Process Model Matching: Identification of correspondences within English and German process models.",
+				"ShortDescription"	=> "Business Process Model Matching: Identification of correspondences within English and German process models.",
+				"Parameters"	=> array(
+						"CLI"			=> null,
+						"MATCH"			=> null,
+						"model_set" 	=> "CONST_WORKSPACE_EPML",
+						"matching"		=> "CONST_WORKSPACE_EPML.xmlmatching.rmm-esgm.%dictionary%.xml",
+						"function"		=> null,
+						"ESGM" 			=> null,
+						"similarity"	=> "esgm_sim",
+						"dictionary"		=> array("English" => "WORDNET", "German" => "GERMANET"),
+						"threshold"		=> 0.65
 				)
 		),
 		
@@ -1283,10 +1348,11 @@ class WorkspaceActionConfig {
 		),
 			
 		"Process Model Matching" => array(
-			"MATCHING_GREEDY",
-			"MATCHING_NSCM",
 			"MATCHING_NHCM",
-			"MATCHING_NLM"
+			"MATCHING_NSCM",
+			"MATCHING_NLM",
+			"MATCHING_ESGM",
+			"MATCHING_GREEDY",
 			//"MATCHING_2015"
 		),	
 					
@@ -1310,7 +1376,8 @@ class WorkspaceActionConfig {
 			"CREATE_REFERENCE_MODEL_RMM-1",
 			"CREATE_REFERENCE_MODEL_RMM-2",
 			"TEXT2EPC_MINER",
-			"TEXT2BPMN_MINER"
+			"TEXT2BPMN_MINER",
+			"EXTRACT_STRUCTURAL_PATTERNS"
 		),
 			
 		"Natural Language Processing" => array(
@@ -1326,12 +1393,14 @@ class WorkspaceActionConfig {
 		
 		"Further Tools" => array(
 			"CHECK_MODELING_EXAMS",
+			"CHECK_MODELING_EXAMS_DELFI",
 			"CORRELATION_CALCULATOR"
 			//"CONVERT_PNML2EPML"
 		)
 	);
 	
 	public $latestFeatures = array(
+		"EXTRACT_STRUCTURAL_PATTERNS",
 		"CREATE_REFERENCE_MODEL_RMM-2",
 		"MATCHING_NLM",
 		"TEXT2EPC_MINER",

@@ -45,10 +45,20 @@ class EPCVisualizer {
 				var options = {
 					width:  "550px",
       				height: "650px",
-					stabilize: false,
-					hierarchicalLayout: {enabled: true, levelSeparation: 100},
+					stabilize: true,
+				
+				    layout: {
+						hierarchical: {
+							nodeSpacing: 200,
+				 			direction: "UD",
+							sortMethod: "directed"
+						}
+				    },
 					navigation: true,
-					keyboard: true
+					keyboard: true,
+					edges: {
+					  smooth: false
+					}	
 				};
 				network = new vis.Network(container, data, options);
 			}
@@ -80,18 +90,20 @@ class EPCVisualizer {
 	private function getNodeCode($nodeID, $level) {
 		$nodeType = $this->epc->getType($nodeID);
 		switch ( $nodeType ) {
-			case "function": return "{id: ".$nodeID.", label: '".str_replace("'", "\'", $this->epc->functions[$nodeID])."', shape: 'box', group: '".$this->epc->name."', color: '#00ff00', level: ".$level."}";
-			case "event":	 return "{id: ".$nodeID.", label: '".str_replace("'", "\'", $this->epc->events[$nodeID])."', shape: 'ellipse', group: '".$this->epc->name."', color: '#FF6CFF', level: ".$level."}";	
-			case "xor":		 return "{id: ".$nodeID.", label: '', image: DIR + 'xor.gif', shape: 'image', group: '".$this->epc->name."', color: 'gray', level: ".$level."}";
-			case "or":		 return "{id: ".$nodeID.", label: '', image: DIR + 'or.gif', shape: 'image', group: '".$this->epc->name."', color: 'gray', level: ".$level."}";
-			case "and":		 return "{id: ".$nodeID.", label: '', image: DIR + 'and.gif', shape: 'image', group: '".$this->epc->name."', color: 'gray', level: ".$level."}";
+			case "function": return "{id: '".$nodeID."', label: '".str_replace("'", "\'", $this->epc->functions[$nodeID])."', shape: 'box', group: '".$this->epc->name."', color: '#80ff80', level: ".$level."}\n";
+			//case "function": return "{id: '".$nodeID."', label: '".str_replace("'", "\'", $this->epc->functions[$nodeID])."', image: DIR + 'activity.gif', shape: 'image', group: '".$this->epc->name."', color: '#00ff00', level: ".$level."}\n";
+			case "event":	 return "{id: '".$nodeID."', label: '".str_replace("'", "\'", $this->epc->events[$nodeID])."', shape: 'ellipse', group: '".$this->epc->name."', color: '#FF8080', level: ".$level."}\n";	#
+			//case "event":	 return "{id: '".$nodeID."', label: '".str_replace("'", "\'", $this->epc->events[$nodeID])."', image: DIR + 'event.gif', shape: 'image', group: '".$this->epc->name."', color: '#FF6CFF', level: ".$level."}\n";
+			case "xor":		 return "{id: '".$nodeID."', label: '', image: DIR + 'xor.gif', shape: 'image', group: '".$this->epc->name."', color: 'gray', level: ".$level."}\n";
+			case "or":		 return "{id: '".$nodeID."', label: '', image: DIR + 'or.gif', shape: 'image', group: '".$this->epc->name."', color: 'gray', level: ".$level."}\n";
+			case "and":		 return "{id: '".$nodeID."', label: '', image: DIR + 'and.gif', shape: 'image', group: '".$this->epc->name."', color: 'gray', level: ".$level."}\n";
 		}
 	}
 	
 	private function addEdgesToVisualization() {
 		foreach ( $this->epc->edges as $edge ) {
 			foreach ( $edge as $sourceID => $targetID ) {
-				$edgeCode = "{from: ".$sourceID.", to: ".$targetID.", style: 'arrow', color: 'gray'}";
+				$edgeCode = "{from: '".$sourceID."', to: '".$targetID."', arrows:'to', style: 'arrow', color: 'gray'}\n";
 				array_push($this->insertedEdges, $edgeCode);
 			}	
 		}

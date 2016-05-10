@@ -194,7 +194,7 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 			default:
 				$mapping = new LevenshteinMapping($epc1, $epc2);
 				// Grenze auf 50% Aehnlichkeit setzen
-				$mapping->setParams(array('threshold_levenshtein' => 90));
+				$mapping->setParams(array('threshold_levenshtein' => 100));
 				break;
 		}
 
