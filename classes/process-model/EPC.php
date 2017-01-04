@@ -105,22 +105,25 @@ class EPC {
 		// XOR laden
 		foreach ($xml->xpath($xPathEPCPart."/xor") as $xor) {
 			$index = $useOriginalIDs ? (string) $xor["id"] : $this->getNextID();
+			//$this->xor[$index] = rtrim(ltrim($this->convertIllegalChars($xor->name)));
 			$this->xor[$index] = "xor";
-			$this->idConversion[(string) $xor["id"]] = $index;
+                        $this->idConversion[(string) $xor["id"]] = $index;
 		}
 
 		// OR laden
 		foreach ($xml->xpath($xPathEPCPart."/or") as $or) {
 			$index = $useOriginalIDs ? (string) $or["id"] : $this->getNextID();
+			//$this->or[$index] = rtrim(ltrim($this->convertIllegalChars($or->name)));
 			$this->or[$index] = "or";
-			$this->idConversion[(string) $or["id"]] = $index;
+                        $this->idConversion[(string) $or["id"]] = $index;
 		}
 
 		// AND laden
 		foreach ($xml->xpath($xPathEPCPart."/and") as $and) {
 			$index = $useOriginalIDs ? (string) $and["id"] : $this->getNextID();
+			//$this->and[$index] = rtrim(ltrim($this->convertIllegalChars($and->name)));
 			$this->and[$index] = "and";
-			$this->idConversion[(string) $and["id"]] = $index;
+                        $this->idConversion[(string) $and["id"]] = $index;
 		}
 		
 		// OrgEinheiten laden
@@ -901,7 +904,7 @@ class EPC {
 		$endNodes = $this->getAllEndNodes();
 		return count($startNodes) == 1 && count($endNodes) == 1;
 	}
-
+        
 	public function exportEPML($print_ids = false) {
 		$content =  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 		$content .= "<epml:epml xmlns:epml=\"http://www.epml.de\"\n";
@@ -1490,6 +1493,190 @@ class EPC {
 			if ( strcmp($label, $eventLabel) == 0 ) array_push($result["events"], $id);
 		}
 		return $result;
+	}
+        	public function getIDsForLabelFunctionsAndEvents($label) {
+		$result = array();
+		foreach ( $this->functions as $id => $functionLabel ) {
+			if ( strcmp($label, $functionLabel) == 0 ) array_push($result, $id);
+		}
+		foreach ( $this->events as $id => $eventLabel ) {
+			if ( strcmp($label, $eventLabel) == 0 ) array_push($result, $id);
+		}
+		return $result;
+	}
+        
+        
+        public function isLabelUnique($label){
+            $count = 0;
+            foreach ( $this->functions as $nodeID => $functionLabel ) {
+                if ($functionLabel == $label){
+                    $count++;
+                }
+            }
+            foreach ( $this->events as $nodeID => $eventLabel ) {
+                if ($eventLabel == $label){
+                    $count++;
+                }
+            }
+            
+            return $count<=1;
+        }
+        
+                public function getIDForLabelWithContext($label, $context, $order) {
+		foreach ( $this->functions as $nodeID => $functionLabel ) {
+			if ( strcmp($label, $functionLabel) == 0 ) {
+                            if ($context == "predecessors"){
+                                
+                                $preds = $this->getPredecessor($nodeID);
+                                
+                                // get predecessor Labels
+                                $predNames = array();
+                                foreach ($preds as $key => $id) {
+                                    array_push($predNames, $this->getLabel($id));
+                                }
+                                
+                                // check for each level whether all nodes are contained
+                                foreach ($order as $keyOfValues => $values) {
+                                    
+                                    if ($keyOfValues !== 0){
+                                    
+                                    sort($values);
+                                    sort($predNames);
+                                    
+                                    if ($values === $predNames){
+                                        if ($keyOfValues == (sizeof($order)-1)){
+                                            return $nodeID;
+                                        }
+                                    } else {
+                                        break;
+                                    }
+                                    
+                                    $predsTmp = array();
+                                    foreach ($preds as $key => $value) {
+                                        $predsTmp = array_merge($predsTmp, $this->getPredecessor($value));
+                                    }
+                                    $preds = $predsTmp;
+                                    $predNames = array();
+                                foreach ($preds as $key => $id) {
+                                    array_push($predNames, $this->getLabel($id));
+                                }
+                                }
+                                }
+
+                            } else {
+                                
+                                $sucs = $this->getSuccessor($nodeID);
+                                
+                                // get predecessor Labels
+                                $sucNames = array();
+                                foreach ($sucs as $key => $id) {
+                                    array_push($sucNames, $this->getLabel($id));
+                                }
+                                
+                                // check for each level whether all nodes are contained
+                                foreach ($order as $keyOfValues => $values) {
+                                    
+                                    sort($values);
+                                    sort($sucNames);
+                                    
+                                    if ($values === $sucNames){
+                                        if ($keyOfValues == (sizeof($order)-1)){
+                                            return $nodeID;
+                                        }
+                                    } else {
+                                        break;
+                                    }
+                                    
+                                    $predsTmp = array();
+                                    foreach ($sucs as $key => $value) {
+                                         $predsTmp = array_merge($predsTmp, $this->getSuccessor($value));
+                                    }
+                                    $sucs = $predsTmp;
+                                    $sucNames = array();
+                                foreach ($sucs as $key => $id) {
+                                    array_push($sucNames, $this->getLabel($id));
+                                }
+                                }
+                                
+                            }
+                            
+                        }
+		}
+		foreach ( $this->events as $id => $eventLabel ) {
+			if ( strcmp($label, $eventLabel) == 0 ) {
+                            if ($context == "predecessors"){
+                                
+                                $preds = $this->getPredecessor($nodeID);
+                                
+                                $predNames = array();
+                                foreach ($preds as $key => $id) {
+                                    array_push($predNames, $this->getLabel($id));
+                                }
+                                
+                                foreach ($order as $value) {
+                                    if (in_array($value, $predNames)){
+                                        if ($value == $order[sizeof($order)-1]){
+                                            return $nodeID;
+                                        }
+                                    } else {
+                                        break;
+                                    }
+                                    $nextID = -1;
+                                    foreach ($preds as $key => $id) {
+                                        if ($this->getLabel($id) == $value){
+                                            $nextID = $id;
+                                        }
+                                    }
+                                    $preds = $this->getPredecessor($nextID);
+                                    $predNames = array();
+                                foreach ($preds as $key => $id) {
+                                    array_push($predNames, $this->getLabel($id));
+                                }
+                                }
+
+                            } else {
+                                
+                                $sucs = $this->getSuccessor($nodeID);
+                                
+                                $sucNames = array();
+                                foreach ($sucs as $key => $id) {
+                                    array_push($sucNames, $this->getLabel($id));
+                                }
+                                
+                                foreach ($order as $value) {
+                                    if (in_array($value, $sucNames)){
+                                        if ($value == $order[sizeof($order)-1]){
+                                            return $nodeID;
+                                        }
+                                    } else {
+                                        break;
+                                    }
+                                    $nextID = -1;
+                                    foreach ($sucs as $key => $id) {
+                                        if ($this->getLabel($id) == $value){
+                                            $nextID = $id;
+                                        }
+                                    }
+                                    $sucs = $this->getSuccessor($value);
+                                    $sucNames = array();
+                                foreach ($sucs as $key => $id) {
+                                    array_push($sucNames, $this->getLabel($id));
+                                }
+                                }
+                                
+                            }
+                            
+                        }
+		}
+	}
+        
+        public function getFirstIDForLabel($label) {
+		foreach ( $this->functions as $id => $functionLabel ) {
+			if ( strcmp($label, $functionLabel) == 0 ) return $id;
+		}
+		foreach ( $this->events as $id => $eventLabel ) {
+			if ( strcmp($label, $eventLabel) == 0 ) return $id;
+		}
 	}
 	
 	public function getEPCName() {

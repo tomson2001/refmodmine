@@ -12,7 +12,7 @@ final class Config {
 	// Path and Mail Configuration
 	const WEB_PATH = "http://rmm.dfki.de/";
 	const NO_REPLY_MAIL = "no-reply@rmm.dfki.de";
-	const ABS_PATH = "/var/www";
+	const ABS_PATH = "/var/www/";
 	const FILES_PATH = "files";
 	const WORKSPACE_PATH = "workspace";
 	const REPOSITORY_PATH = "repository";
@@ -20,7 +20,7 @@ final class Config {
 	const ADMIN_E_MAIL = "tom.thaler@dfki.de";
 	const STANDFORD_POS_TAGGER_PATH = "";
 	const WORDNET_EXE = "wordnet";
-	const REFMOD_MINER_JAVA_PATH_WITH_FILENAME = "";
+	const REFMOD_MINER_JAVA_PATH_WITH_FILENAME = "lib/master.jar";
 	const TEXT2MODEL_JAVA_PATH_WITH_FILENAME = "";
 	const YANDEX_API_KEY = "";
 	const OPEN_CALAIS_API_KEY = "";

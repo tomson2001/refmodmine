@@ -8,9 +8,9 @@ $suffix = $_POST["uploadedFileSuffix"];
 
 $workspace = new WorkspaceEPML();
 
-$_POST["matchings"] = $tmpFilename;
+$_POST["matching_set"] = $tmpFilename;
 $_POST["model_set"] = $workspace->file;
-$_POST["output_file"] = str_replace($suffix, str_replace($type, "xmlmatching", $suffix), $filename);
+$_POST["result"] = str_replace($suffix, str_replace($type, "xmlmatching", $suffix), $filename);
 $actionHandler = new WorkspaceActionHandler();
 $actionHandler->run("CONVERT_MATCHING");
 

@@ -6,7 +6,7 @@ $workspace = is_null($modelID) ? new WorkspaceEPML(false) : new WorkspaceEPML(tr
 
 $epc = $workspace->getEPC($modelID);
 
-$visualizer = is_null($modelID) ? null : new EPCVisualizer($epc);
+$visualizer = is_null($modelID) ? null : new EPCVisualizer($epc, "", null);
 $jsCode = is_null($modelID) ? null : $visualizer->generateVisJSCode();
 
 $sourcesString = $workspace->numSources < 2 ? "source" : "sources";

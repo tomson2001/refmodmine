@@ -334,7 +334,7 @@ class WorkspaceActionConfig {
 			"Name"			=> "Matching",
 			"FileExtension"	=> "zip",
 			"Icon"			=> "glyphicon glyphicon-random",
-			"OpenWith"		=> null,
+			"OpenWith"		=> "workspaceMatchingEditor",
 			"isUploadable"	=> false,
 			"uploadAction"	=> null,
 			"Descriptions"	=> array(
@@ -352,9 +352,9 @@ class WorkspaceActionConfig {
 			"Name"			=> "Matching",
 			"FileExtension"	=> "rdf",
 			"Icon"			=> "glyphicon glyphicon-random",
-			"OpenWith"		=> null,
+			"OpenWith"		=> "workspaceMatchingEditor",
 			"isUploadable"	=> true,
-			"uploadAction"	=> "doConvertUploadedRDFMatchingToXMLMatching",
+			"uploadAction"	=> null,
 			"Descriptions"	=> array(
 				"rmm-nscm"		=> "N-Ary Semantic Cluster Matching (PMMC2013)",
 				"rmm-nhcm"		=> "N-Ary Homogeneity-based Cluster Matching (PMMC2015)",
@@ -370,7 +370,7 @@ class WorkspaceActionConfig {
 			"Name"			=> "Matching",
 			"FileExtension"	=> "xml",
 			"Icon"			=> "glyphicon glyphicon-random",
-			"OpenWith"		=> null,
+			"OpenWith"		=> "workspaceMatchingEditor",
 			"isUploadable"	=> true,
 			"uploadAction"	=> null,
 			"Descriptions"	=> array(
@@ -528,7 +528,23 @@ class WorkspaceActionConfig {
 	 */
 	public $actions = array(
 		
-		"CALCULATE_METRICS" => array(
+		"EXPORT_LAYOUT" => array(
+			"Name"			=> "Export Layout",
+			"CodeBase"		=> "JAVA",
+			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+			"EmbedInPHP"	=> true,
+			"Literature"	=> array(
+					"todo"
+			),
+			"Parameters"	=> array(
+				"CLI"				=> null,
+				"EXPORT_LAYOUT"		=> null,
+				"model_set"		=> "INPUT_TEXT",
+				"result" => "INPUT_TEXT"
+			)
+		),
+            
+                "CALCULATE_METRICS" => array(
 			"Name"			=> "Calculate Metrics",
 			"CodeBase"		=> "JAVA",
 			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
@@ -548,6 +564,14 @@ class WorkspaceActionConfig {
 					"MoHoL" => "density_1 sequentiality avg_connector_degree depth connectors or_splits or_joins control_flow_complexity diameter separability cross_connectivity start_events end_events arcs coefficient_of_connectivity"                
 				)
 			)
+		),
+            
+                "MatchingEditor" => array(
+			"Name"			=> "Matching Editor",
+			"Literature"	=> array(
+				"Tool for creating and editing Process Model Matchings"
+			),
+                        "link"  =>  "index.php?site=workspaceMatchingEditor"
 		),
 		
 		"CONVERTER" => array(
@@ -735,13 +759,30 @@ class WorkspaceActionConfig {
 			"Parameters"	=> array(
 				"CLI"				=> null,
 				"CONVERT_MATCHING"		=> null,
-				"matchings" 	=> "INPUT_TEXT",
+				"matching_set" 	=> "INPUT_TEXT",
 				"model_set"		=> "INPUT_TEXT",
-				"output_file" => "INPUT_TEXT",
-				"format"	=> "xml"
+				"result" => "INPUT_TEXT",
+				"file_format"	=> "xml"
 			)
 		),
 		
+            "MERGE_MATCHES" => array(
+			"Name"			=> "Convert Matching from RDF to XML format",
+			"CodeBase"		=> "JAVA",
+			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+			"EmbedInPHP"	=> true,
+			"Literature"	=> array(
+					"RDF specification: https://ai.wu.ac.at/emisa2015/contest.php"
+			),
+			"Parameters"	=> array(
+				"CLI"				=> null,
+				"MERGE_MATCHES"		=> null,
+				"matchings" 	=> "INPUT_TEXT",
+				"model_set"		=> "INPUT_TEXT",
+				"mergefile" => "INPUT_TEXT"
+			)
+		),
+            
 		"EXTRACT_VOCABULARY" => array(
 			"Name"			=> "Extract Vocabulary",
 			"CodeBase"		=> "JAVA",
@@ -1353,6 +1394,7 @@ class WorkspaceActionConfig {
 			"MATCHING_NLM",
 			"MATCHING_ESGM",
 			"MATCHING_GREEDY",
+                        "MatchingEditor",
 			//"MATCHING_2015"
 		),	
 					

@@ -7,14 +7,24 @@ $stats->trackSiteVisit();
 include 'nav.php';
 ?>
 
-<div class="container">
+
 
 <?php
 if ( !is_null($site) ) {
-	include $site.'.php';	
+    if ($site == "workspaceMatchingEditor"){
+        include $site.'.php';
+    } else {
+        ?>
+    <div class="container"><?php
+	include $site.'.php';?>
+    </div> <?php
+    }
+		
 } else {
-	include 'home.php';
+    ?>
+    <div class="container"><?php
+	include 'home.php';?>
+    </div> <?php
 }
 ?>
 
-</div>

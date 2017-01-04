@@ -118,11 +118,16 @@ class WorkspaceActionHandler {
 	
 	private function createActionLinkItem($action) {
 		$actionData = $this->config->getActionData($action);
-		
+                
 		// compose link components
 		$href = "index.php?site=workspace&action=doProceedWorkspaceAction&processingAction=".$action;
 		$title = implode(" | ", $actionData["Literature"]);
 		$name = $actionData["Name"];
+                
+                if (array_key_exists("link", $actionData)){
+                    $href = $actionData["link"];
+                    return "<a href=\"".$href."\" class=\"list-group-item\" data-toggle=\"tooltip\" title=\"".$title."\" data-placement=\"bottom\">".$name."</a>";
+                }
 		
 		if ( $this->workspace->numModels == 0 && $this->config->doesActionRequiresWorkspaceModels($action) ) {
 			return "<a href=\"#modal_no_models_in_workspace\" class=\"list-group-item\" data-toggle=\"modal\" title=\"".$title."\" data-placement=\"bottom\">".$name."</a>\n"; 
@@ -552,7 +557,7 @@ class WorkspaceActionHandler {
 				if ( substr_count($value, "INPUT_SLIDER") > 0 ) $value = "INPUT_SLIDER";
 				if ( in_array($value, $this->config->userDependencyParams) ) {
 					$paramValue = $_POST[$paramName];
-					
+					$paramValue = Config::ABS_PATH.$paramValue;
 					$commandExtension = $paramNamePart.$paramValue." ";
 					//print($paramValue."\n<br>");
 					if ( substr_count($paramValue, " ") > 0 ) $commandExtension = $paramNamePart."\"".$paramValue."\" ";
@@ -591,7 +596,13 @@ class WorkspaceActionHandler {
 			$command = str_replace(array_keys($replaceFragments), $replaceFragments, $command);
 			
 			$extCommand = $command;
+                         error_reporting(E_ALL);
+                         
+                         //$output2 = `echo "%cd%"`;
+                        //$output = `java -jar lib\master.jar`;
+                        
 			$checksum = md5($extCommand."-".time());
+                       
 			
 			if ( $actionData["EmbedInPHP"] ) {
 				Logger::log($this->_CONST_SESSION_E_MAIL, "External call started (Embedded in PHP): ".$command, "ACCESS");
@@ -599,13 +610,15 @@ class WorkspaceActionHandler {
 				$command = str_replace("\"", "@QUOTE@", $command);
 				$description = str_replace(" ", "[]", $actionData["Name"]);
 				$command = "php CLIExternalExecution.php command=".$command." description=".$description." sessionid=".$this->_CONST_SESSION_ID." notification=".$this->_CONST_SESSION_E_MAIL." checksum=".$checksum." ";
-				$command .= "> /dev/null &";
+				//$command .= "> /dev/null &";
 				//Logger::log($this->_CONST_SESSION_E_MAIL, "External call started (Embedded in PHP): ".$command, "ACCESS");
-				exec($command);	
+				exec($command, $output);
+                                print_r($output);
 			} else {
 				Logger::log($this->_CONST_SESSION_E_MAIL, "External call started: ".$command, "ACCESS");
 				$command .= "> /dev/null &";
-				exec($command);
+				exec($command, $output);
+                                print_r($output);
 			}
 			
 			$actionStats = new ActionStats();
