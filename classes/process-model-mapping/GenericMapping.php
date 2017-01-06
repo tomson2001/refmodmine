@@ -168,6 +168,10 @@ class GenericMapping {
 		
 	}
 	
+	public function isEmpty() {
+		return count($this->maps) == 0 ? true : false;
+	}
+	
 	public function loadRDF_BPMContest2015($filename) {
 		$rdfContent = file_get_contents($filename);
 		if ( empty($rdfContent) ) return;
@@ -210,7 +214,67 @@ class GenericMapping {
 			$rpos = strrpos($nodeID2, "#");
 			$nodeID2 = substr($nodeID2, $rpos+1, strlen($nodeID2)-$rpos);
 			
-			!$this->addMap(array($nodeID1, $nodeID2), array($modelName1, $modelName2), 1);
+			$this->addMap(array($nodeID1, $nodeID2), array($modelName1, $modelName2), 1);
+		}
+	}
+	
+	public function loadTXT_BPMContest2013($filename, &$epcs) {
+		$content = file_get_contents($filename);
+		if ( empty($content) ) return;
+		
+		$lines = explode("\r\n", $content);
+		if ( count($lines) == 1 ) $lines = explode("\n", $content);
+		
+		$modelName1 = str_replace("\xEF\xBB\xBF", "", str_replace("\n", "", str_replace("\r\n", "", str_replace(" ", "", str_replace(".pnml", "", $lines[0])))));
+		$modelName2 = str_replace("\n", "", str_replace("\r\n", "", str_replace(" ", "", str_replace(".pnml", "", $lines[1]))));
+		
+		$this->models[$modelName1] = $modelName1;
+		$this->models[$modelName2] = $modelName2;
+		
+		print("\n   ".$modelName1."-".$modelName2." ... ");
+		
+		// getting epcs
+		$epc1 = null;
+		$epc2 = null;
+		
+		foreach ( $epcs as $epc ) {
+			//print("\n ".$epc->name);
+			if ( $epc->name == $modelName1 ) {
+				$epc1 = $epc;
+				//print(" ==> 1");
+			}
+			if ( $epc->name == $modelName2 ) {
+				$epc2 = $epc;
+				//print(" ==> 2");
+			}
+			
+		}
+		
+		if ( is_null($epc1) || is_null($epc2) ) exit("failed\n\nEPC not found. Conversion canceled!\n");
+		
+		foreach ( $lines as $index => $line ) {
+			if ( $index <= 1 ) continue;
+			$line = str_replace("\n", "", str_replace("\r\n", "", $line));
+			if ( empty(trim($line)) ) continue;
+			$labels = explode(",", $line);
+			if ( count($labels) < 2 ) exit("failed\n\nError in mapping file (".$line.")\n");
+			$functionLabel1 = EPC::convertIllegalChars($labels[0]);
+			$functionLabel2 = EPC::convertIllegalChars($labels[1]);
+			$nodeID1 = null;
+			$nodeID2 = null;
+			
+			foreach ( $epc1->functions as $nodeID => $nodeLabel ) {
+				//print("\n  ".$nodeLabel);
+				if ( $nodeLabel == $functionLabel1 ) $nodeID1 = $nodeID;
+			}
+			
+			foreach ( $epc2->functions as $nodeID => $nodeLabel ) {
+				if ( $nodeLabel == $functionLabel2 ) $nodeID2 = $nodeID;
+			}
+			
+			if ( is_null($nodeID1) || is_null($nodeID2) ) exit("failed\n\nID for function \"".$functionLabel1."\" or \"".$functionLabel2."\" not found. Conversion calceled!\n");
+			
+			$this->addMap(array($nodeID1, $nodeID2), array($modelName1, $modelName2), 1);
 		}
 	}
 	
@@ -397,8 +461,10 @@ class GenericMapping {
 	 */
 	public function removeAllButFunctionMappings($removeMapsWithNonExistingNodeIDs=FALSE) {
 		
+		if ( $this->isEmpty() ) return 0;
+		
 		if ( !isset($this->epcs) ) {
-			exit("no EPCs assigned to GenericMapping\n\n");
+			exit("no EPCs assigned to GenericMapping!\n\n");
 		}
 		
 		$numRemoved = 0; 

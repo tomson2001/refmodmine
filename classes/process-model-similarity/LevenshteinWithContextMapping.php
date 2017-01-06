@@ -9,6 +9,7 @@
 class LevenshteinWithContextMapping extends AMapping implements IMapping {
 
 	private $threshold_levenshtein = 0;
+	private $threshold_connector = 0;
 	private $connector_matrix;
 
 	public function __construct(EPC $epc1, EPC $epc2) {
@@ -26,11 +27,11 @@ class LevenshteinWithContextMapping extends AMapping implements IMapping {
 	 * @return boolean
 	 */
 	public function setParams(Array $params) {
-		if ( isset($params['threshold_levenshtein']) ) {
+	if ( isset($params['threshold_levenshtein']) ) {
 			$this->threshold_levenshtein = $params['threshold_levenshtein'];
-			return true;
-		} else {
-			return false;
+		}
+		if ( isset($params['$threshold_connector']) ) {
+			$this->$threshold_connector = $params['$threshold_connector'];
 		}
 	}
 
@@ -128,7 +129,7 @@ class LevenshteinWithContextMapping extends AMapping implements IMapping {
 					// 					print("test");
 					// 				}
 
-					$this->connector_matrix[$id1][$id2] = $connectorSim;
+					$this->connector_matrix[$id1][$id2] = $connectorSim >= ($this->threshold_connector/100) ? $connectorSim : 0;
 
 				}
 			}

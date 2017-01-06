@@ -7,7 +7,6 @@ if ( !isset($_SESSION['email']) ) $_SESSION['email'] = "";
 if ( !isset($_SESSION['workspaceOpened']) ) $_SESSION['workspaceOpened'] = false;
 require 'autoloader.php';
 
-
 // DATABASE CONNECTION
 $mdb2_dsn = array(
 		'phptype'  => Config::DB_TYPE,
@@ -21,6 +20,7 @@ $mdb2_options = array(
 		'debug' => 2
 );
 
+
 $db = &MDB2::connect($mdb2_dsn, $mdb2_options);
 
 // ERROR HANDLING
@@ -30,8 +30,6 @@ if (PEAR::isError($db)) {
 	die($db->getMessage());
 }
 // DATABASE CONNECTED
-
-
 
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
 $onload = "";
