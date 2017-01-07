@@ -1,6 +1,6 @@
 <?php
 class GenericMapping {
-	
+        
 	public $models = array(); // $models[id] = name
 	
 	/**
@@ -15,6 +15,11 @@ class GenericMapping {
 	 *  "refEpcID" 			=> null
 	 */
 	public $maps = array();
+        public $filename = null;
+        public $name = null;
+        
+        public $id = -1;
+        private $matchID = 0;
 	
 	private $validStatus = array("OPEN", "CLOSED");
 	private $validInterpretations = array("SPECIALIZATION", "SIMILAR", "EQUAL", "CONCATENATION", "PART_OF", "ANALOGUE");
@@ -24,6 +29,33 @@ class GenericMapping {
 	public function __construct() {
 		
 	}
+        
+        public function removeNodeFromMap($nodeID){
+            foreach ( $this->maps as $mapIndex => $map ) {
+			
+                            foreach ( $map["nodeIDs"] as $index => $MatchNodeID ) {
+                                if ($MatchNodeID == $nodeID){
+                                    unset($this->maps[$mapIndex]["nodeIDs"][$index]);
+                                    unset($this->maps[$mapIndex]["modelIDs"][$index]);
+                                }
+                            }
+			
+		}
+        }
+        
+         public function removeMatch($matchID){
+            foreach ( $this->maps as $mapIndex => $map ) {
+			
+                            
+                                if ($map[matchID] == $matchID){
+                                    unset($this->maps[$mapIndex]);
+                                    unset($this->maps[$mapIndex]);
+                                }
+                            
+			
+		}
+        }
+        
 	
 	public function addModel($modelID, $modelName) {
 		$this->models[$modelID]	= $modelName;
@@ -51,6 +83,7 @@ class GenericMapping {
 		if ( !in_array($interpretation, $this->validInterpretations) ) return false;
 		
 		$map = array(
+                        "matchID"                       => $this->matchID++,
 			"nodeIDs" 			=> $nodeIDs,
 			"modelIDs" 			=> $modelIDs,
 			"status" 			=> $status,
@@ -168,11 +201,10 @@ class GenericMapping {
 		
 	}
 	
-	public function isEmpty() {
-		return count($this->maps) == 0 ? true : false;
-	}
-	
-	public function loadRDF_BPMContest2015($filename) {
+	public function loadRDF_BPMContest2015($filename, $id) {
+                $this->id = $id;
+                $dir = getcwd();
+                $this->filename = $filename;
 		$rdfContent = file_get_contents($filename);
 		if ( empty($rdfContent) ) return;
 		$xml = new SimpleXMLElement($rdfContent);
@@ -194,14 +226,14 @@ class GenericMapping {
 				$modelName1 = str_replace("http://", "", $entity1);
 				$rpos = strrpos($modelName1, "#");
 				$modelName1 = str_replace(".epml", "", substr($modelName1, 0, $rpos));
-				$modelName1 = str_replace(" ", "", str_replace(":", "", $modelName1));
-				$this->models[$modelName1] = $modelName1;
+//				$modelName1 = str_replace(" ", "", str_replace(":", "", $modelName1));
+				$this->models[0] = $modelName1;
 				
 				$modelName2 = str_replace("http://", "", $entity2);
 				$rpos = strrpos($modelName2, "#");
 				$modelName2 = str_replace(".epml", "", substr($modelName2, 0, $rpos));
-				$modelName2 = str_replace(" ", "", str_replace(":", "", $modelName2));
-				$this->models[$modelName2] = str_replace(".epml", "", substr($modelName2, 0, $rpos));
+//				$modelName2 = str_replace(" ", "", str_replace(":", "", $modelName2));
+				$this->models[1] = str_replace(".epml", "", substr($modelName2, 0, $rpos));
 				$modelRetrieved = true;
 			}
 			
@@ -214,70 +246,105 @@ class GenericMapping {
 			$rpos = strrpos($nodeID2, "#");
 			$nodeID2 = substr($nodeID2, $rpos+1, strlen($nodeID2)-$rpos);
 			
-			$this->addMap(array($nodeID1, $nodeID2), array($modelName1, $modelName2), 1);
+			!$this->addMap(array($nodeID1, $nodeID2), array($modelName1, $modelName2), 1);
 		}
 	}
 	
-	public function loadTXT_BPMContest2013($filename, &$epcs) {
-		$content = file_get_contents($filename);
-		if ( empty($content) ) return;
+        public function exportRDF_BPMContest2015StartingFileName($modelsSwitched = false, $path=null, $startingFileName=null) {
 		
-		$lines = explode("\r\n", $content);
-		if ( count($lines) == 1 ) $lines = explode("\n", $content);
-		
-		$modelName1 = str_replace("\xEF\xBB\xBF", "", str_replace("\n", "", str_replace("\r\n", "", str_replace(" ", "", str_replace(".pnml", "", $lines[0])))));
-		$modelName2 = str_replace("\n", "", str_replace("\r\n", "", str_replace(" ", "", str_replace(".pnml", "", $lines[1]))));
-		
-		$this->models[$modelName1] = $modelName1;
-		$this->models[$modelName2] = $modelName2;
-		
-		print("\n   ".$modelName1."-".$modelName2." ... ");
-		
-		// getting epcs
-		$epc1 = null;
-		$epc2 = null;
-		
-		foreach ( $epcs as $epc ) {
-			//print("\n ".$epc->name);
-			if ( $epc->name == $modelName1 ) {
-				$epc1 = $epc;
-				//print(" ==> 1");
+		$index = 1;
+		$modelID1 = null;
+		$modelID2 = null;
+		$modelName1 = null;
+		$modelName2 = null;
+                if (sizeof($this->models) > 2){
+                    // do nothing
+                } else {
+		foreach ( $this->models as $id => $name ) {
+			if ( $index == 1 ) {
+				if ( $modelsSwitched ) { $modelID2 = $id; $modelName2 = $name; }
+				else { $modelID1 = $id; $modelName1 = $name; }
+			} else {
+				if ( $modelsSwitched ) { $modelID1 = $id; $modelName1 = $name; }
+				else { $modelID2 = $id; $modelName2 = $name; }
 			}
-			if ( $epc->name == $modelName2 ) {
-				$epc2 = $epc;
-				//print(" ==> 2");
-			}
+			$index++;
+		}
+                }
+		
+		$content =  "<?xml version='1.0' encoding='utf-8' standalone='no'?>\n";
+		$content .= "<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+		xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+		xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+		xmlns:alext='http://exmo.inrialpes.fr/align/ext/1.0/' 
+		xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>\n";
+		$content .= "<Alignment>\n";
+		$content .= "  <xml>yes</xml>\n";
+		$content .= "  <level>0</level>\n";
+		$content .= "  <type>**</type>\n";
+		
+		$content .= "  <onto1>\n";
+		$content .= "    <Ontology rdf:about=\"null\">\n";
+		$content .= "      <location>null</location>\n";
+		$content .= "    </Ontology>\n";
+		$content .= "  </onto1>\n";
+		$content .= "  <onto2>\n";
+		$content .= "    <Ontology rdf:about=\"null\">\n";
+		$content .= "      <location>null</location>\n";
+		$content .= "    </Ontology>\n";
+		$content .= "  </onto2>\n";
+		
+		foreach ( $this->maps as $map ) {
+			$content .= "  <map>\n";
+			$content .= "    <Cell>\n";
+			$entityID = 0;
 			
+			$currNodeID1 = null;
+			$currNodeID2 = null;
+			
+                        if (sizeof($this->models) == 2){
+			foreach ( $map["nodeIDs"] as $index => $nodeID ) {
+				if ( $map["modelIDs"][$index] == $modelName1 ) $currNodeID1 = $nodeID;
+				if ( $map["modelIDs"][$index] == $modelName2 ) $currNodeID2 = $nodeID;
+			}
+                        $content .= "      <entity1 rdf:resource='http://".$modelName1."#".$currNodeID1."'/>\n";
+			$content .= "      <entity2 rdf:resource='http://".$modelName2."#".$currNodeID2."'/>\n";
+			$content .= "      <relation>=</relation>\n";
+			$content .= "      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>".$map["value"]."</measure>\n";
+			$content .= "    </Cell>\n";
+			$content .= "  </map>\n";
+                        } else {
+                            $count = 1;
+                            foreach ( $map["nodeIDs"] as $index => $nodeID ) {
+                                $content .= "      <entity".$count." rdf:resource='http://".$map["modelIDs"][$index]."#".$map["nodeIDs"][$index]."'/>\n";
+                                $count++;
+                            }
+			$content .= "      <relation>=</relation>\n";
+			$content .= "      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>".$map["value"]."</measure>\n";
+			$content .= "    </Cell>\n";
+			$content .= "  </map>\n";
+                        }
+                        
+			
+			
+                        
 		}
 		
-		if ( is_null($epc1) || is_null($epc2) ) exit("failed\n\nEPC not found. Conversion canceled!\n");
+		$content .= "</Alignment>\n";
+		$content .= "</rdf:RDF>";
+                
+                $suc = chdir(Config::ABS_PATH);
+                
 		
-		foreach ( $lines as $index => $line ) {
-			if ( $index <= 1 ) continue;
-			$line = str_replace("\n", "", str_replace("\r\n", "", $line));
-			if ( empty(trim($line)) ) continue;
-			$labels = explode(",", $line);
-			if ( count($labels) < 2 ) exit("failed\n\nError in mapping file (".$line.")\n");
-			$functionLabel1 = EPC::convertIllegalChars($labels[0]);
-			$functionLabel2 = EPC::convertIllegalChars($labels[1]);
-			$nodeID1 = null;
-			$nodeID2 = null;
-			
-			foreach ( $epc1->functions as $nodeID => $nodeLabel ) {
-				//print("\n  ".$nodeLabel);
-				if ( $nodeLabel == $functionLabel1 ) $nodeID1 = $nodeID;
-			}
-			
-			foreach ( $epc2->functions as $nodeID => $nodeLabel ) {
-				if ( $nodeLabel == $functionLabel2 ) $nodeID2 = $nodeID;
-			}
-			
-			if ( is_null($nodeID1) || is_null($nodeID2) ) exit("failed\n\nID for function \"".$functionLabel1."\" or \"".$functionLabel2."\" not found. Conversion calceled!\n");
-			
-			$this->addMap(array($nodeID1, $nodeID2), array($modelName1, $modelName2), 1);
-		}
+
+                    $filename = $path.$startingFileName.$modelName1."-".$modelName2.".rdf";
+			$fileGenerator = new FileGenerator($filename, $content);
+			$fileGenerator->setPathFilename($filename);
+			$file = $fileGenerator->execute(false);
+		
+		return $file;
 	}
-	
+        
 	public function exportRDF_BPMContest2015($modelsSwitched = false, $filename=null) {
 		
 		$index = 1;
@@ -327,20 +394,22 @@ class GenericMapping {
 			$currNodeID2 = null;
 			
 			foreach ( $map["nodeIDs"] as $index => $nodeID ) {
-				if ( $map["modelIDs"][$index] == $modelID1 ) $currNodeID1 = $nodeID;
-				if ( $map["modelIDs"][$index] == $modelID2 ) $currNodeID2 = $nodeID;
+				if ( $map["modelIDs"][$index] == $modelName1 ) $currNodeID1 = $nodeID;
+				if ( $map["modelIDs"][$index] == $modelName2 ) $currNodeID2 = $nodeID;
 			}
 			
 			$content .= "      <entity1 rdf:resource='http://".$modelName1."#".$currNodeID1."'/>\n";
 			$content .= "      <entity2 rdf:resource='http://".$modelName2."#".$currNodeID2."'/>\n";
 			$content .= "      <relation>=</relation>\n";
-			$content .= "      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>\n";
+			$content .= "      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>".$map["value"]."</measure>\n";
 			$content .= "    </Cell>\n";
 			$content .= "  </map>\n";
 		}
 		
 		$content .= "</Alignment>\n";
 		$content .= "</rdf:RDF>";
+                
+                $suc = chdir(Config::ABS_PATH);
 		
 		if ( is_null($filename) ) {
 			$filename = $modelName1."-".$modelName2.".rdf";
@@ -356,7 +425,7 @@ class GenericMapping {
 		return $file;
 	}
 	
-	public function exportRDF_BPMContest2015_Dataset3($modelsSwitched = false) {
+	public function exportRDF_BPMContest2015_Dataset3($modelsSwitched = false, $filename = null) {
 	
 		$index = 1;
 		$modelID1 = null;
@@ -405,8 +474,9 @@ class GenericMapping {
 			$currNodeID2 = null;
 				
 			foreach ( $map["nodeIDs"] as $index => $nodeID ) {
-				if ( $map["modelIDs"][$index] == $modelID1 ) $currNodeID1 = $nodeID;
-				if ( $map["modelIDs"][$index] == $modelID2 ) $currNodeID2 = $nodeID;
+                            $debug = $map["modelIDs"][$index];
+				if ( $map["modelIDs"][$index] == $modelName1 ) $currNodeID1 = $nodeID;
+				if ( $map["modelIDs"][$index] == $modelName2 ) $currNodeID2 = $nodeID;
 			}
 				
 			$content .= "      <entity1 rdf:resource='http://sap/".$modelName1."/".$currNodeID1."'/>\n";
@@ -420,15 +490,56 @@ class GenericMapping {
 		$content .= "</Alignment>\n";
 		$content .= "</rdf:RDF>";
 	
-		$fileName = $modelName1;
-		$pos = strpos($fileName, "/");
-		$fileName = substr($fileName, 0, $pos);
-	
-		$fileGenerator = new FileGenerator($fileName.".rdf", $content);
+                if ($filename !== null){
+                $suc = chdir(Config::ABS_PATH);
+                    $fileName = $filename;
+                    $fileGenerator = new FileGenerator($fileName, $content);
+		$fileGenerator->setPathFilename($fileName);
+                } else {
+                    $fileName = $modelName1;
+                    $pos = strpos($fileName, "/");
+                    $fileName = substr($fileName, 0, $pos);
+                    $fileGenerator = new FileGenerator($fileName.".rdf", $content);
 		$fileGenerator->setFilename($fileName.".rdf");
+                }
+	
+		
 		$file = $fileGenerator->execute();
 		return $file;
 	}
+        
+        public function getJSON(){
+            $arr = array();
+            $arr["mappingID"] = $this->id;
+            $arr["fileName"] = $this->filename;
+            $arr["matches"] = $this->maps;
+            $code = json_encode($arr);
+            $code2 = json_decode($code);
+            return $code;
+        }
+        
+        public function getJSONself(){
+            $json = "{matchingID: ".$this->id.", matches: ";
+            $isFirst = true;
+            if (count($this->maps) > 0){
+                $json = $json."[";
+                foreach ( $this->maps as $map ) {
+			$prefix = "";
+			if ( $isFirst ) { $isFirst = false; } 
+			else { $json = $json.", "; }
+
+                        $mid1 = $map["modelIDs"][0];
+			$mid2 = $map["modelIDs"][1];
+                        
+			$id1 = $map["nodeIDs"][0];
+			$id2 = $map["nodeIDs"][1];
+                        
+			$json = $json."{matchID: ".$map["matchID"].", value: ".$map["value"].", nodes: [{modelID: '".$mid1."', nodeID: '".$id1."'}, {modelID: '".$mid2."', nodeID: '".$id2."'}]}";
+		}
+                $json = $json."]}";
+            }
+            return $json;
+        }
 	
 	public function exportTXT_BPMContest2013(&$epc1, &$epc2) {
 		$content = "";
@@ -461,10 +572,8 @@ class GenericMapping {
 	 */
 	public function removeAllButFunctionMappings($removeMapsWithNonExistingNodeIDs=FALSE) {
 		
-		if ( $this->isEmpty() ) return 0;
-		
 		if ( !isset($this->epcs) ) {
-			exit("no EPCs assigned to GenericMapping!\n\n");
+			exit("no EPCs assigned to GenericMapping\n\n");
 		}
 		
 		$numRemoved = 0; 

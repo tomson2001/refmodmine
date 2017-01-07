@@ -5,8 +5,10 @@ class WorkspaceEPML {
 	public $filepath;	// e.g. workspace
 	public $file;		// complete filepath e.g. workspace/workspace.epml
 	public $filename = "workspace.epml";
+        private $matchingID = 0;
 	
 	public $modelList = array();
+        public $mappingFileList = array();
 	
 	public $sources = array();
 	public $sourceAssignments = array();
@@ -73,6 +75,92 @@ class WorkspaceEPML {
 			$this->updateWorkspaceEPMLFile();
 		}
 	}
+        
+        public function createNewMatchingFile($fileName, $fileType){
+            unset($this->mappingFileList);
+            $this->mappingFileList = array();
+            $matchingFile = new MappingFile();
+            $matchingFile->setFileName($this->filepath."/".$fileName);
+            $matchingFile->setFileType($fileType."matching");
+            $matchingFile->filenameInWorkspace = $fileName;
+            $mapping = new GenericMapping();
+            $mapping->filename = $this->filepath."/".$fileName;
+            $mapping->id = $this->matchingID++;
+            $matchingFile->addMatching($mapping);
+            array_push($this->mappingFileList, $matchingFile);
+        }
+        
+        
+                        public function getMatchingFileInWorkspace($fileName){
+
+            
+                    foreach ( $this->mappingFileList as $mappingFile ) {
+                        
+                            //$mappingFile = substr($mappingFile, strrpos($mappingFile, "/")+1);
+			if ($mappingFile->filenameInWorkspace == $fileName){
+                            return $mappingFile;
+                        }
+                        
+                        
+                    }
+                    
+                    return null;
+        }
+        
+                public function getMatchingFile($fileName){
+
+            
+                    foreach ( $this->mappingFileList as $mappingFile ) {
+                        
+                            //$mappingFile = substr($mappingFile, strrpos($mappingFile, "/")+1);
+			if ($mappingFile->filename == $fileName){
+                            return $mappingFile;
+                        }
+                        
+                        
+                    }
+                    
+                    return null;
+        }
+        
+        public function getMatching($id){
+            
+                    foreach ( $this->mappingFileList as $mappingFile ) {
+                        foreach ( $mappingFile->matchings as $mapping) {
+                            $mappingID = $mapping->id;
+			if ($mappingID == $id){
+                            return $mapping;
+                        }
+                        }
+                        
+                    }   
+                    return null;
+        }
+        
+        public function loadMatchingFile($filename, $fileType){
+            $matchingFile = new MappingFile();
+            $matchingFile->setFileName($filename);
+            $matchingFile->setFileType($fileType);
+            $matchingFile->loadMatching($filename, $this);
+            array_push($this->mappingFileList, $matchingFile);
+        }
+        
+        public function loadAndGetMatchingFile($filename, $fileType){
+            $matchingFile = new MappingFile();
+            $matchingFile->setFileName($filename);
+            $matchingFile->setFileType($fileType);
+            $matchingFile->loadMatching($filename, $this);
+            return $matchingFile;
+        }
+        
+        public function loadMatching($filename){
+            $matchingFile = new MappingFile();
+            $matchingFile->setFileName($filename);
+            $mapping = new GenericMapping();
+            $mapping->loadRDF_BPMContest2015($filename, $this->matchingID++);
+            $matchingFile->addMatching($mapping);
+            array_push($this->mappingFileList, $matchingFile);
+        }
 	
 	private function loadEPCs($xml) {
 		foreach ($xml->xpath("//epc") as $xml_epc) {
@@ -145,6 +233,15 @@ class WorkspaceEPML {
 	public function getEPC($epcID) {
 		if ( empty($epcID) || is_null($epcID) ) return null;
 		return isset($this->epcs[$epcID]) ? $this->epcs[$epcID] : null;
+	}
+        
+	public function getEPCByName($epcName) {
+		if ( empty($epcName) || is_null($epcName) ) return null;
+                foreach ( $this->epcs as $epc ) {
+                    if ($epc->name == $epcName){
+                        return $epc;
+                    }
+		}
 	}
 	
 	public function addEPC(EPC $epc, $sourceFilename) {

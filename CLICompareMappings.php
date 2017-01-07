@@ -365,7 +365,7 @@ if ( isset($goldStandardMatcherName) ) {
 				foreach ( $matchesVectors as $mapString => $matchVector ) {
 					$tp_addition = ($matchVector[$matcherName] == 1 && $matchVector[$goldStandardMatcherName] == 1) ? 1 : 0;
 					$fp_addition = ($matchVector[$matcherName] == 1 && $matchVector[$goldStandardMatcherName] == 0) ? 1 : 0;
-					$fn_addition = ($matchVector[$matcherName] == 0 && $matchVector[$goldStandardMatcherName] == 1) ? 1 : 0;
+					$fn_addition = ($matchVector[$matcherName] == 0 && $matchVector[$goldStandardMatcherName] == 0) ? 1 : 0;
 					$statValuesForMatchers[$matcherName][$modelCombination]["TP"] += $tp_addition;
 					$statValuesForMatchers[$matcherName][$modelCombination]["FP"] += $fp_addition;
 					$statValuesForMatchers[$matcherName][$modelCombination]["FN"] += $fn_addition;
