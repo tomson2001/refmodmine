@@ -118,11 +118,16 @@ class WorkspaceActionHandler {
 	
 	private function createActionLinkItem($action) {
 		$actionData = $this->config->getActionData($action);
-		
+                
 		// compose link components
 		$href = "index.php?site=workspace&action=doProceedWorkspaceAction&processingAction=".$action;
 		$title = implode(" | ", $actionData["Literature"]);
 		$name = $actionData["Name"];
+                
+                if (array_key_exists("link", $actionData)){
+                    $href = $actionData["link"];
+                    return "<a href=\"".$href."\" class=\"list-group-item\" data-toggle=\"tooltip\" title=\"".$title."\" data-placement=\"bottom\">".$name."</a>";
+                }
 		
 		if ( $this->workspace->numModels == 0 && $this->config->doesActionRequiresWorkspaceModels($action) ) {
 			return "<a href=\"#modal_no_models_in_workspace\" class=\"list-group-item\" data-toggle=\"modal\" title=\"".$title."\" data-placement=\"bottom\">".$name."</a>\n"; 
@@ -552,7 +557,7 @@ class WorkspaceActionHandler {
 				if ( substr_count($value, "INPUT_SLIDER") > 0 ) $value = "INPUT_SLIDER";
 				if ( in_array($value, $this->config->userDependencyParams) ) {
 					$paramValue = $_POST[$paramName];
-					
+					$paramValue = Config::ABS_PATH.$paramValue;
 					$commandExtension = $paramNamePart.$paramValue." ";
 					//print($paramValue."\n<br>");
 					if ( substr_count($paramValue, " ") > 0 ) $commandExtension = $paramNamePart."\"".$paramValue."\" ";
