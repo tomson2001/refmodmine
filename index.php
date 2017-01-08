@@ -80,14 +80,14 @@ $msg = null;
         <script type="text/javascript" src="gui/lib/jQuery-tabdrop/js/bootstrap-tabdrop.js"></script>
 
    	<!-- Graph Bib -->
-   	<script type="text/javascript" src="gui\lib\jasmine_tests\src\EPCViz_NEW.js"></script>
-    <script type="text/javascript" src="gui\lib\jasmine_tests\src\MatchVizMultiple.js"></script>
-    <script type="text/javascript" src="gui\lib\svg-pan-zoom-3.2.10\dist\svg-pan-zoom.js"></script>
+   	<script type="text/javascript" src="gui/lib/jasmine_tests/src/EPCViz_NEW.js"></script>
+    <script type="text/javascript" src="gui/lib/jasmine_tests/src/MatchVizMultiple.js"></script>
+    <script type="text/javascript" src="gui/lib/svg-pan-zoom-3.2.10/dist/svg-pan-zoom.js"></script>
   	<link href="gui/lib/visjs/dist/vis.css" rel="stylesheet" type="text/css" />
         
-        <script type="text/javascript" src="gui\lib\hyphenator\Hyphenator.js"></script>
-        <script type="text/javascript" src="gui\lib\hyphenator\patterns\en-gb.js"></script>
-<script type="text/javascript" src="gui\lib\hyphenator\patterns\de.js"></script>
+        <script type="text/javascript" src="gui/lib/hyphenator/Hyphenator.js"></script>
+        <script type="text/javascript" src="gui/lib/hyphenator/patterns/en-gb.js"></script>
+<script type="text/javascript" src="gui/lib/hyphenator/patterns/de.js"></script>
 
   	<script type="text/javascript">
 		$(document).ready(function(){

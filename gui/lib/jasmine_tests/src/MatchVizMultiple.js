@@ -2761,9 +2761,6 @@ function MatchVizMultiple(visualizations, mappings) {
 
                 });
 
-        while (!finishedSavingLog) {
-
-        }
         if (matchVizObject.hasUnsavedChanges()) {
             return "the page has unsaved changes!"
         }
