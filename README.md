@@ -1,13 +1,12 @@
-####################
-SETUP MANUAL
-####################
+# SETUP MANUAL
 
 
 Recommended environment (tested): Ubuntu 12.04, PHP 5.5.5 (self compiled with pthreads for multi-core readiness)
 
 
-1. Step: Install required dependencies
+## 1. Step: Install required dependencies
 
+```bash
 apt-get install \
 libxml2 \
 libxml2-dev \
@@ -55,11 +54,12 @@ php5-pspell \
 aspell-en \
 libaspell15 \
 libaspell-dev \
+```
 
+## 2. Prepare, Compile, Install PHP 5.5.5 with pthreads
 
-2. Prepare, Compile, Install PHP 5.5.5 with pthreads
-
-### look for the correct link at http://php.net/downloads.php
+look for the correct link at http://php.net/downloads.php
+```bash
 wget http://us3.php.net/get/php-5.5.5.tar.bz2/from/de3.php.net/mirror -O php.tar.bz2
 tar xvjf php.tar.bz2
 
@@ -74,24 +74,32 @@ pecl config-set php_ini /usr/local/lib/php.ini
 pecl config-set bin_dir /usr/local/bin/
 pecl install pthreads
 pecl install zip
-### update extension path in php.ini to somethink like /usr/local/lib/php/extensions/debug-zts-20121212/ (you need to detect the correct directory name under extensions)
-### php.ini for apache is: /etc/php5/apache2/php.ini
-### php.ini for cli is: /usr/local/lib/php.ini
+```
 
-3. Step: Install apache
+update extension path in php.ini to somethink like /usr/local/lib/php/extensions/debug-zts-20121212/ (you need to detect the correct directory name under extensions)
+php.ini for apache is: /etc/php5/apache2/php.ini
+php.ini for cli is: /usr/local/lib/php.ini
+
+## 3. Step: Install apache
+```bash
 apt-get install apache2
 apt-get install libapache2-mod-php5
 # it might be meaningful to apadt the max_execution_time, max_input_time and allowed_memory 
 # to your preference (depending on the task, that is very important!
 /etc/init.d/apache2 restart
+```
 
-4. Step: Install mysql-server
+## 4. Step: Install mysql-server
+```bash
 apt-get install mysql-server
 apt-get install php5-mysql
 apt-get install curl libcurl4-openssl-dev php5-curl php5-cli
 /etc/init.d/apache2 restart
+```
 
-4.1. Install PHPMyAdmin
+### 4.1. Install PHPMyAdmin
+
+```bash
 sudo apt-get install phpmyadmin
 # If you're using Ubuntu 7.10 (Gutsy) or later select Apache2 from the "Configuring phpmyadmin" dialog box. 
 # PHPMyAdmin is now available at: http://yourdomain/phpmyadmin
@@ -103,10 +111,11 @@ chmod -R 777 /var/www/repository
 chmod -R 777 /var/www/workspace
 chmod -R 777 /var/www/files
 chmod -R 777 /var/www/log
+```
 
+## 6. Step: Inject RefMod-Miner(Java-Version)
 
-6. Step: Inject RefMod-Miner(Java-Version)
-
+```bash
 # Install Java
 apt-get install python-software-properties
 add-apt-repository ppa:webupd8team/java
@@ -123,12 +132,7 @@ sudo apt-get install r-base r-base-dev
 #Configure RefMod-Miner (JAVA)
 cd /var/www/lib/refmod-miner
 java -jar master.jar CREATECONFIG
-
-7. Step: Install CronJob for monthly system cleanup
-crontab -e
-# add the following line to the end of the file
-0 0 1 * * php -f /var/www/system/CLI_Cleanup.php
-
+```
 
 ## Additional hints for  Ubuntu 16.04.1
 

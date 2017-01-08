@@ -63,31 +63,34 @@ $msg = null;
 	
    	<link href="gui/css/navbar-fixed-top.css" rel="stylesheet">
    	<script type="text/javascript" src="gui/lib/jQuery-2.1.3/jquery-2.1.3.min.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
    	<script src="gui/lib/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
-   	<link rel="stylesheet" href="gui/lib/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
-        <link href="gui/lib/jQuery-contextMenu-2.2.4/dist/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="gui/lib/jQuery-contextMenu-2.2.4/dist/jquery.ui.position.js"></script>
-        <script type="text/javascript" src="gui/lib/jQuery-contextMenu-2.2.4/dist/jquery.contextMenu.js"></script>
-   	<link href="gui/lib/bootstrap-slider/css/bootstrap-slider.css" rel="stylesheet">
+	<link href="gui/lib/bootstrap-slider/css/bootstrap-slider.css" rel="stylesheet">
    	<script type='text/javascript' src="gui/lib/bootstrap-slider/js/bootstrap-slider.js"></script>
+   	<link rel="stylesheet" href="gui/lib/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+    <link href="gui/lib/jQuery-contextMenu-2.2.4/dist/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="gui/lib/jQuery-contextMenu-2.2.4/dist/jquery.ui.position.js"></script>
+    <script type="text/javascript" src="gui/lib/jQuery-contextMenu-2.2.4/dist/jquery.contextMenu.js"></script>
+   	
    	<link href="gui/lib/bootstrap-toggle/css/bootstrap-toggle.min.css" rel="stylesheet">
 	<script src="gui/lib/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
-        <script src="gui/lib/color-picker-master/color-picker.min.js"></script>
-        <link href="gui/lib/color-picker-master/color-picker.min.css" rel="stylesheet">
+    <script src="gui/lib/color-picker-master/color-picker.min.js"></script>
+    <link href="gui/lib/color-picker-master/color-picker.min.css" rel="stylesheet">
         
-        <link href="gui/lib/jQuery-tabdrop/css/tabdrop.css" rel="stylesheet">
-        <script type="text/javascript" src="gui/lib/jQuery-tabdrop/js/bootstrap-tabdrop.js"></script>
+    <link href="gui/lib/jQuery-tabdrop/css/tabdrop.css" rel="stylesheet">
+    <script type="text/javascript" src="gui/lib/jQuery-tabdrop/js/bootstrap-tabdrop.js"></script>
 
+	
+	
    	<!-- Graph Bib -->
    	<script type="text/javascript" src="gui/lib/jasmine_tests/src/EPCViz_NEW.js"></script>
     <script type="text/javascript" src="gui/lib/jasmine_tests/src/MatchVizMultiple.js"></script>
     <script type="text/javascript" src="gui/lib/svg-pan-zoom-3.2.10/dist/svg-pan-zoom.js"></script>
   	<link href="gui/lib/visjs/dist/vis.css" rel="stylesheet" type="text/css" />
         
-        <script type="text/javascript" src="gui/lib/hyphenator/Hyphenator.js"></script>
-        <script type="text/javascript" src="gui/lib/hyphenator/patterns/en-gb.js"></script>
-<script type="text/javascript" src="gui/lib/hyphenator/patterns/de.js"></script>
+    <script type="text/javascript" src="gui/lib/hyphenator/Hyphenator.js"></script>
+    <script type="text/javascript" src="gui/lib/hyphenator/patterns/en-gb.js"></script>
+	<script type="text/javascript" src="gui/lib/hyphenator/patterns/de.js"></script>
 
   	<script type="text/javascript">
 		$(document).ready(function(){

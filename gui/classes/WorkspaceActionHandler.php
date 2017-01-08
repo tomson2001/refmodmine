@@ -250,7 +250,7 @@ class WorkspaceActionHandler {
 				
 				$code .= "<script type='text/javascript'>\n";
 				$code .= "  $(document).ready(function() {\n";
-				$code .= "	  $(\"#".$paramName."\").slider();\n";
+				$code .= "	  $(\"#".$paramName."\").bootstrapSlider();\n";
 				$code .= "    $(\"#".$paramName."\").on('slide', function(slideEvt) {\n";
 				$code .= "      $(\"#".$paramName."SliderVal\").text(slideEvt.value);\n";
 				$code .= "    });\n";
@@ -261,7 +261,7 @@ class WorkspaceActionHandler {
 				$code .= "            <label for=\"".$paramName."\" class=\"col-sm-4 control-label\">".$paramName."</label>\n";
 				$code .= "            <div class=\"col-sm-6\">\n";
 				
-				$code .= "              <input id=\"".$paramName."\" name=\"".$paramName."\" type=\"text\" data-slider-min=\"".$sliderParams[1]."\" data-slider-max=\"".$sliderParams[2]."\" data-slider-step=\"".$sliderParams[3]."\" data-slider-value=\"".$sliderParams[4]."\" value=\"".$sliderParams[4].">\n";
+				$code .= "              <input id=\"".$paramName."\" name=\"".$paramName."\" type=\"text\" data-slider-min=\"".$sliderParams[1]."\" data-slider-max=\"".$sliderParams[2]."\" data-slider-step=\"".$sliderParams[3]."\" data-slider-value=\"".$sliderParams[4]."\" value=\"".$sliderParams[4]."\" />\n";
 				$code .= "              <span id=\"".$paramName."CurrentSliderValLabel\"> <span id=\"".$paramName."SliderVal\">".$sliderParams[4]."</span></span>\n";
 				
 				$code .= "            </div>\n";
@@ -557,7 +557,7 @@ class WorkspaceActionHandler {
 				if ( substr_count($value, "INPUT_SLIDER") > 0 ) $value = "INPUT_SLIDER";
 				if ( in_array($value, $this->config->userDependencyParams) ) {
 					$paramValue = $_POST[$paramName];
-					$paramValue = Config::ABS_PATH.$paramValue;
+					//$paramValue = Config::ABS_PATH.$paramValue;
 					$commandExtension = $paramNamePart.$paramValue." ";
 					//print($paramValue."\n<br>");
 					if ( substr_count($paramValue, " ") > 0 ) $commandExtension = $paramNamePart."\"".$paramValue."\" ";
