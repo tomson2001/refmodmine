@@ -8,8 +8,8 @@
  */
 class LevenshteinWithStructuralMapping extends AMapping implements IMapping {
 	
-	private $threshold_levenshtein = 0;
-	private $threshold_structure = 0;
+	private $threshold_levenshtein = 50;
+	private $threshold_structure = 16;
 	
 	public function __construct(EPC $epc1, EPC $epc2) {
 		$transformer = new EPCTransformerNoConnectorsNoEvents();

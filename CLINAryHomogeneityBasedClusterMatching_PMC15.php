@@ -47,7 +47,7 @@ if ( file_exists($input) ) {
 
 // Check format
 if ( $format == "zip" || $format == "xml" ) {
-	print "  format ... ok\n";
+	print "   format ... ok\n";
 } else {
 	exit("  format ... failed (only zip and xml are allowed)");
 }
@@ -90,7 +90,6 @@ $naryMapping = new NAryWordstemMappingWithAntonyms2015();
 foreach ($xml1->xpath("//epc") as $xml_epc1) {
 	$nameOfEPC1 = (string) $xml_epc1["name"];
 	$epc = new EPC($xml1, $xml_epc1["epcId"], $xml_epc1["name"]);
-	$epc->autocorrectSpelling();
 	$naryMapping->addEPC($epc);
 }
 //$naryMapping->sortEPCsByName();

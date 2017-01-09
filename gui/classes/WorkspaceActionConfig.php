@@ -566,7 +566,7 @@ class WorkspaceActionConfig {
 			)
 		),
             
-                "MatchingEditor" => array(
+        "MatchingEditor" => array(
 			"Name"			=> "Matching Editor",
 			"Literature"	=> array(
 				"Tool for creating and editing Process Model Matchings"
@@ -1389,6 +1389,7 @@ class WorkspaceActionConfig {
 		),
 			
 		"Process Model Matching" => array(
+			"MatchingEditor",
 			"MATCHING_NHCM",
 			"MATCHING_NSCM",
 			"MATCHING_NLM",
@@ -1445,9 +1446,7 @@ class WorkspaceActionConfig {
 		"EXTRACT_STRUCTURAL_PATTERNS",
 		"CREATE_REFERENCE_MODEL_RMM-2",
 		"MATCHING_NLM",
-		"TEXT2EPC_MINER",
 		"MATCHING_NHCM",
-		"MODEL_TRANSLATION"
 	);
 	
 	

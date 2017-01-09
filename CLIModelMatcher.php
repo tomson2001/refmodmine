@@ -15,6 +15,8 @@ $algorithms = array(
 		"geds"	  => "Graph Edit Distance Similarity",
 		"amaged"  => "Activity Matching And Graph Edit Distance",
 		"cf"	  => "Causal Footprints",
+		"lcsot"   => "Longest Common Subsequence of Traces",
+		"larosa"  => "La Rosa Similariy as implemented",
 		"nscm"	  => "N-Ary Semantic Cluster Matching"
 );
 
@@ -29,6 +31,8 @@ if ( !isset($argv[1]) || !isset($argv[2]) || !isset($argv[3]) || !isset($argv[4]
       geds          ".$algorithms["geds"]."
       amaged        ".$algorithms["amaged"]."
       cf            ".$algorithms["cf"]."
+      lcsot         ".$algorithms["lcsot"]."
+      larosa        ".$algorithms["larosa"]."
       nscm          ".$algorithms["nscm"]."\n
    input=           path to input epml
    output=          path to output file
@@ -148,13 +152,14 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 			case "pocnae":
 			case "cf":
 				$mapping = new LevenshteinMapping($epc1, $epc2);
-				$mapping->setParams(array('threshold_levenshtein' => 50));
-				//$mapping->setParams(array('threshold_levenshtein' => 100));
+				//$mapping->setParams(array('threshold_levenshtein' => 50));
+				$mapping->setParams(array('threshold_levenshtein' => 100));
 				break;
 
 				// Funktionen ueber Levenshtein und Ein- und Ausgehende Kanten
 			case "amaged":
 				$mapping = new LevenshteinWithContextMapping($epc1, $epc2);
+				$mapping->setParams(array('threshold_levenshtein' => 50));
 				break;
 				
 			case "lms":
@@ -166,12 +171,24 @@ foreach ($xml1->xpath("//epc") as $xml_epc1) {
 			case "ts":
 				$mapping = null;
 				break;
+				
+			case "larosa":
+				$mapping = new LevenshteinWithContextMapping($epc1, $epc2);
+				$mapping->setParams(array('threshold_levenshtein' => 50));
+				$mapping->setParams(array('threshold_connector' => 75) );
+				break;
+				
+			// kein Mapping
+			case "lcsot":
+				$mapping = new LevenshteinMapping($epc1, $epc2);
+				$mapping->setParams(array('threshold_levenshtein' => 90));
+				break;
 
 				// Funktionen ueber Levenshtein
 			default:
 				$mapping = new LevenshteinMapping($epc1, $epc2);
 				// Grenze auf 50% Aehnlichkeit setzen
-				$mapping->setParams(array('threshold_levenshtein' => 90));
+				$mapping->setParams(array('threshold_levenshtein' => 50));
 				break;
 		}
 

@@ -128,7 +128,7 @@ class LevenshteinWithContextMapping extends AMapping implements IMapping {
 					// 					print("test");
 					// 				}
 
-					$this->connector_matrix[$id1][$id2] = $connectorSim;
+					$this->connector_matrix[$id1][$id2] = $connectorSim >= ($this->threshold_connector/100) ? $connectorSim : 0;
 
 				}
 			}

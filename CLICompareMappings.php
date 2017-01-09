@@ -199,6 +199,7 @@ for ( $i=0; $i<$modelsInFile1; $i++ ) {
 			if ( !(file_exists($matcherPath . DIRECTORY_SEPARATOR . $rdfNameOption1) 
 			    || file_exists($matcherPath . DIRECTORY_SEPARATOR . $rdfNameOption2)) ) {
 			    $fileAvailableForAllMatchers = false;
+			    print($matcherPath . DIRECTORY_SEPARATOR . $rdfNameOption1."\n");
 			    array_push($missingMatchers, $matcherName);
 			}
 		}
@@ -216,6 +217,19 @@ for ( $i=0; $i<$modelsInFile1; $i++ ) {
 				$mappingFile = file_exists($matcherPath . DIRECTORY_SEPARATOR . $rdfNameOption1) ? $matcherPath . DIRECTORY_SEPARATOR . $rdfNameOption1 : $matcherPath . DIRECTORY_SEPARATOR . $rdfNameOption2; 
 				$mapping = new GenericMapping();
 				$mapping->loadRDF_BPMContest2015($mappingFile);
+				
+// 				var_dump($modelCombination);
+// 				var_dump($mapping);
+				
+ 				foreach ( $mapping->models as $modelName ) {
+ 					$modelName = str_replace ( " ", "", str_replace ( ":", "", $modelName ) );
+ 					$assigned = false;
+ 					foreach ( $epcs as $epc ) {
+ 						if ( $epc->name == $modelName ) $mapping->assignEPC($epc);
+ 						$assigned = true;
+ 					}
+ 				}
+				
 				$mapping->removeAllButFunctionMappings();
 				$mappingsForModelCombination[$matcherName] = $mapping;
 				if ( $matcherName == $goldStandardMatcherName ) $goldStandardMapping = $mapping;
@@ -344,7 +358,7 @@ $statValuesForMatchers = array();
 $emptyStats = array("TP" => 0, "FP" => 0, "FN" => 0);
 if ( isset($goldStandardMatcherName) ) {
 	foreach ( $matchers as $matcherName => $path ) {
-		if ( $matcherName != $goldStandardMatcherName ) {
+		//if ( $matcherName != $goldStandardMatcherName ) {
 			$statValuesForMatchers[$matcherName] = array("_micro_stats" => $emptyStats);
 			foreach ( $availableMatches as $modelCombination => $matchesVectors ) {
 				$statValuesForMatchers[$matcherName][$modelCombination] = $emptyStats;
@@ -360,15 +374,18 @@ if ( isset($goldStandardMatcherName) ) {
 					$statValuesForMatchers[$matcherName]["_micro_stats"]["FN"] += $fn_addition;
 				}
 			}
-		}
+		//}
 	}
 }
 
 // Calculate micro-stats Precision / Recall / F-Measure
 foreach ( $statValuesForMatchers as $matcherName => $dataStats ) {
 	foreach ( $dataStats as $dataName => $stats ) {
-		$precision = ($stats["TP"]+$stats["FP"]) == 0 ? 0 : $stats["TP"] / ($stats["TP"]+$stats["FP"]);
-		$recall = ($stats["FP"]+$stats["FN"]) == 0 ? 1 : $stats["TP"] / ($stats["FP"]+$stats["FN"]);
+		$precisionIf0 = $statValuesForMatchers[$goldStandardMatcherName][$dataName]["TP"] == 0 ? 1 : 0;
+		$precision = ($stats["TP"]+$stats["FP"]) == 0 ? $precisionIf0 : $stats["TP"] / ($stats["TP"]+$stats["FP"]);
+		
+		$recallIf1 = $statValuesForMatchers[$goldStandardMatcherName][$dataName]["TP"] == 0 ? 1 : 0;
+		$recall = ($stats["TP"]+$stats["FN"]) == 0 ? 1 : $stats["TP"] / ($stats["TP"]+$stats["FN"]);
 		$fmeasure = ( ($recall+$precision) == 0 ) ? 0 : (2*$precision*$recall) / ($precision+$recall);
 		$statValuesForMatchers[$matcherName][$dataName]["precision"] = round($precision, 3);
 		$statValuesForMatchers[$matcherName][$dataName]["recall"] = round($recall, 3);
@@ -404,7 +421,7 @@ foreach ( $statValuesForMatchers as $matcherName => $dataStats ) {
 	$varianceRecNumerator = 0;
 	$varianceFmeasureNumerator = 0;
 	foreach ( $dataStats as $dataName => $stats ) {
-		if ( $dataName != "_micro_stats" && dataName != "_macro_stats" ) {
+		if ( $dataName != "_micro_stats" && $dataName != "_macro_stats" ) {
 			$numModelCombinations++;
 			$variancePrecNumerator += ($stats["precision"]-$statValuesForMatchers[$matcherName]["_macro_stats"]["precision"])*($stats["precision"]-$statValuesForMatchers[$matcherName]["_macro_stats"]["precision"]);
 			$varianceRecNumerator += ($stats["recall"]-$statValuesForMatchers[$matcherName]["_macro_stats"]["recall"])*($stats["recall"]-$statValuesForMatchers[$matcherName]["_macro_stats"]["recall"]);
@@ -421,12 +438,13 @@ foreach ( $statValuesForMatchers as $matcherName => $dataStats ) {
 
 }
 
-var_dump($statValuesForMatchers);
+//var_dump($statValuesForMatchers);
 
 // write micro stats to CSV
 $statsCSV .= "\r\n;;;;precision;;;recall;;;f-measure;;\r\n";
-$statsCSV .= "matcher;TP;FP;TN;mic;mac;sd;mic;mac;sd;mic;mac;sd\r\n";
+$statsCSV .= "matcher;TP;FP;FN;mic;mac;sd;mic;mac;sd;mic;mac;sd\r\n";
 foreach ( $statValuesForMatchers as $matcherName => $dataStats ) {
+	if ( $matcherName == $goldStandardMatcherName ) continue;
 	$stats_mic = $dataStats["_micro_stats"];
 	$precision = str_replace(".", ",", round($stats_mic["precision"], 3));
 	$recall = str_replace(".", ",", round($stats_mic["recall"], 3));
@@ -459,6 +477,7 @@ $statsCSV .= "\r\n;precision;".$separators."recall;".$separators."f-measure".$se
 $statsCSV .= "model pair".$matchersCSV."".$matchersCSV."".$matchersCSV."\r\n";
 
 foreach ( $statValuesForMatchers as $matcherName => $dataStats ) {
+	if ( $matcherName == $goldStandardMatcherName ) continue;
 	foreach ( $dataStats as $dataName => $stats ) {
 		if ( $dataName != "_micro_stats" && $dataName != "_macro_stats" ) {
 			
@@ -469,6 +488,7 @@ foreach ( $statValuesForMatchers as $matcherName => $dataStats ) {
 			$fs = "";
 			
 			foreach ( $statValuesForMatchers as $currMatcherName => $ignoreTHIS ) {
+				if ( $currMatcherName == $goldStandardMatcherName ) continue;
 				$precs .= ";".$statValuesForMatchers[$currMatcherName][$dataName]["precision"];
 				$recs .= ";".$statValuesForMatchers[$currMatcherName][$dataName]["recall"];
 				$fs .= ";".$statValuesForMatchers[$currMatcherName][$dataName]["f-measure"];
