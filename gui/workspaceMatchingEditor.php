@@ -347,6 +347,23 @@ $_SESSION['workspace'] = $workspace;
     </div>
 </div>
 
+<div class="modal fade" id="errorModalMissingNodes" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content panel-danger">
+            <div class="modal-header panel-heading">
+                <h4 class="modal-title">Error: Matching is corrupted!</h4>
+            </div>
+            <div class="modal-body">
+                At least one Matching is corrupted!<br>
+                Please check the file and repair the Matching.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick='history.back()'>Go back to workspace</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade" id="warningModal" tabindex="-1" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content panel-warning">
@@ -448,7 +465,7 @@ $_SESSION['workspace'] = $workspace;
                 createBinaryView();
             } else {
                 // do nothing special
-                createView();
+                createBinaryView();
             }
 
         }
