@@ -596,13 +596,7 @@ class WorkspaceActionHandler {
 			$command = str_replace(array_keys($replaceFragments), $replaceFragments, $command);
 			
 			$extCommand = $command;
-                         error_reporting(E_ALL);
-                         
-                         //$output2 = `echo "%cd%"`;
-                        //$output = `java -jar lib\master.jar`;
-                        
 			$checksum = md5($extCommand."-".time());
-                       
 			
 			if ( $actionData["EmbedInPHP"] ) {
 				Logger::log($this->_CONST_SESSION_E_MAIL, "External call started (Embedded in PHP): ".$command, "ACCESS");
@@ -610,15 +604,13 @@ class WorkspaceActionHandler {
 				$command = str_replace("\"", "@QUOTE@", $command);
 				$description = str_replace(" ", "[]", $actionData["Name"]);
 				$command = "php CLIExternalExecution.php command=".$command." description=".$description." sessionid=".$this->_CONST_SESSION_ID." notification=".$this->_CONST_SESSION_E_MAIL." checksum=".$checksum." ";
-				//$command .= "> /dev/null &";
+				$command .= "> /dev/null &";
 				//Logger::log($this->_CONST_SESSION_E_MAIL, "External call started (Embedded in PHP): ".$command, "ACCESS");
-				exec($command, $output);
-                                print_r($output);
+				exec($command);	
 			} else {
 				Logger::log($this->_CONST_SESSION_E_MAIL, "External call started: ".$command, "ACCESS");
 				$command .= "> /dev/null &";
-				exec($command, $output);
-                                print_r($output);
+				exec($command);
 			}
 			
 			$actionStats = new ActionStats();

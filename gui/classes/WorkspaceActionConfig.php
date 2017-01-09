@@ -1395,7 +1395,6 @@ class WorkspaceActionConfig {
 			"MATCHING_NLM",
 			"MATCHING_ESGM",
 			"MATCHING_GREEDY",
-                        "MatchingEditor",
 			//"MATCHING_2015"
 		),	
 					
