@@ -10,11 +10,11 @@ class ActionLog extends FWTableRow {
 		if ( !Config::LOG_ACTIONS ) return false;
 		$this->id = $checksum;
 		$this->start_pot = date(Config::DB_DATETIME_FORMAT);
-		$this->ip = $_SERVER['REMOTE_ADDR'];
-		$this->email = empty($_SESSION['email']) ? null : $_SESSION['email'];
+		$this->ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : "0.0.0.0";
+		$this->email = (isset($_SESSION['email']) && !empty($_SESSION['email'])) ? $_SESSION['email'] : "n/a";
 		$this->action = $action;
 		$this->command = $command;
-		$this->session_id = $session_id;
+		$this->session_id = !is_null($session_id) ? $session_id : $checksum;
 		return $this->save();		
 	}
 	

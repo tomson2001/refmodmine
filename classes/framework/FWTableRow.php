@@ -124,7 +124,8 @@ class FWTableRow {
 		}
 		$affected =& FWDatabase::exec($sql);
 		if ( PEAR::isError($affected) ) {
-			Logger::log($_SESSION['email'], 'Executing SQL-Update failed: '.$sql." - Message: ".$affected->getMessage(), "ERROR");
+			$user = isset($_SESSION['email']) ? $_SESSION['email'] : "system-cli";
+			Logger::log($user, 'Executing SQL-Update failed: '.$sql." - Message: ".$affected->getMessage(), "ERROR");
 			return false;
 		} else {
 			return true;

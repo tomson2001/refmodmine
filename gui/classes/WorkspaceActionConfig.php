@@ -759,10 +759,10 @@ class WorkspaceActionConfig {
 			"Parameters"	=> array(
 				"CLI"				=> null,
 				"CONVERT_MATCHING"		=> null,
-				"matching_set" 	=> "INPUT_TEXT",
+				"matchings" 	=> "INPUT_TEXT",
 				"model_set"		=> "INPUT_TEXT",
-				"result" => "INPUT_TEXT",
-				"file_format"	=> "xml"
+				"output_file" => "INPUT_TEXT",
+				"format"	=> "xml"
 			)
 		),
 		
@@ -1130,8 +1130,8 @@ class WorkspaceActionConfig {
 			),
 			"Parameters"	=> array(
 				"input"			=> "CONST_WORKSPACE_EPML",
-				"output"		=> "CONST_WORKSPACE_EPML.xmlmatching.rmm-nscm",
-				"format"		=> "xml",
+				"output"		=> "CONST_WORKSPACE_EPML.matching.rmm-nscm",
+				"format"		=> "zip",
 				"notification"	=> "CONST_SESSION_E_MAIL"
 			)
 		),

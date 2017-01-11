@@ -9,7 +9,7 @@ class ActionStats extends FWTableRow {
 		if ( !Config::TRACK_ACTIONS ) return false;
 		$this->_date = date(Config::DB_DATE_FORMAT);
 		$this->pot = date(Config::DB_DATETIME_FORMAT);
-		$this->ip = $_SERVER['REMOTE_ADDR'];
+		$this->ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : "0.0.0.0";
 		$this->email = empty($_SESSION['email']) ? null : $_SESSION['email'];
 		$this->action = $action;
 		$this->session_id = $session_id;

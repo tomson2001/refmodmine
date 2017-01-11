@@ -180,7 +180,7 @@ if ( $format == "zip" ) {
 	$_POST["output_file"] = $output;
 	$actionHandler = new WorkspaceActionHandler();
 	$actionHandler->run("CONVERT_MATCHING");
-		
+	
 	foreach ( $generatedFiles as $filename ) {
 		unlink($filename);
 	}

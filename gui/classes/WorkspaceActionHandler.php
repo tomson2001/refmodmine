@@ -613,11 +613,11 @@ class WorkspaceActionHandler {
 				exec($command);
 			}
 			
-			$actionStats = new ActionStats();
-			$actionStats->trackAction($action, $this->_CONST_SESSION_ID);
+ 			$actionStats = new ActionStats();
+ 			$actionStats->trackAction($action, $this->_CONST_SESSION_ID);
 			
-			$actionLog = new ActionLog();
-			$actionLog->trackAction($action, $extCommand, $this->_CONST_SESSION_ID, $checksum);
+ 			$actionLog = new ActionLog();
+ 			$actionLog->trackAction($action, $extCommand, $this->_CONST_SESSION_ID, $checksum);
 			
 			$_POST["msg"] = "<strong>\"".$actionData["Name"]."\" started. </strong> Please wait and refresh the site until the result is available. That may take a while.";
 			if ( $this->_CONST_SESSION_E_MAIL !== "no" ) $_POST["msg"] .= " However, you will also get an e-mail when the calculation has been finished.";

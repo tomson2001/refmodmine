@@ -11,6 +11,23 @@ class FWDatabase {
 	 */
 	public static function __callStatic($name, $arguments) {
 		global $db;
+		if ( is_null($db) ) {
+			// DATABASE CONNECTION
+			$mdb2_dsn = array(
+					'phptype'  => Config::DB_TYPE,
+					'username' => Config::DB_USER,
+					'password' => Config::DB_PASS,
+					'hostspec' => Config::DB_HOST,
+					'database' => Config::DB_DATABASE
+			);
+			
+			$mdb2_options = array(
+					'debug' => 2
+			);
+			
+			$db = &MDB2::connect($mdb2_dsn, $mdb2_options);
+		}		
+		
 		if ( $name == 'query' || $name == 'exec' ) {
 			if ( Config::ENABLE_DB_QUERY_LOGGING ) {
 				if ( isset($_SESSION['email']) ) {
