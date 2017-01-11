@@ -1,6 +1,23 @@
 
 function MatchVizMultiple(visualizations, mappings) {
 
+    this.checkCompleteness = function () {
+        for (var mappingNum = 0; mappingNum < mappings.length; mappingNum++) {
+            var mapping = mappings[mappingNum];
+            for (var mapsNum = 0; mapsNum < mapping.maps.length; mapsNum++) {
+                var map = mapping.maps[mapsNum];
+                for (var nodeNum = 0; nodeNum < map.nodeIDs.length; nodeNum++) {
+                    var nodeID = map.nodeIDs[nodeNum];
+                    if (nodeID === false) {
+                        $('#errorModalMissingNodes').modal('show');
+                        return;
+                    }
+                }
+            }
+        }
+    }
+    this.checkCompleteness();
+
     // all available visualizations
     this.visualizations = visualizations;
 
@@ -414,9 +431,18 @@ function MatchVizMultiple(visualizations, mappings) {
         }
         // check for every mapping whether it contains a match with more than two models
         for (var mappingNum = 0; mappingNum < this.mappings.length; mappingNum++) {
-            var nodeSet = new Set();
+            var modelSet = new Set();
             var mapping = this.mappings[mappingNum];
-            if (mapping.models.length !== 2) {
+            
+            for (var mapsNum = 0; mapsNum < mapping.maps.length; mapsNum++) {
+                var map = mapping.maps[mapsNum];
+                for (var modelNum = 0; modelNum < map.modelIDs.length; modelNum++) {
+                    var modelID = map.modelIDs[modelNum];
+                    modelSet.add(modelID);
+                }
+            }
+            
+            if (modelSet.size > 2) {
                 return false;
             }
 

@@ -49,6 +49,14 @@ class MappingFile {
     public function addMatching($matching) {
         array_push($this->matchings, $matching);
     }
+	
+	    // http://stackoverflow.com/questions/619610/whats-the-most-efficient-test-of-whether-a-php-string-ends-with-another-string
+    private function endswith($string, $test) {
+        $strlen = strlen($string);
+        $testlen = strlen($test);
+        if ($testlen > $strlen) return false;
+            return substr_compare($string, $test, $strlen - $testlen, $testlen) === 0;
+    }
 
     public function loadMatching($filename, WorkspaceEPML $workspace) {
         if ($this->filetype === "rdfmatching") {
@@ -63,7 +71,10 @@ class MappingFile {
                 // http://stackoverflow.com/questions/9817525/in-php-is-it-possible-to-inspect-content-of-a-zip-file-without-extracting-its-co
                 for ($i = 0; $i < $zip->numFiles; $i++) {
                     $stat = $zip->statIndex($i);
-                    array_push($files, basename($stat['name']));
+                    $name = basename($stat['name']);
+                    if ($this->endswith($name, ".rdf")){
+                        array_push($files, $name);
+                    }
                 }
 
                 $suc = false;
