@@ -14,7 +14,7 @@ $workspace = new WorkspaceEPML();
 $model_set = $workspace->file;
 $result = $workspace->file . "result.epml";
 
-$command = "java -jar " . Config::ABS_PATH . "lib/master.jar CLI LAYOUT model_set=" . Config::ABS_PATH . $model_set . " result=" . Config::ABS_PATH . $result;
+$command = "java -jar " . Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME_LAYOUT . " CLI LAYOUT model_set=" . Config::ABS_PATH . $model_set . " result=" . Config::ABS_PATH . $result;
 //$command = "php CLIExternalExecution.php command=".$command." description=empty sessionid=none notification=none checksum=none ";
 $res = exec($command, $output);
 //print_r($output);

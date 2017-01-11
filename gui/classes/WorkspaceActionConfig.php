@@ -531,7 +531,7 @@ class WorkspaceActionConfig {
 		"EXPORT_LAYOUT" => array(
 			"Name"			=> "Export Layout",
 			"CodeBase"		=> "JAVA",
-			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME,
+			"ScriptBase"	=> Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME_LAYOUT,
 			"EmbedInPHP"	=> true,
 			"Literature"	=> array(
 					"todo"

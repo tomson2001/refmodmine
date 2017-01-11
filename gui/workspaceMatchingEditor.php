@@ -223,7 +223,17 @@ $_SESSION['workspace'] = $workspace;
                         <div class="col-sm-6">
                             <select class="form-control" name="LAYOUTER" id="LAYOUTER">
                                 <option id="rmmaas" value="rmmaas">RMMaaS</option>
-                                <option id="rmm" value="rmm" disabled="disabled">RMM</option>
+                                
+                                <?php 
+                                // check whether layouter RMM jar exists
+                                if ( !empty(Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME_LAYOUT) && file_exists(Config::REFMOD_MINER_JAVA_PATH_WITH_FILENAME_LAYOUT) ) {
+									$disabled = "";
+								} else {
+									$disabled = "disabled=\"disabled\"";
+								}
+                                ?>
+                                
+                                <option id="rmm" value="rmm" <?php echo $disabled; ?>>RMM</option>
                             </select>
                         </div>
                     </div>

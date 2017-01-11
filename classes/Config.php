@@ -21,6 +21,7 @@ final class Config {
 	const STANDFORD_POS_TAGGER_PATH = "";
 	const WORDNET_EXE = "wordnet";
 	const REFMOD_MINER_JAVA_PATH_WITH_FILENAME = "";
+	const REFMOD_MINER_JAVA_PATH_WITH_FILENAME_LAYOUT = "";
 	const TEXT2MODEL_JAVA_PATH_WITH_FILENAME = "";
 	const YANDEX_API_KEY = "";
 	const OPEN_CALAIS_API_KEY = "";
