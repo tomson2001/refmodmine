@@ -2,6 +2,9 @@
 function MatchVizMultiple(visualizations, mappings) {
 
     this.checkCompleteness = function () {
+        if (mappings === undefined){
+            return true;
+        }
         for (var mappingNum = 0; mappingNum < mappings.length; mappingNum++) {
             var mapping = mappings[mappingNum];
             for (var mapsNum = 0; mapsNum < mapping.maps.length; mapsNum++) {
