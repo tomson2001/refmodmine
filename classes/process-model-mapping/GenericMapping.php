@@ -394,8 +394,8 @@ class GenericMapping {
 			$currNodeID2 = null;
 			
 			foreach ( $map["nodeIDs"] as $index => $nodeID ) {
-				if ( $map["modelIDs"][$index] == $modelID1 ) $currNodeID1 = $nodeID;
-				if ( $map["modelIDs"][$index] == $modelID2 ) $currNodeID2 = $nodeID;
+				if ( $map["modelIDs"][$index] == $modelName1 ) $currNodeID1 = $nodeID;
+				if ( $map["modelIDs"][$index] == $modelName2 ) $currNodeID2 = $nodeID;
 			}
 			
 			$content .= "      <entity1 rdf:resource='http://".$modelName1."#".$currNodeID1."'/>\n";
